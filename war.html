@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>War Rules — Meridian</title>
+<meta name="description" content="How wars, sieges, and raids work on the Meridian Minecraft server.">
+<link rel="stylesheet" href="/assets/style.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%2335d0a5'/%3E%3Ctext x='16' y='22' font-size='16' font-family='sans-serif' font-weight='800' fill='%2304110d' text-anchor='middle'%3EM%3C/text%3E%3C/svg%3E">
+</head>
+<body>
+<header class="site-header">
+  <nav class="nav-inner">
+    <a href="/" class="brand"><span class="mark">M</span> Meridian</a>
+    <button class="nav-toggle" aria-label="Menu">☰</button>
+    <div class="nav-links">
+      <a href="/">Home</a>
+      <a href="/rules.html">Rules</a>
+      <a href="/war.html" class="active">War Rules</a>
+      <a href="/lands.html">Lands Guide</a>
+      <a href="/economy.html">Economy Guide</a>
+    </div>
+  </nav>
+</header>
+
+<main class="doc">
+  <h1>War Rules</h1>
+  <p class="lead">War is the only time claimed land can be raided and members can be freely killed. These rules keep it a contest instead of a mess. Breaking them voids your war claims and can end in a ban.</p>
+
+  <div class="toc">
+    <strong>On this page</strong>
+    <ul>
+      <li><a href="#declaring">1. Declaring War</a></li>
+      <li><a href="#truce">2. Grace Period &amp; Truces</a></li>
+      <li><a href="#combat">3. Combat Rules</a></li>
+      <li><a href="#sieges">4. Sieges &amp; Objectives</a></li>
+      <li><a href="#spoils">5. Spoils &amp; Raiding</a></li>
+      <li><a href="#ending">6. Ending a War</a></li>
+      <li><a href="#forbidden">7. Forbidden Tactics</a></li>
+    </ul>
+  </div>
+
+  <h2 id="declaring">1. Declaring War</h2>
+  <ul>
+    <li>Only a nation leader or an appointed officer may declare war.</li>
+    <li>Declarations must be posted in the <strong>#war-declarations</strong> channel and name: the attacking nation, the defending nation, the reason (casus belli), and the war goal.</li>
+    <li>A war becomes active <strong>24 hours</strong> after the declaration is posted. No hostile action before then.</li>
+    <li>You may not declare war on a nation more than <strong>2x</strong> your total claim size or member count without their consent.</li>
+  </ul>
+
+  <h2 id="truce">2. Grace Period &amp; Truces</h2>
+  <ul>
+    <li>New nations have a <strong>7-day</strong> protection window from creation during which they cannot be declared on.</li>
+    <li>After a war ends, both sides get a <strong>72-hour</strong> mandatory truce before a new war between them can start.</li>
+    <li>Negotiated peace treaties (payments, land transfer, non-aggression pacts) are binding once posted in <strong>#treaties</strong>. Breaking a treaty is a bannable offence.</li>
+  </ul>
+
+  <h2 id="combat">3. Combat Rules</h2>
+  <ul>
+    <li>During an active war, members of both nations can be killed anywhere except protected spawn zones.</li>
+    <li>Full loot on death applies during war. Keep-inventory perks do not function in war zones.</li>
+    <li>No combat logging. Disconnecting during combat forfeits your inventory to the other side if reported with evidence.</li>
+    <li>Spawn-camping the enemy's respawn point is not allowed. Give them a reasonable chance to leave spawn.</li>
+    <li>Alliances must be declared publicly. No secret third-party interference.</li>
+  </ul>
+
+  <h2 id="sieges">4. Sieges &amp; Objectives</h2>
+  <ul>
+    <li>To capture territory you must break the defender's <strong>war banner / obsidian core</strong> inside their claim and hold the area for the siege timer (default 10 minutes).</li>
+    <li>Only the land immediately connected to a captured core can be claimed as spoils — you cannot teleport-claim across the map.</li>
+    <li>Defenders may rebuild and re-place a core between sieges.</li>
+    <li>TNT and cannons are allowed against claimed structures <strong>only</strong> during an active war.</li>
+  </ul>
+
+  <h2 id="spoils">5. Spoils &amp; Raiding</h2>
+  <ul>
+    <li>During war you may open, break, and loot chests and blocks inside the enemy's claims.</li>
+    <li>You may not permanently pave, lava-cast, or cobble-monster an enemy's build to make it unusable. Loot it, don't ruin it.</li>
+    <li>Captured land and agreed reparations are the only permanent outcomes. Everything else resets to peace rules when the war ends.</li>
+  </ul>
+
+  <h2 id="ending">6. Ending a War</h2>
+  <ul>
+    <li>A war ends when: the war goal is met, one side surrenders in <strong>#treaties</strong>, both sides agree to white peace, or 14 days pass with no siege activity (auto-timeout).</li>
+    <li>On war end, all temporary raid permissions are revoked immediately.</li>
+  </ul>
+
+  <h2 id="forbidden">7. Forbidden Tactics</h2>
+  <div class="callout warn">
+    <ul style="margin:0;">
+      <li>No lag machines, crash exploits, or client hacks — the <a href="/rules.html#cheating">server rules</a> still apply in war.</li>
+      <li>No griefing unclaimed spawn infrastructure, shops, or public warps.</li>
+      <li>No real-money payments for war participation or outcomes.</li>
+      <li>No using alts to scout, hold ground, or pad numbers.</li>
+      <li>No withholding a declared war goal to grief a nation indefinitely.</li>
+    </ul>
+  </div>
+
+  <p class="editnote">Draft content — edit <code>site/war.html</code> to match how war actually works on Meridian (plugin, banner mechanic, timers, channel names).</p>
+</main>
+
+<footer class="site-footer">
+  Meridian (MMC) &middot; play.meridian-mc.net &middot; Not affiliated with Mojang or Microsoft.
+</footer>
+
+<script src="/assets/app.js"></script>
+</body>
+</html>
