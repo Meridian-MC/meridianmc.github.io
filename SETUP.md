@@ -41,26 +41,28 @@ Direct `172.240.14.185:25606` keeps working as a fallback.
 
 ---
 
-## 2. Website — Cloudflare Pages
+## 2. Website — Cloudflare Workers (connected to Git)
 
-### Deploy
-1. Dashboard → **Workers & Pages** → **Create** → **Pages** → **Upload assets**.
-2. Project name: `meridian` → **Create project**.
-3. Upload `meridian-site.zip` (or drag the **contents** of the `site/` folder so
-   `index.html` sits at the top level).
-4. **Deploy site**. You get `https://meridian.pages.dev`.
+Repo: `Meridian-MC/meridianmc.github.io`, branch `main`. Site files live at the
+repo root; `wrangler.jsonc` deploys them as a static-assets Worker `meridianmc`.
+
+### Cloudflare "Set up your application" screen
+- Build command: **leave empty**
+- Deploy command: leave default (`npx wrangler deploy`)
+- Root directory: `/`
+- Non-production branch builds: default
+- Protect with Cloudflare Access: **unchecked**
+- Create / Deploy → you get `https://meridianmc.<subdomain>.workers.dev`
 
 ### Attach the domain
-5. In the `meridian` project → **Custom domains** → **Set up a custom domain**.
-6. Add `meridian-mc.net` → **Activate domain**. Cloudflare auto-creates the DNS record.
-7. Repeat for `www.meridian-mc.net`.
-8. (Optional) DNS → add a redirect rule or the `www`→apex redirect Pages offers.
+In the `meridianmc` Worker → **Settings → Domains & Routes** → **Add** → Custom domain:
+- `meridian-mc.net`
+- `www.meridian-mc.net`
 
-HTTPS certs issue automatically within a few minutes.
+Cloudflare creates the DNS records and issues HTTPS automatically.
 
 ### Updating the site later
-Re-run **Upload assets** in the project for a new deployment, or connect a Git
-repo / use `wrangler pages deploy site/` for one-command deploys.
+`git push` to `main` → Cloudflare auto-builds and deploys.
 
 ---
 
