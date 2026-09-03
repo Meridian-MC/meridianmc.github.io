@@ -233,10 +233,17 @@ main {
 }
 .plugin-head {
   display: flex;
-  align-items: baseline;
-  gap: 12px;
+  align-items: center;
+  gap: 11px;
   flex-wrap: wrap;
   margin-bottom: 8px;
+}
+.plugin-head .p-ico {
+  width: 34px; height: 34px;
+  border-radius: 8px;
+  flex-shrink: 0;
+  background: var(--bg-2);
+  object-fit: cover;
 }
 .plugin-head h3 {
   font-size: 1.15rem;
@@ -258,76 +265,35 @@ main {
 .plugin .links { margin-top: 12px; display: flex; gap: 16px; flex-wrap: wrap; }
 .plugin .more { display: inline-block; font-size: 0.88rem; color: var(--text); }
 
-/* ---------- Discord widget ---------- */
-.discord-embed {
-  --dc-blurple: #5865f2;
-  --dc-bg: #2b2d31;
-  --dc-bg-2: #1e1f22;
-  --dc-text: #f2f3f5;
-  --dc-text-dim: #b5bac1;
-  --dc-online: #23a55a;
-  width: 100%;
-  max-width: 420px;
-  margin: 0 auto;
-  background: var(--dc-bg);
-  border: 1px solid var(--dc-bg-2);
-  border-radius: 10px;
-  padding: 16px;
-  font-family: var(--font);
-  color: var(--dc-text);
-}
-.dw-row { display: flex; align-items: center; gap: 14px; }
-.dw-icon {
-  width: 52px;
-  height: 52px;
-  border-radius: 16px;
-  background: var(--dc-bg-2);
-  flex-shrink: 0;
-  object-fit: cover;
-}
-.dw-meta { min-width: 0; flex: 1; }
-.dw-label {
-  font-size: 0.66rem;
-  font-weight: 700;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  color: var(--dc-text-dim);
-}
-.dw-name {
-  font-size: 1.05rem;
-  font-weight: 600;
-  color: var(--dc-text);
-  line-height: 1.2;
-  margin: 1px 0 5px;
-}
-.dw-presence {
-  display: flex;
-  gap: 16px;
-  font-size: 0.82rem;
-  color: var(--dc-text-dim);
-}
-.dw-presence span { display: inline-flex; align-items: center; gap: 6px; }
-.dw-dot { width: 8px; height: 8px; border-radius: 50%; }
-.dw-dot.on { background: var(--dc-online); }
-.dw-dot.off { background: #80848e; }
-.dw-presence b { color: var(--dc-text); font-weight: 600; }
-.dw-join {
+/* ---------- Discord strip ---------- */
+.discord-strip {
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 8px;
-  margin-top: 14px;
-  background: var(--dc-blurple);
-  color: #fff;
-  font-weight: 600;
-  font-size: 0.92rem;
-  padding: 11px;
-  border-radius: 8px;
+  gap: 12px;
+  width: 100%;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--bg-1);
+  padding: 13px 16px;
   text-decoration: none;
-  transition: background 0.13s;
+  color: var(--text-2);
+  transition: border-color 0.15s, background 0.15s;
 }
-.dw-join:hover { background: #4752c4; text-decoration: none; }
-.dw-join svg { width: 20px; height: 20px; }
+.discord-strip:hover { border-color: var(--border-2); background: var(--bg-2); text-decoration: none; }
+.discord-strip .ds-logo { width: 22px; height: 22px; color: #7b86f5; flex-shrink: 0; }
+.discord-strip .ds-name { font-weight: 600; color: var(--text); }
+.discord-strip .ds-count { display: inline-flex; align-items: center; gap: 6px; font-size: 0.86rem; color: var(--text-3); }
+.discord-strip .ds-count .ds-dot { width: 7px; height: 7px; border-radius: 50%; background: #23a55a; }
+.discord-strip .ds-count b { color: var(--text-2); font-weight: 600; font-variant-numeric: tabular-nums; }
+.discord-strip .ds-join {
+  margin-left: auto; flex-shrink: 0;
+  font-size: 0.86rem; font-weight: 600; color: var(--text);
+}
+.discord-strip:hover .ds-join { color: #fff; }
+@media (max-width: 520px) {
+  .discord-strip { flex-wrap: wrap; }
+  .discord-strip .ds-join { margin-left: 0; width: 100%; }
+}
 
 /* full plugin list */
 details.all-plugins {
