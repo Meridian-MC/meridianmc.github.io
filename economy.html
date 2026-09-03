@@ -38,7 +38,7 @@
 
 <main class="doc">
   <h1>Economy</h1>
-  <p class="lead">A live read on the Meridian economy, rebuilt from server data. Staff accounts and admin grants are excluded. For how the economy actually works, see the <a href="/faq#economy">FAQ</a>.</p>
+  <p class="lead">A live read on the Meridian economy, rebuilt from live server data. For how the economy actually works, see the <a href="/faq#economy">FAQ</a>.</p>
   <div class="data-stamp" data-stamp>Loading&hellip;</div>
 
   <div class="analytics" data-analytics>
@@ -58,7 +58,7 @@
       <div class="chart-grid">
         <div class="chart">
           <h3>Money supply</h3>
-          <div class="c-sub">Total currency held by non-staff players.</div>
+          <div class="c-sub">Total currency held by players.</div>
           <div data-slot="supply-chart"></div>
         </div>
         <div class="chart">
@@ -76,7 +76,7 @@
 
     <section id="prices">
       <h2>Item prices</h2>
-      <p class="as-sub">Average chest-shop price for tracked goods, with the 7-day move and a 30-day trend line. Rebuilt from shop sales.</p>
+      <p class="as-sub">These are <strong>not fixed prices</strong>. Each figure is the median asking price across every player chest shop currently selling that item, with the 7-day move and a 30-day trend. Prices are whatever players charge; this just reads the market.</p>
       <div data-slot="item-table"></div>
     </section>
 
@@ -97,7 +97,7 @@
           <dt>Recession</dt><dd>Trade volume down more than 25%, week over week.</dd>
           <dt>Insufficient data</dt><dd>Not enough players or history to judge.</dd>
         </dl>
-        <p>The <strong>Gini</strong> figure measures how concentrated wealth is: <code>0</code> means everyone holds the same, <code>1</code> means one player holds everything. The <strong>price index</strong> tracks a fixed basket of wheat, iron, diamonds, ender pearls and oak logs against player-shop prices, set to 100 at launch.</p>
+        <p>The <strong>Gini</strong> figure measures how concentrated wealth is: <code>0</code> means everyone holds the same, <code>1</code> means one player holds everything. The <strong>price index</strong> tracks a fixed basket of wheat, iron, diamonds, ender pearls and oak logs against the median player-shop price for each, set to 100 at launch. Everything on this page refreshes automatically through the day.</p>
       </div>
     </details>
   </div>

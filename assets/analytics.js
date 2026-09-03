@@ -126,7 +126,7 @@
       var stats = root.querySelector("[data-slot=econ-stats]");
       if (stats) {
         stats.innerHTML =
-          tile(money(e.money_supply_players), "Player money supply", "excludes staff") +
+          tile(money(e.money_supply_players), "Player money supply", "all players") +
           tile(money(e.trade_volume_7d), "Trade volume · 7d", "player + shop") +
           tile(e.gini == null ? "—" : e.gini.toFixed(2), "Wealth Gini", "0 equal · 1 concentrated") +
           tile(e.price_index && e.price_index.value != null ? e.price_index.value.toFixed(1) : "—", "Price index", "base 100 at launch") +

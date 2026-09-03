@@ -17,8 +17,8 @@
   --p-market: #6f9bd1;
   --p-jobs: #ac88cf;
   --p-brew: #d382ac;   /* pinkish, for The Brewing Project */
-  --p-essentials: #5cb5b0;
-  --p-core: #9096d1;
+  --p-essentials: #d16565;   /* red, EssentialsX */
+  --p-core: #5b9bd5;   /* CoreProtect blue */
   --p-guard: #9aa1a8;
 
   --radius: 12px;
@@ -285,6 +285,7 @@ main {
 .discord-strip .ds-count { display: inline-flex; align-items: center; gap: 6px; font-size: 0.86rem; color: var(--text-3); }
 .discord-strip .ds-count .ds-dot { width: 7px; height: 7px; border-radius: 50%; background: #23a55a; }
 .discord-strip .ds-count b { color: var(--text-2); font-weight: 600; font-variant-numeric: tabular-nums; }
+.discord-strip .ds-sep { color: var(--border-2); }
 .discord-strip .ds-join {
   margin-left: auto; flex-shrink: 0;
   font-size: 0.86rem; font-weight: 600; color: var(--text);
