@@ -29,6 +29,7 @@
       <a href="/lands" class="active">Lands</a>
       <a href="/war">Warfare</a>
       <a href="/economy">Economy</a>
+      <a href="/faq">FAQ</a>
       <a href="/commands">Commands</a>
       <a href="https://map.meridian-mc.net">Live Map</a>
     </div>
@@ -52,11 +53,11 @@
   <h2 id="lands"><span class="num">1</span>Lands</h2>
   <ol>
     <li>Run <code>/lands create &lt;name&gt;</code> to found your land free of charge. The first chunk is free.</li>
-    <li>The first paid chunk costs <strong>$300,000</strong>, and every chunk after that rises by a fixed <strong>$50,000</strong>, so the larger your land gets, the more each expansion costs.</li>
+    <li>The first paid chunk costs <strong>$75,000</strong>, and every chunk after that rises by a fixed <strong>$15,000</strong>, so the larger your land gets, the more each expansion costs.</li>
     <li>When naming your land you can use a hex code to set its color on the world map, for example <code>&lt;#FF5555&gt;ExampleLand</code>. Minecraft only recognizes a specific set of hex colors.</li>
     <li>Your land has its own shared bank, separate from any individual's personal balance. Claim costs and upkeep are withdrawn from this bank, and any member can deposit into it.</li>
     <li>If the bank can't cover a cost, it falls back to the <strong>owner's</strong> personal balance.</li>
-    <li>Every land pays weekly upkeep on its claimed chunks, at <strong>$10,000 per chunk</strong>.</li>
+    <li>Every land pays weekly upkeep on its claimed chunks, at <strong>$3,000 per chunk</strong>.</li>
     <li>Larger lands cost more to maintain. Before you claim aggressively, make sure your land has the income to support it.</li>
     <li>You can rent or sell sub-areas of your land to other players without adding them as trusted members.</li>
     <li>Lands unlock new tiers by hitting member and wealth thresholds. The tiers are Settlement, Village, Town, Province, and Land. Each tier grants more claimable chunks and member slots, for a modest increase in upkeep.</li>
@@ -65,9 +66,9 @@
 
   <h2 id="nations"><span class="num">2</span>Nations</h2>
   <ol>
-    <li>Multiple lands can form a nation for <strong>$7,500,000</strong>.</li>
-    <li>When a land joins a nation it stops paying upkeep to the server and instead pays tax directly to the nation. The nation's leader sets that rate, up to <strong>$20,000 per chunk</strong>.</li>
-    <li>In turn, the nation owes its own upkeep to the server, at <strong>$10,000 per chunk</strong> across the combined total of its lands.</li>
+    <li>Multiple lands can form a nation for <strong>$5,000,000</strong>.</li>
+    <li>When a land joins a nation it stops paying upkeep to the server and instead pays tax directly to the nation. The nation's leader sets that rate, up to <strong>$6,000 per chunk</strong>.</li>
+    <li>In turn, the nation owes its own upkeep to the server, at <strong>$6,000 per chunk</strong> across the combined total of its lands.</li>
     <li>Relations between nations are publicly tracked in-game.</li>
     <li>Like lands, nations can develop into higher tiers. The nation tiers are Federation, Nation, and Empire, and each one unlocks additional claiming capacity for every land in the nation.</li>
   </ol>
@@ -88,7 +89,7 @@
     <div class="data-stamp" data-stamp>Loading live data&hellip;</div>
 
     <h3>Nations</h3>
-    <div data-slot="nation-table"></div>
+    <div class="nation-grid" data-slot="nation-grid"></div>
 
     <h3>Land atlas</h3>
     <div data-slot="land-table"></div>

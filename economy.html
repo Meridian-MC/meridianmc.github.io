@@ -4,13 +4,13 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Economy · Meridian</title>
-<meta name="description" content="How money, the free market, chest shops, and jobs work on Meridian's player-run economy, plus live economic analytics.">
+<meta name="description" content="A live read on the Meridian server economy: the Meridian Economic Index, money supply, trade volume, prices, and player wealth.">
 <link rel="stylesheet" href="/assets/style.css">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23f4f4f5'/%3E%3Ctext x='16' y='22' font-size='16' font-family='sans-serif' font-weight='800' fill='%230b0b0c' text-anchor='middle'%3EM%3C/text%3E%3C/svg%3E">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Meridian">
 <meta property="og:title" content="Economy · Meridian">
-<meta property="og:description" content="How money, the free market, chest shops, and jobs work on Meridian's player-run economy, plus live economic analytics.">
+<meta property="og:description" content="A live read on the Meridian server economy: the Meridian Economic Index, money supply, trade volume, prices, and player wealth.">
 <meta property="og:url" content="https://meridian-mc.net/economy">
 <meta property="og:image" content="https://meridian-mc.net/assets/og.jpg">
 <meta property="og:image:width" content="1200">
@@ -29,6 +29,7 @@
       <a href="/lands">Lands</a>
       <a href="/war">Warfare</a>
       <a href="/economy" class="active">Economy</a>
+      <a href="/faq">FAQ</a>
       <a href="/commands">Commands</a>
       <a href="https://map.meridian-mc.net">Live Map</a>
     </div>
@@ -37,72 +38,58 @@
 
 <main class="doc">
   <h1>Economy</h1>
-  <p class="lead">Meridian runs a free market. Almost everything in circulation was gathered or made by a player, and prices are whatever players agree to. Here is how it works, and how it is doing.</p>
+  <p class="lead">A live read on the Meridian economy, rebuilt from server data. Staff accounts and admin grants are excluded. For how the economy actually works, see the <a href="/faq#economy">FAQ</a>.</p>
+  <div class="data-stamp" data-stamp>Loading&hellip;</div>
 
-  <div class="toc">
-    <strong>On this page</strong>
-    <ol>
-      <li><a href="#guide">The guide</a></li>
-      <li><a href="#numbers">The numbers</a></li>
-    </ol>
-  </div>
+  <div class="analytics" data-analytics>
+    <section id="state">
+      <h2>State of the economy</h2>
+      <p class="as-sub">The Meridian Economic Index compares each week's trade volume against the week before.</p>
+      <div class="mei" data-slot="mei" data-code="INSUFFICIENT_DATA">
+        <span class="mei-dot"></span><span class="mei-label">Loading&hellip;</span>
+      </div>
+      <div class="mei-scale" data-slot="mei-scale"></div>
+      <div class="stat-row" data-slot="econ-stats"></div>
+    </section>
 
-  <h2 id="guide">The guide</h2>
+    <section id="money">
+      <h2>Money &amp; trade</h2>
+      <p class="as-sub">Currency in players' hands, the cost of a basket of common goods, and daily trade activity.</p>
+      <div class="chart-grid">
+        <div class="chart">
+          <h3>Money supply</h3>
+          <div class="c-sub">Total currency held by non-staff players.</div>
+          <div data-slot="supply-chart"></div>
+        </div>
+        <div class="chart">
+          <h3>Price index</h3>
+          <div class="c-sub">Basket of common goods. Base 100 at launch.</div>
+          <div data-slot="price-chart"></div>
+        </div>
+      </div>
+      <div class="chart">
+        <h3>Trade volume</h3>
+        <div class="c-sub">Value moving between players and through shops each day.</div>
+        <div data-slot="volume-chart"></div>
+      </div>
+    </section>
 
-  <h3>What's the currency?</h3>
-  <p>A single currency, written <code>$</code>, not tied to any physical item. Everyone starts with a <strong>$2,500</strong> balance. Check yours with <code>/balance</code> and send money with <code>/pay &lt;player&gt; &lt;amount&gt;</code>.</p>
+    <section id="prices">
+      <h2>Item prices</h2>
+      <p class="as-sub">Average chest-shop price for tracked goods, with the 7-day move and a 30-day trend line. Rebuilt from shop sales.</p>
+      <div data-slot="item-table"></div>
+    </section>
 
-  <h3>Is there a server shop?</h3>
-  <p>Yes, but it only sells a handful of basic commodities like torches and bread, and it is <strong>buy-only</strong>. You cannot sell anything to the server for cash. This keeps the market in players' hands.</p>
-
-  <h3>Why is the server shop so expensive?</h3>
-  <p>The server shop is priced as an emergency option, not a convenience. It should always be cheaper to buy from another player, so the high prices push you toward the chest-shop market.</p>
-
-  <h3>How do I make money?</h3>
-  <p>Mainly by trading with other players. Chest shops are the real economy. Left-click a chest with the item you want to sell to set one up, find what is in demand, produce it, and sell it. There is no single get-rich-quick method.</p>
-
-  <h3>Are there jobs I can do for money?</h3>
-  <p>Yes. A small set of jobs pays out for relevant actions, mostly to help new players earn starting capital. The jobs are Miner, Farmer, Fisherman, Hunter, and Explorer. Daily earnings are capped at <strong>$1,500</strong>, so jobs are not a full-time income. Run <code>/jobs browse</code> to get employed.</p>
-
-  <h3>How should I price my items?</h3>
-  <p>Players set their own prices. There is no fixed price list for anything traded player-to-player. Check a few shops, see what people are asking, and price accordingly.</p>
-
-  <div class="callout">Scamming through a mispriced shop sign is on the buyer to catch. Scamming through <strong>trust</strong>, meaning taking a payment and not delivering, fake middlemen, or &ldquo;hold this for me&rdquo;, is a <a href="/rules">Rulebook</a> violation. For big deals, use a chest shop or ask staff to middleman.</p>
-
-  <p style="margin-top:24px;color:var(--text-3);font-size:0.9rem;">See the <a href="/commands#economy">Commands</a> page for the full list of economy and shop commands.</p>
-
-  <!-- ================= Live analytics ================= -->
-  <section class="analytics" data-analytics>
-    <h2 id="numbers">The numbers</h2>
-    <p class="as-sub">A read on the state of the Meridian economy, rebuilt from server data. Staff accounts and admin grants are excluded.</p>
-    <div class="data-stamp" data-stamp>Loading live data&hellip;</div>
-
-    <div class="mei" data-slot="mei" data-code="INSUFFICIENT_DATA">
-      <span class="dot"></span><span class="mei-label">Loading&hellip;</span>
-    </div>
-
-    <div class="stat-row" data-slot="econ-stats"></div>
-
-    <div class="chart">
-      <h3>Money supply</h3>
-      <div class="c-sub">Total currency held by non-staff players over time.</div>
-      <div data-slot="supply-chart"></div>
-    </div>
-
-    <div class="chart">
-      <h3>Trade volume</h3>
-      <div class="c-sub">Daily value moving between players and through shops.</div>
-      <div data-slot="volume-chart"></div>
-    </div>
-
-    <h3>Wealthiest players</h3>
-    <div data-slot="wealth-table"></div>
+    <section id="wealth">
+      <h2>Wealth</h2>
+      <p class="as-sub">Who is holding the money.</p>
+      <div data-slot="wealth-table"></div>
+    </section>
 
     <details class="method">
       <summary>How the Meridian Economic Index is calculated</summary>
       <div class="m-body">
-        <p>The index reads the server's economy log (every balance change), the land databases, and the shop transaction history. It needs at least <strong>8 active traders</strong> and <strong>14 days</strong> of history before it will assign a state.</p>
-        <p>Each week it compares the last 7 days of trade volume against the 7 days before that:</p>
+        <p>The index reads the server's economy log (every balance change), the land databases, and the shop transaction history. It needs at least <strong>8 active traders</strong> and <strong>14 days</strong> of history before it will assign a state. Each week it compares the last 7 days of trade volume against the 7 days before that:</p>
         <dl>
           <dt>Expansion</dt><dd>Trade volume up more than 10% week over week.</dd>
           <dt>Steady</dt><dd>Trade volume within a &minus;5% to +10% band. A healthy, consistent market.</dd>
@@ -110,10 +97,10 @@
           <dt>Recession</dt><dd>Trade volume down more than 25%, week over week.</dd>
           <dt>Insufficient data</dt><dd>Not enough players or history to judge.</dd>
         </dl>
-        <p>The <strong>Gini</strong> figure measures how concentrated wealth is: <code>0</code> means everyone holds the same, <code>1</code> means one player holds everything. A full <strong>price index</strong> (inflation tracking on a basket of common goods) turns on once chest-shop price history is being recorded.</p>
+        <p>The <strong>Gini</strong> figure measures how concentrated wealth is: <code>0</code> means everyone holds the same, <code>1</code> means one player holds everything. The <strong>price index</strong> tracks a fixed basket of wheat, iron, diamonds, ender pearls and oak logs against player-shop prices, set to 100 at launch.</p>
       </div>
     </details>
-  </section>
+  </div>
 </main>
 
 <footer class="site-footer">
