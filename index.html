@@ -4,11 +4,21 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Meridian — Minecraft Server</title>
-<meta name="description" content="Meridian (MMC) — a survival Minecraft server with land claims, nations, structured warfare, and a player-driven economy. Connect at meridian-mc.net.">
+<meta name="description" content="Meridian (MMC) — a Vanilla+ survival Minecraft server with land claims, nations, structured warfare, and a player-driven economy. Connect at meridian-mc.net.">
 <link rel="stylesheet" href="/assets/style.css">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23f4f4f5'/%3E%3Ctext x='16' y='22' font-size='16' font-family='sans-serif' font-weight='800' fill='%230b0b0c' text-anchor='middle'%3EM%3C/text%3E%3C/svg%3E">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Meridian">
+<meta property="og:title" content="Meridian — Vanilla+ Minecraft Server">
+<meta property="og:description" content="Land claims, nations, staff-moderated warfare, and a genuinely player-run economy. Connect at meridian-mc.net.">
+<meta property="og:url" content="https://meridian-mc.net/">
+<meta property="og:image" content="https://meridian-mc.net/assets/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0b0b0c">
 </head>
-<body>
+<body class="bg">
 <header class="site-header">
   <nav class="nav-inner">
     <a href="/" class="brand"><span class="mark">M</span> Meridian</a>
@@ -28,7 +38,7 @@
 <main>
   <section class="hero">
     <h1>Meridian</h1>
-    <p class="tagline">A survival server built on land claims, nations, staff-moderated warfare, and a genuinely player-run economy. Claim your ground, sign your treaties, and defend them.</p>
+    <p class="tagline">A Vanilla+ survival server built on land claims, nations, staff-moderated warfare, and a genuinely player-run economy. Claim your ground, sign your treaties, and defend them.</p>
 
     <div class="ip-box" data-copy="meridian-mc.net" role="button" tabindex="0">
       <div>
@@ -37,14 +47,22 @@
       </div>
       <span class="copy-hint">Click to copy</span>
     </div>
-    <div class="sub-line">
-      Java Edition &nbsp;·&nbsp; connect from <code>1.8</code> through <code>26.2</code> — older clients bridged by ViaVersion&nbsp;+&nbsp;ViaBackwards
+    <div class="sub-line">Java Edition &nbsp;·&nbsp; Version <code>26.2&ndash;1.8</code></div>
+  </section>
+
+  <section class="stack" id="community">
+    <div class="discord" data-discord-invite="beHD4TE3Td">
+      <div class="d-info">
+        <div class="d-title">Meridian on Discord</div>
+        <div class="d-stats">Announcements, war tickets, and the community.</div>
+      </div>
+      <a class="d-join" href="https://discord.gg/beHD4TE3Td" rel="noopener">Join the Discord</a>
     </div>
   </section>
 
   <section class="stack" id="systems">
     <h2>The systems that run Meridian</h2>
-    <p class="section-intro">Meridian is defined by a handful of plugins. Know these and you know how the server plays.</p>
+    <p class="section-intro">Meridian runs on <a href="https://papermc.io" rel="noopener">Paper</a> and is defined by a handful of plugins. Know these and you know how the server plays.</p>
 
     <div class="pill-row">
       <a class="pill" href="#lands">Lands</a>
@@ -60,36 +78,44 @@
       <div class="plugin-head"><h3>Lands</h3><span class="ver">v8.2.4</span></div>
       <p>The backbone of the server. Claim land chunk by chunk, form a land with a shared bank, then combine lands into nations with their own taxes, tiers, and tracked diplomacy.</p>
       <p>Claims are protected around the clock — the only time that changes is a staff-approved war.</p>
-      <a class="more" href="/lands">Lands &amp; Nations guide →</a>
+      <div class="links">
+        <a class="more" href="/lands">Lands &amp; Nations guide →</a>
+        <a class="more" href="https://wiki.incredibleplugins.com/lands/players" rel="noopener">Plugin wiki →</a>
+      </div>
     </article>
 
     <article class="plugin" id="quickshop" style="--p: var(--p-quickshop)">
       <div class="plugin-head"><h3>QuickShop-Hikari</h3><span class="ver">v6.3.0.1</span></div>
       <p>Player-to-player chest shops. Left-click a chest holding the item you want to trade, set a price, and you have a store. These shops <em>are</em> the Meridian economy.</p>
-      <a class="more" href="/economy">Economy guide →</a>
+      <div class="links"><a class="more" href="/economy">Economy guide →</a></div>
     </article>
 
     <article class="plugin" id="market" style="--p: var(--p-market)">
       <div class="plugin-head"><h3>EconomyShopGUI</h3><span class="ver">v7.2.1</span></div>
       <p>The server shop — deliberately limited to basic commodities like torches and bread, at deliberately high prices. There is no sell-to-server option. It exists to keep a real free market, not to be your income.</p>
-      <a class="more" href="/economy">Economy guide →</a>
+      <div class="links"><a class="more" href="/economy">Economy guide →</a></div>
     </article>
 
     <article class="plugin" id="jobs" style="--p: var(--p-jobs)">
       <div class="plugin-head"><h3>Jobs Reborn</h3><span class="ver">v5.2.6.6</span></div>
-      <p>Five jobs — Miner, Farmer, Fisherman, Hunter, Explorer — that pay small amounts for relevant actions. Daily earnings cap at $15; it is starter capital, not a salary. Run <code>/jobs browse</code> to sign up.</p>
-      <a class="more" href="/economy">Economy guide →</a>
+      <p>Five jobs — Miner, Farmer, Fisherman, Hunter, Explorer — that pay small amounts for relevant actions. Daily earnings cap at $1,500; it is starter capital, not a salary. Run <code>/jobs browse</code> to sign up.</p>
+      <div class="links"><a class="more" href="/economy">Economy guide →</a></div>
     </article>
 
     <article class="plugin" id="brewing" style="--p: var(--p-brew)">
       <div class="plugin-head"><h3>The Brewing Project</h3><span class="ver">v3.3.3</span></div>
-      <p>Overhauled, recipe-driven brewing. Ferment ingredients in barrels, distill with cauldrons, age for quality — the result depends on getting every step right. A trade good in its own right.</p>
+      <p>A complete rewrite of the BreweryX plugin. Learn the art of brewing through fermenting, distilling, and barrel aging — how spring water and wheat become a cool beer, or a high-proof liquor that takes on its taste only after years in an oak barrel.</p>
+      <p>The somewhat difficult process rewards you with a diversity of potions whose effects create a drunkenness that has never existed in Minecraft — fill the taverns with laughter and loud music while the drunkards scuffle in the streets.</p>
+      <div class="links"><a class="more" href="https://docs.breweryteam.dev/docs/tbp" rel="noopener">Plugin wiki →</a></div>
     </article>
 
     <article class="plugin" id="essentials" style="--p: var(--p-essentials)">
       <div class="plugin-head"><h3>EssentialsX</h3><span class="ver">v2.22.1</span></div>
-      <p>The everyday commands: homes, <code>/tpa</code>, <code>/pay</code>, <code>/balance</code>, mail, kits, and chat. Backed by Vault, which links the currency to every other plugin on this list.</p>
-      <a class="more" href="/commands">Command reference →</a>
+      <p>The everyday commands: homes, <code>/pay</code>, <code>/balance</code>, mail, kits, and chat. Backed by Vault, which links the currency to every other plugin on this list.</p>
+      <div class="links">
+        <a class="more" href="/commands">Command reference →</a>
+        <a class="more" href="https://essentialsx.net/wiki/Home.html" rel="noopener">Plugin wiki →</a>
+      </div>
     </article>
 
     <article class="plugin" id="protection" style="--p: var(--p-core)">
@@ -180,7 +206,7 @@
 </main>
 
 <footer class="site-footer">
-  Meridian (MMC) &middot; meridian-mc.net &middot; Not affiliated with Mojang or Microsoft.
+  Meridian (MMC) &middot; meridian-mc.net &middot; Running on <a href="https://papermc.io" rel="noopener">Paper</a> &middot; Not affiliated with Mojang or Microsoft.
 </footer>
 
 <script src="/assets/app.js"></script>

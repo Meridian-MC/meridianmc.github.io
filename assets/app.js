@@ -50,3 +50,28 @@ function showToast(msg) {
 }
 
 initCopy();
+
+// Live Discord member counts (public invite endpoint, CORS-enabled)
+async function initDiscord() {
+  const el = document.querySelector('[data-discord-invite]');
+  if (!el) return;
+  const code = el.getAttribute('data-discord-invite');
+  const statsEl = el.querySelector('.d-stats');
+  if (!statsEl) return;
+  try {
+    const res = await fetch('https://discord.com/api/v10/invites/' + code + '?with_counts=true');
+    if (!res.ok) throw new Error('bad status');
+    const data = await res.json();
+    const members = data.approximate_member_count;
+    const online = data.approximate_presence_count;
+    if (typeof members === 'number') {
+      statsEl.innerHTML =
+        '<span><span class="dot"></span>' + online.toLocaleString() + ' online</span>' +
+        '<span>' + members.toLocaleString() + ' members</span>';
+    }
+  } catch {
+    statsEl.textContent = 'Join the community';
+  }
+}
+
+initDiscord();
