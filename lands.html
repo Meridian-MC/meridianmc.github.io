@@ -45,6 +45,7 @@
       <li><a href="#lands">Lands</a></li>
       <li><a href="#nations">Nations</a></li>
       <li><a href="#vassals">Vassals</a></li>
+      <li><a href="#registry">Nation registry</a></li>
     </ol>
   </div>
 
@@ -79,6 +80,33 @@
   </ol>
 
   <div class="callout">Warfare is the only time claimed land can be entered or captured by an enemy. Read the <a href="/war">Warfare</a> document before you get into a conflict.</div>
+
+  <!-- ================= Nation registry ================= -->
+  <section class="analytics" data-analytics>
+    <h2 id="registry">Nation registry</h2>
+    <p class="as-sub">Every nation on Meridian, ranked by the Meridian Development Index, rebuilt from the land databases.</p>
+    <div class="data-stamp" data-stamp>Loading live data&hellip;</div>
+
+    <h3>Nations</h3>
+    <div data-slot="nation-table"></div>
+
+    <h3>Land atlas</h3>
+    <div data-slot="land-table"></div>
+
+    <details class="method">
+      <summary>How the Meridian Development Index is calculated</summary>
+      <div class="m-body">
+        <p>The MDI is a single score from <code>0</code> to <code>1</code>, modelled on the way the UN builds its Human Development Index: measure a few things that matter, put each on the same scale, then combine them so a nation cannot coast on one strength alone.</p>
+        <dl>
+          <dt>Territory</dt><dd>Claimed chunks, against a reference ceiling of 60.</dd>
+          <dt>Population</dt><dd>Trusted members across the nation's lands, against a ceiling of 15.</dd>
+          <dt>Wealth</dt><dd>Combined land-bank treasury, against a ceiling of $5,000,000.</dd>
+          <dt>Activity</dt><dd>Recent presence and events in the nation's lands.</dd>
+        </dl>
+        <p>The four sub-indices are combined with a <strong>geometric mean</strong>, so a nation that is large but empty, or rich but tiny, scores lower than one that is balanced. Reference ceilings are tuned as the server grows.</p>
+      </div>
+    </details>
+  </section>
 </main>
 
 <footer class="site-footer">
@@ -86,5 +114,6 @@
 </footer>
 
 <script src="/assets/app.js"></script>
+<script src="/assets/analytics.js"></script>
 </body>
 </html>

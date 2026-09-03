@@ -1,0 +1,107 @@
+{
+  "generated": "2026-09-03T20:18:59Z",
+  "meta": {
+    "players_tracked": 2,
+    "active_traders": 1,
+    "data_days": 6,
+    "sufficient": false,
+    "thresholds": {
+      "min_traders": 8,
+      "min_days": 14
+    }
+  },
+  "economy": {
+    "classification": {
+      "code": "INSUFFICIENT_DATA",
+      "label": "Insufficient data",
+      "note": "Need 8+ active traders and 14+ days of history to classify. Currently 1 / 6."
+    },
+    "money_supply_players": 15.01,
+    "money_supply_series": [
+      [
+        "2026-08-26",
+        15.01
+      ]
+    ],
+    "trade_volume_series": [
+      [
+        "2026-08-26",
+        15.01
+      ]
+    ],
+    "trade_volume_7d": 15.01,
+    "server_shop_transactions": 14,
+    "gini": 0.5,
+    "price_index": {
+      "value": null,
+      "series": [],
+      "note": "Needs player-shop price history (enable QuickShop MySQL logging)."
+    }
+  },
+  "wealth": {
+    "top": [
+      {
+        "name": "Yinshe",
+        "balance": 15.01
+      },
+      {
+        "name": "DatAriix",
+        "balance": 0.0
+      }
+    ],
+    "median": 7.5,
+    "mean": 7.5
+  },
+  "nations": [
+    {
+      "name": "testnation",
+      "tag": null,
+      "mdi": 0.001,
+      "territory": 0.0,
+      "population": 0.0,
+      "wealth": 0.0,
+      "activity": 0.0,
+      "chunks": 0,
+      "members": 0,
+      "treasury": 0
+    },
+    {
+      "name": "roman empire",
+      "tag": null,
+      "mdi": 0.001,
+      "territory": 0.0,
+      "population": 0.0,
+      "wealth": 0.0,
+      "activity": 0.0,
+      "chunks": 0,
+      "members": 0,
+      "treasury": 0
+    }
+  ],
+  "lands": [
+    {
+      "name": "test_land",
+      "type": "LAND",
+      "chunks": 6,
+      "members": 2,
+      "bank": 0.0,
+      "level": 0
+    },
+    {
+      "name": "Yinshe",
+      "type": "LAND",
+      "chunks": 1,
+      "members": 2,
+      "bank": 0.0,
+      "level": 0
+    },
+    {
+      "name": "test123",
+      "type": "LAND",
+      "chunks": 0,
+      "members": 2,
+      "bank": 3000.0,
+      "level": 0
+    }
+  ]
+}
