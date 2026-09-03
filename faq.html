@@ -4,13 +4,13 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>FAQ · Meridian</title>
-<meta name="description" content="Frequently asked questions about the Meridian Minecraft server: the economy, the world, the Nether and End, and getting started.">
+<meta name="description" content="Frequently asked questions about the Meridian Minecraft server: the world, the Nether and End, PvP, whitelist, getting started, and the economy.">
 <link rel="stylesheet" href="/assets/style.css">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23f4f4f5'/%3E%3Ctext x='16' y='22' font-size='16' font-family='sans-serif' font-weight='800' fill='%230b0b0c' text-anchor='middle'%3EM%3C/text%3E%3C/svg%3E">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Meridian">
 <meta property="og:title" content="FAQ · Meridian">
-<meta property="og:description" content="Frequently asked questions about the Meridian Minecraft server: the economy, the world, the Nether and End, and getting started.">
+<meta property="og:description" content="Frequently asked questions about the Meridian Minecraft server: the world, the Nether and End, PvP, whitelist, getting started, and the economy.">
 <meta property="og:url" content="https://meridian-mc.net/faq">
 <meta property="og:image" content="https://meridian-mc.net/assets/og.jpg">
 <meta property="og:image:width" content="1200">
@@ -36,74 +36,136 @@
   </nav>
 </header>
 
-<main class="doc">
+<main class="doc faq">
   <h1>FAQ</h1>
-  <p class="lead">Common questions about how Meridian works. For live economic data see the <a href="/economy">Economy</a> page; for rules see the <a href="/rules">Rulebook</a>.</p>
+  <p class="lead">Common questions about how Meridian works. Live economic data is on the <a href="/economy">Economy</a> page; the full rules are in the <a href="/rules">Rulebook</a>.</p>
 
   <div class="toc">
     <strong>Sections</strong>
     <ol>
+      <li><a href="#world">The world</a></li>
       <li><a href="#starting">Getting started</a></li>
       <li><a href="#economy">Economy</a></li>
-      <li><a href="#world">The world</a></li>
     </ol>
   </div>
 
+  <h2 id="world">The world</h2>
+  <p class="cat-sub">How the map, the dimensions, and combat are set up.</p>
+
+  <div class="faq-q">
+    <h3>How big is the map?</h3>
+    <p>The overworld is <span class="short">10,000 &times; 10,000 blocks</span>, centred on spawn, so the furthest border is 5,000 blocks out in any direction. The border is solid; you cannot build past it.</p>
+  </div>
+
+  <div class="faq-q">
+    <h3>Is the End open?</h3>
+    <p><span class="short">No.</span> The End is closed.</p>
+  </div>
+
+  <div class="faq-q">
+    <h3>Why is the Nether so small, and why does it get wiped?</h3>
+    <p>The Nether runs at Minecraft's normal 8:1 ratio to the overworld, so a 10,000-wide overworld gives a Nether only about 1,250 blocks wide. That makes netherite, blaze rods, and other Nether loot genuinely scarce and worth trading.</p>
+    <p>To stop that small space from being permanently strip-mined and claimed, the <span class="short">Nether resets on the first of every month</span>. Anything you leave in the Nether is gone at the reset, so treat it as a place you raid, not a place you live.</p>
+  </div>
+
+  <div class="faq-q">
+    <h3>When does the Nether open?</h3>
+    <p>Not at launch. It opens on a fixed date afterward, announced server-wide when it happens.</p>
+  </div>
+
+  <div class="faq-q">
+    <h3>Is PvP on?</h3>
+    <p>PvP is <span class="short">off for the opening period</span> so people can settle in and get established. It is switched on server-wide once nations have formed, and the change is announced in advance. Once it is on, PvP is allowed everywhere outside declared <a href="/war">wars</a>, subject to the <a href="/rules#pvp">PvP rules</a>.</p>
+  </div>
+
+  <div class="faq-q">
+    <h3>What difficulty is the server?</h3>
+    <p>Normal survival. It is not hardcore, and there is no keep-inventory outside of war, so a death in the wild means dropping your things where you fell.</p>
+  </div>
+
+  <div class="faq-q">
+    <h3>Can I fly?</h3>
+    <p>Only inside land you are trusted in. Land owners can grant flight to their members through the Lands role settings. Everywhere else, flight is off.</p>
+  </div>
+
+  <div class="faq-q">
+    <h3>Is there anti-cheat and x-ray protection?</h3>
+    <p>Yes. <a href="/#protection">GrimAC</a> handles movement, combat, and packet checks. On top of that, the server hides ores from your client until you are close to them, so x-ray gives you nothing but a ban if you are caught using it.</p>
+  </div>
+
   <h2 id="starting">Getting started</h2>
+  <p class="cat-sub">Joining and your first hour.</p>
 
-  <h3>How do I join?</h3>
-  <p>Java Edition, address <code>meridian-mc.net</code>. Clients from <code>1.8</code> through <code>26.2</code> are supported through ViaVersion and ViaBackwards.</p>
+  <div class="faq-q">
+    <h3>How do I join?</h3>
+    <p>Java Edition, address <code>meridian-mc.net</code>. Clients from <code>1.8</code> through <code>26.2</code> are supported through ViaVersion and ViaBackwards. You need a genuine (premium) Minecraft account.</p>
+  </div>
 
-  <h3>What should I do first?</h3>
-  <p>Get some starting cash from a <a href="/faq#jobs-q">job</a>, then found a land with <code>/lands create &lt;name&gt;</code> and read the <a href="/lands">Lands guide</a>. The <a href="/commands">Commands</a> page has everything else.</p>
+  <div class="faq-q">
+    <h3>Is there a whitelist?</h3>
+    <p>Before launch the server is whitelisted. From launch day the whitelist comes off and anyone can connect at <code>meridian-mc.net</code>.</p>
+  </div>
+
+  <div class="faq-q">
+    <h3>What should I do first?</h3>
+    <p>Gather a little starting cash, then found a land with <code>/lands create &lt;name&gt;</code> and read the <a href="/lands">Lands guide</a>. Sign up for a <a href="/faq#jobs-q">job</a> for early income, and check the <a href="/commands">Commands</a> page for everything else.</p>
+  </div>
 
   <h2 id="economy">Economy</h2>
+  <p class="cat-sub">Money, the market, and how trading works. The <a href="/economy">Economy page</a> has the live numbers.</p>
 
-  <h3>What's the currency?</h3>
-  <p>A single currency, written <code>$</code>, not tied to any physical item. Everyone starts with <strong>$2,500</strong>. Check your balance with <code>/balance</code> and send money with <code>/pay &lt;player&gt; &lt;amount&gt;</code>.</p>
+  <div class="faq-q">
+    <h3>What's the currency?</h3>
+    <p>A single currency, written <code>$</code>, not tied to any physical item. Everyone starts with <span class="short">$2,500</span>. Check your balance with <code>/balance</code> and send money with <code>/pay &lt;player&gt; &lt;amount&gt;</code>.</p>
+  </div>
 
-  <h3>Is there a server shop?</h3>
-  <p>Yes, but it only sells a handful of basic commodities like torches and bread, and it is <strong>buy-only</strong>. You cannot sell anything to the server for cash. This keeps the market in players' hands.</p>
+  <div class="faq-q">
+    <h3>Is there a server shop?</h3>
+    <p>Yes, but it only sells a handful of basic commodities like torches and bread, and it is <span class="short">buy-only</span>. You cannot sell anything to the server for cash. That keeps the market in players' hands.</p>
+  </div>
 
-  <h3>Why is the server shop so expensive?</h3>
-  <p>It is priced as an emergency option, not a convenience. It should always be cheaper to buy from another player, so the high prices push you toward the chest-shop market.</p>
+  <div class="faq-q">
+    <h3>Why is the server shop so expensive?</h3>
+    <p>It is priced as an emergency option, not a convenience. It should always be cheaper to buy from another player, so the high prices push you toward the chest-shop market.</p>
+  </div>
 
-  <h3>How do I make money?</h3>
-  <p>Mainly by trading with other players. Chest shops are the real economy: left-click a chest with the item you want to sell to set one up, find what is in demand, produce it, and sell it. There is no single get-rich-quick method.</p>
+  <div class="faq-q">
+    <h3>How do I make money?</h3>
+    <p>Mostly by trading with other players. Chest shops are the real economy: left-click a chest holding the item you want to sell to set one up, work out what is in demand, produce it, and sell it. There is no single get-rich-quick method.</p>
+  </div>
 
-  <h3 id="jobs-q">Are there jobs I can do for money?</h3>
-  <p>Yes. Miner, Farmer, Fisherman, Hunter, and Explorer pay out small amounts for relevant actions. Jobs are a <strong>side hustle for early capital</strong>, not a reliable income. Daily earnings are capped at <strong>$1,500</strong>, and casual play earns well under that. Run <code>/jobs browse</code> to sign up.</p>
+  <div class="faq-q" id="jobs-q">
+    <h3>Are there jobs I can do for money?</h3>
+    <p>Yes. Miner, Farmer, Fisherman, Hunter, and Explorer pay out small amounts for relevant actions. Jobs are a <span class="short">side hustle for early capital</span>, not a living. Daily earnings are capped at $1,500, and casual play earns well under that. Run <code>/jobs browse</code> to sign up.</p>
+  </div>
 
-  <h3>How should I price my items?</h3>
-  <p>Players set their own prices. There is no fixed price list for anything traded player-to-player. Check a few shops, see what people are asking, and price accordingly. The <a href="/economy">Economy</a> page tracks a price index for common goods.</p>
+  <div class="faq-q">
+    <h3>How should I price my items?</h3>
+    <p>Players set their own prices. There is no fixed price list for anything traded player-to-player. Check a few shops, see what people are charging, and price accordingly. The <a href="/economy#prices">Economy page</a> tracks the going rate for common goods.</p>
+  </div>
 
-  <h3>What about scamming?</h3>
-  <p>Scamming through a mispriced shop sign is on the buyer to catch. Scamming through <strong>trust</strong>, meaning taking a payment and not delivering, fake middlemen, or &ldquo;hold this for me&rdquo;, is a <a href="/rules">Rulebook</a> violation. For big deals, use a chest shop or ask staff to middleman.</p>
+  <div class="faq-q">
+    <h3>Can I move enchantments between items?</h3>
+    <p>Yes, that is what <a href="/#extract">ExtractableEnchantments</a> is for. Craft an Enchantment Extractor (four experience bottles, four lapis blocks, and a book), then drag it onto an enchanted item to pull one random enchantment off as a book. It always works and you keep the book, so you can strip a good enchantment off gear you are replacing and re-use it or sell it.</p>
+  </div>
 
-  <h3>Are villager trades limited?</h3>
-  <p>A few are, to keep the player market fair:</p>
-  <ul>
-    <li><strong>Librarian re-rolling is disabled.</strong> You cannot break and replace a lectern to fish for a specific enchanted book.</li>
-    <li><strong>Villagers do not sell diamond gear.</strong> No diamond armour, swords, axes, pickaxes or shovels from armorers, weaponsmiths or toolsmiths. Craft your own or buy from a player.</li>
-    <li><strong>Clerics do not sell ender pearls, and farmers do not buy crops for emeralds.</strong> Both are protected tradeable commodities, the same way automated farms for them are banned under the <a href="/rules#farms">Farms rule</a>.</li>
-  </ul>
-  <p>Everything else works as it does in vanilla.</p>
+  <div class="faq-q">
+    <h3>Are villager trades limited?</h3>
+    <p>A few are, to keep the player market fair:</p>
+    <ul>
+      <li><strong>Librarian re-rolling is disabled.</strong> You cannot break and replace a lectern to fish for a specific enchanted book.</li>
+      <li><strong>Villagers do not sell diamond gear.</strong> No diamond armour, swords, axes, pickaxes, or shovels from armorers, weaponsmiths, or toolsmiths. Craft your own or buy from a player.</li>
+      <li><strong>Clerics do not sell ender pearls, and farmers do not buy crops for emeralds.</strong> Both are protected commodities, the same way automated farms for them are banned under the <a href="/rules#farms">Farms rule</a>.</li>
+    </ul>
+    <p>Everything else works the way it does in vanilla.</p>
+  </div>
 
-  <h2 id="world">The world</h2>
+  <div class="faq-q">
+    <h3>What about scamming?</h3>
+    <p>Scamming through a mispriced shop sign is on the buyer to catch. Scamming through <strong>trust</strong>, meaning taking a payment and not delivering, fake middlemen, or &ldquo;hold this for me&rdquo;, is a <a href="/rules">Rulebook</a> violation. For big deals, use a chest shop or ask staff to middleman.</p>
+  </div>
 
-  <h3>How big is the map?</h3>
-  <p>The overworld is <strong>10,000 &times; 10,000</strong> blocks.</p>
-
-  <h3>Is the End open?</h3>
-  <p>No.</p>
-
-  <h3>Why is the Nether so small?</h3>
-  <p>The overworld is 10,000 &times; 10,000, and the Nether runs at an 8:1 ratio to it, so the Nether is small. That makes netherite and other Nether loot genuinely scarce. To keep it from being permanently strip-mined, the <strong>Nether is wiped every month</strong>.</p>
-
-  <h3>When does the Nether open?</h3>
-  <p>Not yet. It opens on a fixed date after launch, announced server-wide when it happens.</p>
-
-  <div class="callout">Question not answered here? Ask in <a href="https://discord.gg/beHD4TE3Td" rel="noopener">our Discord</a>.</div>
+  <div class="callout">Still stuck? Ask in <a href="https://discord.gg/beHD4TE3Td" rel="noopener">our Discord</a>.</div>
 </main>
 
 <footer class="site-footer">
