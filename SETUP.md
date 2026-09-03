@@ -66,8 +66,17 @@ Cloudflare creates the DNS records and issues HTTPS automatically.
 
 ---
 
-## 3. Content still to fill in
+## 3. Live map — map.meridian-mc.net
 
-The rules/guide pages (`rules.html`, `war.html`, `lands.html`, `economy.html`)
-have **draft placeholder content**. Replace with Meridian's real rules, plugin
-commands, and numbers. Also replace the `#` Discord links with the real invite.
+squaremap runs on the Apex origin at `172.240.14.185:7900` (HTTP only). Served over
+HTTPS at `map.meridian-mc.net` via:
+- DNS: proxied `A` record `map` → `172.240.14.185`
+- **Origin Rule**: hostname `= map.meridian-mc.net` → rewrite Destination Port to `7900`
+- Zone **SSL/TLS mode: Flexible** (squaremap has no TLS on the origin)
+
+## 4. Content still to fill in
+
+- Replace the `href="#"` Discord links (rules page callout, etc.) with the real invite.
+- Warfare page: confirm the real capture-flag hold time and cooldown (the source
+  doc had unresolved edits; the page currently says values are "being tuned").
+- Commands page: verify the command aliases match the server's plugin config.
