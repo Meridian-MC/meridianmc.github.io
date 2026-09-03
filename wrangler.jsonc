@@ -1,0 +1,8 @@
+{
+  "name": "meridianmc",
+  "compatibility_date": "2025-09-03",
+  "assets": {
+    "directory": ".",
+    "not_found_handling": "404-page"
+  }
+}
