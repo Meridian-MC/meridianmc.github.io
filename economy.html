@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Economy Guide — Meridian</title>
-<meta name="description" content="Currency, shops, and trading on the Meridian Minecraft server.">
+<title>Economy — Meridian</title>
+<meta name="description" content="How money, the free market, chest shops, and jobs work on Meridian.">
 <link rel="stylesheet" href="/assets/style.css">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%2335d0a5'/%3E%3Ctext x='16' y='22' font-size='16' font-family='sans-serif' font-weight='800' fill='%2304110d' text-anchor='middle'%3EM%3C/text%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23f4f4f5'/%3E%3Ctext x='16' y='22' font-size='16' font-family='sans-serif' font-weight='800' fill='%230b0b0c' text-anchor='middle'%3EM%3C/text%3E%3C/svg%3E">
 </head>
 <body>
 <header class="site-header">
@@ -15,97 +15,45 @@
     <button class="nav-toggle" aria-label="Menu">☰</button>
     <div class="nav-links">
       <a href="/">Home</a>
-      <a href="https://map.meridian-mc.net">Live Map</a>
       <a href="/rules.html">Rules</a>
-      <a href="/war.html">War Rules</a>
-      <a href="/lands.html">Lands Guide</a>
-      <a href="/economy.html" class="active">Economy Guide</a>
+      <a href="/war.html">Warfare</a>
+      <a href="/lands.html">Lands</a>
+      <a href="/economy.html" class="active">Economy</a>
+      <a href="/commands.html">Commands</a>
+      <a href="https://map.meridian-mc.net">Live Map</a>
     </div>
   </nav>
 </header>
 
 <main class="doc">
-  <h1>Economy Guide</h1>
-  <p class="lead">Meridian runs a player-driven economy. Almost every item in circulation was made or gathered by someone. Here's how money works and how to start earning.</p>
+  <h1>Economy</h1>
+  <p class="lead">Meridian runs a free market. Almost everything in circulation was gathered or made by a player, and prices are whatever players agree to. Here's how it works.</p>
 
-  <div class="toc">
-    <strong>On this page</strong>
-    <ul>
-      <li><a href="#currency">1. The Currency</a></li>
-      <li><a href="#earning">2. Ways to Earn</a></li>
-      <li><a href="#shops">3. Player Shops</a></li>
-      <li><a href="#server-shop">4. Server Shop &amp; Market</a></li>
-      <li><a href="#nation-econ">5. Nation Economy</a></li>
-      <li><a href="#trading">6. Safe Trading</a></li>
-      <li><a href="#commands">7. Command Reference</a></li>
-    </ul>
-  </div>
+  <h2>What's the currency?</h2>
+  <p>A single currency, written <code>$</code>, not tied to any physical item. Everyone starts with a <strong>$25</strong> balance. Check yours with <code>/balance</code> and send money with <code>/pay &lt;player&gt; &lt;amount&gt;</code>.</p>
 
-  <h2 id="currency">1. The Currency</h2>
-  <ul>
-    <li>The currency is the <strong>Meridian Mark (⧗)</strong>. Check your balance with <code>/balance</code>.</li>
-    <li>Send money to another player with <code>/pay &lt;player&gt; &lt;amount&gt;</code>.</li>
-    <li>There is <strong>no</strong> money printer — the economy only grows through server-shop sales and small job payouts, so prices stay meaningful.</li>
-    <li>New players start with a small stipend to get going.</li>
-  </ul>
+  <h2>Is there a server shop?</h2>
+  <p>Yes, but it only sells basic commodities like torches and bread. There are <strong>no</strong> player-to-server sell options — you cannot dump items on the server for cash. This is deliberate, to keep the market free.</p>
 
-  <h2 id="earning">2. Ways to Earn</h2>
-  <ul>
-    <li><strong>Sell to other players.</strong> Set up a shop (below) and stock what people actually need — food, building blocks, enchanted gear, potions.</li>
-    <li><strong>Jobs.</strong> Join a job with <code>/jobs join &lt;name&gt;</code> (mining, farming, hunting, etc.) to earn a small payout per relevant action.</li>
-    <li><strong>Sell raw goods to the server shop</strong> for a guaranteed but lower price — this is the price floor.</li>
-    <li><strong>Services.</strong> Enchanting, farm building, grinding XP, mercenary work during <a href="/war.html">wars</a>, transport.</li>
-    <li><strong>Voting.</strong> Vote for the server daily for Marks and crate keys.</li>
-  </ul>
+  <h2>Why is the server shop so expensive?</h2>
+  <p>Prices there are set high on purpose, to push players toward trading with each other instead of the server.</p>
 
-  <h2 id="shops">3. Player Shops</h2>
-  <ul>
-    <li>Place a chest, then <code>/shop create &lt;buy_price&gt; &lt;sell_price&gt;</code> while looking at it, holding the item you want to trade.</li>
-    <li>Other players right-click the sign to buy, shift-right-click to sell to you.</li>
-    <li>Shops only work inside a claim where you have permission — protect your shop chunk.</li>
-    <li>Undercutting is allowed and encouraged. That's the market working.</li>
-  </ul>
+  <h2>How do I make money?</h2>
+  <p>Mainly by trading with other players. Chest shops are the real economy — left-click a chest with the item you want to sell to set one up. Find what's in demand, produce it, and sell it. There is no single get-rich-quick method.</p>
 
-  <h2 id="server-shop">4. Server Shop &amp; Market</h2>
-  <ul>
-    <li><code>/shop</code> or the market NPC at spawn opens the admin shop — fixed buy/sell prices for common raw materials.</li>
-    <li>Server-shop prices are deliberately unattractive for buying. It exists as a safety net, not a convenience.</li>
-    <li>Some items are <strong>sell-only</strong> or <strong>buy-only</strong> to protect the player market.</li>
-  </ul>
+  <h2>Are there jobs I can do for money?</h2>
+  <p>Yes. A small set of jobs — currently <strong>Miner, Farmer, Fisherman, Hunter, and Explorer</strong> — pays out for relevant actions, mostly to help new players earn starting capital. Daily earnings are capped at <strong>$15</strong>, so jobs are not a full-time income. Run <code>/jobs browse</code> to get employed.</p>
 
-  <h2 id="nation-econ">5. Nation Economy</h2>
-  <ul>
-    <li>Each nation has a shared <strong>bank</strong> that pays claim <a href="/lands.html#upkeep">upkeep</a>. Fund it with <code>/nation deposit &lt;amount&gt;</code>.</li>
-    <li>Nations can set a <strong>tax</strong> that collects a small amount from members daily: <code>/nation tax &lt;amount&gt;</code>.</li>
-    <li>Nations can trade land, sign treaties with reparations, and run collective shops at their capital.</li>
-  </ul>
+  <h2>How should I price my items?</h2>
+  <p>Players set their own prices — there is no fixed price list for anything traded player-to-player. Check a few shops, see what people are asking, and price accordingly.</p>
 
-  <h2 id="trading">6. Safe Trading</h2>
-  <div class="callout warn">
-    Scamming through <strong>shops</strong> (mispriced signs) is allowed — check the numbers. Scamming through <strong>trust</strong> (taking a deposit and not delivering, "hold this for me", fake middlemen) is a <a href="/rules.html">rules violation</a> and will be punished.
-  </div>
-  <ul>
-    <li>For big deals, use a shop chest or an admin as a middleman — never hand items over on a promise.</li>
-    <li>Screenshot or record large trades and agreements.</li>
-    <li>Treaty payments must go through <code>/pay</code> or the nation bank so there's a log.</li>
-  </ul>
+  <div class="callout">Scamming through a mispriced shop sign is on the buyer to catch. Scamming through <strong>trust</strong> — taking a payment and not delivering, fake middlemen, &ldquo;hold this for me&rdquo; — is a <a href="/rules.html">Rulebook</a> violation. For big deals, use a chest shop or ask staff to middleman.</p>
 
-  <h2 id="commands">7. Command Reference</h2>
-  <ul>
-    <li><code>/balance</code> / <code>/bal &lt;player&gt;</code> — check balance</li>
-    <li><code>/pay &lt;player&gt; &lt;amount&gt;</code> — send Marks</li>
-    <li><code>/shop create &lt;buy&gt; &lt;sell&gt;</code> — make a shop chest</li>
-    <li><code>/shop</code> — open the server market</li>
-    <li><code>/jobs browse</code> / <code>/jobs join &lt;name&gt;</code> — jobs</li>
-    <li><code>/vote</code> — vote links and rewards</li>
-    <li><code>/baltop</code> — richest players</li>
-  </ul>
-
-  <p class="editnote">Draft content — currency name, commands, and mechanics are placeholders. Edit <code>site/economy.html</code> to match the economy plugin Meridian runs (EssentialsX + ShopGUI, QuickShop, etc.).</p>
+  <p style="margin-top:32px;color:var(--text-3);font-size:0.9rem;">See the <a href="/commands.html#economy">Commands</a> page for the full list of economy and shop commands.</p>
 </main>
 
 <footer class="site-footer">
-  Meridian (MMC) &middot; play.meridian-mc.net &middot; Not affiliated with Mojang or Microsoft.
+  Meridian (MMC) &middot; meridian-mc.net &middot; Not affiliated with Mojang or Microsoft.
 </footer>
 
 <script src="/assets/app.js"></script>

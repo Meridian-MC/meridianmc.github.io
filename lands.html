@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Lands Guide — Meridian</title>
-<meta name="description" content="How claiming and protecting land works on the Meridian Minecraft server.">
+<title>Lands &amp; Nations — Meridian</title>
+<meta name="description" content="A guide to the Lands plugin on Meridian: claiming, banks, upkeep, tiers, nations, and vassals.">
 <link rel="stylesheet" href="/assets/style.css">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%2335d0a5'/%3E%3Ctext x='16' y='22' font-size='16' font-family='sans-serif' font-weight='800' fill='%2304110d' text-anchor='middle'%3EM%3C/text%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23f4f4f5'/%3E%3Ctext x='16' y='22' font-size='16' font-family='sans-serif' font-weight='800' fill='%230b0b0c' text-anchor='middle'%3EM%3C/text%3E%3C/svg%3E">
 </head>
 <body>
 <header class="site-header">
@@ -15,102 +15,64 @@
     <button class="nav-toggle" aria-label="Menu">☰</button>
     <div class="nav-links">
       <a href="/">Home</a>
-      <a href="https://map.meridian-mc.net">Live Map</a>
       <a href="/rules.html">Rules</a>
-      <a href="/war.html">War Rules</a>
-      <a href="/lands.html" class="active">Lands Guide</a>
-      <a href="/economy.html">Economy Guide</a>
+      <a href="/war.html">Warfare</a>
+      <a href="/lands.html" class="active">Lands</a>
+      <a href="/economy.html">Economy</a>
+      <a href="/commands.html">Commands</a>
+      <a href="https://map.meridian-mc.net">Live Map</a>
     </div>
   </nav>
 </header>
 
 <main class="doc">
-  <h1>Lands Guide</h1>
-  <p class="lead">Land is how you stake a permanent claim on Meridian. A claim protects your builds and chests from everyone except during a declared war. Here's how to get started.</p>
+  <h1>Lands &amp; Nations</h1>
+  <p class="lead">A guide to the Lands plugin — how claiming, banks, upkeep, and tiers work, how lands combine into nations, and what happens to a nation that loses a war of vassalage.</p>
 
   <div class="toc">
-    <strong>On this page</strong>
-    <ul>
-      <li><a href="#basics">1. The Basics</a></li>
-      <li><a href="#first-claim">2. Your First Claim</a></li>
-      <li><a href="#nations">3. Nations &amp; Members</a></li>
-      <li><a href="#expanding">4. Expanding</a></li>
-      <li><a href="#permissions">5. Permissions &amp; Roles</a></li>
-      <li><a href="#upkeep">6. Upkeep &amp; Decay</a></li>
-      <li><a href="#war-interaction">7. Land in Wartime</a></li>
-      <li><a href="#commands">8. Command Reference</a></li>
-    </ul>
+    <strong>Sections</strong>
+    <ol>
+      <li><a href="#lands">Lands</a></li>
+      <li><a href="#nations">Nations</a></li>
+      <li><a href="#vassals">Vassals</a></li>
+    </ol>
   </div>
 
-  <h2 id="basics">1. The Basics</h2>
-  <ul>
-    <li>The world is divided into <strong>chunks</strong> (16×16 blocks). You claim land one chunk at a time.</li>
-    <li>Inside your claim, other players cannot break/place blocks, open containers, or use your stuff unless you grant them permission.</li>
-    <li>Claims are protected at all times <strong>except</strong> during a war your nation is part of — see <a href="/war.html">War Rules</a>.</li>
-    <li>Unclaimed wilderness has no protection. Build there at your own risk.</li>
-  </ul>
-
-  <h2 id="first-claim">2. Your First Claim</h2>
+  <h2 id="lands"><span class="num">1</span>Lands</h2>
   <ol>
-    <li>Find a spot at least a few hundred blocks from spawn and from other nations' borders.</li>
-    <li>Create your nation: <code>/nation create &lt;name&gt;</code>. This also claims the chunk you're standing in as your capital.</li>
-    <li>Set your home: <code>/nation sethome</code> — this is where <code>/nation home</code> teleports members.</li>
-    <li>Claim adjacent chunks by standing in them and running <code>/claim</code>.</li>
+    <li>Run <code>/lands create &lt;name&gt;</code> to found your land free of charge. The first chunk is free.</li>
+    <li>The first paid chunk costs <strong>$3,000</strong>, and every chunk after that rises by a fixed <strong>$500</strong> — so the larger your land gets, the more each expansion costs.</li>
+    <li>When naming your land you can use a hex code to set its color on the world map, e.g. <code>&lt;#FF5555&gt;ExampleLand</code>. Minecraft only recognizes a specific set of hex colors.</li>
+    <li>Your land has its own shared bank, separate from any individual's personal balance. Claim costs and upkeep are withdrawn from this bank, and any member can deposit into it.</li>
+    <li>If the bank can't cover a cost, it falls back to the <strong>owner's</strong> personal balance.</li>
+    <li>Every land pays weekly upkeep on its claimed chunks, at <strong>$100 per chunk</strong>.</li>
+    <li>Larger lands cost more to maintain. Before you claim aggressively, make sure your land has the income to support it.</li>
+    <li>You can rent or sell sub-areas of your land to other players without adding them as trusted members.</li>
+    <li>Lands unlock new tiers — Settlement, Village, Town, Province, Land — by hitting member and wealth thresholds. Each tier grants more claimable chunks and member slots, for a modest increase in upkeep.</li>
+    <li>You can own only one land at a time, and be a trusted member in one additional land beyond that.</li>
   </ol>
-  <div class="callout">New nations get a <strong>7-day protection window</strong> where no one can declare war on you. Use it to get established.</div>
 
-  <h2 id="nations">3. Nations &amp; Members</h2>
-  <ul>
-    <li>Invite players with <code>/nation invite &lt;player&gt;</code>; they join with <code>/nation join &lt;name&gt;</code>.</li>
-    <li>Your maximum claimable chunks scale with member count (e.g. 12 chunks per member — check <code>/nation info</code> for current values).</li>
-    <li>A nation with 0 online members for an extended period may become raidable or fall to decay. Keep it active.</li>
-  </ul>
+  <h2 id="nations"><span class="num">2</span>Nations</h2>
+  <ol>
+    <li>Multiple lands can form a nation for <strong>$75,000</strong>.</li>
+    <li>When a land joins a nation it stops paying upkeep to the server and instead pays tax directly to the nation — the nation's leader sets that rate, up to <strong>$200 per chunk</strong>.</li>
+    <li>In turn, the nation owes its own upkeep to the server, at <strong>$100 per chunk</strong> across the combined total of its lands.</li>
+    <li>Relations between nations are publicly tracked in-game.</li>
+    <li>Like lands, nations can develop into higher tiers — Federation, Nation, Empire — each unlocking additional claiming capacity for every land in the nation.</li>
+  </ol>
 
-  <h2 id="expanding">4. Expanding</h2>
-  <ul>
-    <li>All claims must be <strong>connected</strong> to your capital — no island chunks scattered across the map.</li>
-    <li>You cannot claim within <strong>3 chunks</strong> of another nation's border without their permission.</li>
-    <li>Outposts (detached claims) require a separate <code>/nation outpost</code> and cost more to maintain.</li>
-  </ul>
+  <h2 id="vassals"><span class="num">3</span>Vassals</h2>
+  <ol>
+    <li>A nation that loses a war of vassalage is absorbed by the winning nation as restricted members.</li>
+    <li>Vassals pay taxes to their overlord that can run higher than normal nation taxes.</li>
+    <li>The only way to become independent again is to declare and win a war against your overlord — see <a href="/war.html#goals">Warfare &sect;8</a>.</li>
+  </ol>
 
-  <h2 id="permissions">5. Permissions &amp; Roles</h2>
-  <ul>
-    <li>Default ranks: <strong>Leader → Officer → Member → Ally → Outsider</strong>.</li>
-    <li>Set what each rank can do with <code>/nation perm &lt;rank&gt; &lt;build|container|interact&gt; &lt;true|false&gt;</code>.</li>
-    <li>Grant a single trusted player access to a specific chunk with <code>/claim trust &lt;player&gt;</code>.</li>
-    <li>Mark a chunk as public (e.g. a shop plaza) with <code>/claim flag public true</code>.</li>
-  </ul>
-
-  <h2 id="upkeep">6. Upkeep &amp; Decay</h2>
-  <ul>
-    <li>Each claimed chunk costs a small daily upkeep from your <a href="/economy.html">nation bank</a>.</li>
-    <li>If the bank hits zero, claims begin to <strong>decay</strong> (oldest/outermost first) until upkeep is affordable again.</li>
-    <li>Deposit with <code>/nation deposit &lt;amount&gt;</code>. Check status with <code>/nation bank</code>.</li>
-  </ul>
-
-  <h2 id="war-interaction">7. Land in Wartime</h2>
-  <ul>
-    <li>During a declared war, enemies can break blocks and open chests inside your claims.</li>
-    <li>Territory only changes hands through a successful <strong>siege</strong> (see <a href="/war.html#sieges">War Rules §4</a>).</li>
-    <li>When the war ends, all raid permissions are revoked and normal protection resumes.</li>
-  </ul>
-
-  <h2 id="commands">8. Command Reference</h2>
-  <ul>
-    <li><code>/nation create &lt;name&gt;</code> — found a nation</li>
-    <li><code>/claim</code> / <code>/unclaim</code> — claim or release the current chunk</li>
-    <li><code>/nation map</code> — show nearby claims</li>
-    <li><code>/nation info [name]</code> — stats, limits, bank</li>
-    <li><code>/nation invite &lt;player&gt;</code> / <code>/nation kick &lt;player&gt;</code></li>
-    <li><code>/nation sethome</code> / <code>/nation home</code></li>
-    <li><code>/nation deposit &lt;amt&gt;</code> / <code>/nation withdraw &lt;amt&gt;</code></li>
-  </ul>
-
-  <p class="editnote">Draft content — commands above are placeholders. Replace <code>site/lands.html</code> with the real commands and numbers for whatever land plugin Meridian runs (Towny, Factions, Lands, etc.).</p>
+  <div class="callout">Warfare is the only time claimed land can be entered or captured by an enemy. Read the <a href="/war.html">Warfare</a> document before you get into a conflict.</div>
 </main>
 
 <footer class="site-footer">
-  Meridian (MMC) &middot; play.meridian-mc.net &middot; Not affiliated with Mojang or Microsoft.
+  Meridian (MMC) &middot; meridian-mc.net &middot; Not affiliated with Mojang or Microsoft.
 </footer>
 
 <script src="/assets/app.js"></script>

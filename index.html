@@ -4,9 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Meridian — Minecraft Server</title>
-<meta name="description" content="Meridian (MMC) — a Minecraft server with lands, war, and a player-driven economy. Connect at play.meridian-mc.net.">
+<meta name="description" content="Meridian (MMC) — a survival Minecraft server with land claims, nations, structured warfare, and a player-driven economy. Connect at meridian-mc.net.">
 <link rel="stylesheet" href="/assets/style.css">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%2335d0a5'/%3E%3Ctext x='16' y='22' font-size='16' font-family='sans-serif' font-weight='800' fill='%2304110d' text-anchor='middle'%3EM%3C/text%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23f4f4f5'/%3E%3Ctext x='16' y='22' font-size='16' font-family='sans-serif' font-weight='800' fill='%230b0b0c' text-anchor='middle'%3EM%3C/text%3E%3C/svg%3E">
 </head>
 <body>
 <header class="site-header">
@@ -15,11 +15,12 @@
     <button class="nav-toggle" aria-label="Menu">☰</button>
     <div class="nav-links">
       <a href="/" class="active">Home</a>
-      <a href="https://map.meridian-mc.net">Live Map</a>
       <a href="/rules.html">Rules</a>
-      <a href="/war.html">War Rules</a>
-      <a href="/lands.html">Lands Guide</a>
-      <a href="/economy.html">Economy Guide</a>
+      <a href="/war.html">Warfare</a>
+      <a href="/lands.html">Lands</a>
+      <a href="/economy.html">Economy</a>
+      <a href="/commands.html">Commands</a>
+      <a href="https://map.meridian-mc.net">Live Map</a>
     </div>
   </nav>
 </header>
@@ -27,44 +28,159 @@
 <main>
   <section class="hero">
     <h1>Meridian</h1>
-    <p class="tagline">A survival server built around player lands, structured warfare, and a real economy. Claim your ground, build your nation, trade your way to the top.</p>
+    <p class="tagline">A survival server built on land claims, nations, staff-moderated warfare, and a genuinely player-run economy. Claim your ground, sign your treaties, and defend them.</p>
 
-    <div class="ip-box" data-copy="play.meridian-mc.net" role="button" tabindex="0">
+    <div class="ip-box" data-copy="meridian-mc.net" role="button" tabindex="0">
       <div>
         <div class="label">Server Address</div>
-        <div class="ip">play.meridian-mc.net</div>
+        <div class="ip">meridian-mc.net</div>
       </div>
       <span class="copy-hint">Click to copy</span>
     </div>
-    <div class="alt-ip">Direct IP: 172.240.14.185:25606 &nbsp;·&nbsp; Java Edition</div>
+    <div class="sub-line">
+      Java Edition &nbsp;·&nbsp; connect from <code>1.8</code> through <code>26.2</code> — older clients bridged by ViaVersion&nbsp;+&nbsp;ViaBackwards
+    </div>
   </section>
 
-  <section class="card-grid">
-    <a href="https://map.meridian-mc.net" class="card">
-      <h3>Live Map</h3>
-      <p>Explore the world in real time — see terrain, claims, and online players.</p>
-    </a>
-    <a href="/rules.html" class="card">
-      <h3>Server Rules</h3>
-      <p>The baseline for everyone. Read before you play.</p>
-    </a>
-    <a href="/war.html" class="card">
-      <h3>War Rules</h3>
-      <p>How conflict, sieges, and raids work on Meridian.</p>
-    </a>
-    <a href="/lands.html" class="card">
-      <h3>Lands Guide</h3>
-      <p>Claiming, expanding, and protecting your territory.</p>
-    </a>
-    <a href="/economy.html" class="card">
-      <h3>Economy Guide</h3>
-      <p>Currency, shops, trading, and making a living.</p>
-    </a>
+  <section class="stack" id="systems">
+    <h2>The systems that run Meridian</h2>
+    <p class="section-intro">Meridian is defined by a handful of plugins. Know these and you know how the server plays.</p>
+
+    <div class="pill-row">
+      <a class="pill" href="#lands">Lands</a>
+      <a class="pill" href="#quickshop">QuickShop-Hikari</a>
+      <a class="pill" href="#market">EconomyShopGUI</a>
+      <a class="pill" href="#jobs">Jobs Reborn</a>
+      <a class="pill" href="#brewing">The Brewing Project</a>
+      <a class="pill" href="#essentials">EssentialsX</a>
+      <a class="pill" href="#protection">Grief protection</a>
+    </div>
+
+    <article class="plugin" id="lands" style="--p: var(--p-lands)">
+      <div class="plugin-head"><h3>Lands</h3><span class="ver">v8.2.4</span></div>
+      <p>The backbone of the server. Claim land chunk by chunk, form a land with a shared bank, then combine lands into nations with their own taxes, tiers, and tracked diplomacy.</p>
+      <p>Claims are protected around the clock — the only time that changes is a staff-approved war.</p>
+      <a class="more" href="/lands.html">Lands &amp; Nations guide →</a>
+    </article>
+
+    <article class="plugin" id="quickshop" style="--p: var(--p-quickshop)">
+      <div class="plugin-head"><h3>QuickShop-Hikari</h3><span class="ver">v6.3.0.1</span></div>
+      <p>Player-to-player chest shops. Left-click a chest holding the item you want to trade, set a price, and you have a store. These shops <em>are</em> the Meridian economy.</p>
+      <a class="more" href="/economy.html">Economy guide →</a>
+    </article>
+
+    <article class="plugin" id="market" style="--p: var(--p-market)">
+      <div class="plugin-head"><h3>EconomyShopGUI</h3><span class="ver">v7.2.1</span></div>
+      <p>The server shop — deliberately limited to basic commodities like torches and bread, at deliberately high prices. There is no sell-to-server option. It exists to keep a real free market, not to be your income.</p>
+      <a class="more" href="/economy.html">Economy guide →</a>
+    </article>
+
+    <article class="plugin" id="jobs" style="--p: var(--p-jobs)">
+      <div class="plugin-head"><h3>Jobs Reborn</h3><span class="ver">v5.2.6.6</span></div>
+      <p>Five jobs — Miner, Farmer, Fisherman, Hunter, Explorer — that pay small amounts for relevant actions. Daily earnings cap at $15; it is starter capital, not a salary. Run <code>/jobs browse</code> to sign up.</p>
+      <a class="more" href="/economy.html">Economy guide →</a>
+    </article>
+
+    <article class="plugin" id="brewing" style="--p: var(--p-brew)">
+      <div class="plugin-head"><h3>The Brewing Project</h3><span class="ver">v3.3.3</span></div>
+      <p>Overhauled, recipe-driven brewing. Ferment ingredients in barrels, distill with cauldrons, age for quality — the result depends on getting every step right. A trade good in its own right.</p>
+    </article>
+
+    <article class="plugin" id="essentials" style="--p: var(--p-essentials)">
+      <div class="plugin-head"><h3>EssentialsX</h3><span class="ver">v2.22.1</span></div>
+      <p>The everyday commands: homes, <code>/tpa</code>, <code>/pay</code>, <code>/balance</code>, mail, kits, and chat. Backed by Vault, which links the currency to every other plugin on this list.</p>
+      <a class="more" href="/commands.html">Command reference →</a>
+    </article>
+
+    <article class="plugin" id="protection" style="--p: var(--p-core)">
+      <div class="plugin-head"><h3>CoreProtect &amp; GrimAC</h3><span class="ver">CoreProtect 25.0 · Grim 2.3.74</span></div>
+      <p>CoreProtect logs every block change, so griefing inside a claim can be rolled back and traced. GrimAC handles anticheat — movement, combat, and packet checks — alongside NoChatReports for chat.</p>
+    </article>
+
+    <details class="all-plugins">
+      <summary>Full plugin list (34)</summary>
+      <div class="plugin-table">
+        <div class="grp">Land, economy &amp; progression</div>
+        <div class="name">Lands</div><div class="v">8.2.4</div>
+        <div class="name">QuickShop-Hikari</div><div class="v">6.3.0.1</div>
+        <div class="name">EconomyShopGUI</div><div class="v">7.2.1</div>
+        <div class="name">Jobs Reborn</div><div class="v">5.2.6.6</div>
+        <div class="name">Vault</div><div class="v">—</div>
+        <div class="name">TradeManager</div><div class="v">2.0.2</div>
+        <div class="name">ExtractableEnchantments</div><div class="v">12.8</div>
+        <div class="name">ajLeaderboards</div><div class="v">2.11.0</div>
+
+        <div class="grp">Gameplay</div>
+        <div class="name">The Brewing Project</div><div class="v">3.3.3</div>
+        <div class="name">DeathChest</div><div class="v">—</div>
+        <div class="name">EzRTP</div><div class="v">3.4.3</div>
+        <div class="name">ToolStats</div><div class="v">2.0.7</div>
+        <div class="name">FancyHolograms</div><div class="v">2.11.0</div>
+        <div class="name">FancyNpcs</div><div class="v">2.11.0</div>
+
+        <div class="grp">Protection &amp; moderation</div>
+        <div class="name">CoreProtect</div><div class="v">25.0-dev1</div>
+        <div class="name">GrimAC</div><div class="v">2.3.74</div>
+        <div class="name">WorldGuard</div><div class="v">7.0.18</div>
+        <div class="name">WorldEdit</div><div class="v">7.4.5</div>
+        <div class="name">LuckPerms</div><div class="v">5.5.71</div>
+        <div class="name">NoChatReports</div><div class="v">2.7.8</div>
+
+        <div class="grp">World</div>
+        <div class="name">squaremap</div><div class="v">mc26.2-1.3.15</div>
+        <div class="name">Chunky</div><div class="v">1.5.3</div>
+        <div class="name">ChunkyBorder</div><div class="v">1.2.33</div>
+
+        <div class="grp">Chat, info &amp; infrastructure</div>
+        <div class="name">EssentialsX</div><div class="v">2.22.1</div>
+        <div class="name">EssentialsX Chat</div><div class="v">2.22.1</div>
+        <div class="name">DiscordSRV</div><div class="v">1.30.5</div>
+        <div class="name">InteractiveChat</div><div class="v">2026.1.1.0</div>
+        <div class="name">TAB</div><div class="v">6.1.2</div>
+        <div class="name">MiniMOTD</div><div class="v">2.2.4</div>
+        <div class="name">PlaceholderAPI</div><div class="v">2.12.3</div>
+        <div class="name">ProtocolLib</div><div class="v">—</div>
+        <div class="name">CMILib</div><div class="v">1.5.9.9</div>
+        <div class="name">ViaVersion</div><div class="v">5.12.0</div>
+        <div class="name">ViaBackwards</div><div class="v">5.11.0</div>
+      </div>
+    </details>
+  </section>
+
+  <section class="stack">
+    <h2>Guides</h2>
+    <p class="section-intro">Read these before you build anything you'd be upset to lose.</p>
+    <div class="card-grid">
+      <a href="/rules.html" class="card">
+        <h3>Server Rulebook</h3>
+        <p>Conduct, PvP limits, farms, and moderation.</p>
+      </a>
+      <a href="/war.html" class="card">
+        <h3>Warfare</h3>
+        <p>Declaring war, war modes, capturing land, and war goals.</p>
+      </a>
+      <a href="/lands.html" class="card">
+        <h3>Lands &amp; Nations</h3>
+        <p>Claiming, banks, upkeep, tiers, nations, and vassals.</p>
+      </a>
+      <a href="/economy.html" class="card">
+        <h3>Economy</h3>
+        <p>Currency, the free market, chest shops, and jobs.</p>
+      </a>
+      <a href="/commands.html" class="card">
+        <h3>Commands</h3>
+        <p>The commands you'll actually use, in one place.</p>
+      </a>
+      <a href="https://map.meridian-mc.net" class="card">
+        <h3>Live Map</h3>
+        <p>The world in real time — terrain, claims, and players.</p>
+      </a>
+    </div>
   </section>
 </main>
 
 <footer class="site-footer">
-  Meridian (MMC) &middot; play.meridian-mc.net &middot; Not affiliated with Mojang or Microsoft.
+  Meridian (MMC) &middot; meridian-mc.net &middot; Not affiliated with Mojang or Microsoft.
 </footer>
 
 <script src="/assets/app.js"></script>

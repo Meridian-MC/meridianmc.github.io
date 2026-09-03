@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Commands — Meridian</title>
+<meta name="description" content="The Meridian commands you'll actually use — movement, land, economy, shops, jobs, and war.">
+<link rel="stylesheet" href="/assets/style.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23f4f4f5'/%3E%3Ctext x='16' y='22' font-size='16' font-family='sans-serif' font-weight='800' fill='%230b0b0c' text-anchor='middle'%3EM%3C/text%3E%3C/svg%3E">
+</head>
+<body>
+<header class="site-header">
+  <nav class="nav-inner">
+    <a href="/" class="brand"><span class="mark">M</span> Meridian</a>
+    <button class="nav-toggle" aria-label="Menu">☰</button>
+    <div class="nav-links">
+      <a href="/">Home</a>
+      <a href="/rules.html">Rules</a>
+      <a href="/war.html">Warfare</a>
+      <a href="/lands.html">Lands</a>
+      <a href="/economy.html">Economy</a>
+      <a href="/commands.html" class="active">Commands</a>
+      <a href="https://map.meridian-mc.net">Live Map</a>
+    </div>
+  </nav>
+</header>
+
+<main class="doc">
+  <h1>Commands</h1>
+  <p class="lead">The commands you'll reach for most often. Arguments in <code>&lt;angle brackets&gt;</code> are required; <code>[square brackets]</code> are optional. Some commands depend on your rank or your permissions inside a land.</p>
+
+  <div class="toc">
+    <strong>Jump to</strong>
+    <ol>
+      <li><a href="#getting-around">Getting around</a></li>
+      <li><a href="#personal">Homes &amp; personal</a></li>
+      <li><a href="#chat">Communication</a></li>
+      <li><a href="#economy">Economy &amp; shops</a></li>
+      <li><a href="#jobs">Jobs</a></li>
+      <li><a href="#land">Land &amp; nation</a></li>
+      <li><a href="#war">Warfare</a></li>
+    </ol>
+  </div>
+
+  <div class="cmd-group" id="getting-around">
+    <h2>Getting around</h2>
+    <div class="cmd"><code>/spawn</code><span>Return to the server spawn.</span></div>
+    <div class="cmd"><code>/rtp</code><span>Random-teleport out into unclaimed wilderness (also <code>/wild</code>).</span></div>
+    <div class="cmd"><code>/tpa &lt;player&gt;</code><span>Ask to teleport to a player.</span></div>
+    <div class="cmd"><code>/tpahere &lt;player&gt;</code><span>Ask a player to teleport to you.</span></div>
+    <div class="cmd"><code>/tpaccept</code> · <code>/tpdeny</code><span>Answer a pending teleport request.</span></div>
+    <div class="cmd"><code>/back</code><span>Return to your last location, including your death point.</span></div>
+    <div class="cmd"><code>/lands spawn</code><span>Teleport to your land's spawn point.</span></div>
+  </div>
+
+  <div class="cmd-group" id="personal">
+    <h2>Homes &amp; personal</h2>
+    <div class="cmd"><code>/sethome [name]</code><span>Set a home where you're standing. Your home limit depends on your rank.</span></div>
+    <div class="cmd"><code>/home [name]</code><span>Teleport to a home. <code>/homes</code> lists them.</span></div>
+    <div class="cmd"><code>/delhome &lt;name&gt;</code><span>Delete a home.</span></div>
+    <div class="cmd"><code>/afk</code><span>Toggle your AFK status.</span></div>
+    <div class="cmd"><code>/rules</code> · <code>/motd</code><span>Show the rules / message of the day in chat.</span></div>
+  </div>
+
+  <div class="cmd-group" id="chat">
+    <h2>Communication</h2>
+    <div class="cmd"><code>/msg &lt;player&gt; &lt;text&gt;</code><span>Private message. <code>/r &lt;text&gt;</code> replies to the last one.</span></div>
+    <div class="cmd"><code>/mail send &lt;player&gt; &lt;text&gt;</code><span>Leave a message for an offline player. <code>/mail read</code> to check yours.</span></div>
+    <div class="cmd"><code>/lands chat</code><span>Toggle land-only chat (also <code>/lc</code>).</span></div>
+    <div class="cmd"><code>/ignore &lt;player&gt;</code><span>Stop seeing a player's messages.</span></div>
+  </div>
+
+  <div class="cmd-group" id="economy">
+    <h2>Economy &amp; shops</h2>
+    <div class="cmd"><code>/balance [player]</code><span>Check a balance (also <code>/bal</code>).</span></div>
+    <div class="cmd"><code>/pay &lt;player&gt; &lt;amount&gt;</code><span>Send money to another player.</span></div>
+    <div class="cmd"><code>/baltop</code><span>The richest players on the server.</span></div>
+    <div class="cmd"><code>/shop</code><span>Open the server shop (basic commodities only, high prices).</span></div>
+    <div class="cmd"><span style="grid-column:1/-1;color:var(--text-3);font-size:0.82rem;text-transform:uppercase;letter-spacing:0.12em;">Chest shops — QuickShop-Hikari</span></div>
+    <div class="cmd"><code>left-click a chest</code><span>While holding an item, left-click a chest to start a shop, then type a price.</span></div>
+    <div class="cmd"><code>/qs price &lt;amount&gt;</code><span>Change the price of the shop you're looking at.</span></div>
+    <div class="cmd"><code>/qs find &lt;item&gt;</code><span>Locate nearby shops selling an item.</span></div>
+    <div class="cmd"><code>/qs staff add &lt;player&gt;</code><span>Let someone help manage your shop.</span></div>
+    <div class="cmd"><code>/qs remove</code><span>Remove the shop you're looking at.</span></div>
+    <div class="cmd"><code>/trade &lt;player&gt;</code><span>Open a secure face-to-face trade window.</span></div>
+  </div>
+
+  <div class="cmd-group" id="jobs">
+    <h2>Jobs</h2>
+    <div class="cmd"><code>/jobs browse</code><span>See the available jobs and join one.</span></div>
+    <div class="cmd"><code>/jobs join &lt;job&gt;</code> · <code>/jobs leave &lt;job&gt;</code><span>Join or quit a job.</span></div>
+    <div class="cmd"><code>/jobs stats</code><span>Your level and progress in each job you hold.</span></div>
+    <div class="cmd"><code>/jobs info &lt;job&gt;</code><span>What a job pays for.</span></div>
+    <div class="cmd"><code>/jobs top &lt;job&gt;</code><span>Leaderboard for a job.</span></div>
+  </div>
+
+  <div class="cmd-group" id="land">
+    <h2>Land &amp; nation</h2>
+    <div class="cmd"><code>/lands menu</code><span>Open the main Lands GUI — everything below is in here too.</span></div>
+    <div class="cmd"><code>/lands create &lt;name&gt;</code><span>Found a land. First chunk is free.</span></div>
+    <div class="cmd"><code>/lands claim</code> · <code>/lands unclaim</code><span>Claim or release the chunk you're standing in.</span></div>
+    <div class="cmd"><code>/lands map</code><span>Show a chunk map of nearby claims.</span></div>
+    <div class="cmd"><code>/lands view</code><span>Visualize your land's borders.</span></div>
+    <div class="cmd"><code>/lands trust &lt;player&gt;</code> · <code>/lands untrust &lt;player&gt;</code><span>Add or remove a trusted member.</span></div>
+    <div class="cmd"><code>/lands info</code><span>Tier, chunk count, members, and bank.</span></div>
+    <div class="cmd"><code>/lands bank deposit &lt;amount&gt;</code><span>Fund the land bank (also <code>withdraw</code>, <code>balance</code>).</span></div>
+    <div class="cmd"><code>/lands rent</code> · <code>/lands sell</code><span>Rent or sell a sub-area to another player.</span></div>
+    <div class="cmd"><code>/lands setspawn</code><span>Set where <code>/lands spawn</code> takes members.</span></div>
+    <div class="cmd"><code>/nation create &lt;name&gt;</code><span>Form a nation from your land ($75,000).</span></div>
+    <div class="cmd"><code>/nation &lt;nation&gt; invite &lt;land&gt;</code><span>Invite another land into your nation.</span></div>
+  </div>
+
+  <div class="cmd-group" id="war">
+    <h2>Warfare</h2>
+    <div class="callout" style="margin-top:0;">War declarations must be approved by staff in a Discord ticket <em>first</em>. Only then do you file it in-game. See <a href="/war.html">Warfare</a>.</div>
+    <div class="cmd"><code>/nation &lt;your_nation&gt; war declare &lt;target&gt;</code><span>File an approved declaration. Starts the 2-day grace period.</span></div>
+    <div class="cmd"><code>/nation &lt;nation&gt; relations</code><span>Check standing wars, alliances, and truces.</span></div>
+  </div>
+
+  <p class="editnote">Command names follow the plugins Meridian runs (Lands, QuickShop-Hikari, EssentialsX, Jobs Reborn, TradeManager, EzRTP). If any alias differs on the server, tell staff and this page will be corrected.</p>
+</main>
+
+<footer class="site-footer">
+  Meridian (MMC) &middot; meridian-mc.net &middot; Not affiliated with Mojang or Microsoft.
+</footer>
+
+<script src="/assets/app.js"></script>
+</body>
+</html>
