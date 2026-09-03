@@ -184,16 +184,13 @@ main {
   color: var(--text-3);
 }
 .ip-box .ip { font-size: 1.3rem; font-weight: 600; color: var(--text); }
-.ip-box .copy-hint {
-  font-family: var(--font);
-  font-size: 0.78rem;
-  color: var(--bg);
-  background: var(--text);
-  border-radius: 6px;
-  padding: 4px 9px;
-  font-weight: 600;
+.ip-box .copy-ico {
+  width: 16px;
+  height: 16px;
+  color: var(--text-3);
+  flex-shrink: 0;
 }
-.ip-box.copied .copy-hint { background: var(--p-lands); }
+.ip-box:hover .copy-ico { color: var(--text-2); }
 
 .sub-line {
   margin-top: 16px;
@@ -261,47 +258,76 @@ main {
 .plugin .links { margin-top: 12px; display: flex; gap: 16px; flex-wrap: wrap; }
 .plugin .more { display: inline-block; font-size: 0.88rem; color: var(--text); }
 
-/* Discord card */
-.discord {
-  margin-top: 20px;
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  background: var(--bg-1);
-  padding: 22px 24px;
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  flex-wrap: wrap;
+/* ---------- Discord widget ---------- */
+.discord-embed {
+  --dc-blurple: #5865f2;
+  --dc-bg: #2b2d31;
+  --dc-bg-2: #1e1f22;
+  --dc-text: #f2f3f5;
+  --dc-text-dim: #b5bac1;
+  --dc-online: #23a55a;
+  width: 100%;
+  max-width: 420px;
+  margin: 0 auto;
+  background: var(--dc-bg);
+  border: 1px solid var(--dc-bg-2);
+  border-radius: 10px;
+  padding: 16px;
+  font-family: var(--font);
+  color: var(--dc-text);
 }
-.discord .d-info { flex: 1 1 auto; min-width: 200px; }
-.discord .d-title { font-weight: 640; font-size: 1.05rem; letter-spacing: -0.01em; }
-.discord .d-stats {
-  margin-top: 4px;
-  color: var(--text-3);
-  font-size: 0.9rem;
-  display: flex;
-  align-items: center;
-  gap: 14px;
+.dw-row { display: flex; align-items: center; gap: 14px; }
+.dw-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 16px;
+  background: var(--dc-bg-2);
+  flex-shrink: 0;
+  object-fit: cover;
 }
-.discord .d-stats .dot {
-  display: inline-block;
-  width: 8px; height: 8px;
-  border-radius: 50%;
-  background: var(--p-lands);
-  margin-right: 6px;
-  vertical-align: middle;
+.dw-meta { min-width: 0; flex: 1; }
+.dw-label {
+  font-size: 0.66rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--dc-text-dim);
 }
-.discord .d-join {
-  background: var(--text);
-  color: var(--bg);
+.dw-name {
+  font-size: 1.05rem;
   font-weight: 600;
-  font-size: 0.9rem;
-  padding: 10px 20px;
-  border-radius: 9px;
-  text-decoration: none;
-  white-space: nowrap;
+  color: var(--dc-text);
+  line-height: 1.2;
+  margin: 1px 0 5px;
 }
-.discord .d-join:hover { opacity: 0.9; }
+.dw-presence {
+  display: flex;
+  gap: 16px;
+  font-size: 0.82rem;
+  color: var(--dc-text-dim);
+}
+.dw-presence span { display: inline-flex; align-items: center; gap: 6px; }
+.dw-dot { width: 8px; height: 8px; border-radius: 50%; }
+.dw-dot.on { background: var(--dc-online); }
+.dw-dot.off { background: #80848e; }
+.dw-presence b { color: var(--dc-text); font-weight: 600; }
+.dw-join {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 14px;
+  background: var(--dc-blurple);
+  color: #fff;
+  font-weight: 600;
+  font-size: 0.92rem;
+  padding: 11px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background 0.13s;
+}
+.dw-join:hover { background: #4752c4; text-decoration: none; }
+.dw-join svg { width: 20px; height: 20px; }
 
 /* full plugin list */
 details.all-plugins {
@@ -384,6 +410,41 @@ details.all-plugins[open] summary::before { content: "▾ "; }
 }
 .doc h2 .num { color: var(--text-3); font-weight: 500; margin-right: 10px; }
 .doc h3 { font-size: 1.05rem; margin: 24px 0 8px; font-weight: 600; }
+
+/* Rulebook: section.rule numbering (1.1, 1.2, ...) */
+.rulebook { counter-reset: rb-section; }
+.rulebook h2 {
+  counter-increment: rb-section;
+  counter-reset: rb-rule;
+}
+.rulebook h2::before {
+  content: counter(rb-section) ". ";
+  color: var(--text-3);
+  font-weight: 500;
+}
+.rulebook > ol {
+  list-style: none;
+  padding-left: 0;
+  margin: 10px 0;
+}
+.rulebook > ol > li {
+  counter-increment: rb-rule;
+  padding-left: 2.9em;
+  margin: 7px 0;
+}
+.rulebook > ol > li::before {
+  content: counter(rb-section) "." counter(rb-rule);
+  display: inline-block;
+  width: 2.9em;
+  margin-left: -2.9em;
+  color: var(--text-3);
+  font-variant-numeric: tabular-nums;
+}
+.rulebook > ol ul {
+  list-style: disc;
+  padding-left: 1.4em;
+  margin: 6px 0;
+}
 .doc p, .doc li { color: var(--text-2); }
 .doc p { margin: 10px 0; }
 .doc ul, .doc ol { padding-left: 22px; margin: 10px 0; }

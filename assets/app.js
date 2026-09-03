@@ -6,7 +6,7 @@ document.addEventListener('click', (e) => {
   }
 });
 
-// Click-to-copy server IP
+// Click-to-copy server address
 function initCopy() {
   const box = document.querySelector('[data-copy]');
   if (!box) return;
@@ -24,15 +24,7 @@ function initCopy() {
       document.execCommand('copy');
       ta.remove();
     }
-    box.classList.add('copied');
-    const hint = box.querySelector('.copy-hint');
-    const original = hint ? hint.textContent : '';
-    if (hint) hint.textContent = 'Copied!';
-    showToast('Server address copied to clipboard');
-    setTimeout(() => {
-      box.classList.remove('copied');
-      if (hint) hint.textContent = original;
-    }, 1600);
+    showToast('Server address copied');
   });
 }
 
@@ -46,32 +38,34 @@ function showToast(msg) {
   toast.textContent = msg;
   requestAnimationFrame(() => toast.classList.add('show'));
   clearTimeout(showToast._t);
-  showToast._t = setTimeout(() => toast.classList.remove('show'), 2000);
+  showToast._t = setTimeout(() => toast.classList.remove('show'), 1800);
 }
 
-initCopy();
-
-// Live Discord member counts (public invite endpoint, CORS-enabled)
+// Live Discord counts (public invite endpoint, CORS-enabled)
 async function initDiscord() {
   const el = document.querySelector('[data-discord-invite]');
   if (!el) return;
   const code = el.getAttribute('data-discord-invite');
-  const statsEl = el.querySelector('.d-stats');
-  if (!statsEl) return;
   try {
     const res = await fetch('https://discord.com/api/v10/invites/' + code + '?with_counts=true');
     if (!res.ok) throw new Error('bad status');
     const data = await res.json();
-    const members = data.approximate_member_count;
-    const online = data.approximate_presence_count;
-    if (typeof members === 'number') {
-      statsEl.innerHTML =
-        '<span><span class="dot"></span>' + online.toLocaleString() + ' online</span>' +
-        '<span>' + members.toLocaleString() + ' members</span>';
+    const online = el.querySelector('.dw-online');
+    const total = el.querySelector('.dw-total');
+    if (online && typeof data.approximate_presence_count === 'number') {
+      online.textContent = data.approximate_presence_count.toLocaleString();
+    }
+    if (total && typeof data.approximate_member_count === 'number') {
+      total.textContent = data.approximate_member_count.toLocaleString();
+    }
+    const icon = el.querySelector('.dw-icon');
+    if (icon && data.guild && data.guild.id && data.guild.icon) {
+      icon.src = 'https://cdn.discordapp.com/icons/' + data.guild.id + '/' + data.guild.icon + '.webp?size=128';
     }
   } catch {
-    statsEl.textContent = 'Join the community';
+    /* leave the static fallback values in place */
   }
 }
 
+initCopy();
 initDiscord();
