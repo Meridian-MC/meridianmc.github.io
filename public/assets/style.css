@@ -425,6 +425,7 @@ main {
 .bcard h3 { font-size: 1.02rem; font-weight: 650; color: var(--text); margin: 12px 0 6px; letter-spacing: -0.005em; }
 .bcard p { font-size: 0.86rem; color: var(--text-2); line-height: 1.55; margin: 0; }
 .bcard .b-ico { width: 26px; height: 26px; color: var(--a); flex-shrink: 0; }
+.bcard .b-pix { width: 34px; height: 34px; shape-rendering: crispEdges; }
 .bcard .b-link { margin-top: auto; padding-top: 14px; font-size: 0.8rem; color: var(--a); font-weight: 600; }
 
 .b-land { grid-area: land; }
@@ -447,6 +448,7 @@ main {
 .b-land h3 { font-size: 1.22rem; }
 .b-land p { font-size: 0.9rem; max-width: 42ch; }
 .b-land .b-ico { width: 32px; height: 32px; }
+.b-land .b-pix { width: 42px; height: 42px; }
 
 @media (max-width: 760px) {
   .bento {
