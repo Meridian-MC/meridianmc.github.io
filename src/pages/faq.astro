@@ -1,5 +1,15 @@
 ---
 import Base from "../layouts/Base.astro";
+import Toc from "../components/Toc.astro";
+import Callout from "../components/Callout.astro";
+import FaqAccordion from "../components/FaqAccordion.astro";
+import { DISCORD_INVITE_URL } from "../consts";
+
+const sections = [
+  { href: "#world", label: "The world" },
+  { href: "#starting", label: "Getting started" },
+  { href: "#economy", label: "Economy" },
+];
 ---
 
 <Base
@@ -11,187 +21,10 @@ import Base from "../layouts/Base.astro";
   <h1>FAQ</h1>
   <p class="lead">Short answers to the questions that come up most. Live economic data is on the <a href="/economy">Economy</a> page; the binding rules are in the <a href="/rules">Rulebook</a>.</p>
 
-  <div class="toc">
-    <strong>Sections</strong>
-    <ol>
-      <li><a href="#world">The world</a></li>
-      <li><a href="#starting">Getting started</a></li>
-      <li><a href="#economy">Economy</a></li>
-    </ol>
-  </div>
+  <Toc sections={sections} />
 
-  <h2 id="world">The world</h2>
-  <p class="cat-sub">The map, the dimensions, and how combat is set up.</p>
+  <FaqAccordion />
 
-  <details class="faq-q">
-    <summary>How big is the map?</summary>
-    <div class="a">
-      <p>The overworld is <span class="short">10,000 &times; 10,000 blocks</span>, centred on spawn — 5,000 blocks to the border in any direction. The border is a hard wall; you cannot build or travel past it.</p>
-    </div>
-  </details>
-
-  <details class="faq-q">
-    <summary>Is the End open?</summary>
-    <div class="a">
-      <p><span class="short">No</span>, the End is closed. Elytra, shulker boxes, and other End goods only enter the economy through what players already had, which is the point &mdash; they stay rare.</p>
-    </div>
-  </details>
-
-  <details class="faq-q">
-    <summary>Why is the Nether so small, and why does it get wiped?</summary>
-    <div class="a">
-      <p>The Nether runs at Minecraft's normal 8:1 ratio, so a 10,000-wide overworld only gives a Nether about <span class="short">1,250 blocks</span> wide. That keeps netherite, blaze rods, and Nether loot genuinely scarce and worth trading for.</p>
-      <p>To stop that small space from being strip-mined flat and claimed wall to wall, the <span class="short">Nether resets on the 1st of every month</span>. Anything you leave there is gone at the reset. Raid it, don't live in it.</p>
-    </div>
-  </details>
-
-  <details class="faq-q">
-    <summary>When does the Nether open?</summary>
-    <div class="a">
-      <p>Not at launch. It opens on a fixed date afterward, announced server-wide when it happens.</p>
-    </div>
-  </details>
-
-  <details class="faq-q">
-    <summary>Is PvP on?</summary>
-    <div class="a">
-      <p>PvP is <span class="short">off for the opening period</span> so people can settle in. It is switched on server-wide once nations have formed, with advance notice. After that, PvP is allowed everywhere outside declared <a href="/war">wars</a>, under the <a href="/rules#pvp">PvP rules</a>.</p>
-    </div>
-  </details>
-
-  <details class="faq-q">
-    <summary>How hard is the server?</summary>
-    <div class="a">
-      <p>Normal difficulty survival &mdash; not hardcore. There is <span class="short">no keep-inventory</span> in the world, so dying in the wild means dropping your things where you fell. The only exceptions are inside spawn and during a formal war.</p>
-    </div>
-  </details>
-
-  <details class="faq-q">
-    <summary>Can I fly?</summary>
-    <div class="a">
-      <p><span class="short">No.</span> Flight is off everywhere, including inside your own claims. Meridian is a ground-level survival server.</p>
-    </div>
-  </details>
-
-  <details class="faq-q">
-    <summary>Is there anti-cheat and x-ray protection?</summary>
-    <div class="a">
-      <p>Yes. <a href="/#protection">GrimAC</a> covers movement, combat, and packet checks. On top of that the server hides ores from your client until you are near them, so x-ray shows you nothing &mdash; and using it is a ban.</p>
-    </div>
-  </details>
-
-  <h2 id="starting">Getting started</h2>
-  <p class="cat-sub">Connecting, and your first hour.</p>
-
-  <details class="faq-q">
-    <summary>How do I connect?</summary>
-    <div class="a">
-      <p>Java Edition, address <code>meridian-mc.net</code>. Clients from <code>1.8</code> to <code>26.2</code> work through ViaVersion and ViaBackwards. You need a genuine (premium) account.</p>
-    </div>
-  </details>
-
-  <details class="faq-q">
-    <summary>Is there a whitelist?</summary>
-    <div class="a">
-      <p>Before launch, yes. On launch day the whitelist comes off and anyone can connect at <code>meridian-mc.net</code>.</p>
-    </div>
-  </details>
-
-  <details class="faq-q">
-    <summary>What should I do first?</summary>
-    <div class="a">
-      <p>Earn a little starting cash, then found a land with <code>/lands create &lt;name&gt;</code> and read the <a href="/lands">Lands guide</a>. Join a <a href="/faq#jobs-q">job</a> for early income, and skim the <a href="/commands">Commands</a> page.</p>
-    </div>
-  </details>
-
-  <h2 id="economy">Economy</h2>
-  <p class="cat-sub">Money, the market, and land costs. Live figures are on the <a href="/economy">Economy page</a>.</p>
-
-  <details class="faq-q">
-    <summary>What is the currency?</summary>
-    <div class="a">
-      <p>One currency, written <code>$</code>, not tied to any item. Everyone starts with <span class="short">$2,500</span>. Check your balance with <code>/balance</code>; send money with <code>/pay &lt;player&gt; &lt;amount&gt;</code>.</p>
-    </div>
-  </details>
-
-  <details class="faq-q">
-    <summary>How do I make money?</summary>
-    <div class="a">
-      <p>Three ways, roughly in order of how much they matter:</p>
-      <ul>
-        <li><strong>Selling to other players.</strong> Chest shops are the real economy. Left-click a chest holding what you want to sell, work out what is in demand, and produce it.</li>
-        <li><strong>Jobs.</strong> Miner, Farmer, Fisherman, Hunter, and Explorer pay small amounts for relevant actions. Early capital, not a wage &mdash; capped at <span class="short">$1,500 a day</span>.</li>
-        <li><strong>The Commodities counter.</strong> The server buys raw metals and minerals &mdash; iron, gold, copper, coal, redstone, lapis, quartz &mdash; at a deliberately low floor price. It is a safety net so you are never fully broke, not a place to get rich. Players will pay more.</li>
-      </ul>
-    </div>
-  </details>
-
-  <details class="faq-q">
-    <summary>Is there a server shop?</summary>
-    <div class="a">
-      <p>Two small counters, and that is all:</p>
-      <ul>
-        <li><strong>Basics</strong> &mdash; a handful of emergency items like bread and torches, <span class="short">buy-only</span>, priced at a premium so buying from a player is always cheaper.</li>
-        <li><strong>Commodities</strong> &mdash; the server <span class="short">buys</span> raw metals and minerals at a floor price. Sell-only.</li>
-      </ul>
-      <p>Everything interesting &mdash; diamonds, gear, enchanted books, potions, mob drops, End and Nether goods &mdash; is <span class="short">player market only</span>. The server never buys or sells it.</p>
-    </div>
-  </details>
-
-  <details class="faq-q">
-    <summary>How much does land cost?</summary>
-    <div class="a">
-      <p>Founding a land with <code>/lands create</code> is free and includes your <span class="short">first chunk free</span>. After that:</p>
-      <ul>
-        <li>The next chunk costs <span class="short">$15,000</span>, and each one after rises by <span class="short">$3,000</span> &mdash; so bigger claims cost more to grow.</li>
-        <li>Weekly upkeep is <span class="short">$1,500 per chunk</span>, taken from the shared land bank.</li>
-        <li>Tiers and nation membership change these numbers. The full breakdown is in the <a href="/lands">Lands guide</a>.</li>
-      </ul>
-    </div>
-  </details>
-
-  <details class="faq-q" id="jobs-q">
-    <summary>How do jobs work?</summary>
-    <div class="a">
-      <p>Run <code>/jobs browse</code> and pick from Miner, Farmer, Fisherman, Hunter, and Explorer. You earn a small payout for actions that fit the job. Daily earnings are capped at <span class="short">$1,500</span>, and casual play lands well under that &mdash; treat jobs as a leg-up, not a living.</p>
-    </div>
-  </details>
-
-  <details class="faq-q">
-    <summary>How should I price my items?</summary>
-    <div class="a">
-      <p>However you want &mdash; there is no fixed price list for anything traded player-to-player. Check a few shops, see what people charge, and price against that. The <a href="/economy#prices">Economy page</a> tracks the median for common goods.</p>
-    </div>
-  </details>
-
-  <details class="faq-q">
-    <summary>Can I move enchantments between items?</summary>
-    <div class="a">
-      <p>Yes &mdash; that is what <a href="/#extract">ExtractableEnchantments</a> is for. Craft an Enchantment Extractor from four experience bottles, four lapis blocks, and a book, then drag it onto an enchanted item to pull one random enchantment off as a book. It always works and you keep the book, so a good enchantment on gear you are replacing becomes something to re-use or sell.</p>
-    </div>
-  </details>
-
-  <details class="faq-q">
-    <summary>Are villager trades limited?</summary>
-    <div class="a">
-      <p>Yes, heavily &mdash; villagers are a currency faucet and an enchantment shortcut that the player market can't compete with, so a lot is switched off:</p>
-      <ul>
-        <li><strong>No enchanted books or enchanted gear</strong> from any villager. Those trades are removed entirely.</li>
-        <li><strong>No re-rolling.</strong> Breaking and replacing a job-site block will not re-roll a villager's offers.</li>
-        <li><strong>No discounts.</strong> Hero of the Village and cured-zombie price cuts do nothing here.</li>
-        <li><strong>No diamond gear, no cleric ender pearls, no farmer emerald-for-crops.</strong> These are protected commodities, the same as the automated farms banned under the <a href="/rules#farms">Farms rule</a>.</li>
-      </ul>
-      <p>Ordinary trades &mdash; emeralds for produce, sticks, glass, and so on &mdash; work as normal.</p>
-    </div>
-  </details>
-
-  <details class="faq-q">
-    <summary>What about scamming?</summary>
-    <div class="a">
-      <p>A mispriced shop sign is on the buyer to catch &mdash; that is fair game. Scamming through <strong>trust</strong> &mdash; taking payment and not delivering, fake middlemen, &ldquo;hold this for me&rdquo; &mdash; is a <a href="/rules">Rulebook</a> violation. For large deals, use a chest shop or ask staff to middleman.</p>
-    </div>
-  </details>
-
-  <div class="callout">Still stuck? Ask in <a href="https://discord.gg/beHD4TE3Td" rel="noopener">our Discord</a>.</div>
+  <Callout>Still stuck? Ask in <a href={DISCORD_INVITE_URL} rel="noopener">our Discord</a>.</Callout>
 </main>
 </Base>

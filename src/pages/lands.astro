@@ -1,5 +1,15 @@
 ---
 import Base from "../layouts/Base.astro";
+import Toc from "../components/Toc.astro";
+import Callout from "../components/Callout.astro";
+import { ECON } from "../consts";
+
+const sections = [
+  { href: "#lands", label: "Lands" },
+  { href: "#nations", label: "Nations" },
+  { href: "#vassals", label: "Vassals" },
+  { href: "#registry", label: "Nation registry" },
+];
 ---
 
 <Base
@@ -12,24 +22,16 @@ import Base from "../layouts/Base.astro";
   <h1>Lands &amp; Nations</h1>
   <p class="lead">A guide for the Lands plugin. It covers how you claim land, how land banks and upkeep work, how lands unlock tiers, how they combine into nations, and what happens to a nation that loses a war of vassalage.</p>
 
-  <div class="toc">
-    <strong>Sections</strong>
-    <ol>
-      <li><a href="#lands">Lands</a></li>
-      <li><a href="#nations">Nations</a></li>
-      <li><a href="#vassals">Vassals</a></li>
-      <li><a href="#registry">Nation registry</a></li>
-    </ol>
-  </div>
+  <Toc sections={sections} />
 
   <h2 id="lands"><span class="num">1</span>Lands</h2>
   <ol>
     <li>Run <code>/lands create &lt;name&gt;</code> to found your land free of charge. The first chunk is free.</li>
-    <li>The next chunk costs <strong>$15,000</strong>, and every chunk after that rises by a fixed <strong>$3,000</strong>, so the larger your land gets, the more each expansion costs.</li>
+    <li>The next chunk costs <strong>{ECON.firstPaidChunk}</strong>, and every chunk after that rises by a fixed <strong>{ECON.chunkIncrease}</strong>, so the larger your land gets, the more each expansion costs.</li>
     <li>When naming your land you can use a hex code to set its color on the world map, for example <code>&lt;#FF5555&gt;ExampleLand</code>. Minecraft only recognizes a specific set of hex colors.</li>
     <li>Your land has its own shared bank, separate from any individual's personal balance. Claim costs and upkeep are withdrawn from this bank, and any member can deposit into it.</li>
     <li>If the bank can't cover a cost, it falls back to the <strong>owner's</strong> personal balance.</li>
-    <li>Every land pays weekly upkeep on its claimed chunks, at <strong>$1,500 per chunk</strong>.</li>
+    <li>Every land pays weekly upkeep on its claimed chunks, at <strong>{ECON.landUpkeepPerChunk} per chunk</strong>.</li>
     <li>Larger lands cost more to maintain. Before you claim aggressively, make sure your land has the income to support it.</li>
     <li>You can rent or sell sub-areas of your land to other players without adding them as trusted members.</li>
     <li>Lands unlock new tiers by hitting member and wealth thresholds. The tiers are Settlement, Village, Town, Province, and Land. Each tier grants more claimable chunks and member slots, for a modest increase in upkeep.</li>
@@ -38,9 +40,9 @@ import Base from "../layouts/Base.astro";
 
   <h2 id="nations"><span class="num">2</span>Nations</h2>
   <ol>
-    <li>Multiple lands can form a nation for <strong>$3,500,000</strong>.</li>
+    <li>Multiple lands can form a nation for <strong>{ECON.nationCreateCost}</strong>.</li>
     <li>When a land joins a nation it stops paying upkeep to the server and instead pays tax directly to the nation. The nation's leader sets that rate, up to <strong>$6,000 per chunk</strong>.</li>
-    <li>In turn, the nation owes its own upkeep to the server, at <strong>$4,000 per chunk</strong> across the combined total of its lands.</li>
+    <li>In turn, the nation owes its own upkeep to the server, at <strong>{ECON.nationUpkeepPerChunk} per chunk</strong> across the combined total of its lands.</li>
     <li>Relations between nations are publicly tracked in-game.</li>
     <li>Like lands, nations can develop into higher tiers. The nation tiers are Federation, Nation, and Empire, and each one unlocks additional claiming capacity for every land in the nation.</li>
   </ol>
@@ -52,7 +54,7 @@ import Base from "../layouts/Base.astro";
     <li>The only way to become independent again is to declare and win a war against your overlord. See <a href="/war#goals">Warfare &sect;8</a>.</li>
   </ol>
 
-  <div class="callout">Warfare is the only time claimed land can be entered or captured by an enemy. Read the <a href="/war">Warfare</a> document before you get into a conflict.</div>
+  <Callout>Warfare is the only time claimed land can be entered or captured by an enemy. Read the <a href="/war">Warfare</a> document before you get into a conflict.</Callout>
 
   <!-- ================= Nation registry ================= -->
   <section class="analytics" data-analytics>

@@ -1,0 +1,9 @@
+---
+export interface Props {
+  variant?: "default" | "warn";
+  compact?: boolean;
+}
+const { variant = "default", compact = false } = Astro.props;
+const cls = ["callout", variant === "warn" && "warn", compact && "compact"].filter(Boolean).join(" ");
+---
+<div class={cls}><slot /></div>

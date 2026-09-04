@@ -1,5 +1,18 @@
 ---
 import Base from "../layouts/Base.astro";
+import Toc from "../components/Toc.astro";
+import Callout from "../components/Callout.astro";
+import { DISCORD_INVITE_URL, ECON } from "../consts";
+
+const sections = [
+  { href: "#getting-around", label: "Getting around" },
+  { href: "#personal", label: "Homes & personal" },
+  { href: "#chat", label: "Communication" },
+  { href: "#economy", label: "Economy & shops" },
+  { href: "#jobs", label: "Jobs" },
+  { href: "#land", label: "Land & nation" },
+  { href: "#war", label: "Warfare" },
+];
 ---
 
 <Base
@@ -12,18 +25,7 @@ import Base from "../layouts/Base.astro";
   <h1>Commands</h1>
   <p class="lead">The commands you'll reach for most often. Arguments in <code>&lt;angle brackets&gt;</code> are required; <code>[square brackets]</code> are optional. Some commands depend on your rank or your permissions inside a land.</p>
 
-  <div class="toc">
-    <strong>Jump to</strong>
-    <ol>
-      <li><a href="#getting-around">Getting around</a></li>
-      <li><a href="#personal">Homes &amp; personal</a></li>
-      <li><a href="#chat">Communication</a></li>
-      <li><a href="#economy">Economy &amp; shops</a></li>
-      <li><a href="#jobs">Jobs</a></li>
-      <li><a href="#land">Land &amp; nation</a></li>
-      <li><a href="#war">Warfare</a></li>
-    </ol>
-  </div>
+  <Toc sections={sections} ariaLabel="Jump to a command group" />
 
   <div class="cmd-group" id="getting-around">
     <h2>Getting around</h2>
@@ -55,8 +57,8 @@ import Base from "../layouts/Base.astro";
     <div class="cmd"><div class="k"><code>/balance [player]</code></div><div class="desc">Check a balance (also <code>/bal</code>).</div></div>
     <div class="cmd"><div class="k"><code>/pay &lt;player&gt; &lt;amount&gt;</code></div><div class="desc">Send money to another player.</div></div>
     <div class="cmd"><div class="k"><code>/baltop</code></div><div class="desc">The richest players on the server.</div></div>
-    <div class="cmd"><div class="k"><code>/shop</code></div><div class="desc">Open the server shop (basic commodities only, high prices).</div></div>
-    <div class="cmd"><div class="full" style="color:var(--text-3);font-size:0.72rem;text-transform:uppercase;letter-spacing:0.14em;padding-top:6px;">Chest shops (QuickShop-Hikari)</div></div>
+    <div class="cmd"><div class="k"><code>/shop</code></div><div class="desc">Open the server shop — Basics (buy-only) and Commodities (sells raw metals, minerals, and XP bottles).</div></div>
+    <p class="cmd-note">Chest shops (QuickShop-Hikari)</p>
     <div class="cmd"><div class="k"><code>left-click a chest</code></div><div class="desc">While holding an item, left-click a chest to start a shop, then type a price.</div></div>
     <div class="cmd"><div class="k"><code>/qs price &lt;amount&gt;</code></div><div class="desc">Change the price of the shop you're looking at.</div></div>
     <div class="cmd"><div class="k"><code>/qs find &lt;item&gt;</code></div><div class="desc">Locate nearby shops selling an item.</div></div>
@@ -86,13 +88,13 @@ import Base from "../layouts/Base.astro";
     <div class="cmd"><div class="k"><code>/lands bank deposit &lt;amount&gt;</code></div><div class="desc">Fund the land bank (also <code>withdraw</code>, <code>balance</code>).</div></div>
     <div class="cmd"><div class="k"><code>/lands rent</code> <code>/lands sell</code></div><div class="desc">Rent or sell a sub-area to another player.</div></div>
     <div class="cmd"><div class="k"><code>/lands setspawn</code></div><div class="desc">Set where <code>/lands spawn</code> takes members.</div></div>
-    <div class="cmd"><div class="k"><code>/nation create &lt;name&gt;</code></div><div class="desc">Form a nation from your land ($7,500,000).</div></div>
+    <div class="cmd"><div class="k"><code>/nation create &lt;name&gt;</code></div><div class="desc">Form a nation from your land ({ECON.nationCreateCost}).</div></div>
     <div class="cmd"><div class="k"><code>/nation &lt;nation&gt; invite &lt;land&gt;</code></div><div class="desc">Invite another land into your nation.</div></div>
   </div>
 
   <div class="cmd-group" id="war">
     <h2>Warfare</h2>
-    <div class="callout" style="margin-top:0;">War declarations must be approved by staff in a <a href="https://discord.gg/beHD4TE3Td" rel="noopener">Discord</a> ticket <em>first</em>. Only then do you file it in-game. See <a href="/war">Warfare</a>.</div>
+    <Callout compact>War declarations must be approved by staff in a <a href={DISCORD_INVITE_URL} rel="noopener">Discord</a> ticket <em>first</em>. Only then do you file it in-game. See <a href="/war">Warfare</a>.</Callout>
     <div class="cmd"><div class="k"><code>/nation &lt;your_nation&gt; war declare &lt;target&gt;</code></div><div class="desc">File an approved declaration. Starts the 2-day grace period.</div></div>
     <div class="cmd"><div class="k"><code>/nation &lt;nation&gt; relations</code></div><div class="desc">Check standing wars, alliances, and truces.</div></div>
   </div>

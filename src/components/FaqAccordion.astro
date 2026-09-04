@@ -1,0 +1,15 @@
+---
+import { FAQ_CATEGORIES, FAQ } from "../data/faq";
+---
+{FAQ_CATEGORIES.map((cat) => (
+  <>
+    <h2 id={cat.id}>{cat.title}</h2>
+    <p class="cat-sub">{cat.sub}</p>
+    {FAQ.filter((f) => f.category === cat.id).map((f) => (
+      <details class="faq-q" id={f.id}>
+        <summary>{f.question}</summary>
+        <div class="a" set:html={f.answer} />
+      </details>
+    ))}
+  </>
+))}

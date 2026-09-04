@@ -1,0 +1,14 @@
+---
+export interface Props {
+  sections: { href: string; label: string }[];
+  ariaLabel?: string;
+}
+const { sections, ariaLabel = "Sections on this page" } = Astro.props;
+---
+<nav class="toc" aria-label={ariaLabel}>
+  <ol>
+    {sections.map((s) => (
+      <li><a href={s.href}>{s.label}</a></li>
+    ))}
+  </ol>
+</nav>

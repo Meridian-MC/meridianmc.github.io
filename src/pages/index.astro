@@ -1,24 +1,25 @@
 ---
 import Base from "../layouts/Base.astro";
+import PluginRegistry from "../components/PluginRegistry.astro";
+import { SERVER_ADDRESS, DISCORD_INVITE_CODE, DISCORD_INVITE_URL } from "../consts";
 ---
 
 <Base
   title="Meridian · Minecraft Server"
   description="Meridian (MMC) is a Vanilla+ survival Minecraft server built on land claims, nations, warfare, and a player-run economy. Connect at meridian-mc.net."
-  path="/"
   ogTitle="Meridian Vanilla+ Minecraft Server"
   ogDescription="A Vanilla+ survival server built on land claims, nations, warfare, and a player-run economy. Connect at meridian-mc.net."
+  path="/"
   bodyClass="bg"
 >
 <main>
   <section class="hero">
     <h1>Meridian</h1>
-    <p class="tagline">A Vanilla+ survival server built on land claims, nations, warfare, and a player-run economy. Claim lands, form nations, and defend them.</p>
+    <p class="tagline">A Vanilla+ survival server built on land claims, nations, warfare, and a player-run economy. Claim land, form a nation, and defend it.</p>
 
-    <div class="ip-box" data-copy="meridian-mc.net" role="button" tabindex="0">
+    <div class="ip-box" data-copy={SERVER_ADDRESS} role="button" tabindex="0">
       <div>
-        <div class="label">Server Address</div>
-        <div class="ip">meridian-mc.net</div>
+        <div class="ip">{SERVER_ADDRESS}</div>
       </div>
       <svg class="copy-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
     </div>
@@ -33,135 +34,19 @@ import Base from "../layouts/Base.astro";
   </section>
 
   <section class="stack" id="community">
-    <a class="discord-strip" href="https://discord.gg/beHD4TE3Td" rel="noopener" data-discord-invite="beHD4TE3Td">
+    <a class="discord-strip" href={DISCORD_INVITE_URL} rel="noopener" data-discord-invite={DISCORD_INVITE_CODE}>
       <svg class="ds-logo" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19.27 5.33C17.94 4.71 16.5 4.26 15 4a.09.09 0 0 0-.07.03c-.18.33-.39.76-.53 1.09a16.09 16.09 0 0 0-4.8 0c-.14-.34-.35-.76-.54-1.09-.01-.02-.04-.03-.07-.03-1.5.26-2.93.71-4.27 1.33-.01 0-.02.01-.03.02-2.72 4.07-3.47 8.03-3.1 11.95 0 .02.01.04.03.05 1.8 1.32 3.53 2.12 5.24 2.65.03.01.06 0 .07-.02.4-.55.76-1.13 1.07-1.74.02-.04 0-.08-.04-.09-.57-.22-1.11-.48-1.64-.78-.04-.02-.04-.08-.01-.11.11-.08.22-.17.33-.25.02-.02.05-.02.07-.01 3.44 1.57 7.15 1.57 10.55 0 .02-.01.05-.01.07.01.11.09.22.17.33.26.04.03.04.09-.01.11-.52.31-1.07.56-1.64.78-.04.01-.05.06-.04.09.32.61.68 1.19 1.07 1.74.03.02.06.03.09.02 1.72-.53 3.45-1.33 5.25-2.65.02-.01.03-.03.03-.05.44-4.53-.73-8.46-3.1-11.95-.01-.01-.02-.02-.04-.02zM8.52 14.91c-1.03 0-1.89-.95-1.89-2.12 0-1.17.84-2.12 1.89-2.12 1.06 0 1.9.96 1.89 2.12 0 1.17-.84 2.12-1.89 2.12zm6.97 0c-1.03 0-1.89-.95-1.89-2.12 0-1.17.84-2.12 1.89-2.12 1.06 0 1.9.96 1.89 2.12 0 1.17-.83 2.12-1.89 2.12z"/></svg>
       <span class="ds-name">Discord</span>
       <span class="ds-count"><span class="ds-dot"></span><b class="dw-online">…</b>&nbsp;online <span class="ds-sep">/</span> <b class="dw-total">…</b>&nbsp;members</span>
-      <span class="ds-join">Join &rarr;</span>
+      <span class="ds-join">Join</span>
     </a>
   </section>
 
   <section class="stack" id="plugins">
     <h2>Plugins</h2>
-    <p class="section-intro">Meridian runs on <a href="https://papermc.io" rel="noopener">Paper</a> and is defined by a handful of plugins. Know these and you know how the server plays.</p>
+    <p class="section-intro">Meridian runs on <a href="https://papermc.io" rel="noopener">Paper</a> and is defined by the plugins below, grouped the way they actually govern the server.</p>
 
-    <article class="plugin" id="lands" style="--p: var(--p-lands)">
-      <div class="plugin-head"><img class="p-ico" src="/assets/pi/lands.png" alt="" width="34" height="34"><h3>Lands</h3><span class="ver">v8.2.4</span></div>
-      <p>A GUI-driven land claim system. Players claim chunks to protect their builds and containers, then group lands into nations with capitals, taxes, upkeep, tiers, and tracked diplomacy. Claims stay protected at all times except during a staff-approved war.</p>
-      <div class="links">
-        <a class="more" href="https://wiki.incredibleplugins.com/lands/players" rel="noopener">Wiki</a>
-        <a class="more" href="https://www.spigotmc.org/resources/lands.53313/" rel="noopener">SpigotMC</a>
-      </div>
-    </article>
-
-    <article class="plugin" id="quickshop" style="--p: var(--p-quickshop)">
-      <div class="plugin-head"><img class="p-ico" src="/assets/pi/quickshop.png" alt="" width="34" height="34"><h3>QuickShop-Hikari</h3><span class="ver">v6.3.0.1</span></div>
-      <p>A chest shop plugin. Players sell or buy any item straight from a chest with no commands and no admin setup. These shops are the Meridian economy.</p>
-      <div class="links">
-        <a class="more" href="https://quickshop-community.github.io/QuickShop-Hikari-Documents/" rel="noopener">Wiki</a>
-        <a class="more" href="https://modrinth.com/plugin/quickshop-hikari" rel="noopener">Modrinth</a>
-      </div>
-    </article>
-
-    <article class="plugin" id="market" style="--p: var(--p-market)">
-      <div class="plugin-head"><img class="p-ico" src="/assets/pi/market.png" alt="" width="34" height="34"><h3>EconomyShopGUI</h3><span class="ver">v7.2.1</span></div>
-      <p>A GUI-based server shop, kept deliberately small: a buy-only <strong>Basics</strong> counter for emergency items at a premium, and a <strong>Commodities</strong> counter where the server buys raw metals and minerals at a floor price. Everything else stays on the player market.</p>
-      <div class="links">
-        <a class="more" href="https://www.spigotmc.org/resources/economyshopgui.69927/" rel="noopener">SpigotMC</a>
-      </div>
-    </article>
-
-    <article class="plugin" id="jobs" style="--p: var(--p-jobs)">
-      <div class="plugin-head"><img class="p-ico" src="/assets/pi/jobs.png" alt="" width="34" height="34"><h3>Jobs Reborn</h3><span class="ver">v5.2.6.6</span></div>
-      <p>Pays players money and experience for in-game actions. Meridian runs five jobs (Miner, Farmer, Fisherman, Hunter, Explorer) with a daily payout cap of $1,500, meant as starter capital rather than a wage. Run <code>/jobs browse</code> to sign up.</p>
-      <div class="links">
-        <a class="more" href="https://www.spigotmc.org/resources/jobs-reborn.4216/" rel="noopener">SpigotMC</a>
-      </div>
-    </article>
-
-    <article class="plugin" id="brewing" style="--p: var(--p-brew)">
-      <div class="plugin-head"><img class="p-ico" src="/assets/pi/brewing.png" alt="" width="34" height="34"><h3>The Brewing Project</h3><span class="ver">v3.3.3</span></div>
-      <p>The successor to Brewery and a full rewrite of BreweryX. Brew drinks with real fermenting, distilling, and barrel aging. Spring water and wheat become beer, and high-proof liquor only takes on its taste after years in an oak barrel. The reward is a diversity of potions whose effects create a drunkenness Minecraft has never had.</p>
-      <div class="links">
-        <a class="more" href="https://docs.breweryteam.dev/docs/tbp" rel="noopener">Wiki</a>
-        <a class="more" href="https://modrinth.com/plugin/the-brewing-project" rel="noopener">Modrinth</a>
-      </div>
-    </article>
-
-    <article class="plugin" id="extract" style="--p: var(--p-extract)">
-      <div class="plugin-head"><img class="p-ico" src="/assets/pi/extractable.png" alt="" width="34" height="34"><h3>ExtractableEnchantments</h3><span class="ver">v12.8</span></div>
-      <p>Turns enchantments into a tradeable good. Craft an Enchantment Extractor from four experience bottles, four lapis blocks, and a book, then drag it onto an enchanted item to pull one random enchantment off as a book. It always succeeds and you keep the book, so a spare Mending tool or an unwanted roll becomes something you can re-use or sell.</p>
-      <div class="links">
-        <a class="more" href="https://www.spigotmc.org/resources/extractable-enchantments-remove-enchantments-1-14-26-2.73954/" rel="noopener">SpigotMC</a>
-      </div>
-    </article>
-
-    <article class="plugin" id="essentials" style="--p: var(--p-essentials)">
-      <div class="plugin-head"><img class="p-ico" src="/assets/pi/essentials.png" alt="" width="34" height="34"><h3>EssentialsX</h3><span class="ver">v2.22.1</span></div>
-      <p>The core command suite: homes, warps, kits, mail, chat, and the <code>/pay</code> and <code>/balance</code> economy commands. Vault sits behind it and links the currency to every other plugin here.</p>
-      <div class="links">
-        <a class="more" href="https://essentialsx.net" rel="noopener">essentialsx.net</a>
-        <a class="more" href="https://modrinth.com/plugin/essentialsx" rel="noopener">Modrinth</a>
-      </div>
-    </article>
-
-    <article class="plugin" id="protection" style="--p: var(--p-core)">
-      <div class="plugin-head"><img class="p-ico" src="/assets/pi/coreprotect.png" alt="" width="34" height="34"><img class="p-ico" src="/assets/pi/grim.png" alt="" width="34" height="34"><h3>CoreProtect &amp; GrimAC</h3><span class="ver">CoreProtect 25.0 &middot; Grim 2.3.74</span></div>
-      <p>CoreProtect logs every block change, so griefing inside a claim can be traced and rolled back. GrimAC is the anticheat, covering movement, combat, and packet checks, alongside NoChatReports for chat.</p>
-      <div class="links">
-        <a class="more" href="https://modrinth.com/plugin/coreprotect" rel="noopener">CoreProtect</a>
-        <a class="more" href="https://github.com/GrimAnticheat/Grim" rel="noopener">GrimAC</a>
-      </div>
-    </article>
-
-    <details class="all-plugins">
-      <summary>Full plugin list (34)</summary>
-      <div class="plugin-table">
-        <div class="grp">Land, economy &amp; progression</div>
-        <div class="name">Lands</div><div class="v">8.2.4</div>
-        <div class="name">QuickShop-Hikari</div><div class="v">6.3.0.1</div>
-        <div class="name">EconomyShopGUI</div><div class="v">7.2.1</div>
-        <div class="name">Jobs Reborn</div><div class="v">5.2.6.6</div>
-        <div class="name">Vault</div><div class="v">-</div>
-        <div class="name">TradeManager</div><div class="v">2.0.2</div>
-        <div class="name">ExtractableEnchantments</div><div class="v">12.8</div>
-        <div class="name">ajLeaderboards</div><div class="v">2.11.0</div>
-
-        <div class="grp">Gameplay</div>
-        <div class="name">The Brewing Project</div><div class="v">3.3.3</div>
-        <div class="name">DeathChest</div><div class="v">-</div>
-        <div class="name">EzRTP</div><div class="v">3.4.3</div>
-        <div class="name">ToolStats</div><div class="v">2.0.7</div>
-        <div class="name">FancyHolograms</div><div class="v">2.11.0</div>
-        <div class="name">FancyNpcs</div><div class="v">2.11.0</div>
-
-        <div class="grp">Protection &amp; moderation</div>
-        <div class="name">CoreProtect</div><div class="v">25.0-dev1</div>
-        <div class="name">GrimAC</div><div class="v">2.3.74</div>
-        <div class="name">WorldGuard</div><div class="v">7.0.18</div>
-        <div class="name">WorldEdit</div><div class="v">7.4.5</div>
-        <div class="name">LuckPerms</div><div class="v">5.5.71</div>
-        <div class="name">NoChatReports</div><div class="v">2.7.8</div>
-
-        <div class="grp">World</div>
-        <div class="name">squaremap</div><div class="v">mc26.2-1.3.15</div>
-        <div class="name">Chunky</div><div class="v">1.5.3</div>
-        <div class="name">ChunkyBorder</div><div class="v">1.2.33</div>
-
-        <div class="grp">Chat, info &amp; infrastructure</div>
-        <div class="name">EssentialsX</div><div class="v">2.22.1</div>
-        <div class="name">EssentialsX Chat</div><div class="v">2.22.1</div>
-        <div class="name">DiscordSRV</div><div class="v">1.30.5</div>
-        <div class="name">InteractiveChat</div><div class="v">2026.1.1.0</div>
-        <div class="name">TAB</div><div class="v">6.1.2</div>
-        <div class="name">MiniMOTD</div><div class="v">2.2.4</div>
-        <div class="name">PlaceholderAPI</div><div class="v">2.12.3</div>
-        <div class="name">ProtocolLib</div><div class="v">-</div>
-        <div class="name">CMILib</div><div class="v">1.5.9.9</div>
-        <div class="name">ViaVersion</div><div class="v">5.12.0</div>
-        <div class="name">ViaBackwards</div><div class="v">5.11.0</div>
-      </div>
-    </details>
+    <PluginRegistry />
   </section>
 </main>
 </Base>

@@ -1,5 +1,20 @@
 ---
 import Base from "../layouts/Base.astro";
+import Toc from "../components/Toc.astro";
+import Callout from "../components/Callout.astro";
+import { DISCORD_INVITE_URL, ECON } from "../consts";
+
+const sections = [
+  { href: "#definitions", label: "Definitions" },
+  { href: "#casus-belli", label: "Casus Belli" },
+  { href: "#requirements", label: "Requirements" },
+  { href: "#declaration", label: "Declaration of War" },
+  { href: "#engagement", label: "Rules of Engagement" },
+  { href: "#modes", label: "War Modes" },
+  { href: "#territory", label: "Capturing Territory" },
+  { href: "#goals", label: "War Goals" },
+  { href: "#post-war", label: "Post-War" },
+];
 ---
 
 <Base
@@ -11,22 +26,9 @@ import Base from "../layouts/Base.astro";
   <h1>Warfare</h1>
   <p class="lead">The governing document for formal warfare between nations. Anything not declared and approved here is just ordinary PvP and is covered by the <a href="/rules#pvp">Rulebook</a>.</p>
 
-  <div class="callout">Every war starts with a staff-reviewed ticket in <a href="https://discord.gg/beHD4TE3Td" rel="noopener">our Discord</a>. Do not take hostile action in-game until a declaration has been approved and filed.</div>
+  <Callout>Every war starts with a staff-reviewed ticket in <a href={DISCORD_INVITE_URL} rel="noopener">our Discord</a>. Do not take hostile action in-game until a declaration has been approved and filed.</Callout>
 
-  <div class="toc">
-    <strong>Sections</strong>
-    <ol>
-      <li><a href="#definitions">Definitions</a></li>
-      <li><a href="#casus-belli">Casus Belli</a></li>
-      <li><a href="#requirements">Requirements</a></li>
-      <li><a href="#declaration">Declaration of War</a></li>
-      <li><a href="#engagement">Rules of Engagement</a></li>
-      <li><a href="#modes">War Modes</a></li>
-      <li><a href="#territory">Capturing Territory</a></li>
-      <li><a href="#goals">War Goals</a></li>
-      <li><a href="#post-war">Post-War</a></li>
-    </ol>
-  </div>
+  <Toc sections={sections} />
 
   <h2 id="definitions"><span class="num">1</span>Definitions</h2>
   <ul>
@@ -54,10 +56,10 @@ import Base from "../layouts/Base.astro";
   <ol>
     <li>Claims must be within <strong>1,000 blocks</strong> of each other to declare war.</li>
     <li>You can only declare war on someone within <strong>two tiers</strong> of your own, up or down. A Settlement can go after a Village or a Town, but not a Province or a Land. Nation-versus-nation and mixed matchups compare tier positions the same way. Independence wars, where a vassal fights to leave its overlord, are exempt.</li>
-    <li>The attacking land needs at least <strong>$50,000</strong> in its bank to file a declaration.</li>
+    <li>The attacking land needs at least <strong>{ECON.warAttackerMinBank}</strong> in its bank to file a declaration.</li>
   </ol>
 
-  <div class="callout">Land tiers, smallest to largest: <strong>Settlement &rarr; Village &rarr; Town &rarr; Province &rarr; Land</strong>. Nation tiers: <strong>Federation &rarr; Nation &rarr; Empire</strong>. See the <a href="/lands">Lands guide</a> for how tiers are earned.</div>
+  <Callout>Land tiers, smallest to largest: <strong>Settlement &rarr; Village &rarr; Town &rarr; Province &rarr; Land</strong>. Nation tiers: <strong>Federation &rarr; Nation &rarr; Empire</strong>. See the <a href="/lands">Lands guide</a> for how tiers are earned.</Callout>
 
   <h2 id="declaration"><span class="num">4</span>Declaration of War</h2>
   <ol>
@@ -104,7 +106,7 @@ import Base from "../layouts/Base.astro";
   <h3>Capture blocks</h3>
   <p>A capture block is a craftable beacon placed in the defender's land. If the attackers control the area immediately around it for a set time, they capture that chunk <strong>and every adjacent claimed chunk</strong>, scoring points. If the defenders destroy the beacon or repel the attackers, the capture block is destroyed and the defenders score points.</p>
 
-  <div class="callout">Exact capture timers and cooldowns are still being tuned. Check the current values in-game or ask staff before planning around them.</div>
+  <Callout variant="warn">Exact capture timers and cooldowns are still being tuned. Check the current values in-game or ask staff before planning around them.</Callout>
 
   <h2 id="goals"><span class="num">8</span>War Goals</h2>
   <p>These describe what happens after the war concludes, on top of whatever territory was exchanged via capture flags.</p>

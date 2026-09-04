@@ -1,5 +1,17 @@
 ---
 import Base from "../layouts/Base.astro";
+import Toc from "../components/Toc.astro";
+import Callout from "../components/Callout.astro";
+import { DISCORD_INVITE_URL } from "../consts";
+
+const sections = [
+  { href: "#community", label: "Community" },
+  { href: "#pvp", label: "Player vs. Player" },
+  { href: "#lands", label: "Lands & Nations" },
+  { href: "#client", label: "Client" },
+  { href: "#farms", label: "Farms" },
+  { href: "#moderation", label: "Moderation" },
+];
 ---
 
 <Base
@@ -11,17 +23,7 @@ import Base from "../layouts/Base.astro";
   <h1>Server Rulebook</h1>
   <p class="lead">A general set of rules that governs the server. They apply to everyone, at all times. If you are not sure whether something is allowed, ask staff before you do it.</p>
 
-  <div class="toc">
-    <strong>Sections</strong>
-    <ol>
-      <li><a href="#community">Community</a></li>
-      <li><a href="#pvp">Player vs. Player</a></li>
-      <li><a href="#lands">Lands &amp; Nations</a></li>
-      <li><a href="#client">Client</a></li>
-      <li><a href="#farms">Farms</a></li>
-      <li><a href="#moderation">Moderation</a></li>
-    </ol>
-  </div>
+  <Toc sections={sections} />
 
   <h2 id="community">Community</h2>
   <ol>
@@ -82,6 +84,6 @@ import Base from "../layouts/Base.astro";
     <li>Staff are held to these standards exactly as any other player is.</li>
   </ol>
 
-  <div class="callout">Questions about a rule, or want to report something? Open a ticket in <a href="https://discord.gg/beHD4TE3Td" rel="noopener">our Discord</a>.</div>
+  <Callout>Questions about a rule, or want to report something? Open a ticket in <a href={DISCORD_INVITE_URL} rel="noopener">our Discord</a>.</Callout>
 </main>
 </Base>
