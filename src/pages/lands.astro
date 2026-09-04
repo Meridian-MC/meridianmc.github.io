@@ -5,7 +5,6 @@ import Callout from "../components/Callout.astro";
 import { ECON } from "../consts";
 
 const sections = [
-  { href: "#registry", label: "Nation registry" },
   { href: "#lands", label: "Lands" },
   { href: "#nations", label: "Nations" },
   { href: "#vassals", label: "Vassals" },
@@ -20,36 +19,9 @@ const sections = [
 >
 <main class="doc">
   <h1>Lands &amp; Nations</h1>
-  <p class="lead">A guide for the Lands plugin. It covers how you claim land, how land banks and upkeep work, how lands unlock tiers, how they combine into nations, and what happens to a nation that loses a war of vassalage.</p>
+  <p class="lead">A guide for the Lands plugin. It covers how you claim land, how land banks and upkeep work, how lands unlock tiers, how they combine into nations, and what happens to a nation that loses a war of vassalage. For the live nation rankings, see <a href="/nations">Nations</a>.</p>
 
   <Toc sections={sections} />
-
-  <!-- ================= Nation registry ================= -->
-  <section class="analytics" data-analytics>
-    <h2 id="registry">Nation registry</h2>
-    <p class="as-sub">Nations ranked by the Meridian Development Index, from live server data.</p>
-    <div class="data-stamp" data-stamp>Loading live data&hellip;</div>
-
-    <h3>Nations</h3>
-    <div class="nation-grid" data-slot="nation-grid"></div>
-
-    <h3>Land atlas</h3>
-    <div data-slot="land-table"></div>
-
-    <details class="method">
-      <summary>How the Meridian Development Index is calculated</summary>
-      <div class="m-body">
-        <p>The MDI is a single score from <code>0</code> to <code>1</code>, modelled on the way the UN builds its Human Development Index: measure a few things that matter, put each on the same scale, then combine them so a nation cannot coast on one strength alone.</p>
-        <dl>
-          <dt>Territory</dt><dd>Claimed chunks, against a reference ceiling of 60.</dd>
-          <dt>Population</dt><dd>Trusted members across the nation's lands, against a ceiling of 15.</dd>
-          <dt>Wealth</dt><dd>Combined land-bank treasury, against a ceiling of $5,000,000.</dd>
-          <dt>Activity</dt><dd>Recent presence and events in the nation's lands.</dd>
-        </dl>
-        <p>The four sub-indices are combined with a <strong>geometric mean</strong>, so a nation that is large but empty, or rich but tiny, scores lower than one that is balanced. Reference ceilings are tuned as the server grows.</p>
-      </div>
-    </details>
-  </section>
 
   <h2 id="lands"><span class="num">1</span>Lands</h2>
   <ol>

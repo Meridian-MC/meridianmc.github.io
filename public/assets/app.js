@@ -161,7 +161,7 @@ const CMDK_INDEX = [
   { label: 'Lands: Claiming', href: '/lands#lands' },
   { label: 'Lands: Nations', href: '/lands#nations' },
   { label: 'Lands: Vassals', href: '/lands#vassals' },
-  { label: 'Lands: Nation registry', href: '/lands#registry' },
+  { label: 'Nations', href: '/nations' },
   { label: 'Warfare', href: '/war' },
   { label: 'Economy: State of the economy', href: '/economy#state' },
   { label: 'Economy: Wealth', href: '/economy#wealth' },

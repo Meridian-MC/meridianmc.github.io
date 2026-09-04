@@ -883,6 +883,7 @@ main {
 .pulse-stats { grid-template-columns: repeat(4, 1fr); margin-bottom: 18px; }
 .pulse-stats .stat:nth-child(-n+4) { border-top: 0; }
 .pulse-stats .stat:nth-child(4n+1) { border-left: 0; }
+.pulse-stats .stat:nth-child(4) { border-left: 1px solid var(--border); }
 .pulse-feed { display: flex; flex-direction: column; }
 .pulse-row {
   display: grid; grid-template-columns: auto 1fr auto; align-items: baseline; gap: 12px;

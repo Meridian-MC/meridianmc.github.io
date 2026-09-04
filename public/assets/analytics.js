@@ -247,7 +247,7 @@
         tile(intf(lands.length), "Lands founded") +
         tile(intf(nations.length), "Nations formed") +
         tile(intf(chunks), "Chunks claimed") +
-        tile(intf(joined), "Players joined");
+        tile(intf(joined), "Unique players");
     }
     var feedEl = document.querySelector("[data-slot=pulse-feed]");
     if (feedEl) {
