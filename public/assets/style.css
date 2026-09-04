@@ -1,25 +1,26 @@
 :root {
-  --bg: #0b0b0c;
-  --bg-1: #131315;
-  --bg-2: #1a1a1d;
-  --bg-3: #202024;
-  --border: #29292e;
-  --border-2: #3a3a40;
-  --text: #f4f4f5;
-  --text-2: #b6b6bb;
-  --text-3: #7c7c83;
-  --accent: #ffffff;
+  --bg: #0a0b0d;
+  --bg-1: #111318;
+  --bg-2: #171a20;
+  --bg-3: #1f232b;
+  --border: #262b33;
+  --border-2: #3a4150;
+  --text: #f5f6f7;
+  --text-2: #b3b8c0;
+  --text-3: #767c87;
+  --accent: #e8b33d;    /* imperial gold: the one deliberately vivid signature color, spent sparingly */
 
-  /* plugin accents (muted) */
-  --p-lands: #7cb488;   /* Lands green */
-  --p-quickshop: #d9a65b;
-  --p-market: #6f9bd1;
-  --p-jobs: #3f8f5a;    /* Jobs Reborn: deeper green, distinct from Lands */
-  --p-extract: #7d68c9; /* enchant violet */
-  --p-brew: #d382ac;    /* pinkish, for The Brewing Project */
-  --p-essentials: #d16565; /* red, EssentialsX */
-  --p-core: #5b9bd5;    /* CoreProtect blue */
-  --p-deathchest: #b3773f; /* oak brown */
+  /* plugin accents: real saturation, not pastel. Same hue identity per
+     plugin as before, just actually spent as color instead of greyed out. */
+  --p-lands: #4fae66;   /* Lands green */
+  --p-quickshop: #e0a23c;
+  --p-market: #4a8ed6;
+  --p-jobs: #2b8f4f;    /* Jobs Reborn: deeper green, distinct from Lands */
+  --p-extract: #8a5cf0; /* enchant violet */
+  --p-brew: #e0629e;    /* pinkish, for The Brewing Project */
+  --p-essentials: #e0473f; /* red, EssentialsX */
+  --p-core: #4499e8;    /* CoreProtect blue */
+  --p-deathchest: #c17a2e; /* oak brown */
   --p-guard: #9aa1a8;
 
   --radius: 12px;
@@ -298,12 +299,12 @@ main {
 @media (prefers-reduced-motion: reduce) { .embers { display: none; } }
 @media (max-width: 640px) { .embers { display: none; } }
 .hero h1 {
-  font-family: var(--font-display);
+  font-family: "Syne", var(--font-display);
   font-size: clamp(2.7rem, 8vw, 4.3rem);
-  letter-spacing: -0.03em;
+  letter-spacing: -0.01em;
   line-height: 1.02;
   margin-bottom: 20px;
-  font-weight: 700;
+  font-weight: 800;
   /* a deeper, slightly warm block-bevel: a light top edge, a solid dark
      drop matching Minecraft's own flat font shadow, and soft ambient
      depth beneath. One more step toward "block", still no pixel font. */
@@ -329,7 +330,8 @@ main {
   cursor: pointer;
   transition: border-color 0.15s var(--ease), transform 0.08s var(--ease), background 0.15s var(--ease);
 }
-.ip-box:hover { border-color: var(--text-3); background: var(--bg-2); }
+.ip-box:hover { border-color: color-mix(in srgb, var(--accent) 55%, var(--border-2)); background: var(--bg-2); }
+.ip-box:hover .ip { color: var(--accent); }
 .ip-box:active { transform: scale(0.985); }
 .ip-box .ip { font-family: var(--mono); font-size: 1.28rem; font-weight: 500; color: var(--text); letter-spacing: -0.01em; transition: color 0.2s var(--ease); }
 .ip-box .copy-ico {
@@ -481,7 +483,7 @@ main {
   font-size: 0.86rem; font-weight: 600; color: var(--text-2);
   transition: color 0.15s var(--ease);
 }
-.discord-strip:hover .ds-join { color: #fff; }
+.discord-strip:hover .ds-join { color: var(--accent); }
 @media (max-width: 520px) {
   .discord-strip { flex-wrap: wrap; }
   .discord-strip .ds-join { margin-left: 0; width: 100%; }
