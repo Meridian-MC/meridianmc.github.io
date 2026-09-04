@@ -509,14 +509,39 @@ main {
   gap: 14px;
 }
 .reg-card {
+  position: relative;
+  overflow: hidden;
   padding: 22px 22px 20px;
   border: 1px solid var(--border);
   border-radius: var(--radius);
   background: var(--bg-1);
   scroll-margin-top: 80px;
-  transition: border-color 0.2s var(--ease), transform 0.2s var(--ease), background 0.2s var(--ease);
+  transition: border-color 0.2s var(--ease), transform 0.2s var(--ease), background 0.2s var(--ease), box-shadow 0.2s var(--ease);
 }
-.reg-card:hover { border-color: color-mix(in srgb, var(--p, var(--border-2)) 55%, var(--border-2)); transform: translateY(-2px); background: var(--bg-2); }
+.reg-card:hover {
+  border-color: color-mix(in srgb, var(--p, var(--border-2)) 55%, var(--border-2));
+  transform: translateY(-2px);
+  background: var(--bg-2);
+  box-shadow: 0 8px 28px -8px color-mix(in srgb, var(--p, transparent) 35%, transparent);
+}
+
+/* A single light sweep on hover, reserved for the standout cards
+   (featured plugins, the #1 nation) so it reads as a moment, not decor. */
+.reg-card::after, .ncard-top::after {
+  content: "";
+  position: absolute; inset: 0;
+  background: linear-gradient(115deg, transparent 42%, color-mix(in srgb, var(--p, #fff) 16%, transparent) 50%, transparent 58%);
+  background-size: 250% 100%;
+  background-position: 150% 0;
+  pointer-events: none;
+}
+.reg-card:hover::after, .ncard-top:hover::after {
+  background-position: -50% 0;
+  transition: background-position 0.85s var(--ease);
+}
+@media (prefers-reduced-motion: reduce) {
+  .reg-card:hover::after, .ncard-top:hover::after { transition: none; background-position: 150% 0; }
+}
 .reg-head { display: flex; align-items: center; gap: 11px; flex-wrap: wrap; }
 .reg-ico { width: 32px; height: 32px; border-radius: 8px; flex-shrink: 0; background: var(--bg-2); object-fit: cover; }
 .reg-name { font-family: var(--font); font-weight: 700; font-size: 1.08rem; color: var(--p, var(--text)); letter-spacing: -0.005em; }
@@ -915,6 +940,8 @@ main {
 }
 .ncard .n-name { color: color-mix(in srgb, var(--p) 75%, var(--text)); }
 .ncard-top {
+  position: relative;
+  overflow: hidden;
   grid-column: span 2;
   border-color: color-mix(in srgb, var(--p) 45%, var(--border));
   border-left-width: 4px;
