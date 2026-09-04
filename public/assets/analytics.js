@@ -2,14 +2,17 @@
 // the economy dashboard and the nation registry. No dependencies.
 
 (function () {
+  // The ticker lives in the site header on every page; the rest of this file
+  // (MEI, charts, tables, nation registry) only renders where [data-analytics]
+  // exists (economy.astro, lands.astro).
   var root = document.querySelector("[data-analytics]");
-  if (!root) return;
 
   fetch("/data.json", { cache: "no-cache" })
     .then(function (r) { if (!r.ok) throw new Error(); return r.json(); })
     .then(render)
     .catch(function () {
-      root.querySelectorAll("[data-slot]").forEach(function (el) {
+      document.querySelectorAll("[data-slot]").forEach(function (el) {
+        if (el.matches("[data-slot=ticker]")) { el.innerHTML = ""; return; }
         el.innerHTML = '<p class="c-empty">Live data is unavailable right now.</p>';
       });
     });
@@ -221,6 +224,12 @@
   }
 
   function render(d) {
+    // Header ticker: every page, independent of the [data-analytics] root.
+    if (d.economy && d.economy.items) {
+      renderTicker(document.querySelector("[data-slot=ticker]"), d.economy.items);
+    }
+    if (!root) return;
+
     var stamp = document.querySelector("[data-stamp]");
     if (stamp) {
       stamp.textContent = "Rebuilt from the live server at " + d.generated.replace("T", " ").replace("Z", " UTC");
@@ -298,7 +307,6 @@
           }).join("") + "</tbody></table></div>";
       }
 
-      renderTicker(root.querySelector("[data-slot=ticker]"), e.items);
       renderVolume(root.querySelector("[data-slot=volume-table]"), e.items);
       initCandles(root, e.items);
     }

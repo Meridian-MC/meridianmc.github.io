@@ -66,6 +66,7 @@ const NAV = [
       ))}
     </div>
   </nav>
+  <div class="ticker-wrap" data-slot="ticker"></div>
 </header>
 
 <slot />
@@ -80,6 +81,6 @@ const NAV = [
 </footer>
 
 <script is:inline src="/assets/app.js"></script>
-{analytics && <script is:inline src="/assets/analytics.js"></script>}
+<script is:inline src="/assets/analytics.js"></script>
 </body>
 </html>
