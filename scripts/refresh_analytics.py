@@ -23,6 +23,13 @@ PW = os.environ.get("MC_FTP_PASSWORD")
 PROFILE = os.environ.get("MC_PROFILE", "profile_orfqa")
 OUT = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "data.json"))
 
+# Optional: live server health (TPS + uptime) via RCON. If MC_RCON_PASSWORD is
+# unset or the port is unreachable, data.server is left empty and the website
+# just omits those two figures.
+RCON_HOST = os.environ.get("MC_RCON_HOST", HOST)
+RCON_PORT = int(os.environ.get("MC_RCON_PORT", "25575"))
+RCON_PW = os.environ.get("MC_RCON_PASSWORD")
+
 MIN_TRADERS, MIN_DAYS = 8, 14
 BASKET = ["Wheat", "Iron Ingot", "Diamond", "Ender Pearl", "Oak Log"]
 TRACKED = [
@@ -210,6 +217,48 @@ def _pretty(material):
     return " ".join(w.capitalize() for w in re.sub(r"^minecraft:", "", material).split("_"))
 
 
+def server_health():
+    """TPS + uptime from the RCON `uptime` command (provided by CMILib).
+    Returns {} when RCON is not configured or not reachable."""
+    if not RCON_PW:
+        return {}
+    import socket, struct
+
+    def pkt(pid, ptype, body):
+        d = struct.pack("<ii", pid, ptype) + body.encode("utf8") + b"\x00\x00"
+        return struct.pack("<i", len(d)) + d
+
+    try:
+        s = socket.create_connection((RCON_HOST, RCON_PORT), timeout=12)
+        s.settimeout(12)
+        s.sendall(pkt(1, 3, RCON_PW))
+        s.recv(4096)                       # auth response
+        s.sendall(pkt(2, 2, "uptime"))
+        s.sendall(pkt(3, 2, ""))           # end marker
+        buf = b""
+        while b"\x00\x00" not in buf[10:] or len(buf) < 14:
+            chunk = s.recv(4096)
+            if not chunk:
+                break
+            buf += chunk
+            if len(buf) > 32768:
+                break
+        s.close()
+    except Exception:
+        return {}
+
+    txt = re.sub(r"\xa7.", "", buf.decode("utf8", "replace"))
+    out = {}
+    m = re.search(r"Uptime:\s*([^\r\n]+)", txt)
+    if m:
+        out["uptime"] = m.group(1).strip()
+    m = re.search(r"TPS\s*[=:]\s*([\d.]+)", txt) or re.search(r"TPS[^:]*:\s*([\d.]+)", txt)
+    if m:
+        out["tps"] = float(m.group(1))
+    out["checked"] = datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+    return out
+
+
 def main():
     f = ftp_conn()
     P = f"{PROFILE}/plugins"
@@ -281,6 +330,7 @@ def main():
             "median": round(statistics.median(balances.values()), 2) if balances else 0,
             "mean": round(statistics.mean(balances.values()), 2) if balances else 0,
         },
+        "server": server_health(),
         "nations": nation_rows,
         "lands": sorted(({"name": l["name"], "type": l["type"], "chunks": l["chunks"],
                           "members": l["members"], "bank": round(l["bank"], 2), "level": l["level"]}

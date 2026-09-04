@@ -27,6 +27,10 @@ jobs:
       - name: Rebuild data.json
         env:
           MC_FTP_PASSWORD: ${{ secrets.MC_FTP_PASSWORD }}
+          # Optional — set these repo secrets to show live TPS + uptime on the site.
+          MC_RCON_PASSWORD: ${{ secrets.MC_RCON_PASSWORD }}
+          MC_RCON_HOST: ${{ secrets.MC_RCON_HOST }}
+          MC_RCON_PORT: ${{ secrets.MC_RCON_PORT }}
         run: python3 scripts/refresh_analytics.py
 
       - name: Commit if changed

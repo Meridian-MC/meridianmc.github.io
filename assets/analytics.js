@@ -145,7 +145,7 @@
           it.innerHTML = '<p class="c-empty">Item prices appear once chest-shop sales are being logged.</p>';
         } else {
           it.innerHTML = '<div class="itable-wrap"><table class="itable"><thead><tr>' +
-            '<th>Item</th><th style="text-align:right">Price</th><th style="text-align:right">7d</th><th>30-day trend</th><th style="text-align:right">Shops</th>' +
+            '<th>Item</th><th style="text-align:right">Median price</th><th style="text-align:right">7d</th><th>30-day trend</th><th style="text-align:right">Shops</th>' +
             "</tr></thead><tbody>" +
             items.map(function (x) {
               var dir = x.change_7d > 0.005 ? "up" : x.change_7d < -0.005 ? "down" : "flat";

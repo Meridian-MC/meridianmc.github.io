@@ -12,10 +12,10 @@
   --accent: #ffffff;
 
   /* plugin accents (muted) */
-  --p-lands: #7cb488;
+  --p-lands: #c9a84c;   /* crown gold */
   --p-quickshop: #d9a65b;
   --p-market: #6f9bd1;
-  --p-jobs: #ac88cf;
+  --p-jobs: #6aa870;   /* Jobs Reborn green */
   --p-extract: #7d68c9;   /* enchant violet */
   --p-brew: #d382ac;   /* pinkish, for The Brewing Project */
   --p-essentials: #d16565;   /* red, EssentialsX */
@@ -200,6 +200,30 @@ main {
 }
 .sub-line code { font-family: var(--mono); color: var(--text-2); }
 
+/* ---------- Live server status ---------- */
+.srv {
+  display: inline-flex; flex-wrap: wrap; align-items: center;
+  gap: 7px 15px;
+  margin-top: 16px;
+  padding: 9px 16px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--bg-1) 70%, transparent);
+  font-size: 0.8rem;
+  color: var(--text-2);
+  font-variant-numeric: tabular-nums;
+}
+.srv-item { display: inline-flex; align-items: center; gap: 6px; white-space: nowrap; }
+.srv-item b { color: var(--text); font-weight: 620; }
+.srv-dot {
+  width: 8px; height: 8px; border-radius: 50%;
+  background: var(--text-3);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--text-3) 20%, transparent);
+}
+.srv[data-state="online"]  .srv-dot { background: #57b98a; box-shadow: 0 0 0 3px color-mix(in srgb, #57b98a 22%, transparent); }
+.srv[data-state="offline"] .srv-dot { background: #d3675c; box-shadow: 0 0 0 3px color-mix(in srgb, #d3675c 22%, transparent); }
+.srv[data-state="offline"] { color: var(--text-3); }
+
 /* ---------- Section scaffolding ---------- */
 .stack { margin-top: 72px; }
 .stack > h2 {
@@ -209,18 +233,6 @@ main {
   scroll-margin-top: 80px;
 }
 .section-intro { color: var(--text-3); margin-top: 4px; margin-bottom: 26px; }
-
-/* jump pills */
-.pill-row { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 30px; }
-.pill {
-  border: 1px solid var(--border-2);
-  border-radius: 999px;
-  padding: 6px 14px;
-  font-size: 0.84rem;
-  color: var(--text-2);
-  text-decoration: none;
-}
-.pill:hover { color: var(--text); border-color: var(--text-3); }
 
 /* ---------- Plugin cards ---------- */
 .plugin {
@@ -558,15 +570,35 @@ details.all-plugins[open] summary::before { content: "▾ "; }
 }
 .mei-scale span.on { color: var(--bg); background: var(--mei-c); border-color: var(--mei-c); font-weight: 600; }
 
-/* stat tiles */
+/* economy figures — single framed ledger, hairline-divided */
 .stat-row {
-  display: grid; grid-template-columns: repeat(auto-fit, minmax(148px, 1fr));
-  gap: 10px; margin: 22px 0;
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  border: 1px solid var(--border); border-radius: 12px;
+  background: var(--bg-1); overflow: hidden;
+  margin: 22px 0 32px;
 }
-.stat { border: 1px solid var(--border); background: var(--bg-1); border-radius: 10px; padding: 14px 15px; }
-.stat .s-val { font-size: 1.35rem; font-weight: 640; color: var(--text); font-variant-numeric: tabular-nums; letter-spacing: -0.01em; line-height: 1.1; }
-.stat .s-lab { font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.09em; color: var(--text-3); margin-top: 6px; }
-.stat .s-sub { font-size: 0.76rem; color: var(--text-3); margin-top: 2px; }
+.stat {
+  padding: 16px 18px;
+  border-top: 1px solid var(--border);
+  border-left: 1px solid var(--border);
+}
+.stat:nth-child(-n+3) { border-top: 0; }
+.stat:nth-child(3n+1) { border-left: 0; }
+.stat .s-val {
+  display: block; font-size: 1.5rem; font-weight: 640; color: var(--text);
+  font-variant-numeric: tabular-nums; letter-spacing: -0.02em; line-height: 1.15;
+}
+.stat .s-lab {
+  display: block; margin-top: 5px;
+  font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-2);
+}
+.stat .s-sub { display: block; margin-top: 1px; font-size: 0.75rem; color: var(--text-3); }
+@media (max-width: 640px) {
+  .stat-row { grid-template-columns: repeat(2, 1fr); }
+  .stat { border-top: 1px solid var(--border); border-left: 1px solid var(--border); }
+  .stat:nth-child(-n+2) { border-top: 0; }
+  .stat:nth-child(odd) { border-left: 0; }
+}
 
 /* charts */
 .chart-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 18px 0; }
