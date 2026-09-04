@@ -21,7 +21,7 @@ HOST = os.environ.get("MC_FTP_HOST", "6856.node.apexhosting.gdn")
 USER = os.environ.get("MC_FTP_USER", "iakkovos.3360229")
 PW = os.environ.get("MC_FTP_PASSWORD")
 PROFILE = os.environ.get("MC_PROFILE", "profile_orfqa")
-OUT = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "data.json"))
+OUT = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "public", "data.json"))
 
 # Optional: live server health (TPS + uptime) via RCON. If MC_RCON_PASSWORD is
 # unset or the port is unreachable, data.server is left empty and the website
