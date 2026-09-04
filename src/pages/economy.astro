@@ -12,12 +12,10 @@ import { ECON } from "../consts";
 <main class="doc">
   <h1>Economy</h1>
   <p class="lead">A live read on the Meridian economy, rebuilt from server data. See the <a href="/faq#economy">FAQ</a> for how the economy works.</p>
-  <div class="data-stamp" data-stamp>Loading&hellip;</div>
+  <div class="data-stale" data-stale hidden></div>
 
   <div class="analytics" data-analytics>
     <section id="state">
-      <h2>State of the economy</h2>
-      <p class="as-sub">Weekly trade volume, measured against the week before.</p>
       <div class="mei" data-slot="mei" data-code="INSUFFICIENT_DATA">
         <div class="mei-top"><span class="mei-label">Loading&hellip;</span></div>
       </div>

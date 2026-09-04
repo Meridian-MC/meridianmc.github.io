@@ -8,12 +8,15 @@ import { MAP_URL } from "../consts";
   description="A live, top-down view of the Meridian world: claims, nation borders, and where towns have gone up."
   path="/map"
 >
-<div class="map-frame-wrap">
-  <iframe
-    src={MAP_URL}
-    title="Meridian live map"
-    loading="lazy"
-    referrerpolicy="no-referrer"
-  ></iframe>
-</div>
+<main class="doc">
+  <h1>Live map</h1>
+  <p class="lead">A top-down view of the world as it stands: claimed chunks, nation borders, and every town that has gone up so far.</p>
+
+  <a class="map-open" href={MAP_URL} target="_blank" rel="noopener">
+    <span class="mo-main">Open the live map</span>
+    <span class="mo-sub">Opens in a new tab</span>
+  </a>
+
+  <p class="map-note">The map renders in its own tab so it always loads the newest tiles. Embedded in this page, browsers hold on to map images for hours and quietly show you an out-of-date world.</p>
+</main>
 </Base>

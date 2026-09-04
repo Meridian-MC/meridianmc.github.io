@@ -104,21 +104,12 @@ async function initServerStatus() {
     const res = await fetch('/data.json', { cache: 'no-cache' });
     const d = await res.json();
     const s = (d && d.server) || {};
-    if (s.tps != null) { set('[data-srv-tps-v]', Number(s.tps).toFixed(1)); show('[data-srv-tps]'); }
-    if (s.started_at) {
-      const started = Date.parse(s.started_at);
-      if (!isNaN(started)) {
-        let sec = Math.max(0, Math.floor((Date.now() - started) / 1000));
-        const d1 = Math.floor(sec / 86400); sec -= d1 * 86400;
-        const h = Math.floor(sec / 3600); sec -= h * 3600;
-        const m = Math.floor(sec / 60);
-        const parts = [];
-        if (d1) parts.push(d1 + 'd');
-        if (h || d1) parts.push(h + 'h');
-        parts.push(m + 'm');
-        set('[data-srv-uptime-v]', parts.slice(0, 2).join(' '));
-        show('[data-srv-uptime]');
-      }
+    // Only surface TPS while the feed is actually fresh. A stale reading
+    // presented as live is worse than showing nothing at all.
+    const ageMin = d && d.generated ? (Date.now() - Date.parse(d.generated)) / 60000 : Infinity;
+    if (s.tps != null && ageMin < 60) {
+      set('[data-srv-tps-v]', Number(s.tps).toFixed(1));
+      show('[data-srv-tps]');
     }
   } catch { /* no analytics feed yet */ }
 }
@@ -163,7 +154,7 @@ const CMDK_INDEX = [
   { label: 'Lands: Vassals', href: '/lands#vassals' },
   { label: 'Nations', href: '/nations' },
   { label: 'Warfare', href: '/war' },
-  { label: 'Economy: State of the economy', href: '/economy#state' },
+  { label: 'Economy: Economic index', href: '/economy#state' },
   { label: 'Economy: Wealth', href: '/economy#wealth' },
   { label: 'Economy: Markets', href: '/economy#markets' },
   { label: 'Economy: Item prices & volume', href: '/economy#prices' },

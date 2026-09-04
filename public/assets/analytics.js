@@ -264,16 +264,25 @@
   function render(d) {
     renderPulse(d);
     // Header ticker: every page, independent of the [data-analytics] root.
-    // Header ticker: every page, independent of the [data-analytics] root.
     if (d.economy && d.economy.items) {
       renderTicker(document.querySelector("[data-slot=ticker]"), d.economy.items);
     }
     if (!root) return;
 
-    var stamp = document.querySelector("[data-stamp]");
-    if (stamp) {
-      stamp.textContent = "Rebuilt from the live server at " + d.generated.replace("T", " ").replace("Z", " UTC");
-      if (d.meta && d.meta.demo) stamp.insertAdjacentHTML("afterend", '<span class="demo-flag">sample data</span>');
+    // Freshness. The page stays clean while the feed is healthy and says so
+    // plainly when it isn't, so a broken refresh job can't quietly serve
+    // month-old figures as if they were live.
+    var staleBox = document.querySelector("[data-stale]");
+    if (staleBox && d.generated) {
+      var ageHours = (Date.now() - Date.parse(d.generated)) / 3600000;
+      if (d.meta && d.meta.demo) {
+        staleBox.textContent = "Sample data, not live server figures.";
+        staleBox.hidden = false;
+      } else if (ageHours > 3) {
+        staleBox.textContent =
+          "These figures last refreshed " + relTime(d.generated) + ". The live feed looks interrupted.";
+        staleBox.hidden = false;
+      }
     }
 
     // ---- economy ----

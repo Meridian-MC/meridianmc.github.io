@@ -15,7 +15,7 @@ Environment:
 MySQL credentials are read from the server's own EzRTP config (pulled over FTP),
 so rotating the DB password in-game is picked up automatically.
 """
-import os, io, sys, json, re, ftplib, sqlite3, datetime, statistics, tempfile
+import os, io, sys, json, re, time, ftplib, sqlite3, datetime, statistics, tempfile
 
 HOST = os.environ.get("MC_FTP_HOST", "6856.node.apexhosting.gdn")
 USER = os.environ.get("MC_FTP_USER", "iakkovos.3360229")
@@ -41,20 +41,48 @@ TRACKED = [
 ]
 
 
-def ftp_conn():
+def ftp_conn(attempts=3):
     if not PW:
-        sys.exit("MC_FTP_PASSWORD not set")
-    f = ftplib.FTP(timeout=45)
-    f.connect(HOST, 21)
-    f.login(USER, PW)
-    f.set_pasv(True)
-    return f
+        sys.exit(
+            "MC_FTP_PASSWORD is not set. In CI it comes from the repository secret of "
+            "the same name (Settings > Secrets and variables > Actions). Set it to the "
+            "server's current FTP password."
+        )
+    last = None
+    for i in range(attempts):
+        try:
+            f = ftplib.FTP(timeout=45)
+            f.connect(HOST, 21)
+            f.login(USER, PW)
+            f.set_pasv(True)
+            return f
+        except ftplib.error_perm as e:
+            # A rejected login will never succeed on retry, so fail loudly and say why.
+            sys.exit(
+                f"FTP rejected the login ({e}). MC_FTP_PASSWORD is almost certainly "
+                "stale: update the repository secret to the server's current FTP password."
+            )
+        except Exception as e:
+            last = e
+            time.sleep(2 * (i + 1))
+    sys.exit(f"FTP connection failed after {attempts} attempts: {last!r}")
 
 
-def ftp_bytes(f, path):
-    buf = io.BytesIO()
-    f.retrbinary("RETR /" + path.strip("/"), buf.write)
-    return buf.getvalue()
+def ftp_bytes(f, path, attempts=2):
+    # Apex's FTP throws transient 4xx/550-style errors under load, so one retry
+    # keeps a whole refresh from being lost to a single flaky read.
+    last = None
+    for i in range(attempts):
+        try:
+            buf = io.BytesIO()
+            f.retrbinary("RETR /" + path.strip("/"), buf.write)
+            return buf.getvalue()
+        except ftplib.error_perm:
+            raise            # genuinely absent file; callers already handle this
+        except Exception as e:
+            last = e
+            time.sleep(1)
+    raise last
 
 
 def ftp_list(f, path):
