@@ -1,0 +1,24 @@
+---
+import Base from "../layouts/Base.astro";
+import { MAP_URL } from "../consts";
+---
+
+<Base
+  title="Live Map"
+  description="A live, top-down view of the Meridian world: claims, nation borders, and where towns have gone up."
+  path="/map"
+>
+<main class="doc map-page">
+  <h1>Live Map</h1>
+  <p class="lead">Claims, nation borders, and built-up land, updated automatically as the world is explored. Player positions aren't shown. <a href={MAP_URL} rel="noopener">Open in a new tab</a> for the full squaremap interface.</p>
+</main>
+
+<div class="map-frame-wrap">
+  <iframe
+    src={MAP_URL}
+    title="Meridian live map"
+    loading="lazy"
+    referrerpolicy="no-referrer"
+  ></iframe>
+</div>
+</Base>

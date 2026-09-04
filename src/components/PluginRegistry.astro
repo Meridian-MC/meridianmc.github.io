@@ -13,7 +13,6 @@ const rest = PLUGINS.filter((p) => !p.featured);
         <div class="reg-head">
           {p.icon && <img class="reg-ico" src={p.icon} alt="" width="34" height="34" />}
           <h3 class="reg-name">{p.name}</h3>
-          <span class="reg-ver">{p.version}</span>
         </div>
         <p class="reg-blurb">{p.description}</p>
         {p.links && p.links.length > 0 && (
@@ -33,7 +32,6 @@ const rest = PLUGINS.filter((p) => !p.featured);
       {rest.map((p) => (
         <div class="reg-more-row">
           <span class="reg-more-name">{p.name}</span>
-          <span class="reg-more-ver">{p.version}</span>
           <span class="reg-more-blurb">{p.blurb}</span>
         </div>
       ))}

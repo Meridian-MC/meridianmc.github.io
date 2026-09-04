@@ -151,6 +151,7 @@ export const PLUGINS: PluginEntry[] = [
     blurb: "A death doesn't have to mean losing everything to the dark.",
     description:
       "Your inventory drops into a chest at your death point instead of scattering across the ground. It's still there to lose to a raider or the void; this doesn't make death safe, it just makes death recoverable.",
+    links: [{ label: "SpigotMC", href: "https://www.spigotmc.org/resources/death-chest.101066/" }],
   },
   {
     id: "ezrtp",
