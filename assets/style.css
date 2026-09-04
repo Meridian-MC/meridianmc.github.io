@@ -12,10 +12,10 @@
   --accent: #ffffff;
 
   /* plugin accents (muted) */
-  --p-lands: #c9a84c;   /* crown gold */
+  --p-lands: #7cb488;   /* Lands green */
   --p-quickshop: #d9a65b;
   --p-market: #6f9bd1;
-  --p-jobs: #6aa870;   /* Jobs Reborn green */
+  --p-jobs: #3f8f5a;   /* Jobs Reborn — deeper green, distinct from Lands */
   --p-extract: #7d68c9;   /* enchant violet */
   --p-brew: #d382ac;   /* pinkish, for The Brewing Project */
   --p-essentials: #d16565;   /* red, EssentialsX */
@@ -513,23 +513,46 @@ details.all-plugins[open] summary::before { content: "▾ "; }
 /* ---------- FAQ ---------- */
 .faq h2 {
   font-size: 1.3rem; font-weight: 640; letter-spacing: -0.015em;
-  margin: 46px 0 6px; scroll-margin-top: 80px;
+  margin: 48px 0 4px; scroll-margin-top: 80px;
 }
 .faq h2:first-of-type { margin-top: 26px; }
-.faq .cat-sub { color: var(--text-3); font-size: 0.9rem; margin-bottom: 8px; }
+.faq .cat-sub { color: var(--text-3); font-size: 0.9rem; margin-bottom: 14px; }
+
 .faq-q {
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: var(--bg-1);
+  margin: 8px 0;
+}
+.faq-q > summary {
+  list-style: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  display: flex; align-items: center; justify-content: space-between; gap: 14px;
+  font-size: 0.97rem; font-weight: 600; color: var(--text);
+  letter-spacing: -0.005em;
+}
+.faq-q > summary::-webkit-details-marker { display: none; }
+.faq-q > summary::after {
+  content: "+";
+  flex-shrink: 0;
+  font-weight: 400; font-size: 1.15rem; line-height: 1;
+  color: var(--text-3);
+}
+.faq-q[open] > summary { color: var(--text); }
+.faq-q[open] > summary::after { content: "\2013"; }
+.faq-q > summary:hover { color: var(--text); }
+.faq-q > summary:hover::after { color: var(--text-2); }
+.faq-q .a {
+  padding: 2px 16px 15px;
   border-top: 1px solid var(--border);
-  padding: 18px 0;
+  margin-top: -1px;
 }
-.faq-q:last-child { border-bottom: 1px solid var(--border); }
-.faq-q h3 {
-  font-size: 1rem; font-weight: 620; color: var(--text);
-  margin: 0 0 7px; letter-spacing: -0.005em;
-}
-.faq-q p { margin: 7px 0; color: var(--text-2); }
-.faq-q ul { margin: 8px 0; padding-left: 22px; color: var(--text-2); }
-.faq-q li { margin: 5px 0; }
-.faq-q li::marker { color: var(--text-3); }
+.faq-q .a > :first-child { margin-top: 12px; }
+.faq-q .a p { margin: 9px 0; color: var(--text-2); }
+.faq-q .a ul { margin: 9px 0; padding-left: 20px; color: var(--text-2); }
+.faq-q .a li { margin: 6px 0; }
+.faq-q .a li::marker { color: var(--text-3); }
 .faq-q .short { color: var(--text); font-weight: 600; }
 
 /* ================= Analytics ================= */

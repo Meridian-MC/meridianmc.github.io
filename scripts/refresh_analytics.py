@@ -217,11 +217,8 @@ def _pretty(material):
     return " ".join(w.capitalize() for w in re.sub(r"^minecraft:", "", material).split("_"))
 
 
-def server_health():
-    """TPS + uptime from the RCON `uptime` command (provided by CMILib).
-    Returns {} when RCON is not configured or not reachable."""
-    if not RCON_PW:
-        return {}
+def _rcon(cmd):
+    """One RCON command -> decoded reply text ('' on any failure)."""
     import socket, struct
 
     def pkt(pid, ptype, body):
@@ -232,9 +229,9 @@ def server_health():
         s = socket.create_connection((RCON_HOST, RCON_PORT), timeout=12)
         s.settimeout(12)
         s.sendall(pkt(1, 3, RCON_PW))
-        s.recv(4096)                       # auth response
-        s.sendall(pkt(2, 2, "uptime"))
-        s.sendall(pkt(3, 2, ""))           # end marker
+        s.recv(4096)
+        s.sendall(pkt(2, 2, cmd))
+        s.sendall(pkt(3, 2, ""))
         buf = b""
         while b"\x00\x00" not in buf[10:] or len(buf) < 14:
             chunk = s.recv(4096)
@@ -245,17 +242,37 @@ def server_health():
                 break
         s.close()
     except Exception:
-        return {}
+        return ""
+    return re.sub(r"\xa7.", "", buf.decode("utf8", "replace"))
 
-    txt = re.sub(r"\xa7.", "", buf.decode("utf8", "replace"))
-    out = {}
+
+def _uptime_seconds(txt):
+    """'2 days 4 hours 5 minutes 3 seconds' -> seconds."""
+    units = {"day": 86400, "hour": 3600, "minute": 60, "second": 1}
+    total = 0
+    for n, u in re.findall(r"(\d+)\s*(day|hour|minute|second)s?", txt):
+        total += int(n) * units[u]
+    return total
+
+
+def server_health():
+    """TPS + when the server started, from the RCON `uptime` command (CMILib).
+    The site computes a live uptime from started_at. {} when RCON isn't set up."""
+    if not RCON_PW:
+        return {}
+    txt = _rcon("uptime")
+    if not txt:
+        return {}
+    out = {"checked": datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")}
     m = re.search(r"Uptime:\s*([^\r\n]+)", txt)
     if m:
-        out["uptime"] = m.group(1).strip()
-    m = re.search(r"TPS\s*[=:]\s*([\d.]+)", txt) or re.search(r"TPS[^:]*:\s*([\d.]+)", txt)
+        secs = _uptime_seconds(m.group(1))
+        if secs:
+            out["started_at"] = (datetime.datetime.now(datetime.timezone.utc)
+                                 - datetime.timedelta(seconds=secs)).strftime("%Y-%m-%dT%H:%M:%SZ")
+    m = re.search(r"TPS\s*[=:]\s*([\d.]+)", txt)
     if m:
         out["tps"] = float(m.group(1))
-    out["checked"] = datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
     return out
 
 
