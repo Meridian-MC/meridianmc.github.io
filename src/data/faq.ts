@@ -134,7 +134,7 @@ export const FAQ: FaqEntry[] = [
     question: "How much does land cost?",
     answer: `<p>Founding a land with <code>/lands create</code> is free and includes your <span class="short">first chunk free</span>. After that:</p>
 <ul>
-  <li>The next chunk costs <span class="short">$2,000</span>, and each one after rises by <span class="short">$400</span>, so bigger claims cost more to grow.</li>
+  <li>The next chunk is <span class="short">free</span> too, and each one after that adds <span class="short">$400</span> to the last, so bigger claims cost more to grow.</li>
   <li>Weekly upkeep is <span class="short">$150 per chunk</span>, taken from the shared land bank.</li>
   <li>Tiers and nation membership change these numbers. The full breakdown is in the <a href="/lands">Lands guide</a>.</li>
 </ul>`,

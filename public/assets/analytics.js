@@ -242,12 +242,12 @@
     if (statsEl) {
       var lands = d.lands || [], nations = d.nations || [];
       var chunks = lands.reduce(function (s, l) { return s + (l.chunks || 0); }, 0);
-      var traders = (d.meta && d.meta.active_traders) || 0;
+      var joined = (d.meta && d.meta.players_tracked) || 0;
       statsEl.innerHTML =
         tile(intf(lands.length), "Lands founded") +
         tile(intf(nations.length), "Nations formed") +
         tile(intf(chunks), "Chunks claimed") +
-        tile(intf(traders), "Active traders");
+        tile(intf(joined), "Players joined");
     }
     var feedEl = document.querySelector("[data-slot=pulse-feed]");
     if (feedEl) {

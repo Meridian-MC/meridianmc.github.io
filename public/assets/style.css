@@ -240,7 +240,7 @@ main {
 }
 .map-head-float {
   position: absolute;
-  top: 28px; left: 28px; z-index: 5;
+  top: 28px; right: 28px; z-index: 5;
   display: flex; align-items: center; gap: 12px;
   background: rgba(11, 11, 12, 0.78);
   backdrop-filter: blur(8px);
@@ -256,7 +256,7 @@ main {
 .map-head-float a:hover { color: var(--text-2); }
 @media (max-width: 640px) {
   .map-frame-wrap iframe { height: calc(100vh - 118px); min-height: 420px; }
-  .map-head-float { top: 22px; left: 22px; padding: 7px 11px; gap: 9px; }
+  .map-head-float { top: 22px; right: 22px; padding: 7px 11px; gap: 9px; }
 }
 
 .site-footer {
@@ -321,7 +321,10 @@ main {
   line-height: 1.02;
   margin-bottom: 20px;
   font-weight: 700;
-  text-shadow: var(--mc-shadow);
+  /* a deeper, slightly warm block-bevel: a light top edge, a solid dark
+     drop matching Minecraft's own flat font shadow, and soft ambient
+     depth beneath. One more step toward "block", still no pixel font. */
+  text-shadow: 0 1px 0 rgba(255, 214, 150, 0.22), 0 3px 0 rgba(0, 0, 0, 0.5), 0 8px 18px rgba(0, 0, 0, 0.35);
 }
 .hero .tagline {
   color: var(--text-2);
@@ -447,7 +450,7 @@ main {
 .b-world { grid-area: world; }
 .b-end { grid-area: end; }
 .b-nether { grid-area: nether; }
-.b-anticheat, .b-guard { grid-area: anticheat; }
+.b-anticheat, .b-war { grid-area: anticheat; }
 
 .b-land { --a: var(--p-lands); }
 .b-econ { --a: var(--p-market); }
@@ -455,7 +458,7 @@ main {
 .b-world { --a: var(--p-jobs); }
 .b-end { --a: var(--p-extract); }
 .b-nether { --a: #d9822b; }
-.b-guard { --a: var(--p-core); }
+.b-war { --a: var(--p-core); }
 
 .b-land { justify-content: flex-start; }
 .b-land h3 { font-size: 1.22rem; }
@@ -551,7 +554,8 @@ main {
 
 .reg-more { margin-top: 22px; }
 .reg-more summary {
-  cursor: pointer; list-style: none; color: var(--text-3); font-size: 0.88rem; font-weight: 550;
+  cursor: pointer; list-style: none; color: var(--text-2); font-size: 0.88rem; font-weight: 550;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.7);
 }
 .reg-more summary::-webkit-details-marker { display: none; }
 .reg-more summary::before { content: "▸ "; }
@@ -567,8 +571,8 @@ main {
   font-size: 0.86rem;
 }
 .reg-more-row:last-child { border-bottom: none; }
-.reg-more-name { color: var(--text-2); font-weight: 550; }
-.reg-more-blurb { color: var(--text-3); grid-column: 1 / -1; }
+.reg-more-name { color: var(--text-2); font-weight: 550; text-shadow: 0 1px 3px rgba(0,0,0,0.7); }
+.reg-more-blurb { color: var(--text-2); text-shadow: 0 1px 3px rgba(0,0,0,0.7); grid-column: 1 / -1; }
 @media (min-width: 640px) { .reg-more-blurb { grid-column: 2; } }
 
 /* ---------- Doc pages ---------- */
@@ -1001,7 +1005,6 @@ main {
 }
 .ticker-wrap:empty { display: none; }
 .ticker-track { display: inline-flex; white-space: nowrap; padding: 7px 0; animation: ticker-scroll 38s linear infinite; }
-.ticker-wrap:hover .ticker-track { animation-play-state: paused; }
 .ticker-item { font-size: 0.76rem; color: var(--text-2); padding: 0 16px; font-family: var(--mono); }
 .ticker-item b { color: var(--text); font-weight: 600; }
 .ticker-chg { font-weight: 600; }

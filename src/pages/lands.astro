@@ -5,10 +5,10 @@ import Callout from "../components/Callout.astro";
 import { ECON } from "../consts";
 
 const sections = [
+  { href: "#registry", label: "Nation registry" },
   { href: "#lands", label: "Lands" },
   { href: "#nations", label: "Nations" },
   { href: "#vassals", label: "Vassals" },
-  { href: "#registry", label: "Nation registry" },
 ];
 ---
 
@@ -24,10 +24,37 @@ const sections = [
 
   <Toc sections={sections} />
 
+  <!-- ================= Nation registry ================= -->
+  <section class="analytics" data-analytics>
+    <h2 id="registry">Nation registry</h2>
+    <p class="as-sub">Nations ranked by the Meridian Development Index, from live server data.</p>
+    <div class="data-stamp" data-stamp>Loading live data&hellip;</div>
+
+    <h3>Nations</h3>
+    <div class="nation-grid" data-slot="nation-grid"></div>
+
+    <h3>Land atlas</h3>
+    <div data-slot="land-table"></div>
+
+    <details class="method">
+      <summary>How the Meridian Development Index is calculated</summary>
+      <div class="m-body">
+        <p>The MDI is a single score from <code>0</code> to <code>1</code>, modelled on the way the UN builds its Human Development Index: measure a few things that matter, put each on the same scale, then combine them so a nation cannot coast on one strength alone.</p>
+        <dl>
+          <dt>Territory</dt><dd>Claimed chunks, against a reference ceiling of 60.</dd>
+          <dt>Population</dt><dd>Trusted members across the nation's lands, against a ceiling of 15.</dd>
+          <dt>Wealth</dt><dd>Combined land-bank treasury, against a ceiling of $5,000,000.</dd>
+          <dt>Activity</dt><dd>Recent presence and events in the nation's lands.</dd>
+        </dl>
+        <p>The four sub-indices are combined with a <strong>geometric mean</strong>, so a nation that is large but empty, or rich but tiny, scores lower than one that is balanced. Reference ceilings are tuned as the server grows.</p>
+      </div>
+    </details>
+  </section>
+
   <h2 id="lands"><span class="num">1</span>Lands</h2>
   <ol>
     <li>Run <code>/lands create &lt;name&gt;</code> to found your land free of charge. The first chunk is free.</li>
-    <li>The next chunk costs <strong>{ECON.firstPaidChunk}</strong>, and every chunk after that rises by a fixed <strong>{ECON.chunkIncrease}</strong>, so the larger your land gets, the more each expansion costs.</li>
+    <li>The next chunk is <strong>free</strong> too. Every chunk after that adds a fixed <strong>{ECON.chunkIncrease}</strong> to the cost of the one before it, so the larger your land gets, the more each expansion costs.</li>
     <li>When naming your land you can use a hex code to set its color on the world map, for example <code>&lt;#FF5555&gt;ExampleLand</code>. Minecraft only recognizes a specific set of hex colors.</li>
     <li>Your land has its own shared bank, separate from any individual's personal balance. Claim costs and upkeep are withdrawn from this bank, and any member can deposit into it.</li>
     <li>If the bank can't cover a cost, it falls back to the <strong>owner's</strong> personal balance.</li>
@@ -55,32 +82,5 @@ const sections = [
   </ol>
 
   <Callout>Warfare is the only time claimed land can be entered or captured by an enemy. Read the <a href="/war">Warfare</a> document before you get into a conflict.</Callout>
-
-  <!-- ================= Nation registry ================= -->
-  <section class="analytics" data-analytics>
-    <h2 id="registry">Nation registry</h2>
-    <p class="as-sub">Every nation on Meridian, ranked by the Meridian Development Index, rebuilt from the land databases.</p>
-    <div class="data-stamp" data-stamp>Loading live data&hellip;</div>
-
-    <h3>Nations</h3>
-    <div class="nation-grid" data-slot="nation-grid"></div>
-
-    <h3>Land atlas</h3>
-    <div data-slot="land-table"></div>
-
-    <details class="method">
-      <summary>How the Meridian Development Index is calculated</summary>
-      <div class="m-body">
-        <p>The MDI is a single score from <code>0</code> to <code>1</code>, modelled on the way the UN builds its Human Development Index: measure a few things that matter, put each on the same scale, then combine them so a nation cannot coast on one strength alone.</p>
-        <dl>
-          <dt>Territory</dt><dd>Claimed chunks, against a reference ceiling of 60.</dd>
-          <dt>Population</dt><dd>Trusted members across the nation's lands, against a ceiling of 15.</dd>
-          <dt>Wealth</dt><dd>Combined land-bank treasury, against a ceiling of $5,000,000.</dd>
-          <dt>Activity</dt><dd>Recent presence and events in the nation's lands.</dd>
-        </dl>
-        <p>The four sub-indices are combined with a <strong>geometric mean</strong>, so a nation that is large but empty, or rich but tiny, scores lower than one that is balanced. Reference ceilings are tuned as the server grows.</p>
-      </div>
-    </details>
-  </section>
 </main>
 </Base>

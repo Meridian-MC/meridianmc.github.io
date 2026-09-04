@@ -11,13 +11,13 @@ import { ECON } from "../consts";
 >
 <main class="doc">
   <h1>Economy</h1>
-  <p class="lead">A live read on the Meridian economy, rebuilt from live server data. For how the economy actually works, see the <a href="/faq#economy">FAQ</a>.</p>
+  <p class="lead">A live read on the Meridian economy, rebuilt from server data. See the <a href="/faq#economy">FAQ</a> for how the economy works.</p>
   <div class="data-stamp" data-stamp>Loading&hellip;</div>
 
   <div class="analytics" data-analytics>
     <section id="state">
       <h2>State of the economy</h2>
-      <p class="as-sub">The Meridian Economic Index compares each week's trade volume against the week before.</p>
+      <p class="as-sub">Weekly trade volume, measured against the week before.</p>
       <div class="mei" data-slot="mei" data-code="INSUFFICIENT_DATA">
         <div class="mei-top"><span class="mei-label">Loading&hellip;</span></div>
       </div>
@@ -26,19 +26,19 @@ import { ECON } from "../consts";
 
     <section id="wealth">
       <h2>Wealth</h2>
-      <p class="as-sub">Who is holding the money.</p>
+      <p class="as-sub">The largest player balances on the server.</p>
       <div data-slot="wealth-table"></div>
     </section>
 
     <section id="markets">
       <h2>Markets</h2>
-      <p class="as-sub">Daily open/high/low/close per item, built from chest-shop sales. Pick an item, pick a window.</p>
+      <p class="as-sub">Daily open, high, low, and close per item, from chest-shop sales.</p>
       <div class="candles" data-slot="candles"></div>
     </section>
 
     <section id="prices">
       <h2>Item prices &amp; volume</h2>
-      <p class="as-sub">These are <strong>not fixed prices</strong>. Each figure is the median asking price across every player chest shop currently selling that item, with the 7-day move and a 30-day trend. Prices are whatever players charge; this just reads the market.</p>
+      <p class="as-sub">Medians of active chest-shop prices, not fixed rates, with the 7-day change and 30-day trend.</p>
       <div data-slot="item-table"></div>
       <h3>Volume leaders, last 24h</h3>
       <div data-slot="volume-table"></div>
@@ -46,7 +46,7 @@ import { ECON } from "../consts";
 
     <section id="flow">
       <h2>How money moves</h2>
-      <p class="as-sub">The structural rules, not a live measurement: where currency enters the economy, and where it's permanently removed.</p>
+      <p class="as-sub">Where currency enters the economy, and where it's permanently removed.</p>
       <div class="flow-grid">
         <div class="flow-col flow-source">
           <h3>Sources</h3>
@@ -67,7 +67,7 @@ import { ECON } from "../consts";
 
     <section id="money">
       <h2>Money &amp; trade</h2>
-      <p class="as-sub">Currency in players' hands, the cost of a basket of common goods, and daily trade activity.</p>
+      <p class="as-sub">Player-held currency, the price index, and daily trade activity.</p>
       <div class="chart-grid">
         <div class="chart">
           <h3>Money supply</h3>

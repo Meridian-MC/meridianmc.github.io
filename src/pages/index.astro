@@ -63,7 +63,7 @@ const embers = Array.from({ length: 14 }, () => ({
 
   <section class="stack" id="activity">
     <h2>Activity</h2>
-    <p class="section-intro">What's happening right now, rebuilt from live server data.</p>
+    <p class="section-intro">Recent activity, rebuilt from live server data.</p>
     <div class="stat-row pulse-stats" data-slot="pulse-stats"></div>
     <div class="pulse-feed" data-slot="pulse-feed"></div>
   </section>
@@ -111,17 +111,18 @@ const embers = Array.from({ length: 14 }, () => ({
         <p>About 1,250 blocks wide by design, so netherite and blaze rods stay properly scarce. Wiped on the 1st of every month so it can't be stripped bare for good.</p>
       </article>
 
-      <article class="bcard b-guard">
-        <svg class="b-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2 4 6v6c0 5 3.5 8.5 8 10 4.5-1.5 8-5 8-10V6l-8-4Z"/><circle cx="12" cy="11" r="2.6"/><path d="M12 8.4v-.1M12 13.6v.1M9.4 11h-.1M14.7 11h-.1"/></svg>
-        <h3>Anti-cheat &amp; hidden ores</h3>
-        <p>GrimAC watches movement and combat. Ores stay invisible to your client until you're near them, so x-ray shows you nothing to see.</p>
+      <article class="bcard b-war">
+        <svg class="b-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 3v18"/><path d="M5 4h13l-3 4 3 4H5"/></svg>
+        <h3>Wars are declared, not ambushed</h3>
+        <p>Staff-approved declarations, a grace period, then a fight over capture points, not a surprise raid on someone's base.</p>
+        <a href="/war" class="b-link">Read the Warfare document</a>
       </article>
     </div>
   </section>
 
   <section class="stack" id="plugins">
     <h2>Plugins</h2>
-    <p class="section-intro">Meridian runs on <a href="https://papermc.io" rel="noopener">Paper</a>. These are the systems that define how it plays. Everything else it runs is listed below them.</p>
+    <p class="section-intro">Meridian runs on <a href="https://papermc.io" rel="noopener">Paper</a>. These are the systems that define how it plays; everything else is listed below.</p>
 
     <PluginRegistry />
   </section>

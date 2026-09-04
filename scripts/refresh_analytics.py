@@ -35,7 +35,7 @@ BASKET = ["Wheat", "Iron Ingot", "Diamond", "Ender Pearl", "Oak Log"]
 TRACKED = [
     ("Diamond", "each"), ("Netherite Ingot", "each"), ("Iron Ingot", "each"),
     ("Gold Ingot", "each"), ("Emerald", "each"), ("Ender Pearl", "each"),
-    ("Enchanted Book", "each"), ("Elytra", "each"), ("Totem of Undying", "each"),
+    ("Enchanted Book", "each"), ("Totem of Undying", "each"),
     ("Shulker Box", "each"), ("Oak Log", "stack"), ("Wheat", "stack"),
     ("Blaze Rod", "each"), ("Nether Star", "each"),
 ]
