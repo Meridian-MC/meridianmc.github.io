@@ -14,18 +14,19 @@
   --p-lands: #7cb488;   /* Lands green */
   --p-quickshop: #d9a65b;
   --p-market: #6f9bd1;
-  --p-jobs: #3f8f5a;    /* Jobs Reborn — deeper green, distinct from Lands */
+  --p-jobs: #3f8f5a;    /* Jobs Reborn: deeper green, distinct from Lands */
   --p-extract: #7d68c9; /* enchant violet */
   --p-brew: #d382ac;    /* pinkish, for The Brewing Project */
   --p-essentials: #d16565; /* red, EssentialsX */
   --p-core: #5b9bd5;    /* CoreProtect blue */
+  --p-deathchest: #b3773f; /* oak brown */
   --p-guard: #9aa1a8;
 
   --radius: 12px;
   --maxw: 960px;
 
-  /* Type: a bold geometric display face for actual titles — the wordmark,
-     the hero, section headings — built and blocky, on-subject without being
+  /* Type: a bold geometric display face for actual titles: the wordmark,
+     the hero, section headings. Built and blocky, on-subject without being
      a literal pixel font. A grotesque carries the prose and small labels
      (Unbounded's letterforms get muddy below ~1.3rem). Mono is reserved for
      things that are literally data: the address, versions, ledger figures. */
@@ -34,7 +35,7 @@
   --mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
 
   --ease: cubic-bezier(0.16, 1, 0.3, 1);
-  /* the faint offset-shadow Minecraft's own font renders with — used once,
+  /* the faint offset-shadow Minecraft's own font renders with, used once,
      only on the wordmark and hero, never on body-sized text */
   --mc-shadow: 0 2px 0 rgba(0,0,0,0.45);
 }
@@ -117,7 +118,7 @@ a:hover { text-decoration-color: var(--text); }
   display: grid; place-items: center;
   font-family: var(--font);
   font-weight: 800; font-size: 0.82rem;
-  /* a faint block-face bevel — the one direct nod to Minecraft's own rendering */
+  /* a faint block-face bevel: the one direct nod to Minecraft's own rendering */
   box-shadow: inset 2px 2px 0 rgba(255,255,255,0.35), inset -2px -2px 0 rgba(0,0,0,0.2);
 }
 .nav-links {
@@ -255,7 +256,8 @@ main {
 .sub-line {
   margin-top: 16px;
   font-size: 0.86rem;
-  color: var(--text-3);
+  color: var(--text-2);
+  text-shadow: 0 1px 3px rgba(0,0,0,0.7);
 }
 .sub-line code { font-family: var(--mono); color: var(--text-2); }
 
@@ -588,7 +590,7 @@ main {
   color: var(--p-brew); border: 1px solid var(--p-brew); border-radius: 4px; padding: 1px 7px;
 }
 
-/* MEI status — an index gauge, not an alert box */
+/* MEI status: an index gauge, not an alert box */
 .mei {
   border: 1px solid var(--border); border-radius: var(--radius);
   background: var(--bg-1); padding: 26px 28px 24px;
@@ -628,7 +630,7 @@ main {
 }
 .mei-gauge-labels span.on { color: var(--text); font-weight: 600; }
 
-/* economy figures — single framed ledger, hairline-divided */
+/* economy figures: single framed ledger, hairline-divided */
 .stat-row {
   display: grid; grid-template-columns: repeat(3, 1fr);
   border: 1px solid var(--border); border-radius: 12px;

@@ -1,4 +1,4 @@
-// Meridian analytics — reads /data.json (rebuilt from the live server) and renders
+// Meridian analytics. Reads /data.json (rebuilt from the live server) and renders
 // the economy dashboard and the nation registry. No dependencies.
 
 (function () {
@@ -17,14 +17,14 @@
   var MEI_ORDER = ["RECESSION", "COOLING", "STEADY", "EXPANSION"];
 
   function money(n) {
-    if (n == null) return "—";
+    if (n == null) return "n/a";
     var s = n < 0 ? "-$" : "$"; n = Math.abs(n);
     if (n >= 1e9) return s + (n / 1e9).toFixed(2) + "B";
     if (n >= 1e6) return s + (n / 1e6).toFixed(2) + "M";
     if (n >= 1e3) return s + (n / 1e3).toFixed(n >= 1e5 ? 0 : 1) + "k";
     return s + n.toFixed(0);
   }
-  function intf(n) { return n == null ? "—" : Number(n).toLocaleString(); }
+  function intf(n) { return n == null ? "n/a" : Number(n).toLocaleString(); }
   function esc(s) {
     return String(s).replace(/[&<>"']/g, function (m) {
       return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[m];
@@ -53,8 +53,8 @@
         '<line class="gridline" x1="' + p + '" y1="' + (H - p) + '" x2="' + (W - p) + '" y2="' + (H - p) + '"/>' +
         '<path class="series-area" d="' + d + "L" + x(series.length - 1).toFixed(1) + "," + (H - p) + "L" + p + "," + (H - p) + 'Z"/>' +
         '<path class="series-line" d="' + d + '"/></svg>',
-      range: '<span>' + series[0][0].slice(5) + " · " + fmt(min) + '</span><span>' +
-        series[series.length - 1][0].slice(5) + " · " + fmt(max) + "</span>",
+      range: '<span>' + series[0][0].slice(5) + ": " + fmt(min) + '</span><span>' +
+        series[series.length - 1][0].slice(5) + ": " + fmt(max) + "</span>",
     };
   }
 
@@ -101,7 +101,7 @@
   function render(d) {
     var stamp = document.querySelector("[data-stamp]");
     if (stamp) {
-      stamp.textContent = "Rebuilt from the live server · " + d.generated.replace("T", " ").replace("Z", " UTC");
+      stamp.textContent = "Rebuilt from the live server at " + d.generated.replace("T", " ").replace("Z", " UTC");
       if (d.meta && d.meta.demo) stamp.insertAdjacentHTML("afterend", '<span class="demo-flag">sample data</span>');
     }
 
@@ -134,9 +134,9 @@
       if (stats) {
         stats.innerHTML =
           tile(money(e.money_supply_players), "Player money supply", "all players") +
-          tile(money(e.trade_volume_7d), "Trade volume · 7d", "player + shop") +
-          tile(e.gini == null ? "—" : e.gini.toFixed(2), "Wealth Gini", "0 equal · 1 concentrated") +
-          tile(e.price_index && e.price_index.value != null ? e.price_index.value.toFixed(1) : "—", "Price index", "base 100 at launch") +
+          tile(money(e.trade_volume_7d), "Trade volume, 7 days", "player + shop") +
+          tile(e.gini == null ? "n/a" : e.gini.toFixed(2), "Wealth Gini", "0 is equal, 1 is concentrated") +
+          tile(e.price_index && e.price_index.value != null ? e.price_index.value.toFixed(1) : "n/a", "Price index", "base 100 at launch") +
           tile(money(w.median), "Median balance", "typical player") +
           tile(intf(m.players_tracked), "Players tracked", m.active_traders + " trading");
       }
@@ -187,7 +187,7 @@
               return '<div class="idx-bar"><span>' + b[0] + '</span><span class="track"><span class="fill" style="width:' +
                 Math.round(b[1] * 100) + '%"></span></span><span class="v">' + b[1].toFixed(2) + "</span></div>";
             }).join("");
-          return '<div class="ncard"><div class="n-top"><span class="n-name">' + esc(n.name || "—") +
+          return '<div class="ncard"><div class="n-top"><span class="n-name">' + esc(n.name || "Unnamed") +
             '</span><span class="n-rank">#' + (i + 1) + '</span></div>' +
             '<div class="n-mdi">' + n.mdi.toFixed(3) + '</div><div class="n-mdi-lab">Development index</div>' +
             '<div class="n-facts"><span><b>' + intf(n.chunks) + "</b> chunks</span><span><b>" + intf(n.members) +
@@ -200,7 +200,7 @@
       lt.innerHTML = !ls.length ? '<p class="c-empty">No lands claimed yet.</p>' :
         '<div class="dtable-wrap"><table class="dtable"><thead><tr><th>Land</th><th>Tier</th><th style="text-align:right">Chunks</th><th style="text-align:right">Members</th><th style="text-align:right">Bank</th></tr></thead><tbody>' +
         ls.map(function (l) {
-          return "<tr><td>" + esc(l.name || "—") + "</td><td>" + esc(String(l.type || "—").toLowerCase()) +
+          return "<tr><td>" + esc(l.name || "Unnamed") + "</td><td>" + esc(String(l.type || "n/a").toLowerCase()) +
             '</td><td class="num">' + intf(l.chunks) + '</td><td class="num">' + intf(l.members) +
             '</td><td class="num">' + money(l.bank) + "</td></tr>";
         }).join("") + "</tbody></table></div>";

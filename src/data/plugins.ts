@@ -1,5 +1,5 @@
 // Every plugin Meridian runs, grouped the way they actually govern the
-// server. This is the one place that data lives — the homepage's featured
+// server. This is the one place that data lives; the homepage's featured
 // writeups and the full registry are both generated from this array, so a
 // version bump or a colour change only happens once.
 //
@@ -54,7 +54,7 @@ export const PLUGINS: PluginEntry[] = [
     featured: true,
     colorVar: "--p-quickshop",
     icon: "/assets/pi/quickshop.png",
-    blurb: "Chest shops — the real economy.",
+    blurb: "Chest shops. The real economy.",
     description:
       "A chest shop plugin. Players sell or buy any item straight from a chest with no commands and no admin setup. These shops are the Meridian economy.",
     links: [
@@ -70,7 +70,7 @@ export const PLUGINS: PluginEntry[] = [
     featured: true,
     colorVar: "--p-market",
     icon: "/assets/pi/market.png",
-    blurb: "The two small server-run counters — Buy and Sell.",
+    blurb: "The two small server-run counters: Buy and Sell.",
     description:
       "A GUI-based server shop, kept deliberately small: a buy-only counter for emergency items and a few things the closed End otherwise makes impossible to get, and a sell counter where the server buys raw metals, minerals, and bottled experience at a floor price. Everything else stays on the player market.",
     links: [{ label: "SpigotMC", href: "https://www.spigotmc.org/resources/economyshopgui.69927/" }],
@@ -91,16 +91,16 @@ export const PLUGINS: PluginEntry[] = [
   {
     id: "vault",
     name: "Vault",
-    version: "—",
+    version: "n/a",
     category: "Land, economy & progression",
-    blurb: "The economy API every plugin above hooks into. Invisible in play — nothing to configure or run.",
+    blurb: "The economy API every plugin above hooks into. Invisible in play, nothing to configure or run.",
   },
   {
     id: "trademanager",
     name: "TradeManager",
     version: "2.0.2",
     category: "Land, economy & progression",
-    blurb: "Governs villager trades and secure player-to-player trading. Enchanted books and gear are stripped from every villager — see the FAQ.",
+    blurb: "Governs villager trades and secure player-to-player trading. Enchanted books and gear are stripped from every villager (see the FAQ).",
   },
   {
     id: "extract",
@@ -120,7 +120,7 @@ export const PLUGINS: PluginEntry[] = [
     name: "ajLeaderboards",
     version: "2.11.0",
     category: "Land, economy & progression",
-    blurb: "Leaderboards for balance, playtime, and job levels — in-game and on signs.",
+    blurb: "Leaderboards for balance, playtime, and job levels, in-game and on signs.",
   },
 
   // ---- Gameplay ----
@@ -143,16 +143,21 @@ export const PLUGINS: PluginEntry[] = [
   {
     id: "deathchest",
     name: "DeathChest",
-    version: "—",
+    version: "n/a",
     category: "Gameplay",
-    blurb: "Your inventory drops into a chest at your death point instead of scattering — recoverable, not erased.",
+    featured: true,
+    colorVar: "--p-deathchest",
+    icon: "/assets/pi/deathchest.svg",
+    blurb: "A death doesn't have to mean losing everything to the dark.",
+    description:
+      "Your inventory drops into a chest at your death point instead of scattering across the ground. It's still there to lose to a raider or the void; this doesn't make death safe, it just makes death recoverable.",
   },
   {
     id: "ezrtp",
     name: "EzRTP",
     version: "3.4.3",
     category: "Gameplay",
-    blurb: "Random-teleports you into unclaimed wilderness — how most players leave spawn. A few uses a day.",
+    blurb: "Random-teleports you into unclaimed wilderness, the way most players leave spawn. A few uses a day.",
   },
   {
     id: "toolstats",
@@ -166,28 +171,28 @@ export const PLUGINS: PluginEntry[] = [
     name: "FancyHolograms",
     version: "2.11.0",
     category: "Gameplay",
-    blurb: "The floating text signs around spawn — labels, notices, NPC name tags.",
+    blurb: "The floating text signs around spawn: labels, notices, NPC name tags.",
   },
   {
     id: "fancynpcs",
     name: "FancyNpcs",
     version: "2.11.0",
     category: "Gameplay",
-    blurb: "The NPCs stationed around spawn — the dockside captain, the tavern keeper, and a few others who explain the basics.",
+    blurb: "The NPCs stationed around spawn: the dockside captain, the tavern keeper, and a few others who explain the basics.",
   },
   {
     id: "bottledexp",
     name: "BottledExp",
     version: "3.2.4.0",
     category: "Gameplay",
-    blurb: "Lets you bottle your XP into stackable experience bottles instead of losing it on death — and turns grinding into a good the Sell counter will buy.",
+    blurb: "Lets you bottle your XP into stackable experience bottles instead of losing it on death, and turns grinding into a good the Sell counter will buy.",
   },
 
   // ---- Protection & moderation ----
   {
     id: "protection",
     name: "CoreProtect & GrimAC",
-    version: "CoreProtect 25.0 · Grim 2.3.74",
+    version: "25.0 / 2.3.74",
     category: "Protection & moderation",
     featured: true,
     colorVar: "--p-core",
@@ -235,7 +240,7 @@ export const PLUGINS: PluginEntry[] = [
     name: "squaremap",
     version: "mc26.2-1.3.15",
     category: "World",
-    blurb: "Powers the live map — every claim, nation border, and player marker, updated in real time.",
+    blurb: "Powers the live map: every claim, nation border, and player marker, updated in real time.",
   },
   {
     id: "chunky",
@@ -288,14 +293,14 @@ export const PLUGINS: PluginEntry[] = [
     name: "InteractiveChat",
     version: "2026.1.1.0",
     category: "Chat, info & infrastructure",
-    blurb: "Hoverable item previews and inventory sharing in chat — type [item] to show what's in your hand.",
+    blurb: "Hoverable item previews and inventory sharing in chat. Type [item] to show what's in your hand.",
   },
   {
     id: "tab",
     name: "TAB",
     version: "6.1.2",
     category: "Chat, info & infrastructure",
-    blurb: "Controls the in-game tab list and scoreboard — server info, ping, and your stats at a glance.",
+    blurb: "Controls the in-game tab list and scoreboard: server info, ping, and your stats at a glance.",
   },
   {
     id: "minimotd",
@@ -309,12 +314,12 @@ export const PLUGINS: PluginEntry[] = [
     name: "PlaceholderAPI",
     version: "2.12.3",
     category: "Chat, info & infrastructure",
-    blurb: "Lets other plugins pull live stats — balance, job level, land tier — into chat, signs, and menus.",
+    blurb: "Lets other plugins pull live stats (balance, job level, land tier) into chat, signs, and menus.",
   },
   {
     id: "protocollib",
     name: "ProtocolLib",
-    version: "—",
+    version: "n/a",
     category: "Chat, info & infrastructure",
     blurb: "A shared packet-handling library several plugins above depend on.",
   },
@@ -337,7 +342,7 @@ export const PLUGINS: PluginEntry[] = [
     name: "ViaBackwards",
     version: "5.11.0",
     category: "Chat, info & infrastructure",
-    blurb: "The companion to ViaVersion — translates newer protocol features back down for older clients.",
+    blurb: "The companion to ViaVersion. Translates newer protocol features back down for older clients.",
   },
 ];
 
