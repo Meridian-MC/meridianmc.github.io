@@ -149,7 +149,7 @@ function initAccordionLinks() {
 // Cmd+K / Ctrl+K quick-jump palette. Static index, no build step or backend.
 const CMDK_INDEX = [
   { label: 'Home', href: '/' },
-  { label: 'Server pulse', href: '/#pulse' },
+  { label: 'Frontier report', href: '/#frontier' },
   { label: "What's different here", href: '/#different' },
   { label: 'Plugins', href: '/#plugins' },
   { label: 'Rules: Community', href: '/rules#community' },
