@@ -123,6 +123,30 @@ async function initServerStatus() {
   } catch { /* no analytics feed yet */ }
 }
 
+// Open any accordion <details> that a link or hash targets, then scroll to it
+// (browsers don't reliably auto-expand a closed <details> on their own).
+function initAccordionLinks() {
+  function openTarget(hash) {
+    if (!hash || hash.length < 2) return;
+    let target;
+    try { target = document.querySelector(hash); } catch { return; }
+    if (!target) return;
+    const item = target.closest('.acc-item, details');
+    if (item && !item.open) item.open = true;
+  }
+  openTarget(location.hash);
+  window.addEventListener('hashchange', () => openTarget(location.hash));
+  document.addEventListener('click', (e) => {
+    const a = e.target.closest('a[href*="#"]');
+    if (!a) return;
+    const url = new URL(a.href, location.href);
+    if (url.pathname === location.pathname && url.hash) {
+      requestAnimationFrame(() => openTarget(url.hash));
+    }
+  });
+}
+
 initCopy();
 initDiscord();
 initServerStatus();
+initAccordionLinks();

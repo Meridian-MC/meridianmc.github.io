@@ -1,5 +1,6 @@
 ---
 import Base from "../layouts/Base.astro";
+import { ECON } from "../consts";
 ---
 
 <Base
@@ -14,6 +15,8 @@ import Base from "../layouts/Base.astro";
   <div class="data-stamp" data-stamp>Loading&hellip;</div>
 
   <div class="analytics" data-analytics>
+    <div class="ticker-wrap" data-slot="ticker"></div>
+
     <section id="state">
       <h2>State of the economy</h2>
       <p class="as-sub">The Meridian Economic Index compares each week's trade volume against the week before.</p>
@@ -21,6 +24,27 @@ import Base from "../layouts/Base.astro";
         <div class="mei-top"><span class="mei-label">Loading&hellip;</span></div>
       </div>
       <div class="stat-row" data-slot="econ-stats"></div>
+    </section>
+
+    <section id="flow">
+      <h2>How money moves</h2>
+      <p class="as-sub">The structural rules, not a live measurement: where currency enters the economy, and where it's permanently removed.</p>
+      <div class="flow-grid">
+        <div class="flow-col flow-source">
+          <h3>Sources</h3>
+          <div class="flow-item"><span class="f-lab">Starting balance</span><span class="f-val">{ECON.startingBalance}</span><span class="f-note">once, per new player</span></div>
+          <div class="flow-item"><span class="f-lab">Jobs payouts</span><span class="f-val">up to {ECON.jobsDailyCap}</span><span class="f-note">per player, per day, capped</span></div>
+          <div class="flow-item"><span class="f-lab">Sell counter</span><span class="f-val">floor price</span><span class="f-note">raw metals &amp; rare potion ingredients</span></div>
+        </div>
+        <div class="flow-col flow-sink">
+          <h3>Sinks</h3>
+          <div class="flow-item"><span class="f-lab">Land claims</span><span class="f-val">{ECON.firstPaidChunk} +{ECON.chunkIncrease}/chunk</span><span class="f-note">first paid chunk, then rising</span></div>
+          <div class="flow-item"><span class="f-lab">Land upkeep</span><span class="f-val">{ECON.landUpkeepPerChunk}/chunk</span><span class="f-note">weekly, per claimed chunk</span></div>
+          <div class="flow-item"><span class="f-lab">Nation founding</span><span class="f-val">{ECON.nationCreateCost}</span><span class="f-note">once</span></div>
+          <div class="flow-item"><span class="f-lab">Nation upkeep</span><span class="f-val">{ECON.nationUpkeepPerChunk}/chunk</span><span class="f-note">weekly, across all member lands</span></div>
+          <div class="flow-item"><span class="f-lab">Buy counter</span><span class="f-val">premium price</span><span class="f-note">essentials, End-exclusives, armor trims</span></div>
+        </div>
+      </div>
     </section>
 
     <section id="money">
@@ -45,10 +69,18 @@ import Base from "../layouts/Base.astro";
       </div>
     </section>
 
+    <section id="markets">
+      <h2>Markets</h2>
+      <p class="as-sub">Daily open/high/low/close per item, built from chest-shop sales. Pick an item, pick a window.</p>
+      <div class="candles" data-slot="candles"></div>
+    </section>
+
     <section id="prices">
-      <h2>Item prices</h2>
+      <h2>Item prices &amp; volume</h2>
       <p class="as-sub">These are <strong>not fixed prices</strong>. Each figure is the median asking price across every player chest shop currently selling that item, with the 7-day move and a 30-day trend. Prices are whatever players charge; this just reads the market.</p>
       <div data-slot="item-table"></div>
+      <h3>Volume leaders, last 24h</h3>
+      <div data-slot="volume-table"></div>
     </section>
 
     <section id="wealth">

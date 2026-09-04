@@ -27,37 +27,45 @@ const sections = [
 
   <Toc sections={sections} ariaLabel="Jump to a command group" />
 
-  <div class="cmd-group" id="getting-around">
-    <h2>Getting around</h2>
+  <div class="acc">
+  <details class="acc-item" open>
+    <summary><h2 id="getting-around">Getting around</h2></summary>
+    <div class="cmd-group">
     <div class="cmd"><div class="k"><code>/spawn</code></div><div class="desc">Return to the server spawn.</div></div>
     <div class="cmd"><div class="k"><code>/rtp</code></div><div class="desc">Random-teleport out into unclaimed wilderness.</div></div>
     <div class="cmd"><div class="k"><code>/back</code></div><div class="desc">Return to your last location, including your death point.</div></div>
     <div class="cmd"><div class="k"><code>/lands spawn</code></div><div class="desc">Teleport to your land's spawn point.</div></div>
-  </div>
+    </div>
+  </details>
 
-  <div class="cmd-group" id="personal">
-    <h2>Homes &amp; personal</h2>
+  <details class="acc-item">
+    <summary><h2 id="personal">Homes &amp; personal</h2></summary>
+    <div class="cmd-group">
     <div class="cmd"><div class="k"><code>/sethome [name]</code></div><div class="desc">Set a home where you're standing. Your home limit depends on your rank.</div></div>
     <div class="cmd"><div class="k"><code>/home [name]</code></div><div class="desc">Teleport to a home. <code>/homes</code> lists them.</div></div>
     <div class="cmd"><div class="k"><code>/delhome &lt;name&gt;</code></div><div class="desc">Delete a home.</div></div>
     <div class="cmd"><div class="k"><code>/afk</code></div><div class="desc">Toggle your AFK status.</div></div>
     <div class="cmd"><div class="k"><code>/rules</code> <code>/motd</code></div><div class="desc">Show the rules / message of the day in chat.</div></div>
-  </div>
+    </div>
+  </details>
 
-  <div class="cmd-group" id="chat">
-    <h2>Communication</h2>
+  <details class="acc-item">
+    <summary><h2 id="chat">Communication</h2></summary>
+    <div class="cmd-group">
     <div class="cmd"><div class="k"><code>/msg &lt;player&gt; &lt;text&gt;</code></div><div class="desc">Private message. <code>/r &lt;text&gt;</code> replies to the last one.</div></div>
     <div class="cmd"><div class="k"><code>/mail send &lt;player&gt; &lt;text&gt;</code></div><div class="desc">Leave a message for an offline player. <code>/mail read</code> to check yours.</div></div>
     <div class="cmd"><div class="k"><code>/lands chat</code></div><div class="desc">Toggle land-only chat (also <code>/lc</code>).</div></div>
     <div class="cmd"><div class="k"><code>/ignore &lt;player&gt;</code></div><div class="desc">Stop seeing a player's messages.</div></div>
-  </div>
+    </div>
+  </details>
 
-  <div class="cmd-group" id="economy">
-    <h2>Economy &amp; shops</h2>
+  <details class="acc-item">
+    <summary><h2 id="economy">Economy &amp; shops</h2></summary>
+    <div class="cmd-group">
     <div class="cmd"><div class="k"><code>/balance [player]</code></div><div class="desc">Check a balance (also <code>/bal</code>).</div></div>
     <div class="cmd"><div class="k"><code>/pay &lt;player&gt; &lt;amount&gt;</code></div><div class="desc">Send money to another player.</div></div>
     <div class="cmd"><div class="k"><code>/baltop</code></div><div class="desc">The richest players on the server.</div></div>
-    <div class="cmd"><div class="k"><code>/shop</code></div><div class="desc">Open the server shop: Buy (basics, plus End-locked essentials) and Sell (raw metals, minerals, XP bottles).</div></div>
+    <div class="cmd"><div class="k"><code>/shop</code></div><div class="desc">Open the server shop: Buy (basics, End-locked essentials, armor trims) and Sell (raw metals, minerals, potion ingredients).</div></div>
     <p class="cmd-note">Chest shops (QuickShop-Hikari)</p>
     <div class="cmd"><div class="k"><code>left-click a chest</code></div><div class="desc">While holding an item, left-click a chest to start a shop, then type a price.</div></div>
     <div class="cmd"><div class="k"><code>/qs price &lt;amount&gt;</code></div><div class="desc">Change the price of the shop you're looking at.</div></div>
@@ -65,19 +73,23 @@ const sections = [
     <div class="cmd"><div class="k"><code>/qs staff add &lt;player&gt;</code></div><div class="desc">Let someone help manage your shop.</div></div>
     <div class="cmd"><div class="k"><code>/qs remove</code></div><div class="desc">Remove the shop you're looking at.</div></div>
     <div class="cmd"><div class="k"><code>/trade &lt;player&gt;</code></div><div class="desc">Open a secure face-to-face trade window.</div></div>
-  </div>
+    </div>
+  </details>
 
-  <div class="cmd-group" id="jobs">
-    <h2>Jobs</h2>
+  <details class="acc-item">
+    <summary><h2 id="jobs">Jobs</h2></summary>
+    <div class="cmd-group">
     <div class="cmd"><div class="k"><code>/jobs browse</code></div><div class="desc">See the available jobs and join one.</div></div>
     <div class="cmd"><div class="k"><code>/jobs join &lt;job&gt;</code> <code>/jobs leave &lt;job&gt;</code></div><div class="desc">Join or quit a job.</div></div>
     <div class="cmd"><div class="k"><code>/jobs stats</code></div><div class="desc">Your level and progress in each job you hold.</div></div>
     <div class="cmd"><div class="k"><code>/jobs info &lt;job&gt;</code></div><div class="desc">What a job pays for.</div></div>
     <div class="cmd"><div class="k"><code>/jobs top &lt;job&gt;</code></div><div class="desc">Leaderboard for a job.</div></div>
-  </div>
+    </div>
+  </details>
 
-  <div class="cmd-group" id="land">
-    <h2>Land &amp; nation</h2>
+  <details class="acc-item">
+    <summary><h2 id="land">Land &amp; nation</h2></summary>
+    <div class="cmd-group">
     <div class="cmd"><div class="k"><code>/lands menu</code></div><div class="desc">Open the main Lands GUI. Everything below is in here too.</div></div>
     <div class="cmd"><div class="k"><code>/lands create &lt;name&gt;</code></div><div class="desc">Found a land. The first chunk is free.</div></div>
     <div class="cmd"><div class="k"><code>/lands claim</code> <code>/lands unclaim</code></div><div class="desc">Claim or release the chunk you're standing in.</div></div>
@@ -90,13 +102,17 @@ const sections = [
     <div class="cmd"><div class="k"><code>/lands setspawn</code></div><div class="desc">Set where <code>/lands spawn</code> takes members.</div></div>
     <div class="cmd"><div class="k"><code>/nation create &lt;name&gt;</code></div><div class="desc">Form a nation from your land ({ECON.nationCreateCost}).</div></div>
     <div class="cmd"><div class="k"><code>/nation &lt;nation&gt; invite &lt;land&gt;</code></div><div class="desc">Invite another land into your nation.</div></div>
-  </div>
+    </div>
+  </details>
 
-  <div class="cmd-group" id="war">
-    <h2>Warfare</h2>
+  <details class="acc-item">
+    <summary><h2 id="war">Warfare</h2></summary>
+    <div class="cmd-group">
     <Callout compact>War declarations must be approved by staff in a <a href={DISCORD_INVITE_URL} rel="noopener">Discord</a> ticket <em>first</em>. Only then do you file it in-game. See <a href="/war">Warfare</a>.</Callout>
     <div class="cmd"><div class="k"><code>/nation &lt;your_nation&gt; war declare &lt;target&gt;</code></div><div class="desc">File an approved declaration. Starts the 2-day grace period.</div></div>
     <div class="cmd"><div class="k"><code>/nation &lt;nation&gt; relations</code></div><div class="desc">Check standing wars, alliances, and truces.</div></div>
+    </div>
+  </details>
   </div>
 
   <p class="editnote">Command names follow the plugins Meridian runs (Lands, QuickShop-Hikari, EssentialsX, Jobs Reborn, TradeManager, EzRTP). If any alias differs on the server, tell staff and this page will be corrected.</p>

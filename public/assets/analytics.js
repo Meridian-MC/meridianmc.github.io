@@ -98,6 +98,128 @@
     el.innerHTML = '<div class="c-plot">' + chart.svg + '</div><div class="c-range">' + chart.range + "</div>";
   }
 
+  // ---- price ticker (scrolling strip) ----
+  function renderTicker(el, items) {
+    if (!el) return;
+    if (!items || !items.length) { el.innerHTML = ""; return; }
+    var row = items.map(function (x) {
+      var dir = x.change_7d > 0.005 ? "up" : x.change_7d < -0.005 ? "down" : "flat";
+      var sign = x.change_7d > 0 ? "+" : "";
+      return '<span class="ticker-item ' + dir + '">' + esc(x.name) + " " +
+        '<b>' + money(x.price) + "</b> " +
+        '<span class="ticker-chg">' + sign + (x.change_7d * 100).toFixed(1) + "%</span></span>" +
+        '<span class="ticker-sep" aria-hidden="true">&bull;</span>';
+    }).join("");
+    el.innerHTML = '<div class="ticker-track">' + row + row + "</div>";
+  }
+
+  // ---- candlestick chart ----
+  function candleSvg(candles) {
+    var W = 720, H = 240, padT = 12, padB = 12;
+    var n = candles.length;
+    var highs = candles.map(function (c) { return c.h; });
+    var lows = candles.map(function (c) { return c.l; });
+    var max = Math.max.apply(null, highs), min = Math.min.apply(null, lows);
+    if (max === min) { max += 1; min -= 1; }
+    var pad = (max - min) * 0.1; max += pad; min -= pad;
+    var innerH = H - padT - padB;
+    var y = function (v) { return padT + innerH * (1 - (v - min) / (max - min)); };
+    var slot = W / n;
+    var bw = Math.max(2, Math.min(16, slot * 0.56));
+    var grid = [0.25, 0.5, 0.75].map(function (f) {
+      var yy = (padT + innerH * f).toFixed(1);
+      return '<line class="gridline" x1="0" y1="' + yy + '" x2="' + W + '" y2="' + yy + '"/>';
+    }).join("");
+    var bars = candles.map(function (c, i) {
+      var cx = slot * (i + 0.5);
+      var up = c.c >= c.o;
+      var bodyTop = y(Math.max(c.o, c.c)), bodyBot = y(Math.min(c.o, c.c));
+      var bodyH = Math.max(1.2, bodyBot - bodyTop);
+      var cls = up ? "up" : "down";
+      return '<line class="candle-wick ' + cls + '" x1="' + cx.toFixed(1) + '" x2="' + cx.toFixed(1) +
+        '" y1="' + y(c.h).toFixed(1) + '" y2="' + y(c.l).toFixed(1) + '"/>' +
+        '<rect class="candle-body ' + cls + '" x="' + (cx - bw / 2).toFixed(1) + '" y="' + bodyTop.toFixed(1) +
+        '" width="' + bw.toFixed(1) + '" height="' + bodyH.toFixed(1) + '"></rect>';
+    }).join("");
+    return { svg: '<svg viewBox="0 0 ' + W + " " + H + '" preserveAspectRatio="none">' + grid + bars + "</svg>",
+             hi: max - pad, lo: min + pad };
+  }
+
+  function initCandles(root2, items) {
+    var el = root2.querySelector("[data-slot=candles]");
+    if (!el) return;
+    var withCandles = (items || []).filter(function (x) { return x.candles && x.candles.length; });
+    if (!withCandles.length) {
+      el.innerHTML = '<p class="c-empty">Candles appear once shop sales are being logged.</p>';
+      return;
+    }
+    var WINDOWS = { "24H": 2, "7D": 7, "30D": 30 };
+    var state = { item: withCandles[0], win: "7D" };
+
+    el.innerHTML =
+      '<div class="candle-head">' +
+        '<div class="candle-picker" data-picker></div>' +
+        '<div class="candle-tabs" data-tabs>' +
+          Object.keys(WINDOWS).map(function (k) {
+            return '<button type="button" class="ctab' + (k === state.win ? " on" : "") + '" data-win="' + k + '">' + k + "</button>";
+          }).join("") +
+        "</div>" +
+      "</div>" +
+      '<div class="candle-plot" data-plot></div>' +
+      '<div class="candle-range" data-range></div>';
+
+    var pickerEl = el.querySelector("[data-picker]");
+    pickerEl.innerHTML = withCandles.map(function (x, i) {
+      return '<button type="button" class="cpick' + (i === 0 ? " on" : "") + '" data-name="' + esc(x.name) + '">' + esc(x.name) + "</button>";
+    }).join("");
+
+    function draw() {
+      var n = WINDOWS[state.win];
+      var candles = state.item.candles.slice(-n);
+      var chart = candleSvg(candles);
+      el.querySelector("[data-plot]").innerHTML = chart.svg;
+      var dir = state.item.change_7d > 0.005 ? "up" : state.item.change_7d < -0.005 ? "down" : "flat";
+      var sign = state.item.change_7d > 0 ? "+" : "";
+      el.querySelector("[data-range]").innerHTML =
+        '<span>' + candles[0].t + " &ndash; " + candles[candles.length - 1].t + "</span>" +
+        '<span class="candle-hilo">H ' + money(chart.hi) + " &middot; L " + money(chart.lo) + "</span>" +
+        '<span class="ticker-chg ' + dir + '">' + sign + (state.item.change_7d * 100).toFixed(1) + "% / 7d</span>";
+    }
+
+    pickerEl.addEventListener("click", function (ev) {
+      var btn = ev.target.closest(".cpick");
+      if (!btn) return;
+      pickerEl.querySelectorAll(".cpick").forEach(function (b) { b.classList.toggle("on", b === btn); });
+      state.item = withCandles.filter(function (x) { return x.name === btn.getAttribute("data-name"); })[0];
+      draw();
+    });
+    el.querySelector("[data-tabs]").addEventListener("click", function (ev) {
+      var btn = ev.target.closest(".ctab");
+      if (!btn) return;
+      el.querySelectorAll(".ctab").forEach(function (b) { b.classList.toggle("on", b === btn); });
+      state.win = btn.getAttribute("data-win");
+      draw();
+    });
+    draw();
+  }
+
+  // ---- volume leaders ----
+  function renderVolume(el, items) {
+    if (!el) return;
+    var top = (items || []).filter(function (x) { return x.volume_24h_value; })
+      .slice().sort(function (a, b) { return b.volume_24h_value - a.volume_24h_value; }).slice(0, 8);
+    if (!top.length) { el.innerHTML = '<p class="c-empty">No trade volume recorded yet.</p>'; return; }
+    el.innerHTML = '<div class="dtable-wrap"><table class="dtable"><thead><tr><th>Item</th><th style="text-align:right">Qty, 24h</th><th style="text-align:right">Value, 24h</th></tr></thead><tbody>' +
+      top.map(function (x) {
+        return "<tr><td>" + esc(x.name) + '</td><td class="num">' + intf(x.volume_24h_qty) +
+          '</td><td class="num">' + money(x.volume_24h_value) + "</td></tr>";
+      }).join("") + "</tbody></table></div>";
+  }
+
+  function avatar(name) {
+    return '<img class="p-avatar" src="https://mc-heads.net/avatar/' + encodeURIComponent(name) + '/24" alt="" width="24" height="24" loading="lazy">';
+  }
+
   function render(d) {
     var stamp = document.querySelector("[data-stamp]");
     if (stamp) {
@@ -171,9 +293,14 @@
         wt.innerHTML = !w.top.length ? '<p class="c-empty">No player balances yet.</p>' :
           '<div class="dtable-wrap"><table class="dtable"><thead><tr><th class="rank">#</th><th>Player</th><th style="text-align:right">Balance</th></tr></thead><tbody>' +
           w.top.map(function (p, i) {
-            return '<tr><td class="rank">' + (i + 1) + "</td><td>" + esc(p.name) + '</td><td class="num">' + money(p.balance) + "</td></tr>";
+            return '<tr><td class="rank">' + (i + 1) + '</td><td class="p-cell">' + avatar(p.name) + " " + esc(p.name) +
+              '</td><td class="num">' + money(p.balance) + "</td></tr>";
           }).join("") + "</tbody></table></div>";
       }
+
+      renderTicker(root.querySelector("[data-slot=ticker]"), e.items);
+      renderVolume(root.querySelector("[data-slot=volume-table]"), e.items);
+      initCandles(root, e.items);
     }
 
     // ---- nations ----
@@ -187,7 +314,9 @@
               return '<div class="idx-bar"><span>' + b[0] + '</span><span class="track"><span class="fill" style="width:' +
                 Math.round(b[1] * 100) + '%"></span></span><span class="v">' + b[1].toFixed(2) + "</span></div>";
             }).join("");
-          return '<div class="ncard"><div class="n-top"><span class="n-name">' + esc(n.name || "Unnamed") +
+          return '<div class="ncard' + (i === 0 ? " ncard-top" : "") + '">' +
+            (i === 0 ? '<span class="n-crown">Top nation</span>' : "") +
+            '<div class="n-top"><span class="n-name">' + esc(n.name || "Unnamed") +
             '</span><span class="n-rank">#' + (i + 1) + '</span></div>' +
             '<div class="n-mdi">' + n.mdi.toFixed(3) + '</div><div class="n-mdi-lab">Development index</div>' +
             '<div class="n-facts"><span><b>' + intf(n.chunks) + "</b> chunks</span><span><b>" + intf(n.members) +
