@@ -418,7 +418,7 @@ main {
   grid-template-areas:
     "land land econ econ"
     "land land pvp  pvp"
-    "world end anticheat anticheat";
+    "world end nether anticheat";
   gap: 14px;
 }
 .bcard {
@@ -443,6 +443,7 @@ main {
 .b-pvp { grid-area: pvp; }
 .b-world { grid-area: world; }
 .b-end { grid-area: end; }
+.b-nether { grid-area: nether; }
 .b-anticheat, .b-guard { grid-area: anticheat; }
 
 .b-land { --a: var(--p-lands); }
@@ -450,6 +451,7 @@ main {
 .b-pvp { --a: var(--p-essentials); }
 .b-world { --a: var(--p-jobs); }
 .b-end { --a: var(--p-extract); }
+.b-nether { --a: #d9822b; }
 .b-guard { --a: var(--p-core); }
 
 .b-land { justify-content: flex-start; }
@@ -460,7 +462,7 @@ main {
 @media (max-width: 760px) {
   .bento {
     grid-template-columns: 1fr;
-    grid-template-areas: "land" "econ" "pvp" "world" "end" "anticheat";
+    grid-template-areas: "land" "econ" "pvp" "world" "end" "nether" "anticheat";
   }
 }
 
