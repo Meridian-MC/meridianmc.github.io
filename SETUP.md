@@ -74,7 +74,32 @@ HTTPS at `map.meridian-mc.net` via:
 - **Origin Rule**: hostname `= map.meridian-mc.net` → rewrite Destination Port to `7900`
 - Zone **SSL/TLS mode: Flexible** (squaremap has no TLS on the origin)
 
-## 4. Content still to fill in
+## 5. Astro migration (branch `astro-migration`, not yet live)
+
+The site was rebuilt on Astro to kill the copy-pasted nav/head across every page.
+Content and output are unchanged — `npm run build` produces the exact same
+`index.html`, `rules.html`, etc. (byte-identical text content, just templated).
+
+- Pages: `src/pages/*.astro`, using `src/layouts/Base.astro` for head/nav/footer.
+- Static files (`assets/`, `data.json`) moved to `public/`, unchanged, served at
+  the same paths (`/assets/...`, `/data.json`) — the GitHub Actions analytics
+  refresh keeps writing `public/data.json` exactly as it wrote `data.json` before.
+- `astro.config.mjs` sets `build.format: "file"` so output is `dist/rules.html`
+  etc., not `dist/rules/index.html` — matches Cloudflare's existing routing.
+- `wrangler.jsonc` now points `assets.directory` at `dist`.
+
+**To cut over (do this after launch, not before):**
+1. Merge `astro-migration` into `main`.
+2. In the Cloudflare dashboard → Worker `meridianmc` → Settings → Build:
+   set **Build command** to `npm run build` (currently empty). Deploy command
+   and root directory stay the same.
+3. Push — Cloudflare runs the build and deploys `dist/`. Same custom domain,
+   same DNS, nothing else changes.
+
+Until that dashboard change is made, `main` keeps deploying the old way (no
+build step) — merging the branch alone does nothing to production.
+
+## 6. Content still to fill in
 
 - Replace the `href="#"` Discord links (rules page callout, etc.) with the real invite.
 - Warfare page: confirm the real capture-flag hold time and cooldown (the source

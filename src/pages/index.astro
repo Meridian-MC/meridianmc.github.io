@@ -1,41 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Meridian · Minecraft Server</title>
-<meta name="description" content="Meridian (MMC) is a Vanilla+ survival Minecraft server built on land claims, nations, warfare, and a player-run economy. Connect at meridian-mc.net.">
-<link rel="stylesheet" href="/assets/style.css">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23f4f4f5'/%3E%3Ctext x='16' y='22' font-size='16' font-family='sans-serif' font-weight='800' fill='%230b0b0c' text-anchor='middle'%3EM%3C/text%3E%3C/svg%3E">
-<meta property="og:type" content="website">
-<meta property="og:site_name" content="Meridian">
-<meta property="og:title" content="Meridian Vanilla+ Minecraft Server">
-<meta property="og:description" content="A Vanilla+ survival server built on land claims, nations, warfare, and a player-run economy. Connect at meridian-mc.net.">
-<meta property="og:url" content="https://meridian-mc.net/">
-<meta property="og:image" content="https://meridian-mc.net/assets/og.jpg">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="theme-color" content="#0b0b0c">
-</head>
-<body class="bg">
-<header class="site-header">
-  <nav class="nav-inner">
-    <a href="/" class="brand"><span class="mark">M</span> Meridian</a>
-    <button class="nav-toggle" aria-label="Menu">☰</button>
-    <div class="nav-links">
-      <a href="/" class="active">Home</a>
-      <a href="/rules">Rules</a>
-      <a href="/lands">Lands</a>
-      <a href="/war">Warfare</a>
-      <a href="/economy">Economy</a>
-      <a href="/faq">FAQ</a>
-      <a href="/commands">Commands</a>
-      <a href="https://map.meridian-mc.net">Live Map</a>
-    </div>
-  </nav>
-</header>
+---
+import Base from "../layouts/Base.astro";
+---
 
+<Base
+  title="Meridian · Minecraft Server"
+  description="Meridian (MMC) is a Vanilla+ survival Minecraft server built on land claims, nations, warfare, and a player-run economy. Connect at meridian-mc.net."
+  path="/"
+  ogTitle="Meridian Vanilla+ Minecraft Server"
+  ogDescription="A Vanilla+ survival server built on land claims, nations, warfare, and a player-run economy. Connect at meridian-mc.net."
+  bodyClass="bg"
+>
 <main>
   <section class="hero">
     <h1>Meridian</h1>
@@ -190,11 +164,4 @@
     </details>
   </section>
 </main>
-
-<footer class="site-footer">
-  Meridian (MMC) &middot; meridian-mc.net &middot; Running on <a href="https://papermc.io" rel="noopener">Paper</a> &middot; Not affiliated with Mojang or Microsoft.
-</footer>
-
-<script src="/assets/app.js"></script>
-</body>
-</html>
+</Base>

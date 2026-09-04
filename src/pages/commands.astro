@@ -1,41 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Commands · Meridian</title>
-<meta name="description" content="The Meridian commands you will actually use: movement, land, economy, shops, jobs, and war.">
-<link rel="stylesheet" href="/assets/style.css">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23f4f4f5'/%3E%3Ctext x='16' y='22' font-size='16' font-family='sans-serif' font-weight='800' fill='%230b0b0c' text-anchor='middle'%3EM%3C/text%3E%3C/svg%3E">
-<meta property="og:type" content="website">
-<meta property="og:site_name" content="Meridian">
-<meta property="og:title" content="Commands · Meridian">
-<meta property="og:description" content="The Meridian commands you will actually use: movement, homes, chat, economy, shops, jobs, land, and war.">
-<meta property="og:url" content="https://meridian-mc.net/commands">
-<meta property="og:image" content="https://meridian-mc.net/assets/og.jpg">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="theme-color" content="#0b0b0c">
-</head>
-<body>
-<header class="site-header">
-  <nav class="nav-inner">
-    <a href="/" class="brand"><span class="mark">M</span> Meridian</a>
-    <button class="nav-toggle" aria-label="Menu">☰</button>
-    <div class="nav-links">
-      <a href="/">Home</a>
-      <a href="/rules">Rules</a>
-      <a href="/lands">Lands</a>
-      <a href="/war">Warfare</a>
-      <a href="/economy">Economy</a>
-      <a href="/faq">FAQ</a>
-      <a href="/commands" class="active">Commands</a>
-      <a href="https://map.meridian-mc.net">Live Map</a>
-    </div>
-  </nav>
-</header>
+---
+import Base from "../layouts/Base.astro";
+---
 
+<Base
+  title="Commands · Meridian"
+  description="The Meridian commands you will actually use: movement, land, economy, shops, jobs, and war."
+  path="/commands"
+  ogDescription="The Meridian commands you will actually use: movement, homes, chat, economy, shops, jobs, land, and war."
+>
 <main class="doc">
   <h1>Commands</h1>
   <p class="lead">The commands you'll reach for most often. Arguments in <code>&lt;angle brackets&gt;</code> are required; <code>[square brackets]</code> are optional. Some commands depend on your rank or your permissions inside a land.</p>
@@ -127,11 +99,4 @@
 
   <p class="editnote">Command names follow the plugins Meridian runs (Lands, QuickShop-Hikari, EssentialsX, Jobs Reborn, TradeManager, EzRTP). If any alias differs on the server, tell staff and this page will be corrected.</p>
 </main>
-
-<footer class="site-footer">
-  Meridian (MMC) &middot; meridian-mc.net &middot; Not affiliated with Mojang or Microsoft.
-</footer>
-
-<script src="/assets/app.js"></script>
-</body>
-</html>
+</Base>

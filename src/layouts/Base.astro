@@ -1,0 +1,75 @@
+---
+export interface Props {
+  title: string;
+  description: string;
+  path: string;            // "/", "/rules", "/lands", ...
+  ogTitle?: string;
+  ogDescription?: string;
+  bodyClass?: string;
+  analytics?: boolean;      // include assets/analytics.js
+}
+
+const {
+  title,
+  description,
+  path,
+  ogTitle = title,
+  ogDescription = description,
+  bodyClass,
+  analytics = false,
+} = Astro.props;
+
+const NAV = [
+  { href: "/", label: "Home" },
+  { href: "/rules", label: "Rules" },
+  { href: "/lands", label: "Lands" },
+  { href: "/war", label: "Warfare" },
+  { href: "/economy", label: "Economy" },
+  { href: "/faq", label: "FAQ" },
+  { href: "/commands", label: "Commands" },
+  { href: "https://map.meridian-mc.net", label: "Live Map", external: true },
+];
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{title}</title>
+<meta name="description" content={description}>
+<link rel="stylesheet" href="/assets/style.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23f4f4f5'/%3E%3Ctext x='16' y='22' font-size='16' font-family='sans-serif' font-weight='800' fill='%230b0b0c' text-anchor='middle'%3EM%3C/text%3E%3C/svg%3E">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Meridian">
+<meta property="og:title" content={ogTitle}>
+<meta property="og:description" content={ogDescription}>
+<meta property="og:url" content={`https://meridian-mc.net${path}`}>
+<meta property="og:image" content="https://meridian-mc.net/assets/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0b0b0c">
+</head>
+<body class={bodyClass}>
+<header class="site-header">
+  <nav class="nav-inner">
+    <a href="/" class="brand"><span class="mark">M</span> Meridian</a>
+    <button class="nav-toggle" aria-label="Menu">☰</button>
+    <div class="nav-links">
+      {NAV.map((item) => (
+        <a href={item.href} class={item.href === path ? "active" : undefined}>{item.label}</a>
+      ))}
+    </div>
+  </nav>
+</header>
+
+<slot />
+
+<footer class="site-footer">
+  Meridian (MMC) &middot; meridian-mc.net &middot; {path === "/" ? <>Running on <a href="https://papermc.io" rel="noopener">Paper</a> &middot; </> : null}Not affiliated with Mojang or Microsoft.
+</footer>
+
+<script is:inline src="/assets/app.js"></script>
+{analytics && <script is:inline src="/assets/analytics.js"></script>}
+</body>
+</html>
