@@ -238,25 +238,8 @@ main {
   border-radius: 14px;
   background: var(--bg-2);
 }
-.map-head-float {
-  position: absolute;
-  top: 28px; right: 28px; z-index: 5;
-  display: flex; align-items: center; gap: 12px;
-  background: rgba(11, 11, 12, 0.78);
-  backdrop-filter: blur(8px);
-  border: 1px solid var(--border-2);
-  border-radius: 10px;
-  padding: 9px 14px;
-}
-.map-head-float h1 {
-  font-family: var(--font-display); font-size: 0.92rem; font-weight: 600;
-  color: var(--text); margin: 0; letter-spacing: -0.005em;
-}
-.map-head-float a { font-size: 0.78rem; color: var(--text-3); border-left: 1px solid var(--border-2); padding-left: 12px; }
-.map-head-float a:hover { color: var(--text-2); }
 @media (max-width: 640px) {
   .map-frame-wrap iframe { height: calc(100vh - 118px); min-height: 420px; }
-  .map-head-float { top: 22px; right: 22px; padding: 7px 11px; gap: 9px; }
 }
 
 .site-footer {
