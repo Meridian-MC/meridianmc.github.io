@@ -1,42 +1,42 @@
 ---
-// One registry, grouped by category. Featured plugins (the systems that
-// define how the server plays) get an icon, an accent colour, and the full
-// writeup; every other plugin still gets a real row instead of only living
-// in the old, separately-maintained "full list". Change a description or a
-// version once, in src/data/plugins.ts — both the emphasis and the plain
-// rows come from the same array, so they can't drift apart.
-import { PLUGINS, CATEGORIES } from "../data/plugins";
+// Only the plugins that define how the server plays get the full write-up.
+// Everything else Meridian runs is real but not interesting to read about —
+// it's one flat, uncategorised list you can open if you want it, not a
+// wall of 34 entries competing for attention.
+import { PLUGINS, FEATURED_PLUGINS } from "../data/plugins";
+const rest = PLUGINS.filter((p) => !p.featured);
 ---
 <div class="registry">
-  {CATEGORIES.map((cat) => {
-    const rows = PLUGINS.filter((p) => p.category === cat);
-    return (
-      <section class="reg-group">
-        <h3 class="reg-cat">{cat}</h3>
-        <div class="reg-list">
-          {rows.map((p) => (
-            <article
-              class={`reg-row${p.featured ? " is-featured" : ""}`}
-              id={p.featured ? p.id : undefined}
-              style={p.colorVar ? `--p: var(${p.colorVar})` : undefined}
-            >
-              <div class="reg-head">
-                {p.icon && <img class="reg-ico" src={p.icon} alt="" width="30" height="30" />}
-                <span class="reg-name">{p.name}</span>
-                <span class="reg-ver">{p.version}</span>
-              </div>
-              <p class="reg-blurb">{p.featured ? p.description : p.blurb}</p>
-              {p.links && p.links.length > 0 && (
-                <div class="reg-links">
-                  {p.links.map((l) => (
-                    <a href={l.href} rel="noopener">{l.label}</a>
-                  ))}
-                </div>
-              )}
-            </article>
-          ))}
+  <div class="reg-featured">
+    {FEATURED_PLUGINS.map((p) => (
+      <article class="reg-card" id={p.id} style={p.colorVar ? `--p: var(${p.colorVar})` : undefined}>
+        <div class="reg-head">
+          {p.icon && <img class="reg-ico" src={p.icon} alt="" width="34" height="34" />}
+          <h3 class="reg-name">{p.name}</h3>
+          <span class="reg-ver">{p.version}</span>
         </div>
-      </section>
-    );
-  })}
+        <p class="reg-blurb">{p.description}</p>
+        {p.links && p.links.length > 0 && (
+          <div class="reg-links">
+            {p.links.map((l) => (
+              <a href={l.href} rel="noopener">{l.label}</a>
+            ))}
+          </div>
+        )}
+      </article>
+    ))}
+  </div>
+
+  <details class="reg-more">
+    <summary>Also running ({rest.length} more plugins)</summary>
+    <div class="reg-more-list">
+      {rest.map((p) => (
+        <div class="reg-more-row">
+          <span class="reg-more-name">{p.name}</span>
+          <span class="reg-more-ver">{p.version}</span>
+          <span class="reg-more-blurb">{p.blurb}</span>
+        </div>
+      ))}
+    </div>
+  </details>
 </div>

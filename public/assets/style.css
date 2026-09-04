@@ -24,15 +24,19 @@
   --radius: 12px;
   --maxw: 960px;
 
-  /* Type: a serif for anything that names or titles something (the wordmark,
-     headings, plugin/nation names) — Meridian reads as a charter or registry,
-     not a product. A grotesque carries the prose. Mono is reserved for
+  /* Type: a bold geometric display face for actual titles — the wordmark,
+     the hero, section headings — built and blocky, on-subject without being
+     a literal pixel font. A grotesque carries the prose and small labels
+     (Unbounded's letterforms get muddy below ~1.3rem). Mono is reserved for
      things that are literally data: the address, versions, ledger figures. */
-  --font-display: "Source Serif 4", Georgia, "Times New Roman", serif;
+  --font-display: "Unbounded", "Hanken Grotesk", -apple-system, sans-serif;
   --font: "Hanken Grotesk", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   --mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
 
   --ease: cubic-bezier(0.16, 1, 0.3, 1);
+  /* the faint offset-shadow Minecraft's own font renders with — used once,
+     only on the wordmark and hero, never on body-sized text */
+  --mc-shadow: 0 2px 0 rgba(0,0,0,0.45);
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -56,8 +60,8 @@ body.bg::after {
   inset: 0;
   z-index: -1;
   background:
-    linear-gradient(to bottom, rgba(11,11,12,0.4) 0%, rgba(11,11,12,0.18) 24%, rgba(11,11,12,0.6) 62%, var(--bg) 92%),
-    radial-gradient(140% 80% at 50% 38%, transparent 40%, rgba(11,11,12,0.5) 100%);
+    linear-gradient(to bottom, rgba(11,11,12,0.58) 0%, rgba(11,11,12,0.32) 30%, rgba(11,11,12,0.68) 62%, var(--bg) 92%),
+    radial-gradient(120% 70% at 50% 32%, transparent 22%, rgba(11,11,12,0.58) 100%);
 }
 
 body {
@@ -99,8 +103,8 @@ a:hover { text-decoration-color: var(--text); }
   gap: 10px;
   font-family: var(--font-display);
   font-weight: 600;
-  font-size: 1.14rem;
-  letter-spacing: -0.005em;
+  font-size: 1.05rem;
+  letter-spacing: -0.01em;
   color: var(--text);
   text-decoration: none;
   flex-shrink: 0;
@@ -113,6 +117,8 @@ a:hover { text-decoration-color: var(--text); }
   display: grid; place-items: center;
   font-family: var(--font);
   font-weight: 800; font-size: 0.82rem;
+  /* a faint block-face bevel — the one direct nod to Minecraft's own rendering */
+  box-shadow: inset 2px 2px 0 rgba(255,255,255,0.35), inset -2px -2px 0 rgba(0,0,0,0.2);
 }
 .nav-links {
   display: flex;
@@ -173,7 +179,7 @@ main {
   gap: 4px;
   text-align: center;
 }
-.site-footer .f-name { font-family: var(--font-display); font-size: 0.98rem; color: var(--text-2); }
+.site-footer .f-name { font-family: var(--font); font-weight: 700; font-size: 0.94rem; color: var(--text-2); }
 .site-footer .f-legal { color: var(--text-3); font-size: 0.8rem; max-width: 46ch; }
 .site-footer a { color: var(--text-3); }
 .site-footer a:hover { color: var(--text-2); }
@@ -199,11 +205,12 @@ main {
 .hero { text-align: center; padding: 30px 0 8px; }
 .hero h1 {
   font-family: var(--font-display);
-  font-size: clamp(3.1rem, 9vw, 5rem);
-  letter-spacing: -0.015em;
-  line-height: 1;
-  margin-bottom: 18px;
-  font-weight: 600;
+  font-size: clamp(2.7rem, 8vw, 4.3rem);
+  letter-spacing: -0.03em;
+  line-height: 1.02;
+  margin-bottom: 20px;
+  font-weight: 700;
+  text-shadow: var(--mc-shadow);
 }
 .hero .tagline {
   color: var(--text-2);
@@ -227,15 +234,23 @@ main {
 }
 .ip-box:hover { border-color: var(--text-3); background: var(--bg-2); }
 .ip-box:active { transform: scale(0.985); }
-.ip-box .ip { font-family: var(--mono); font-size: 1.28rem; font-weight: 500; color: var(--text); letter-spacing: -0.01em; }
+.ip-box .ip { font-family: var(--mono); font-size: 1.28rem; font-weight: 500; color: var(--text); letter-spacing: -0.01em; transition: color 0.2s var(--ease); }
 .ip-box .copy-ico {
   width: 16px;
   height: 16px;
   color: var(--text-3);
   flex-shrink: 0;
-  transition: color 0.15s var(--ease);
+  transition: color 0.2s var(--ease), transform 0.2s var(--ease);
 }
 .ip-box:hover .copy-ico { color: var(--text-2); }
+.ip-box.copied { border-color: #57b98a; animation: copy-pulse 0.4s var(--ease); }
+.ip-box.copied .ip, .ip-box.copied .copy-ico { color: #57b98a; }
+.ip-box.copied .copy-ico { transform: scale(1.15); }
+@keyframes copy-pulse {
+  0% { transform: scale(1); }
+  40% { transform: scale(1.02); }
+  100% { transform: scale(1); }
+}
 
 .sub-line {
   margin-top: 16px;
@@ -279,9 +294,9 @@ main {
 .stack { margin-top: 76px; }
 .stack > h2 {
   font-family: var(--font-display);
-  font-size: 1.7rem;
-  letter-spacing: -0.01em;
-  font-weight: 600;
+  font-size: 1.5rem;
+  letter-spacing: -0.02em;
+  font-weight: 500;
   scroll-margin-top: 80px;
 }
 .section-intro { color: var(--text-3); margin-top: 6px; margin-bottom: 30px; max-width: 62ch; }
@@ -302,7 +317,7 @@ main {
 }
 .discord-strip:hover { border-color: var(--border-2); background: var(--bg-2); text-decoration: none; }
 .discord-strip .ds-logo { width: 22px; height: 22px; color: #7b86f5; flex-shrink: 0; }
-.discord-strip .ds-name { font-family: var(--font-display); font-weight: 600; color: var(--text); font-size: 1.02rem; }
+.discord-strip .ds-name { font-family: var(--font); font-weight: 700; color: var(--text); font-size: 1rem; letter-spacing: -0.005em; }
 .discord-strip .ds-count { display: inline-flex; align-items: center; gap: 6px; font-size: 0.86rem; color: var(--text-3); font-family: var(--mono); }
 .discord-strip .ds-count .ds-dot { width: 7px; height: 7px; border-radius: 50%; background: #23a55a; }
 .discord-strip .ds-count b { color: var(--text-2); font-weight: 600; font-variant-numeric: tabular-nums; }
@@ -318,57 +333,61 @@ main {
   .discord-strip .ds-join { margin-left: 0; width: 100%; }
 }
 
-/* ---------- Plugin registry (merged featured + full list) ---------- */
+/* ---------- Plugin registry: the systems that matter, then everything else ---------- */
 .registry { margin-top: 6px; }
-.reg-group + .reg-group { margin-top: 40px; }
-.reg-cat {
-  font-family: var(--font-display);
-  font-size: 1.02rem;
-  font-weight: 600;
-  color: var(--text-2);
-  padding-bottom: 10px;
-  margin-bottom: 4px;
-  border-bottom: 1px solid var(--border);
+.reg-featured {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 14px;
 }
-.reg-row {
-  padding: 16px 0;
-  border-bottom: 1px solid var(--border);
-  scroll-margin-top: 80px;
-}
-.reg-list .reg-row:last-child { border-bottom: none; }
-.reg-head {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  flex-wrap: wrap;
-}
-.reg-ico { width: 26px; height: 26px; border-radius: 7px; flex-shrink: 0; background: var(--bg-2); object-fit: cover; }
-.reg-name { font-weight: 600; color: var(--text-2); font-size: 0.98rem; }
-.reg-ver { font-family: var(--mono); font-size: 0.74rem; color: var(--text-3); margin-left: auto; }
-.reg-blurb { color: var(--text-3); font-size: 0.88rem; margin-top: 4px; max-width: 66ch; }
-.reg-links { margin-top: 10px; display: flex; gap: 16px; flex-wrap: wrap; }
-.reg-links a { font-size: 0.86rem; color: var(--text-2); }
-
-.reg-row.is-featured {
-  padding: 22px 20px;
-  margin: 4px 0;
+.reg-card {
+  padding: 22px 22px 20px;
   border: 1px solid var(--border);
-  border-bottom: 1px solid var(--border);
   border-radius: var(--radius);
   background: var(--bg-1);
+  scroll-margin-top: 80px;
+  transition: border-color 0.2s var(--ease), transform 0.2s var(--ease), background 0.2s var(--ease);
 }
-.reg-row.is-featured .reg-ico { width: 34px; height: 34px; }
-.reg-row.is-featured .reg-name { font-family: var(--font-display); font-size: 1.2rem; font-weight: 600; color: var(--p, var(--text)); }
-.reg-row.is-featured .reg-ver { font-family: var(--mono); font-size: 0.76rem; color: var(--p, var(--text-2)); border: 1px solid currentColor; border-radius: 5px; padding: 1px 7px; opacity: 0.85; margin-left: auto; }
-.reg-row.is-featured .reg-blurb { color: var(--text-2); font-size: 0.95rem; max-width: 68ch; }
+.reg-card:hover { border-color: color-mix(in srgb, var(--p, var(--border-2)) 55%, var(--border-2)); transform: translateY(-2px); background: var(--bg-2); }
+.reg-head { display: flex; align-items: center; gap: 11px; flex-wrap: wrap; }
+.reg-ico { width: 32px; height: 32px; border-radius: 8px; flex-shrink: 0; background: var(--bg-2); object-fit: cover; }
+.reg-name { font-family: var(--font); font-weight: 700; font-size: 1.08rem; color: var(--p, var(--text)); letter-spacing: -0.005em; }
+.reg-ver { font-family: var(--mono); font-size: 0.72rem; color: var(--p, var(--text-3)); border: 1px solid currentColor; border-radius: 5px; padding: 1px 7px; opacity: 0.85; margin-left: auto; }
+.reg-blurb { color: var(--text-2); font-size: 0.92rem; margin-top: 9px; }
+.reg-links { margin-top: 13px; display: flex; gap: 16px; flex-wrap: wrap; }
+.reg-links a { font-size: 0.86rem; color: var(--text-2); }
+
+.reg-more { margin-top: 22px; }
+.reg-more summary {
+  cursor: pointer; list-style: none; color: var(--text-3); font-size: 0.88rem; font-weight: 550;
+}
+.reg-more summary::-webkit-details-marker { display: none; }
+.reg-more summary::before { content: "▸ "; }
+.reg-more[open] summary::before { content: "▾ "; }
+.reg-more-list { margin-top: 14px; }
+.reg-more-row {
+  display: grid;
+  grid-template-columns: minmax(140px, 200px) auto 1fr;
+  gap: 4px 16px;
+  align-items: baseline;
+  padding: 8px 0;
+  border-bottom: 1px solid var(--border);
+  font-size: 0.86rem;
+}
+.reg-more-row:last-child { border-bottom: none; }
+.reg-more-name { color: var(--text-2); font-weight: 550; }
+.reg-more-ver { font-family: var(--mono); font-size: 0.72rem; color: var(--text-3); }
+.reg-more-blurb { color: var(--text-3); grid-column: 1 / -1; }
+@media (min-width: 640px) { .reg-more-blurb { grid-column: 3; } }
 
 /* ---------- Doc pages ---------- */
 .doc h1 {
   font-family: var(--font-display);
-  font-size: 2.5rem;
-  letter-spacing: -0.015em;
-  margin-bottom: 10px;
+  font-size: 2.15rem;
+  letter-spacing: -0.025em;
+  margin-bottom: 12px;
   font-weight: 600;
+  text-shadow: var(--mc-shadow);
 }
 .doc .lead {
   color: var(--text-2);
@@ -380,10 +399,10 @@ main {
 }
 .doc h2 {
   font-family: var(--font-display);
-  font-size: 1.5rem;
+  font-size: 1.28rem;
   margin: 46px 0 10px;
-  font-weight: 600;
-  letter-spacing: -0.01em;
+  font-weight: 500;
+  letter-spacing: -0.015em;
   scroll-margin-top: 80px;
 }
 .doc h2 .num { color: var(--text-3); font-weight: 400; margin-right: 10px; font-family: var(--font); }
@@ -513,7 +532,7 @@ main {
 /* ---------- FAQ ---------- */
 .faq h2 {
   font-family: var(--font-display);
-  font-size: 1.5rem; font-weight: 600; letter-spacing: -0.01em;
+  font-size: 1.28rem; font-weight: 500; letter-spacing: -0.015em;
   margin: 50px 0 6px; scroll-margin-top: 80px;
 }
 .faq h2:first-of-type { margin-top: 28px; }
@@ -560,7 +579,7 @@ main {
 /* ================= Analytics ================= */
 .analytics { margin-top: 8px; }
 .analytics section { margin-top: 54px; scroll-margin-top: 80px; }
-.analytics h2 { font-family: var(--font-display); font-size: 1.5rem; font-weight: 600; letter-spacing: -0.01em; margin-bottom: 5px; scroll-margin-top: 80px; }
+.analytics h2 { font-family: var(--font-display); font-size: 1.28rem; font-weight: 500; letter-spacing: -0.015em; margin-bottom: 5px; scroll-margin-top: 80px; }
 .analytics .as-sub { color: var(--text-3); margin-bottom: 22px; font-size: 0.93rem; max-width: 62ch; }
 .data-stamp { font-family: var(--mono); font-size: 0.72rem; color: var(--text-3); }
 .demo-flag {
@@ -569,32 +588,45 @@ main {
   color: var(--p-brew); border: 1px solid var(--p-brew); border-radius: 4px; padding: 1px 7px;
 }
 
-/* MEI status hero */
+/* MEI status — an index gauge, not an alert box */
 .mei {
-  display: flex; flex-wrap: wrap; align-items: center; gap: 10px 20px;
   border: 1px solid var(--border); border-radius: var(--radius);
-  background: var(--bg-1); padding: 22px 24px; margin-bottom: 10px;
-  position: relative; overflow: hidden;
+  background: var(--bg-1); padding: 26px 28px 24px;
+  margin-bottom: 32px;
 }
-.mei::before {
-  content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 4px;
-  background: var(--mei-c, var(--text-3));
-}
-.mei .mei-dot { width: 11px; height: 11px; border-radius: 50%; background: var(--mei-c, var(--text-3)); box-shadow: 0 0 0 4px color-mix(in srgb, var(--mei-c, var(--text-3)) 20%, transparent); flex-shrink: 0; }
-.mei .mei-label { font-family: var(--font-display); font-size: 1.55rem; font-weight: 600; color: var(--text); letter-spacing: -0.01em; }
-.mei .mei-note { color: var(--text-2); font-size: 0.93rem; flex: 1 1 100%; margin-top: 2px; }
+.mei-top { display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap; }
+.mei .mei-label { font-family: var(--font-display); font-size: 1.5rem; font-weight: 600; color: var(--mei-c, var(--text)); letter-spacing: -0.015em; }
+.mei .mei-note { color: var(--text-3); font-size: 0.9rem; }
 .mei[data-code="EXPANSION"]        { --mei-c: #57b98a; }
 .mei[data-code="STEADY"]           { --mei-c: #6f9bd1; }
 .mei[data-code="COOLING"]          { --mei-c: #d9a65b; }
 .mei[data-code="RECESSION"]        { --mei-c: #d3675c; }
 .mei[data-code="INSUFFICIENT_DATA"]{ --mei-c: var(--text-3); }
-.mei-scale { display: flex; gap: 6px; margin: 12px 0 32px; flex-wrap: wrap; }
-.mei-scale span {
-  font-size: 0.76rem;
-  color: var(--text-3); border: 1px solid var(--border); border-radius: 999px; padding: 4px 12px;
-  text-transform: capitalize;
+
+.mei-gauge { margin-top: 20px; }
+.mei-gauge-track {
+  position: relative;
+  height: 6px;
+  border-radius: 999px;
+  background: linear-gradient(to right,
+    color-mix(in srgb, #d3675c 55%, var(--bg-2)) 0%, color-mix(in srgb, #d3675c 55%, var(--bg-2)) 25%,
+    color-mix(in srgb, #d9a65b 55%, var(--bg-2)) 25%, color-mix(in srgb, #d9a65b 55%, var(--bg-2)) 50%,
+    color-mix(in srgb, #6f9bd1 55%, var(--bg-2)) 50%, color-mix(in srgb, #6f9bd1 55%, var(--bg-2)) 75%,
+    color-mix(in srgb, #57b98a 55%, var(--bg-2)) 75%, color-mix(in srgb, #57b98a 55%, var(--bg-2)) 100%);
 }
-.mei-scale span.on { color: var(--bg); background: var(--mei-c); border-color: var(--mei-c); font-weight: 600; }
+.mei-gauge-marker {
+  position: absolute;
+  top: 50%; transform: translate(-50%, -50%);
+  width: 15px; height: 15px; border-radius: 50%;
+  background: var(--mei-c, var(--text)); border: 2px solid var(--bg-1);
+  box-shadow: 0 0 0 2px var(--mei-c, var(--text));
+  transition: left 0.6s var(--ease);
+}
+.mei-gauge-labels {
+  display: flex; justify-content: space-between;
+  margin-top: 10px; font-size: 0.78rem; color: var(--text-3);
+}
+.mei-gauge-labels span.on { color: var(--text); font-weight: 600; }
 
 /* economy figures — single framed ledger, hairline-divided */
 .stat-row {
@@ -655,7 +687,7 @@ main {
 .nation-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 12px; margin: 16px 0; }
 .ncard { border: 1px solid var(--border); background: var(--bg-1); border-radius: var(--radius); padding: 17px 18px; }
 .ncard .n-top { display: flex; align-items: baseline; justify-content: space-between; gap: 8px; }
-.ncard .n-name { font-family: var(--font-display); font-weight: 600; color: var(--text); font-size: 1.08rem; letter-spacing: -0.005em; }
+.ncard .n-name { font-family: var(--font); font-weight: 700; color: var(--text); font-size: 1.04rem; letter-spacing: -0.005em; }
 .ncard .n-rank { font-family: var(--mono); font-size: 0.72rem; color: var(--text-3); }
 .ncard .n-mdi { font-family: var(--mono); font-size: 1.5rem; font-weight: 500; color: var(--text); margin: 9px 0 2px; }
 .ncard .n-mdi-lab { font-size: 0.7rem; color: var(--text-3); margin-bottom: 13px; }

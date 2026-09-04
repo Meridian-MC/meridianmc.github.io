@@ -32,7 +32,7 @@ export const FAQ: FaqEntry[] = [
   {
     category: "world",
     question: "Is the End open?",
-    answer: `<p><span class="short">No</span>, the End is closed. Elytra, shulker boxes, and other End goods only enter the economy through what players already had, which is the point — they stay rare.</p>`,
+    answer: `<p><span class="short">No</span>, the End is closed. Elytra and dragon trophies only enter the economy through what players already had, and stay rare on purpose. A handful of otherwise-impossible essentials — ender pearls, shulker shells, end stone, end rods, purpur, chorus fruit — are sold at the <a href="/faq#economy">Buy counter</a> so a closed End doesn't block ordinary building and storage.</p>`,
   },
   {
     category: "world",
@@ -96,7 +96,7 @@ export const FAQ: FaqEntry[] = [
 <ul>
   <li><strong>Selling to other players.</strong> Chest shops are the real economy. Left-click a chest holding what you want to sell, work out what is in demand, and produce it.</li>
   <li><strong>Jobs.</strong> Miner, Farmer, Fisherman, Hunter, and Explorer pay small amounts for relevant actions. Early capital, not a wage — capped at <span class="short">$1,500 a day</span>.</li>
-  <li><strong>The Commodities counter.</strong> The server buys raw metals, minerals, and bottled experience — iron, gold, copper, coal, redstone, lapis, quartz, XP bottles — at a deliberately low floor price. It is a safety net so you are never fully broke, not a place to get rich. Players will pay more.</li>
+  <li><strong>The Sell counter.</strong> The server buys raw metals, minerals, and bottled experience — iron, gold, copper, coal, redstone, lapis, quartz, XP bottles — at a deliberately low floor price. It is a safety net so you are never fully broke, not a place to get rich. Players will pay more.</li>
 </ul>`,
   },
   {
@@ -104,10 +104,10 @@ export const FAQ: FaqEntry[] = [
     question: "Is there a server shop?",
     answer: `<p>Two small counters, and that is all:</p>
 <ul>
-  <li><strong>Basics</strong> — a handful of emergency items like bread and torches, <span class="short">buy-only</span>, priced at a premium so buying from a player is always cheaper.</li>
-  <li><strong>Commodities</strong> — the server <span class="short">buys</span> raw metals, minerals, and bottled experience at a floor price. Sell-only.</li>
+  <li><strong>Buy</strong> — emergency items like bread and torches, plus a few things a closed End otherwise makes impossible to get (ender pearls, shulker shells, end stone, end rods, purpur, chorus fruit). <span class="short">Buy-only</span>, priced at a premium so buying from a player is always cheaper where that's an option.</li>
+  <li><strong>Sell</strong> — the server <span class="short">buys</span> raw metals, minerals, and bottled experience at a floor price. Sell-only.</li>
 </ul>
-<p>Everything interesting — diamonds, gear, enchanted books, potions, mob drops, End and Nether goods — is <span class="short">player market only</span>. The server never buys or sells it.</p>`,
+<p>Everything interesting — diamonds, gear, enchanted books, potions, mob drops, elytra, dragon trophies — is <span class="short">player market only</span>. The server never buys or sells it.</p>`,
   },
   {
     category: "economy",

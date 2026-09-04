@@ -18,9 +18,8 @@ import Base from "../layouts/Base.astro";
       <h2>State of the economy</h2>
       <p class="as-sub">The Meridian Economic Index compares each week's trade volume against the week before.</p>
       <div class="mei" data-slot="mei" data-code="INSUFFICIENT_DATA">
-        <span class="mei-dot"></span><span class="mei-label">Loading&hellip;</span>
+        <div class="mei-top"><span class="mei-label">Loading&hellip;</span></div>
       </div>
-      <div class="mei-scale" data-slot="mei-scale"></div>
       <div class="stat-row" data-slot="econ-stats"></div>
     </section>
 

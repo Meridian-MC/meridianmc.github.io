@@ -10,6 +10,7 @@ document.addEventListener('click', (e) => {
 function initCopy() {
   const box = document.querySelector('[data-copy]');
   if (!box) return;
+  const icon = box.querySelector('.copy-ico');
   box.addEventListener('click', async () => {
     const text = box.getAttribute('data-copy');
     try {
@@ -25,6 +26,9 @@ function initCopy() {
       ta.remove();
     }
     showToast('Server address copied');
+    box.classList.add('copied');
+    clearTimeout(initCopy._t);
+    initCopy._t = setTimeout(() => box.classList.remove('copied'), 1400);
   });
 }
 

@@ -70,9 +70,9 @@ export const PLUGINS: PluginEntry[] = [
     featured: true,
     colorVar: "--p-market",
     icon: "/assets/pi/market.png",
-    blurb: "The two small server-run counters — Basics and Commodities.",
+    blurb: "The two small server-run counters — Buy and Sell.",
     description:
-      "A GUI-based server shop, kept deliberately small: a buy-only Basics counter for emergency items at a premium, and a Commodities counter where the server buys raw metals, minerals, and bottled experience at a floor price. Everything else stays on the player market.",
+      "A GUI-based server shop, kept deliberately small: a buy-only counter for emergency items and a few things the closed End otherwise makes impossible to get, and a sell counter where the server buys raw metals, minerals, and bottled experience at a floor price. Everything else stays on the player market.",
     links: [{ label: "SpigotMC", href: "https://www.spigotmc.org/resources/economyshopgui.69927/" }],
   },
   {
@@ -180,7 +180,7 @@ export const PLUGINS: PluginEntry[] = [
     name: "BottledExp",
     version: "3.2.4.0",
     category: "Gameplay",
-    blurb: "Lets you bottle your XP into stackable experience bottles instead of losing it on death — and turns grinding into a good the Commodities counter will buy.",
+    blurb: "Lets you bottle your XP into stackable experience bottles instead of losing it on death — and turns grinding into a good the Sell counter will buy.",
   },
 
   // ---- Protection & moderation ----

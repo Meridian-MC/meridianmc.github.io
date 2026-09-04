@@ -111,17 +111,24 @@
       var mei = root.querySelector("[data-slot=mei]");
       if (mei) {
         var c = e.classification;
+        var idx = MEI_ORDER.indexOf(c.code);
         mei.setAttribute("data-code", c.code);
-        mei.innerHTML = '<span class="mei-dot"></span><span class="mei-label">' + esc(c.label) +
-          '</span><span class="mei-note">' + esc(c.note) + "</span>";
-        var scale = root.querySelector("[data-slot=mei-scale]");
-        if (scale) {
-          scale.innerHTML = MEI_ORDER.map(function (k) {
-            return '<span' + (k === c.code ? ' class="on"' : "") + ">" + k.toLowerCase() + "</span>";
-          }).join("");
-          scale.parentNode && scale.setAttribute("data-code", c.code);
-          scale.style.setProperty("--mei-c", getComputedStyle(mei).getPropertyValue("--mei-c"));
+        var gauge = "";
+        if (idx >= 0) {
+          var pct = ((idx + 0.5) / MEI_ORDER.length) * 100;
+          gauge =
+            '<div class="mei-gauge">' +
+              '<div class="mei-gauge-track"><span class="mei-gauge-marker" style="left:' + pct.toFixed(1) + '%"></span></div>' +
+              '<div class="mei-gauge-labels">' + MEI_ORDER.map(function (k) {
+                var name = k.charAt(0) + k.slice(1).toLowerCase();
+                return '<span' + (k === c.code ? ' class="on"' : "") + ">" + name + "</span>";
+              }).join("") +
+              "</div>" +
+            "</div>";
         }
+        mei.innerHTML =
+          '<div class="mei-top"><span class="mei-label">' + esc(c.label) + '</span>' +
+          '<span class="mei-note">' + esc(c.note) + "</span></div>" + gauge;
       }
       var stats = root.querySelector("[data-slot=econ-stats]");
       if (stats) {
