@@ -339,7 +339,7 @@ main {
   font-weight: 500;
   scroll-margin-top: 80px;
 }
-.section-intro { color: var(--text-3); margin-top: 6px; margin-bottom: 30px; max-width: 62ch; }
+.section-intro { color: var(--text-2); text-shadow: 0 1px 3px rgba(0,0,0,0.7); margin-top: 6px; margin-bottom: 30px; max-width: 62ch; }
 
 /* ---------- Bento: what's different ---------- */
 .bento {
