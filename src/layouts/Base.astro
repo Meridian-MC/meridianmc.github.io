@@ -65,9 +65,24 @@ const NAV = [
         <a href={item.href} class={item.href === path ? "active" : undefined}>{item.label}</a>
       ))}
     </div>
+    <button class="cmdk-trigger" data-cmdk-open type="button" aria-label="Search Meridian">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+      <span class="cmdk-kbd">&#8984;K</span>
+    </button>
   </nav>
   <div class="ticker-wrap" data-slot="ticker"></div>
 </header>
+
+<div class="cmdk-overlay" data-cmdk hidden>
+  <div class="cmdk-box" role="dialog" aria-modal="true" aria-label="Search Meridian">
+    <div class="cmdk-input-row">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+      <input type="text" class="cmdk-input" data-cmdk-input placeholder="Jump to a page or section&hellip;" autocomplete="off" spellcheck="false">
+      <kbd class="cmdk-esc">esc</kbd>
+    </div>
+    <div class="cmdk-results" data-cmdk-results></div>
+  </div>
+</div>
 
 <slot />
 
@@ -78,6 +93,7 @@ const NAV = [
       ? <>A Vanilla+ survival server running on <a href="https://papermc.io" rel="noopener">Paper</a>. Not affiliated with Mojang or Microsoft.</>
       : <>meridian-mc.net is not affiliated with Mojang or Microsoft.</>}
   </div>
+  <div class="f-loc">Hosted in Vint Hill, Virginia.</div>
 </footer>
 
 <script is:inline src="/assets/app.js"></script>

@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-04T18:53:19Z",
+  "generated": "2026-09-04T19:51:37Z",
   "meta": {
     "players_tracked": 12,
     "active_traders": 10,
@@ -5851,9 +5851,9 @@
     "mean": 99083.33
   },
   "server": {
-    "started_at": "2026-09-01T14:53:19Z",
+    "started_at": "2026-09-01T15:51:37Z",
     "tps": 20.0,
-    "checked": "2026-09-04T18:53:19Z"
+    "checked": "2026-09-04T19:51:37Z"
   },
   "nations": [
     {
@@ -5862,6 +5862,7 @@
       "chunks": 41,
       "members": 9,
       "treasury": 2600000,
+      "color": "#7CB48E",
       "territory": 0.683,
       "population": 0.6,
       "wealth": 0.52,
@@ -5874,6 +5875,7 @@
       "chunks": 33,
       "members": 7,
       "treasury": 1450000,
+      "color": "#6F9BD1",
       "territory": 0.55,
       "population": 0.467,
       "wealth": 0.29,
@@ -5886,6 +5888,7 @@
       "chunks": 18,
       "members": 4,
       "treasury": 620000,
+      "color": "#D9A65B",
       "territory": 0.3,
       "population": 0.267,
       "wealth": 0.124,
@@ -5898,6 +5901,7 @@
       "chunks": 9,
       "members": 2,
       "treasury": 90000,
+      "color": "#B3773F",
       "territory": 0.15,
       "population": 0.133,
       "wealth": 0.018,
@@ -5961,6 +5965,38 @@
       "members": 1,
       "bank": 3400,
       "level": 0
+    }
+  ],
+  "events": [
+    {
+      "type": "war",
+      "text": "the Verne Compact declared war on Oskerholt",
+      "at": "2026-09-04T16:51:37Z"
+    },
+    {
+      "type": "nation",
+      "text": "Kell was formed",
+      "at": "2026-09-04T05:51:37Z"
+    },
+    {
+      "type": "land",
+      "text": "Ashgrove was founded",
+      "at": "2026-09-03T17:51:37Z"
+    },
+    {
+      "type": "land",
+      "text": "hollowgate camp was founded",
+      "at": "2026-09-03T10:51:37Z"
+    },
+    {
+      "type": "nation",
+      "text": "Halewick was formed",
+      "at": "2026-09-02T14:51:37Z"
+    },
+    {
+      "type": "land",
+      "text": "Fenmoor was founded",
+      "at": "2026-09-01T18:51:37Z"
     }
   ]
 }

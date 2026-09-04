@@ -223,7 +223,47 @@
     return '<img class="p-avatar" src="https://mc-heads.net/avatar/' + encodeURIComponent(name) + '/24" alt="" width="24" height="24" loading="lazy">';
   }
 
+  function relTime(iso) {
+    var t = Date.parse(iso);
+    if (isNaN(t)) return "";
+    var s = Math.max(0, Math.round((Date.now() - t) / 1000));
+    if (s < 90) return "just now";
+    var m = Math.round(s / 60); if (m < 60) return m + "m ago";
+    var h = Math.round(m / 60); if (h < 48) return h + "h ago";
+    return Math.round(h / 24) + "d ago";
+  }
+
+  var EVENT_LABEL = { nation: "Nation", land: "Land", war: "War" };
+
+  // Homepage "server pulse": lands/nations counts + a recent-events feed.
+  // Independent of [data-analytics], since the homepage has no dashboard root.
+  function renderPulse(d) {
+    var statsEl = document.querySelector("[data-slot=pulse-stats]");
+    if (statsEl) {
+      var lands = d.lands || [], nations = d.nations || [];
+      var chunks = lands.reduce(function (s, l) { return s + (l.chunks || 0); }, 0);
+      var traders = (d.meta && d.meta.active_traders) || 0;
+      statsEl.innerHTML =
+        tile(intf(lands.length), "Lands founded") +
+        tile(intf(nations.length), "Nations formed") +
+        tile(intf(chunks), "Chunks claimed") +
+        tile(intf(traders), "Active traders");
+    }
+    var feedEl = document.querySelector("[data-slot=pulse-feed]");
+    if (feedEl) {
+      var events = d.events || [];
+      feedEl.innerHTML = !events.length ? '<p class="c-empty">No events yet, check back once the server is live.</p>' :
+        events.slice(0, 6).map(function (ev) {
+          var label = EVENT_LABEL[ev.type] || ev.type;
+          return '<div class="pulse-row pulse-' + esc(ev.type) + '"><span class="pulse-tag">' + esc(label) +
+            '</span><span class="pulse-text">' + esc(ev.text) + '</span><span class="pulse-time">' + relTime(ev.at) + "</span></div>";
+        }).join("");
+    }
+  }
+
   function render(d) {
+    renderPulse(d);
+    // Header ticker: every page, independent of the [data-analytics] root.
     // Header ticker: every page, independent of the [data-analytics] root.
     if (d.economy && d.economy.items) {
       renderTicker(document.querySelector("[data-slot=ticker]"), d.economy.items);
@@ -322,7 +362,8 @@
               return '<div class="idx-bar"><span>' + b[0] + '</span><span class="track"><span class="fill" style="width:' +
                 Math.round(b[1] * 100) + '%"></span></span><span class="v">' + b[1].toFixed(2) + "</span></div>";
             }).join("");
-          return '<div class="ncard' + (i === 0 ? " ncard-top" : "") + '">' +
+          var style = /^#[0-9a-f]{6}$/i.test(n.color || "") ? ' style="--p:' + n.color + '"' : "";
+          return '<div class="ncard' + (i === 0 ? " ncard-top" : "") + '"' + style + '>' +
             (i === 0 ? '<span class="n-crown">Top nation</span>' : "") +
             '<div class="n-top"><span class="n-name">' + esc(n.name || "Unnamed") +
             '</span><span class="n-rank">#' + (i + 1) + '</span></div>' +

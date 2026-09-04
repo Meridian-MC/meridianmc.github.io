@@ -146,7 +146,108 @@ function initAccordionLinks() {
   });
 }
 
+// Cmd+K / Ctrl+K quick-jump palette. Static index, no build step or backend.
+const CMDK_INDEX = [
+  { label: 'Home', href: '/' },
+  { label: 'Server pulse', href: '/#pulse' },
+  { label: "What's different here", href: '/#different' },
+  { label: 'Plugins', href: '/#plugins' },
+  { label: 'Rules: Community', href: '/rules#community' },
+  { label: 'Rules: Player vs. Player', href: '/rules#pvp' },
+  { label: 'Rules: Lands & Nations', href: '/rules#lands' },
+  { label: 'Rules: Client', href: '/rules#client' },
+  { label: 'Rules: Farms', href: '/rules#farms' },
+  { label: 'Rules: Moderation', href: '/rules#moderation' },
+  { label: 'Lands: Claiming', href: '/lands#lands' },
+  { label: 'Lands: Nations', href: '/lands#nations' },
+  { label: 'Lands: Vassals', href: '/lands#vassals' },
+  { label: 'Lands: Nation registry', href: '/lands#registry' },
+  { label: 'Warfare', href: '/war' },
+  { label: 'Economy: State of the economy', href: '/economy#state' },
+  { label: 'Economy: Wealth', href: '/economy#wealth' },
+  { label: 'Economy: Markets', href: '/economy#markets' },
+  { label: 'Economy: Item prices & volume', href: '/economy#prices' },
+  { label: 'Economy: How money moves', href: '/economy#flow' },
+  { label: 'Economy: Money & trade', href: '/economy#money' },
+  { label: 'FAQ: Getting started', href: '/faq#starting' },
+  { label: 'FAQ: The world', href: '/faq#world' },
+  { label: 'FAQ: Economy', href: '/faq#economy' },
+  { label: 'Commands: Getting around', href: '/commands#getting-around' },
+  { label: 'Commands: Homes & personal', href: '/commands#personal' },
+  { label: 'Commands: Communication', href: '/commands#chat' },
+  { label: 'Commands: Economy & shops', href: '/commands#economy' },
+  { label: 'Commands: Jobs', href: '/commands#jobs' },
+  { label: 'Commands: Land & nation', href: '/commands#land' },
+  { label: 'Commands: Warfare', href: '/commands#war' },
+  { label: 'Live Map', href: '/map' },
+];
+
+function initCommandPalette() {
+  const overlay = document.querySelector('[data-cmdk]');
+  if (!overlay) return;
+  const input = overlay.querySelector('[data-cmdk-input]');
+  const results = overlay.querySelector('[data-cmdk-results]');
+  let active = 0;
+  let shown = [];
+
+  function render(list) {
+    shown = list;
+    active = 0;
+    results.innerHTML = !list.length
+      ? '<div class="cmdk-empty">No matches.</div>'
+      : list.map((item, i) =>
+          `<a href="${item.href}" class="cmdk-item${i === 0 ? ' on' : ''}" data-i="${i}">${item.label}</a>`
+        ).join('');
+  }
+
+  function filter(q) {
+    q = q.trim().toLowerCase();
+    if (!q) return render(CMDK_INDEX.slice(0, 10));
+    render(CMDK_INDEX.filter((item) => item.label.toLowerCase().includes(q)));
+  }
+
+  function highlight(i) {
+    const items = results.querySelectorAll('.cmdk-item');
+    items.forEach((el) => el.classList.remove('on'));
+    if (items[i]) { items[i].classList.add('on'); items[i].scrollIntoView({ block: 'nearest' }); }
+    active = i;
+  }
+
+  function open() {
+    overlay.hidden = false;
+    document.body.style.overflow = 'hidden';
+    filter('');
+    input.focus();
+  }
+  function close() {
+    overlay.hidden = true;
+    document.body.style.overflow = '';
+    input.value = '';
+  }
+
+  document.addEventListener('keydown', (e) => {
+    if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === 'k') {
+      e.preventDefault();
+      overlay.hidden ? open() : close();
+    } else if (e.key === 'Escape' && !overlay.hidden) {
+      close();
+    }
+  });
+  document.querySelectorAll('[data-cmdk-open]').forEach((btn) => btn.addEventListener('click', open));
+  overlay.addEventListener('click', (e) => { if (e.target === overlay) close(); });
+  input.addEventListener('input', () => filter(input.value));
+  input.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowDown') { e.preventDefault(); highlight(Math.min(active + 1, shown.length - 1)); }
+    else if (e.key === 'ArrowUp') { e.preventDefault(); highlight(Math.max(active - 1, 0)); }
+    else if (e.key === 'Enter') {
+      const item = shown[active];
+      if (item) { close(); location.href = item.href; }
+    }
+  });
+}
+
 initCopy();
 initDiscord();
 initServerStatus();
 initAccordionLinks();
+initCommandPalette();

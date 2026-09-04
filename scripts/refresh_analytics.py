@@ -116,6 +116,20 @@ def parse_trade_log(raw):
     return rows
 
 
+# Lands lets players prefix a claim/nation name with a MiniMessage hex tag to
+# set its map color, e.g. "<#FF5555>Halewick". Pull that out for both the
+# clean display name and a CSS-ready accent color.
+_COLOR_RE = re.compile(r"^<#([0-9A-Fa-f]{6})>\s*")
+
+
+def _split_color(raw_name):
+    raw_name = raw_name or ""
+    m = _COLOR_RE.match(raw_name)
+    if m:
+        return _COLOR_RE.sub("", raw_name), "#" + m.group(1).upper()
+    return raw_name, None
+
+
 def lands_from_db(raw):
     fd, tmp = tempfile.mkstemp(suffix=".db")
     os.write(fd, raw)
@@ -133,11 +147,15 @@ def lands_from_db(raw):
         except Exception:
             pass
         members = len((area.get("holder") or {}).get("trusted") or []) + 1
-        lands.append({"id": d.get("ulid") or d.get("id"), "name": d.get("name"),
+        name, color = _split_color(d.get("name"))
+        lands.append({"id": d.get("ulid") or d.get("id"), "name": name, "color": color,
                       "type": (d.get("type") or "").lower(), "bank": float(d.get("balance") or 0),
                       "level": d.get("level") or 0, "members": members,
                       "chunks": claims.get(d.get("ulid") or d.get("id"), 0)})
-    nations = [{"name": r["name"], "tag": r["tag"]} for r in con.execute("SELECT * FROM lands_nations")]
+    nations = []
+    for r in con.execute("SELECT * FROM lands_nations"):
+        name, color = _split_color(r["name"])
+        nations.append({"name": name, "tag": r["tag"], "color": color})
     con.close()
     os.unlink(tmp)
     return lands, nations
@@ -318,7 +336,7 @@ def main():
     nation_rows = []
     for nrec in nations:
         ls = lands_by_nation.get(nrec["name"], [])
-        nation_rows.append(dict(name=nrec["name"], tag=nrec["tag"],
+        nation_rows.append(dict(name=nrec["name"], tag=nrec["tag"], color=nrec.get("color"),
                                 **mdi(sum(l["chunks"] for l in ls),
                                       sum(l["members"] for l in ls),
                                       sum(l["bank"] for l in ls),
