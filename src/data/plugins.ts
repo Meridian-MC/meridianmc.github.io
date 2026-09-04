@@ -72,7 +72,7 @@ export const PLUGINS: PluginEntry[] = [
     icon: "/assets/pi/market.png",
     blurb: "The two small server-run counters: Buy and Sell.",
     description:
-      "A GUI-based server shop, kept deliberately small: a buy-only counter for emergency items and a few things the closed End otherwise makes impossible to get, and a sell counter where the server buys raw metals, minerals, and bottled experience at a floor price. Everything else stays on the player market.",
+      "A GUI-based server shop, kept deliberately small: a buy-only counter for emergency items, a few things the closed End otherwise makes impossible to get, and armor trims that are brutal to find naturally; and a sell counter where the server buys raw metals, minerals, and hard-to-farm potion ingredients at a floor price. Everything else stays on the player market.",
     links: [{ label: "SpigotMC", href: "https://www.spigotmc.org/resources/economyshopgui.69927/" }],
   },
   {
@@ -186,7 +186,7 @@ export const PLUGINS: PluginEntry[] = [
     name: "BottledExp",
     version: "3.2.4.0",
     category: "Gameplay",
-    blurb: "Lets you bottle your XP into stackable experience bottles instead of losing it on death, and turns grinding into a good the Sell counter will buy.",
+    blurb: "Lets you bottle your XP into stackable experience bottles instead of losing it on death.",
   },
 
   // ---- Protection & moderation ----
@@ -200,7 +200,7 @@ export const PLUGINS: PluginEntry[] = [
     icon: "/assets/pi/coreprotect.png",
     blurb: "Block logging and anticheat.",
     description:
-      "CoreProtect logs every block change, so griefing inside a claim can be traced and rolled back. GrimAC is the anticheat, covering movement, combat, and packet checks, alongside NoChatReports for chat.",
+      "CoreProtect logs every block change, so griefing inside a claim can be traced and rolled back. GrimAC is the anticheat, covering movement, combat, and packet checks.",
     links: [
       { label: "CoreProtect", href: "https://modrinth.com/plugin/coreprotect" },
       { label: "GrimAC", href: "https://github.com/GrimAnticheat/Grim" },

@@ -116,7 +116,7 @@ export const FAQ: FaqEntry[] = [
 <ul>
   <li><strong>Selling to other players.</strong> Chest shops are the real economy. Left-click a chest holding what you want to sell, work out what is in demand, and produce it.</li>
   <li><strong>Jobs.</strong> Miner, Farmer, Fisherman, Hunter, and Explorer pay small amounts for relevant actions. Early capital, not a wage: capped at <span class="short">$1,500 a day</span>.</li>
-  <li><strong>The Sell counter.</strong> The server buys raw metals, minerals, and bottled experience (iron, gold, copper, coal, redstone, lapis, quartz, XP bottles) at a deliberately low floor price. It is a safety net so you are never fully broke, not a place to get rich. Players will pay more.</li>
+  <li><strong>The Sell counter.</strong> The server buys raw metals, minerals, and hard-to-farm potion ingredients (iron, gold, copper, coal, redstone, lapis, quartz, blaze powder, ghast tears, and more) at a deliberately low floor price. It is a safety net so you are never fully broke, not a place to get rich. Players will pay more.</li>
 </ul>`,
   },
   {
@@ -124,8 +124,8 @@ export const FAQ: FaqEntry[] = [
     question: "Is there a server shop?",
     answer: `<p>Two small counters, and that is all:</p>
 <ul>
-  <li><strong>Buy:</strong> emergency items like bread and torches, plus a few things a closed End otherwise makes impossible to get (ender pearls, shulker shells, end stone, end rods, purpur, chorus fruit). <span class="short">Buy-only</span>, priced at a premium so buying from a player is always cheaper where that's an option.</li>
-  <li><strong>Sell:</strong> the server <span class="short">buys</span> raw metals, minerals, and bottled experience at a floor price. Sell-only.</li>
+  <li><strong>Buy:</strong> emergency items like bread and torches, a few things a closed End otherwise makes impossible to get (ender pearls, shulker shells, end stone, end rods, purpur, chorus fruit), and every armor trim smithing template, since hunting them down naturally is brutal. <span class="short">Buy-only</span>, priced at a premium so buying from a player is always cheaper where that's an option.</li>
+  <li><strong>Sell:</strong> the server <span class="short">buys</span> raw metals, minerals, and hard-to-farm potion ingredients at a floor price. Sell-only.</li>
 </ul>
 <p>Everything interesting (diamonds, gear, enchanted books, potions, mob drops, elytra, dragon trophies) is <span class="short">player market only</span>. The server never buys or sells it.</p>`,
   },
@@ -134,8 +134,8 @@ export const FAQ: FaqEntry[] = [
     question: "How much does land cost?",
     answer: `<p>Founding a land with <code>/lands create</code> is free and includes your <span class="short">first chunk free</span>. After that:</p>
 <ul>
-  <li>The next chunk costs <span class="short">$15,000</span>, and each one after rises by <span class="short">$3,000</span>, so bigger claims cost more to grow.</li>
-  <li>Weekly upkeep is <span class="short">$1,500 per chunk</span>, taken from the shared land bank.</li>
+  <li>The next chunk costs <span class="short">$2,000</span>, and each one after rises by <span class="short">$400</span>, so bigger claims cost more to grow.</li>
+  <li>Weekly upkeep is <span class="short">$150 per chunk</span>, taken from the shared land bank.</li>
   <li>Tiers and nation membership change these numbers. The full breakdown is in the <a href="/lands">Lands guide</a>.</li>
 </ul>`,
   },

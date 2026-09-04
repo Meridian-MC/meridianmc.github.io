@@ -2,7 +2,7 @@ name: Refresh economy analytics
 
 on:
   schedule:
-    - cron: "23 */2 * * *"     # every 2 hours
+    - cron: "*/15 * * * *"     # every 15 min (the uptime figure is only as fresh as the last run)
   workflow_dispatch: {}       # allow manual runs from the Actions tab
 
 concurrency:
