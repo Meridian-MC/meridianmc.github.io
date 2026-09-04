@@ -124,7 +124,7 @@ export const FAQ: FaqEntry[] = [
     question: "Is there a server shop?",
     answer: `<p>Two small counters, and that is all:</p>
 <ul>
-  <li><strong>Buy:</strong> emergency items like bread and torches, a few things a closed End otherwise makes impossible to get (ender pearls, shulker shells, end stone, end rods, purpur, chorus fruit), and every armor trim smithing template, since hunting them down naturally is brutal. <span class="short">Buy-only</span>, priced at a premium so buying from a player is always cheaper where that's an option.</li>
+  <li><strong>Buy:</strong> basics, End-only materials since the End is closed (ender pearls, shulker shells, end stone, end rods, purpur, chorus fruit), and every armor trim smithing template. <span class="short">Buy-only</span>, priced at a premium so buying from a player is always cheaper where that's an option.</li>
   <li><strong>Sell:</strong> the server <span class="short">buys</span> raw metals, minerals, and hard-to-farm potion ingredients at a floor price. Sell-only.</li>
 </ul>
 <p>Everything interesting (diamonds, gear, enchanted books, potions, mob drops, elytra, dragon trophies) is <span class="short">player market only</span>. The server never buys or sells it.</p>`,
@@ -135,7 +135,7 @@ export const FAQ: FaqEntry[] = [
     answer: `<p>Founding a land with <code>/lands create</code> is free and includes your <span class="short">first chunk free</span>. After that:</p>
 <ul>
   <li>The next chunk is <span class="short">free</span> too, and each one after that adds <span class="short">$400</span> to the last, so bigger claims cost more to grow.</li>
-  <li>Weekly upkeep is <span class="short">$150 per chunk</span>, taken from the shared land bank.</li>
+  <li>Weekly upkeep is <span class="short">$50 per chunk</span>, taken from the shared land bank.</li>
   <li>Tiers and nation membership change these numbers. The full breakdown is in the <a href="/lands">Lands guide</a>.</li>
 </ul>`,
   },
