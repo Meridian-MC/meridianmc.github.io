@@ -369,7 +369,8 @@
             '</span><span class="n-rank">#' + (i + 1) + '</span></div>' +
             '<div class="n-mdi">' + n.mdi.toFixed(3) + '</div><div class="n-mdi-lab">Development index</div>' +
             '<div class="n-facts"><span><b>' + intf(n.chunks) + "</b> chunks</span><span><b>" + intf(n.members) +
-            "</b> members</span><span><b>" + money(n.treasury) + "</b></span></div>" + bars + "</div>";
+            "</b> members</span><span><b>" + money(n.treasury) + "</b> treasury</span><span><b>" +
+            money(n.members ? n.treasury / n.members : 0) + "</b> / capita</span></div>" + bars + "</div>";
         }).join("");
     }
     var lt = root.querySelector("[data-slot=land-table]");
