@@ -1,8 +1,8 @@
 {
-  "generated": "2026-09-05T20:27:41Z",
+  "generated": "2026-09-05T20:41:21Z",
   "meta": {
     "players_tracked": 27,
-    "active_traders": 12,
+    "active_traders": 13,
     "data_days": 1,
     "sufficient": false,
     "demo": false,
@@ -15,9 +15,9 @@
     "classification": {
       "code": "INSUFFICIENT_DATA",
       "label": "Insufficient data",
-      "note": "Need 8+ active traders and 14+ days of history. Currently 12 traders / 1 days."
+      "note": "Need 8+ active traders and 14+ days of history. Currently 13 traders / 1 days."
     },
-    "money_supply_players": 117779.2,
+    "money_supply_players": 117229.2,
     "money_supply_series": [
       [
         "2026-09-04",
@@ -25,18 +25,18 @@
       ],
       [
         "2026-09-05",
-        50279.2
+        49729.2
       ]
     ],
     "trade_volume_series": [
       [
         "2026-09-05",
-        58695.2
+        59245.2
       ]
     ],
-    "trade_volume_7d": 58695.2,
+    "trade_volume_7d": 59245.2,
     "server_shop_transactions": 0,
-    "gini": 0.38,
+    "gini": 0.387,
     "price_index": {
       "value": null,
       "series": [],
@@ -108,10 +108,10 @@
       }
     ],
     "median": 2500.0,
-    "mean": 4362.19
+    "mean": 4341.82
   },
   "server": {
-    "checked": "2026-09-05T20:27:41Z",
+    "checked": "2026-09-05T20:41:21Z",
     "started_at": "2026-09-05T20:19:13Z",
     "tps": 20.0
   },
