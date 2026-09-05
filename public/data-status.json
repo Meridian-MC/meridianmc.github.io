@@ -1,6 +1,6 @@
 {
-  "ok": true,
-  "at": "2026-09-05T00:39:00Z",
+  "ok": false,
+  "at": "2026-09-05T00:43:57Z",
   "credential": "MC_FTP_PASSWORD_2",
-  "detail": ""
+  "detail": "FTP rejected the login (530 Authentication failed.). MC_FTP_PASSWORD is almost certainly stale: update the repository secret to the server's current FTP password."
 }
