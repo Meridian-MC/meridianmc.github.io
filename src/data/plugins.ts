@@ -72,7 +72,7 @@ export const PLUGINS: PluginEntry[] = [
     icon: "/assets/pi/market.png",
     blurb: "The two small server-run counters: Buy and Sell.",
     description:
-      "A GUI-based server shop, kept deliberately small: a buy-only counter for basics, End-only materials, and armor trims, and a sell-only counter where the server buys raw metals, minerals, and hard-to-farm potion ingredients at a floor price. Everything else stays on the player market.",
+      "A GUI-based server shop, kept deliberately small: a buy-only counter for basics, End-only materials, armor trims, and the rarest potion ingredients, and a sell-only counter where the server buys raw metals and minerals at a floor price. Everything else stays on the player market.",
     links: [{ label: "SpigotMC", href: "https://www.spigotmc.org/resources/economyshopgui.69927/" }],
   },
   {

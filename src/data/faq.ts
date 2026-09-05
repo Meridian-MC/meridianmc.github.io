@@ -118,7 +118,7 @@ export const FAQ: FaqEntry[] = [
 <ul>
   <li><strong>Selling to other players.</strong> Chest shops are the real economy. Left-click a chest holding what you want to sell, work out what is in demand, and produce it.</li>
   <li><strong>Jobs.</strong> Miner, Farmer, Fisherman, Hunter, and Explorer pay small amounts for relevant actions. Early capital, not a wage: capped at <span class="short">$1,500 a day</span>.</li>
-  <li><strong>The Sell counter.</strong> The server buys raw metals, minerals, and hard-to-farm potion ingredients (iron, gold, copper, coal, redstone, lapis, quartz, blaze powder, ghast tears, and more) at a deliberately low floor price. It is a safety net so you are never fully broke, not a place to get rich. Players will pay more.</li>
+  <li><strong>The Sell counter.</strong> The server buys raw metals and minerals (iron, gold, copper, coal, redstone, lapis, quartz, and more) at a deliberately low floor price. It is a safety net so you are never fully broke, not a place to get rich. Players will pay more.</li>
 </ul>`,
   },
   {
@@ -126,8 +126,8 @@ export const FAQ: FaqEntry[] = [
     question: "Is there a server shop?",
     answer: `<p>Two small counters, and that is all:</p>
 <ul>
-  <li><strong>Buy:</strong> basics, End-only materials since the End is closed (ender pearls, shulker shells, end stone, end rods, purpur, chorus fruit), and every armor trim smithing template. <span class="short">Buy-only</span>, priced at a premium so buying from a player is always cheaper where that's an option.</li>
-  <li><strong>Sell:</strong> the server <span class="short">buys</span> raw metals, minerals, and hard-to-farm potion ingredients at a floor price. Sell-only.</li>
+  <li><strong>Buy:</strong> basics, End-only materials since the End is closed (ender pearls, shulker shells, end stone, end rods, purpur, chorus fruit), every armor trim smithing template, and the rarest potion ingredients (phantom membrane, turtle scute, rabbit's foot). <span class="short">Buy-only</span>, priced at a premium so buying from a player is always cheaper where that's an option.</li>
+  <li><strong>Sell:</strong> the server <span class="short">buys</span> raw metals and minerals at a floor price. Sell-only.</li>
 </ul>
 <p>Everything interesting (diamonds, gear, enchanted books, potions, mob drops, elytra, dragon trophies) is <span class="short">player market only</span>. The server never buys or sells it.</p>`,
   },
