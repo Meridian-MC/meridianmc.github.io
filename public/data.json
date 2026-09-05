@@ -1,8 +1,8 @@
 {
-  "generated": "2026-09-05T16:12:29Z",
+  "generated": "2026-09-05T16:27:59Z",
   "meta": {
     "players_tracked": 5,
-    "active_traders": 0,
+    "active_traders": 1,
     "data_days": 1,
     "sufficient": false,
     "demo": false,
@@ -15,19 +15,28 @@
     "classification": {
       "code": "INSUFFICIENT_DATA",
       "label": "Insufficient data",
-      "note": "Need 8+ active traders and 14+ days of history. Currently 0 traders / 1 days."
+      "note": "Need 8+ active traders and 14+ days of history. Currently 1 traders / 1 days."
     },
-    "money_supply_players": 12500.0,
+    "money_supply_players": 12420.0,
     "money_supply_series": [
       [
         "2026-09-04",
         0.0
+      ],
+      [
+        "2026-09-05",
+        -80.0
       ]
     ],
-    "trade_volume_series": [],
-    "trade_volume_7d": 0,
+    "trade_volume_series": [
+      [
+        "2026-09-05",
+        80.0
+      ]
+    ],
+    "trade_volume_7d": 80.0,
     "server_shop_transactions": 0,
-    "gini": 0.0,
+    "gini": 0.005,
     "price_index": {
       "value": null,
       "series": [],
@@ -55,17 +64,13 @@
       },
       {
         "name": "WhenAtRome",
-        "balance": 2500.0
+        "balance": 2420.0
       }
     ],
     "median": 2500.0,
-    "mean": 2500.0
+    "mean": 2484.0
   },
-  "server": {
-    "checked": "2026-09-05T16:12:29Z",
-    "started_at": "2026-09-05T15:57:54Z",
-    "tps": 20.0
-  },
+  "server": {},
   "nations": [],
   "lands": []
 }
