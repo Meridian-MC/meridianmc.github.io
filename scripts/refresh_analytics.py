@@ -23,6 +23,12 @@ PW = os.environ.get("MC_FTP_PASSWORD") or None
 PROFILE = os.environ.get("MC_PROFILE", "profile_orfqa")
 OUT = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "public", "data.json"))
 
+# Optional remote path to publish the finished file to, e.g.
+# profile_orfqa/plugins/squaremap/web/data.json. squaremap already serves that
+# directory publicly, so the site can fetch fresh figures without waiting on a
+# commit and a site rebuild. Unset means "commit it the normal way only".
+PUBLISH_PATH = os.environ.get("MC_PUBLISH_PATH") or None
+
 # Optional: live server health (TPS + uptime) via RCON. If MC_RCON_PASSWORD is
 # unset or the port is unreachable, data.server is left empty and the website
 # just omits those two figures.
@@ -406,6 +412,20 @@ def main():
     json.dump(data, open(OUT, "w"), indent=2)
     print("wrote", OUT, "| MEI", data["economy"]["classification"]["code"],
           "| players", data["meta"]["players_tracked"], "| nations", len(nation_rows))
+
+    # Optionally publish straight to the server's own public webserver
+    # (squaremap already serves that directory), so the site can read fresh
+    # figures without a commit and a full site rebuild for every change.
+    # Best-effort: a failure here must never fail the refresh itself.
+    if PUBLISH_PATH:
+        try:
+            f2 = ftp_conn()
+            with open(OUT, "rb") as fh:
+                f2.storbinary("STOR /" + PUBLISH_PATH.strip("/"), fh)
+            f2.quit()
+            print("published ->", PUBLISH_PATH)
+        except Exception as e:
+            print("publish skipped:", type(e).__name__, e)
 
 
 def write_status(ok, detail=""):

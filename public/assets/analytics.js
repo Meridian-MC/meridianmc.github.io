@@ -7,8 +7,17 @@
   // exists (economy.astro, lands.astro).
   var root = document.querySelector("[data-analytics]");
 
-  fetch("/data.json", { cache: "no-cache" })
-    .then(function (r) { if (!r.ok) throw new Error(); return r.json(); })
+  // Try each configured source in turn, newest-first, and fall back to the
+  // copy committed alongside the site if the live one can't be reached.
+  function fetchData(urls, i) {
+    i = i || 0;
+    if (i >= urls.length) return Promise.reject(new Error("no source"));
+    return fetch(urls[i], { cache: "no-cache" })
+      .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
+      .catch(function () { return fetchData(urls, i + 1); });
+  }
+
+  fetchData(window.MERIDIAN_DATA_URLS || ["/data.json"])
     .then(render)
     .catch(function () {
       document.querySelectorAll("[data-slot]").forEach(function (el) {

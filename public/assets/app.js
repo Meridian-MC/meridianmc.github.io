@@ -101,8 +101,17 @@ async function initServerStatus() {
   }
 
   try {
-    const res = await fetch('/data.json', { cache: 'no-cache' });
-    const d = await res.json();
+    // Same source order as analytics.js: live feed first, committed copy last.
+    let d = null;
+    for (const url of (window.MERIDIAN_DATA_URLS || ['/data.json'])) {
+      try {
+        const res = await fetch(url, { cache: 'no-cache' });
+        if (!res.ok) continue;
+        d = await res.json();
+        break;
+      } catch { /* try the next source */ }
+    }
+    if (!d) throw new Error('no data source');
     const s = (d && d.server) || {};
     // Only surface TPS while the feed is actually fresh. A stale reading
     // presented as live is worse than showing nothing at all.

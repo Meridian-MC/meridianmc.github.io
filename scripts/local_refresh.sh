@@ -53,6 +53,7 @@ fi
 
 if ! MC_FTP_PASSWORD="$PW" \
      MC_RCON_HOST="$RC_HOST" MC_RCON_PORT="$RC_PORT" MC_RCON_PASSWORD="$RC_PW" \
+     MC_PUBLISH_PATH="profile_orfqa/plugins/squaremap/web/data.json" \
      python3 scripts/refresh_analytics.py; then
   log "refresh failed (reason recorded in public/data-status.json)"
 fi
