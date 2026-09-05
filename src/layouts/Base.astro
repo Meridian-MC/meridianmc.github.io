@@ -1,5 +1,5 @@
 ---
-import { SITE_NAME, MAP_URL, LIVE_DATA_URL } from "../consts";
+import { SITE_NAME, MAP_URL } from "../consts";
 
 export interface Props {
   title: string;
@@ -106,10 +106,12 @@ const NAV = [
   <div class="f-loc">Hosted in Vint Hill, Virginia.</div>
 </footer>
 
-<script is:inline define:vars={{ liveDataUrl: LIVE_DATA_URL }}>
-  // Tried in order; the first that answers wins. The committed copy is always
-  // last, so the page still renders if the game server is down or unreachable.
-  window.MERIDIAN_DATA_URLS = [liveDataUrl, "/data.json"].filter(Boolean);
+<script is:inline>
+  // Tried in order; the first that answers wins. Both are same-origin, so no
+  // CORS is involved: /api/data.json is served by the Worker, which fetches
+  // live figures from the game server and itself falls back to this same
+  // committed copy. Listing /data.json here too covers the Worker being absent.
+  window.MERIDIAN_DATA_URLS = ["/api/data.json", "/data.json"];
 </script>
 <script is:inline src="/assets/app.js"></script>
 <script is:inline src="/assets/analytics.js"></script>

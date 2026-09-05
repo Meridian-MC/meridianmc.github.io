@@ -10,15 +10,6 @@ export const MAP_URL = "https://map.meridian-mc.net";
 export const DISCORD_INVITE_CODE = "beHD4TE3Td";
 export const DISCORD_INVITE_URL = `https://discord.gg/${DISCORD_INVITE_CODE}`;
 
-// Live analytics feed, published straight to the game server's own webserver so
-// fresh figures reach the site without a commit and a full rebuild per change.
-// The site tries this first and silently falls back to the committed
-// /data.json, so an unreachable server changes nothing a visitor can see.
-//
-// Leave EMPTY until Cloudflare sends CORS for the map hostname (or routes
-// meridian-mc.net/data.json to it). Until then the browser blocks the
-// cross-origin read and logs an error on every page load.
-export const LIVE_DATA_URL = "";
 
 // Economy figures referenced in prose outside the Lands guide (commands.astro,
 // war.astro). The Lands guide (src/pages/lands.astro) remains the canonical
