@@ -1,20 +1,13 @@
 name: Refresh economy analytics
 
 on:
-  # Schedule is OFF, deliberately and probably permanently.
-  #
-  # Apex rejects FTP logins from GitHub's runners: ~35 runs across two days all
-  # returned 530 using a credential that authenticates from the Mac every time,
-  # including twice after the secret was re-entered by hand. The runners DO
-  # reach the server (530 is an auth rejection, not a refused connection), so
-  # this reads as an IP-based restriction at Apex, not a bad secret.
-  #
-  # Re-enable only if Apex confirms they allow GitHub Actions IP ranges, and
-  # unload com.meridian.analytics-refresh at the same time so both aren't
-  # pushing. Until then the Mac LaunchAgent is the refresh path.
-  # schedule:
-  #   - cron: "*/15 * * * *"
-  workflow_dispatch: {}       # runnable by hand to re-test
+  # Re-enabled to test freshly updated secrets. Previous ~35 runs all returned
+  # 530 with a credential that works from the Mac, which pointed at Apex
+  # rejecting GitHub's IPs. If these runs 530 again, comment the schedule back
+  # out; the Mac LaunchAgent stays the fallback either way.
+  schedule:
+    - cron: "*/15 * * * *"
+  workflow_dispatch: {}
 
 concurrency:
   group: analytics
