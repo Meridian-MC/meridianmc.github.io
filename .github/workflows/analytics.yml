@@ -31,7 +31,13 @@ jobs:
         id: refresh
         continue-on-error: true
         env:
-          MC_FTP_PASSWORD: ${{ secrets.MC_FTP_PASSWORD }}
+          # Prefer MC_FTP_PASSWORD_2 when it is set, falling back to the original
+          # secret. Empty secrets are falsy here, so whichever one actually holds
+          # the current FTP password wins.
+          MC_FTP_PASSWORD: ${{ secrets.MC_FTP_PASSWORD_2 || secrets.MC_FTP_PASSWORD }}
+          # Which secret supplied it, recorded in data-status.json for diagnosis.
+          # Names and set/unset only: never a value.
+          MC_FTP_SOURCE: ${{ secrets.MC_FTP_PASSWORD_2 != '' && 'MC_FTP_PASSWORD_2' || (secrets.MC_FTP_PASSWORD != '' && 'MC_FTP_PASSWORD' || 'neither-is-set') }}
           # Optional — set these repo secrets to show live TPS on the site.
           MC_RCON_PASSWORD: ${{ secrets.MC_RCON_PASSWORD }}
           MC_RCON_HOST: ${{ secrets.MC_RCON_HOST }}

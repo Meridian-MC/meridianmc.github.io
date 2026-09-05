@@ -413,6 +413,7 @@ def write_status(ok, detail=""):
     json.dump(
         {"ok": ok,
          "at": datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
+         "credential": os.environ.get("MC_FTP_SOURCE", "local"),
          "detail": detail[:300]},
         open(os.path.join(os.path.dirname(OUT), "data-status.json"), "w"),
         indent=2,
