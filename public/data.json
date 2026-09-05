@@ -1,7 +1,7 @@
 {
-  "generated": "2026-09-05T01:03:51Z",
+  "generated": "2026-09-05T01:14:32Z",
   "meta": {
-    "players_tracked": 4,
+    "players_tracked": 5,
     "active_traders": 0,
     "data_days": 1,
     "sufficient": false,
@@ -17,7 +17,7 @@
       "label": "Insufficient data",
       "note": "Need 8+ active traders and 14+ days of history. Currently 0 traders / 1 days."
     },
-    "money_supply_players": 10000.0,
+    "money_supply_players": 12500.0,
     "money_supply_series": [
       [
         "2026-09-04",
@@ -46,6 +46,10 @@
         "balance": 2500.0
       },
       {
+        "name": "DanBanana",
+        "balance": 2500.0
+      },
+      {
         "name": "DatAriix",
         "balance": 2500.0
       },
@@ -58,7 +62,7 @@
     "mean": 2500.0
   },
   "server": {
-    "checked": "2026-09-05T01:03:51Z",
+    "checked": "2026-09-05T01:14:32Z",
     "started_at": "2026-09-05T00:44:47Z",
     "tps": 20.0
   },
