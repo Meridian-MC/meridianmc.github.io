@@ -41,10 +41,22 @@ if [ -z "$PW" ]; then
   exit 1
 fi
 
-if ! MC_FTP_PASSWORD="$PW" python3 scripts/refresh_analytics.py; then
+# RCON gives the site its TPS figure. Optional: if ~/.rcon is missing or the
+# port is unreachable, data.server is left empty and the site just omits TPS.
+RCONF="$HOME/Library/meridian-server/.rcon"
+RC_HOST=""; RC_PORT=""; RC_PW=""
+if [ -r "$RCONF" ]; then
+  RC_HOST="$(sed -n 's/^host=//p'     "$RCONF" | head -1)"
+  RC_PORT="$(sed -n 's/^port=//p'     "$RCONF" | head -1)"
+  RC_PW="$(  sed -n 's/^password=//p' "$RCONF" | head -1)"
+fi
+
+if ! MC_FTP_PASSWORD="$PW" \
+     MC_RCON_HOST="$RC_HOST" MC_RCON_PORT="$RC_PORT" MC_RCON_PASSWORD="$RC_PW" \
+     python3 scripts/refresh_analytics.py; then
   log "refresh failed (reason recorded in public/data-status.json)"
 fi
-unset PW
+unset PW RC_PW
 
 if git diff --quiet -- public/data.json public/data-status.json; then
   log "no change"
