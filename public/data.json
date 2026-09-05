@@ -1,8 +1,8 @@
 {
-  "generated": "2026-09-05T19:52:01Z",
+  "generated": "2026-09-05T20:12:44Z",
   "meta": {
     "players_tracked": 26,
-    "active_traders": 10,
+    "active_traders": 12,
     "data_days": 1,
     "sufficient": false,
     "demo": false,
@@ -15,9 +15,9 @@
     "classification": {
       "code": "INSUFFICIENT_DATA",
       "label": "Insufficient data",
-      "note": "Need 8+ active traders and 14+ days of history. Currently 10 traders / 1 days."
+      "note": "Need 8+ active traders and 14+ days of history. Currently 12 traders / 1 days."
     },
-    "money_supply_players": 88041.2,
+    "money_supply_players": 90295.2,
     "money_supply_series": [
       [
         "2026-09-04",
@@ -25,18 +25,18 @@
       ],
       [
         "2026-09-05",
-        23041.2
+        25295.2
       ]
     ],
     "trade_volume_series": [
       [
         "2026-09-05",
-        25757.2
+        30111.2
       ]
     ],
-    "trade_volume_7d": 25757.2,
+    "trade_volume_7d": 30111.2,
     "server_shop_transactions": 0,
-    "gini": 0.218,
+    "gini": 0.215,
     "price_index": {
       "value": null,
       "series": [],
@@ -52,15 +52,23 @@
       },
       {
         "name": "1RTR",
-        "balance": 5701.5
+        "balance": 4651.5
       },
       {
         "name": "WhenAtRome",
         "balance": 4257.5
       },
       {
+        "name": "aazo9z",
+        "balance": 4250.0
+      },
+      {
         "name": "Giggsy__",
         "balance": 4076.2
+      },
+      {
+        "name": "saberjianga",
+        "balance": 4054.0
       },
       {
         "name": "ieru",
@@ -95,23 +103,15 @@
         "balance": 2500.0
       },
       {
-        "name": "aazo9z",
-        "balance": 2500.0
-      },
-      {
         "name": "Luko_Landino",
-        "balance": 2500.0
-      },
-      {
-        "name": "Wlasium",
         "balance": 2500.0
       }
     ],
     "median": 2500.0,
-    "mean": 3386.2
+    "mean": 3472.89
   },
   "server": {
-    "checked": "2026-09-05T19:52:01Z",
+    "checked": "2026-09-05T20:12:44Z",
     "started_at": "2026-09-05T17:27:11Z",
     "tps": 20.0
   },
