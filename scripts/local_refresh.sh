@@ -51,6 +51,15 @@ if git diff --quiet -- public/data.json public/data-status.json; then
   exit 0
 fi
 
+# The data file always differs by its `generated` stamp; only commit when the
+# figures actually moved, or when the last commit is old enough that the site
+# would otherwise start reporting itself stale.
+if ! python3 scripts/should_push.py; then
+  git checkout -q -- public/data.json public/data-status.json
+  log "only the timestamp moved, skipping"
+  exit 0
+fi
+
 git add public/data.json public/data-status.json
 git -c user.name="meridian-analytics" \
     -c user.email="actions@users.noreply.github.com" \
