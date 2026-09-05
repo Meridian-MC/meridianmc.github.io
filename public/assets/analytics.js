@@ -153,7 +153,7 @@
     if (!el) return;
     var withCandles = (items || []).filter(function (x) { return x.candles && x.candles.length; });
     if (!withCandles.length) {
-      el.innerHTML = '<p class="c-empty">No shop sales logged yet. Once chest shops start trading, daily price candles build here.</p>';
+      el.innerHTML = '<p class="c-empty">Candles appear once shop sales are being logged.</p>';
       return;
     }
     var WINDOWS = { "24H": 2, "7D": 7, "30D": 30 };
@@ -211,7 +211,7 @@
     if (!el) return;
     var top = (items || []).filter(function (x) { return x.volume_24h_value; })
       .slice().sort(function (a, b) { return b.volume_24h_value - a.volume_24h_value; }).slice(0, 8);
-    if (!top.length) { el.innerHTML = '<p class="c-empty">No trades yet. The busiest items of the last 24 hours will rank here.</p>'; return; }
+    if (!top.length) { el.innerHTML = '<p class="c-empty">No trade volume recorded yet.</p>'; return; }
     el.innerHTML = '<div class="dtable-wrap"><table class="dtable"><thead><tr><th>Item</th><th style="text-align:right">Qty, 24h</th><th style="text-align:right">Value, 24h</th></tr></thead><tbody>' +
       top.map(function (x) {
         return "<tr><td>" + esc(x.name) + '</td><td class="num">' + intf(x.volume_24h_qty) +
@@ -252,7 +252,7 @@
     var feedEl = document.querySelector("[data-slot=pulse-feed]");
     if (feedEl) {
       var events = d.events || [];
-      feedEl.innerHTML = !events.length ? '<p class="c-empty">Nothing yet. New lands, nations and wars show up here as they happen.</p>' :
+      feedEl.innerHTML = !events.length ? '<p class="c-empty">No events yet, check back once the server is live.</p>' :
         events.slice(0, 6).map(function (ev) {
           var label = EVENT_LABEL[ev.type] || ev.type;
           return '<div class="pulse-row pulse-' + esc(ev.type) + '"><span class="pulse-tag">' + esc(label) +
@@ -323,13 +323,13 @@
       fillChart("supply-chart", lineChart(e.money_supply_series, money), "Starts once players trade.");
       fillChart("price-chart", lineChart(e.price_index && e.price_index.series, function (v) { return v.toFixed(0); }),
         (e.price_index && e.price_index.note) || "Needs shop price history.");
-      fillChart("volume-chart", barChart(e.trade_volume_series, money), "No trade recorded yet. Daily volume builds here once players start trading.");
+      fillChart("volume-chart", barChart(e.trade_volume_series, money), "No trade recorded yet.");
 
       var it = root.querySelector("[data-slot=item-table]");
       if (it) {
         var items = e.items || [];
         if (!items.length) {
-          it.innerHTML = '<p class="c-empty">No chest-shop sales yet. Item prices are set by players, so this fills in as people start trading.</p>';
+          it.innerHTML = '<p class="c-empty">Item prices appear once chest-shop sales are being logged.</p>';
         } else {
           it.innerHTML = '<div class="itable-wrap"><table class="itable"><thead><tr>' +
             '<th>Item</th><th style="text-align:right">Median price</th><th style="text-align:right">7d</th><th>30-day trend</th><th style="text-align:right">Shops</th>' +
@@ -348,7 +348,7 @@
 
       var wt = root.querySelector("[data-slot=wealth-table]");
       if (wt) {
-        wt.innerHTML = !w.top.length ? '<p class="c-empty">No balances to rank yet.</p>' :
+        wt.innerHTML = !w.top.length ? '<p class="c-empty">No player balances yet.</p>' :
           '<div class="dtable-wrap"><table class="dtable"><thead><tr><th class="rank">#</th><th>Player</th><th style="text-align:right">Balance</th></tr></thead><tbody>' +
           w.top.map(function (p, i) {
             return '<tr><td class="rank">' + (i + 1) + '</td><td class="p-cell">' + avatar(p.name) + " " + esc(p.name) +
@@ -364,7 +364,7 @@
     var ng = root.querySelector("[data-slot=nation-grid]");
     if (ng) {
       var ns = (d.nations || []).slice().sort(function (a, b) { return b.mdi - a.mdi; });
-      ng.innerHTML = !ns.length ? '<p class="c-empty">No nations yet. The map is entirely unclaimed, so the first one founded sets the tone.</p>' :
+      ng.innerHTML = !ns.length ? '<p class="c-empty">No nations founded yet.</p>' :
         ns.map(function (n, i) {
           var bars = [["Territory", n.territory], ["Population", n.population], ["Wealth", n.wealth], ["Activity", n.activity]]
             .map(function (b) {
@@ -385,7 +385,7 @@
     var lt = root.querySelector("[data-slot=land-table]");
     if (lt) {
       var ls = d.lands || [];
-      lt.innerHTML = !ls.length ? '<p class="c-empty">No lands claimed yet. Every chunk on the map is still open.</p>' :
+      lt.innerHTML = !ls.length ? '<p class="c-empty">No lands claimed yet.</p>' :
         '<div class="dtable-wrap"><table class="dtable"><thead><tr><th>Land</th><th>Tier</th><th style="text-align:right">Chunks</th><th style="text-align:right">Members</th><th style="text-align:right">Bank</th></tr></thead><tbody>' +
         ls.map(function (l) {
           return "<tr><td>" + esc(l.name || "Unnamed") + "</td><td>" + esc(String(l.type || "n/a").toLowerCase()) +
