@@ -1,10 +1,14 @@
 name: Refresh economy analytics
 
 on:
-  # Re-enabled to test freshly updated secrets. Previous ~35 runs all returned
-  # 530 with a credential that works from the Mac, which pointed at Apex
-  # rejecting GitHub's IPs. If these runs 530 again, comment the schedule back
-  # out; the Mac LaunchAgent stays the fallback either way.
+  # This is the refresh path. It reads the game server over FTP + RCON, commits
+  # public/data.json, and publishes the same file to the server's own webserver
+  # (see MC_PUBLISH_PATH below), which is what the site serves at /api/data.json.
+  #
+  # History worth keeping: ~35 runs failed with 530 before the FTP secret was
+  # corrected. That looked like Apex blocking GitHub's IP ranges, and it was
+  # not - the credential was simply wrong. If 530 shows up again, treat it as a
+  # stale secret first; the runners reach Apex fine.
   schedule:
     - cron: "*/15 * * * *"
   workflow_dispatch: {}

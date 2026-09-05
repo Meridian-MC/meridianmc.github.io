@@ -69,10 +69,10 @@ def ftp_conn(attempts=3):
         except ftplib.error_perm as e:
             # A rejected login will never succeed on retry, so fail loudly and say why.
             sys.exit(
-                f"FTP rejected the login ({e}). If this is running locally, the "
-                "credential is wrong. From GitHub's runners this is expected: Apex "
-                "rejects their IPs even with a credential that works from the Mac, "
-                "which is why the scheduled workflow is disabled."
+                f"FTP rejected the login ({e}). The credential is wrong: check "
+                "MC_FTP_PASSWORD_2 (or MC_FTP_PASSWORD) against the server's "
+                "current FTP password. This is an auth rejection, not a network "
+                "or IP restriction - the runners reach Apex fine."
             )
         except Exception as e:
             last = e
