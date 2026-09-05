@@ -24,23 +24,36 @@ jobs:
 
       - run: pip install --quiet pymysql
 
+      # Allowed to fail so the status file below still gets written and committed:
+      # a silently-stale site was the original problem, so the outcome is recorded
+      # in the repo rather than only in a log nobody reads.
       - name: Rebuild public/data.json
+        id: refresh
+        continue-on-error: true
         env:
           MC_FTP_PASSWORD: ${{ secrets.MC_FTP_PASSWORD }}
-          # Optional — set these repo secrets to show live TPS + uptime on the site.
+          # Optional — set these repo secrets to show live TPS on the site.
           MC_RCON_PASSWORD: ${{ secrets.MC_RCON_PASSWORD }}
           MC_RCON_HOST: ${{ secrets.MC_RCON_HOST }}
           MC_RCON_PORT: ${{ secrets.MC_RCON_PORT }}
         run: python3 scripts/refresh_analytics.py
 
       - name: Commit if changed
+        if: always()
         run: |
-          if ! git diff --quiet -- public/data.json; then
+          if ! git diff --quiet -- public/data.json public/data-status.json; then
             git config user.name  "meridian-analytics"
             git config user.email "actions@users.noreply.github.com"
-            git add public/data.json
+            git add public/data.json public/data-status.json
             git commit -m "chore: refresh economy analytics [skip ci]"
+            git pull --rebase --autostash
             git push
           else
             echo "no change"
           fi
+
+      - name: Surface the refresh failure
+        if: steps.refresh.outcome == 'failure'
+        run: |
+          echo "::error::Analytics refresh failed. See public/data-status.json for the reason."
+          exit 1

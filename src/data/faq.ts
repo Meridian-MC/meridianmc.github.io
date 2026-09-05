@@ -3,6 +3,8 @@
 // `answer` is trusted HTML authored by us (links, <code>, lists), rendered
 // with set:html in the component.
 
+import { DISCORD_INVITE_URL } from "../consts";
+
 export interface FaqCategory {
   id: string;
   title: string;
@@ -100,7 +102,7 @@ export const FAQ: FaqEntry[] = [
   {
     category: "starting",
     question: "How do I report a bug, a griefer, or a bad actor?",
-    answer: `<p>Open a ticket in <a href="https://discord.gg/beHD4TE3Td" rel="noopener">our Discord</a> with what happened and any evidence (screenshots, video, chat logs; see the <a href="/rules#moderation">Moderation rules</a> on what counts). Don't try to handle it yourself in-game.</p>`,
+    answer: `<p>Open a ticket in <a href="${DISCORD_INVITE_URL}" rel="noopener">our Discord</a> with what happened and any evidence (screenshots, video, chat logs; see the <a href="/rules#moderation">Moderation rules</a> on what counts). Don't try to handle it yourself in-game.</p>`,
   },
 
   // ---- Economy ----

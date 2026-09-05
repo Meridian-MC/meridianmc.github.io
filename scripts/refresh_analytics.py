@@ -404,5 +404,30 @@ def main():
           "| players", data["meta"]["players_tracked"], "| nations", len(nation_rows))
 
 
+def write_status(ok, detail=""):
+    """Record the outcome next to the data so a failing refresh is diagnosable
+    from the repo itself. Never write anything derived from a credential."""
+    for secret in (PW, RCON_PW):
+        if secret:
+            detail = detail.replace(secret, "***")
+    json.dump(
+        {"ok": ok,
+         "at": datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
+         "detail": detail[:300]},
+        open(os.path.join(os.path.dirname(OUT), "data-status.json"), "w"),
+        indent=2,
+    )
+
+
 if __name__ == "__main__":
-    main()
+    try:
+        main()
+    except SystemExit as e:
+        # sys.exit("message") from the checks above: a real, explained failure.
+        write_status(False, str(e.code) if e.code not in (None, 0) else "")
+        raise
+    except Exception as e:
+        write_status(False, f"{type(e).__name__}: {e}")
+        raise
+    else:
+        write_status(True, "")
