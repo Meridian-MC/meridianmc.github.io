@@ -19,16 +19,20 @@ import os, io, sys, json, re, time, ftplib, sqlite3, datetime, statistics, tempf
 
 HOST = os.environ.get("MC_FTP_HOST", "6856.node.apexhosting.gdn")
 USER = os.environ.get("MC_FTP_USER", "iakkovos.3360229")
-PW = os.environ.get("MC_FTP_PASSWORD")
+PW = os.environ.get("MC_FTP_PASSWORD") or None
 PROFILE = os.environ.get("MC_PROFILE", "profile_orfqa")
 OUT = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "public", "data.json"))
 
 # Optional: live server health (TPS + uptime) via RCON. If MC_RCON_PASSWORD is
 # unset or the port is unreachable, data.server is left empty and the website
 # just omits those two figures.
-RCON_HOST = os.environ.get("MC_RCON_HOST", HOST)
-RCON_PORT = int(os.environ.get("MC_RCON_PORT", "25575"))
-RCON_PW = os.environ.get("MC_RCON_PASSWORD")
+# An unset GitHub secret is passed through as an EMPTY STRING, not as an absent
+# variable, so os.environ.get(..., default) returns "" and never the default.
+# `or` is what actually falls back here; int("") would crash at import time,
+# before any of the error handling below could report it.
+RCON_HOST = os.environ.get("MC_RCON_HOST") or HOST
+RCON_PORT = int(os.environ.get("MC_RCON_PORT") or 25575)
+RCON_PW = os.environ.get("MC_RCON_PASSWORD") or None
 
 MIN_TRADERS, MIN_DAYS = 8, 14
 BASKET = ["Wheat", "Iron Ingot", "Diamond", "Ender Pearl", "Oak Log"]
