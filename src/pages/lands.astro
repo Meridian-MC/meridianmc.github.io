@@ -33,9 +33,25 @@ const sections = [
     <li>Every land pays weekly upkeep on its claimed chunks, at <strong>{ECON.landUpkeepPerChunk} per chunk</strong>.</li>
     <li>Larger lands cost more to maintain. Before you claim aggressively, make sure your land has the income to support it.</li>
     <li>You can rent or sell sub-areas of your land to other players without adding them as trusted members.</li>
-    <li>Lands unlock new tiers by hitting member and wealth thresholds. The tiers are Settlement, Village, Town, Province, and Land. Each tier grants more claimable chunks and member slots, for a modest increase in upkeep.</li>
+    <li>Lands unlock new tiers by hitting member and wealth thresholds at the same time. Each tier grants more claimable chunks and member slots, and raises upkeep. The thresholds are below.</li>
     <li>You can own only one land at a time, and be a trusted member in one additional land beyond that.</li>
   </ol>
+
+  <div class="tier-wrap">
+    <table class="tier-table">
+      <thead>
+        <tr><th>Tier</th><th>Trusted members</th><th>Land bank</th><th>Grants</th><th>Upkeep</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Settlement</td><td class="num-col">&mdash;</td><td class="num-col">&mdash;</td><td>Starting tier</td><td class="num-col">&mdash;</td></tr>
+        <tr><td>Village</td><td class="num-col">3</td><td class="num-col">$50,000</td><td>+1 chunk, +1 member</td><td class="num-col">+5%</td></tr>
+        <tr><td>Town</td><td class="num-col">5</td><td class="num-col">$200,000</td><td>+2 chunks, +2 members</td><td class="num-col">+10%</td></tr>
+        <tr><td>Province</td><td class="num-col">8</td><td class="num-col">$650,000</td><td>+4 chunks, +3 members</td><td class="num-col">+25%</td></tr>
+        <tr><td>Land</td><td class="num-col">12</td><td class="num-col">$1,750,000</td><td>+8 chunks, +4 members</td><td class="num-col">+30%</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="tier-note">Both requirements must be met at once, and the money has to be sitting in the land bank, not in anyone's pocket. Grants stack on top of your base limits. The upkeep figure raises your total weekly upkeep by that percentage, not the per-chunk rate, and it stops applying entirely once your land joins a nation, because the land then pays tax to the nation instead.</p>
 
   <h2 id="nations"><span class="num">2</span>Nations</h2>
   <ol>
@@ -43,8 +59,22 @@ const sections = [
     <li>When a land joins a nation it stops paying upkeep to the server and instead pays tax directly to the nation. The nation's leader sets that rate, up to <strong>$6,000 per chunk</strong>.</li>
     <li>In turn, the nation owes its own upkeep to the server, at <strong>{ECON.nationUpkeepPerChunk} per chunk</strong> across the combined total of its lands.</li>
     <li>Relations between nations are publicly tracked in-game.</li>
-    <li>Like lands, nations can develop into higher tiers. The nation tiers are Federation, Nation, and Empire, and each one unlocks additional claiming capacity for every land in the nation.</li>
+    <li>Like lands, nations develop through their own tiers, each unlocking additional claiming capacity across every land in the nation.</li>
   </ol>
+
+  <div class="tier-wrap">
+    <table class="tier-table">
+      <thead>
+        <tr><th>Tier</th><th>Members</th><th>Nation bank</th><th>Grants</th><th>Upkeep</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Federation</td><td class="num-col">&mdash;</td><td class="num-col">&mdash;</td><td>Starting tier</td><td class="num-col">&mdash;</td></tr>
+        <tr><td>Nation</td><td class="num-col">8</td><td class="num-col">$2,000,000</td><td>+20 chunks</td><td class="num-col">+20%</td></tr>
+        <tr><td>Empire</td><td class="num-col">15</td><td class="num-col">$8,000,000</td><td>+35 chunks</td><td class="num-col">+35%</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="tier-note">Empire costs more to reach than founding the nation did, and the upkeep rises with it. A nation is a commitment to a tax base that can carry it, not a title you buy once.</p>
 
   <h2 id="vassals"><span class="num">3</span>Vassals</h2>
   <ol>
