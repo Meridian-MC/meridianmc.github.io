@@ -1,17 +1,13 @@
 name: Refresh economy analytics
 
 on:
-  # The schedule is OFF. Apex rejects FTP logins from GitHub's runners (530 on a
-  # credential that authenticates fine from the Mac), so every scheduled run
-  # failed, mailed a failure notice, and pushed a "failed" status commit that
-  # fought with the working local agent. The refresh now runs from the Mac via
-  # ~/Library/LaunchAgents/com.meridian.analytics-refresh.plist.
-  #
-  # Re-enable this schedule if Apex ever allows the runners, and unload that
-  # agent at the same time so the two aren't both pushing.
-  # schedule:
-  #   - cron: "*/15 * * * *"
-  workflow_dispatch: {}       # still runnable by hand, to re-test from CI
+  # Re-enabled to test whether Apex still rejects FTP from GitHub's runners.
+  # If these runs succeed, this replaces the Mac LaunchAgent entirely and
+  # com.meridian.analytics-refresh should be unloaded so both aren't pushing.
+  # If they 530 again, comment the schedule back out: the Mac is the fallback.
+  schedule:
+    - cron: "*/15 * * * *"
+  workflow_dispatch: {}       # runnable by hand too
 
 concurrency:
   group: analytics
@@ -50,6 +46,10 @@ jobs:
           MC_RCON_PASSWORD: ${{ secrets.MC_RCON_PASSWORD }}
           MC_RCON_HOST: ${{ secrets.MC_RCON_HOST }}
           MC_RCON_PORT: ${{ secrets.MC_RCON_PORT }}
+          # Publish straight to the game server's public webserver, which is
+          # what the Worker reads at /api/data.json. Without this the live path
+          # only ever updates from the Mac.
+          MC_PUBLISH_PATH: profile_orfqa/plugins/squaremap/web/data.json
         run: python3 scripts/refresh_analytics.py
 
       - name: Commit if changed
