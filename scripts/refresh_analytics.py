@@ -414,13 +414,24 @@ def write_status(ok, detail=""):
     for secret in (PW, RCON_PW):
         if secret:
             detail = detail.replace(secret, "***")
+    detail = detail[:300]
+    path = os.path.join(os.path.dirname(OUT), "data-status.json")
+    at = datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+
+    # Keep the old timestamp when nothing about the outcome changed, so an
+    # unchanged status doesn't produce a commit on every single run.
+    try:
+        prev = json.load(open(path))
+        if prev.get("ok") == ok and prev.get("detail") == detail:
+            at = prev.get("at", at)
+    except Exception:
+        pass
+
     json.dump(
-        {"ok": ok,
-         "at": datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
+        {"ok": ok, "at": at,
          "credential": os.environ.get("MC_FTP_SOURCE", "local"),
-         "detail": detail[:300]},
-        open(os.path.join(os.path.dirname(OUT), "data-status.json"), "w"),
-        indent=2,
+         "detail": detail},
+        open(path, "w"), indent=2,
     )
 
 
