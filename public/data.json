@@ -1,8 +1,8 @@
 {
-  "generated": "2026-09-05T18:13:46Z",
+  "generated": "2026-09-05T18:30:51Z",
   "meta": {
-    "players_tracked": 20,
-    "active_traders": 4,
+    "players_tracked": 22,
+    "active_traders": 5,
     "data_days": 1,
     "sufficient": false,
     "demo": false,
@@ -15,9 +15,9 @@
     "classification": {
       "code": "INSUFFICIENT_DATA",
       "label": "Insufficient data",
-      "note": "Need 8+ active traders and 14+ days of history. Currently 4 traders / 1 days."
+      "note": "Need 8+ active traders and 14+ days of history. Currently 5 traders / 1 days."
     },
-    "money_supply_players": 49595.0,
+    "money_supply_players": 56067.5,
     "money_supply_series": [
       [
         "2026-09-04",
@@ -25,18 +25,18 @@
       ],
       [
         "2026-09-05",
-        -405.0
+        1067.5
       ]
     ],
     "trade_volume_series": [
       [
         "2026-09-05",
-        405.0
+        1941.5
       ]
     ],
-    "trade_volume_7d": 405.0,
+    "trade_volume_7d": 1941.5,
     "server_shop_transactions": 0,
-    "gini": 0.007,
+    "gini": 0.03,
     "price_index": {
       "value": null,
       "series": [],
@@ -46,6 +46,14 @@
   },
   "wealth": {
     "top": [
+      {
+        "name": "Augustine65480",
+        "balance": 3924.5
+      },
+      {
+        "name": "Real_Lenine",
+        "balance": 2500.0
+      },
       {
         "name": "Keanie__",
         "balance": 2500.0
@@ -59,10 +67,6 @@
         "balance": 2500.0
       },
       {
-        "name": "1RTR",
-        "balance": 2500.0
-      },
-      {
         "name": "WitherdAmerican",
         "balance": 2500.0
       },
@@ -72,6 +76,10 @@
       },
       {
         "name": "Giggsy__",
+        "balance": 2500.0
+      },
+      {
+        "name": "Luko_Landino",
         "balance": 2500.0
       },
       {
@@ -97,21 +105,13 @@
       {
         "name": "Mingasty",
         "balance": 2500.0
-      },
-      {
-        "name": "XDjarinXD",
-        "balance": 2500.0
-      },
-      {
-        "name": "Scp9390",
-        "balance": 2500.0
       }
     ],
     "median": 2500.0,
-    "mean": 2479.75
+    "mean": 2548.52
   },
   "server": {
-    "checked": "2026-09-05T18:13:46Z",
+    "checked": "2026-09-05T18:30:52Z",
     "started_at": "2026-09-05T17:27:11Z",
     "tps": 20.0
   },
