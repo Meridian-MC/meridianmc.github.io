@@ -1,8 +1,8 @@
 {
-  "generated": "2026-09-05T19:10:41Z",
+  "generated": "2026-09-05T19:24:34Z",
   "meta": {
-    "players_tracked": 25,
-    "active_traders": 7,
+    "players_tracked": 26,
+    "active_traders": 10,
     "data_days": 1,
     "sufficient": false,
     "demo": false,
@@ -15,9 +15,9 @@
     "classification": {
       "code": "INSUFFICIENT_DATA",
       "label": "Insufficient data",
-      "note": "Need 8+ active traders and 14+ days of history. Currently 7 traders / 1 days."
+      "note": "Need 8+ active traders and 14+ days of history. Currently 10 traders / 1 days."
     },
-    "money_supply_players": 72752.0,
+    "money_supply_players": 87873.2,
     "money_supply_series": [
       [
         "2026-09-04",
@@ -25,18 +25,18 @@
       ],
       [
         "2026-09-05",
-        10252.0
+        22873.2
       ]
     ],
     "trade_volume_series": [
       [
         "2026-09-05",
-        11850.0
+        25541.2
       ]
     ],
-    "trade_volume_7d": 11850.0,
+    "trade_volume_7d": 25541.2,
     "server_shop_transactions": 0,
-    "gini": 0.115,
+    "gini": 0.216,
     "price_index": {
       "value": null,
       "series": [],
@@ -47,8 +47,20 @@
   "wealth": {
     "top": [
       {
+        "name": "JoshMilkFleas",
+        "balance": 13314.0
+      },
+      {
         "name": "1RTR",
         "balance": 5701.5
+      },
+      {
+        "name": "Giggsy__",
+        "balance": 4076.2
+      },
+      {
+        "name": "WhenAtRome",
+        "balance": 4065.5
       },
       {
         "name": "ieru",
@@ -67,10 +79,6 @@
         "balance": 3924.5
       },
       {
-        "name": "WhenAtRome",
-        "balance": 3729.5
-      },
-      {
         "name": "Real_Lenine",
         "balance": 2500.0
       },
@@ -87,31 +95,23 @@
         "balance": 2500.0
       },
       {
-        "name": "owen192423",
-        "balance": 2500.0
-      },
-      {
-        "name": "WitherdAmerican",
-        "balance": 2500.0
-      },
-      {
         "name": "aazo9z",
-        "balance": 2500.0
-      },
-      {
-        "name": "Giggsy__",
         "balance": 2500.0
       },
       {
         "name": "Luko_Landino",
         "balance": 2500.0
+      },
+      {
+        "name": "Wlasium",
+        "balance": 2500.0
       }
     ],
     "median": 2500.0,
-    "mean": 2910.08
+    "mean": 3379.74
   },
   "server": {
-    "checked": "2026-09-05T19:10:42Z",
+    "checked": "2026-09-05T19:24:34Z",
     "started_at": "2026-09-05T17:27:11Z",
     "tps": 20.0
   },
