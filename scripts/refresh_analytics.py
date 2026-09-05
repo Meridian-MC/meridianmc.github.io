@@ -196,9 +196,44 @@ def lands_from_db(raw):
     for r in con.execute("SELECT * FROM lands_nations"):
         name, color = _split_color(r["name"])
         nations.append({"name": name, "tag": r["tag"], "color": color})
+
+    # Recent activity, rebuilt from the same tables. The site's feed had no
+    # source at all before this: nothing here ever emitted an "events" key, so
+    # it showed its empty state permanently no matter what happened in game.
+    events = []
+
+    def _ts(v):
+        """created_at is epoch seconds or milliseconds depending on the row."""
+        try:
+            n = int(v)
+        except (TypeError, ValueError):
+            return None
+        if n > 1e12:      # milliseconds
+            n //= 1000
+        return n if n > 1e9 else None
+
+    for r in con.execute("SELECT name, created_at FROM lands_lands"):
+        t = _ts(r["created_at"])
+        if t:
+            events.append({"type": "land", "name": _split_color(r["name"])[0], "at": t})
+    for r in con.execute("SELECT name, created_at FROM lands_nations"):
+        t = _ts(r["created_at"])
+        if t:
+            events.append({"type": "nation", "name": _split_color(r["name"])[0], "at": t})
+    try:
+        for r in con.execute("SELECT attacker, defender, started_at FROM lands_wars"):
+            t = _ts(r["started_at"])
+            if t:
+                events.append({"type": "war",
+                               "name": f'{_split_color(r["attacker"])[0]} vs {_split_color(r["defender"])[0]}',
+                               "at": t})
+    except sqlite3.Error:
+        pass          # older schemas may not have the wars table
+
+    events.sort(key=lambda e: -e["at"])
     con.close()
     os.unlink(tmp)
-    return lands, nations
+    return lands, nations, events[:20]
 
 
 def mdi(chunks, members, treasury, activity):
@@ -351,9 +386,9 @@ def main():
     except ftplib.error_perm:
         trades = []
     try:
-        lands, nations = lands_from_db(ftp_bytes(f, f"{P}/Lands/Data/database_v2.db"))
+        lands, nations, events = lands_from_db(ftp_bytes(f, f"{P}/Lands/Data/database_v2.db"))
     except ftplib.error_perm:
-        lands, nations = [], []
+        lands, nations, events = [], [], []
     try:
         rtp = ftp_bytes(f, f"{P}/EzRTP/rtp.yml").decode("utf8", "replace")
     except ftplib.error_perm:
@@ -410,6 +445,7 @@ def main():
         "lands": sorted(({"name": l["name"], "type": l["type"], "chunks": l["chunks"],
                           "members": l["members"], "bank": round(l["bank"], 2), "level": l["level"]}
                          for l in lands), key=lambda x: -x["chunks"]),
+        "events": events,
     }
     json.dump(data, open(OUT, "w"), indent=2)
     print("wrote", OUT, "| MEI", data["economy"]["classification"]["code"],
