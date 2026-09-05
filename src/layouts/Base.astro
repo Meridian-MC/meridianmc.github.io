@@ -1,5 +1,5 @@
 ---
-import { SITE_NAME } from "../consts";
+import { SITE_NAME, MAP_URL } from "../consts";
 
 export interface Props {
   title: string;
@@ -30,7 +30,9 @@ const NAV = [
   { href: "/economy", label: "Economy" },
   { href: "/faq", label: "FAQ" },
   { href: "/commands", label: "Commands" },
-  { href: "/map", label: "Live Map" },
+  // The map lives on its own subdomain and opens in a new tab: squaremap sends
+  // a 4-hour cache header, so anything embedded here shows a stale world.
+  { href: MAP_URL, label: "Live Map", external: true },
 ];
 ---
 <!DOCTYPE html>
@@ -63,7 +65,12 @@ const NAV = [
     <button class="nav-toggle" aria-label="Menu">☰</button>
     <div class="nav-links">
       {NAV.map((item) => (
-        <a href={item.href} class={item.href === path ? "active" : undefined}>{item.label}</a>
+        <a
+          href={item.href}
+          class={item.href === path ? "active" : undefined}
+          target={item.external ? "_blank" : undefined}
+          rel={item.external ? "noopener" : undefined}
+        >{item.label}</a>
       ))}
     </div>
     <button class="cmdk-trigger" data-cmdk-open type="button" aria-label="Search Meridian">

@@ -95,7 +95,7 @@ export const FAQ: FaqEntry[] = [
   {
     category: "starting",
     question: "How do I use the live map?",
-    answer: `<p>The <a href="/map">Live Map</a> page shows a live, top-down view of the explored world: claims, nation borders, and where towns have gone up. It updates automatically as the world is explored and built on.</p>`,
+    answer: `<p>The <a href="https://map.meridian-mc.net" target="_blank" rel="noopener">live map</a> opens in its own tab and shows a top-down view of the explored world: claims, nation borders, and where towns have gone up. It updates automatically as the world is explored and built on.</p>`,
   },
   {
     category: "starting",

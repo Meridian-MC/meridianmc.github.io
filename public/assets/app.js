@@ -72,7 +72,7 @@ async function initDiscord() {
 }
 
 // Live server status: player count + up/down from a public status ping,
-// TPS + uptime from the analytics feed (present only when the refresh job has RCON).
+// TPS from the analytics feed, and only while that feed is still fresh.
 async function initServerStatus() {
   const box = document.querySelector('[data-srv]');
   if (!box) return;
@@ -170,7 +170,7 @@ const CMDK_INDEX = [
   { label: 'Commands: Jobs', href: '/commands#jobs' },
   { label: 'Commands: Land & nation', href: '/commands#land' },
   { label: 'Commands: Warfare', href: '/commands#war' },
-  { label: 'Live Map', href: '/map' },
+  { label: 'Live Map', href: 'https://map.meridian-mc.net', external: true },
 ];
 
 function initCommandPalette() {
@@ -187,7 +187,8 @@ function initCommandPalette() {
     results.innerHTML = !list.length
       ? '<div class="cmdk-empty">No matches.</div>'
       : list.map((item, i) =>
-          `<a href="${item.href}" class="cmdk-item${i === 0 ? ' on' : ''}" data-i="${i}">${item.label}</a>`
+          `<a href="${item.href}"${item.external ? ' target="_blank" rel="noopener"' : ''}` +
+          ` class="cmdk-item${i === 0 ? ' on' : ''}" data-i="${i}">${item.label}</a>`
         ).join('');
   }
 
@@ -232,7 +233,11 @@ function initCommandPalette() {
     else if (e.key === 'ArrowUp') { e.preventDefault(); highlight(Math.max(active - 1, 0)); }
     else if (e.key === 'Enter') {
       const item = shown[active];
-      if (item) { close(); location.href = item.href; }
+      if (item) {
+        close();
+        if (item.external) window.open(item.href, '_blank', 'noopener');
+        else location.href = item.href;
+      }
     }
   });
 }
