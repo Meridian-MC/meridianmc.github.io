@@ -1,8 +1,8 @@
 {
-  "generated": "2026-09-06T08:35:55Z",
+  "generated": "2026-09-06T08:41:06Z",
   "meta": {
     "players_tracked": 31,
-    "active_traders": 18,
+    "active_traders": 19,
     "data_days": 2,
     "sufficient": false,
     "demo": false,
@@ -15,9 +15,9 @@
     "classification": {
       "code": "INSUFFICIENT_DATA",
       "label": "Insufficient data",
-      "note": "Need 8+ active traders and 14+ days of history. Currently 18 traders / 2 days."
+      "note": "Need 8+ active traders and 14+ days of history. Currently 19 traders / 2 days."
     },
-    "money_supply_players": 123708.9,
+    "money_supply_players": 122508.9,
     "money_supply_series": [
       [
         "2026-09-04",
@@ -29,7 +29,7 @@
       ],
       [
         "2026-09-06",
-        46208.9
+        45008.9
       ]
     ],
     "trade_volume_series": [
@@ -39,12 +39,12 @@
       ],
       [
         "2026-09-06",
-        35607.0
+        36807.0
       ]
     ],
-    "trade_volume_7d": 105482.9,
+    "trade_volume_7d": 106682.9,
     "server_shop_transactions": 0,
-    "gini": 0.399,
+    "gini": 0.411,
     "price_index": {
       "value": null,
       "series": [],
@@ -103,23 +103,23 @@
         "balance": 2500.0
       },
       {
-        "name": "ACRI_Vanguard",
-        "balance": 2500.0
-      },
-      {
         "name": "Yinshe",
         "balance": 2500.0
       },
       {
         "name": "Wlasium",
         "balance": 2500.0
+      },
+      {
+        "name": "bravoxie",
+        "balance": 2500.0
       }
     ],
     "median": 2500.0,
-    "mean": 3990.61
+    "mean": 3951.9
   },
   "server": {
-    "checked": "2026-09-06T08:35:55Z",
+    "checked": "2026-09-06T08:41:06Z",
     "started_at": "2026-09-05T20:19:13Z",
     "tps": 20.0
   },
