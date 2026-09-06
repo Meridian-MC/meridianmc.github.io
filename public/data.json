@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-06T14:50:34Z",
+  "generated": "2026-09-06T14:53:14Z",
   "meta": {
     "players_tracked": 32,
     "active_traders": 20,
@@ -118,11 +118,7 @@
     "median": 2500.0,
     "mean": 4130.15
   },
-  "server": {
-    "checked": "2026-09-06T14:50:34Z",
-    "started_at": "2026-09-06T12:12:13Z",
-    "tps": 20.0
-  },
+  "server": {},
   "nations": [],
   "lands": [
     {
@@ -144,9 +140,9 @@
     {
       "name": "Augustine",
       "type": "land",
-      "chunks": 4,
+      "chunks": 5,
       "members": 4,
-      "bank": 350.0,
+      "bank": 5350.0,
       "level": 0
     },
     {
@@ -162,7 +158,7 @@
       "type": "land",
       "chunks": 4,
       "members": 2,
-      "bank": 0.0,
+      "bank": 200.0,
       "level": 0
     },
     {
@@ -182,19 +178,19 @@
       "level": 0
     },
     {
+      "name": "Liam's Empire",
+      "type": "land",
+      "chunks": 3,
+      "members": 2,
+      "bank": 200.0,
+      "level": 0
+    },
+    {
       "name": "Luko_Landino",
       "type": "land",
       "chunks": 2,
       "members": 4,
       "bank": 300.0,
-      "level": 0
-    },
-    {
-      "name": "Liam's Empire",
-      "type": "land",
-      "chunks": 2,
-      "members": 2,
-      "bank": 200.0,
       "level": 0
     },
     {
@@ -212,9 +208,22 @@
       "members": 2,
       "bank": 4264.0,
       "level": 0
+    },
+    {
+      "name": "Keanie__",
+      "type": "land",
+      "chunks": 1,
+      "members": 2,
+      "bank": 0.0,
+      "level": 0
     }
   ],
   "events": [
+    {
+      "type": "land",
+      "at": "2026-09-06T12:36:12Z",
+      "text": "Keanie__ was founded"
+    },
     {
       "type": "land",
       "at": "2026-09-06T08:37:31Z",
