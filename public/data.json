@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-06T18:07:58Z",
+  "generated": "2026-09-06T18:13:08Z",
   "meta": {
     "players_tracked": 32,
     "active_traders": 20,
@@ -17,7 +17,7 @@
       "label": "Insufficient data",
       "note": "Need 8+ active traders and 14+ days of history. Currently 20 traders / 2 days."
     },
-    "money_supply_players": 143551.4,
+    "money_supply_players": 134551.4,
     "money_supply_series": [
       [
         "2026-09-04",
@@ -29,7 +29,7 @@
       ],
       [
         "2026-09-06",
-        63551.4
+        54551.4
       ]
     ],
     "trade_volume_series": [
@@ -39,12 +39,12 @@
       ],
       [
         "2026-09-06",
-        85493.5
+        94493.5
       ]
     ],
-    "trade_volume_7d": 155369.4,
+    "trade_volume_7d": 164369.4,
     "server_shop_transactions": 0,
-    "gini": 0.429,
+    "gini": 0.424,
     "price_index": {
       "value": null,
       "series": [],
@@ -61,10 +61,6 @@
       {
         "name": "ihasadragon",
         "balance": 15818.4
-      },
-      {
-        "name": "Augustine65480",
-        "balance": 10275.5
       },
       {
         "name": "Luko_Landino",
@@ -113,13 +109,17 @@
       {
         "name": "Real_Lenine",
         "balance": 2500.0
+      },
+      {
+        "name": "Yinshe",
+        "balance": 2500.0
       }
     ],
     "median": 2500.0,
-    "mean": 4485.98
+    "mean": 4204.73
   },
   "server": {
-    "checked": "2026-09-06T18:07:58Z",
+    "checked": "2026-09-06T18:13:08Z",
     "started_at": "2026-09-06T14:53:17Z",
     "tps": 20.0
   },
