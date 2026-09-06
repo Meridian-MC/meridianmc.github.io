@@ -50,17 +50,13 @@ export const FAQ: FaqEntry[] = [
   {
     category: "world",
     question: "Is PvP on?",
-    answer: `<p>PvP is <span class="short">off for the opening period</span> so people can settle in. It is switched on server-wide once nations have formed, with advance notice. After that, PvP is allowed everywhere outside declared <a href="/war">wars</a>, under the <a href="/rules#pvp">PvP rules</a>.</p>`,
+    answer: `<p><span class="short">Yes</span>, PvP is live everywhere except inside spawn, which is a permanent safe zone. There is <span class="short">no keep-inventory</span> outside spawn, so losing a fight means dropping what you carried. Your things land in a <a href="/#protection">death chest</a> only you can open for an hour.</p>
+<p>Claimed land is still protected: nobody can enter or take ground inside a claim except during a declared <a href="/war">war</a>. Combat is governed by the <a href="/rules#pvp">PvP rules</a>: standard gear only, no crystal PvP, no one-shot combos.</p>`,
   },
   {
     category: "world",
     question: "How hard is the server?",
     answer: `<p>Normal difficulty survival, not hardcore. There is <span class="short">no keep-inventory</span> in the world, so dying in the wild means dropping your things where you fell. The only exceptions are inside spawn and during a formal war.</p>`,
-  },
-  {
-    category: "world",
-    question: "Can I fly?",
-    answer: `<p><span class="short">No.</span> Flight is off everywhere, including inside your own claims. Meridian is a ground-level survival server.</p>`,
   },
   {
     category: "world",
@@ -78,11 +74,6 @@ export const FAQ: FaqEntry[] = [
     category: "starting",
     question: "Is Meridian on Bedrock?",
     answer: `<p><span class="short">No</span>, Java Edition only. There's no Bedrock/console support planned: the plugins Meridian runs (Lands, QuickShop, the anti-cheat) don't have a cross-play path that holds up.</p>`,
-  },
-  {
-    category: "starting",
-    question: "Is there a whitelist?",
-    answer: `<p>Before launch, yes. On launch day the whitelist comes off and anyone can connect at <code>meridian-mc.net</code>.</p>`,
   },
   {
     category: "starting",

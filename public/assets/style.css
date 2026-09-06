@@ -113,14 +113,10 @@ a:hover { text-decoration-color: var(--text); }
 }
 .brand .mark {
   width: 25px; height: 25px;
-  border-radius: 6px;
-  background: var(--text);
-  color: var(--bg);
-  display: grid; place-items: center;
-  font-family: var(--font);
-  font-weight: 800; font-size: 0.82rem;
-  /* a faint block-face bevel: the one direct nod to Minecraft's own rendering */
-  box-shadow: inset 2px 2px 0 rgba(255,255,255,0.35), inset -2px -2px 0 rgba(0,0,0,0.2);
+  display: block;
+  /* 64px pixel art scaled down: keep the hard edges rather than letting the
+     browser smooth them into mush. */
+  image-rendering: pixelated;
 }
 .nav-links {
   display: flex;
