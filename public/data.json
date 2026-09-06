@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-06T12:08:52Z",
+  "generated": "2026-09-06T12:20:12Z",
   "meta": {
     "players_tracked": 32,
     "active_traders": 19,
@@ -17,7 +17,7 @@
       "label": "Insufficient data",
       "note": "Need 8+ active traders and 14+ days of history. Currently 19 traders / 2 days."
     },
-    "money_supply_players": 129817.9,
+    "money_supply_players": 129617.9,
     "money_supply_series": [
       [
         "2026-09-04",
@@ -29,7 +29,7 @@
       ],
       [
         "2026-09-06",
-        49817.9
+        49617.9
       ]
     ],
     "trade_volume_series": [
@@ -39,12 +39,12 @@
       ],
       [
         "2026-09-06",
-        41616.0
+        41816.0
       ]
     ],
-    "trade_volume_7d": 111491.9,
+    "trade_volume_7d": 111691.9,
     "server_shop_transactions": 0,
-    "gini": 0.423,
+    "gini": 0.425,
     "price_index": {
       "value": null,
       "series": [],
@@ -116,14 +116,159 @@
       }
     ],
     "median": 2500.0,
-    "mean": 4056.81
+    "mean": 4050.56
   },
   "server": {
-    "checked": "2026-09-06T12:08:52Z",
-    "started_at": "2026-09-05T20:19:13Z",
+    "checked": "2026-09-06T12:20:12Z",
+    "started_at": "2026-09-06T12:12:13Z",
     "tps": 20.0
   },
   "nations": [],
-  "lands": [],
-  "events": []
+  "lands": [
+    {
+      "name": "st4tc's Camp",
+      "type": "camp",
+      "chunks": 9,
+      "members": 2,
+      "bank": 0.0,
+      "level": 0
+    },
+    {
+      "name": "Pergaminthos",
+      "type": "land",
+      "chunks": 6,
+      "members": 4,
+      "bank": 0.0,
+      "level": 0
+    },
+    {
+      "name": "Augustine",
+      "type": "land",
+      "chunks": 4,
+      "members": 4,
+      "bank": 350.0,
+      "level": 0
+    },
+    {
+      "name": "Rare Fish Industries",
+      "type": "land",
+      "chunks": 4,
+      "members": 3,
+      "bank": 800.0,
+      "level": 0
+    },
+    {
+      "name": "ACRI_Vanguard",
+      "type": "land",
+      "chunks": 4,
+      "members": 2,
+      "bank": 0.0,
+      "level": 0
+    },
+    {
+      "name": "klaksonik",
+      "type": "land",
+      "chunks": 3,
+      "members": 2,
+      "bank": 150.0,
+      "level": 0
+    },
+    {
+      "name": "coolland!!!",
+      "type": "land",
+      "chunks": 3,
+      "members": 2,
+      "bank": 50.0,
+      "level": 0
+    },
+    {
+      "name": "Luko_Landino",
+      "type": "land",
+      "chunks": 2,
+      "members": 4,
+      "bank": 300.0,
+      "level": 0
+    },
+    {
+      "name": "Liam's Empire",
+      "type": "land",
+      "chunks": 2,
+      "members": 2,
+      "bank": 200.0,
+      "level": 0
+    },
+    {
+      "name": "Lagmanium",
+      "type": "land",
+      "chunks": 1,
+      "members": 2,
+      "bank": 100.0,
+      "level": 0
+    },
+    {
+      "name": "Static",
+      "type": "land",
+      "chunks": 1,
+      "members": 2,
+      "bank": 4264.0,
+      "level": 0
+    }
+  ],
+  "events": [
+    {
+      "type": "land",
+      "name": "ACRI_Vanguard",
+      "at": 1788683851
+    },
+    {
+      "type": "land",
+      "name": "Liam's Empire",
+      "at": 1788668248
+    },
+    {
+      "type": "land",
+      "name": "Static",
+      "at": 1788662392
+    },
+    {
+      "type": "land",
+      "name": "Pergaminthos",
+      "at": 1788656399
+    },
+    {
+      "type": "land",
+      "name": "Luko_Landino",
+      "at": 1788656250
+    },
+    {
+      "type": "land",
+      "name": "st4tc's Camp",
+      "at": 1788652942
+    },
+    {
+      "type": "land",
+      "name": "Rare Fish Industries",
+      "at": 1788647404
+    },
+    {
+      "type": "land",
+      "name": "Lagmanium",
+      "at": 1788645070
+    },
+    {
+      "type": "land",
+      "name": "coolland!!!",
+      "at": 1788642904
+    },
+    {
+      "type": "land",
+      "name": "Augustine",
+      "at": 1788641933
+    },
+    {
+      "type": "land",
+      "name": "klaksonik",
+      "at": 1788640212
+    }
+  ]
 }
