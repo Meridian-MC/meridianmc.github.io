@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-06T19:50:11Z",
+  "generated": "2026-09-06T19:51:39Z",
   "meta": {
     "players_tracked": 32,
     "active_traders": 20,
@@ -17,7 +17,7 @@
       "label": "Insufficient data",
       "note": "Need 8+ active traders and 14+ days of history. Currently 20 traders / 2 days."
     },
-    "money_supply_players": 142647.4,
+    "money_supply_players": 142704.4,
     "money_supply_series": [
       [
         "2026-09-04",
@@ -29,7 +29,7 @@
       ],
       [
         "2026-09-06",
-        62647.4
+        62704.4
       ]
     ],
     "trade_volume_series": [
@@ -39,10 +39,10 @@
       ],
       [
         "2026-09-06",
-        117237.5
+        117294.5
       ]
     ],
-    "trade_volume_7d": 187113.4,
+    "trade_volume_7d": 187170.4,
     "server_shop_transactions": 0,
     "gini": 0.417,
     "price_index": {
@@ -104,7 +104,7 @@
       },
       {
         "name": "ACRI_Vanguard",
-        "balance": 3110.0
+        "balance": 3167.0
       },
       {
         "name": "winterapplesauce",
@@ -116,11 +116,11 @@
       }
     ],
     "median": 2500.0,
-    "mean": 4457.73
+    "mean": 4459.51
   },
   "server": {
-    "checked": "2026-09-06T19:50:11Z",
-    "started_at": "2026-09-06T14:53:17Z",
+    "checked": "2026-09-06T19:51:40Z",
+    "started_at": "2026-09-06T14:53:18Z",
     "tps": 20.0
   },
   "nations": [],
