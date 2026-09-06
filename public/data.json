@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-06T15:00:57Z",
+  "generated": "2026-09-06T15:06:08Z",
   "meta": {
     "players_tracked": 32,
     "active_traders": 20,
@@ -17,7 +17,7 @@
       "label": "Insufficient data",
       "note": "Need 8+ active traders and 14+ days of history. Currently 20 traders / 2 days."
     },
-    "money_supply_players": 132026.9,
+    "money_supply_players": 135226.9,
     "money_supply_series": [
       [
         "2026-09-04",
@@ -29,7 +29,7 @@
       ],
       [
         "2026-09-06",
-        52026.9
+        55226.9
       ]
     ],
     "trade_volume_series": [
@@ -39,12 +39,12 @@
       ],
       [
         "2026-09-06",
-        59769.0
+        62969.0
       ]
     ],
-    "trade_volume_7d": 129644.9,
+    "trade_volume_7d": 132844.9,
     "server_shop_transactions": 0,
-    "gini": 0.403,
+    "gini": 0.409,
     "price_index": {
       "value": null,
       "series": [],
@@ -65,6 +65,10 @@
       {
         "name": "Luko_Landino",
         "balance": 7072.5
+      },
+      {
+        "name": "ihasadragon",
+        "balance": 6446.4
       },
       {
         "name": "Scp9390",
@@ -95,10 +99,6 @@
         "balance": 3800.0
       },
       {
-        "name": "ihasadragon",
-        "balance": 3246.4
-      },
-      {
         "name": "ACRI_Vanguard",
         "balance": 3110.0
       },
@@ -116,10 +116,10 @@
       }
     ],
     "median": 2500.0,
-    "mean": 4125.84
+    "mean": 4225.84
   },
   "server": {
-    "checked": "2026-09-06T15:00:57Z",
+    "checked": "2026-09-06T15:06:09Z",
     "started_at": "2026-09-06T14:53:17Z",
     "tps": 20.0
   },
