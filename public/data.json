@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-06T23:39:54Z",
+  "generated": "2026-09-06T23:45:06Z",
   "meta": {
     "players_tracked": 34,
     "active_traders": 20,
@@ -17,7 +17,7 @@
       "label": "Insufficient data",
       "note": "Need 8+ active traders and 14+ days of history. Currently 20 traders / 2 days."
     },
-    "money_supply_players": 238555.9,
+    "money_supply_players": 238756.9,
     "money_supply_series": [
       [
         "2026-09-04",
@@ -29,7 +29,7 @@
       ],
       [
         "2026-09-06",
-        153555.9
+        153756.9
       ]
     ],
     "trade_volume_series": [
@@ -39,10 +39,10 @@
       ],
       [
         "2026-09-06",
-        212540.0
+        212741.0
       ]
     ],
-    "trade_volume_7d": 282415.9,
+    "trade_volume_7d": 282616.9,
     "server_shop_transactions": 197,
     "server_shop": {
       "transactions": 197,
@@ -131,12 +131,12 @@
         "balance": 9296.5
       },
       {
-        "name": "Scp9390",
-        "balance": 5571.5
+        "name": "WhenAtRome",
+        "balance": 5638.5
       },
       {
-        "name": "WhenAtRome",
-        "balance": 5437.5
+        "name": "Scp9390",
+        "balance": 5571.5
       },
       {
         "name": "st4tc",
@@ -172,10 +172,10 @@
       }
     ],
     "median": 2500.0,
-    "mean": 7016.35
+    "mean": 7022.26
   },
   "server": {
-    "checked": "2026-09-06T23:39:54Z",
+    "checked": "2026-09-06T23:45:06Z",
     "started_at": "2026-09-06T22:59:46Z",
     "tps": 20.0
   },
