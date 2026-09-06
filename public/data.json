@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-06T20:10:56Z",
+  "generated": "2026-09-06T20:12:56Z",
   "meta": {
     "players_tracked": 32,
     "active_traders": 20,
@@ -17,7 +17,7 @@
       "label": "Insufficient data",
       "note": "Need 8+ active traders and 14+ days of history. Currently 20 traders / 2 days."
     },
-    "money_supply_players": 144532.4,
+    "money_supply_players": 154792.4,
     "money_supply_series": [
       [
         "2026-09-04",
@@ -29,7 +29,7 @@
       ],
       [
         "2026-09-06",
-        64532.4
+        74792.4
       ]
     ],
     "trade_volume_series": [
@@ -39,12 +39,12 @@
       ],
       [
         "2026-09-06",
-        121762.5
+        132022.5
       ]
     ],
-    "trade_volume_7d": 191638.4,
+    "trade_volume_7d": 201898.4,
     "server_shop_transactions": 0,
-    "gini": 0.419,
+    "gini": 0.442,
     "price_index": {
       "value": null,
       "series": [],
@@ -63,6 +63,10 @@
         "balance": 16551.5
       },
       {
+        "name": "ACRI_Vanguard",
+        "balance": 14723.0
+      },
+      {
         "name": "ihasadragon",
         "balance": 13498.4
       },
@@ -77,10 +81,6 @@
       {
         "name": "1RTR",
         "balance": 4651.5
-      },
-      {
-        "name": "ACRI_Vanguard",
-        "balance": 4463.0
       },
       {
         "name": "BabieDolphin",
@@ -116,10 +116,10 @@
       }
     ],
     "median": 2500.0,
-    "mean": 4516.64
+    "mean": 4837.26
   },
   "server": {
-    "checked": "2026-09-06T20:10:56Z",
+    "checked": "2026-09-06T20:12:56Z",
     "started_at": "2026-09-06T14:53:17Z",
     "tps": 20.0
   },
