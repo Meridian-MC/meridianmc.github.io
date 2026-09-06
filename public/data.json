@@ -1,7 +1,7 @@
 {
-  "generated": "2026-09-06T23:18:51Z",
+  "generated": "2026-09-06T23:24:04Z",
   "meta": {
-    "players_tracked": 33,
+    "players_tracked": 34,
     "active_traders": 20,
     "data_days": 2,
     "sufficient": false,
@@ -17,7 +17,7 @@
       "label": "Insufficient data",
       "note": "Need 8+ active traders and 14+ days of history. Currently 20 traders / 2 days."
     },
-    "money_supply_players": 231659.9,
+    "money_supply_players": 236603.9,
     "money_supply_series": [
       [
         "2026-09-04",
@@ -29,7 +29,7 @@
       ],
       [
         "2026-09-06",
-        149159.9
+        151603.9
       ]
     ],
     "trade_volume_series": [
@@ -39,10 +39,10 @@
       ],
       [
         "2026-09-06",
-        208144.0
+        210588.0
       ]
     ],
-    "trade_volume_7d": 278019.9,
+    "trade_volume_7d": 280463.9,
     "server_shop_transactions": 197,
     "server_shop": {
       "transactions": 197,
@@ -100,7 +100,7 @@
       ]
     },
     "chest_shop_transactions": 0,
-    "gini": 0.575,
+    "gini": 0.572,
     "price_index": {
       "value": null,
       "series": [],
@@ -128,11 +128,15 @@
       },
       {
         "name": "Luko_Landino",
-        "balance": 7072.5
+        "balance": 7968.5
       },
       {
         "name": "Scp9390",
         "balance": 5571.5
+      },
+      {
+        "name": "WhenAtRome",
+        "balance": 5437.5
       },
       {
         "name": "st4tc",
@@ -159,10 +163,6 @@
         "balance": 3967.5
       },
       {
-        "name": "WhenAtRome",
-        "balance": 3889.5
-      },
-      {
         "name": "aazo9z",
         "balance": 3500.0
       },
@@ -172,10 +172,10 @@
       }
     ],
     "median": 2500.0,
-    "mean": 7020.0
+    "mean": 6958.94
   },
   "server": {
-    "checked": "2026-09-06T23:18:51Z",
+    "checked": "2026-09-06T23:24:04Z",
     "started_at": "2026-09-06T22:59:46Z",
     "tps": 20.0
   },
