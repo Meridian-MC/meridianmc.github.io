@@ -1,6 +1,6 @@
 {
-  "ok": true,
-  "at": "2026-09-06T11:40:19Z",
-  "credential": "local",
-  "detail": ""
+  "ok": false,
+  "at": "2026-09-06T12:17:01Z",
+  "credential": "MC_FTP_PASSWORD_2",
+  "detail": "FTP rejected the login (530 Authentication failed.). The credential is wrong: check MC_FTP_PASSWORD_2 (or MC_FTP_PASSWORD) against the server's current FTP password. This is an auth rejection, not a network or IP restriction - the runners reach Apex fine."
 }
