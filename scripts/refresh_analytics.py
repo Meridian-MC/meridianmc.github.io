@@ -170,6 +170,64 @@ def _split_color(raw_name):
     return raw_name, None
 
 
+def server_shop_from_db(raw):
+    """Aggregate the EconomyShopGUI counters from their SQLite transaction log.
+
+    This is the server's own Buy/Sell counters, not player chest shops. It is the
+    one place on the server where money is created and destroyed outright, so it
+    is the first thing to look at when the supply moves unexpectedly. Until this
+    was wired up the dashboard read QuickShop's MySQL here instead and reported a
+    flat 0, which is how the Sell counter minted $110,493 - 96% of all money on
+    the server - across two days without anything showing it.
+
+    Tables are per-month (SINGLE_ITEM_TRANSACTIONS_9_2026), so scan them all.
+    """
+    fd, tmp = tempfile.mkstemp(suffix=".db")
+    os.write(fd, raw)
+    os.close(fd)
+    con = sqlite3.connect(tmp)
+    tables = [r[0] for r in con.execute(
+        "SELECT name FROM sqlite_master WHERE type='table' AND name LIKE '%TRANSACTIONS%'")]
+    created = destroyed = 0.0
+    n = 0
+    per_item, by_day = {}, {}
+    for t in tables:
+        col = "items" if t.startswith("MULTIPLE") else "item"
+        try:
+            rows = con.execute(f"SELECT date, `{col}`, prices, amount, action FROM `{t}`").fetchall()
+        except sqlite3.Error:
+            continue
+        for ts, item, prices, amount, action in rows:
+            try:
+                value = float(json.loads(prices or "{}").get("Vault") or 0.0)
+            except Exception:
+                value = 0.0
+            n += 1
+            day = datetime.datetime.fromtimestamp(
+                (ts or 0) / 1000, datetime.timezone.utc).strftime("%Y-%m-%d")
+            slot = by_day.setdefault(day, [0.0, 0.0])
+            name = str(item or "").split(".")[-1]
+            if str(action).upper() == "SELL":
+                created += value
+                slot[0] += value
+                e = per_item.setdefault(name, [0, 0.0])
+                e[0] += int(amount or 0); e[1] += value
+            else:
+                destroyed += value
+                slot[1] += value
+    con.close()
+    os.unlink(tmp)
+    top = sorted(per_item.items(), key=lambda kv: -kv[1][1])[:8]
+    return {
+        "transactions": n,
+        "created": round(created, 2),      # paid out by the Sell counter
+        "destroyed": round(destroyed, 2),  # taken in by the Buy counter
+        "net": round(created - destroyed, 2),
+        "series": [[d, round(v[0], 2), round(v[1], 2)] for d, v in sorted(by_day.items())],
+        "top_sold": [{"item": k, "qty": v[0], "paid": round(v[1], 2)} for k, v in top],
+    }
+
+
 def lands_from_db(raw):
     fd, tmp = tempfile.mkstemp(suffix=".db")
     os.write(fd, raw)
@@ -402,6 +460,12 @@ def main():
         rtp = ftp_bytes(f, f"{P}/EzRTP/rtp.yml").decode("utf8", "replace")
     except ftplib.error_perm:
         rtp = ""
+    try:
+        shop = server_shop_from_db(
+            ftp_bytes(f, f"{P}/EconomyShopGUI/transactions/transactions.db"))
+    except (ftplib.error_perm, sqlite3.Error):
+        shop = {"transactions": 0, "created": 0.0, "destroyed": 0.0, "net": 0.0,
+                "series": [], "top_sold": []}
     f.quit()
 
     my = mysql_from_rtp(rtp) if rtp else None
@@ -437,7 +501,12 @@ def main():
             "money_supply_series": supply,
             "trade_volume_series": vol_series,
             "trade_volume_7d": round(sum(v for _, v in vol_series[-7:]), 2),
-            "server_shop_transactions": (my or {}).get("qs_tx") or 0,
+            # The server's own Buy/Sell counters: the only outright money faucet
+            # and sink on the server. `chest_shop_transactions` is the separate
+            # player-to-player figure from QuickShop.
+            "server_shop_transactions": shop["transactions"],
+            "server_shop": shop,
+            "chest_shop_transactions": (my or {}).get("qs_tx") or 0,
             "gini": gini(list(balances.values())),
             "price_index": {"value": None, "series": [],
                             "note": "Turns on once chest-shop prices have history."},

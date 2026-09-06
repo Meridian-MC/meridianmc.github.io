@@ -19,7 +19,7 @@ export const ECON = {
   jobsDailyCap: "$1,500",
   chunkCost: "$1,000",
   landUpkeepPerChunk: "$100",
-  nationCreateCost: "$400,000",
-  nationUpkeepPerChunk: "$400",
+  nationCreateCost: "$75,000",
+  nationUpkeepPerChunk: "$80",
   warAttackerMinBank: "$50,000",
 };

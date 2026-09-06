@@ -329,6 +329,27 @@
           tile(money(w.median), "Median balance", "typical player") +
           tile(intf(m.players_tracked), "Players tracked", m.active_traders + " trading");
       }
+      // The Buy/Sell counters are the only outright faucet and sink on the server,
+      // so a persistently positive net is the early warning that something is
+      // mispriced. It went unseen for two days before this was surfaced.
+      var mint = root.querySelector("[data-slot=mint]");
+      if (mint) {
+        var sh = e.server_shop;
+        if (!sh || !sh.transactions) {
+          mint.innerHTML = tile("n/a", "No counter activity", "nothing bought or sold yet");
+        } else {
+          var top = (sh.top_sold && sh.top_sold[0]) || null;
+          mint.innerHTML =
+            tile(money(sh.created), "Created", "paid out by the Sell counter") +
+            tile(money(sh.destroyed), "Destroyed", "taken in by the Buy counter") +
+            tile((sh.net > 0 ? "+" : "") + money(sh.net), "Net supply change",
+                 sh.net > 0 ? "counter is adding money" : "counter is removing money") +
+            tile(intf(sh.transactions), "Counter trades", "since launch") +
+            (top ? tile(esc(top.item.replace(/_/g, " ")), "Most sold",
+                        intf(top.qty) + " for " + money(top.paid)) : "");
+        }
+      }
+
       fillChart("supply-chart", lineChart(e.money_supply_series, money), "Starts once players trade.");
       fillChart("price-chart", lineChart(e.price_index && e.price_index.series, function (v) { return v.toFixed(0); }),
         (e.price_index && e.price_index.note) || "Needs shop price history.");
