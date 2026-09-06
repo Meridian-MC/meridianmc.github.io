@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-06T23:45:06Z",
+  "generated": "2026-09-06T23:50:18Z",
   "meta": {
     "players_tracked": 34,
     "active_traders": 20,
@@ -17,7 +17,7 @@
       "label": "Insufficient data",
       "note": "Need 8+ active traders and 14+ days of history. Currently 20 traders / 2 days."
     },
-    "money_supply_players": 238756.9,
+    "money_supply_players": 238512.9,
     "money_supply_series": [
       [
         "2026-09-04",
@@ -29,7 +29,7 @@
       ],
       [
         "2026-09-06",
-        153756.9
+        153512.9
       ]
     ],
     "trade_volume_series": [
@@ -39,16 +39,16 @@
       ],
       [
         "2026-09-06",
-        212741.0
+        212985.0
       ]
     ],
-    "trade_volume_7d": 282616.9,
-    "server_shop_transactions": 197,
+    "trade_volume_7d": 282860.9,
+    "server_shop_transactions": 207,
     "server_shop": {
-      "transactions": 197,
-      "created": 175963.0,
-      "destroyed": 23716.0,
-      "net": 152247.0,
+      "transactions": 207,
+      "created": 178896.5,
+      "destroyed": 23950.0,
+      "net": 154946.5,
       "series": [
         [
           "2026-09-05",
@@ -57,15 +57,15 @@
         ],
         [
           "2026-09-06",
-          131159.0,
-          19159.0
+          134092.5,
+          19393.0
         ]
       ],
       "top_sold": [
         {
           "item": "copper_ingot",
-          "qty": 23787,
-          "paid": 95148.0
+          "qty": 24804,
+          "paid": 95656.5
         },
         {
           "item": "raw_copper",
@@ -74,8 +74,8 @@
         },
         {
           "item": "gold_ingot",
-          "qty": 183,
-          "paid": 2928.0
+          "qty": 359,
+          "paid": 4512.0
         },
         {
           "item": "raw_gold",
@@ -84,18 +84,18 @@
         },
         {
           "item": "iron_ingot",
-          "qty": 147,
-          "paid": 1176.0
+          "qty": 275,
+          "paid": 1816.0
+        },
+        {
+          "item": "redstone",
+          "qty": 356,
+          "paid": 666.0
         },
         {
           "item": "lapis_lazuli",
           "qty": 209,
           "paid": 627.0
-        },
-        {
-          "item": "redstone",
-          "qty": 155,
-          "paid": 465.0
         }
       ]
     },
@@ -128,11 +128,11 @@
       },
       {
         "name": "Luko_Landino",
-        "balance": 9296.5
+        "balance": 8296.5
       },
       {
         "name": "WhenAtRome",
-        "balance": 5638.5
+        "balance": 6394.5
       },
       {
         "name": "Scp9390",
@@ -172,10 +172,10 @@
       }
     ],
     "median": 2500.0,
-    "mean": 7022.26
+    "mean": 7015.09
   },
   "server": {
-    "checked": "2026-09-06T23:45:06Z",
+    "checked": "2026-09-06T23:50:18Z",
     "started_at": "2026-09-06T22:59:46Z",
     "tps": 20.0
   },
