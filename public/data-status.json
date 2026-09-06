@@ -1,6 +1,6 @@
 {
-  "ok": true,
-  "at": "2026-09-06T13:12:15Z",
-  "credential": "MC_FTP_PASSWORD_2",
-  "detail": ""
+  "ok": false,
+  "at": "2026-09-06T22:52:49Z",
+  "credential": "local",
+  "detail": "FTP connection failed after 3 attempts: ConnectionResetError(54, 'Connection reset by peer')"
 }
