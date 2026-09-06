@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-06T17:36:50Z",
+  "generated": "2026-09-06T17:38:52Z",
   "meta": {
     "players_tracked": 32,
     "active_traders": 20,
@@ -17,7 +17,7 @@
       "label": "Insufficient data",
       "note": "Need 8+ active traders and 14+ days of history. Currently 20 traders / 2 days."
     },
-    "money_supply_players": 146103.4,
+    "money_supply_players": 145803.4,
     "money_supply_series": [
       [
         "2026-09-04",
@@ -29,7 +29,7 @@
       ],
       [
         "2026-09-06",
-        66103.4
+        65803.4
       ]
     ],
     "trade_volume_series": [
@@ -39,12 +39,12 @@
       ],
       [
         "2026-09-06",
-        75845.5
+        76145.5
       ]
     ],
-    "trade_volume_7d": 145721.4,
+    "trade_volume_7d": 146021.4,
     "server_shop_transactions": 0,
-    "gini": 0.435,
+    "gini": 0.436,
     "price_index": {
       "value": null,
       "series": [],
@@ -95,12 +95,12 @@
         "balance": 3967.5
       },
       {
-        "name": "aazo9z",
-        "balance": 3800.0
-      },
-      {
         "name": "Keanie__",
         "balance": 3740.5
+      },
+      {
+        "name": "aazo9z",
+        "balance": 3500.0
       },
       {
         "name": "ACRI_Vanguard",
@@ -116,10 +116,10 @@
       }
     ],
     "median": 2500.0,
-    "mean": 4565.73
+    "mean": 4556.36
   },
   "server": {
-    "checked": "2026-09-06T17:36:50Z",
+    "checked": "2026-09-06T17:38:52Z",
     "started_at": "2026-09-06T14:53:17Z",
     "tps": 20.0
   },
