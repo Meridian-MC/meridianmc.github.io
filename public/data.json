@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-06T22:58:02Z",
+  "generated": "2026-09-06T23:03:15Z",
   "meta": {
     "players_tracked": 32,
     "active_traders": 20,
@@ -175,12 +175,28 @@
     "mean": 7145.36
   },
   "server": {
-    "checked": "2026-09-06T22:58:02Z",
-    "started_at": "2026-09-06T14:53:17Z",
+    "checked": "2026-09-06T23:03:15Z",
+    "started_at": "2026-09-06T22:59:46Z",
     "tps": 20.0
   },
   "nations": [],
   "lands": [
+    {
+      "name": "Augustine",
+      "type": "land",
+      "chunks": 12,
+      "members": 4,
+      "bank": 1850.0,
+      "level": 0
+    },
+    {
+      "name": "Rare Fish Industries",
+      "type": "land",
+      "chunks": 10,
+      "members": 4,
+      "bank": 1800.0,
+      "level": 0
+    },
     {
       "name": "st4tc's Camp",
       "type": "camp",
@@ -198,19 +214,11 @@
       "level": 0
     },
     {
-      "name": "Augustine",
-      "type": "land",
-      "chunks": 5,
-      "members": 4,
-      "bank": 5350.0,
-      "level": 0
-    },
-    {
-      "name": "Rare Fish Industries",
+      "name": "Liam's Empire",
       "type": "land",
       "chunks": 4,
       "members": 3,
-      "bank": 800.0,
+      "bank": 500.0,
       "level": 0
     },
     {
@@ -234,22 +242,14 @@
       "type": "land",
       "chunks": 3,
       "members": 2,
-      "bank": 50.0,
-      "level": 0
-    },
-    {
-      "name": "Liam's Empire",
-      "type": "land",
-      "chunks": 3,
-      "members": 2,
-      "bank": 200.0,
+      "bank": 350.0,
       "level": 0
     },
     {
       "name": "Luko_Landino",
       "type": "land",
       "chunks": 2,
-      "members": 4,
+      "members": 5,
       "bank": 300.0,
       "level": 0
     },
@@ -262,19 +262,11 @@
       "level": 0
     },
     {
-      "name": "Static",
-      "type": "land",
-      "chunks": 1,
-      "members": 2,
-      "bank": 4264.0,
-      "level": 0
-    },
-    {
       "name": "Keanie__",
       "type": "land",
       "chunks": 1,
       "members": 2,
-      "bank": 0.0,
+      "bank": 300.0,
       "level": 0
     }
   ],
@@ -293,11 +285,6 @@
       "type": "land",
       "at": "2026-09-06T04:17:28Z",
       "text": "Liam's Empire was founded"
-    },
-    {
-      "type": "land",
-      "at": "2026-09-06T02:39:52Z",
-      "text": "Static was founded"
     },
     {
       "type": "land",
