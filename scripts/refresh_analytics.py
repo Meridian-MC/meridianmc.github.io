@@ -212,25 +212,34 @@ def lands_from_db(raw):
             n //= 1000
         return n if n > 1e9 else None
 
+    def _iso(t):
+        return datetime.datetime.fromtimestamp(t, datetime.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+
+    # The site renders ev.text and passes ev.at to Date.parse, so these must be
+    # a ready-made sentence and an ISO timestamp - not a bare name and an int.
     for r in con.execute("SELECT name, created_at FROM lands_lands"):
         t = _ts(r["created_at"])
         if t:
-            events.append({"type": "land", "name": _split_color(r["name"])[0], "at": t})
+            events.append({"type": "land", "at": _iso(t), "_t": t,
+                           "text": f'{_split_color(r["name"])[0]} was founded'})
     for r in con.execute("SELECT name, created_at FROM lands_nations"):
         t = _ts(r["created_at"])
         if t:
-            events.append({"type": "nation", "name": _split_color(r["name"])[0], "at": t})
+            events.append({"type": "nation", "at": _iso(t), "_t": t,
+                           "text": f'{_split_color(r["name"])[0]} was formed'})
     try:
         for r in con.execute("SELECT attacker, defender, started_at FROM lands_wars"):
             t = _ts(r["started_at"])
             if t:
-                events.append({"type": "war",
-                               "name": f'{_split_color(r["attacker"])[0]} vs {_split_color(r["defender"])[0]}',
-                               "at": t})
+                events.append({"type": "war", "at": _iso(t), "_t": t,
+                               "text": f'{_split_color(r["attacker"])[0]} declared war on '
+                                       f'{_split_color(r["defender"])[0]}'})
     except sqlite3.Error:
         pass          # older schemas may not have the wars table
 
-    events.sort(key=lambda e: -e["at"])
+    events.sort(key=lambda e: -e["_t"])
+    for e in events:
+        e.pop("_t", None)
     con.close()
     os.unlink(tmp)
     return lands, nations, events[:20]

@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-06T13:43:26Z",
+  "generated": "2026-09-06T13:48:22Z",
   "meta": {
     "players_tracked": 32,
     "active_traders": 19,
@@ -118,11 +118,7 @@
     "median": 2500.0,
     "mean": 4087.12
   },
-  "server": {
-    "checked": "2026-09-06T13:43:26Z",
-    "started_at": "2026-09-06T12:12:13Z",
-    "tps": 20.0
-  },
+  "server": {},
   "nations": [],
   "lands": [
     {
@@ -217,58 +213,58 @@
   "events": [
     {
       "type": "land",
-      "name": "ACRI_Vanguard",
-      "at": 1788683851
+      "at": "2026-09-06T08:37:31Z",
+      "text": "ACRI_Vanguard was founded"
     },
     {
       "type": "land",
-      "name": "Liam's Empire",
-      "at": 1788668248
+      "at": "2026-09-06T04:17:28Z",
+      "text": "Liam's Empire was founded"
     },
     {
       "type": "land",
-      "name": "Static",
-      "at": 1788662392
+      "at": "2026-09-06T02:39:52Z",
+      "text": "Static was founded"
     },
     {
       "type": "land",
-      "name": "Pergaminthos",
-      "at": 1788656399
+      "at": "2026-09-06T00:59:59Z",
+      "text": "Pergaminthos was founded"
     },
     {
       "type": "land",
-      "name": "Luko_Landino",
-      "at": 1788656250
+      "at": "2026-09-06T00:57:30Z",
+      "text": "Luko_Landino was founded"
     },
     {
       "type": "land",
-      "name": "st4tc's Camp",
-      "at": 1788652942
+      "at": "2026-09-06T00:02:22Z",
+      "text": "st4tc's Camp was founded"
     },
     {
       "type": "land",
-      "name": "Rare Fish Industries",
-      "at": 1788647404
+      "at": "2026-09-05T22:30:04Z",
+      "text": "Rare Fish Industries was founded"
     },
     {
       "type": "land",
-      "name": "Lagmanium",
-      "at": 1788645070
+      "at": "2026-09-05T21:51:10Z",
+      "text": "Lagmanium was founded"
     },
     {
       "type": "land",
-      "name": "coolland!!!",
-      "at": 1788642904
+      "at": "2026-09-05T21:15:04Z",
+      "text": "coolland!!! was founded"
     },
     {
       "type": "land",
-      "name": "Augustine",
-      "at": 1788641933
+      "at": "2026-09-05T20:58:53Z",
+      "text": "Augustine was founded"
     },
     {
       "type": "land",
-      "name": "klaksonik",
-      "at": 1788640212
+      "at": "2026-09-05T20:30:12Z",
+      "text": "klaksonik was founded"
     }
   ]
 }
