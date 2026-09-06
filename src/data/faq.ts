@@ -136,7 +136,7 @@ export const FAQ: FaqEntry[] = [
     question: "How much does land cost?",
     answer: `<p>Founding a land with <code>/lands create</code> is free and includes your <span class="short">first chunk free</span>. After that:</p>
 <ul>
-  <li>The next chunk is <span class="short">free</span> too, and each one after that adds <span class="short">$400</span> to the last, so bigger claims cost more to grow.</li>
+  <li>Every chunk after that costs a flat <span class="short">$1,000</span>, no matter how big your land gets. How many you can claim is capped separately: <span class="short">7 chunks</span> alone, plus <span class="short">7 more</span> for every player you trust.</li>
   <li>Weekly upkeep is <span class="short">$100 per chunk</span>, taken from the shared land bank.</li>
   <li>Tiers and nation membership change these numbers. The full breakdown is in the <a href="/lands">Lands guide</a>.</li>
 </ul>`,

@@ -26,7 +26,7 @@ const sections = [
   <h2 id="lands"><span class="num">1</span>Lands</h2>
   <ol>
     <li>Run <code>/lands create &lt;name&gt;</code> to found your land free of charge. The first chunk is free.</li>
-    <li>The next chunk is <strong>free</strong> too. Every chunk after that adds a fixed <strong>{ECON.chunkIncrease}</strong> to the cost of the one before it, so the larger your land gets, the more each expansion costs.</li>
+    <li>Every chunk after that costs a flat <strong>{ECON.chunkCost}</strong>, however big your land gets. How many you may claim is capped separately: <strong>7 chunks</strong> on your own, and <strong>7 more for each player you trust</strong>.</li>
     <li>When naming your land you can use a hex code to set its color on the world map, for example <code>&lt;#FF5555&gt;ExampleLand</code>. Minecraft only recognizes a specific set of hex colors.</li>
     <li>Your land has its own shared bank, separate from any individual's personal balance. Claim costs and upkeep are withdrawn from this bank, and any member can deposit into it.</li>
     <li>If the bank can't cover a cost, it falls back to the <strong>owner's</strong> personal balance.</li>

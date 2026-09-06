@@ -17,8 +17,7 @@ export const DISCORD_INVITE_URL = `https://discord.gg/${DISCORD_INVITE_CODE}`;
 export const ECON = {
   startingBalance: "$2,500",
   jobsDailyCap: "$1,500",
-  firstPaidChunk: "free",
-  chunkIncrease: "$400",
+  chunkCost: "$1,000",
   landUpkeepPerChunk: "$100",
   nationCreateCost: "$400,000",
   nationUpkeepPerChunk: "$400",
