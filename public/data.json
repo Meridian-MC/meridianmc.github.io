@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-06T22:48:54Z",
+  "generated": "2026-09-06T22:51:38Z",
   "meta": {
     "players_tracked": 32,
     "active_traders": 20,
@@ -17,7 +17,7 @@
       "label": "Insufficient data",
       "note": "Need 8+ active traders and 14+ days of history. Currently 20 traders / 2 days."
     },
-    "money_supply_players": 224387.4,
+    "money_supply_players": 228651.4,
     "money_supply_series": [
       [
         "2026-09-04",
@@ -29,7 +29,7 @@
       ],
       [
         "2026-09-06",
-        144387.4
+        148651.4
       ]
     ],
     "trade_volume_series": [
@@ -39,10 +39,10 @@
       ],
       [
         "2026-09-06",
-        203371.5
+        207635.5
       ]
     ],
-    "trade_volume_7d": 273247.4,
+    "trade_volume_7d": 277511.4,
     "server_shop_transactions": 197,
     "server_shop": {
       "transactions": 197,
@@ -100,7 +100,7 @@
       ]
     },
     "chest_shop_transactions": 0,
-    "gini": 0.597,
+    "gini": 0.578,
     "price_index": {
       "value": null,
       "series": [],
@@ -139,6 +139,10 @@
         "balance": 4651.5
       },
       {
+        "name": "st4tc",
+        "balance": 4264.0
+      },
+      {
         "name": "BabieDolphin",
         "balance": 4103.0
       },
@@ -165,16 +169,16 @@
       {
         "name": "winterapplesauce",
         "balance": 2500.0
-      },
-      {
-        "name": "Real_Lenine",
-        "balance": 2500.0
       }
     ],
     "median": 2500.0,
-    "mean": 7012.11
+    "mean": 7145.36
   },
-  "server": {},
+  "server": {
+    "checked": "2026-09-06T22:51:38Z",
+    "started_at": "2026-09-06T14:53:17Z",
+    "tps": 20.0
+  },
   "nations": [],
   "lands": [
     {
