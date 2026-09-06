@@ -1,8 +1,8 @@
 {
-  "generated": "2026-09-06T01:11:13Z",
+  "generated": "2026-09-06T01:25:25Z",
   "meta": {
     "players_tracked": 29,
-    "active_traders": 16,
+    "active_traders": 17,
     "data_days": 1,
     "sufficient": false,
     "demo": false,
@@ -15,9 +15,9 @@
     "classification": {
       "code": "INSUFFICIENT_DATA",
       "label": "Insufficient data",
-      "note": "Need 8+ active traders and 14+ days of history. Currently 16 traders / 1 days."
+      "note": "Need 8+ active traders and 14+ days of history. Currently 17 traders / 1 days."
     },
-    "money_supply_players": 124205.4,
+    "money_supply_players": 127473.9,
     "money_supply_series": [
       [
         "2026-09-04",
@@ -29,7 +29,7 @@
       ],
       [
         "2026-09-06",
-        51705.4
+        54973.9
       ]
     ],
     "trade_volume_series": [
@@ -39,12 +39,12 @@
       ],
       [
         "2026-09-06",
-        8243.5
+        11512.0
       ]
     ],
-    "trade_volume_7d": 78119.4,
+    "trade_volume_7d": 81387.9,
     "server_shop_transactions": 0,
-    "gini": 0.395,
+    "gini": 0.396,
     "price_index": {
       "value": null,
       "series": [],
@@ -67,8 +67,16 @@
         "balance": 6258.5
       },
       {
+        "name": "Luko_Landino",
+        "balance": 4820.5
+      },
+      {
         "name": "1RTR",
         "balance": 4651.5
+      },
+      {
+        "name": "st4tc",
+        "balance": 4264.0
       },
       {
         "name": "saberjianga",
@@ -91,10 +99,6 @@
         "balance": 3800.0
       },
       {
-        "name": "Luko_Landino",
-        "balance": 3316.0
-      },
-      {
         "name": "Real_Lenine",
         "balance": 2500.0
       },
@@ -109,17 +113,13 @@
       {
         "name": "Yinshe",
         "balance": 2500.0
-      },
-      {
-        "name": "st4tc",
-        "balance": 2500.0
       }
     ],
     "median": 2500.0,
-    "mean": 4282.94
+    "mean": 4395.65
   },
   "server": {
-    "checked": "2026-09-06T01:11:14Z",
+    "checked": "2026-09-06T01:25:25Z",
     "started_at": "2026-09-05T20:19:13Z",
     "tps": 20.0
   },
