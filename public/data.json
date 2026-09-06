@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-06T04:30:13Z",
+  "generated": "2026-09-06T04:52:07Z",
   "meta": {
     "players_tracked": 30,
     "active_traders": 18,
@@ -17,7 +17,7 @@
       "label": "Insufficient data",
       "note": "Need 8+ active traders and 14+ days of history. Currently 18 traders / 1 days."
     },
-    "money_supply_players": 117281.9,
+    "money_supply_players": 119833.9,
     "money_supply_series": [
       [
         "2026-09-04",
@@ -29,7 +29,7 @@
       ],
       [
         "2026-09-06",
-        42281.9
+        44833.9
       ]
     ],
     "trade_volume_series": [
@@ -39,12 +39,12 @@
       ],
       [
         "2026-09-06",
-        31280.0
+        33832.0
       ]
     ],
-    "trade_volume_7d": 101155.9,
+    "trade_volume_7d": 103707.9,
     "server_shop_transactions": 0,
-    "gini": 0.389,
+    "gini": 0.399,
     "price_index": {
       "value": null,
       "series": [],
@@ -59,16 +59,16 @@
         "balance": 33098.0
       },
       {
+        "name": "Luko_Landino",
+        "balance": 7072.5
+      },
+      {
         "name": "Augustine65480",
         "balance": 6258.5
       },
       {
         "name": "1RTR",
         "balance": 4651.5
-      },
-      {
-        "name": "Luko_Landino",
-        "balance": 4520.5
       },
       {
         "name": "BabieDolphin",
@@ -116,10 +116,10 @@
       }
     ],
     "median": 2500.0,
-    "mean": 3909.4
+    "mean": 3994.46
   },
   "server": {
-    "checked": "2026-09-06T04:30:13Z",
+    "checked": "2026-09-06T04:52:07Z",
     "started_at": "2026-09-05T20:19:13Z",
     "tps": 20.0
   },
