@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-07T00:42:22Z",
+  "generated": "2026-09-07T00:47:34Z",
   "meta": {
     "players_tracked": 34,
     "active_traders": 21,
@@ -17,7 +17,7 @@
       "label": "Insufficient data",
       "note": "Need 8+ active traders and 14+ days of history. Currently 21 traders / 2 days."
     },
-    "money_supply_players": 210161.35,
+    "money_supply_players": 209061.35,
     "money_supply_series": [
       [
         "2026-09-04",
@@ -33,7 +33,7 @@
       ],
       [
         "2026-09-07",
-        125161.35
+        124061.35
       ]
     ],
     "trade_volume_series": [
@@ -47,10 +47,10 @@
       ],
       [
         "2026-09-07",
-        50185.45
+        51285.45
       ]
     ],
-    "trade_volume_7d": 337485.35,
+    "trade_volume_7d": 338585.35,
     "server_shop_transactions": 207,
     "server_shop": {
       "transactions": 207,
@@ -108,7 +108,7 @@
       ]
     },
     "chest_shop_transactions": 0,
-    "gini": 0.538,
+    "gini": 0.536,
     "price_index": {
       "value": null,
       "series": [],
@@ -124,7 +124,7 @@
       },
       {
         "name": "JoshMilkFleas",
-        "balance": 27618.95
+        "balance": 26518.95
       },
       {
         "name": "ACRI_Vanguard",
@@ -180,10 +180,10 @@
       }
     ],
     "median": 2500.0,
-    "mean": 6181.22
+    "mean": 6148.86
   },
   "server": {
-    "checked": "2026-09-07T00:42:22Z",
+    "checked": "2026-09-07T00:47:34Z",
     "started_at": "2026-09-06T22:59:46Z",
     "tps": 20.0
   },
