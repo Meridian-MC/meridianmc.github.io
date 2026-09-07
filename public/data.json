@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-07T14:59:35Z",
+  "generated": "2026-09-07T15:04:48Z",
   "meta": {
     "players_tracked": 35,
     "active_traders": 21,
@@ -17,7 +17,7 @@
       "label": "Insufficient data",
       "note": "Need 8+ active traders and 14+ days of history. Currently 21 traders / 3 days."
     },
-    "money_supply_players": 200918.75,
+    "money_supply_players": 201476.75,
     "money_supply_series": [
       [
         "2026-09-04",
@@ -33,7 +33,7 @@
       ],
       [
         "2026-09-07",
-        112418.75
+        112976.75
       ]
     ],
     "trade_volume_series": [
@@ -47,10 +47,10 @@
       ],
       [
         "2026-09-07",
-        82218.85
+        82776.85
       ]
     ],
-    "trade_volume_7d": 369518.75,
+    "trade_volume_7d": 370076.75,
     "server_shop_transactions": 224,
     "server_shop": {
       "transactions": 224,
@@ -113,7 +113,7 @@
       ]
     },
     "chest_shop_transactions": 0,
-    "gini": 0.543,
+    "gini": 0.535,
     "price_index": {
       "value": null,
       "series": [],
@@ -132,12 +132,16 @@
         "balance": 26518.95
       },
       {
-        "name": "ACRI_Vanguard",
-        "balance": 15834.5
+        "name": "WhenAtRome",
+        "balance": 12366.9
       },
       {
         "name": "Luko_Landino",
         "balance": 8496.5
+      },
+      {
+        "name": "ACRI_Vanguard",
+        "balance": 7834.5
       },
       {
         "name": "st4tc",
@@ -154,10 +158,6 @@
       {
         "name": "BrodyIsConfused",
         "balance": 5530.5
-      },
-      {
-        "name": "WhenAtRome",
-        "balance": 4366.9
       },
       {
         "name": "Keanie__",
@@ -185,10 +185,10 @@
       }
     ],
     "median": 2500.0,
-    "mean": 5740.54
+    "mean": 5756.48
   },
   "server": {
-    "checked": "2026-09-07T14:59:36Z",
+    "checked": "2026-09-07T15:04:48Z",
     "started_at": "2026-09-07T12:12:13Z",
     "tps": 20.0
   },
