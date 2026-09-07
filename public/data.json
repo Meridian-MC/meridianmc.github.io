@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-07T16:23:25Z",
+  "generated": "2026-09-07T16:28:36Z",
   "meta": {
     "players_tracked": 35,
     "active_traders": 21,
@@ -51,12 +51,12 @@
       ]
     ],
     "trade_volume_7d": 377671.35,
-    "server_shop_transactions": 244,
+    "server_shop_transactions": 250,
     "server_shop": {
-      "transactions": 244,
-      "created": 187021.5,
-      "destroyed": 28537.0,
-      "net": 158484.5,
+      "transactions": 250,
+      "created": 188472.5,
+      "destroyed": 28801.0,
+      "net": 159671.5,
       "series": [
         [
           "2026-09-05",
@@ -70,8 +70,8 @@
         ],
         [
           "2026-09-07",
-          8125.0,
-          4587.0
+          9576.0,
+          4851.0
         ]
       ],
       "top_sold": [
@@ -87,18 +87,18 @@
         },
         {
           "item": "gold_ingot",
-          "qty": 646,
-          "paid": 7095.0
+          "qty": 750,
+          "paid": 8031.0
         },
         {
           "item": "iron_ingot",
-          "qty": 436,
-          "paid": 2621.0
+          "qty": 525,
+          "paid": 3066.0
         },
         {
           "item": "raw_gold",
-          "qty": 143,
-          "paid": 2002.0
+          "qty": 153,
+          "paid": 2072.0
         },
         {
           "item": "lapis_lazuli",
@@ -187,11 +187,7 @@
     "median": 2500.0,
     "mean": 5958.38
   },
-  "server": {
-    "checked": "2026-09-07T16:23:25Z",
-    "started_at": "2026-09-07T12:12:13Z",
-    "tps": 20.0
-  },
+  "server": {},
   "nations": [
     {
       "name": "Augustine Empire",
