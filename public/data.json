@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-07T12:08:19Z",
+  "generated": "2026-09-07T12:13:30Z",
   "meta": {
     "players_tracked": 35,
     "active_traders": 21,
@@ -51,12 +51,12 @@
       ]
     ],
     "trade_volume_7d": 363066.85,
-    "server_shop_transactions": 217,
+    "server_shop_transactions": 224,
     "server_shop": {
-      "transactions": 217,
-      "created": 180425.5,
-      "destroyed": 24537.0,
-      "net": 155888.5,
+      "transactions": 224,
+      "created": 181353.5,
+      "destroyed": 28037.0,
+      "net": 153316.5,
       "series": [
         [
           "2026-09-05",
@@ -70,15 +70,15 @@
         ],
         [
           "2026-09-07",
-          1529.0,
-          587.0
+          2457.0,
+          4087.0
         ]
       ],
       "top_sold": [
         {
           "item": "copper_ingot",
-          "qty": 25060,
-          "paid": 95784.5
+          "qty": 26916,
+          "paid": 96712.5
         },
         {
           "item": "raw_copper",
@@ -188,30 +188,52 @@
     "mean": 5784.77
   },
   "server": {
-    "checked": "2026-09-07T12:08:19Z",
-    "started_at": "2026-09-06T22:59:46Z",
-    "tps": 20.0
+    "checked": "2026-09-07T12:13:30Z",
+    "started_at": "2026-09-07T12:12:13Z",
+    "tps": 10.42
   },
-  "nations": [],
+  "nations": [
+    {
+      "name": "Augustine Empire",
+      "tag": null,
+      "color": "#956BE8",
+      "mdi": 0.001,
+      "territory": 0.001,
+      "population": 0.001,
+      "wealth": 0.001,
+      "activity": 0.001,
+      "chunks": 0,
+      "members": 0,
+      "treasury": 0
+    }
+  ],
   "lands": [
     {
       "name": "Augustine",
       "type": "land",
-      "chunks": 12,
-      "members": 4,
-      "bank": 1850.0,
+      "chunks": 13,
+      "members": 6,
+      "bank": 850.0,
       "level": 0
     },
     {
       "name": "Rare Fish Industries",
       "type": "land",
-      "chunks": 10,
+      "chunks": 11,
       "members": 4,
-      "bank": 1800.0,
+      "bank": 1900.0,
       "level": 0
     },
     {
-      "name": "st4tc's Camp",
+      "name": "lil_mother_hoe's Camp",
+      "type": "camp",
+      "chunks": 9,
+      "members": 2,
+      "bank": 0.0,
+      "level": 0
+    },
+    {
+      "name": "Atilius_Corvinus's Camp",
       "type": "camp",
       "chunks": 9,
       "members": 2,
@@ -221,9 +243,9 @@
     {
       "name": "Pergaminthos",
       "type": "land",
-      "chunks": 6,
-      "members": 4,
-      "bank": 0.0,
+      "chunks": 7,
+      "members": 5,
+      "bank": 579.0,
       "level": 0
     },
     {
@@ -267,6 +289,30 @@
       "level": 0
     },
     {
+      "name": "Myndelea",
+      "type": "land",
+      "chunks": 2,
+      "members": 2,
+      "bank": 1500.0,
+      "level": 0
+    },
+    {
+      "name": "<aqua>byperhorea",
+      "type": "land",
+      "chunks": 2,
+      "members": 2,
+      "bank": 400.0,
+      "level": 0
+    },
+    {
+      "name": "Safe Haven",
+      "type": "land",
+      "chunks": 2,
+      "members": 2,
+      "bank": 200.0,
+      "level": 0
+    },
+    {
       "name": "Lagmanium",
       "type": "land",
       "chunks": 1,
@@ -284,6 +330,36 @@
     }
   ],
   "events": [
+    {
+      "type": "land",
+      "at": "2026-09-07T01:30:03Z",
+      "text": "Safe Haven was founded"
+    },
+    {
+      "type": "nation",
+      "at": "2026-09-07T00:08:05Z",
+      "text": "Augustine Empire was formed"
+    },
+    {
+      "type": "land",
+      "at": "2026-09-06T23:59:41Z",
+      "text": "<aqua>byperhorea was founded"
+    },
+    {
+      "type": "land",
+      "at": "2026-09-06T23:56:18Z",
+      "text": "Myndelea was founded"
+    },
+    {
+      "type": "land",
+      "at": "2026-09-06T23:53:31Z",
+      "text": "Atilius_Corvinus's Camp was founded"
+    },
+    {
+      "type": "land",
+      "at": "2026-09-06T23:24:03Z",
+      "text": "lil_mother_hoe's Camp was founded"
+    },
     {
       "type": "land",
       "at": "2026-09-06T12:36:12Z",
@@ -308,11 +384,6 @@
       "type": "land",
       "at": "2026-09-06T00:57:30Z",
       "text": "Luko_Landino was founded"
-    },
-    {
-      "type": "land",
-      "at": "2026-09-06T00:02:22Z",
-      "text": "st4tc's Camp was founded"
     },
     {
       "type": "land",
