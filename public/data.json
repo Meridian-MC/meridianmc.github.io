@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-07T15:13:19Z",
+  "generated": "2026-09-07T15:15:11Z",
   "meta": {
     "players_tracked": 35,
     "active_traders": 21,
@@ -113,7 +113,7 @@
       ]
     },
     "chest_shop_transactions": 0,
-    "gini": 0.537,
+    "gini": 0.567,
     "price_index": {
       "value": null,
       "series": [],
@@ -133,11 +133,7 @@
       },
       {
         "name": "WhenAtRome",
-        "balance": 12366.9
-      },
-      {
-        "name": "ACRI_Vanguard",
-        "balance": 9267.3
+        "balance": 21634.2
       },
       {
         "name": "Luko_Landino",
@@ -182,13 +178,17 @@
       {
         "name": "winterapplesauce",
         "balance": 2500.0
+      },
+      {
+        "name": "Real_Lenine",
+        "balance": 2500.0
       }
     ],
     "median": 2500.0,
     "mean": 5797.42
   },
   "server": {
-    "checked": "2026-09-07T15:13:19Z",
+    "checked": "2026-09-07T15:15:11Z",
     "started_at": "2026-09-07T12:12:13Z",
     "tps": 20.0
   },
