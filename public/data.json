@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-07T15:56:49Z",
+  "generated": "2026-09-07T16:02:00Z",
   "meta": {
     "players_tracked": 35,
     "active_traders": 21,
@@ -17,7 +17,7 @@
       "label": "Insufficient data",
       "note": "Need 8+ active traders and 14+ days of history. Currently 21 traders / 3 days."
     },
-    "money_supply_players": 206159.35,
+    "money_supply_players": 208737.35,
     "money_supply_series": [
       [
         "2026-09-04",
@@ -33,7 +33,7 @@
       ],
       [
         "2026-09-07",
-        117659.35
+        120237.35
       ]
     ],
     "trade_volume_series": [
@@ -47,16 +47,16 @@
       ],
       [
         "2026-09-07",
-        87459.45
+        90037.45
       ]
     ],
-    "trade_volume_7d": 374759.35,
-    "server_shop_transactions": 234,
+    "trade_volume_7d": 377337.35,
+    "server_shop_transactions": 244,
     "server_shop": {
-      "transactions": 234,
-      "created": 183667.9,
+      "transactions": 244,
+      "created": 187021.5,
       "destroyed": 28537.0,
-      "net": 155130.9,
+      "net": 158484.5,
       "series": [
         [
           "2026-09-05",
@@ -70,15 +70,15 @@
         ],
         [
           "2026-09-07",
-          4771.4,
+          8125.0,
           4587.0
         ]
       ],
       "top_sold": [
         {
           "item": "copper_ingot",
-          "qty": 28968,
-          "paid": 98148.9
+          "qty": 31956,
+          "paid": 100240.5
         },
         {
           "item": "raw_copper",
@@ -87,13 +87,13 @@
         },
         {
           "item": "gold_ingot",
-          "qty": 530,
-          "paid": 6051.0
+          "qty": 646,
+          "paid": 7095.0
         },
         {
           "item": "iron_ingot",
-          "qty": 423,
-          "paid": 2556.0
+          "qty": 436,
+          "paid": 2621.0
         },
         {
           "item": "raw_gold",
@@ -101,19 +101,19 @@
           "paid": 2002.0
         },
         {
+          "item": "lapis_lazuli",
+          "qty": 362,
+          "paid": 780.0
+        },
+        {
           "item": "redstone",
           "qty": 356,
           "paid": 666.0
-        },
-        {
-          "item": "lapis_lazuli",
-          "qty": 209,
-          "paid": 627.0
         }
       ]
     },
     "chest_shop_transactions": 0,
-    "gini": 0.561,
+    "gini": 0.566,
     "price_index": {
       "value": null,
       "series": [],
@@ -125,7 +125,7 @@
     "top": [
       {
         "name": "WhenAtRome",
-        "balance": 42072.6
+        "balance": 44650.6
       },
       {
         "name": "ihasadragon",
@@ -185,11 +185,11 @@
       }
     ],
     "median": 2500.0,
-    "mean": 5890.27
+    "mean": 5963.92
   },
   "server": {
-    "checked": "2026-09-07T15:56:49Z",
-    "started_at": "2026-09-07T12:12:13Z",
+    "checked": "2026-09-07T16:02:00Z",
+    "started_at": "2026-09-07T12:12:12Z",
     "tps": 20.0
   },
   "nations": [
