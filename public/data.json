@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-07T00:05:53Z",
+  "generated": "2026-09-07T00:11:06Z",
   "meta": {
     "players_tracked": 34,
     "active_traders": 21,
@@ -17,7 +17,7 @@
       "label": "Insufficient data",
       "note": "Need 8+ active traders and 14+ days of history. Currently 21 traders / 2 days."
     },
-    "money_supply_players": 238666.4,
+    "money_supply_players": 205610.35,
     "money_supply_series": [
       [
         "2026-09-04",
@@ -33,7 +33,7 @@
       ],
       [
         "2026-09-07",
-        153666.4
+        120610.35
       ]
     ],
     "trade_volume_series": [
@@ -47,10 +47,10 @@
       ],
       [
         "2026-09-07",
-        8534.5
+        45478.45
       ]
     ],
-    "trade_volume_7d": 295834.4,
+    "trade_volume_7d": 332778.35,
     "server_shop_transactions": 207,
     "server_shop": {
       "transactions": 207,
@@ -108,7 +108,7 @@
       ]
     },
     "chest_shop_transactions": 0,
-    "gini": 0.585,
+    "gini": 0.535,
     "price_index": {
       "value": null,
       "series": [],
@@ -123,16 +123,16 @@
         "balance": 56095.4
       },
       {
-        "name": "Augustine65480",
-        "balance": 46926.5
-      },
-      {
         "name": "JoshMilkFleas",
-        "balance": 26098.0
+        "balance": 27618.95
       },
       {
         "name": "ACRI_Vanguard",
         "balance": 14723.0
+      },
+      {
+        "name": "Augustine65480",
+        "balance": 11926.5
       },
       {
         "name": "Luko_Landino",
@@ -171,19 +171,19 @@
         "balance": 3500.0
       },
       {
-        "name": "winterapplesauce",
-        "balance": 2500.0
+        "name": "WhenAtRome",
+        "balance": 2707.5
       },
       {
-        "name": "Real_Lenine",
+        "name": "winterapplesauce",
         "balance": 2500.0
       }
     ],
     "median": 2500.0,
-    "mean": 7019.6
+    "mean": 6047.36
   },
   "server": {
-    "checked": "2026-09-07T00:05:53Z",
+    "checked": "2026-09-07T00:11:06Z",
     "started_at": "2026-09-06T22:59:46Z",
     "tps": 20.0
   },
