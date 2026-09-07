@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-07T14:33:37Z",
+  "generated": "2026-09-07T14:38:48Z",
   "meta": {
     "players_tracked": 35,
     "active_traders": 21,
@@ -17,7 +17,7 @@
       "label": "Insufficient data",
       "note": "Need 8+ active traders and 14+ days of history. Currently 21 traders / 3 days."
     },
-    "money_supply_players": 203998.75,
+    "money_supply_players": 203918.75,
     "money_supply_series": [
       [
         "2026-09-04",
@@ -181,15 +181,15 @@
       },
       {
         "name": "Augustine65480",
-        "balance": 3314.5
+        "balance": 3234.5
       }
     ],
     "median": 2500.0,
-    "mean": 5828.54
+    "mean": 5826.25
   },
   "server": {
-    "checked": "2026-09-07T14:33:37Z",
-    "started_at": "2026-09-07T12:12:13Z",
+    "checked": "2026-09-07T14:38:48Z",
+    "started_at": "2026-09-07T12:12:12Z",
     "tps": 20.0
   },
   "nations": [
