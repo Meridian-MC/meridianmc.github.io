@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-07T01:23:59Z",
+  "generated": "2026-09-07T01:28:01Z",
   "meta": {
     "players_tracked": 34,
     "active_traders": 21,
@@ -17,7 +17,7 @@
       "label": "Insufficient data",
       "note": "Need 8+ active traders and 14+ days of history. Currently 21 traders / 2 days."
     },
-    "money_supply_players": 209265.35,
+    "money_supply_players": 205600.35,
     "money_supply_series": [
       [
         "2026-09-04",
@@ -33,7 +33,7 @@
       ],
       [
         "2026-09-07",
-        124265.35
+        120600.35
       ]
     ],
     "trade_volume_series": [
@@ -47,16 +47,16 @@
       ],
       [
         "2026-09-07",
-        52177.45
+        55842.45
       ]
     ],
-    "trade_volume_7d": 339477.35,
-    "server_shop_transactions": 207,
+    "trade_volume_7d": 343142.35,
+    "server_shop_transactions": 217,
     "server_shop": {
-      "transactions": 207,
-      "created": 178896.5,
-      "destroyed": 23950.0,
-      "net": 154946.5,
+      "transactions": 217,
+      "created": 180425.5,
+      "destroyed": 24537.0,
+      "net": 155888.5,
       "series": [
         [
           "2026-09-05",
@@ -67,13 +67,18 @@
           "2026-09-06",
           134092.5,
           19393.0
+        ],
+        [
+          "2026-09-07",
+          1529.0,
+          587.0
         ]
       ],
       "top_sold": [
         {
           "item": "copper_ingot",
-          "qty": 24804,
-          "paid": 95656.5
+          "qty": 25060,
+          "paid": 95784.5
         },
         {
           "item": "raw_copper",
@@ -82,18 +87,18 @@
         },
         {
           "item": "gold_ingot",
+          "qty": 468,
+          "paid": 5493.0
+        },
+        {
+          "item": "iron_ingot",
           "qty": 359,
-          "paid": 4512.0
+          "paid": 2236.0
         },
         {
           "item": "raw_gold",
           "qty": 143,
           "paid": 2002.0
-        },
-        {
-          "item": "iron_ingot",
-          "qty": 275,
-          "paid": 1816.0
         },
         {
           "item": "redstone",
@@ -108,7 +113,7 @@
       ]
     },
     "chest_shop_transactions": 0,
-    "gini": 0.536,
+    "gini": 0.53,
     "price_index": {
       "value": null,
       "series": [],
@@ -120,7 +125,7 @@
     "top": [
       {
         "name": "ihasadragon",
-        "balance": 58546.4
+        "balance": 55046.4
       },
       {
         "name": "JoshMilkFleas",
@@ -180,10 +185,10 @@
       }
     ],
     "median": 2500.0,
-    "mean": 6154.86
+    "mean": 6047.07
   },
   "server": {
-    "checked": "2026-09-07T01:24:00Z",
+    "checked": "2026-09-07T01:28:01Z",
     "started_at": "2026-09-06T22:59:46Z",
     "tps": 20.0
   },
