@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-07T16:28:36Z",
+  "generated": "2026-09-07T16:30:47Z",
   "meta": {
     "players_tracked": 35,
     "active_traders": 21,
@@ -187,7 +187,11 @@
     "median": 2500.0,
     "mean": 5958.38
   },
-  "server": {},
+  "server": {
+    "checked": "2026-09-07T16:30:47Z",
+    "started_at": "2026-09-07T16:28:47Z",
+    "tps": 19.97
+  },
   "nations": [
     {
       "name": "Augustine Empire",
@@ -207,7 +211,7 @@
     {
       "name": "Augustine",
       "type": "land",
-      "chunks": 13,
+      "chunks": 16,
       "members": 6,
       "bank": 850.0,
       "level": 0
@@ -240,7 +244,7 @@
       "name": "Pergaminthos",
       "type": "land",
       "chunks": 7,
-      "members": 5,
+      "members": 6,
       "bank": 579.0,
       "level": 0
     },
