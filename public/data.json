@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-07T20:29:26Z",
+  "generated": "2026-09-07T20:30:33Z",
   "meta": {
     "players_tracked": 40,
     "active_traders": 25,
@@ -17,7 +17,7 @@
       "label": "Insufficient data",
       "note": "Need 8+ active traders and 14+ days of history. Currently 25 traders / 3 days."
     },
-    "money_supply_players": 221523.4,
+    "money_supply_players": 223502.9,
     "money_supply_series": [
       [
         "2026-09-04",
@@ -33,7 +33,7 @@
       ],
       [
         "2026-09-07",
-        120523.4
+        122502.9
       ]
     ],
     "trade_volume_series": [
@@ -47,10 +47,10 @@
       ],
       [
         "2026-09-07",
-        102512.0
+        104491.5
       ]
     ],
-    "trade_volume_7d": 389811.9,
+    "trade_volume_7d": 391791.4,
     "server_shop_transactions": 266,
     "server_shop": {
       "transactions": 266,
@@ -118,7 +118,7 @@
       ]
     },
     "chest_shop_transactions": 0,
-    "gini": 0.542,
+    "gini": 0.541,
     "price_index": {
       "value": null,
       "series": [],
@@ -165,6 +165,10 @@
         "balance": 5530.5
       },
       {
+        "name": "aazo9z",
+        "balance": 5479.5
+      },
+      {
         "name": "Keanie__",
         "balance": 4356.5
       },
@@ -183,17 +187,13 @@
       {
         "name": "saberjianga",
         "balance": 4054.0
-      },
-      {
-        "name": "ieru",
-        "balance": 4004.5
       }
     ],
     "median": 2500.0,
-    "mean": 5538.09
+    "mean": 5587.57
   },
   "server": {
-    "checked": "2026-09-07T20:29:26Z",
+    "checked": "2026-09-07T20:30:33Z",
     "started_at": "2026-09-07T20:04:49Z",
     "tps": 20.0
   },
