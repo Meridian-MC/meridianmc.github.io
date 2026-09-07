@@ -1,7 +1,7 @@
 {
-  "generated": "2026-09-07T01:29:12Z",
+  "generated": "2026-09-07T01:34:24Z",
   "meta": {
-    "players_tracked": 34,
+    "players_tracked": 35,
     "active_traders": 21,
     "data_days": 2,
     "sufficient": false,
@@ -17,7 +17,7 @@
       "label": "Insufficient data",
       "note": "Need 8+ active traders and 14+ days of history. Currently 21 traders / 2 days."
     },
-    "money_supply_players": 205600.35,
+    "money_supply_players": 198368.35,
     "money_supply_series": [
       [
         "2026-09-04",
@@ -33,7 +33,7 @@
       ],
       [
         "2026-09-07",
-        120600.35
+        110868.35
       ]
     ],
     "trade_volume_series": [
@@ -47,10 +47,10 @@
       ],
       [
         "2026-09-07",
-        55842.45
+        66510.45
       ]
     ],
-    "trade_volume_7d": 343142.35,
+    "trade_volume_7d": 353810.35,
     "server_shop_transactions": 217,
     "server_shop": {
       "transactions": 217,
@@ -113,7 +113,7 @@
       ]
     },
     "chest_shop_transactions": 0,
-    "gini": 0.53,
+    "gini": 0.523,
     "price_index": {
       "value": null,
       "series": [],
@@ -134,10 +134,6 @@
       {
         "name": "ACRI_Vanguard",
         "balance": 14723.0
-      },
-      {
-        "name": "Augustine65480",
-        "balance": 11926.5
       },
       {
         "name": "Luko_Landino",
@@ -182,13 +178,17 @@
       {
         "name": "winterapplesauce",
         "balance": 2500.0
+      },
+      {
+        "name": "Real_Lenine",
+        "balance": 2500.0
       }
     ],
     "median": 2500.0,
-    "mean": 6047.07
+    "mean": 5667.67
   },
   "server": {
-    "checked": "2026-09-07T01:29:12Z",
+    "checked": "2026-09-07T01:34:24Z",
     "started_at": "2026-09-06T22:59:46Z",
     "tps": 20.0
   },
