@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-08T00:34:21Z",
+  "generated": "2026-09-08T00:39:34Z",
   "meta": {
     "players_tracked": 42,
     "active_traders": 26,
@@ -59,12 +59,12 @@
       ]
     ],
     "trade_volume_7d": 444894.5,
-    "server_shop_transactions": 276,
+    "server_shop_transactions": 277,
     "server_shop": {
-      "transactions": 276,
-      "created": 191137.8,
+      "transactions": 277,
+      "created": 191268.8,
       "destroyed": 34650.0,
-      "net": 156487.8,
+      "net": 156618.8,
       "series": [
         [
           "2026-09-05",
@@ -83,7 +83,7 @@
         ],
         [
           "2026-09-08",
-          128.0,
+          259.0,
           0.0
         ]
       ],
@@ -115,8 +115,8 @@
         },
         {
           "item": "redstone",
-          "qty": 538,
-          "paid": 848.0
+          "qty": 669,
+          "paid": 979.0
         },
         {
           "item": "lapis_lazuli",
@@ -206,8 +206,8 @@
     "mean": 5057.1
   },
   "server": {
-    "checked": "2026-09-08T00:34:22Z",
-    "started_at": "2026-09-07T20:04:50Z",
+    "checked": "2026-09-08T00:39:34Z",
+    "started_at": "2026-09-08T00:35:48Z",
     "tps": 20.0
   },
   "nations": [
@@ -227,43 +227,35 @@
   ],
   "lands": [
     {
+      "name": "Pergaminthos",
+      "type": "land",
+      "chunks": 42,
+      "members": 10,
+      "bank": 3933.5,
+      "level": 0
+    },
+    {
+      "name": "Rare Fish Industries",
+      "type": "land",
+      "chunks": 19,
+      "members": 6,
+      "bank": 150.0,
+      "level": 0
+    },
+    {
       "name": "Augustine",
       "type": "land",
-      "chunks": 16,
-      "members": 5,
-      "bank": 850.0,
+      "chunks": 18,
+      "members": 6,
+      "bank": 350.0,
       "level": 0
     },
     {
       "name": "Myndelea",
       "type": "land",
       "chunks": 12,
-      "members": 2,
-      "bank": 3004.5,
-      "level": 0
-    },
-    {
-      "name": "Rare Fish Industries",
-      "type": "land",
-      "chunks": 11,
       "members": 4,
-      "bank": 1900.0,
-      "level": 0
-    },
-    {
-      "name": "lil_mother_hoe's Camp",
-      "type": "camp",
-      "chunks": 9,
-      "members": 2,
-      "bank": 0.0,
-      "level": 0
-    },
-    {
-      "name": "Atilius_Corvinus's Camp",
-      "type": "camp",
-      "chunks": 9,
-      "members": 2,
-      "bank": 0.0,
+      "bank": 3004.5,
       "level": 0
     },
     {
@@ -275,11 +267,19 @@
       "level": 0
     },
     {
-      "name": "Pergaminthos",
+      "name": "Entulho's Camp",
+      "type": "camp",
+      "chunks": 8,
+      "members": 2,
+      "bank": 0.0,
+      "level": 0
+    },
+    {
+      "name": "<aqua>byperhorea",
       "type": "land",
       "chunks": 7,
-      "members": 8,
-      "bank": 579.0,
+      "members": 2,
+      "bank": 1200.0,
       "level": 0
     },
     {
@@ -323,19 +323,11 @@
       "level": 0
     },
     {
-      "name": "<aqua>byperhorea",
-      "type": "land",
-      "chunks": 2,
-      "members": 2,
-      "bank": 400.0,
-      "level": 0
-    },
-    {
       "name": "Safe Haven",
       "type": "land",
       "chunks": 2,
       "members": 2,
-      "bank": 0.0,
+      "bank": 200.0,
       "level": 0
     },
     {
@@ -353,9 +345,27 @@
       "members": 2,
       "bank": 300.0,
       "level": 0
+    },
+    {
+      "name": "Entulho",
+      "type": "land",
+      "chunks": 1,
+      "members": 2,
+      "bank": 1400.0,
+      "level": 0
     }
   ],
   "events": [
+    {
+      "type": "land",
+      "at": "2026-09-07T21:30:04Z",
+      "text": "Entulho's Camp was founded"
+    },
+    {
+      "type": "land",
+      "at": "2026-09-07T21:28:11Z",
+      "text": "Entulho was founded"
+    },
     {
       "type": "land",
       "at": "2026-09-07T19:07:27Z",
@@ -380,16 +390,6 @@
       "type": "land",
       "at": "2026-09-06T23:56:18Z",
       "text": "Myndelea was founded"
-    },
-    {
-      "type": "land",
-      "at": "2026-09-06T23:53:31Z",
-      "text": "Atilius_Corvinus's Camp was founded"
-    },
-    {
-      "type": "land",
-      "at": "2026-09-06T23:24:03Z",
-      "text": "lil_mother_hoe's Camp was founded"
     },
     {
       "type": "land",
