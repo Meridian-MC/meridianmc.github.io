@@ -13,7 +13,7 @@ export interface FaqCategory {
 
 export interface FaqEntry {
   category: string; // matches FaqCategory.id
-  id?: string;       // optional anchor, e.g. "jobs-q"
+  id?: string;       // optional anchor, e.g. "voting-q"
   question: string;
   answer: string;
 }
@@ -78,7 +78,7 @@ export const FAQ: FaqEntry[] = [
   {
     category: "starting",
     question: "What should I do first?",
-    answer: `<p>Earn a little starting cash, then found a land with <code>/lands create &lt;name&gt;</code> and read the <a href="/lands">Lands guide</a>. Join a <a href="/faq#jobs-q">job</a> for early income, and skim the <a href="/commands">Commands</a> page.</p>`,
+    answer: `<p>Earn a little starting cash, then found a land with <code>/lands create &lt;name&gt;</code> and read the <a href="/lands">Lands guide</a>. <a href="/faq#voting-q">Vote for the server</a> each day for crate keys, and skim the <a href="/commands">Commands</a> page.</p>`,
   },
   {
     category: "starting",
@@ -108,7 +108,7 @@ export const FAQ: FaqEntry[] = [
     answer: `<p>Three ways, roughly in order of how much they matter:</p>
 <ul>
   <li><strong>Selling to other players.</strong> Chest shops are the real economy. Left-click a chest holding what you want to sell, work out what is in demand, and produce it.</li>
-  <li><strong>Jobs.</strong> Miner, Farmer, Fisherman, Hunter, and Explorer pay small amounts for relevant actions. Early capital, not a wage: capped at <span class="short">$1,500 a day</span>.</li>
+  <li><strong>Voting.</strong> Vote on our four listing sites once a day each. Every vote pays a <span class="short">Copper Key</span>, and milestones at 25, 50 and 100 votes pay bigger ones. It is the only income that costs you nothing but a minute.</li>
   <li><strong>The Sell counter.</strong> The server buys raw metals and minerals (iron, gold, copper, coal, redstone, lapis, quartz, and more) at a deliberately low floor price. It is a safety net so you are never fully broke, not a place to get rich. Players will pay more.</li>
 </ul>`,
   },
@@ -134,9 +134,11 @@ export const FAQ: FaqEntry[] = [
   },
   {
     category: "economy",
-    id: "jobs-q",
-    question: "How do jobs work?",
-    answer: `<p>Run <code>/jobs browse</code> and pick from Miner, Farmer, Fisherman, Hunter, and Explorer. You earn a small payout for actions that fit the job. Daily earnings are capped at <span class="short">$1,500</span>, and casual play lands well under that: treat jobs as a leg-up, not a living.</p>`,
+    id: "voting-q",
+    question: "How does voting work, and what do crates give?",
+    answer: `<p>Run <code>/vote</code> for the links. Each of the four listing sites can be voted on <span class="short">once every 24 hours</span>, and every vote pays one <strong>Copper Key</strong>. Hitting 25, 50 and 100 total votes pays an Iron, Gold and Diamond key respectively.</p>
+<p>Open keys with <code>/crates</code>. There are four tiers, and prizes run from diamonds and ender pearls up to armour trims, shulker shells, the netherite template, and <strong>Mending books</strong> &mdash; which matter because villager book trades are switched off, so Mending is genuinely scarce here.</p>
+<p>Iron, Gold and Diamond keys are also sold at the <strong>key shop at spawn</strong> if you would rather buy than wait.</p>`,
   },
   {
     category: "economy",

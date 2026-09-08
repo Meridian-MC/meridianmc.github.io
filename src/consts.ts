@@ -16,7 +16,6 @@ export const DISCORD_INVITE_URL = `https://discord.gg/${DISCORD_INVITE_CODE}`;
 // breakdown with full context; these are just the headline numbers.
 export const ECON = {
   startingBalance: "$2,500",
-  jobsDailyCap: "$1,500",
   chunkCost: "$1,000",
   landUpkeepPerChunk: "$50",
   nationCreateCost: "$35,000",
