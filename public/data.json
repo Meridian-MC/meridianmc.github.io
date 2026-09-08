@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-08T00:49:59Z",
+  "generated": "2026-09-08T00:55:11Z",
   "meta": {
     "players_tracked": 42,
     "active_traders": 26,
@@ -17,7 +17,7 @@
       "label": "Insufficient data",
       "note": "Need 8+ active traders and 14+ days of history. Currently 26 traders / 3 days."
     },
-    "money_supply_players": 212398.3,
+    "money_supply_players": 212388.3,
     "money_supply_series": [
       [
         "2026-09-04",
@@ -203,10 +203,10 @@
       }
     ],
     "median": 2500.0,
-    "mean": 5057.1
+    "mean": 5056.86
   },
   "server": {
-    "checked": "2026-09-08T00:49:59Z",
+    "checked": "2026-09-08T00:55:11Z",
     "started_at": "2026-09-08T00:35:47Z",
     "tps": 20.0
   },
