@@ -1,6 +1,6 @@
 {
-  "ok": false,
-  "at": "2026-09-08T11:22:42Z",
-  "credential": "local",
-  "detail": "error_temp: 421 Passive data channel timed out."
+  "ok": true,
+  "at": "2026-09-08T11:31:43Z",
+  "credential": "MC_FTP_PASSWORD_2",
+  "detail": ""
 }
