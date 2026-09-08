@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-08T01:21:13Z",
+  "generated": "2026-09-08T01:26:26Z",
   "meta": {
     "players_tracked": 42,
     "active_traders": 26,
@@ -17,7 +17,7 @@
       "label": "Insufficient data",
       "note": "Need 8+ active traders and 14+ days of history. Currently 26 traders / 3 days."
     },
-    "money_supply_players": 210887.3,
+    "money_supply_players": 211087.3,
     "money_supply_series": [
       [
         "2026-09-04",
@@ -131,7 +131,7 @@
       ]
     },
     "chest_shop_transactions": 0,
-    "gini": 0.54,
+    "gini": 0.541,
     "price_index": {
       "value": null,
       "series": [],
@@ -143,7 +143,7 @@
     "top": [
       {
         "name": "WhenAtRome",
-        "balance": 45814.6
+        "balance": 46014.6
       },
       {
         "name": "ihasadragon",
@@ -203,10 +203,10 @@
       }
     ],
     "median": 2500.0,
-    "mean": 5021.13
+    "mean": 5025.89
   },
   "server": {
-    "checked": "2026-09-08T01:21:13Z",
+    "checked": "2026-09-08T01:26:27Z",
     "started_at": "2026-09-08T00:35:48Z",
     "tps": 20.0
   },
