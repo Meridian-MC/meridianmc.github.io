@@ -1,7 +1,7 @@
 {
-  "generated": "2026-09-08T01:47:20Z",
+  "generated": "2026-09-08T01:52:34Z",
   "meta": {
-    "players_tracked": 43,
+    "players_tracked": 44,
     "active_traders": 26,
     "data_days": 3,
     "sufficient": false,
@@ -17,7 +17,7 @@
       "label": "Insufficient data",
       "note": "Need 8+ active traders and 14+ days of history. Currently 26 traders / 3 days."
     },
-    "money_supply_players": 213990.1,
+    "money_supply_players": 216911.7,
     "money_supply_series": [
       [
         "2026-09-04",
@@ -37,7 +37,7 @@
       ],
       [
         "2026-09-08",
-        105281.8
+        105703.4
       ]
     ],
     "trade_volume_series": [
@@ -55,10 +55,10 @@
       ],
       [
         "2026-09-08",
-        4612.4
+        5802.0
       ]
     ],
-    "trade_volume_7d": 447606.3,
+    "trade_volume_7d": 448795.9,
     "server_shop_transactions": 277,
     "server_shop": {
       "transactions": 277,
@@ -131,7 +131,7 @@
       ]
     },
     "chest_shop_transactions": 0,
-    "gini": 0.537,
+    "gini": 0.534,
     "price_index": {
       "value": null,
       "series": [],
@@ -150,12 +150,12 @@
         "balance": 37711.4
       },
       {
-        "name": "Luko_Landino",
-        "balance": 8496.5
+        "name": "JoshMilkFleas",
+        "balance": 9047.35
       },
       {
-        "name": "JoshMilkFleas",
-        "balance": 8241.75
+        "name": "Luko_Landino",
+        "balance": 8496.5
       },
       {
         "name": "st4tc",
@@ -179,7 +179,7 @@
       },
       {
         "name": "1RTR",
-        "balance": 5170.25
+        "balance": 4786.25
       },
       {
         "name": "Keanie__",
@@ -203,11 +203,11 @@
       }
     ],
     "median": 2500.0,
-    "mean": 4976.51
+    "mean": 4929.81
   },
   "server": {
-    "checked": "2026-09-08T01:47:21Z",
-    "started_at": "2026-09-08T00:35:48Z",
+    "checked": "2026-09-08T01:52:34Z",
+    "started_at": "2026-09-08T00:35:47Z",
     "tps": 20.0
   },
   "nations": [
