@@ -158,7 +158,8 @@ export const FAQ: FaqEntry[] = [
   <li><strong>No enchanted books or enchanted gear</strong> from any villager. Those trades are removed entirely.</li>
   <li><strong>No re-rolling.</strong> Breaking and replacing a job-site block will not re-roll a villager's offers.</li>
   <li><strong>No discounts.</strong> Hero of the Village and cured-zombie price cuts do nothing here.</li>
-  <li><strong>No diamond gear, no cleric ender pearls, no farmer emerald-for-crops.</strong> These are protected commodities, the same as the automated farms banned under the <a href="/rules#farms">Farms rule</a>.</li>
+  <li><strong>No diamond gear and no cleric ender pearls.</strong> These are protected commodities, the same as the automated farms banned under the <a href="/rules#farms">Farms rule</a>.</li>
+  <li><strong>Selling crops for emeralds works normally.</strong> It is how you level a farmer up, which is the only reliable route to their apple and golden carrot trades.</li>
 </ul>
 <p>Ordinary trades (emeralds for produce, sticks, glass, and so on) work as normal.</p>`,
   },
