@@ -681,6 +681,11 @@ main {
 }
 .vote-card:hover .vc-go { text-decoration-color: var(--accent); }
 
+.mc-icos { display: inline-flex; gap: 3px; margin-right: 9px; vertical-align: -4px; }
+.mc-icos .mc-ico { margin-right: 0; vertical-align: 0; }
+
+.s-val .mc-ico { width: 22px; height: 22px; vertical-align: -3px; margin-right: 9px; }
+
 /* An item texture sitting inline with the row it labels. */
 .mc-ico {
   width: 18px; height: 18px;
@@ -1025,7 +1030,7 @@ main {
 
 /* economy figures: the same ruled matrix, three across */
 .stat-row {
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   margin: 22px 0 32px;
 }
 .stat { padding: 17px 18px; }

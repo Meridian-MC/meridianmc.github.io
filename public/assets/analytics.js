@@ -47,6 +47,29 @@
       lab + '</div><div class="s-sub">' + (sub || "") + "</div></div>";
   }
 
+  // Official Minecraft textures live in /assets/mc. `icon` is the file name,
+  // so anything without one just renders as plain text.
+  function mcIcon(name) {
+    return '<img class="mc-ico" src="/assets/mc/' + name + '.png" alt="" width="18" height="18" loading="lazy">';
+  }
+
+  // A figure that is money gets a gold nugget, so currency reads as currency
+  // at a glance rather than as just another number.
+  function moneyTile(val, lab, sub) {
+    return tile(mcIcon("gold_nugget") + val, lab, sub);
+  }
+
+  // The Sell counter only buys these, so this covers every item that can ever
+  // top the "most sold" list.
+  var ITEM_ICON = {
+    coal: "coal", charcoal: "charcoal",
+    raw_copper: "raw_copper", copper_ingot: "copper_ingot",
+    raw_iron: "raw_iron", iron_ingot: "iron_ingot",
+    raw_gold: "raw_gold", gold_ingot: "gold_ingot",
+    redstone: "redstone", lapis_lazuli: "lapis_lazuli",
+    quartz: "quartz", emerald: "emerald", diamond: "diamond",
+  };
+
   function lineChart(series, fmt) {
     if (!series || series.length < 2) return null;
     var W = 600, H = 150, p = 6;
@@ -358,12 +381,13 @@
         } else {
           var top = (sh.top_sold && sh.top_sold[0]) || null;
           mint.innerHTML =
-            tile(money(sh.created), "Created", "paid out by the Sell counter") +
-            tile(money(sh.destroyed), "Destroyed", "taken in by the Buy counter") +
-            tile((sh.net > 0 ? "+" : "") + money(sh.net), "Net supply change",
-                 sh.net > 0 ? "counter is adding money" : "counter is removing money") +
+            moneyTile(money(sh.created), "Created", "paid out by the Sell counter") +
+            moneyTile(money(sh.destroyed), "Destroyed", "taken in by the Buy counter") +
+            moneyTile((sh.net > 0 ? "+" : "") + money(sh.net), "Net supply change",
+                      sh.net > 0 ? "counter is adding money" : "counter is removing money") +
             tile(intf(sh.transactions), "Counter trades", "since launch") +
-            (top ? tile(esc(top.item.replace(/_/g, " ")), "Most sold",
+            (top ? tile((ITEM_ICON[top.item] ? mcIcon(ITEM_ICON[top.item]) : "") +
+                        esc(top.item.replace(/_/g, " ")), "Most sold",
                         intf(top.qty) + " for " + money(top.paid)) : "");
         }
       }
