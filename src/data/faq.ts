@@ -45,7 +45,7 @@ export const FAQ: FaqEntry[] = [
   {
     category: "world",
     question: "Is PvP on?",
-    answer: `<p><span class="short">Yes</span>, PvP is live everywhere except inside spawn, which is a permanent safe zone. There is <span class="short">no keep-inventory</span> outside spawn, so losing a fight means dropping what you carried. Your things land in a <a href="/#protection">death chest</a> that only you can open for the first <span class="short">10 minutes</span>. After that anyone can loot it, and the chest itself stays for <span class="short">24 hours</span>, so you can come back for whatever is left.</p>
+    answer: `<p><span class="short">Yes</span>, PvP is live everywhere except inside spawn, which is a permanent safe zone. There is <span class="short">no keep-inventory</span> outside spawn, so losing a fight means dropping what you carried. Your things land in a <a href="/#protection">death chest</a> that only you can open for the first <span class="short">30 minutes</span>. After that anyone can loot it, and the chest itself stays for <span class="short">24 hours</span>, so you can come back for whatever is left.</p>
 <p>Claimed land is still protected: nobody can enter or take ground inside a claim except during a declared <a href="/war">war</a>. Combat is governed by the <a href="/rules#pvp">PvP rules</a>: standard gear only, no crystal PvP, no one-shot combos.</p>`,
   },
   {
