@@ -30,28 +30,6 @@ function initCopy() {
     initCopy._t = setTimeout(() => box.classList.remove('copied'), 1400);
   }));
 
-  // Live player count in the header CTA. Two providers, first one to answer
-  // wins; the label just stays quiet if neither does.
-  const slot = document.querySelector('[data-slot=hdr-count]');
-  if (!slot) return;
-  const urls = [
-    'https://api.mcsrvstat.us/3/meridian-mc.net',
-    'https://api.mcstatus.io/v2/status/java/meridian-mc.net',
-  ];
-  (async () => {
-    for (const u of urls) {
-      try {
-        const r = await fetch(u, { cache: 'no-store' });
-        if (!r.ok) continue;
-        const d = await r.json();
-        if (!d || !d.online) continue;
-        slot.textContent = String((d.players && d.players.online) || 0);
-        slot.classList.add('is-live');
-        return;
-      } catch { /* try the next provider */ }
-    }
-    slot.textContent = '';
-  })();
 }
 
 function showToast(msg) {
