@@ -44,12 +44,11 @@ body::after {
   content: "";
   position: absolute;
   inset: 0;
-  background: url("/assets/bg.jpg") 62% 58% / cover no-repeat;
-  filter: saturate(0.82) contrast(1.08);
-  /* Dissolve the photograph itself at the bottom rather than letting the
-     section clip it. Without this the hero ends on a hard edge and the scrim
-     has to hide it by fading to solid black, which then meets the world-map
-     ground below as a visible seam. */
+  /* Spawn: the harbour, the ships and the port town. Much brighter than the
+     forest shot it replaced, so it is graded down here rather than by piling
+     more opacity onto the scrim. */
+  background: url("/assets/spawn.jpg") 50% 40% / cover no-repeat;
+  filter: saturate(0.9) brightness(0.84) contrast(1.03);
   -webkit-mask-image: linear-gradient(to bottom, #000 0%, #000 58%, rgba(0,0,0,0.55) 82%, transparent 100%);
   mask-image: linear-gradient(to bottom, #000 0%, #000 58%, rgba(0,0,0,0.55) 82%, transparent 100%);
 }
@@ -57,36 +56,28 @@ body::after {
   content: "";
   position: absolute;
   inset: 0;
-  /* Ends transparent, not on --bg, so the map ground shows through
-     continuously instead of the hero terminating on a band of flat black. */
-  /* Both fades are deliberately many-stopped and shallow-stepped. The previous
-     pair started at solid --bg and held above 0.88 for the first 40%, which
-     produced a flat black slab with a visible vertical edge where it finally
-     lightened. No stop here moves more than 0.2 from its neighbour. */
+  /* One even wash so the whole picture sits at the same depth, plus a soft
+     left weighting only where the copy needs contrast. Ramping hard across the
+     width is what made the earlier version read as a black slab with an edge. */
   background:
-    linear-gradient(to bottom,
-      rgba(10,11,13,0.30) 0%,
-      rgba(10,11,13,0.14) 40%,
-      rgba(10,11,13,0.26) 75%,
-      rgba(10,11,13,0.18) 92%,
-      transparent 100%),
+    linear-gradient(to bottom, rgba(10,11,13,0.22) 0%, rgba(10,11,13,0.10) 45%, rgba(10,11,13,0.20) 82%, transparent 100%),
     linear-gradient(to right,
-      rgba(10,11,13,0.94) 0%,
-      rgba(10,11,13,0.90) 18%,
-      rgba(10,11,13,0.80) 34%,
-      rgba(10,11,13,0.62) 50%,
-      rgba(10,11,13,0.42) 65%,
-      rgba(10,11,13,0.22) 80%,
-      rgba(10,11,13,0.10) 100%);
+      rgba(10,11,13,0.72) 0%,
+      rgba(10,11,13,0.62) 22%,
+      rgba(10,11,13,0.44) 42%,
+      rgba(10,11,13,0.24) 62%,
+      rgba(10,11,13,0.12) 82%,
+      rgba(10,11,13,0.08) 100%),
+    linear-gradient(rgba(10,11,13,0.18) 0 0);
   -webkit-mask-image: linear-gradient(to bottom, #000 0%, #000 70%, transparent 100%);
   mask-image: linear-gradient(to bottom, #000 0%, #000 70%, transparent 100%);
 }
 @media (max-width: 700px) {
   /* On a phone the copy sits over the whole width, so the world drops back
      to a wash rather than competing with the text. */
-  .hero-world::before { background-position: 66% 55%; }
+  .hero-world::before { background-position: 46% 48%; }
   .hero-world::after { background:
-    linear-gradient(to bottom, rgba(10,11,13,0.62) 0%, rgba(10,11,13,0.80) 62%, var(--bg) 100%); }
+    linear-gradient(to bottom, rgba(10,11,13,0.58) 0%, rgba(10,11,13,0.72) 62%, transparent 100%); }
 }
 
 body {
