@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-09T18:44:53Z",
+  "generated": "2026-09-09T18:50:09Z",
   "meta": {
     "players_tracked": 54,
     "active_traders": 31,
@@ -17,7 +17,7 @@
       "label": "Insufficient data",
       "note": "Need 8+ active traders and 14+ days of history. Currently 31 traders / 5 days."
     },
-    "money_supply_players": 210775.29,
+    "money_supply_players": 205255.29,
     "money_supply_series": [
       [
         "2026-09-04",
@@ -41,7 +41,7 @@
       ],
       [
         "2026-09-09",
-        61425.29
+        35905.29
       ]
     ],
     "trade_volume_series": [
@@ -63,10 +63,10 @@
       ],
       [
         "2026-09-09",
-        79912.16
+        108472.16
       ]
     ],
-    "trade_volume_7d": 556793.19,
+    "trade_volume_7d": 585353.19,
     "server_shop_transactions": 300,
     "server_shop": {
       "transactions": 300,
@@ -139,7 +139,7 @@
       ]
     },
     "chest_shop_transactions": 0,
-    "gini": 0.454,
+    "gini": 0.437,
     "price_index": {
       "value": null,
       "series": [],
@@ -154,16 +154,16 @@
         "balance": 42676.93
       },
       {
-        "name": "WhenAtRome",
-        "balance": 16089.6
-      },
-      {
         "name": "Augustine65480",
-        "balance": 10000.0
+        "balance": 11000.0
       },
       {
         "name": "JoshMilkFleas",
         "balance": 9047.35
+      },
+      {
+        "name": "DatAriix",
+        "balance": 7575.86
       },
       {
         "name": "Keanie__",
@@ -186,6 +186,10 @@
         "balance": 4758.52
       },
       {
+        "name": "ACRI_Vanguard",
+        "balance": 4321.71
+      },
+      {
         "name": "XDjarinXD",
         "balance": 4106.0
       },
@@ -204,18 +208,14 @@
       {
         "name": "1RTR",
         "balance": 3730.25
-      },
-      {
-        "name": "DatAriix",
-        "balance": 3075.86
       }
     ],
     "median": 2500.0,
-    "mean": 3903.25
+    "mean": 3801.02
   },
   "server": {
-    "checked": "2026-09-09T18:44:53Z",
-    "started_at": "2026-09-09T15:13:50Z",
+    "checked": "2026-09-09T18:50:09Z",
+    "started_at": "2026-09-09T15:13:51Z",
     "tps": 20.0
   },
   "nations": [
