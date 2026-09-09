@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-09T22:48:21Z",
+  "generated": "2026-09-09T22:53:38Z",
   "meta": {
     "players_tracked": 56,
     "active_traders": 32,
@@ -159,7 +159,7 @@
       },
       {
         "name": "Augustine65480",
-        "balance": 9999.98
+        "balance": 9999.97
       },
       {
         "name": "DatAriix",
@@ -214,8 +214,8 @@
     "mean": 3734.84
   },
   "server": {
-    "checked": "2026-09-09T22:48:22Z",
-    "started_at": "2026-09-09T15:13:51Z",
+    "checked": "2026-09-09T22:53:38Z",
+    "started_at": "2026-09-09T15:13:50Z",
     "tps": 20.0
   },
   "nations": [
