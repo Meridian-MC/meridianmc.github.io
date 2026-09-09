@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-09T19:05:53Z",
+  "generated": "2026-09-09T19:11:10Z",
   "meta": {
     "players_tracked": 54,
     "active_traders": 31,
@@ -17,7 +17,7 @@
       "label": "Insufficient data",
       "note": "Need 8+ active traders and 14+ days of history. Currently 31 traders / 5 days."
     },
-    "money_supply_players": 203755.29,
+    "money_supply_players": 203243.29,
     "money_supply_series": [
       [
         "2026-09-04",
@@ -41,7 +41,7 @@
       ],
       [
         "2026-09-09",
-        34405.29
+        33893.29
       ]
     ],
     "trade_volume_series": [
@@ -63,10 +63,10 @@
       ],
       [
         "2026-09-09",
-        111972.16
+        112484.16
       ]
     ],
-    "trade_volume_7d": 588853.19,
+    "trade_volume_7d": 589365.19,
     "server_shop_transactions": 300,
     "server_shop": {
       "transactions": 300,
@@ -139,7 +139,7 @@
       ]
     },
     "chest_shop_transactions": 0,
-    "gini": 0.446,
+    "gini": 0.445,
     "price_index": {
       "value": null,
       "series": [],
@@ -163,7 +163,7 @@
       },
       {
         "name": "DatAriix",
-        "balance": 7575.86
+        "balance": 7063.86
       },
       {
         "name": "Keanie__",
@@ -211,10 +211,10 @@
       }
     ],
     "median": 2500.0,
-    "mean": 3773.25
+    "mean": 3763.76
   },
   "server": {
-    "checked": "2026-09-09T19:05:54Z",
+    "checked": "2026-09-09T19:11:10Z",
     "started_at": "2026-09-09T15:13:51Z",
     "tps": 20.0
   },
