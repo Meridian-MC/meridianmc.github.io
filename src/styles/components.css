@@ -59,21 +59,25 @@ body::after {
   inset: 0;
   /* Ends transparent, not on --bg, so the map ground shows through
      continuously instead of the hero terminating on a band of flat black. */
+  /* Both fades are deliberately many-stopped and shallow-stepped. The previous
+     pair started at solid --bg and held above 0.88 for the first 40%, which
+     produced a flat black slab with a visible vertical edge where it finally
+     lightened. No stop here moves more than 0.2 from its neighbour. */
   background:
     linear-gradient(to bottom,
-      rgba(10,11,13,0.26) 0%,
-      rgba(10,11,13,0.16) 36%,
-      rgba(10,11,13,0.34) 72%,
-      rgba(10,11,13,0.22) 90%,
+      rgba(10,11,13,0.30) 0%,
+      rgba(10,11,13,0.14) 40%,
+      rgba(10,11,13,0.26) 75%,
+      rgba(10,11,13,0.18) 92%,
       transparent 100%),
     linear-gradient(to right,
-      var(--bg) 0%,
-      rgba(10,11,13,0.96) 20%,
-      rgba(10,11,13,0.88) 40%,
-      rgba(10,11,13,0.66) 56%,
-      rgba(10,11,13,0.34) 73%,
-      rgba(10,11,13,0.12) 89%,
-      rgba(10,11,13,0.06) 100%);
+      rgba(10,11,13,0.94) 0%,
+      rgba(10,11,13,0.90) 18%,
+      rgba(10,11,13,0.80) 34%,
+      rgba(10,11,13,0.62) 50%,
+      rgba(10,11,13,0.42) 65%,
+      rgba(10,11,13,0.22) 80%,
+      rgba(10,11,13,0.10) 100%);
   -webkit-mask-image: linear-gradient(to bottom, #000 0%, #000 70%, transparent 100%);
   mask-image: linear-gradient(to bottom, #000 0%, #000 70%, transparent 100%);
 }
