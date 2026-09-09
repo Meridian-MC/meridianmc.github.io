@@ -103,12 +103,11 @@ export const FAQ: FaqEntry[] = [
   {
     category: "economy",
     question: "Is there a server shop?",
-    answer: `<p>Four counters in <code>/shop</code>:</p>
+    answer: `<p>Three counters in <code>/shop</code>:</p>
 <ul>
   <li><strong>Buy:</strong> basics, End-only materials since the End is closed (ender pearls, shulker shells, end stone, end rods, purpur, chorus fruit), every armor trim smithing template, the rarest potion ingredients (phantom membrane, turtle scute, rabbit's foot), and the <strong>Enchantment Extractor</strong>. <span class="short">Buy-only</span>, priced at a premium so buying from a player is always cheaper where that's an option.</li>
   <li><strong>Sell:</strong> the server <span class="short">buys</span> raw metals and minerals at a floor price. Sell-only, and prices now <span class="short">drift down</span> the more of something the server has bought, so flooding a single ore stops paying.</li>
   <li><strong>Crates:</strong> Iron, Gold and Diamond crates, added straight to <code>/crates</code>.</li>
-  <li><strong>Ranks:</strong> permanent account upgrades.</li>
 </ul>
 <p>Everything interesting (diamonds, gear, enchanted books, potions, mob drops, elytra, dragon trophies) is <span class="short">player market only</span>. The server never buys or sells it.</p>`,
   },
@@ -134,7 +133,7 @@ export const FAQ: FaqEntry[] = [
     category: "economy",
     id: "ranks-q",
     question: "What are ranks, and what do they give?",
-    answer: `<p>Four permanent upgrades, bought from <code>/shop</code> &rarr; <strong>Ranks</strong>. Each replaces the last, so you never pay twice for the same ground.</p>
+    answer: `<p>Four permanent upgrades, bought with <code>/ranks</code>. You are only ever charged the difference between your current tier and the one you are buying, so reaching a tier costs the same whether you climb the ladder or not, and no lower purchase is ever wasted.</p>
 <ul>
   <li><strong>Citizen</strong>. <span class="short">$12,000</span>. 5 homes, 12-chunk land base, grey prefix.</li>
   <li><strong>Landholder</strong>. <span class="short">$30,000</span>. 7 homes, 17-chunk base, green prefix.</li>
