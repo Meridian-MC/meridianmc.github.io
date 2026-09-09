@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-09T15:24:19Z",
+  "generated": "2026-09-09T15:29:35Z",
   "meta": {
     "players_tracked": 54,
     "active_traders": 30,
@@ -17,7 +17,7 @@
       "label": "Insufficient data",
       "note": "Need 8+ active traders and 14+ days of history. Currently 30 traders / 5 days."
     },
-    "money_supply_players": 225724.32,
+    "money_supply_players": 216502.38,
     "money_supply_series": [
       [
         "2026-09-04",
@@ -41,7 +41,7 @@
       ],
       [
         "2026-09-09",
-        78374.32
+        69152.38
       ]
     ],
     "trade_volume_series": [
@@ -63,10 +63,10 @@
       ],
       [
         "2026-09-09",
-        55197.45
+        69975.51
       ]
     ],
-    "trade_volume_7d": 532078.48,
+    "trade_volume_7d": 546856.54,
     "server_shop_transactions": 300,
     "server_shop": {
       "transactions": 300,
@@ -139,7 +139,7 @@
       ]
     },
     "chest_shop_transactions": 0,
-    "gini": 0.516,
+    "gini": 0.478,
     "price_index": {
       "value": null,
       "series": [],
@@ -150,12 +150,12 @@
   "wealth": {
     "top": [
       {
-        "name": "WhenAtRome",
-        "balance": 43889.6
-      },
-      {
         "name": "ihasadragon",
         "balance": 42676.93
+      },
+      {
+        "name": "WhenAtRome",
+        "balance": 31889.6
       },
       {
         "name": "JoshMilkFleas",
@@ -211,10 +211,10 @@
       }
     ],
     "median": 2500.0,
-    "mean": 4180.08
+    "mean": 4009.3
   },
   "server": {
-    "checked": "2026-09-09T15:24:19Z",
+    "checked": "2026-09-09T15:29:35Z",
     "started_at": "2026-09-09T15:13:50Z",
     "tps": 20.0
   },
