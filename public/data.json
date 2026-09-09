@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-09T19:26:56Z",
+  "generated": "2026-09-09T19:28:53Z",
   "meta": {
     "players_tracked": 54,
     "active_traders": 31,
@@ -17,7 +17,7 @@
       "label": "Insufficient data",
       "note": "Need 8+ active traders and 14+ days of history. Currently 31 traders / 5 days."
     },
-    "money_supply_players": 207434.02,
+    "money_supply_players": 209628.25,
     "money_supply_series": [
       [
         "2026-09-04",
@@ -41,7 +41,7 @@
       ],
       [
         "2026-09-09",
-        38084.02
+        40278.25
       ]
     ],
     "trade_volume_series": [
@@ -63,10 +63,10 @@
       ],
       [
         "2026-09-09",
-        116674.89
+        118869.12
       ]
     ],
-    "trade_volume_7d": 593555.92,
+    "trade_volume_7d": 595750.15,
     "server_shop_transactions": 300,
     "server_shop": {
       "transactions": 300,
@@ -139,7 +139,7 @@
       ]
     },
     "chest_shop_transactions": 0,
-    "gini": 0.455,
+    "gini": 0.459,
     "price_index": {
       "value": null,
       "series": [],
@@ -159,7 +159,7 @@
       },
       {
         "name": "Augustine65480",
-        "balance": 11000.0
+        "balance": 13194.23
       },
       {
         "name": "DatAriix",
@@ -211,10 +211,10 @@
       }
     ],
     "median": 2500.0,
-    "mean": 3841.37
+    "mean": 3882.0
   },
   "server": {
-    "checked": "2026-09-09T19:26:56Z",
+    "checked": "2026-09-09T19:28:53Z",
     "started_at": "2026-09-09T15:13:50Z",
     "tps": 20.0
   },
