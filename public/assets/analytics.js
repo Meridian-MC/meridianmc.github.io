@@ -53,12 +53,6 @@
     return '<img class="mc-ico" src="/assets/mc/' + name + '.png" alt="" width="18" height="18" loading="lazy">';
   }
 
-  // A figure that is money gets a gold nugget, so currency reads as currency
-  // at a glance rather than as just another number.
-  function moneyTile(val, lab, sub) {
-    return tile(mcIcon("gold_nugget") + val, lab, sub);
-  }
-
   // The Sell counter only buys these, so this covers every item that can ever
   // top the "most sold" list.
   var ITEM_ICON = {
@@ -381,10 +375,10 @@
         } else {
           var top = (sh.top_sold && sh.top_sold[0]) || null;
           mint.innerHTML =
-            moneyTile(money(sh.created), "Created", "paid out by the Sell counter") +
-            moneyTile(money(sh.destroyed), "Destroyed", "taken in by the Buy counter") +
-            moneyTile((sh.net > 0 ? "+" : "") + money(sh.net), "Net supply change",
-                      sh.net > 0 ? "counter is adding money" : "counter is removing money") +
+            tile(money(sh.created), "Created", "paid out by the Sell counter") +
+            tile(money(sh.destroyed), "Destroyed", "taken in by the Buy counter") +
+            tile((sh.net > 0 ? "+" : "") + money(sh.net), "Net supply change",
+                 sh.net > 0 ? "counter is adding money" : "counter is removing money") +
             tile(intf(sh.transactions), "Counter trades", "since launch") +
             (top ? tile((ITEM_ICON[top.item] ? mcIcon(ITEM_ICON[top.item]) : "") +
                         esc(top.item.replace(/_/g, " ")), "Most sold",
