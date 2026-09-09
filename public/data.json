@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-09T22:43:05Z",
+  "generated": "2026-09-09T22:48:21Z",
   "meta": {
     "players_tracked": 56,
     "active_traders": 32,
@@ -214,8 +214,8 @@
     "mean": 3734.84
   },
   "server": {
-    "checked": "2026-09-09T22:43:05Z",
-    "started_at": "2026-09-09T15:13:50Z",
+    "checked": "2026-09-09T22:48:22Z",
+    "started_at": "2026-09-09T15:13:51Z",
     "tps": 20.0
   },
   "nations": [
