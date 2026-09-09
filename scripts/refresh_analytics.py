@@ -249,11 +249,12 @@ def lands_from_db(raw):
         lands.append({"id": d.get("ulid") or d.get("id"), "name": name, "color": color,
                       "type": (d.get("type") or "").lower(), "bank": float(d.get("balance") or 0),
                       "level": d.get("level") or 0, "members": members,
+                      "nation": d.get("nation") or None,
                       "chunks": claims.get(d.get("ulid") or d.get("id"), 0)})
     nations = []
     for r in con.execute("SELECT * FROM lands_nations"):
         name, color = _split_color(r["name"])
-        nations.append({"name": name, "tag": r["tag"], "color": color})
+        nations.append({"id": r["ulid"], "name": name, "tag": r["tag"], "color": color})
 
     # Recent activity, rebuilt from the same tables. The site's feed had no
     # source at all before this: nothing here ever emitted an "events" key, so
@@ -514,10 +515,13 @@ def main():
         run += v
         supply.append([d, round(run, 2)])
 
-    lands_by_nation = {}  # membership not stored simply here; treat lands unattached for now
+    lands_by_nation = {}
+    for l in lands:
+        if l.get("nation"):
+            lands_by_nation.setdefault(l["nation"], []).append(l)
     nation_rows = []
     for nrec in nations:
-        ls = lands_by_nation.get(nrec["name"], [])
+        ls = lands_by_nation.get(nrec.get("id"), [])
         nation_rows.append(dict(name=nrec["name"], tag=nrec["tag"], color=nrec.get("color"),
                                 **mdi(sum(l["chunks"] for l in ls),
                                       sum(l["members"] for l in ls),
