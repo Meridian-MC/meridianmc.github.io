@@ -1,7 +1,7 @@
 {
-  "generated": "2026-09-08T23:53:11Z",
+  "generated": "2026-09-09T00:21:38Z",
   "meta": {
-    "players_tracked": 48,
+    "players_tracked": 49,
     "active_traders": 27,
     "data_days": 4,
     "sufficient": false,
@@ -17,7 +17,7 @@
       "label": "Insufficient data",
       "note": "Need 8+ active traders and 14+ days of history. Currently 27 traders / 4 days."
     },
-    "money_supply_players": 227231.87,
+    "money_supply_players": 227823.95,
     "money_supply_series": [
       [
         "2026-09-04",
@@ -38,6 +38,10 @@
       [
         "2026-09-08",
         96881.87
+      ],
+      [
+        "2026-09-09",
+        94973.95
       ]
     ],
     "trade_volume_series": [
@@ -56,15 +60,19 @@
       [
         "2026-09-08",
         33887.13
+      ],
+      [
+        "2026-09-09",
+        2719.68
       ]
     ],
-    "trade_volume_7d": 476881.03,
-    "server_shop_transactions": 292,
+    "trade_volume_7d": 479600.71,
+    "server_shop_transactions": 300,
     "server_shop": {
-      "transactions": 292,
-      "created": 193524.5,
-      "destroyed": 36090.0,
-      "net": 157434.5,
+      "transactions": 300,
+      "created": 193916.6,
+      "destroyed": 36306.0,
+      "net": 157610.6,
       "series": [
         [
           "2026-09-05",
@@ -83,15 +91,15 @@
         ],
         [
           "2026-09-08",
-          2514.7,
-          1440.0
+          2906.8,
+          1656.0
         ]
       ],
       "top_sold": [
         {
           "item": "copper_ingot",
-          "qty": 32646,
-          "paid": 100723.5
+          "qty": 32709,
+          "paid": 100767.6
         },
         {
           "item": "raw_copper",
@@ -100,13 +108,13 @@
         },
         {
           "item": "gold_ingot",
-          "qty": 1072,
-          "paid": 10929.0
+          "qty": 1101,
+          "paid": 11190.0
         },
         {
           "item": "iron_ingot",
-          "qty": 717,
-          "paid": 4026.0
+          "qty": 722,
+          "paid": 4051.0
         },
         {
           "item": "raw_gold",
@@ -120,18 +128,18 @@
         },
         {
           "item": "lapis_lazuli",
-          "qty": 362,
-          "paid": 780.0
+          "qty": 370,
+          "paid": 788.0
         },
         {
           "item": "coal",
-          "qty": 199,
-          "paid": 398.0
+          "qty": 226,
+          "paid": 452.0
         }
       ]
     },
     "chest_shop_transactions": 0,
-    "gini": 0.503,
+    "gini": 0.509,
     "price_index": {
       "value": null,
       "series": [],
@@ -203,11 +211,11 @@
       }
     ],
     "median": 2500.0,
-    "mean": 4734.0
+    "mean": 4649.47
   },
   "server": {
-    "checked": "2026-09-08T23:53:11Z",
-    "started_at": "2026-09-08T12:12:12Z",
+    "checked": "2026-09-09T00:21:38Z",
+    "started_at": "2026-09-08T23:58:57Z",
     "tps": 20.0
   },
   "nations": [
@@ -230,8 +238,16 @@
       "name": "Pergaminthos",
       "type": "land",
       "chunks": 42,
-      "members": 10,
+      "members": 11,
       "bank": 3933.5,
+      "level": 0
+    },
+    {
+      "name": "Augustine",
+      "type": "land",
+      "chunks": 21,
+      "members": 6,
+      "bank": 2788.83,
       "level": 0
     },
     {
@@ -239,15 +255,7 @@
       "type": "land",
       "chunks": 19,
       "members": 6,
-      "bank": 2050.0,
-      "level": 0
-    },
-    {
-      "name": "Augustine",
-      "type": "land",
-      "chunks": 18,
-      "members": 6,
-      "bank": 350.0,
+      "bank": 150.0,
       "level": 0
     },
     {
@@ -283,18 +291,26 @@
       "level": 0
     },
     {
+      "name": "Grease Lands",
+      "type": "land",
+      "chunks": 5,
+      "members": 2,
+      "bank": 950.0,
+      "level": 0
+    },
+    {
       "name": "Liam's Empire",
       "type": "land",
       "chunks": 4,
       "members": 3,
-      "bank": 500.0,
+      "bank": 4100.0,
       "level": 0
     },
     {
       "name": "ACRI_Vanguard",
       "type": "land",
       "chunks": 4,
-      "members": 2,
+      "members": 3,
       "bank": 200.0,
       "level": 0
     },
@@ -310,8 +326,8 @@
       "name": "coolland!!!",
       "type": "land",
       "chunks": 3,
-      "members": 4,
-      "bank": 350.0,
+      "members": 3,
+      "bank": 1000.0,
       "level": 0
     },
     {
@@ -319,7 +335,7 @@
       "type": "land",
       "chunks": 2,
       "members": 5,
-      "bank": 300.0,
+      "bank": 100.0,
       "level": 0
     },
     {
@@ -335,7 +351,7 @@
       "type": "land",
       "chunks": 1,
       "members": 2,
-      "bank": 100.0,
+      "bank": 0.0,
       "level": 0
     },
     {
@@ -343,19 +359,24 @@
       "type": "land",
       "chunks": 1,
       "members": 2,
-      "bank": 300.0,
+      "bank": 200.0,
       "level": 0
     },
     {
       "name": "Entulho",
       "type": "land",
-      "chunks": 1,
+      "chunks": 0,
       "members": 2,
       "bank": 1400.0,
       "level": 0
     }
   ],
   "events": [
+    {
+      "type": "land",
+      "at": "2026-09-08T20:39:51Z",
+      "text": "Grease Lands was founded"
+    },
     {
       "type": "land",
       "at": "2026-09-07T21:30:04Z",
