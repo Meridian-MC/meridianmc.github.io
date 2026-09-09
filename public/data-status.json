@@ -1,6 +1,6 @@
 {
-  "ok": true,
-  "at": "2026-09-08T11:31:43Z",
-  "credential": "MC_FTP_PASSWORD_2",
-  "detail": ""
+  "ok": false,
+  "at": "2026-09-09T11:22:23Z",
+  "credential": "local",
+  "detail": "BrokenPipeError: [Errno 32] Broken pipe"
 }
