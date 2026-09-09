@@ -3,3 +3,6 @@ meridian-site.zip
 node_modules/
 dist/
 .astro/
+
+# Downloaded skill packages: tooling, not part of the site build.
+.claude/skills/

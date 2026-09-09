@@ -38,33 +38,21 @@ export const FAQ: FaqEntry[] = [
   },
   {
     category: "world",
-    question: "Why is the Nether so small, and why does it get wiped?",
-    answer: `<p>The Nether runs at Minecraft's normal 8:1 ratio, so a 10,000-wide overworld only gives a Nether about <span class="short">1,250 blocks</span> wide. That keeps netherite, blaze rods, and Nether loot genuinely scarce and worth trading for.</p>
+    question: "Why is the Nether so small?",
+    answer: `<p>The Nether runs at Minecraft's normal 8:1 ratio, and its border is set at <span class="short">1,200 blocks</span> across. That keeps netherite, blaze rods, and Nether loot genuinely scarce and worth trading for.</p>
 <p>To stop that small space from being strip-mined flat and claimed wall to wall, the <span class="short">Nether resets on the 1st of every month</span>. Anything you leave there is gone at the reset. Raid it, don't live in it.</p>`,
   },
   {
     category: "world",
-    question: "When does the Nether open?",
-    answer: `<p>Not at launch. It opens on a fixed date afterward, announced server-wide when it happens.</p>`,
-  },
-  {
-    category: "world",
     question: "Is PvP on?",
-    answer: `<p><span class="short">Yes</span>, PvP is live everywhere except inside spawn, which is a permanent safe zone. There is <span class="short">no keep-inventory</span> outside spawn, so losing a fight means dropping what you carried. Your things land in a <a href="/#protection">death chest</a> only you can open for an hour.</p>
+    answer: `<p><span class="short">Yes</span>, PvP is live everywhere except inside spawn, which is a permanent safe zone. There is <span class="short">no keep-inventory</span> outside spawn, so losing a fight means dropping what you carried. Your things land in a <a href="/#protection">death chest</a> that only you can open for the first <span class="short">10 minutes</span>. After that anyone can loot it, and the chest itself stays for <span class="short">24 hours</span>, so you can come back for whatever is left.</p>
 <p>Claimed land is still protected: nobody can enter or take ground inside a claim except during a declared <a href="/war">war</a>. Combat is governed by the <a href="/rules#pvp">PvP rules</a>: standard gear only, no crystal PvP, no one-shot combos.</p>`,
   },
   {
     category: "world",
-    question: "How hard is the server?",
+    question: "What is the difficulty?",
     answer: `<p>Normal difficulty survival, not hardcore. There is <span class="short">no keep-inventory</span> in the world, so dying in the wild means dropping your things where you fell. The only exceptions are inside spawn and during a formal war.</p>`,
   },
-  {
-    category: "world",
-    question: "Is there anti-cheat and x-ray protection?",
-    answer: `<p>Yes. <a href="/#protection">GrimAC</a> covers movement, combat, and packet checks. On top of that the server hides ores from your client until you are near them, so x-ray shows you nothing, and using it is a ban.</p>`,
-  },
-
-  // ---- Getting started ----
   {
     category: "starting",
     question: "How do I connect?",
@@ -78,7 +66,7 @@ export const FAQ: FaqEntry[] = [
   {
     category: "starting",
     question: "What should I do first?",
-    answer: `<p>Earn a little starting cash, then found a land with <code>/lands create &lt;name&gt;</code> and read the <a href="/lands">Lands guide</a>. <a href="/faq#voting-q">Vote for the server</a> each day for crate keys, and skim the <a href="/commands">Commands</a> page.</p>`,
+    answer: `<p>Earn a little starting cash, then found a land with <code>/lands create &lt;name&gt;</code> and read the <a href="/lands">Lands guide</a>. <a href="/faq#voting-q">Vote for the server</a> each day for crates, and skim the <a href="/commands">Commands</a> page.</p>`,
   },
   {
     category: "starting",
@@ -107,18 +95,20 @@ export const FAQ: FaqEntry[] = [
     question: "How do I make money?",
     answer: `<p>Three ways, roughly in order of how much they matter:</p>
 <ul>
-  <li><strong>Selling to other players.</strong> Chest shops are the real economy. Left-click a chest holding what you want to sell, work out what is in demand, and produce it.</li>
-  <li><strong>Voting.</strong> Vote on our four listing sites once a day each. Every vote pays a <span class="short">Copper Key</span>, and milestones at 25, 50 and 100 votes pay bigger ones. It is the only income that costs you nothing but a minute.</li>
+  <li><strong>Selling to other players.</strong> Chest shops are the real economy. Run <code>/shops</code> to see every land tagged as a shop, work out what is in demand, and produce it. To open your own, left-click a chest while holding the item you want to sell.</li>
+  <li><strong>Voting.</strong> Vote on our four listing sites once a day each. Every vote pays a <span class="short">Copper Crate</span>, and milestones at 25, 50 and 100 votes pay bigger ones. It is the only income that costs you nothing but a minute.</li>
   <li><strong>The Sell counter.</strong> The server buys raw metals and minerals (iron, gold, copper, coal, redstone, lapis, quartz, and more) at a deliberately low floor price. It is a safety net so you are never fully broke, not a place to get rich. Players will pay more.</li>
 </ul>`,
   },
   {
     category: "economy",
     question: "Is there a server shop?",
-    answer: `<p>Two small counters, and that is all:</p>
+    answer: `<p>Four counters in <code>/shop</code>:</p>
 <ul>
-  <li><strong>Buy:</strong> basics, End-only materials since the End is closed (ender pearls, shulker shells, end stone, end rods, purpur, chorus fruit), every armor trim smithing template, and the rarest potion ingredients (phantom membrane, turtle scute, rabbit's foot). <span class="short">Buy-only</span>, priced at a premium so buying from a player is always cheaper where that's an option.</li>
-  <li><strong>Sell:</strong> the server <span class="short">buys</span> raw metals and minerals at a floor price. Sell-only.</li>
+  <li><strong>Buy:</strong> basics, End-only materials since the End is closed (ender pearls, shulker shells, end stone, end rods, purpur, chorus fruit), every armor trim smithing template, the rarest potion ingredients (phantom membrane, turtle scute, rabbit's foot), and the <strong>Enchantment Extractor</strong>. <span class="short">Buy-only</span>, priced at a premium so buying from a player is always cheaper where that's an option.</li>
+  <li><strong>Sell:</strong> the server <span class="short">buys</span> raw metals and minerals at a floor price. Sell-only, and prices now <span class="short">drift down</span> the more of something the server has bought, so flooding a single ore stops paying.</li>
+  <li><strong>Crates:</strong> Iron, Gold and Diamond crates, added straight to <code>/crates</code>.</li>
+  <li><strong>Ranks:</strong> permanent account upgrades.</li>
 </ul>
 <p>Everything interesting (diamonds, gear, enchanted books, potions, mob drops, elytra, dragon trophies) is <span class="short">player market only</span>. The server never buys or sells it.</p>`,
   },
@@ -127,8 +117,8 @@ export const FAQ: FaqEntry[] = [
     question: "How much does land cost?",
     answer: `<p>Founding a land with <code>/lands create</code> is free and includes your <span class="short">first chunk free</span>. After that:</p>
 <ul>
-  <li>Every chunk after that costs a flat <span class="short">$1,000</span>, no matter how big your land gets. How many you can claim is capped separately: <span class="short">7 chunks</span> alone, plus <span class="short">7 more</span> for every player you trust.</li>
-  <li>Weekly upkeep is <span class="short">$50 per chunk</span>, taken from the shared land bank.</li>
+  <li>Every chunk after that costs a flat <span class="short">$250</span>, no matter how big your land gets. How many you can claim is capped separately: <span class="short">7 chunks</span> alone, plus <span class="short">7 more</span> for every player you trust.</li>
+  <li>Weekly upkeep is <span class="short">$100 per chunk</span>, taken from the shared land bank.</li>
   <li>Tiers and nation membership change these numbers. The full breakdown is in the <a href="/lands">Lands guide</a>.</li>
 </ul>`,
   },
@@ -136,9 +126,47 @@ export const FAQ: FaqEntry[] = [
     category: "economy",
     id: "voting-q",
     question: "How does voting work, and what do crates give?",
-    answer: `<p>Run <code>/vote</code> for the links. Each of the four listing sites can be voted on <span class="short">once every 24 hours</span>, and every vote pays one <strong>Copper Key</strong>. Hitting 25, 50 and 100 total votes pays an Iron, Gold and Diamond key respectively.</p>
-<p>Open keys with <code>/crates</code>. There are four tiers, and prizes run from diamonds and ender pearls up to armour trims, shulker shells, the netherite template, and <strong>Mending books</strong> &mdash; which matter because villager book trades are switched off, so Mending is genuinely scarce here.</p>
-<p>Iron, Gold and Diamond keys are also sold at the <strong>key shop at spawn</strong> if you would rather buy than wait.</p>`,
+    answer: `<p>Run <code>/vote</code> for the links. Each of the four listing sites can be voted on <span class="short">once every 24 hours</span>, and every vote pays one <strong>Copper Crate</strong>. Hitting 25, 50 and 100 total votes pays an Iron, Gold and Diamond crate respectively.</p>
+<p>Crates never take an inventory slot. They are held for you, and you open them from <code>/crates</code> whenever you like. Prizes run from diamonds, gold and ender pearls up to armour trims, shulker shells, the netherite template, and <strong>Mending books</strong>. which matter because villager book trades are switched off, so Mending is genuinely scarce here. Every tier also carries a rare <span class="short">cash jackpot</span> worth more than the crate itself.</p>
+<p>Iron, Gold and Diamond crates are also sold in <code>/shop</code> if you would rather buy than wait. Two further tiers, <strong>Quartz</strong> and the limited-edition <strong>Nether</strong> crate, unlock on <span class="short">Friday, September 11</span> for the Nether Event.</p>`,
+  },
+  {
+    category: "economy",
+    id: "ranks-q",
+    question: "What are ranks, and what do they give?",
+    answer: `<p>Four permanent upgrades, bought from <code>/shop</code> &rarr; <strong>Ranks</strong>. Each replaces the last, so you never pay twice for the same ground.</p>
+<ul>
+  <li><strong>Citizen</strong>. <span class="short">$12,000</span>. 5 homes, 12-chunk land base, grey prefix.</li>
+  <li><strong>Landholder</strong>. <span class="short">$30,000</span>. 7 homes, 17-chunk base, green prefix.</li>
+  <li><strong>Magnate</strong>. <span class="short">$60,000</span>. 10 homes, 22-chunk base, gold prefix.</li>
+  <li><strong>Sovereign</strong>. <span class="short">$120,000</span>. 15 homes, 30-chunk base, purple prefix.</li>
+</ul>
+<p>The chunk figure is a <span class="short">base</span>, not a cap. A land's real limit is the owner's base plus <span class="short">7 per trusted member</span>, and only the owner's rank sets the base, so a Landholder with three trusted players can claim 38 chunks.</p>
+<p>Prices are deliberately steep. Ranks exist to pull large balances out of circulation, not as early progression.</p>`,
+  },
+  {
+    category: "economy",
+    id: "ore-pricing-q",
+    question: "Why do ore prices keep changing?",
+    answer: `<p>The Sell counter uses <strong>dynamic pricing</strong>. Every unit the server buys nudges that item's price down a little, so the more of one ore the server has absorbed, the less the next stack pays.</p>
+<p>The effect is deliberately gentle at normal volumes. Selling a stack of 64 moves copper about <span class="short">1%</span> and iron about <span class="short">0.5%</span>, you will not notice it. It only bites at industrial scale, which is the point: it stops any single item being farmed into an unlimited money printer without punishing ordinary mining.</p>
+<p>Each ore has its own floor, so prices cannot fall forever. <strong>Emerald</strong> is the tightest, because villager crop trading makes it the one ore obtainable in unlimited quantity without mining.</p>`,
+  },
+  {
+    category: "economy",
+    id: "vote-shop-q",
+    question: "What is the vote shop?",
+    answer: `<p>Every vote pays <span class="short">1 vote point</span> as well as a Copper Crate. With four listing sites that is a maximum of <span class="short">4 points a day</span>, so everything in <code>/voteshop</code> is really priced in days of voting.</p>
+<ul>
+  <li>8 Ender Pearls, 3 points, about a day</li>
+  <li>4 Golden Apples, 4 points</li>
+  <li>Iron Crate, 6 points</li>
+  <li>Enchantment Extractor, 10 points</li>
+  <li>Gold Crate, 16 points, about four days</li>
+  <li>Netherite Template, 30 points</li>
+  <li>Diamond Crate, 35 points, about nine days</li>
+</ul>
+<p>Nothing in the vote shop pays cash and nothing it gives can be sold to the server in bulk, so voting can never mint currency. Mending is deliberately absent: it stays a crate drop so it keeps its scarcity.</p>`,
   },
   {
     category: "economy",
@@ -147,25 +175,25 @@ export const FAQ: FaqEntry[] = [
   },
   {
     category: "economy",
-    question: "Can I move enchantments between items?",
+    question: "Can I extract enchantments from my items?",
     answer: `<p>Yes, that is what <a href="/#extract">ExtractableEnchantments</a> is for. Craft an Enchantment Extractor from four experience bottles, four lapis blocks, and a book, then drag it onto an enchanted item to pull one random enchantment off as a book. It always works and you keep the book, so a good enchantment on gear you are replacing becomes something to re-use or sell.</p>`,
   },
   {
     category: "economy",
-    question: "Are villager trades limited?",
+    question: "Can I trade with villagers?",
     answer: `<p>Yes, heavily. Villagers are a currency faucet and an enchantment shortcut that the player market can't compete with, so a lot is switched off:</p>
 <ul>
   <li><strong>No enchanted books or enchanted gear</strong> from any villager. Those trades are removed entirely.</li>
   <li><strong>No re-rolling.</strong> Breaking and replacing a job-site block will not re-roll a villager's offers.</li>
   <li><strong>No discounts.</strong> Hero of the Village and cured-zombie price cuts do nothing here.</li>
   <li><strong>No diamond gear and no cleric ender pearls.</strong> These are protected commodities, the same as the automated farms banned under the <a href="/rules#farms">Farms rule</a>.</li>
-  <li><strong>Selling crops for emeralds works normally.</strong> It is how you level a farmer up, which is the only reliable route to their apple and golden carrot trades.</li>
 </ul>
-<p>Ordinary trades (emeralds for produce, sticks, glass, and so on) work as normal.</p>`,
+<p>Everything else trades as it does in vanilla. Selling produce to a farmer still levels them up, which is how you reach their apple and golden carrot offers.</p>`,
   },
   {
     category: "economy",
-    question: "What about scamming?",
-    answer: `<p>A mispriced shop sign is on the buyer to catch, that is fair game. Scamming through <strong>trust</strong> (taking payment and not delivering, fake middlemen, &ldquo;hold this for me&rdquo;) is a <a href="/rules">Rulebook</a> violation. For large deals, use a chest shop or ask staff to middleman.</p>`,
+    question: "Is scamming allowed?",
+    answer: `<p>No. Taking payment and not delivering, fake middlemen, and &ldquo;hold this for me&rdquo; are all <a href="/rules">Rulebook</a> violations and are actioned.</p>
+<p>A deal that both sides agreed to is a different thing. Trades between players are settled between players, not by staff, so use a chest shop for anything you want guaranteed, or ask staff to middleman a large one.</p>`
   },
 ];

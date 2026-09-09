@@ -243,6 +243,9 @@
   }
 
   var EVENT_LABEL = { nation: "Nation", land: "Land", war: "War" };
+  // Official Minecraft textures, one per event type, standing in for the
+  // coloured word-tags the feed used to carry.
+  var EVENT_ICON = { nation: "crown", land: "grass_block_side", war: "crossbow" };
 
   // Homepage "server pulse": lands/nations counts + a recent-events feed.
   // Independent of [data-analytics], since the homepage has no dashboard root.
@@ -264,8 +267,16 @@
       feedEl.innerHTML = !events.length ? '<p class="c-empty">No events yet, check back once the server is live.</p>' :
         events.slice(0, 6).map(function (ev) {
           var label = EVENT_LABEL[ev.type] || ev.type;
-          return '<div class="pulse-row pulse-' + esc(ev.type) + '"><span class="pulse-tag">' + esc(label) +
-            '</span><span class="pulse-text">' + esc(ev.text) + '</span><span class="pulse-time">' + relTime(ev.at) + "</span></div>";
+          // The person who did it beats a generic icon. Falls back to an item
+          // texture when the owner could not be resolved.
+          var mark = ev.owner
+            ? '<img class="pulse-ico pulse-head" src="https://mc-heads.net/avatar/' +
+              encodeURIComponent(ev.owner) + '/44" alt="" width="22" height="22" loading="lazy" title="' +
+              esc(ev.owner) + '">'
+            : '<img class="pulse-ico" src="/assets/mc/' + (EVENT_ICON[ev.type] || "filled_map") +
+              '.png" alt="" width="22" height="22" title="' + esc(label) + '">';
+          return '<div class="pulse-row">' + mark +
+            '<span class="pulse-text">' + esc(ev.text) + '</span><span class="pulse-time">' + relTime(ev.at) + "</span></div>";
         }).join("");
     }
   }
@@ -319,16 +330,23 @@
           '<div class="mei-top"><span class="mei-label">' + esc(c.label) + '</span>' +
           '<span class="mei-note">' + esc(c.note) + "</span></div>" + gauge;
       }
-      var stats = root.querySelector("[data-slot=econ-stats]");
-      if (stats) {
-        stats.innerHTML =
-          tile(money(e.money_supply_players), "Player money supply", "all players") +
-          tile(money(e.trade_volume_7d), "Trade volume, 7 days", "player + shop") +
-          tile(e.gini == null ? "n/a" : e.gini.toFixed(2), "Wealth Gini", "0 is equal, 1 is concentrated") +
-          tile(e.price_index && e.price_index.value != null ? e.price_index.value.toFixed(1) : "n/a", "Price index", "base 100 at launch") +
-          tile(money(w.median), "Median balance", "typical player") +
-          tile(intf(m.players_tracked), "Players tracked", m.active_traders + " trading");
+      // One number, one place. These used to be a six-tile row at the top of
+      // the page that restated the headline of every chart below it; each tile
+      // now sits with the chart it summarises.
+      function fill(slot, html) {
+        var el = root.querySelector("[data-slot=" + slot + "]");
+        if (el) el.innerHTML = html;
       }
+      fill("stat-money", tile(money(e.money_supply_players), "Player money supply", "held by all players"));
+      fill("stat-prices", tile(
+        e.price_index && e.price_index.value != null ? e.price_index.value.toFixed(1) : "n/a",
+        "Price index", "base 100 at launch"));
+      fill("stat-trade",
+        tile(money(e.trade_volume_7d), "Trade volume, 7 days", "player and shop") +
+        tile(intf(m.players_tracked), "Players tracked", m.active_traders + " trading"));
+      fill("stat-wealth",
+        tile(e.gini == null ? "n/a" : e.gini.toFixed(2), "Wealth Gini", "0 is equal, 1 is concentrated") +
+        tile(money(w.median), "Median balance", "the typical player"));
       // The Buy/Sell counters are the only outright faucet and sink on the server,
       // so a persistently positive net is the early warning that something is
       // mispriced. It went unseen for two days before this was surfaced.
@@ -404,7 +422,7 @@
           var style = /^#[0-9a-f]{6}$/i.test(n.color || "") ? ' style="--p:' + n.color + '"' : "";
           return '<div class="ncard' + (i === 0 ? " ncard-top" : "") + '"' + style + '>' +
             (i === 0 ? '<span class="n-crown">Top nation</span>' : "") +
-            '<div class="n-top"><span class="n-name">' + esc(n.name || "Unnamed") +
+            '<div class="n-top"><span class="n-name"><span class="n-swatch"></span>' + esc(n.name || "Unnamed") +
             '</span><span class="n-rank">#' + (i + 1) + '</span></div>' +
             '<div class="n-mdi">' + n.mdi.toFixed(3) + '</div><div class="n-mdi-lab">Development index</div>' +
             '<div class="n-facts"><span><b>' + intf(n.chunks) + "</b> chunks</span><span><b>" + intf(n.members) +

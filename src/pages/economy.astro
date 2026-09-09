@@ -1,6 +1,5 @@
 ---
 import Base from "../layouts/Base.astro";
-import { ECON } from "../consts";
 ---
 
 <Base
@@ -15,78 +14,97 @@ import { ECON } from "../consts";
   <div class="data-stale" data-stale hidden></div>
 
   <div class="analytics" data-analytics>
-    <section id="state">
-      <div class="mei" data-slot="mei" data-code="INSUFFICIENT_DATA">
-        <div class="mei-top"><span class="mei-label">Loading&hellip;</span></div>
-      </div>
-      <div class="stat-row" data-slot="econ-stats"></div>
-    </section>
-
-    <section id="wealth">
-      <h2>Wealth</h2>
-      <p class="as-sub">The largest player balances on the server.</p>
-      <div data-slot="wealth-table"></div>
-    </section>
-
-    <section id="markets">
-      <h2>Markets</h2>
-      <p class="as-sub">Daily open, high, low, and close per item, from chest-shop sales.</p>
-      <div class="candles" data-slot="candles"></div>
-    </section>
-
-    <section id="prices">
-      <h2>Item prices &amp; volume</h2>
-      <p class="as-sub">Medians of active chest-shop prices, not fixed rates, with the 7-day change and 30-day trend.</p>
-      <div data-slot="item-table"></div>
-      <h3>Volume leaders, last 24h</h3>
-      <div data-slot="volume-table"></div>
-    </section>
-
+    <!-- Ordered the way an economic report is ordered: the rules of the
+         economy first, then money, prices, activity and distribution. Each
+         figure appears exactly once, with the chart it belongs to. -->
     <section id="flow">
-      <h2>How money moves</h2>
-      <p class="as-sub">Where currency enters the economy, and where it's permanently removed.</p>
+      <h2>How money works</h2>
+      <p class="as-sub">Where currency enters the economy and where it is destroyed. Everything else only moves money between players.</p>
       <div class="flow-grid">
         <div class="flow-col flow-source">
           <h3>Sources</h3>
-          <div class="flow-item"><span class="f-lab">Starting balance</span><span class="f-val">{ECON.startingBalance}</span><span class="f-note">once, per new player</span></div>
-          <div class="flow-item"><span class="f-lab">Voting rewards</span><span class="f-val">crate keys</span><span class="f-note">four listing sites, once a day each</span></div>
-          <div class="flow-item"><span class="f-lab">Sell counter</span><span class="f-val">floor price</span><span class="f-note">raw metals &amp; minerals</span></div>
+          <div class="flow-item"><span class="f-lab">Starting balance</span><span class="f-val">$2,500</span><span class="f-note">once, per new player</span></div>
+          <div class="flow-item"><span class="f-lab">Voting</span><span class="f-val">no cash</span><span class="f-note">pays a crate and a vote point, deliberately never money</span></div>
+          <div class="flow-item"><span class="f-lab">Sell counter</span><span class="f-val">floor price</span><span class="f-note">raw metals and minerals, marked down permanently as it buys</span></div>
         </div>
         <div class="flow-col flow-sink">
           <h3>Sinks</h3>
-          <div class="flow-item"><span class="f-lab">Land claims</span><span class="f-val">{ECON.chunkCost}/chunk</span><span class="f-note">flat, first chunk free</span></div>
-          <div class="flow-item"><span class="f-lab">Land upkeep</span><span class="f-val">{ECON.landUpkeepPerChunk}/chunk</span><span class="f-note">weekly, per claimed chunk</span></div>
-          <div class="flow-item"><span class="f-lab">Nation founding</span><span class="f-val">{ECON.nationCreateCost}</span><span class="f-note">once</span></div>
-          <div class="flow-item"><span class="f-lab">Nation upkeep</span><span class="f-val">{ECON.nationUpkeepPerChunk}/chunk</span><span class="f-note">weekly, across all member lands</span></div>
-          <div class="flow-item"><span class="f-lab">Buy counter</span><span class="f-val">premium price</span><span class="f-note">essentials, End-exclusives, trims, rare ingredients</span></div>
+          <div class="flow-item"><span class="f-lab">Land claims</span><span class="f-val">$250/chunk</span><span class="f-note">flat, first chunk free</span></div>
+          <div class="flow-item"><span class="f-lab">Land upkeep</span><span class="f-val">$100/chunk</span><span class="f-note">weekly, per claimed chunk</span></div>
+          <div class="flow-item"><span class="f-lab">Nation founding</span><span class="f-val">$35,000</span><span class="f-note">once</span></div>
+          <div class="flow-item"><span class="f-lab">Nation upkeep</span><span class="f-val">$40/chunk</span><span class="f-note">weekly, across all member lands</span></div>
+          <div class="flow-item"><span class="f-lab">Buy counter</span><span class="f-val">premium price</span><span class="f-note">50 items, priced above the player market on purpose</span></div>
+          <div class="flow-item"><span class="f-lab">Crates</span><span class="f-val">$1,000 / $2,800 / $6,500</span><span class="f-note">Iron, Gold and Diamond. Cash back is a rare jackpot</span></div>
+          <div class="flow-item"><span class="f-lab">Ranks</span><span class="f-val">$12,000 to $120,000</span><span class="f-note">Citizen, Landholder, Magnate, Sovereign</span></div>
         </div>
       </div>
 
-      <h3>Server counter, live</h3>
-      <p class="as-sub">The Buy and Sell counters are the only place currency is created or destroyed outright. Everything else moves money between players without changing how much exists.</p>
-      <div class="stat-row" data-slot="mint"></div>
+      <h3 id="dynamic">Dynamic pricing</h3>
+      <p class="as-sub">Every unit the Sell counter buys lowers that item's price, and it does not recover. The floor is permanent.</p>
+      <div class="itable-wrap">
+        <table class="itable">
+          <thead>
+            <tr><th>Item</th><th class="num-col">Price floor</th><th class="num-col">Units to reach it</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><img class="mc-ico" src="/assets/mc/emerald.png" alt="" width="18" height="18"> Emerald</td><td class="num-col">65%</td><td class="num-col">875</td></tr>
+            <tr><td><img class="mc-ico" src="/assets/mc/copper_ingot.png" alt="" width="18" height="18"> Copper, charcoal</td><td class="num-col">75%</td><td class="num-col">1,250</td></tr>
+            <tr><td><img class="mc-ico" src="/assets/mc/iron_ingot.png" alt="" width="18" height="18"> Iron, gold</td><td class="num-col">85%</td><td class="num-col">1,875</td></tr>
+            <tr><td><img class="mc-ico" src="/assets/mc/coal.png" alt="" width="18" height="18"> Coal, redstone, lapis, quartz</td><td class="num-col">85%</td><td class="num-col">3,000</td></tr>
+          </tbody>
+        </table>
+      </div>
     </section>
 
     <section id="money">
-      <h2>Money &amp; trade</h2>
-      <p class="as-sub">Player-held currency, the price index, and daily trade activity.</p>
-      <div class="chart-grid">
-        <div class="chart">
-          <h3>Money supply</h3>
-          <div class="c-sub">Total currency held by players.</div>
-          <div data-slot="supply-chart"></div>
-        </div>
-        <div class="chart">
-          <h3>Price index</h3>
-          <div class="c-sub">Basket of common goods. Base 100 at launch.</div>
-          <div data-slot="price-chart"></div>
-        </div>
+      <h2>Money</h2>
+      <div class="stat-row" data-slot="stat-money"></div>
+      <div class="chart">
+        <h3>Money supply</h3>
+        <div class="c-sub">Total currency held by players.</div>
+        <div data-slot="supply-chart"></div>
       </div>
+      <h3>At the counters</h3>
+      <p class="as-sub">The Buy and Sell counters are the only places currency is created or destroyed outright, so a persistently positive net is the early warning that something is mispriced.</p>
+      <div class="stat-row" data-slot="mint"></div>
+    </section>
+
+    <section id="prices">
+      <h2>Prices</h2>
+      <p class="as-sub">Medians of active chest-shop prices, not fixed rates, with the 7-day change and 30-day trend.</p>
+      <div class="stat-row" data-slot="stat-prices"></div>
+      <div class="chart">
+        <h3>Price index</h3>
+        <div class="c-sub">A fixed basket of wheat, iron, diamonds, ender pearls and oak logs. Base 100 at launch.</div>
+        <div data-slot="price-chart"></div>
+      </div>
+      <div data-slot="item-table"></div>
+      <h3>Daily range</h3>
+      <p class="as-sub">Open, high, low and close per item, from chest-shop sales.</p>
+      <div class="candles" data-slot="candles"></div>
+    </section>
+
+    <section id="trade">
+      <h2>Trade</h2>
+      <div class="stat-row" data-slot="stat-trade"></div>
       <div class="chart">
         <h3>Trade volume</h3>
         <div class="c-sub">Value moving between players and through shops each day.</div>
         <div data-slot="volume-chart"></div>
       </div>
+      <h3>Volume leaders, last 24h</h3>
+      <div data-slot="volume-table"></div>
+      <h3>The index</h3>
+      <p class="as-sub">A weekly verdict computed from that volume. It needs eight active traders and fourteen days of history before it will judge.</p>
+      <div class="mei" data-slot="mei" data-code="INSUFFICIENT_DATA">
+        <div class="mei-top"><span class="mei-label">Loading&hellip;</span></div>
+      </div>
+    </section>
+
+    <section id="wealth">
+      <h2>Wealth</h2>
+      <div class="stat-row" data-slot="stat-wealth"></div>
+      <div data-slot="wealth-table"></div>
     </section>
 
     <details class="method">

@@ -1,45 +1,3 @@
-:root {
-  --bg: #0a0b0d;
-  --bg-1: #111318;
-  --bg-2: #171a20;
-  --bg-3: #1f232b;
-  --border: #262b33;
-  --border-2: #3a4150;
-  --text: #f5f6f7;
-  --text-2: #b3b8c0;
-  --text-3: #767c87;
-  --accent: #e8b33d;    /* imperial gold: the one deliberately vivid signature color, spent sparingly */
-
-  /* plugin accents: real saturation, not pastel. Same hue identity per
-     plugin as before, just actually spent as color instead of greyed out. */
-  --p-lands: #4fae66;   /* Lands green */
-  --p-quickshop: #e0a23c;
-  --p-market: #4a8ed6;
-  --p-jobs: #2b8f4f;    /* Jobs Reborn: deeper green, distinct from Lands */
-  --p-extract: #8a5cf0; /* enchant violet */
-  --p-brew: #e0629e;    /* pinkish, for The Brewing Project */
-  --p-essentials: #e0473f; /* red, EssentialsX */
-  --p-core: #4499e8;    /* CoreProtect blue */
-  --p-deathchest: #c17a2e; /* oak brown */
-  --p-guard: #9aa1a8;
-
-  --radius: 12px;
-  --maxw: 960px;
-
-  /* Type: a bold geometric display face for actual titles: the wordmark,
-     the hero, section headings. Built and blocky, on-subject without being
-     a literal pixel font. A grotesque carries the prose and small labels
-     (Unbounded's letterforms get muddy below ~1.3rem). Mono is reserved for
-     things that are literally data: the address, versions, ledger figures. */
-  --font-display: "Unbounded", "Hanken Grotesk", -apple-system, sans-serif;
-  --font: "Hanken Grotesk", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  --mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
-
-  --ease: cubic-bezier(0.16, 1, 0.3, 1);
-  /* the faint offset-shadow Minecraft's own font renders with, used once,
-     only on the wordmark and hero, never on body-sized text */
-  --mc-shadow: 0 2px 0 rgba(0,0,0,0.45);
-}
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; }
@@ -47,23 +5,74 @@ html { scroll-behavior: smooth; }
   html { scroll-behavior: auto; }
 }
 
-/* background photo + vignette (photo is optional; falls back to flat dark) */
-body.bg::before {
+/* Page ground: Meridian's own world map, the full 10,000 by 10,000 render from
+   squaremap. Held far back and desaturated so it reads as an atlas the site is
+   printed on rather than a photo competing with the text. */
+body::before {
   content: "";
   position: fixed;
   inset: 0;
   z-index: -2;
-  background: var(--bg) url("/assets/bg.jpg") center 60% / cover no-repeat;
-  opacity: 0.9;
+  /* Transparent: the map sits on the layer below this one, and this layer is
+     only the vignette that keeps text off the busiest part of it. */
+  background: radial-gradient(125% 90% at 50% -8%, transparent 28%, rgba(6,5,4,0.82) 100%);
 }
-body.bg::after {
+body::after {
   content: "";
   position: fixed;
   inset: 0;
+  z-index: -3;
+  background: url("/assets/worldmap.jpg") center top / cover no-repeat;
+  filter: saturate(0.38) brightness(0.5) contrast(0.85);
+  opacity: 0.2;
+}
+
+/* The hero carries the one photograph on the site: Meridian's own world,
+   bleeding off the right edge, with the copy held on the dark left. The
+   fades are deliberately many-stopped and span the full layer, because a
+   short scrim over part of an image reads as a box pasted onto the page. */
+.hero-world {
+  position: absolute;
+  inset: 0;
   z-index: -1;
+  overflow: hidden;
+  pointer-events: none;
+}
+/* Image and scrim are separate layers so the photograph can be graded
+   without the gradients being graded with it. */
+.hero-world::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("/assets/bg.jpg") 62% 58% / cover no-repeat;
+  filter: saturate(0.82) contrast(1.08);
+}
+.hero-world::after {
+  content: "";
+  position: absolute;
+  inset: 0;
   background:
-    linear-gradient(to bottom, rgba(11,11,12,0.58) 0%, rgba(11,11,12,0.32) 30%, rgba(11,11,12,0.68) 62%, var(--bg) 92%),
-    radial-gradient(120% 70% at 50% 32%, transparent 22%, rgba(11,11,12,0.58) 100%);
+    linear-gradient(to bottom,
+      rgba(10,11,13,0.26) 0%,
+      rgba(10,11,13,0.16) 36%,
+      rgba(10,11,13,0.48) 70%,
+      rgba(10,11,13,0.89) 89%,
+      var(--bg) 100%),
+    linear-gradient(to right,
+      var(--bg) 0%,
+      rgba(10,11,13,0.96) 20%,
+      rgba(10,11,13,0.88) 40%,
+      rgba(10,11,13,0.66) 56%,
+      rgba(10,11,13,0.34) 73%,
+      rgba(10,11,13,0.12) 89%,
+      rgba(10,11,13,0.06) 100%);
+}
+@media (max-width: 700px) {
+  /* On a phone the copy sits over the whole width, so the world drops back
+     to a wash rather than competing with the text. */
+  .hero-world::before { background-position: 66% 55%; }
+  .hero-world::after { background:
+    linear-gradient(to bottom, rgba(10,11,13,0.62) 0%, rgba(10,11,13,0.80) 62%, var(--bg) 100%); }
 }
 
 body {
@@ -79,7 +88,7 @@ body {
 
 a { color: var(--text); text-decoration: underline; text-underline-offset: 2px; text-decoration-color: var(--border-2); transition: text-decoration-color 0.15s var(--ease); }
 a:hover { text-decoration-color: var(--text); }
-:focus-visible { outline: 2px solid var(--text-2); outline-offset: 2px; border-radius: 3px; }
+:focus-visible { outline: 2px solid var(--text-2); outline-offset: 2px; border-radius: 0; }
 
 /* ---------- Header / nav ---------- */
 .site-header {
@@ -111,6 +120,73 @@ a:hover { text-decoration-color: var(--text); }
   text-decoration: none;
   flex-shrink: 0;
 }
+/* The one real button on the page, drawn the way Minecraft draws a button:
+   hard 2px bevel, no radius, no blur, and it presses in on click instead of
+   floating on a shadow. */
+.mc-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 15px 20px;
+  border: 0;
+  cursor: pointer;
+  background: var(--bg-2);
+  color: var(--text);
+  font-family: var(--mono);
+  font-size: 1.16rem;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  box-shadow:
+    inset 2px 2px 0 rgba(255,255,255,0.085),
+    inset -2px -2px 0 rgba(0,0,0,0.6),
+    0 0 0 1px rgba(0,0,0,0.75);
+  transition: background 0.12s var(--ease), color 0.12s var(--ease);
+}
+.mc-btn:hover { background: var(--bg-3); color: var(--accent-hi); }
+/* Discord sits beside the address but must not compete with it. No bevel: a
+   hairline and a flat surface read as the secondary of the pair. */
+.dbtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 16px;
+  background: transparent;
+  border: 1px solid var(--border-2);
+  color: var(--text-2);
+  text-decoration: none;
+  transition: border-color 0.14s var(--ease), color 0.14s var(--ease), background 0.14s var(--ease);
+}
+.dbtn:hover { border-color: var(--text-3); color: var(--text); background: var(--bg-1); }
+.dbtn .dw-icon { width: 19px; height: 19px; flex-shrink: 0; }
+.dbtn-label { font-family: var(--font-display); font-size: 0.86rem; letter-spacing: -0.01em; }
+.dbtn-count {
+  font-family: var(--mono); font-size: 0.76rem; color: var(--text-3);
+  padding-left: 11px; border-left: 1px solid var(--border);
+}
+.dbtn-count b { font-weight: 500; color: var(--text-2); }
+.mc-btn:active {
+  /* Pressed: the bevel inverts, the way it does in game. */
+  box-shadow:
+    inset 2px 2px 0 rgba(0,0,0,0.55),
+    inset -2px -2px 0 rgba(255,255,255,0.05),
+    0 0 0 1px rgba(0,0,0,0.75);
+}
+.mc-btn .copy-ico { width: 17px; height: 17px; flex-shrink: 0; color: var(--text-3); }
+.mc-btn:hover .copy-ico { color: var(--accent); }
+/* The label says what the control does, then what it did. */
+.mc-btn.copied { color: var(--ok); }
+.mc-btn.copied .copy-ico { color: var(--ok); }
+
+.hero-meta { display: flex; flex-direction: column; gap: 5px; }
+
+.wordmark {
+  display: block;
+  height: auto;
+  /* Pixel art. Let the browser keep the hard edges instead of smoothing them
+     into mush, and give it the same flat drop shadow Minecraft's own font has. */
+  image-rendering: pixelated;
+  filter: drop-shadow(3px 3px 0 rgba(0,0,0,0.55));
+}
 .brand .mark {
   width: 25px; height: 25px;
   display: block;
@@ -122,14 +198,13 @@ a:hover { text-decoration-color: var(--text); }
   display: flex;
   gap: 2px;
   margin-left: auto;
-  flex-wrap: wrap;
   justify-content: flex-end;
 }
 .nav-links a {
   position: relative;
   color: var(--text-3);
   padding: 6px 10px;
-  border-radius: 7px;
+  border-radius: 0;
   font-size: 0.88rem;
   font-weight: 500;
   text-decoration: none;
@@ -154,15 +229,54 @@ a:hover { text-decoration-color: var(--text); }
 .nav-toggle {
   display: none;
   background: none; border: 1px solid var(--border-2);
-  color: var(--text); border-radius: 8px;
+  color: var(--text); border-radius: 0;
   width: 38px; height: 38px; font-size: 1.05rem;
   cursor: pointer; margin-left: auto;
 }
 
+.hdr-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-left: 14px;
+  padding: 8px 12px;
+  border: 0;
+  cursor: pointer;
+  background: var(--bg-2);
+  color: var(--text-2);
+  font-family: var(--mono);
+  font-size: 0.8rem;
+  white-space: nowrap;
+  box-shadow:
+    inset 2px 2px 0 rgba(255,255,255,0.075),
+    inset -2px -2px 0 rgba(0,0,0,0.55),
+    0 0 0 1px rgba(0,0,0,0.7);
+  transition: background 0.12s var(--ease), color 0.12s var(--ease);
+}
+.hdr-cta:hover { background: var(--bg-3); color: var(--text); }
+.dw-counts { padding-left: 9px; border-left: 1px solid var(--border-2); }
+.hdr-cta:active {
+  box-shadow:
+    inset 2px 2px 0 rgba(0,0,0,0.5),
+    inset -2px -2px 0 rgba(255,255,255,0.05),
+    0 0 0 1px rgba(0,0,0,0.7);
+}
+.hdr-cta.copied { color: var(--ok); }
+.hdr-count {
+  font-size: 0.76rem;
+  color: var(--text-3);
+  padding-left: 10px;
+  border-left: 1px solid var(--border-2);
+}
+/* Only once a provider answered, so an empty label never shows a live dot. */
+.hdr-count.is-live { color: var(--ok); }
+.hdr-count.is-live::after { content: " online"; color: var(--text-3); }
+@media (max-width: 560px) { .hdr-cta { display: none; } }
+
 .cmdk-trigger {
   display: flex; align-items: center; gap: 7px;
   margin-left: 14px; padding: 6px 9px 6px 10px;
-  background: var(--bg-1); border: 1px solid var(--border-2); border-radius: 8px;
+  background: var(--bg-1); border: 1px solid var(--border-2); border-radius: 0;
   color: var(--text-3); cursor: pointer;
   transition: border-color 0.15s var(--ease), color 0.15s var(--ease);
 }
@@ -180,7 +294,7 @@ a:hover { text-decoration-color: var(--text); }
 .cmdk-overlay[hidden] { display: none; }
 .cmdk-box {
   width: 100%; max-width: 560px;
-  background: var(--bg-1); border: 1px solid var(--border-2); border-radius: 14px;
+  background: var(--bg-1); border: 1px solid var(--border-2); border-radius: 0;
   box-shadow: 0 24px 60px rgba(0,0,0,0.5);
   overflow: hidden;
 }
@@ -197,19 +311,55 @@ a:hover { text-decoration-color: var(--text); }
 .cmdk-input::placeholder { color: var(--text-3); }
 .cmdk-esc {
   font-family: var(--mono); font-size: 0.68rem; color: var(--text-3);
-  border: 1px solid var(--border-2); border-radius: 4px; padding: 1px 6px;
+  border: 1px solid var(--border-2); border-radius: 0; padding: 1px 6px;
 }
 .cmdk-results { max-height: 50vh; overflow-y: auto; padding: 6px; }
 .cmdk-item {
-  display: block; padding: 10px 12px; border-radius: 8px;
+  display: block; padding: 10px 12px; border-radius: 0;
   color: var(--text-2); font-size: 0.9rem; text-decoration: none;
 }
 .cmdk-item.on { background: var(--bg-2); color: var(--text); }
 .cmdk-empty { padding: 24px 12px; text-align: center; color: var(--text-3); font-size: 0.86rem; }
 
-@media (max-width: 680px) {
-  .cmdk-trigger { display: none; }
+.hdr-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-left: 14px;
+  padding: 8px 12px;
+  border: 0;
+  cursor: pointer;
+  background: var(--bg-2);
+  color: var(--text-2);
+  font-family: var(--mono);
+  font-size: 0.8rem;
+  white-space: nowrap;
+  box-shadow:
+    inset 2px 2px 0 rgba(255,255,255,0.075),
+    inset -2px -2px 0 rgba(0,0,0,0.55),
+    0 0 0 1px rgba(0,0,0,0.7);
+  transition: background 0.12s var(--ease), color 0.12s var(--ease);
 }
+.hdr-cta:hover { background: var(--bg-3); color: var(--text); }
+.dw-counts { padding-left: 9px; border-left: 1px solid var(--border-2); }
+.hdr-cta:active {
+  box-shadow:
+    inset 2px 2px 0 rgba(0,0,0,0.5),
+    inset -2px -2px 0 rgba(255,255,255,0.05),
+    0 0 0 1px rgba(0,0,0,0.7);
+}
+.hdr-cta.copied { color: var(--ok); }
+.hdr-count {
+  font-size: 0.76rem;
+  color: var(--text-3);
+  padding-left: 10px;
+  border-left: 1px solid var(--border-2);
+}
+/* Only once a provider answered, so an empty label never shows a live dot. */
+.hdr-count.is-live { color: var(--ok); }
+.hdr-count.is-live::after { content: " online"; color: var(--text-3); }
+@media (max-width: 560px) { .hdr-cta { display: none; } }
+@media (max-width: 1100px) { .cmdk-trigger { display: none; } }
 
 /* ---------- Layout ---------- */
 main {
@@ -241,85 +391,9 @@ main {
   from { opacity: 0; transform: translateY(10px); }
   to   { opacity: 1; transform: translateY(0); }
 }
-.hero h1, .hero .tagline, .hero .ip-box, .hero .sub-line, .hero .srv {
-  animation: rise-in 0.68s var(--ease) both;
-}
-.hero h1 { animation-delay: 0.02s; }
-.hero .tagline { animation-delay: 0.1s; }
-.hero .ip-box { animation-delay: 0.18s; }
-.hero .sub-line { animation-delay: 0.24s; }
-.hero .srv { animation-delay: 0.3s; }
 @media (prefers-reduced-motion: reduce) {
   .hero h1, .hero .tagline, .hero .ip-box, .hero .sub-line, .hero .srv { animation: none; }
 }
-
-/* ---------- Hero ---------- */
-.hero { position: relative; text-align: center; padding: 30px 0 8px; }
-.embers { position: absolute; inset: -20px -20px -60px; overflow: hidden; pointer-events: none; }
-.embers span {
-  position: absolute;
-  bottom: -10px;
-  left: var(--x);
-  width: var(--size);
-  height: var(--size);
-  border-radius: 50%;
-  background: radial-gradient(circle, #ffb673 0%, #e8763a 45%, transparent 75%);
-  opacity: 0;
-  animation: ember-rise var(--dur) linear infinite;
-  animation-delay: var(--delay);
-}
-@keyframes ember-rise {
-  0% { transform: translate(0, 0); opacity: 0; }
-  8% { opacity: 0.75; }
-  85% { opacity: 0.25; }
-  100% { transform: translate(var(--drift), -280px); opacity: 0; }
-}
-@media (prefers-reduced-motion: reduce) { .embers { display: none; } }
-@media (max-width: 640px) { .embers { display: none; } }
-.hero h1 {
-  font-family: "Syne", var(--font-display);
-  font-size: clamp(2.7rem, 8vw, 4.3rem);
-  letter-spacing: -0.01em;
-  line-height: 1.02;
-  margin-bottom: 20px;
-  font-weight: 800;
-  /* a deeper, slightly warm block-bevel: a light top edge, a solid dark
-     drop matching Minecraft's own flat font shadow, and soft ambient
-     depth beneath. One more step toward "block", still no pixel font. */
-  text-shadow: 0 1px 0 rgba(255, 214, 150, 0.22), 0 3px 0 rgba(0, 0, 0, 0.5), 0 8px 18px rgba(0, 0, 0, 0.35);
-}
-.hero .tagline {
-  color: var(--text-2);
-  font-size: 1.14rem;
-  max-width: 580px;
-  margin: 0 auto 34px;
-  line-height: 1.55;
-}
-
-/* ---------- IP copy box ---------- */
-.ip-box {
-  display: inline-flex;
-  align-items: center;
-  gap: 14px;
-  background: var(--bg-1);
-  border: 1px solid var(--border-2);
-  border-radius: var(--radius);
-  padding: 14px 20px;
-  cursor: pointer;
-  transition: border-color 0.15s var(--ease), transform 0.08s var(--ease), background 0.15s var(--ease);
-}
-.ip-box:hover { border-color: color-mix(in srgb, var(--accent) 55%, var(--border-2)); background: var(--bg-2); }
-.ip-box:hover .ip { color: var(--accent); }
-.ip-box:active { transform: scale(0.985); }
-.ip-box .ip { font-family: var(--mono); font-size: 1.28rem; font-weight: 500; color: var(--text); letter-spacing: -0.01em; transition: color 0.2s var(--ease); }
-.ip-box .copy-ico {
-  width: 16px;
-  height: 16px;
-  color: var(--text-3);
-  flex-shrink: 0;
-  transition: color 0.2s var(--ease), transform 0.2s var(--ease);
-}
-.ip-box:hover .copy-ico { color: var(--text-2); }
 .ip-box.copied { border-color: #57b98a; animation: copy-pulse 0.4s var(--ease); }
 .ip-box.copied .ip, .ip-box.copied .copy-ico { color: #57b98a; }
 .ip-box.copied .copy-ico { transform: scale(1.15); }
@@ -328,31 +402,6 @@ main {
   40% { transform: scale(1.02); }
   100% { transform: scale(1); }
 }
-
-.sub-line {
-  margin-top: 16px;
-  font-size: 0.86rem;
-  color: var(--text-2);
-  text-shadow: 0 1px 3px rgba(0,0,0,0.7);
-}
-.sub-line code { font-family: var(--mono); color: var(--text-2); }
-
-/* ---------- Live server status ---------- */
-.srv {
-  display: inline-flex; flex-wrap: wrap; align-items: center;
-  gap: 7px 15px;
-  margin-top: 16px;
-  padding: 9px 16px;
-  border: 1px solid var(--border);
-  border-radius: 999px;
-  background: color-mix(in srgb, var(--bg-1) 70%, transparent);
-  font-size: 0.8rem;
-  color: var(--text-2);
-  font-variant-numeric: tabular-nums;
-  font-family: var(--mono);
-}
-.srv-item { display: inline-flex; align-items: center; gap: 6px; white-space: nowrap; }
-.srv-item b { color: var(--text); font-weight: 600; }
 .srv-dot {
   width: 8px; height: 8px; border-radius: 50%;
   background: var(--text-3);
@@ -379,196 +428,187 @@ main {
 }
 .section-intro { color: var(--text-2); text-shadow: 0 1px 3px rgba(0,0,0,0.7); margin-top: 6px; margin-bottom: 30px; max-width: 62ch; }
 
-/* ---------- Bento: what's different ---------- */
-.bento {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-auto-rows: minmax(96px, auto);
-  grid-template-areas:
-    "land land econ econ"
-    "land land pvp  pvp"
-    "world end nether anticheat";
-  gap: 14px;
-}
-.bcard {
-  --a: var(--text-3);
-  position: relative;
-  overflow: hidden;
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  background: var(--bg-1);
-  padding: 20px 22px;
-  display: flex;
-  flex-direction: column;
-  transition: border-color 0.2s var(--ease), transform 0.2s var(--ease), background 0.2s var(--ease);
-}
-/* Chunk grid. The 16-block chunk is the unit the whole server is built on, so
-   the cards carry it as texture instead of an icon. Sits under the content and
-   warms toward the card's own accent on hover. */
-.bcard::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  background-image:
-    linear-gradient(to right, color-mix(in srgb, var(--a) 45%, transparent) 1px, transparent 1px),
-    linear-gradient(to bottom, color-mix(in srgb, var(--a) 45%, transparent) 1px, transparent 1px);
-  background-size: 16px 16px;
-  /* Visible at rest, not just on hover: touch devices never get a hover state. */
-  opacity: 0.2;
-  transition: opacity 0.25s var(--ease);
-}
-/* A single light source per card, so each system reads as its own territory. */
-.bcard::after {
-  content: "";
-  position: absolute;
-  top: -45%;
-  left: -18%;
-  width: 66%;
-  height: 125%;
-  pointer-events: none;
-  background: radial-gradient(ellipse at center, color-mix(in srgb, var(--a) 40%, transparent), transparent 70%);
-  opacity: 0.22;
-  transition: opacity 0.3s var(--ease);
-}
-.bcard > * { position: relative; z-index: 1; }
-.bcard:hover { border-color: color-mix(in srgb, var(--a) 55%, var(--border-2)); transform: translateY(-2px); background: var(--bg-2); }
-.bcard:hover::before { opacity: 0.38; }
-.bcard:hover::after { opacity: 0.6; }
-.bcard h3 { font-size: 1.02rem; font-weight: 650; color: var(--text); margin: 0 0 6px; letter-spacing: -0.005em; }
-.bcard p { font-size: 0.86rem; color: var(--text-2); line-height: 1.55; margin: 0; }
-.bcard .b-link { margin-top: auto; padding-top: 14px; font-size: 0.8rem; color: var(--a); font-weight: 600; }
-
-.b-land { grid-area: land; }
-.b-econ { grid-area: econ; }
-.b-pvp { grid-area: pvp; }
-.b-world { grid-area: world; }
-.b-end { grid-area: end; }
-.b-nether { grid-area: nether; }
-.b-anticheat, .b-war { grid-area: anticheat; }
-
-.b-land { --a: var(--p-lands); }
-.b-econ { --a: var(--p-market); }
-.b-pvp { --a: var(--p-essentials); }
-.b-world { --a: var(--p-jobs); }
-.b-end { --a: var(--p-extract); }
-.b-nether { --a: #d9822b; }
-.b-war { --a: var(--p-core); }
-
-.b-land { justify-content: flex-start; }
-.b-land h3 { font-size: 1.22rem; }
-.b-land p { font-size: 0.9rem; max-width: 42ch; }
-.b-land::before { background-size: 22px 22px; }
-
 @media (max-width: 760px) {
   .bento {
     grid-template-columns: 1fr;
     grid-template-areas: "land" "econ" "pvp" "world" "end" "nether" "anticheat";
   }
 }
-
-/* ---------- Discord strip ---------- */
-.discord-strip {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  width: 100%;
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  background: var(--bg-1);
-  padding: 13px 16px;
-  text-decoration: none;
-  color: var(--text-2);
-  transition: border-color 0.15s var(--ease), background 0.15s var(--ease);
-}
-.discord-strip:hover { border-color: var(--border-2); background: var(--bg-2); text-decoration: none; }
-.discord-strip .ds-logo { width: 22px; height: 22px; color: #7b86f5; flex-shrink: 0; }
-.discord-strip .ds-name { font-family: var(--font); font-weight: 700; color: var(--text); font-size: 1rem; letter-spacing: -0.005em; }
-.discord-strip .ds-count { display: inline-flex; align-items: center; gap: 6px; font-size: 0.86rem; color: var(--text-3); font-family: var(--mono); }
-.discord-strip .ds-count .ds-dot { width: 7px; height: 7px; border-radius: 50%; background: #23a55a; }
-.discord-strip .ds-count b { color: var(--text-2); font-weight: 600; font-variant-numeric: tabular-nums; }
-.discord-strip .ds-sep { color: var(--border-2); }
-.discord-strip .ds-join {
-  margin-left: auto; flex-shrink: 0;
-  font-size: 0.86rem; font-weight: 600; color: var(--text-2);
-  transition: color 0.15s var(--ease);
-}
-.discord-strip:hover .ds-join { color: var(--accent); }
 @media (max-width: 520px) {
   .discord-strip { flex-wrap: wrap; }
   .discord-strip .ds-join { margin-left: 0; width: 100%; }
 }
 
-/* ---------- Plugin registry: the systems that matter, then everything else ---------- */
-.registry { margin-top: 6px; }
-.reg-featured {
+/* ---------- The ruled matrix ----------
+   One containment language for every section below the hero. Cells share
+   hairlines instead of floating as separate cards, so the page reads as a
+   single instrument rather than a pile of panels. The 1px grid gap IS the
+   rule, which is why arbitrary column spans stay aligned without any
+   nth-child border arithmetic. */
+.matrix, .stat-row {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 14px;
-}
-.reg-card {
-  position: relative;
-  overflow: hidden;
-  padding: 22px 22px 20px;
+  gap: 1px;
+  background: var(--border);
   border: 1px solid var(--border);
-  border-radius: var(--radius);
+}
+.matrix > *, .stat-row > .stat {
   background: var(--bg-1);
-  scroll-margin-top: 80px;
-  transition: border-color 0.2s var(--ease), transform 0.2s var(--ease), background 0.2s var(--ease), box-shadow 0.2s var(--ease);
+  transition: background 0.18s var(--ease);
 }
-.reg-card:hover {
-  border-color: color-mix(in srgb, var(--p, var(--border-2)) 55%, var(--border-2));
-  transform: translateY(-2px);
+.matrix > * { padding: 21px 22px 23px; }
+
+/* An official Minecraft texture framed as an inventory slot. */
+.spec-ico {
+  width: 34px; height: 34px; flex-shrink: 0;
+  padding: 5px;
   background: var(--bg-2);
-  box-shadow: 0 8px 28px -8px color-mix(in srgb, var(--p, transparent) 35%, transparent);
+  object-fit: contain;
+  image-rendering: pixelated;
+  box-shadow: inset 2px 2px 0 rgba(0,0,0,0.6), inset -2px -2px 0 rgba(255,255,255,0.055);
 }
 
-/* A single light sweep on hover, reserved for the standout cards
-   (featured plugins, the #1 nation) so it reads as a moment, not decor. */
-.reg-card::after, .ncard-top::after {
-  content: "";
-  position: absolute; inset: 0;
-  background: linear-gradient(115deg, transparent 42%, color-mix(in srgb, var(--p, #fff) 16%, transparent) 50%, transparent 58%);
-  background-size: 250% 100%;
-  background-position: 150% 0;
-  pointer-events: none;
+/* Points written as sentences, with a 5px square marker because a disc bullet
+   belongs to a word processor and this is a block game. */
+.spec-points {
+  list-style: none; margin: 15px 0 0; padding: 0;
+  display: flex; flex-direction: column; gap: 10px; max-width: 66ch;
 }
-.reg-card:hover::after, .ncard-top:hover::after {
-  background-position: -50% 0;
-  transition: background-position 0.85s var(--ease);
+.spec-points li {
+  position: relative; padding-left: 18px;
+  color: var(--text-2); font-size: 0.92rem; line-height: 1.62;
 }
-@media (prefers-reduced-motion: reduce) {
-  .reg-card:hover::after, .ncard-top:hover::after { transition: none; background-position: 150% 0; }
+.spec-points li::before {
+  content: ""; position: absolute; left: 0; top: 0.62em;
+  width: 5px; height: 5px; background: var(--accent-dim);
 }
-.reg-head { display: flex; align-items: center; gap: 11px; flex-wrap: wrap; }
-.reg-ico { width: 32px; height: 32px; border-radius: 8px; flex-shrink: 0; background: var(--bg-2); object-fit: cover; }
-.reg-name { font-family: var(--font); font-weight: 700; font-size: 1.08rem; color: var(--p, var(--text)); letter-spacing: -0.005em; }
-.reg-blurb { color: var(--text-2); font-size: 0.92rem; margin-top: 9px; }
-.reg-links { margin-top: 13px; display: flex; gap: 16px; flex-wrap: wrap; }
-.reg-links a { font-size: 0.86rem; color: var(--text-2); }
+.spec-points b {
+  font-family: var(--mono); font-weight: 500; color: var(--text);
+  font-variant-numeric: tabular-nums;
+}
 
-.reg-more { margin-top: 22px; }
-.reg-more summary {
-  cursor: pointer; list-style: none; color: var(--text-2); font-size: 0.88rem; font-weight: 550;
-  text-shadow: 0 1px 3px rgba(0,0,0,0.7);
+/* ---------- Homepage feature cards ----------
+   Icon, title, one line. No image: six empty screenshot frames were more than
+   half the old page, and unequal widths pushed the titles out of line. A grid
+   that actually aligns reads more designed than asymmetry with nothing holding
+   it together. */
+.fgrid { grid-template-columns: 1fr; }
+@media (min-width: 620px) { .fgrid { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 940px) { .fgrid { grid-template-columns: repeat(3, 1fr); } }
+
+.fcard {
+  display: flex;
+  flex-direction: column;
+  background: var(--bg-1);
+  text-decoration: none;
+  transition: background 0.15s var(--ease);
 }
-.reg-more summary::-webkit-details-marker { display: none; }
-.reg-more summary::before { content: "▸ "; }
-.reg-more[open] summary::before { content: "▾ "; }
-.reg-more-list { margin-top: 14px; }
-.reg-more-row {
+.fcard:hover { background: var(--bg-2); }
+.fcard-head { display: flex; align-items: center; gap: 11px; }
+.fcard-head h2 {
+  font-family: var(--font-display); font-size: 0.98rem;
+  color: var(--text); letter-spacing: -0.01em;
+}
+.fcard p { margin-top: 12px; color: var(--text-2); font-size: 0.88rem; line-height: 1.6; flex: 1; }
+.fcard-go {
+  margin-top: 14px; align-self: flex-start;
+  font-family: var(--mono); font-size: 0.76rem; color: var(--accent);
+  text-decoration: underline; text-decoration-color: var(--accent-dim); text-underline-offset: 3px;
+}
+.fcard:hover .fcard-go { text-decoration-color: var(--accent); }
+
+/* ---------- World showcase ----------
+   The map is the one image on the page that is genuinely ours and genuinely
+   informative, so it gets to be the focal point instead of sitting behind
+   everything at 20% opacity. Live totals read off the same server sit beside it. */
+.worldshow {
   display: grid;
-  grid-template-columns: minmax(140px, 200px) 1fr;
-  gap: 4px 16px;
-  align-items: baseline;
-  padding: 8px 0;
-  border-bottom: 1px solid var(--border);
-  font-size: 0.86rem;
+  gap: 1px;
+  background: var(--border);
+  border: 1px solid var(--border);
 }
-.reg-more-row:last-child { border-bottom: none; }
-.reg-more-name { color: var(--text-2); font-weight: 550; text-shadow: 0 1px 3px rgba(0,0,0,0.7); }
-.reg-more-blurb { color: var(--text-2); text-shadow: 0 1px 3px rgba(0,0,0,0.7); grid-column: 1 / -1; }
-@media (min-width: 640px) { .reg-more-blurb { grid-column: 2; } }
+@media (min-width: 860px) { .worldshow { grid-template-columns: 1.55fr 1fr; } }
+.ws-map {
+  position: relative;
+  display: block;
+  background: var(--bg-1);
+  overflow: hidden;
+  text-decoration: none;
+}
+.ws-map img {
+  display: block; width: 100%; height: 100%;
+  object-fit: cover;
+  aspect-ratio: 1 / 1;
+  image-rendering: pixelated;
+}
+@media (min-width: 860px) { .ws-map img { aspect-ratio: auto; min-height: 100%; } }
+.ws-open {
+  position: absolute; left: 14px; bottom: 14px;
+  font-family: var(--mono); font-size: 0.76rem; color: var(--ink, var(--text));
+  background: rgba(6,5,4,0.82);
+  padding: 6px 11px;
+  box-shadow: inset 2px 2px 0 rgba(255,255,255,0.07), inset -2px -2px 0 rgba(0,0,0,0.5);
+}
+/* The stat grid stacks inside the right-hand column instead of running across. */
+.ws-stats.pulse-stats {
+  grid-template-columns: repeat(2, 1fr);
+  border: 0;
+  margin: 0;
+}
+@media (min-width: 860px) { .ws-stats.pulse-stats { grid-template-columns: 1fr; } }
+
+/* ---------- Vote page ---------- */
+.vote-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 1px;
+  background: var(--border);
+  border: 1px solid var(--border);
+  margin: 18px 0 16px;
+}
+.vote-card {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  padding: 16px 18px 18px;
+  background: var(--bg-1);
+  text-decoration: none;
+  transition: background 0.14s var(--ease);
+}
+.vote-card:hover { background: var(--bg-2); }
+.vc-ico {
+  width: 30px; height: 30px; flex-shrink: 0;
+  margin-bottom: 11px;
+  padding: 4px;
+  background: var(--bg-2);
+  box-shadow: inset 2px 2px 0 rgba(0,0,0,0.6), inset -2px -2px 0 rgba(255,255,255,0.055);
+  /* The listing sites' own marks, saved locally so no visitor request leaves
+     the site to fetch them. */
+  object-fit: contain;
+}
+.vc-name {
+  font-family: var(--font-display); font-size: 0.86rem;
+  color: var(--text); letter-spacing: -0.015em;
+  line-height: 1.3; overflow-wrap: anywhere;
+}
+.vc-host { font-family: var(--mono); font-size: 0.75rem; color: var(--text-3); }
+.vc-go {
+  margin-top: 13px;
+  font-family: var(--mono);
+  font-size: 0.8rem;
+  color: var(--accent);
+  text-decoration: underline;
+  text-decoration-color: var(--accent-dim);
+  text-underline-offset: 3px;
+}
+.vote-card:hover .vc-go { text-decoration-color: var(--accent); }
+
+/* An item texture sitting inline with the row it labels. */
+.mc-ico {
+  width: 18px; height: 18px;
+  vertical-align: -4px;
+  margin-right: 7px;
+  image-rendering: pixelated;
+}
 
 /* ---------- Doc pages ---------- */
 .doc h1 {
@@ -585,7 +625,21 @@ main {
   max-width: 66ch;
   margin-bottom: 34px;
   padding-bottom: 22px;
-  border-bottom: 1px solid var(--border);
+  border-bottom: 0;
+  position: relative;
+}
+.doc .lead::after {
+  content: "";
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  height: 4px;
+  max-width: none;
+  background-image:
+    linear-gradient(var(--border) 0 0),
+    linear-gradient(var(--border) 0 0);
+  background-size: 8px 2px, 8px 2px;
+  background-position: 0 0, 4px 2px;
+  background-repeat: repeat-x, repeat-x;
 }
 .doc h2 {
   font-family: var(--font-display);
@@ -647,7 +701,7 @@ main {
   font-size: 0.86em;
   background: var(--bg-2);
   border: 1px solid var(--border);
-  border-radius: 5px;
+  border-radius: 0;
   padding: 1px 5px;
 }
 
@@ -655,7 +709,7 @@ main {
   background: var(--bg-1);
   border: 1px solid var(--border);
   border-left: 3px solid var(--text-3);
-  border-radius: 8px;
+  border-radius: 0;
   padding: 14px 18px;
   margin: 20px 0;
   color: var(--text-2);
@@ -673,22 +727,22 @@ main {
   padding: 18px 22px;
   margin-bottom: 34px;
 }
-.toc ol { list-style: none; padding: 0; margin: 0; columns: 2; column-gap: 28px; counter-reset: toc; }
+.toc ol { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: 6px 32px; counter-reset: toc; }
 .toc li { margin: 5px 0; counter-increment: toc; }
 .toc li::before { content: counter(toc) ". "; color: var(--text-3); font-family: var(--mono); font-size: 0.9em; }
 .toc a { color: var(--text-2); text-decoration: none; }
 .toc a:hover { color: var(--text); }
 
 /* rulebook / commands accordion */
-.acc { margin-top: 10px; }
+/* One stacked, hairline-ruled column rather than a row of separate boxes,
+   so a rulebook or command list reads the same way the homepage matrix does. */
+.acc { margin-top: 10px; border: 1px solid var(--border); background: var(--bg-1); }
 .acc-item {
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  background: var(--bg-1);
-  margin-bottom: 10px;
-  transition: border-color 0.15s var(--ease);
+  border-top: 1px solid var(--border);
+  transition: background 0.15s var(--ease);
 }
-.acc-item[open] { border-color: var(--border-2); }
+.acc-item:first-child { border-top: 0; }
+.acc-item[open] { background: var(--bg-2); }
 .acc-item summary {
   cursor: pointer;
   list-style: none;
@@ -736,7 +790,7 @@ main {
   color: var(--text);
   background: var(--bg-2);
   border: 1px solid var(--border);
-  border-radius: 5px;
+  border-radius: 0;
   padding: 2px 7px;
 }
 .cmd .desc { color: var(--text-2); font-size: 0.92rem; }
@@ -746,7 +800,7 @@ main {
   margin-top: 56px;
   padding: 14px 18px;
   border: 1px dashed var(--border-2);
-  border-radius: 8px;
+  border-radius: 0;
   color: var(--text-3);
   font-size: 0.82rem;
   max-width: 72ch;
@@ -763,7 +817,7 @@ main {
 
 .faq-q {
   border: 1px solid var(--border);
-  border-radius: 10px;
+  border-radius: 0;
   background: var(--bg-1);
   margin: 8px 0;
 }
@@ -809,9 +863,9 @@ main {
 .data-stale[hidden] { display: none; }
 .data-stale {
   font-size: 0.78rem;
-  color: var(--p-brew);
-  border: 1px solid color-mix(in srgb, var(--p-brew) 45%, transparent);
-  background: color-mix(in srgb, var(--p-brew) 8%, transparent);
+  color: var(--warn);
+  border: 1px solid color-mix(in srgb, var(--warn) 40%, transparent);
+  background: color-mix(in srgb, var(--warn) 7%, transparent);
   border-radius: var(--radius);
   padding: 9px 14px;
   margin-bottom: 4px;
@@ -869,7 +923,7 @@ main {
 .mei-gauge-track {
   position: relative;
   height: 6px;
-  border-radius: 999px;
+  border-radius: 0;
   background: linear-gradient(to right,
     color-mix(in srgb, #d3675c 55%, var(--bg-2)) 0%, color-mix(in srgb, #d3675c 55%, var(--bg-2)) 25%,
     color-mix(in srgb, #d9a65b 55%, var(--bg-2)) 25%, color-mix(in srgb, #d9a65b 55%, var(--bg-2)) 50%,
@@ -890,20 +944,13 @@ main {
 }
 .mei-gauge-labels span.on { color: var(--text); font-weight: 600; }
 
-/* economy figures: single framed ledger, hairline-divided */
+/* economy figures: the same ruled matrix, three across */
 .stat-row {
-  display: grid; grid-template-columns: repeat(3, 1fr);
-  border: 1px solid var(--border); border-radius: 12px;
-  background: var(--bg-1); overflow: hidden;
+  grid-template-columns: repeat(3, 1fr);
   margin: 22px 0 32px;
 }
-.stat {
-  padding: 17px 18px;
-  border-top: 1px solid var(--border);
-  border-left: 1px solid var(--border);
-}
-.stat:nth-child(-n+3) { border-top: 0; }
-.stat:nth-child(3n+1) { border-left: 0; }
+.stat { padding: 17px 18px; }
+.pulse-stats .stat { box-shadow: inset 2px 2px 0 rgba(0,0,0,0.45), inset -2px -2px 0 rgba(255,255,255,0.04); }
 .stat .s-val {
   display: block; font-family: var(--mono); font-size: 1.42rem; font-weight: 500; color: var(--text);
   font-variant-numeric: tabular-nums; letter-spacing: -0.01em; line-height: 1.15;
@@ -914,39 +961,38 @@ main {
 }
 .stat .s-sub { display: block; margin-top: 1px; font-size: 0.76rem; color: var(--text-3); }
 
-.pulse-stats { grid-template-columns: repeat(4, 1fr); margin-bottom: 18px; }
-.pulse-stats .stat:nth-child(-n+4) { border-top: 0; }
-.pulse-stats .stat:nth-child(4n+1) { border-left: 0; }
-.pulse-stats .stat:nth-child(4) { border-left: 1px solid var(--border); }
-.pulse-feed { display: flex; flex-direction: column; }
+.pulse-stats { grid-template-columns: repeat(4, 1fr); margin-bottom: 0; }
+.pulse-feed {
+  display: flex; flex-direction: column;
+  border: 1px solid var(--border); border-top: 0;
+  background: var(--bg-1); padding: 2px 18px 6px;
+}
 .pulse-row {
-  display: grid; grid-template-columns: auto 1fr auto; align-items: baseline; gap: 12px;
-  padding: 11px 0; border-top: 1px solid var(--border); font-size: 0.86rem;
+  display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 13px;
+  padding: 10px 0; border-top: 1px solid var(--border); font-size: 0.88rem;
 }
 .pulse-row:first-child { border-top: none; }
-.pulse-tag {
-  font-family: var(--mono); font-size: 0.68rem; font-weight: 600; letter-spacing: 0.02em;
-  padding: 2px 8px; border-radius: 999px; white-space: nowrap;
-  color: var(--text-3); background: var(--bg-2);
+.pulse-ico {
+  width: 22px; height: 22px; flex-shrink: 0;
+  image-rendering: pixelated;
+  opacity: 0.9;
 }
-.pulse-nation .pulse-tag { color: var(--p-lands); background: color-mix(in srgb, var(--p-lands) 16%, var(--bg-2)); }
-.pulse-land .pulse-tag { color: var(--p-market); background: color-mix(in srgb, var(--p-market) 16%, var(--bg-2)); }
-.pulse-war .pulse-tag { color: var(--p-essentials); background: color-mix(in srgb, var(--p-essentials) 16%, var(--bg-2)); }
 .pulse-text { color: var(--text-2); }
 .pulse-time { font-family: var(--mono); font-size: 0.74rem; color: var(--text-3); white-space: nowrap; }
 @media (max-width: 640px) {
   .stat-row { grid-template-columns: repeat(2, 1fr); }
-  .stat { border-top: 1px solid var(--border); border-left: 1px solid var(--border); }
-  .stat:nth-child(-n+2) { border-top: 0; }
-  .pulse-stats .stat:nth-child(odd) { border-left: 0; }
   .pulse-row { grid-template-columns: auto 1fr; }
   .pulse-time { grid-column: 2; }
-  .stat:nth-child(odd) { border-left: 0; }
 }
 
 /* charts */
-.chart-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 18px 0; }
-.chart { border: 1px solid var(--border); background: var(--bg-1); border-radius: var(--radius); padding: 16px 16px 12px; min-width: 0; }
+.chart-grid {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 1px; background: var(--border); border: 1px solid var(--border);
+  margin: 18px 0;
+}
+.chart { border: 1px solid var(--border); background: var(--bg-1); padding: 16px 16px 12px; min-width: 0; }
+.chart-grid > .chart { border: 0; }
 .chart h3 { font-size: 0.92rem; font-weight: 650; margin-bottom: 1px; color: var(--text); }
 .chart .c-sub { font-size: 0.76rem; color: var(--text-3); margin-bottom: 10px; }
 .chart .c-plot { position: relative; }
@@ -970,30 +1016,32 @@ main {
 .dtable .rank { color: var(--text-3); width: 1.6em; text-align: right; padding-right: 6px; font-family: var(--mono); }
 
 /* nation cards (MDI) */
-.nation-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 12px; margin: 16px 0; align-items: start; }
+/* Nations join the ruled matrix. A nation's map colour survives as a swatch
+   beside its name, which is what the colour actually means, instead of a
+   gradient wash and a tinted heading. */
+.nation-grid {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 1px; background: var(--border); border: 1px solid var(--border);
+  margin: 16px 0;
+}
 .ncard {
   --p: var(--p-lands);
-  border: 1px solid var(--border); border-left: 3px solid color-mix(in srgb, var(--p) 65%, var(--border));
-  background: var(--bg-1); border-radius: var(--radius); padding: 17px 18px 17px 16px;
-  transition: border-color 0.15s var(--ease);
+  background: var(--bg-1);
+  padding: 17px 18px;
 }
-.ncard .n-name { color: color-mix(in srgb, var(--p) 75%, var(--text)); }
-.ncard-top {
-  position: relative;
-  overflow: hidden;
-  grid-column: span 2;
-  border-color: color-mix(in srgb, var(--p) 45%, var(--border));
-  border-left-width: 4px;
-  background: linear-gradient(160deg, color-mix(in srgb, var(--p) 9%, var(--bg-1)), var(--bg-1) 60%);
+.n-swatch {
+  display: inline-block; width: 9px; height: 9px; flex-shrink: 0;
+  background: var(--p); margin-right: 8px;
+  /* The exact colour this nation is drawn in on the live map. */
 }
 .n-crown {
-  display: inline-block; font-size: 0.68rem; font-weight: 650; color: var(--p);
-  background: color-mix(in srgb, var(--p) 16%, var(--bg-2)); border-radius: 999px;
-  padding: 3px 10px; margin-bottom: 10px;
+  display: inline-block; font-family: var(--mono);
+  font-size: 0.68rem; font-weight: 600; letter-spacing: 0.02em;
+  color: var(--text-3); background: var(--bg-2);
+  padding: 2px 8px; margin-bottom: 10px;
 }
 .ncard-top .n-name { font-size: 1.3rem; }
 .ncard-top .n-mdi { font-size: 2rem; }
-@media (max-width: 560px) { .ncard-top { grid-column: span 1; } }
 .ncard .n-top { display: flex; align-items: baseline; justify-content: space-between; gap: 8px; }
 .ncard .n-name { font-family: var(--font); font-weight: 700; color: var(--text); font-size: 1.04rem; letter-spacing: -0.005em; }
 .ncard .n-rank { font-family: var(--mono); font-size: 0.72rem; color: var(--text-3); }
@@ -1002,8 +1050,8 @@ main {
 .ncard .n-facts { display: flex; flex-wrap: wrap; gap: 6px 14px; font-size: 0.78rem; color: var(--text-3); margin-bottom: 13px; font-family: var(--mono); }
 .ncard .n-facts b { color: var(--text-2); font-weight: 600; }
 .idx-bar { display: grid; grid-template-columns: 58px 1fr 28px; gap: 8px; align-items: center; font-size: 0.72rem; color: var(--text-3); margin: 6px 0; }
-.idx-bar .track { height: 5px; background: var(--bg-3); border-radius: 3px; overflow: hidden; }
-.idx-bar .fill { height: 100%; background: var(--p-lands); border-radius: 3px; transition: width 0.5s var(--ease); }
+.idx-bar .track { height: 5px; background: var(--bg-3); border-radius: 0; overflow: hidden; }
+.idx-bar .fill { height: 100%; background: var(--p-lands); border-radius: 0; transition: width 0.5s var(--ease); }
 .idx-bar .v { font-family: var(--mono); text-align: right; color: var(--text-2); }
 
 /* item price tracker */
@@ -1028,7 +1076,7 @@ main {
 
 /* player avatars in tables */
 .p-cell { display: flex; align-items: center; gap: 9px; }
-.p-avatar { border-radius: 4px; display: block; image-rendering: pixelated; background: var(--bg-2); }
+.p-avatar { border-radius: 0; display: block; image-rendering: pixelated; background: var(--bg-2); }
 
 /* price ticker strip: lives in the site header, on every page */
 .ticker-wrap {
@@ -1056,13 +1104,13 @@ main {
 .candle-picker { display: flex; flex-wrap: wrap; gap: 6px; }
 .cpick {
   font-family: var(--font); font-size: 0.76rem; color: var(--text-3); background: var(--bg-2);
-  border: 1px solid var(--border); border-radius: 999px; padding: 4px 11px; cursor: pointer;
+  border: 1px solid var(--border); border-radius: 0; padding: 4px 11px; cursor: pointer;
   transition: color 0.15s var(--ease), border-color 0.15s var(--ease);
 }
 .cpick:hover { color: var(--text-2); }
 .cpick.on { color: var(--text); border-color: var(--p-market); background: color-mix(in srgb, var(--p-market) 12%, var(--bg-2)); }
-.candle-tabs { display: flex; gap: 4px; background: var(--bg-2); border: 1px solid var(--border); border-radius: 8px; padding: 3px; height: fit-content; }
-.ctab { font-family: var(--mono); font-size: 0.72rem; color: var(--text-3); background: none; border: none; border-radius: 5px; padding: 4px 10px; cursor: pointer; }
+.candle-tabs { display: flex; gap: 4px; background: var(--bg-2); border: 1px solid var(--border); border-radius: 0; padding: 3px; height: fit-content; }
+.ctab { font-family: var(--mono); font-size: 0.72rem; color: var(--text-3); background: none; border: none; border-radius: 0; padding: 4px 10px; cursor: pointer; }
 .ctab.on { background: var(--bg-1); color: var(--text); }
 .candle-plot svg { display: block; width: 100%; height: 220px; overflow: visible; }
 .candle-plot .gridline { stroke: var(--border); stroke-width: 1; }
@@ -1075,16 +1123,46 @@ main {
 .candle-hilo { color: var(--text-2); }
 
 /* sources & sinks */
-.flow-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 12px; }
-.flow-col { border: 1px solid var(--border); border-radius: var(--radius); background: var(--bg-1); padding: 16px 18px; }
-.flow-col h3 { font-size: 0.86rem; font-weight: 650; margin-bottom: 10px; }
-.flow-source h3 { color: #57b98a; }
-.flow-sink h3 { color: #d3675c; }
-.flow-item { display: grid; grid-template-columns: 1fr auto; gap: 1px 10px; padding: 9px 0; border-top: 1px solid var(--border); }
+/* Sources and sinks are two halves of one ledger, so they share a rule rather
+   than floating as two boxes, the same way every other grid on the site does. */
+.flow-grid {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 1px; background: var(--border); border: 1px solid var(--border);
+  margin-top: 12px;
+}
+.flow-col { background: var(--bg-1); padding: 16px 18px; }
+/* Read as a ledger: the label on the left, the figure on a shared right edge in
+   mono, and the qualifier tucked under the label rather than wrapping into the
+   number column. A direction mark on the heading does the in/out work so the
+   rows themselves stay quiet. */
+.flow-col h3 {
+  display: flex; align-items: center; gap: 8px;
+  font-family: var(--font-display);
+  font-size: 0.78rem; letter-spacing: 0;
+  padding-bottom: 11px; margin-bottom: 3px;
+  border-bottom: 1px solid var(--border);
+}
+.flow-col h3::before {
+  content: ""; width: 0; height: 0;
+  border-left: 5px solid transparent; border-right: 5px solid transparent;
+}
+.flow-source h3::before { border-bottom: 7px solid currentColor; }
+.flow-sink h3::before { border-top: 7px solid currentColor; }
+.flow-item {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: baseline;
+  column-gap: 18px;
+  padding: 11px 0;
+  border-top: 1px solid var(--border);
+}
 .flow-item:first-of-type { border-top: none; }
-.f-lab { font-size: 0.86rem; color: var(--text-2); }
-.f-val { font-family: var(--mono); font-size: 0.82rem; color: var(--text); text-align: right; font-variant-numeric: tabular-nums; }
-.f-note { grid-column: 1 / -1; font-size: 0.74rem; color: var(--text-3); }
+.f-lab { font-size: 0.9rem; color: var(--text); }
+.f-val {
+  font-family: var(--mono); font-size: 0.84rem; color: var(--text);
+  text-align: right; white-space: nowrap; font-variant-numeric: tabular-nums;
+}
+.f-note { grid-column: 1; font-size: 0.76rem; color: var(--text-3); margin-top: 3px; line-height: 1.45; }
 @media (max-width: 640px) {
   .flow-grid { grid-template-columns: 1fr; }
   .candle-head { flex-direction: column; }
@@ -1101,7 +1179,7 @@ main {
 .method .m-body dl { margin: 10px 0; }
 .method .m-body dt { color: var(--text); font-weight: 650; margin-top: 10px; }
 .method .m-body dd { margin: 2px 0 0; color: var(--text-2); }
-.method code { font-family: var(--mono); font-size: 0.82em; background: var(--bg-2); border: 1px solid var(--border); border-radius: 4px; padding: 1px 5px; }
+.method code { font-family: var(--mono); font-size: 0.82em; background: var(--bg-2); border: 1px solid var(--border); border-radius: 0; padding: 1px 5px; }
 
 @media (max-width: 640px) {
   .chart-grid { grid-template-columns: 1fr; }
@@ -1118,7 +1196,7 @@ main {
   font-weight: 600;
   font-size: 0.9rem;
   padding: 10px 20px;
-  border-radius: 10px;
+  border-radius: 0;
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.2s var(--ease), transform 0.2s var(--ease);
@@ -1127,8 +1205,11 @@ main {
 .toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
 
 /* ---------- Responsive ---------- */
-@media (max-width: 680px) {
-  .nav-toggle { display: block; }
+@media (max-width: 1100px) {
+  /* Brand left, then the address CTA and the menu button together on the
+     right. The toggle sat next to the brand with a hole between them. */
+  .nav-toggle { display: block; order: 5; margin-left: auto; }
+  .hdr-cta { order: 4; margin-left: auto; }
   .nav-links {
     display: none;
     position: absolute;
@@ -1142,7 +1223,6 @@ main {
   .nav-links.open { display: flex; }
   .nav-links a { padding: 12px; }
   .nav-links a::after { display: none; }
-  .toc ol { columns: 1; }
   .cmd { grid-template-columns: 1fr; gap: 3px; }
   main { padding-top: 40px; }
   .reg-row.is-featured { padding: 18px 16px; }

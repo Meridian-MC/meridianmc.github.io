@@ -64,23 +64,23 @@ export const PLUGINS: PluginEntry[] = [
   },
   {
     id: "market",
-    name: "EconomyShopGUI",
-    version: "7.2.1",
+    name: "EzShops",
+    version: "1.6.2",
     category: "Land, economy & progression",
     featured: true,
     colorVar: "--p-market",
     icon: "/assets/pi/market.png",
-    blurb: "The two small server-run counters: Buy and Sell.",
+    blurb: "The two small server-run counters, Buy and Sell, plus tiers and crates.",
     description:
-      "A GUI-based server shop, kept deliberately small: a buy-only counter for basics, End-only materials, armor trims, and the rarest potion ingredients, and a sell-only counter where the server buys raw metals and minerals at a floor price. Everything else stays on the player market.",
-    links: [{ label: "SpigotMC", href: "https://www.spigotmc.org/resources/economyshopgui.69927/" }],
+      "A GUI server shop, kept deliberately small. Buy sells basics, End items, cosmetics and rare ingredients at prices set above what players charge, so it never undercuts a chest shop. Sell is a floor price for raw ore, and it is priced dynamically: every stack sold pushes that ore's price down and it never recovers, so the first person to mine a vein is paid the most. Emeralds fall fastest, iron and gold barely move.",
+    links: [{ label: "SpigotMC", href: "https://www.spigotmc.org/resources/ezshops.121447/" }],
   },
   {
     id: "votingplugin",
     name: "VotingPlugin",
     version: "7.1.1",
     category: "Land, economy & progression",
-    blurb: "Vote for the server, earn crate keys.",
+    blurb: "Four vote sites a day. Votes earn crate keys outright and bank points for a vote shop where the good items cost weeks of voting.",
     links: [{ label: "SpigotMC", href: "https://www.spigotmc.org/resources/votingplugin.15358/" }],
   },
   {
@@ -88,7 +88,7 @@ export const PLUGINS: PluginEntry[] = [
     name: "CrazyCrates",
     version: "5.2.0",
     category: "Land, economy & progression",
-    blurb: "Four crate tiers, opened with keys.",
+    blurb: "Six crate tiers opened from /crates, Copper through Diamond, plus the limited-edition Quartz and Nether crates. Cash payouts are rare jackpots, not the usual outcome, so crates stay a money sink.",
     links: [{ label: "SpigotMC", href: "https://www.spigotmc.org/resources/crazycrates.16789/" }],
   },
   {
@@ -332,7 +332,7 @@ export const PLUGINS: PluginEntry[] = [
     name: "CMILib",
     version: "1.5.9.9",
     category: "Chat, info & infrastructure",
-    blurb: "A shared utility library Jobs Reborn depends on.",
+    blurb: "A shared utility library from the Zrips plugin suite.",
   },
   {
     id: "viaversion",

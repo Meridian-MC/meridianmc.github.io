@@ -1,0 +1,209 @@
+{
+  "version": 1,
+  "project": {
+    "name": "meridianmc-site",
+    "productType": "Minecraft server community site (Vanilla+ nations/land-claim SMP)",
+    "stack": [
+      "astro",
+      "react",
+      "tailwind-v4"
+    ]
+  },
+  "sources": {
+    "tokens": [
+      "src/styles/app.css"
+    ],
+    "components": [
+      "src/components",
+      "src/styles/components.css"
+    ],
+    "assets": [
+      "public/assets"
+    ],
+    "instructions": [
+      ".21st/DESIGN.md"
+    ]
+  },
+  "design": {
+    "colorMode": "dark-only",
+    "colors": {
+      "void": "#060504",
+      "bg": "#0b0a09",
+      "surface-1": "#141210",
+      "surface-2": "#1b1815",
+      "surface-3": "#241f1b",
+      "line": "#2b2622",
+      "line-2": "#423a31",
+      "ink": "#f6f3ee",
+      "ink-2": "#bcb3a7",
+      "ink-3": "#7d7568",
+      "accent": "#d3b083",
+      "accent-dim": "#7d6547",
+      "accent-hi": "#f7ecda",
+      "note": "Sampled from the wordmark PNG itself: #f7ecda highlight, #e0d1ba mid, #b3997a low. Neutrals are warm charcoals biased toward that sand, not the cold blue-greys they were. Accent is link and action text only."
+    },
+    "typography": {
+      "display": "Pixelify Sans (headings; the wordmark is pixel art, so headings match it)",
+      "body": "Hanken Grotesk (pixel type is unreadable at paragraph size)",
+      "mono": "IBM Plex Mono, reserved strictly for literal data: address, versions, ledger figures, spec values",
+      "wordmark": "public/assets/wordmark.png, the real pixel-art MERIDIAN logo. Not set in type."
+    },
+    "spacing": {
+      "measure": "960px",
+      "sectionRhythm": "pt-20"
+    },
+    "radius": {
+      "panel": "0px",
+      "note": "Zero everywhere. Status dots stay circles because a dot is a dot; player heads stay square because they are pixel art."
+    },
+    "shadows": {
+      "note": "No soft grey card shadows. Depth comes from surface steps and stepped brackets."
+    },
+    "motion": {
+      "ease": "cubic-bezier(0.16, 1, 0.3, 1)",
+      "note": "One orchestrated page-load moment. No per-section fade-and-rise, no hover transitions on every card. prefers-reduced-motion respected."
+    },
+    "density": "comfortable"
+  },
+  "components": {
+    "installed": [
+      "ServerStatus.tsx"
+    ],
+    "preferredPrimitives": [
+      "native HTML + Tailwind utilities",
+      "Astro components for static markup"
+    ],
+    "patterns": [
+      "matrix: cells share hairlines via gap:1px over a line-coloured ground. The one containment language on the site.",
+      "mc-raised / mc-slot / mc-btn: Minecraft's GUI bevel, a hard 2px edge, light top-left and dark bottom-right, inverted for an inset slot. Raised on things you click, inset on item icons so they read as inventory squares.",
+      "hdr-cta: the address plus the live player count, in the header, on every page. The one pattern all five reference sites share (Hypixel, EarthMC, Origin Realms, Minehut, BlossomCraft).",
+      "fcard: homepage feature card. Item texture, title, one line, link. Aligned 3-up grid, NO image slot.",
+      "worldshow: the squaremap render of the real world at full strength beside the live totals. The page's single focal point and its only saturated colour.",
+      "spec-points: bullets written as sentences with figures in mono and a 5px square marker. Detail pages only."
+    ]
+  },
+  "constraints": {
+    "must": [
+      "Asymmetrical layouts; never a statically centered hero",
+      "Pixel-art structural accents that encode structure, not decoration",
+      "Dark, high-contrast, high-end gaming-network feel",
+      "ONE visual language across every section of a page",
+      "Real live server data over invented stats",
+      "shadcn/ui is NOT used: it is React-only and its defaults are the SaaS look this brief rejects"
+    ],
+    "avoid": [
+      "Tailwind default purple/indigo; purple or indigo radial gradient heroes",
+      "Beige or cream backgrounds with terracotta/orange accents",
+      "Glowing neon borders",
+      "Generic serif display headers",
+      "Default system sans for body text",
+      "Uniform three-column feature-card grids",
+      "Rounded pill badges, and any 'Introducing\u2026' badge",
+      "Centered hero over generic stock imagery",
+      "Soft grey card shadows and one border-radius on everything",
+      "Em dashes in body copy",
+      "ALL-CAPS tracked-out eyebrow labels above headings"
+    ]
+  },
+  "decisions": [
+    {
+      "date": "2026-09-09",
+      "decision": "Converted from hand-written CSS to Tailwind v4 via @tailwindcss/vite; @theme is the single token source with aliases for component-layer declarations.",
+      "why": "Requested. Note that runtime-injected class names from analytics.js (65 of them) cannot become utilities, so they stay in @layer components."
+    },
+    {
+      "date": "2026-09-09",
+      "decision": "Home page hero rebuilt asymmetric 8/4, hard left-aligned, live telemetry rail flush to the right edge.",
+      "why": "Brief forbids centered heroes; a game server's live state is its most characteristic content."
+    },
+    {
+      "date": "2026-09-08",
+      "decision": "Put the world screenshot back in the hero at full strength and removed it from every other page.",
+      "why": "It was fixed across the whole site at 28% opacity behind a vignette, which read as murk. EarthMC, Origin Realms and DonutSMP all open on their own world; an abstract dark panel is what makes a server site look like a SaaS template. The page ground is now flat with a faint 8px pixel grid instead."
+    },
+    {
+      "date": "2026-09-08",
+      "decision": "Collapsed mechanics cards, the economy ledger, the activity feed, the plugin registry, the nations grid and the rulebook accordion into one ruled matrix.",
+      "why": "User: 'theres too many different designs like between plugins and the whats different here and activity'. Six containment styles became one. Per-card accent hues, the sheen gradient, hover lifts, pill badges and the purple wash on the top nation all went with them."
+    },
+    {
+      "date": "2026-09-08",
+      "decision": "Brackets rationed from every panel to the hero console alone, and redrawn on all four corners instead of two detached ones.",
+      "why": "Two arms floating outside a border read as stray marks. A device that appears on everything is decoration; one that appears on one object is structure."
+    },
+    {
+      "date": "2026-09-08",
+      "decision": "Replaced the typeset hero headline with the real pixel-art wordmark, swapped Unbounded for Pixelify Sans, and rebuilt the palette from colours sampled out of that PNG.",
+      "why": "User: 'the fonts idk too modern like its not enough minecraft feel'. The server already had a pixel logo with a warm sand gradient; the site was ignoring it and using a geometric sans over cold blue-grey neutrals."
+    },
+    {
+      "date": "2026-09-08",
+      "decision": "Page ground is now Meridian's own squaremap world render (public/assets/worldmap.jpg), held at 20% under a pixel grid and vignette.",
+      "why": "User asked for meridianmap.png to be used. A nations server printed on its own atlas."
+    },
+    {
+      "date": "2026-09-08",
+      "decision": "Eight loose mechanic cards became a six-row spec sheet, and TPS came out of the hero.",
+      "why": "User: 'the way theyre organized is kinda bad'. The cards had no organising principle. Every figure in the new sheet was cross-checked against the live server config, which surfaced three wrong numbers on the site."
+    },
+    {
+      "date": "2026-09-08",
+      "decision": "Merged the standalone Plugins section into the spec sheet: each pillar now names the plugins that run it, and only the leftovers get a collapsed list.",
+      "why": "User asked to combine them. Lands, EzShops and DeathChest were each appearing twice, and the registry was a wall of software with no connection to the rules it implements."
+    },
+    {
+      "date": "2026-09-08",
+      "decision": "Adopted Minecraft's GUI bevel and made the server address a real button.",
+      "why": "User: 'significantly less ai like'. A flat dark rectangle with a 1px hairline is what every dashboard on the internet looks like; the 2px bevel is the most recognisable thing about Minecraft's interface and reads as the game instantly."
+    },
+    {
+      "date": "2026-09-08",
+      "decision": "Spec values rewritten terse and parallel, labels right-aligned against the values, per-row rails removed. Economy page reordered so the static explainer leads and the index follows.",
+      "why": "User disliked the description formatting. Values were ragged half-sentences; the economy page opened on 'Insufficient data' because the index needs 8 traders and 14 days."
+    },
+    {
+      "date": "2026-09-08",
+      "decision": "Homepage rebuilt as a landing page: short hero, six feature cards with screenshot slots, activity. All depth moved to the pages that own each subject.",
+      "why": "User: 'make it a lot more simplified and less analysis paralysis'. The spec sheet had turned the front door into a manual."
+    },
+    {
+      "date": "2026-09-08",
+      "decision": "Feature copy is one line per card. Detail pages use bullets written as sentences, never label-and-value pairs.",
+      "why": "CivMC and Minehut both present features as icon plus short natural prose. A spec table reads like a config file."
+    },
+    {
+      "date": "2026-09-08",
+      "decision": "Official Minecraft textures extracted from the local 26.2 client jar into /assets/mc, and a dedicated /vote page built from the real VoteSites.yml URLs and Shop.yml costs.",
+      "why": "Mojang permits non-commercial use of extracted assets. BlossomCraft's vote page is the reference: numbered site cards, each linking straight out."
+    },
+    {
+      "date": "2026-09-08",
+      "decision": "Removed the six 16:9 screenshot slots from the homepage feature cards and made the grid aligned 3-up.",
+      "why": "Self-critique after seeing the whole page at once: the placeholders were ~55% of the visual area, so the page only worked once six screenshots existed. And with image-topped cards, the 7/5 and 5/7 spans gave unequal image heights, so titles never lined up across a row. Asymmetry only reads as deliberate when something else holds the composition. No reference site has six screenshot slots on its homepage; CivMC's cards carry no image at all."
+    },
+    {
+      "date": "2026-09-08",
+      "decision": "Promoted worldmap.jpg from 20%-opacity wallpaper to a full-strength showcase beside the live land, nation, chunk and player totals.",
+      "why": "The page had no focal point and its most distinctive content was buried at the bottom. This is the one image that is genuinely ours, genuinely informative, and available today without new assets."
+    }
+  ],
+  "evidence": [
+    {
+      "fact": "project.stack:astro",
+      "source": "package.json"
+    },
+    {
+      "fact": "project.stack:react",
+      "source": "package.json"
+    },
+    {
+      "fact": "project.stack:tailwind-v4",
+      "source": "package.json"
+    },
+    {
+      "fact": "tokens defined in @theme",
+      "source": "src/styles/app.css"
+    }
+  ],
+  "generatedAt": "2026-09-08T23:34:00.000Z"
+}

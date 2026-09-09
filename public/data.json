@@ -1,466 +1,483 @@
 {
-  "generated": "2026-09-09T04:13:21Z",
-  "meta": {
-    "players_tracked": 53,
-    "active_traders": 29,
-    "data_days": 4,
-    "sufficient": false,
-    "demo": false,
-    "thresholds": {
-      "min_traders": 8,
-      "min_days": 14
-    }
+ "generated": "2026-09-09T04:13:21Z",
+ "meta": {
+  "players_tracked": 53,
+  "active_traders": 29,
+  "data_days": 4,
+  "sufficient": false,
+  "demo": false,
+  "thresholds": {
+   "min_traders": 8,
+   "min_days": 14
+  }
+ },
+ "economy": {
+  "classification": {
+   "code": "INSUFFICIENT_DATA",
+   "label": "Insufficient data",
+   "note": "Need 8+ active traders and 14+ days of history. Currently 29 traders / 4 days."
   },
-  "economy": {
-    "classification": {
-      "code": "INSUFFICIENT_DATA",
-      "label": "Insufficient data",
-      "note": "Need 8+ active traders and 14+ days of history. Currently 29 traders / 4 days."
-    },
-    "money_supply_players": 234535.82,
-    "money_supply_series": [
-      [
-        "2026-09-04",
-        0.0
-      ],
-      [
-        "2026-09-05",
-        51461.9
-      ],
-      [
-        "2026-09-06",
-        150951.9
-      ],
-      [
-        "2026-09-07",
-        104489.4
-      ],
-      [
-        "2026-09-08",
-        96881.87
-      ],
-      [
-        "2026-09-09",
-        89685.82
-      ]
-    ],
-    "trade_volume_series": [
-      [
-        "2026-09-05",
-        69875.9
-      ],
-      [
-        "2026-09-06",
-        217424.0
-      ],
-      [
-        "2026-09-07",
-        155694.0
-      ],
-      [
-        "2026-09-08",
-        33887.13
-      ],
-      [
-        "2026-09-09",
-        43328.95
-      ]
-    ],
-    "trade_volume_7d": 520209.98,
-    "server_shop_transactions": 300,
-    "server_shop": {
-      "transactions": 300,
-      "created": 193916.6,
-      "destroyed": 36306.0,
-      "net": 157610.6,
-      "series": [
-        [
-          "2026-09-05",
-          44804.0,
-          4557.0
-        ],
-        [
-          "2026-09-06",
-          134092.5,
-          19393.0
-        ],
-        [
-          "2026-09-07",
-          12113.3,
-          10700.0
-        ],
-        [
-          "2026-09-08",
-          2906.8,
-          1656.0
-        ]
-      ],
-      "top_sold": [
-        {
-          "item": "copper_ingot",
-          "qty": 32709,
-          "paid": 100767.6
-        },
-        {
-          "item": "raw_copper",
-          "qty": 24539,
-          "paid": 73617.0
-        },
-        {
-          "item": "gold_ingot",
-          "qty": 1101,
-          "paid": 11190.0
-        },
-        {
-          "item": "iron_ingot",
-          "qty": 722,
-          "paid": 4051.0
-        },
-        {
-          "item": "raw_gold",
-          "qty": 153,
-          "paid": 2072.0
-        },
-        {
-          "item": "redstone",
-          "qty": 669,
-          "paid": 979.0
-        },
-        {
-          "item": "lapis_lazuli",
-          "qty": 370,
-          "paid": 788.0
-        },
-        {
-          "item": "coal",
-          "qty": 226,
-          "paid": 452.0
-        }
-      ]
-    },
-    "chest_shop_transactions": 0,
-    "gini": 0.512,
-    "price_index": {
-      "value": null,
-      "series": [],
-      "note": "Turns on once chest-shop prices have history."
-    },
-    "items": []
-  },
-  "wealth": {
-    "top": [
-      {
-        "name": "WhenAtRome",
-        "balance": 43889.6
-      },
-      {
-        "name": "ihasadragon",
-        "balance": 42676.93
-      },
-      {
-        "name": "Luko_Landino",
-        "balance": 10361.54
-      },
-      {
-        "name": "JoshMilkFleas",
-        "balance": 9047.35
-      },
-      {
-        "name": "BlackAdder83",
-        "balance": 5768.5
-      },
-      {
-        "name": "Scp9390",
-        "balance": 5571.5
-      },
-      {
-        "name": "BrodyIsConfused",
-        "balance": 5530.5
-      },
-      {
-        "name": "mooshierk",
-        "balance": 4758.52
-      },
-      {
-        "name": "Keanie__",
-        "balance": 4496.5
-      },
-      {
-        "name": "XDjarinXD",
-        "balance": 4106.0
-      },
-      {
-        "name": "BabieDolphin",
-        "balance": 4103.0
-      },
-      {
-        "name": "saberjianga",
-        "balance": 4054.0
-      },
-      {
-        "name": "ieru",
-        "balance": 4004.5
-      },
-      {
-        "name": "1RTR",
-        "balance": 3730.25
-      },
-      {
-        "name": "aazo9z",
-        "balance": 2939.5
-      }
-    ],
-    "median": 2500.0,
-    "mean": 4425.2
-  },
-  "server": {
-    "checked": "2026-09-09T04:13:22Z",
-    "started_at": "2026-09-08T23:58:57Z",
-    "tps": 20.0
-  },
-  "nations": [
-    {
-      "name": "Augustine Empire",
-      "tag": null,
-      "color": "#956BE8",
-      "mdi": 0.001,
-      "territory": 0.001,
-      "population": 0.001,
-      "wealth": 0.001,
-      "activity": 0.001,
-      "chunks": 0,
-      "members": 0,
-      "treasury": 0
-    }
+  "money_supply_players": 234535.82,
+  "money_supply_series": [
+   [
+    "2026-09-04",
+    0.0
+   ],
+   [
+    "2026-09-05",
+    51461.9
+   ],
+   [
+    "2026-09-06",
+    150951.9
+   ],
+   [
+    "2026-09-07",
+    104489.4
+   ],
+   [
+    "2026-09-08",
+    96881.87
+   ],
+   [
+    "2026-09-09",
+    89685.82
+   ]
   ],
-  "lands": [
-    {
-      "name": "Pergaminthos",
-      "type": "land",
-      "chunks": 42,
-      "members": 11,
-      "bank": 3933.5,
-      "level": 0
-    },
-    {
-      "name": "Augustine",
-      "type": "land",
-      "chunks": 21,
-      "members": 6,
-      "bank": 2788.83,
-      "level": 0
-    },
-    {
-      "name": "Rare Fish Industries",
-      "type": "land",
-      "chunks": 19,
-      "members": 6,
-      "bank": 150.0,
-      "level": 0
-    },
-    {
-      "name": "Myndelea",
-      "type": "land",
-      "chunks": 12,
-      "members": 5,
-      "bank": 3004.5,
-      "level": 0
-    },
-    {
-      "name": "TheDooz's Camp",
-      "type": "camp",
-      "chunks": 9,
-      "members": 2,
-      "bank": 0.0,
-      "level": 0
-    },
-    {
-      "name": "Entulho's Camp",
-      "type": "camp",
-      "chunks": 8,
-      "members": 2,
-      "bank": 0.0,
-      "level": 0
-    },
-    {
-      "name": "<aqua>byperhorea",
-      "type": "land",
-      "chunks": 7,
-      "members": 2,
-      "bank": 1200.0,
-      "level": 0
-    },
-    {
-      "name": "Grease Lands",
-      "type": "land",
-      "chunks": 5,
-      "members": 2,
-      "bank": 950.0,
-      "level": 0
-    },
-    {
-      "name": "Liam's Empire",
-      "type": "land",
-      "chunks": 4,
-      "members": 3,
-      "bank": 4100.0,
-      "level": 0
-    },
-    {
-      "name": "ACRI_Vanguard",
-      "type": "land",
-      "chunks": 4,
-      "members": 3,
-      "bank": 200.0,
-      "level": 0
-    },
-    {
-      "name": "klaksonik",
-      "type": "land",
-      "chunks": 3,
-      "members": 2,
-      "bank": 150.0,
-      "level": 0
-    },
-    {
-      "name": "coolland!!!",
-      "type": "land",
-      "chunks": 3,
-      "members": 3,
-      "bank": 1000.0,
-      "level": 0
-    },
-    {
-      "name": "Luko_Landino",
-      "type": "land",
-      "chunks": 2,
-      "members": 5,
-      "bank": 100.0,
-      "level": 0
-    },
-    {
-      "name": "Safe Haven",
-      "type": "land",
-      "chunks": 2,
-      "members": 2,
-      "bank": 200.0,
-      "level": 0
-    },
-    {
-      "name": "Lagmanium",
-      "type": "land",
-      "chunks": 1,
-      "members": 2,
-      "bank": 0.0,
-      "level": 0
-    },
-    {
-      "name": "Keanie__",
-      "type": "land",
-      "chunks": 1,
-      "members": 2,
-      "bank": 200.0,
-      "level": 0
-    },
-    {
-      "name": "Entulho",
-      "type": "land",
-      "chunks": 0,
-      "members": 2,
-      "bank": 1400.0,
-      "level": 0
-    }
+  "trade_volume_series": [
+   [
+    "2026-09-05",
+    69875.9
+   ],
+   [
+    "2026-09-06",
+    217424.0
+   ],
+   [
+    "2026-09-07",
+    155694.0
+   ],
+   [
+    "2026-09-08",
+    33887.13
+   ],
+   [
+    "2026-09-09",
+    43328.95
+   ]
   ],
-  "events": [
+  "trade_volume_7d": 520209.98,
+  "server_shop_transactions": 300,
+  "server_shop": {
+   "transactions": 300,
+   "created": 193916.6,
+   "destroyed": 36306.0,
+   "net": 157610.6,
+   "series": [
+    [
+     "2026-09-05",
+     44804.0,
+     4557.0
+    ],
+    [
+     "2026-09-06",
+     134092.5,
+     19393.0
+    ],
+    [
+     "2026-09-07",
+     12113.3,
+     10700.0
+    ],
+    [
+     "2026-09-08",
+     2906.8,
+     1656.0
+    ]
+   ],
+   "top_sold": [
     {
-      "type": "land",
-      "at": "2026-09-08T20:39:51Z",
-      "text": "Grease Lands was founded"
+     "item": "copper_ingot",
+     "qty": 32709,
+     "paid": 100767.6
     },
     {
-      "type": "land",
-      "at": "2026-09-07T21:30:04Z",
-      "text": "Entulho's Camp was founded"
+     "item": "raw_copper",
+     "qty": 24539,
+     "paid": 73617.0
     },
     {
-      "type": "land",
-      "at": "2026-09-07T21:28:11Z",
-      "text": "Entulho was founded"
+     "item": "gold_ingot",
+     "qty": 1101,
+     "paid": 11190.0
     },
     {
-      "type": "land",
-      "at": "2026-09-07T19:07:27Z",
-      "text": "Safe Haven was founded"
+     "item": "iron_ingot",
+     "qty": 722,
+     "paid": 4051.0
     },
     {
-      "type": "land",
-      "at": "2026-09-07T18:24:49Z",
-      "text": "TheDooz's Camp was founded"
+     "item": "raw_gold",
+     "qty": 153,
+     "paid": 2072.0
     },
     {
-      "type": "nation",
-      "at": "2026-09-07T00:08:05Z",
-      "text": "Augustine Empire was formed"
+     "item": "redstone",
+     "qty": 669,
+     "paid": 979.0
     },
     {
-      "type": "land",
-      "at": "2026-09-06T23:59:41Z",
-      "text": "<aqua>byperhorea was founded"
+     "item": "lapis_lazuli",
+     "qty": 370,
+     "paid": 788.0
     },
     {
-      "type": "land",
-      "at": "2026-09-06T23:56:18Z",
-      "text": "Myndelea was founded"
-    },
-    {
-      "type": "land",
-      "at": "2026-09-06T12:36:12Z",
-      "text": "Keanie__ was founded"
-    },
-    {
-      "type": "land",
-      "at": "2026-09-06T08:37:31Z",
-      "text": "ACRI_Vanguard was founded"
-    },
-    {
-      "type": "land",
-      "at": "2026-09-06T04:17:28Z",
-      "text": "Liam's Empire was founded"
-    },
-    {
-      "type": "land",
-      "at": "2026-09-06T00:59:59Z",
-      "text": "Pergaminthos was founded"
-    },
-    {
-      "type": "land",
-      "at": "2026-09-06T00:57:30Z",
-      "text": "Luko_Landino was founded"
-    },
-    {
-      "type": "land",
-      "at": "2026-09-05T22:30:04Z",
-      "text": "Rare Fish Industries was founded"
-    },
-    {
-      "type": "land",
-      "at": "2026-09-05T21:51:10Z",
-      "text": "Lagmanium was founded"
-    },
-    {
-      "type": "land",
-      "at": "2026-09-05T21:15:04Z",
-      "text": "coolland!!! was founded"
-    },
-    {
-      "type": "land",
-      "at": "2026-09-05T20:58:53Z",
-      "text": "Augustine was founded"
-    },
-    {
-      "type": "land",
-      "at": "2026-09-05T20:30:12Z",
-      "text": "klaksonik was founded"
+     "item": "coal",
+     "qty": 226,
+     "paid": 452.0
     }
-  ]
+   ]
+  },
+  "chest_shop_transactions": 0,
+  "gini": 0.512,
+  "price_index": {
+   "value": null,
+   "series": [],
+   "note": "Turns on once chest-shop prices have history."
+  },
+  "items": []
+ },
+ "wealth": {
+  "top": [
+   {
+    "name": "WhenAtRome",
+    "balance": 43889.6
+   },
+   {
+    "name": "ihasadragon",
+    "balance": 42676.93
+   },
+   {
+    "name": "Luko_Landino",
+    "balance": 10361.54
+   },
+   {
+    "name": "JoshMilkFleas",
+    "balance": 9047.35
+   },
+   {
+    "name": "BlackAdder83",
+    "balance": 5768.5
+   },
+   {
+    "name": "Scp9390",
+    "balance": 5571.5
+   },
+   {
+    "name": "BrodyIsConfused",
+    "balance": 5530.5
+   },
+   {
+    "name": "mooshierk",
+    "balance": 4758.52
+   },
+   {
+    "name": "Keanie__",
+    "balance": 4496.5
+   },
+   {
+    "name": "XDjarinXD",
+    "balance": 4106.0
+   },
+   {
+    "name": "BabieDolphin",
+    "balance": 4103.0
+   },
+   {
+    "name": "saberjianga",
+    "balance": 4054.0
+   },
+   {
+    "name": "ieru",
+    "balance": 4004.5
+   },
+   {
+    "name": "1RTR",
+    "balance": 3730.25
+   },
+   {
+    "name": "aazo9z",
+    "balance": 2939.5
+   }
+  ],
+  "median": 2500.0,
+  "mean": 4425.2
+ },
+ "server": {
+  "checked": "2026-09-09T04:13:22Z",
+  "started_at": "2026-09-08T23:58:57Z",
+  "tps": 20.0
+ },
+ "nations": [
+  {
+   "name": "Augustine Empire",
+   "tag": null,
+   "color": "#956BE8",
+   "mdi": 0.001,
+   "territory": 0.001,
+   "population": 0.001,
+   "wealth": 0.001,
+   "activity": 0.001,
+   "chunks": 0,
+   "members": 0,
+   "treasury": 0
+  }
+ ],
+ "lands": [
+  {
+   "name": "Pergaminthos",
+   "type": "land",
+   "chunks": 42,
+   "members": 11,
+   "bank": 3933.5,
+   "level": 0
+  },
+  {
+   "name": "Augustine",
+   "type": "land",
+   "chunks": 21,
+   "members": 6,
+   "bank": 2788.83,
+   "level": 0
+  },
+  {
+   "name": "Rare Fish Industries",
+   "type": "land",
+   "chunks": 19,
+   "members": 6,
+   "bank": 150.0,
+   "level": 0
+  },
+  {
+   "name": "Myndelea",
+   "type": "land",
+   "chunks": 12,
+   "members": 5,
+   "bank": 3004.5,
+   "level": 0
+  },
+  {
+   "name": "TheDooz's Camp",
+   "type": "camp",
+   "chunks": 9,
+   "members": 2,
+   "bank": 0.0,
+   "level": 0
+  },
+  {
+   "name": "Entulho's Camp",
+   "type": "camp",
+   "chunks": 8,
+   "members": 2,
+   "bank": 0.0,
+   "level": 0
+  },
+  {
+   "name": "<aqua>byperhorea",
+   "type": "land",
+   "chunks": 7,
+   "members": 2,
+   "bank": 1200.0,
+   "level": 0
+  },
+  {
+   "name": "Grease Lands",
+   "type": "land",
+   "chunks": 5,
+   "members": 2,
+   "bank": 950.0,
+   "level": 0
+  },
+  {
+   "name": "Liam's Empire",
+   "type": "land",
+   "chunks": 4,
+   "members": 3,
+   "bank": 4100.0,
+   "level": 0
+  },
+  {
+   "name": "ACRI_Vanguard",
+   "type": "land",
+   "chunks": 4,
+   "members": 3,
+   "bank": 200.0,
+   "level": 0
+  },
+  {
+   "name": "klaksonik",
+   "type": "land",
+   "chunks": 3,
+   "members": 2,
+   "bank": 150.0,
+   "level": 0
+  },
+  {
+   "name": "coolland!!!",
+   "type": "land",
+   "chunks": 3,
+   "members": 3,
+   "bank": 1000.0,
+   "level": 0
+  },
+  {
+   "name": "Luko_Landino",
+   "type": "land",
+   "chunks": 2,
+   "members": 5,
+   "bank": 100.0,
+   "level": 0
+  },
+  {
+   "name": "Safe Haven",
+   "type": "land",
+   "chunks": 2,
+   "members": 2,
+   "bank": 200.0,
+   "level": 0
+  },
+  {
+   "name": "Lagmanium",
+   "type": "land",
+   "chunks": 1,
+   "members": 2,
+   "bank": 0.0,
+   "level": 0
+  },
+  {
+   "name": "Keanie__",
+   "type": "land",
+   "chunks": 1,
+   "members": 2,
+   "bank": 200.0,
+   "level": 0
+  },
+  {
+   "name": "Entulho",
+   "type": "land",
+   "chunks": 0,
+   "members": 2,
+   "bank": 1400.0,
+   "level": 0
+  }
+ ],
+ "events": [
+  {
+   "type": "land",
+   "at": "2026-09-08T20:39:51Z",
+   "text": "Grease Lands was founded",
+   "owner": "mooshierk"
+  },
+  {
+   "type": "land",
+   "at": "2026-09-07T21:30:04Z",
+   "text": "Entulho's Camp was founded",
+   "owner": "Entulho"
+  },
+  {
+   "type": "land",
+   "at": "2026-09-07T21:28:11Z",
+   "text": "Entulho was founded",
+   "owner": "Entulho"
+  },
+  {
+   "type": "land",
+   "at": "2026-09-07T19:07:27Z",
+   "text": "Safe Haven was founded",
+   "owner": "owen192423"
+  },
+  {
+   "type": "land",
+   "at": "2026-09-07T18:24:49Z",
+   "text": "TheDooz's Camp was founded",
+   "owner": "TheDooz"
+  },
+  {
+   "type": "nation",
+   "at": "2026-09-07T00:08:05Z",
+   "text": "Augustine Empire was formed",
+   "owner": "Augustine65480"
+  },
+  {
+   "type": "land",
+   "at": "2026-09-06T23:59:41Z",
+   "text": "<aqua>byperhorea was founded"
+  },
+  {
+   "type": "land",
+   "at": "2026-09-06T23:56:18Z",
+   "text": "Myndelea was founded",
+   "owner": "Atilius_Corvinus"
+  },
+  {
+   "type": "land",
+   "at": "2026-09-06T12:36:12Z",
+   "text": "Keanie__ was founded",
+   "owner": "Keanie__"
+  },
+  {
+   "type": "land",
+   "at": "2026-09-06T08:37:31Z",
+   "text": "ACRI_Vanguard was founded",
+   "owner": "ACRI_Vanguard"
+  },
+  {
+   "type": "land",
+   "at": "2026-09-06T04:17:28Z",
+   "text": "Liam's Empire was founded",
+   "owner": "ihasadragon"
+  },
+  {
+   "type": "land",
+   "at": "2026-09-06T00:59:59Z",
+   "text": "Pergaminthos was founded",
+   "owner": "Giggsy__"
+  },
+  {
+   "type": "land",
+   "at": "2026-09-06T00:57:30Z",
+   "text": "Luko_Landino was founded",
+   "owner": "Luko_Landino"
+  },
+  {
+   "type": "land",
+   "at": "2026-09-05T22:30:04Z",
+   "text": "Rare Fish Industries was founded",
+   "owner": "JoshMilkFleas"
+  },
+  {
+   "type": "land",
+   "at": "2026-09-05T21:51:10Z",
+   "text": "Lagmanium was founded",
+   "owner": "Lagmanium"
+  },
+  {
+   "type": "land",
+   "at": "2026-09-05T21:15:04Z",
+   "text": "coolland!!! was founded",
+   "owner": "aazo9z"
+  },
+  {
+   "type": "land",
+   "at": "2026-09-05T20:58:53Z",
+   "text": "Augustine was founded",
+   "owner": "Augustine65480"
+  },
+  {
+   "type": "land",
+   "at": "2026-09-05T20:30:12Z",
+   "text": "klaksonik was founded",
+   "owner": "klaksonik"
+  }
+ ]
 }

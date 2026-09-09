@@ -1,0 +1,74 @@
+---
+import Base from "../layouts/Base.astro";
+import { VOTE_SITES, VOTE_SHOP } from "../data/vote";
+
+// Four sites, one vote each per day, so four points a day is the ceiling.
+const perDay = VOTE_SITES.length;
+const days = (cost: number) => Math.ceil(cost / perDay);
+---
+<Base
+  title="Vote · Meridian"
+  description="Vote for Meridian on four listing sites once a day each. Every vote pays a Copper Crate and a vote point, and vote points buy things money cannot."
+  path="/vote"
+>
+<main class="doc">
+  <h1>Vote for Meridian</h1>
+  <p class="lead">
+    Voting is how people find the server, and it is the one reward track that
+    costs you nothing. Every vote pays a crate immediately and banks a point
+    toward the vote shop, where the good items cannot be bought with money at all.
+  </p>
+
+  <section id="sites">
+    <h2>Vote on all four sites</h2>
+    <p class="as-sub">
+      Each site allows one vote per day. Vote with the same name you play under,
+      and it does not matter whether you are online when you do it.
+    </p>
+    <div class="vote-grid">
+      {VOTE_SITES.map((s) => (
+        <a class="vote-card" href={s.url} target="_blank" rel="noopener">
+          <img class="vc-ico" src={`/assets/vote/${s.host}.png`} alt="" width="26" height="26" loading="lazy" />
+          <span class="vc-name">{s.name}</span>
+          <span class="vc-host">{s.host}</span>
+          <span class="vc-go">Vote now</span>
+        </a>
+      ))}
+    </div>
+  </section>
+
+  <section id="rewards">
+    <h2>What a vote pays</h2>
+    <ul class="spec-points">
+      <li>A <b>Copper Crate</b>, straight away. Open it with <b>/crates</b>.</li>
+      <li><b>1</b> vote point, banked for the vote shop.</li>
+      <li>Voting never pays cash. That is deliberate: it keeps free rewards out of the player economy, so nobody can vote their way to a fortune.</li>
+      <li>Four sites a day means <b>4</b> points a day at most, and <b>28</b> in a week.</li>
+    </ul>
+  </section>
+
+  <section id="shop">
+    <h2>The vote shop</h2>
+    <p class="as-sub">
+      Open it with <code>/vote shop</code>. Prices are set in days of voting
+      rather than dollars, so the best items take weeks and nobody can skip the queue.
+    </p>
+    <div class="itable-wrap">
+      <table class="itable">
+        <thead>
+          <tr><th>Item</th><th class="num-col">Vote points</th><th class="num-col">Days of voting</th></tr>
+        </thead>
+        <tbody>
+          {VOTE_SHOP.map((r) => (
+            <tr>
+              <td><img class="mc-ico" src={`/assets/mc/${r.icon}.png`} alt="" width="18" height="18" /> {r.item}</td>
+              <td class="num-col">{r.cost}</td>
+              <td class="num-col">{days(r.cost)}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  </section>
+</main>
+</Base>

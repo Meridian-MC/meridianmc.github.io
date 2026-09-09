@@ -273,18 +273,52 @@ def lands_from_db(raw):
     def _iso(t):
         return datetime.datetime.fromtimestamp(t, datetime.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
 
+    # Who owns each land, so the feed can show a player head instead of a
+    # generic icon. Lands stores members under area.holder.trusted as
+    # "<uuid>:<roleUlid>" pairs; the owner is the one whose role has type 4.
+    player_names = {}
+    try:
+        for r in con.execute("SELECT uuid, name FROM lands_players"):
+            player_names[r["uuid"]] = r["name"]
+    except sqlite3.Error:
+        pass
+
+    def _owner_of(area_json):
+        try:
+            holder = json.loads(area_json or "{}").get("holder") or {}
+            owner_roles = {x["ulid"] for x in holder.get("roles", []) if x.get("type") == 4}
+            for entry in holder.get("trusted", []):
+                uuid, _, role = entry.partition(":")
+                if role in owner_roles:
+                    return player_names.get(uuid)
+        except (ValueError, TypeError, KeyError):
+            pass
+        return None
+
+    land_owner_by_ulid = {}
+
     # The site renders ev.text and passes ev.at to Date.parse, so these must be
-    # a ready-made sentence and an ISO timestamp - not a bare name and an int.
-    for r in con.execute("SELECT name, created_at FROM lands_lands"):
+    # a ready-made sentence and an ISO timestamp, not a bare name and an int.
+    for r in con.execute("SELECT ulid, name, area, created_at FROM lands_lands"):
+        owner = _owner_of(r["area"])
+        land_owner_by_ulid[r["ulid"]] = owner
         t = _ts(r["created_at"])
         if t:
-            events.append({"type": "land", "at": _iso(t), "_t": t,
-                           "text": f'{_split_color(r["name"])[0]} was founded'})
-    for r in con.execute("SELECT name, created_at FROM lands_nations"):
+            ev = {"type": "land", "at": _iso(t), "_t": t,
+                  "text": f'{_split_color(r["name"])[0]} was founded'}
+            if owner:
+                ev["owner"] = owner
+            events.append(ev)
+    for r in con.execute("SELECT name, capital, created_at FROM lands_nations"):
         t = _ts(r["created_at"])
         if t:
-            events.append({"type": "nation", "at": _iso(t), "_t": t,
-                           "text": f'{_split_color(r["name"])[0]} was formed'})
+            ev = {"type": "nation", "at": _iso(t), "_t": t,
+                  "text": f'{_split_color(r["name"])[0]} was formed'}
+            # A nation's founder is the owner of its capital land.
+            owner = land_owner_by_ulid.get(r["capital"])
+            if owner:
+                ev["owner"] = owner
+            events.append(ev)
     try:
         for r in con.execute("SELECT attacker, defender, started_at FROM lands_wars"):
             t = _ts(r["started_at"])

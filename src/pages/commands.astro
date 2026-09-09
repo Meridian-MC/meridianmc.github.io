@@ -9,7 +9,7 @@ const sections = [
   { href: "#personal", label: "Homes & personal" },
   { href: "#chat", label: "Communication" },
   { href: "#economy", label: "Economy & shops" },
-  { href: "#jobs", label: "Jobs" },
+  { href: "#voting", label: "Voting & crates" },
   { href: "#land", label: "Land & nation" },
   { href: "#war", label: "Warfare" },
 ];
@@ -17,7 +17,7 @@ const sections = [
 
 <Base
   title="Commands · Meridian"
-  description="The Meridian commands you will actually use: movement, land, economy, shops, jobs, and war."
+  description="The Meridian commands you will actually use: movement, land, economy, shops, voting, and war."
   path="/commands"
   ogDescription="The Meridian commands you will actually use: movement, homes, chat, economy, shops, jobs, land, and war."
 >
@@ -66,31 +66,32 @@ const sections = [
     <div class="cmd"><div class="k"><code>/pay &lt;player&gt; &lt;amount&gt;</code></div><div class="desc">Send money to another player.</div></div>
     <div class="cmd"><div class="k"><code>/baltop</code></div><div class="desc">The richest players on the server.</div></div>
     <div class="cmd"><div class="k"><code>/shop</code></div><div class="desc">Open the server shop: Buy (basics, End-locked essentials, armor trims, rare potion ingredients) and Sell (raw metals and minerals).</div></div>
+    <div class="cmd"><div class="k"><code>/shop crates</code></div><div class="desc">Buy Iron, Gold and Diamond crates. They go straight to <code>/crates</code> to open whenever you like.</div></div>
+    <div class="cmd"><div class="k"><code>/shop ranks</code></div><div class="desc">Permanent upgrades: more homes, a bigger land base, and a coloured chat prefix.</div></div>
     <p class="cmd-note">Chest shops (QuickShop-Hikari)</p>
     <div class="cmd"><div class="k"><code>left-click a chest</code></div><div class="desc">While holding an item, left-click a chest to start a shop, then type a price.</div></div>
     <div class="cmd"><div class="k"><code>/qs price &lt;amount&gt;</code></div><div class="desc">Change the price of the shop you're looking at.</div></div>
     <div class="cmd"><div class="k"><code>/qs find &lt;item&gt;</code></div><div class="desc">Locate nearby shops selling an item.</div></div>
     <div class="cmd"><div class="k"><code>/qs staff add &lt;player&gt;</code></div><div class="desc">Let someone help manage your shop.</div></div>
     <div class="cmd"><div class="k"><code>/qs remove</code></div><div class="desc">Remove the shop you're looking at.</div></div>
+    <div class="cmd"><div class="k"><code>/xpb [amount]</code></div><div class="desc">Bottle your XP so it can be carried, stored or traded. Short for <code>/bottle get</code>.</div></div>
     <div class="cmd"><div class="k"><code>/trade &lt;player&gt;</code></div><div class="desc">Open a secure face-to-face trade window.</div></div>
     </div>
   </details>
 
   <details class="acc-item">
-    <summary><h2 id="jobs">Jobs</h2></summary>
+    <summary><h2 id="voting">Voting &amp; crates</h2></summary>
     <div class="cmd-group">
-    <div class="cmd"><div class="k"><code>/jobs browse</code></div><div class="desc">See the available jobs and join one.</div></div>
-    <div class="cmd"><div class="k"><code>/jobs join &lt;job&gt;</code> <code>/jobs leave &lt;job&gt;</code></div><div class="desc">Join or quit a job.</div></div>
-    <div class="cmd"><div class="k"><code>/jobs stats</code></div><div class="desc">Your level and progress in each job you hold.</div></div>
-    <div class="cmd"><div class="k"><code>/jobs info &lt;job&gt;</code></div><div class="desc">What a job pays for.</div></div>
-    <div class="cmd"><div class="k"><code>/jobs top &lt;job&gt;</code></div><div class="desc">Leaderboard for a job.</div></div>
+    <div class="cmd"><div class="k"><code>/vote</code></div><div class="desc">Links for our four listing sites. Each can be voted once every 24 hours, and every vote pays a Copper Crate.</div></div>
+    <div class="cmd"><div class="k"><code>/crates</code></div><div class="desc">Open the crates you hold. Crates never take an inventory slot. They're held for you until you open them.</div></div>
+    <div class="cmd"><div class="k"><code>/keys</code></div><div class="desc">How many of each crate you're currently holding.</div></div>
     </div>
   </details>
 
   <details class="acc-item">
     <summary><h2 id="land">Land &amp; nation</h2></summary>
     <div class="cmd-group">
-    <div class="cmd"><div class="k"><code>/lands menu</code></div><div class="desc">Open the main Lands GUI. Everything below is in here too.</div></div>
+    <div class="cmd"><div class="k"><code>/lands menu</code></div><div class="desc">Open the main Lands GUI. Everything below is in here too. <code>/l</code> works as shorthand for <code>/lands</code> anywhere.</div></div>
     <div class="cmd"><div class="k"><code>/lands create &lt;name&gt;</code></div><div class="desc">Found a land. The first chunk is free.</div></div>
     <div class="cmd"><div class="k"><code>/lands claim</code> <code>/lands unclaim</code></div><div class="desc">Claim or release the chunk you're standing in.</div></div>
     <div class="cmd"><div class="k"><code>/lands map</code></div><div class="desc">Show a chunk map of nearby claims.</div></div>
@@ -100,6 +101,11 @@ const sections = [
     <div class="cmd"><div class="k"><code>/lands bank deposit &lt;amount&gt;</code></div><div class="desc">Fund the land bank (also <code>withdraw</code>, <code>balance</code>).</div></div>
     <div class="cmd"><div class="k"><code>/lands rent</code> <code>/lands sell</code></div><div class="desc">Rent or sell a sub-area to another player.</div></div>
     <div class="cmd"><div class="k"><code>/lands setspawn</code></div><div class="desc">Set where <code>/lands spawn</code> takes members.</div></div>
+    <p class="cmd-note">Finding other lands</p>
+    <div class="cmd"><div class="k"><code>/shops</code></div><div class="desc">Every land tagged as a shop. The fastest way to find chest shops. Short for <code>/lands list shops</code>.</div></div>
+    <div class="cmd"><div class="k"><code>/mobfarms</code></div><div class="desc">Every land tagged as a mob farm. Short for <code>/lands list mobfarm</code>.</div></div>
+    <div class="cmd"><div class="k"><code>/pvp</code></div><div class="desc">Every land with PvP switched on. Short for <code>/lands list pvp</code>.</div></div>
+    <div class="cmd"><div class="k"><code>/members</code></div><div class="desc">Lands currently recruiting. Short for <code>/lands list members</code>.</div></div>
     <div class="cmd"><div class="k"><code>/nation create &lt;name&gt;</code></div><div class="desc">Form a nation from your land ({ECON.nationCreateCost}).</div></div>
     <div class="cmd"><div class="k"><code>/nation &lt;nation&gt; invite &lt;land&gt;</code></div><div class="desc">Invite another land into your nation.</div></div>
     </div>
@@ -115,6 +121,6 @@ const sections = [
   </details>
   </div>
 
-  <p class="editnote">Command names follow the plugins Meridian runs (Lands, QuickShop-Hikari, EssentialsX, Jobs Reborn, TradeManager, EzRTP). If any alias differs on the server, tell staff and this page will be corrected.</p>
+  <p class="editnote">Command names follow the plugins Meridian runs (Lands, QuickShop-Hikari, EssentialsX, VotingPlugin, CrazyCrates, TradeManager, EzRTP). If any alias differs on the server, tell staff and this page will be corrected.</p>
 </main>
 </Base>

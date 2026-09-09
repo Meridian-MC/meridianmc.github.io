@@ -1,0 +1,271 @@
+/* Cascade layer order, declared before anything else so it wins.
+   Unlayered CSS beats *every* layer, so the legacy stylesheet has to be pulled
+   into a layer or it silently overrides all Tailwind utilities. Order below
+   puts legacy above Tailwind's preflight (so old rules still reset correctly)
+   but below utilities (so a utility always wins a conflict). */
+@layer theme, base, components, utilities;
+
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+/* Component styles, in Tailwind's components layer so any utility still wins.
+   These cannot become utilities: analytics.js injects 65 distinct class names
+   at runtime (charts, candle plots, MEI gauge, data tables), and Tailwind only
+   generates utilities it can find by scanning source files. Authored against
+   the same @theme tokens, so this is Tailwind-driven CSS, not a foreign sheet. */
+@import "./components.css" layer(components);
+
+/* ============================================================================
+   Meridian design tokens, ported from the hand-written stylesheet into
+   Tailwind v4's @theme. Every value below is carried over unchanged unless a
+   comment says otherwise, so utilities (bg-surface-1, text-accent, font-display)
+   resolve to exactly the colours the site already shipped.
+
+   Tailwind v4 has no tailwind.config.js. @theme IS the config.
+
+   Note on hex vs hsl(): the tailwind-v4-shadcn skill wraps values in hsl()
+   because shadcn addresses them as hsl(var(--x)). We define colours directly in
+   @theme and never re-wrap them, so raw hex is correct here and one less
+   indirection to get wrong.
+   ========================================================================= */
+@theme {
+  /* Ground. Warm near-blacks, biased toward the wordmark's sand rather than
+     the cold blue-grey they were: Meridian's own logo is cream over tan over
+     khaki, and neutrals that ignore the brand read as unchosen. Still dark
+     and high-contrast, nowhere near a cream-and-terracotta scheme. */
+  --color-void: #060504;
+  --color-bg: #0b0a09;
+  --color-surface-1: #141210;
+  --color-surface-2: #1b1815;
+  --color-surface-3: #241f1b;
+
+  --color-line: #2b2622;
+  --color-line-2: #423a31;
+
+  --color-ink: #f6f3ee;
+  --color-ink-2: #bcb3a7;
+  --color-ink-3: #7d7568;
+
+  /* Sand, sampled from the wordmark itself (#f7ecda highlight, #e0d1ba mid,
+     #b3997a low). The accent is the deep end of that gradient so it carries
+     on a dark ground; the dim variant is for underlines and borders. */
+  --color-accent: #d3b083;
+  --color-accent-dim: #7d6547;
+  --color-accent-hi: #f7ecda;
+
+  /* Plugin identity hues: real saturation, same hue per plugin as before.
+     (--p-jobs is gone: Jobs Reborn was removed from the server.) */
+  --color-p-lands: #4fae66;
+  --color-p-quickshop: #e0a23c;
+  --color-p-market: #4a8ed6;
+  --color-p-extract: #8a5cf0;
+  --color-p-brew: #e0629e;
+  --color-p-essentials: #e0473f;
+  --color-p-core: #4499e8;
+  --color-p-deathchest: #c17a2e;
+  --color-p-guard: #9aa1a8;
+
+  /* Status */
+  --color-ok: #57b98a;
+  --color-warn: #d6a25c;
+
+  /* Type. The wordmark is already pixel art, so the headings deliberately are
+     not: a second pixel face competed with it. Archivo Black is a heavy
+     grotesque with squared terminals, which reads as weight rather than as a
+     game font. Body stays a lighter grotesque, and mono is still reserved for
+     things that are literally data. */
+  --font-display: "Archivo Black", "Hanken Grotesk", -apple-system, sans-serif;
+  --font-sans: "Hanken Grotesk", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Helvetica, Arial, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, Consolas,
+    monospace;
+
+  /* Square edges everywhere. A 12px radius on every panel was the single
+     biggest source of "SaaS template" feel, and square corners suit a block
+     game. Kept as a token so it is one edit, not fifty. */
+  --radius-panel: 0px;
+
+  --ease-out-quint: cubic-bezier(0.16, 1, 0.3, 1);
+
+  /* The site's content measure. */
+  --spacing-measure: 960px;
+}
+
+/* ----------------------------------------------------------------------------
+   Base
+   ------------------------------------------------------------------------- */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+  body {
+    background-color: var(--color-bg);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+  /* Keyboard focus stays visible everywhere. Gold ring, offset so it reads
+     against dark panels. */
+  :focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 2px;
+    border-radius: 2px;
+  }
+}
+
+/* ----------------------------------------------------------------------------
+   Structural pixel accents.
+
+   These are the site's one ornamental idea, and they are structural: stepped
+   corner brackets that mark where a panel begins and ends, drawn on integer
+   pixels so the steps stay crisp at any zoom. They echo a block edge without
+   resorting to a pixel typeface, and they carry information (this is a bounded
+   region) rather than decorating.
+
+   Deliberately NOT a glow, NOT a neon border, NOT a rounded pill.
+   ------------------------------------------------------------------------- */
+/* Two stepped arms per corner, on the two corners that read as "start" and
+   "end" of a block. 2px bars on 8/18px runs = visible steps, no blur. */
+/* Minecraft's own GUI bevel. The game draws every panel with a hard 2px edge:
+   light on the top and left, dark on the bottom and right for something raised,
+   inverted for an inset slot. It is the single most recognisable thing about
+   Minecraft's interface and it is nothing like a 1px hairline, which is what
+   every dashboard on the internet uses. No border-radius, no blur, integer
+   pixels only. */
+@utility mc-raised {
+  box-shadow:
+    inset 2px 2px 0 rgba(255, 255, 255, 0.075),
+    inset -2px -2px 0 rgba(0, 0, 0, 0.55);
+}
+
+/* An inset slot, the way an inventory square reads: pressed into the surface. */
+@utility mc-slot {
+  box-shadow:
+    inset 2px 2px 0 rgba(0, 0, 0, 0.6),
+    inset -2px -2px 0 rgba(255, 255, 255, 0.055);
+}
+
+/* A stair-stepped rule. Used to separate major regions instead of a hairline,
+   because a hairline is the generic choice and a stepped edge is the subject's
+   own material. */
+@utility step-rule {
+  height: 4px;
+  background-image:
+    linear-gradient(var(--color-line) 0 0),
+    linear-gradient(var(--color-line) 0 0);
+  background-size: 8px 2px, 8px 2px;
+  background-position: 0 0, 4px 2px;
+  background-repeat: repeat-x, repeat-x;
+}
+
+/* Minecraft's own flat font shadow. Used once per page, on the wordmark. */
+@utility mc-shadow {
+  text-shadow:
+    0 1px 0 rgba(255, 214, 150, 0.22),
+    0 3px 0 rgba(0, 0, 0, 0.5),
+    0 8px 18px rgba(0, 0, 0, 0.35);
+}
+
+/* ----------------------------------------------------------------------------
+   Motion. One orchestrated page-load moment, not a per-section entrance.
+   ------------------------------------------------------------------------- */
+@keyframes rise-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes ember-rise {
+  0% {
+    opacity: 0;
+    transform: translateY(0) translateX(0);
+  }
+  12% {
+    opacity: 0.75;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-260px) translateX(var(--drift, 14px));
+  }
+}
+
+@keyframes copy-pulse {
+  0% {
+    transform: scale(1);
+  }
+  40% {
+    transform: scale(1.02);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@utility rise {
+  animation: rise-in 0.68s var(--ease-out-quint) both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .rise,
+  [class*="rise"] {
+    animation: none !important;
+  }
+}
+
+/* Bracketed panels carry a hairline edge so the stepped corners read as
+   reinforcing a real boundary rather than floating next to one. */
+@utility panel {
+  border: 1px solid var(--color-line);
+  background-color: var(--color-surface-1);
+}
+
+/* ----------------------------------------------------------------------------
+   Single source of truth.
+
+   components.css used to carry its own :root copy of every token, which meant a
+   colour lived in two files and could silently diverge — it still defined
+   --p-jobs long after Jobs Reborn left the server. That block is gone; these
+   aliases map the names its ~300 declarations use onto the @theme tokens above,
+   so @theme is now the only place a value is ever defined.
+   ------------------------------------------------------------------------- */
+:root {
+  --bg: var(--color-bg);
+  --bg-1: var(--color-surface-1);
+  --bg-2: var(--color-surface-2);
+  --bg-3: var(--color-surface-3);
+  --border: var(--color-line);
+  --border-2: var(--color-line-2);
+  --text: var(--color-ink);
+  --text-2: var(--color-ink-2);
+  --text-3: var(--color-ink-3);
+  --accent: var(--color-accent);
+  --accent-dim: var(--color-accent-dim);
+  --ok: var(--color-ok);
+  --warn: var(--color-warn);
+
+  --p-lands: var(--color-p-lands);
+  --p-quickshop: var(--color-p-quickshop);
+  --p-market: var(--color-p-market);
+  --p-extract: var(--color-p-extract);
+  --p-brew: var(--color-p-brew);
+  --p-essentials: var(--color-p-essentials);
+  --p-core: var(--color-p-core);
+  --p-deathchest: var(--color-p-deathchest);
+  --p-guard: var(--color-p-guard);
+
+  --font: var(--font-sans);
+  --mono: var(--font-mono);
+  --ease: var(--ease-out-quint);
+  --radius: var(--radius-panel);
+  --maxw: 960px;
+}
