@@ -1,7 +1,7 @@
 {
-  "generated": "2026-09-09T02:13:21Z",
+  "generated": "2026-09-09T02:30:57Z",
   "meta": {
-    "players_tracked": 52,
+    "players_tracked": 53,
     "active_traders": 28,
     "data_days": 4,
     "sufficient": false,
@@ -17,7 +17,7 @@
       "label": "Insufficient data",
       "note": "Need 8+ active traders and 14+ days of history. Currently 28 traders / 4 days."
     },
-    "money_supply_players": 234204.11,
+    "money_supply_players": 236704.11,
     "money_supply_series": [
       [
         "2026-09-04",
@@ -139,7 +139,7 @@
       ]
     },
     "chest_shop_transactions": 0,
-    "gini": 0.52,
+    "gini": 0.516,
     "price_index": {
       "value": null,
       "series": [],
@@ -211,12 +211,12 @@
       }
     ],
     "median": 2500.0,
-    "mean": 4503.93
+    "mean": 4466.12
   },
   "server": {
-    "checked": "2026-09-09T02:13:22Z",
+    "checked": "2026-09-09T02:30:57Z",
     "started_at": "2026-09-08T23:58:57Z",
-    "tps": 19.79
+    "tps": 20.0
   },
   "nations": [
     {
