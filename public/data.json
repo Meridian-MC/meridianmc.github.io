@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-09T15:40:08Z",
+  "generated": "2026-09-09T15:45:25Z",
   "meta": {
     "players_tracked": 54,
     "active_traders": 30,
@@ -139,7 +139,7 @@
       ]
     },
     "chest_shop_transactions": 0,
-    "gini": 0.478,
+    "gini": 0.477,
     "price_index": {
       "value": null,
       "series": [],
@@ -155,7 +155,7 @@
       },
       {
         "name": "WhenAtRome",
-        "balance": 31889.6
+        "balance": 30889.6
       },
       {
         "name": "JoshMilkFleas",
@@ -174,12 +174,12 @@
         "balance": 5530.5
       },
       {
-        "name": "mooshierk",
-        "balance": 4758.52
+        "name": "Keanie__",
+        "balance": 5496.5
       },
       {
-        "name": "Keanie__",
-        "balance": 4496.5
+        "name": "mooshierk",
+        "balance": 4758.52
       },
       {
         "name": "XDjarinXD",
@@ -214,8 +214,8 @@
     "mean": 4009.3
   },
   "server": {
-    "checked": "2026-09-09T15:40:08Z",
-    "started_at": "2026-09-09T15:13:50Z",
+    "checked": "2026-09-09T15:45:26Z",
+    "started_at": "2026-09-09T15:13:51Z",
     "tps": 20.0
   },
   "nations": [
