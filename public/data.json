@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-10T02:53:00Z",
+  "generated": "2026-09-10T02:55:50Z",
   "meta": {
     "players_tracked": 57,
     "active_traders": 32,
@@ -17,7 +17,7 @@
       "label": "Insufficient data",
       "note": "Need 8+ active traders and 14+ days of history. Currently 32 traders / 5 days."
     },
-    "money_supply_players": 189452.68,
+    "money_supply_players": 189509.2,
     "money_supply_series": [
       [
         "2026-09-04",
@@ -191,7 +191,7 @@
       },
       {
         "name": "Luko_Landino",
-        "balance": 5079.03
+        "balance": 5135.55
       },
       {
         "name": "mooshierk",
@@ -219,11 +219,11 @@
       }
     ],
     "median": 2500.0,
-    "mean": 3323.73
+    "mean": 3324.72
   },
   "server": {
-    "checked": "2026-09-10T02:53:00Z",
-    "started_at": "2026-09-09T15:13:50Z",
+    "checked": "2026-09-10T02:55:51Z",
+    "started_at": "2026-09-09T15:13:51Z",
     "tps": 20.0
   },
   "nations": [
