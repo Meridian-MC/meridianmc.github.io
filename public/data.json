@@ -1,9 +1,9 @@
 {
-  "generated": "2026-09-10T10:54:39Z",
+  "generated": "2026-09-10T11:13:08Z",
   "meta": {
     "players_tracked": 57,
     "active_traders": 32,
-    "data_days": 5,
+    "data_days": 6,
     "sufficient": false,
     "demo": false,
     "thresholds": {
@@ -15,9 +15,9 @@
     "classification": {
       "code": "INSUFFICIENT_DATA",
       "label": "Insufficient data",
-      "note": "Need 8+ active traders and 14+ days of history. Currently 32 traders / 5 days."
+      "note": "Need 8+ active traders and 14+ days of history. Currently 32 traders / 6 days."
     },
-    "money_supply_players": 189338.43,
+    "money_supply_players": 192380.8,
     "money_supply_series": [
       [
         "2026-09-04",
@@ -45,7 +45,7 @@
       ],
       [
         "2026-09-10",
-        10488.43
+        12530.8
       ]
     ],
     "trade_volume_series": [
@@ -71,10 +71,10 @@
       ],
       [
         "2026-09-10",
-        85439.21
+        87491.58
       ]
     ],
-    "trade_volume_7d": 722347.79,
+    "trade_volume_7d": 724400.16,
     "server_shop_transactions": 300,
     "server_shop": {
       "transactions": 300,
@@ -166,6 +166,10 @@
         "balance": 12817.72
       },
       {
+        "name": "Luko_Landino",
+        "balance": 7182.92
+      },
+      {
         "name": "DatAriix",
         "balance": 7063.86
       },
@@ -188,10 +192,6 @@
       {
         "name": "ACRI_Vanguard",
         "balance": 5321.71
-      },
-      {
-        "name": "Luko_Landino",
-        "balance": 5135.55
       },
       {
         "name": "mooshierk",
@@ -219,10 +219,10 @@
       }
     ],
     "median": 2500.0,
-    "mean": 3321.73
+    "mean": 3375.1
   },
   "server": {
-    "checked": "2026-09-10T10:54:39Z",
+    "checked": "2026-09-10T11:13:08Z",
     "started_at": "2026-09-09T15:13:50Z",
     "tps": 20.0
   },
