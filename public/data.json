@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-10T22:28:39Z",
+  "generated": "2026-09-10T22:33:55Z",
   "meta": {
     "players_tracked": 59,
     "active_traders": 32,
@@ -17,7 +17,7 @@
       "label": "Insufficient data",
       "note": "Need 8+ active traders and 14+ days of history. Currently 32 traders / 6 days."
     },
-    "money_supply_players": 196205.15,
+    "money_supply_players": 196525.08,
     "money_supply_series": [
       [
         "2026-09-04",
@@ -45,7 +45,7 @@
       ],
       [
         "2026-09-10",
-        5355.15
+        5675.08
       ]
     ],
     "trade_volume_series": [
@@ -71,10 +71,10 @@
       ],
       [
         "2026-09-10",
-        121492.13
+        121812.06
       ]
     ],
-    "trade_volume_7d": 758400.71,
+    "trade_volume_7d": 758720.64,
     "server_shop_transactions": 300,
     "server_shop": {
       "transactions": 300,
@@ -147,7 +147,7 @@
       ]
     },
     "chest_shop_transactions": 0,
-    "gini": 0.421,
+    "gini": 0.422,
     "price_index": {
       "value": null,
       "series": [],
@@ -171,7 +171,7 @@
       },
       {
         "name": "Luko_Landino",
-        "balance": 7676.71
+        "balance": 7996.64
       },
       {
         "name": "BlackAdder83",
@@ -219,12 +219,12 @@
       }
     ],
     "median": 2500.0,
-    "mean": 3325.51
+    "mean": 3330.93
   },
   "server": {
-    "checked": "2026-09-10T22:28:39Z",
+    "checked": "2026-09-10T22:33:56Z",
     "started_at": "2026-09-10T12:12:16Z",
-    "tps": 19.62
+    "tps": 20.0
   },
   "nations": [
     {
