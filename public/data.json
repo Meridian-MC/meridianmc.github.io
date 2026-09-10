@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-10T11:53:48Z",
+  "generated": "2026-09-10T12:17:03Z",
   "meta": {
     "players_tracked": 57,
     "active_traders": 32,
@@ -17,7 +17,7 @@
       "label": "Insufficient data",
       "note": "Need 8+ active traders and 14+ days of history. Currently 32 traders / 6 days."
     },
-    "money_supply_players": 192680.8,
+    "money_supply_players": 192724.55,
     "money_supply_series": [
       [
         "2026-09-04",
@@ -45,7 +45,7 @@
       ],
       [
         "2026-09-10",
-        12830.8
+        12874.55
       ]
     ],
     "trade_volume_series": [
@@ -71,10 +71,10 @@
       ],
       [
         "2026-09-10",
-        87791.58
+        88251.33
       ]
     ],
-    "trade_volume_7d": 724700.16,
+    "trade_volume_7d": 725159.91,
     "server_shop_transactions": 300,
     "server_shop": {
       "transactions": 300,
@@ -147,7 +147,7 @@
       ]
     },
     "chest_shop_transactions": 0,
-    "gini": 0.401,
+    "gini": 0.402,
     "price_index": {
       "value": null,
       "series": [],
@@ -167,11 +167,11 @@
       },
       {
         "name": "Luko_Landino",
-        "balance": 7424.96
+        "balance": 7676.71
       },
       {
         "name": "DatAriix",
-        "balance": 7063.86
+        "balance": 6855.86
       },
       {
         "name": "Keanie__",
@@ -219,11 +219,11 @@
       }
     ],
     "median": 2500.0,
-    "mean": 3380.36
+    "mean": 3381.13
   },
   "server": {
-    "checked": "2026-09-10T11:53:49Z",
-    "started_at": "2026-09-09T15:13:51Z",
+    "checked": "2026-09-10T12:17:03Z",
+    "started_at": "2026-09-10T12:12:16Z",
     "tps": 20.0
   },
   "nations": [
@@ -231,14 +231,14 @@
       "name": "Augustine Empire",
       "tag": null,
       "color": "#956BE8",
-      "mdi": 0.156,
-      "territory": 0.417,
-      "population": 0.6,
-      "wealth": 0.002,
+      "mdi": 0.229,
+      "territory": 0.683,
+      "population": 0.733,
+      "wealth": 0.005,
       "activity": 1.0,
-      "chunks": 25,
-      "members": 9,
-      "treasury": 11888.83
+      "chunks": 41,
+      "members": 11,
+      "treasury": 27228.43
     }
   ],
   "lands": [
@@ -251,6 +251,14 @@
       "level": 0
     },
     {
+      "name": "Augustine",
+      "type": "land",
+      "chunks": 37,
+      "members": 8,
+      "bank": 23128.43,
+      "level": 1
+    },
+    {
       "name": "Myndelea",
       "type": "land",
       "chunks": 28,
@@ -259,17 +267,9 @@
       "level": 0
     },
     {
-      "name": "Augustine",
-      "type": "land",
-      "chunks": 21,
-      "members": 6,
-      "bank": 7788.83,
-      "level": 0
-    },
-    {
       "name": "Rare Fish Industries",
       "type": "land",
-      "chunks": 19,
+      "chunks": 22,
       "members": 6,
       "bank": 150.0,
       "level": 0
@@ -343,7 +343,7 @@
       "type": "land",
       "chunks": 1,
       "members": 2,
-      "bank": 0.0,
+      "bank": 100.0,
       "level": 0
     },
     {
