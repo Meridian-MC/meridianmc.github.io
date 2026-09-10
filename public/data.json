@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-10T13:21:05Z",
+  "generated": "2026-09-10T13:26:20Z",
   "meta": {
     "players_tracked": 57,
     "active_traders": 32,
@@ -17,7 +17,7 @@
       "label": "Insufficient data",
       "note": "Need 8+ active traders and 14+ days of history. Currently 32 traders / 6 days."
     },
-    "money_supply_players": 186463.75,
+    "money_supply_players": 183663.75,
     "money_supply_series": [
       [
         "2026-09-04",
@@ -45,7 +45,7 @@
       ],
       [
         "2026-09-10",
-        6613.75
+        3813.75
       ]
     ],
     "trade_volume_series": [
@@ -71,10 +71,10 @@
       ],
       [
         "2026-09-10",
-        94794.53
+        97594.53
       ]
     ],
-    "trade_volume_7d": 731703.11,
+    "trade_volume_7d": 734503.11,
     "server_shop_transactions": 300,
     "server_shop": {
       "transactions": 300,
@@ -147,7 +147,7 @@
       ]
     },
     "chest_shop_transactions": 0,
-    "gini": 0.41,
+    "gini": 0.421,
     "price_index": {
       "value": null,
       "series": [],
@@ -210,19 +210,19 @@
         "balance": 4004.5
       },
       {
-        "name": "DatAriix",
-        "balance": 3242.57
-      },
-      {
         "name": "aazo9z",
         "balance": 2919.5
+      },
+      {
+        "name": "st4tc",
+        "balance": 2898.43
       }
     ],
     "median": 2500.0,
-    "mean": 3271.29
+    "mean": 3222.17
   },
   "server": {
-    "checked": "2026-09-10T13:21:05Z",
+    "checked": "2026-09-10T13:26:20Z",
     "started_at": "2026-09-10T12:12:16Z",
     "tps": 20.0
   },
