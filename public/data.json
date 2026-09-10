@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-10T19:56:08Z",
+  "generated": "2026-09-10T20:01:24Z",
   "meta": {
     "players_tracked": 59,
     "active_traders": 32,
@@ -17,7 +17,7 @@
       "label": "Insufficient data",
       "note": "Need 8+ active traders and 14+ days of history. Currently 32 traders / 6 days."
     },
-    "money_supply_players": 197782.65,
+    "money_supply_players": 197197.15,
     "money_supply_series": [
       [
         "2026-09-04",
@@ -45,7 +45,7 @@
       ],
       [
         "2026-09-10",
-        6932.65
+        6347.15
       ]
     ],
     "trade_volume_series": [
@@ -71,10 +71,10 @@
       ],
       [
         "2026-09-10",
-        119534.63
+        120500.13
       ]
     ],
-    "trade_volume_7d": 756443.21,
+    "trade_volume_7d": 757408.71,
     "server_shop_transactions": 300,
     "server_shop": {
       "transactions": 300,
@@ -147,7 +147,7 @@
       ]
     },
     "chest_shop_transactions": 0,
-    "gini": 0.396,
+    "gini": 0.418,
     "price_index": {
       "value": null,
       "series": [],
@@ -162,20 +162,16 @@
         "balance": 26979.37
       },
       {
+        "name": "Keanie__",
+        "balance": 15776.5
+      },
+      {
         "name": "JoshMilkFleas",
         "balance": 12817.72
       },
       {
         "name": "Luko_Landino",
         "balance": 7676.71
-      },
-      {
-        "name": "Augustine65480",
-        "balance": 7593.38
-      },
-      {
-        "name": "Keanie__",
-        "balance": 5776.5
       },
       {
         "name": "BlackAdder83",
@@ -191,7 +187,7 @@
       },
       {
         "name": "ACRI_Vanguard",
-        "balance": 5311.71
+        "balance": 5112.21
       },
       {
         "name": "mooshierk",
@@ -216,13 +212,17 @@
       {
         "name": "Simojolu2",
         "balance": 3000.0
+      },
+      {
+        "name": "aazo9z",
+        "balance": 2919.5
       }
     ],
     "median": 2500.0,
-    "mean": 3352.25
+    "mean": 3342.32
   },
   "server": {
-    "checked": "2026-09-10T19:56:08Z",
+    "checked": "2026-09-10T20:01:24Z",
     "started_at": "2026-09-10T12:12:16Z",
     "tps": 20.0
   },
