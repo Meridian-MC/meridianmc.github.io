@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-10T01:49:48Z",
+  "generated": "2026-09-10T01:55:04Z",
   "meta": {
     "players_tracked": 56,
     "active_traders": 32,
@@ -17,7 +17,7 @@
       "label": "Insufficient data",
       "note": "Need 8+ active traders and 14+ days of history. Currently 32 traders / 5 days."
     },
-    "money_supply_players": 185661.19,
+    "money_supply_players": 191251.93,
     "money_supply_series": [
       [
         "2026-09-04",
@@ -45,7 +45,7 @@
       ],
       [
         "2026-09-10",
-        10311.19
+        15901.93
       ]
     ],
     "trade_volume_series": [
@@ -71,10 +71,10 @@
       ],
       [
         "2026-09-10",
-        45193.97
+        50784.71
       ]
     ],
-    "trade_volume_7d": 682102.55,
+    "trade_volume_7d": 687693.29,
     "server_shop_transactions": 300,
     "server_shop": {
       "transactions": 300,
@@ -147,7 +147,7 @@
       ]
     },
     "chest_shop_transactions": 0,
-    "gini": 0.441,
+    "gini": 0.456,
     "price_index": {
       "value": null,
       "series": [],
@@ -159,7 +159,7 @@
     "top": [
       {
         "name": "ihasadragon",
-        "balance": 32676.93
+        "balance": 38267.67
       },
       {
         "name": "JoshMilkFleas",
@@ -219,10 +219,10 @@
       }
     ],
     "median": 2500.0,
-    "mean": 3315.38
+    "mean": 3415.21
   },
   "server": {
-    "checked": "2026-09-10T01:49:49Z",
+    "checked": "2026-09-10T01:55:04Z",
     "started_at": "2026-09-09T15:13:51Z",
     "tps": 20.0
   },
