@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-11T22:28:39Z",
+  "generated": "2026-09-11T22:42:37Z",
   "meta": {
     "players_tracked": 61,
     "active_traders": 33,
@@ -17,7 +17,7 @@
       "label": "Insufficient data",
       "note": "Need 8+ active traders and 14+ days of history. Currently 33 traders / 7 days."
     },
-    "money_supply_players": 225103.02,
+    "money_supply_players": 223094.16,
     "money_supply_series": [
       [
         "2026-09-04",
@@ -49,7 +49,7 @@
       ],
       [
         "2026-09-11",
-        26753.02
+        24744.16
       ]
     ],
     "trade_volume_series": [
@@ -79,10 +79,10 @@
       ],
       [
         "2026-09-11",
-        87067.92
+        91059.06
       ]
     ],
-    "trade_volume_7d": 853928.44,
+    "trade_volume_7d": 857919.58,
     "server_shop_transactions": 300,
     "server_shop": {
       "transactions": 300,
@@ -155,7 +155,7 @@
       ]
     },
     "chest_shop_transactions": 0,
-    "gini": 0.465,
+    "gini": 0.461,
     "price_index": {
       "value": null,
       "series": [],
@@ -174,12 +174,12 @@
         "balance": 18477.34
       },
       {
-        "name": "ihasadragon",
-        "balance": 18458.92
-      },
-      {
         "name": "ACRI_Vanguard",
         "balance": 16542.81
+      },
+      {
+        "name": "ihasadragon",
+        "balance": 15458.92
       },
       {
         "name": "JoshMilkFleas",
@@ -198,16 +198,16 @@
         "balance": 5530.5
       },
       {
+        "name": "st4tc",
+        "balance": 5378.6
+      },
+      {
         "name": "mooshierk",
         "balance": 4748.52
       },
       {
         "name": "DatAriix",
         "balance": 4746.57
-      },
-      {
-        "name": "st4tc",
-        "balance": 4387.46
       },
       {
         "name": "XDjarinXD",
@@ -227,10 +227,10 @@
       }
     ],
     "median": 2500.0,
-    "mean": 3690.21
+    "mean": 3657.28
   },
   "server": {
-    "checked": "2026-09-11T22:28:39Z",
+    "checked": "2026-09-11T22:42:37Z",
     "started_at": "2026-09-11T18:19:47Z",
     "tps": 20.0
   },
