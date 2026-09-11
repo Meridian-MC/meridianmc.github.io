@@ -1,8 +1,8 @@
 {
-  "generated": "2026-09-11T18:30:54Z",
+  "generated": "2026-09-11T18:35:07Z",
   "meta": {
-    "players_tracked": 60,
-    "active_traders": 32,
+    "players_tracked": 61,
+    "active_traders": 33,
     "data_days": 7,
     "sufficient": false,
     "demo": false,
@@ -15,9 +15,9 @@
     "classification": {
       "code": "INSUFFICIENT_DATA",
       "label": "Insufficient data",
-      "note": "Need 8+ active traders and 14+ days of history. Currently 32 traders / 7 days."
+      "note": "Need 8+ active traders and 14+ days of history. Currently 33 traders / 7 days."
     },
-    "money_supply_players": 216239.91,
+    "money_supply_players": 219489.91,
     "money_supply_series": [
       [
         "2026-09-04",
@@ -49,7 +49,7 @@
       ],
       [
         "2026-09-11",
-        20389.91
+        20352.41
       ]
     ],
     "trade_volume_series": [
@@ -79,10 +79,10 @@
       ],
       [
         "2026-09-11",
-        24703.75
+        26241.25
       ]
     ],
-    "trade_volume_7d": 791564.27,
+    "trade_volume_7d": 793101.77,
     "server_shop_transactions": 300,
     "server_shop": {
       "transactions": 300,
@@ -155,7 +155,7 @@
       ]
     },
     "chest_shop_transactions": 0,
-    "gini": 0.445,
+    "gini": 0.442,
     "price_index": {
       "value": null,
       "series": [],
@@ -194,12 +194,12 @@
         "balance": 5530.5
       },
       {
-        "name": "mooshierk",
-        "balance": 4758.52
+        "name": "DatAriix",
+        "balance": 5400.57
       },
       {
-        "name": "DatAriix",
-        "balance": 4650.57
+        "name": "mooshierk",
+        "balance": 4758.52
       },
       {
         "name": "st4tc",
@@ -227,11 +227,11 @@
       }
     ],
     "median": 2500.0,
-    "mean": 3604.0
+    "mean": 3598.2
   },
   "server": {
-    "checked": "2026-09-11T18:30:54Z",
-    "started_at": "2026-09-11T18:19:45Z",
+    "checked": "2026-09-11T18:35:07Z",
+    "started_at": "2026-09-11T18:19:47Z",
     "tps": 20.0
   },
   "nations": [
