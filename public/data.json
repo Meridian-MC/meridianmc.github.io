@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-11T17:27:41Z",
+  "generated": "2026-09-11T17:42:21Z",
   "meta": {
     "players_tracked": 60,
     "active_traders": 32,
@@ -17,7 +17,7 @@
       "label": "Insufficient data",
       "note": "Need 8+ active traders and 14+ days of history. Currently 32 traders / 7 days."
     },
-    "money_supply_players": 214179.8,
+    "money_supply_players": 214154.8,
     "money_supply_series": [
       [
         "2026-09-04",
@@ -49,7 +49,7 @@
       ],
       [
         "2026-09-11",
-        18329.8
+        18304.8
       ]
     ],
     "trade_volume_series": [
@@ -79,10 +79,10 @@
       ],
       [
         "2026-09-11",
-        18611.64
+        19636.64
       ]
     ],
-    "trade_volume_7d": 785472.16,
+    "trade_volume_7d": 786497.16,
     "server_shop_transactions": 300,
     "server_shop": {
       "transactions": 300,
@@ -155,7 +155,7 @@
       ]
     },
     "chest_shop_transactions": 0,
-    "gini": 0.441,
+    "gini": 0.442,
     "price_index": {
       "value": null,
       "series": [],
@@ -175,7 +175,7 @@
       },
       {
         "name": "Keanie__",
-        "balance": 13576.5
+        "balance": 13769.0
       },
       {
         "name": "JoshMilkFleas",
@@ -206,10 +206,6 @@
         "balance": 4106.0
       },
       {
-        "name": "DatAriix",
-        "balance": 4104.07
-      },
-      {
         "name": "BabieDolphin",
         "balance": 4103.0
       },
@@ -222,15 +218,19 @@
         "balance": 4004.5
       },
       {
+        "name": "DatAriix",
+        "balance": 3886.57
+      },
+      {
         "name": "1RTR",
         "balance": 3216.94
       }
     ],
     "median": 2500.0,
-    "mean": 3569.66
+    "mean": 3569.25
   },
   "server": {
-    "checked": "2026-09-11T17:27:41Z",
+    "checked": "2026-09-11T17:42:21Z",
     "started_at": "2026-09-11T12:12:13Z",
     "tps": 20.0
   },
