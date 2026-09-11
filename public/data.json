@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-11T01:59:53Z",
+  "generated": "2026-09-11T02:13:19Z",
   "meta": {
     "players_tracked": 59,
     "active_traders": 32,
@@ -17,7 +17,7 @@
       "label": "Insufficient data",
       "note": "Need 8+ active traders and 14+ days of history. Currently 32 traders / 6 days."
     },
-    "money_supply_players": 213381.67,
+    "money_supply_players": 213730.41,
     "money_supply_series": [
       [
         "2026-09-04",
@@ -49,7 +49,7 @@
       ],
       [
         "2026-09-11",
-        20031.67
+        20380.41
       ]
     ],
     "trade_volume_series": [
@@ -79,10 +79,10 @@
       ],
       [
         "2026-09-11",
-        8540.71
+        8889.45
       ]
     ],
-    "trade_volume_7d": 775401.23,
+    "trade_volume_7d": 775749.97,
     "server_shop_transactions": 300,
     "server_shop": {
       "transactions": 300,
@@ -222,16 +222,16 @@
         "balance": 3856.94
       },
       {
-        "name": "Simojolu2",
-        "balance": 3000.0
+        "name": "st4tc",
+        "balance": 3247.17
       }
     ],
     "median": 2500.0,
-    "mean": 3616.64
+    "mean": 3622.55
   },
   "server": {
-    "checked": "2026-09-11T01:59:53Z",
-    "started_at": "2026-09-10T12:12:16Z",
+    "checked": "2026-09-11T02:13:19Z",
+    "started_at": "2026-09-10T12:12:15Z",
     "tps": 20.0
   },
   "nations": [
