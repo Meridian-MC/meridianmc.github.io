@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-11T18:53:51Z",
+  "generated": "2026-09-11T18:57:12Z",
   "meta": {
     "players_tracked": 61,
     "active_traders": 33,
@@ -49,7 +49,7 @@
       ],
       [
         "2026-09-11",
-        20167.62
+        19663.62
       ]
     ],
     "trade_volume_series": [
@@ -79,10 +79,10 @@
       ],
       [
         "2026-09-11",
-        29821.46
+        30325.46
       ]
     ],
-    "trade_volume_7d": 796681.98,
+    "trade_volume_7d": 797185.98,
     "server_shop_transactions": 300,
     "server_shop": {
       "transactions": 300,
@@ -230,9 +230,9 @@
     "mean": 3582.26
   },
   "server": {
-    "checked": "2026-09-11T18:53:51Z",
-    "started_at": "2026-09-11T18:19:47Z",
-    "tps": 19.71
+    "checked": "2026-09-11T18:57:12Z",
+    "started_at": "2026-09-11T18:19:45Z",
+    "tps": 20.0
   },
   "nations": [
     {
