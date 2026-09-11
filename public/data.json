@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-11T20:26:39Z",
+  "generated": "2026-09-11T20:30:20Z",
   "meta": {
     "players_tracked": 61,
     "active_traders": 33,
@@ -17,7 +17,7 @@
       "label": "Insufficient data",
       "note": "Need 8+ active traders and 14+ days of history. Currently 33 traders / 7 days."
     },
-    "money_supply_players": 216653.62,
+    "money_supply_players": 216643.62,
     "money_supply_series": [
       [
         "2026-09-04",
@@ -49,7 +49,7 @@
       ],
       [
         "2026-09-11",
-        18303.62
+        18293.62
       ]
     ],
     "trade_volume_series": [
@@ -79,10 +79,10 @@
       ],
       [
         "2026-09-11",
-        31685.46
+        31695.46
       ]
     ],
-    "trade_volume_7d": 798545.98,
+    "trade_volume_7d": 798555.98,
     "server_shop_transactions": 300,
     "server_shop": {
       "transactions": 300,
@@ -195,7 +195,7 @@
       },
       {
         "name": "DatAriix",
-        "balance": 4804.57
+        "balance": 4794.57
       },
       {
         "name": "mooshierk",
@@ -227,11 +227,11 @@
       }
     ],
     "median": 2500.0,
-    "mean": 3551.7
+    "mean": 3551.53
   },
   "server": {
-    "checked": "2026-09-11T20:26:39Z",
-    "started_at": "2026-09-11T18:19:45Z",
+    "checked": "2026-09-11T20:30:20Z",
+    "started_at": "2026-09-11T18:19:47Z",
     "tps": 20.0
   },
   "nations": [
