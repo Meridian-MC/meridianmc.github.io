@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-11T19:49:49Z",
+  "generated": "2026-09-11T19:53:07Z",
   "meta": {
     "players_tracked": 61,
     "active_traders": 33,
@@ -17,7 +17,7 @@
       "label": "Insufficient data",
       "note": "Need 8+ active traders and 14+ days of history. Currently 33 traders / 7 days."
     },
-    "money_supply_players": 218013.62,
+    "money_supply_players": 217513.62,
     "money_supply_series": [
       [
         "2026-09-04",
@@ -49,7 +49,7 @@
       ],
       [
         "2026-09-11",
-        19663.62
+        18913.62
       ]
     ],
     "trade_volume_series": [
@@ -79,10 +79,10 @@
       ],
       [
         "2026-09-11",
-        30325.46
+        31075.46
       ]
     ],
-    "trade_volume_7d": 797185.98,
+    "trade_volume_7d": 797935.98,
     "server_shop_transactions": 300,
     "server_shop": {
       "transactions": 300,
@@ -155,7 +155,7 @@
       ]
     },
     "chest_shop_transactions": 0,
-    "gini": 0.454,
+    "gini": 0.453,
     "price_index": {
       "value": null,
       "series": [],
@@ -179,7 +179,7 @@
       },
       {
         "name": "JoshMilkFleas",
-        "balance": 12817.72
+        "balance": 12317.72
       },
       {
         "name": "BlackAdder83",
@@ -227,11 +227,11 @@
       }
     ],
     "median": 2500.0,
-    "mean": 3573.99
+    "mean": 3565.8
   },
   "server": {
-    "checked": "2026-09-11T19:49:49Z",
-    "started_at": "2026-09-11T18:19:45Z",
+    "checked": "2026-09-11T19:53:08Z",
+    "started_at": "2026-09-11T18:19:48Z",
     "tps": 20.0
   },
   "nations": [
