@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-11T17:54:15Z",
+  "generated": "2026-09-11T18:14:56Z",
   "meta": {
     "players_tracked": 60,
     "active_traders": 32,
@@ -17,7 +17,7 @@
       "label": "Insufficient data",
       "note": "Need 8+ active traders and 14+ days of history. Currently 32 traders / 7 days."
     },
-    "money_supply_players": 213818.8,
+    "money_supply_players": 215636.07,
     "money_supply_series": [
       [
         "2026-09-04",
@@ -49,7 +49,7 @@
       ],
       [
         "2026-09-11",
-        17968.8
+        19786.07
       ]
     ],
     "trade_volume_series": [
@@ -79,10 +79,10 @@
       ],
       [
         "2026-09-11",
-        19972.64
+        24099.91
       ]
     ],
-    "trade_volume_7d": 786833.16,
+    "trade_volume_7d": 790960.43,
     "server_shop_transactions": 300,
     "server_shop": {
       "transactions": 300,
@@ -155,7 +155,7 @@
       ]
     },
     "chest_shop_transactions": 0,
-    "gini": 0.442,
+    "gini": 0.444,
     "price_index": {
       "value": null,
       "series": [],
@@ -175,7 +175,7 @@
       },
       {
         "name": "Keanie__",
-        "balance": 13769.0
+        "balance": 14486.27
       },
       {
         "name": "JoshMilkFleas",
@@ -198,6 +198,10 @@
         "balance": 4758.52
       },
       {
+        "name": "DatAriix",
+        "balance": 4650.57
+      },
+      {
         "name": "st4tc",
         "balance": 4387.46
       },
@@ -218,20 +222,16 @@
         "balance": 4004.5
       },
       {
-        "name": "DatAriix",
-        "balance": 3550.57
-      },
-      {
         "name": "1RTR",
         "balance": 3216.94
       }
     ],
     "median": 2500.0,
-    "mean": 3563.65
+    "mean": 3593.93
   },
   "server": {
-    "checked": "2026-09-11T17:54:16Z",
-    "started_at": "2026-09-11T12:12:14Z",
+    "checked": "2026-09-11T18:14:57Z",
+    "started_at": "2026-09-11T18:10:14Z",
     "tps": 20.0
   },
   "nations": [
@@ -280,14 +280,6 @@
       "chunks": 22,
       "members": 6,
       "bank": 150.0,
-      "level": 0
-    },
-    {
-      "name": "Simojolu2's Camp",
-      "type": "camp",
-      "chunks": 9,
-      "members": 2,
-      "bank": 0.0,
       "level": 0
     },
     {
@@ -395,40 +387,34 @@
       "level": 0
     },
     {
+      "name": "AriannaBoh",
+      "type": "land",
+      "chunks": 1,
+      "members": 2,
+      "bank": 200.0,
+      "level": 0
+    },
+    {
       "name": "Entulho",
       "type": "land",
       "chunks": 0,
       "members": 2,
       "bank": 1400.0,
       "level": 0
-    },
-    {
-      "name": "AriannaBoh",
-      "type": "land",
-      "chunks": 0,
-      "members": 2,
-      "bank": 237.5,
-      "level": 0
     }
   ],
   "events": [
     {
       "type": "land",
-      "at": "2026-09-10T17:09:58Z",
-      "text": "Simojolu2's Camp was founded",
-      "owner": "Simojolu2"
+      "at": "2026-09-11T16:40:05Z",
+      "text": "AriannaBoh was founded",
+      "owner": "AriannaBoh"
     },
     {
       "type": "land",
       "at": "2026-09-10T13:51:47Z",
       "text": "Reach was founded",
       "owner": "DatAriix"
-    },
-    {
-      "type": "land",
-      "at": "2026-09-09T11:52:48Z",
-      "text": "AriannaBoh was founded",
-      "owner": "AriannaBoh"
     },
     {
       "type": "land",
@@ -531,6 +517,12 @@
       "at": "2026-09-05T20:58:53Z",
       "text": "Augustine was founded",
       "owner": "Augustine65480"
+    },
+    {
+      "type": "land",
+      "at": "2026-09-05T20:30:12Z",
+      "text": "klaksonik was founded",
+      "owner": "klaksonik"
     }
   ]
 }
