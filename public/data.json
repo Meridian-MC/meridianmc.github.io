@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-11T18:36:09Z",
+  "generated": "2026-09-11T18:41:24Z",
   "meta": {
     "players_tracked": 61,
     "active_traders": 33,
@@ -17,7 +17,7 @@
       "label": "Insufficient data",
       "note": "Need 8+ active traders and 14+ days of history. Currently 33 traders / 7 days."
     },
-    "money_supply_players": 218702.41,
+    "money_supply_players": 218621.91,
     "money_supply_series": [
       [
         "2026-09-04",
@@ -49,7 +49,7 @@
       ],
       [
         "2026-09-11",
-        20352.41
+        20271.91
       ]
     ],
     "trade_volume_series": [
@@ -79,10 +79,10 @@
       ],
       [
         "2026-09-11",
-        26241.25
+        29541.75
       ]
     ],
-    "trade_volume_7d": 793101.77,
+    "trade_volume_7d": 796402.27,
     "server_shop_transactions": 300,
     "server_shop": {
       "transactions": 300,
@@ -155,7 +155,7 @@
       ]
     },
     "chest_shop_transactions": 0,
-    "gini": 0.446,
+    "gini": 0.458,
     "price_index": {
       "value": null,
       "series": [],
@@ -182,6 +182,10 @@
         "balance": 12817.72
       },
       {
+        "name": "DatAriix",
+        "balance": 7010.57
+      },
+      {
         "name": "BlackAdder83",
         "balance": 5768.5
       },
@@ -192,10 +196,6 @@
       {
         "name": "BrodyIsConfused",
         "balance": 5530.5
-      },
-      {
-        "name": "DatAriix",
-        "balance": 5400.57
       },
       {
         "name": "mooshierk",
@@ -227,10 +227,10 @@
       }
     ],
     "median": 2500.0,
-    "mean": 3585.29
+    "mean": 3583.97
   },
   "server": {
-    "checked": "2026-09-11T18:36:09Z",
+    "checked": "2026-09-11T18:41:24Z",
     "started_at": "2026-09-11T18:19:45Z",
     "tps": 20.0
   },
