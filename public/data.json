@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-11T11:56:21Z",
+  "generated": "2026-09-11T12:20:03Z",
   "meta": {
     "players_tracked": 60,
     "active_traders": 32,
@@ -230,8 +230,8 @@
     "mean": 3574.18
   },
   "server": {
-    "checked": "2026-09-11T11:56:21Z",
-    "started_at": "2026-09-10T12:12:16Z",
+    "checked": "2026-09-11T12:20:03Z",
+    "started_at": "2026-09-11T12:12:13Z",
     "tps": 20.0
   },
   "nations": [
@@ -239,14 +239,14 @@
       "name": "Augustine Empire",
       "tag": null,
       "color": "#956BE8",
-      "mdi": 0.229,
+      "mdi": 0.204,
       "territory": 0.683,
       "population": 0.733,
-      "wealth": 0.005,
+      "wealth": 0.003,
       "activity": 1.0,
       "chunks": 41,
       "members": 11,
-      "treasury": 27228.43
+      "treasury": 17228.43
     }
   ],
   "lands": [
@@ -263,8 +263,8 @@
       "type": "land",
       "chunks": 37,
       "members": 8,
-      "bank": 23128.43,
-      "level": 1
+      "bank": 13128.43,
+      "level": 0
     },
     {
       "name": "Myndelea",
@@ -280,6 +280,22 @@
       "chunks": 22,
       "members": 6,
       "bank": 150.0,
+      "level": 0
+    },
+    {
+      "name": "Simojolu2's Camp",
+      "type": "camp",
+      "chunks": 9,
+      "members": 2,
+      "bank": 0.0,
+      "level": 0
+    },
+    {
+      "name": "Keanie__",
+      "type": "land",
+      "chunks": 7,
+      "members": 3,
+      "bank": 900.0,
       "level": 0
     },
     {
@@ -312,6 +328,14 @@
       "chunks": 4,
       "members": 3,
       "bank": 200.0,
+      "level": 0
+    },
+    {
+      "name": "Reach",
+      "type": "land",
+      "chunks": 4,
+      "members": 2,
+      "bank": 850.0,
       "level": 0
     },
     {
@@ -355,14 +379,6 @@
       "level": 0
     },
     {
-      "name": "Keanie__",
-      "type": "land",
-      "chunks": 1,
-      "members": 2,
-      "bank": 200.0,
-      "level": 0
-    },
-    {
       "name": "Arkalis",
       "type": "land",
       "chunks": 1,
@@ -379,23 +395,35 @@
       "level": 0
     },
     {
-      "name": "AriannaBoh",
-      "type": "land",
-      "chunks": 1,
-      "members": 2,
-      "bank": 200.0,
-      "level": 0
-    },
-    {
       "name": "Entulho",
       "type": "land",
       "chunks": 0,
       "members": 2,
       "bank": 1400.0,
       "level": 0
+    },
+    {
+      "name": "AriannaBoh",
+      "type": "land",
+      "chunks": 0,
+      "members": 2,
+      "bank": 237.5,
+      "level": 0
     }
   ],
   "events": [
+    {
+      "type": "land",
+      "at": "2026-09-10T17:09:58Z",
+      "text": "Simojolu2's Camp was founded",
+      "owner": "Simojolu2"
+    },
+    {
+      "type": "land",
+      "at": "2026-09-10T13:51:47Z",
+      "text": "Reach was founded",
+      "owner": "DatAriix"
+    },
     {
       "type": "land",
       "at": "2026-09-09T11:52:48Z",
@@ -503,12 +531,6 @@
       "at": "2026-09-05T20:58:53Z",
       "text": "Augustine was founded",
       "owner": "Augustine65480"
-    },
-    {
-      "type": "land",
-      "at": "2026-09-05T20:30:12Z",
-      "text": "klaksonik was founded",
-      "owner": "klaksonik"
     }
   ]
 }
