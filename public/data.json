@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-12T01:52:45Z",
+  "generated": "2026-09-12T01:56:43Z",
   "meta": {
     "players_tracked": 61,
     "active_traders": 34,
@@ -17,7 +17,7 @@
       "label": "Insufficient data",
       "note": "Need 8+ active traders and 14+ days of history. Currently 34 traders / 7 days."
     },
-    "money_supply_players": 223178.83,
+    "money_supply_players": 206108.33,
     "money_supply_series": [
       [
         "2026-09-04",
@@ -53,7 +53,7 @@
       ],
       [
         "2026-09-12",
-        24828.83
+        7758.33
       ]
     ],
     "trade_volume_series": [
@@ -87,10 +87,10 @@
       ],
       [
         "2026-09-12",
-        20.0
+        19429.5
       ]
     ],
-    "trade_volume_7d": 792172.35,
+    "trade_volume_7d": 811581.85,
     "server_shop_transactions": 300,
     "server_shop": {
       "transactions": 300,
@@ -163,7 +163,7 @@
       ]
     },
     "chest_shop_transactions": 0,
-    "gini": 0.46,
+    "gini": 0.446,
     "price_index": {
       "value": null,
       "series": [],
@@ -176,10 +176,6 @@
       {
         "name": "Luko_Landino",
         "balance": 23003.57
-      },
-      {
-        "name": "Keanie__",
-        "balance": 18477.34
       },
       {
         "name": "ACRI_Vanguard",
@@ -195,7 +191,7 @@
       },
       {
         "name": "st4tc",
-        "balance": 6960.16
+        "balance": 8129.66
       },
       {
         "name": "BlackAdder83",
@@ -232,15 +228,19 @@
       {
         "name": "ieru",
         "balance": 4004.5
+      },
+      {
+        "name": "Simojolu2",
+        "balance": 3000.0
       }
     ],
     "median": 2500.0,
-    "mean": 3658.67
+    "mean": 3378.83
   },
   "server": {
-    "checked": "2026-09-12T01:52:45Z",
+    "checked": "2026-09-12T01:56:43Z",
     "started_at": "2026-09-11T18:19:47Z",
-    "tps": 19.93
+    "tps": 20.0
   },
   "nations": [
     {
