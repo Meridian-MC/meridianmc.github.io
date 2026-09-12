@@ -22,7 +22,6 @@ export const FAQ_CATEGORIES: FaqCategory[] = [
   { id: "starting", title: "Getting started", sub: "Connecting, and your first hour." },
   { id: "world", title: "The world", sub: "The map, the dimensions, and how combat is set up." },
   { id: "economy", title: "Economy", sub: "Money, the market, and land costs. Live figures are on the Economy page." },
-  { id: "recipes", title: "Recipes", sub: "Custom crafting recipes added on top of vanilla." },
 ];
 
 export const FAQ: FaqEntry[] = [
@@ -35,7 +34,7 @@ export const FAQ: FaqEntry[] = [
   {
     category: "world",
     question: "Is the End open?",
-    answer: `<p><span class="short">No</span>, the End is closed. There are, however, custom recipes for End items and blocks &mdash; see the <a href="/faq#recipes">Recipes</a> section.</p>`,
+    answer: `<p><span class="short">No</span>, the End is closed. There are, however, custom recipes for End items and blocks &mdash; see the <a href="/recipes">Recipes</a> page.</p>`,
   },
   {
     category: "world",
@@ -93,127 +92,54 @@ export const FAQ: FaqEntry[] = [
   {
     category: "economy",
     question: "What is the currency?",
-    answer: `<p>One currency, written <code>$</code>, not tied to any item. Everyone starts with <span class="short">$2,500</span>. Check your balance with <code>/balance</code>; send money with <code>/pay &lt;player&gt; &lt;amount&gt;</code>.</p>`,
+    answer: `<p>Gold, written <strong>G</strong>. It is item-backed: 1 gold ingot is <span class="short">1 G</span>. There is no personal bank, so what you are carrying and what is in your land's bank <em>is</em> your balance.</p>`,
   },
   {
     category: "economy",
     question: "How do I make money?",
-    answer: `<p>Three ways, roughly in order of how much they matter:</p>
+    answer: `<p>Three ways:</p>
 <ul>
-  <li><strong>Selling to other players.</strong> Chest shops are the real economy. Run <code>/shops</code> to see every land tagged as a shop, work out what is in demand, and produce it. To open your own, left-click a chest while holding the item you want to sell.</li>
-  <li><strong>Voting.</strong> Vote on our four listing sites once a day each. Every vote pays a <span class="short">Copper Crate</span>, and milestones at 25, 50 and 100 votes pay bigger ones. It is the only income that costs you nothing but a minute.</li>
-  <li><strong>The Sell counter.</strong> The server buys raw metals and minerals (iron, gold, copper, coal, redstone, lapis, quartz, and more) at a deliberately low floor price. It is a safety net so you are never fully broke, not a place to get rich. Players will pay more.</li>
+  <li><strong>Mining.</strong> Gold ore is the only real source of new gold entering the economy.</li>
+  <li><strong>Voting.</strong> Vote on our four listing sites once a day each for crates.</li>
+  <li><strong>Selling to other players.</strong> Chest shops are the player market. Run <code>/shops</code> to see every land tagged as a shop.</li>
 </ul>`,
   },
   {
     category: "economy",
     question: "Is there a server shop?",
-    answer: `<p>Three counters in <code>/shop</code>:</p>
-<ul>
-  <li><strong>Buy:</strong> basics, End-only materials since the End is closed (ender pearls, shulker shells, end stone, end rods, purpur, chorus fruit), every armor trim smithing template, the rarest potion ingredients (phantom membrane, turtle scute, rabbit's foot), and the <strong>Enchantment Extractor</strong>. <span class="short">Buy-only</span>, priced at a premium so buying from a player is always cheaper where that's an option.</li>
-  <li><strong>Sell:</strong> the server <span class="short">buys</span> raw metals and minerals at a floor price. Sell-only, and prices now <span class="short">drift down</span> the more of something the server has bought, so flooding a single ore stops paying.</li>
-  <li><strong>Crates:</strong> Iron, Gold and Diamond crates, added straight to <code>/crates</code>.</li>
-</ul>
-<p>Everything interesting (diamonds, gear, enchanted books, potions, mob drops, elytra, dragon trophies) is <span class="short">player market only</span>. The server never buys or sells it.</p>`,
+    answer: `<p><span class="short">No.</span> Everything trades player-to-player through chest shops. The server never buys or sells anything.</p>`,
   },
   {
     category: "economy",
     question: "How much does land cost?",
-    answer: `<p>Founding a land with <code>/lands create</code> is free and includes your <span class="short">first chunk free</span>. After that:</p>
+    answer: `<p>Founding a land with <code>/lands create</code> includes your <span class="short">first chunk free</span>. After that:</p>
 <ul>
-  <li>Every chunk after that costs a flat <span class="short">$250</span>, no matter how big your land gets. How many you can claim is capped separately: <span class="short">7 chunks</span> alone, plus <span class="short">7 more</span> for every player you trust.</li>
-  <li>Weekly upkeep is <span class="short">$100 per chunk</span>, taken from the shared land bank.</li>
-  <li>Tiers and nation membership change these numbers. The full breakdown is in the <a href="/lands">Lands guide</a>.</li>
+  <li>Every chunk after that costs a flat <span class="short">5 G</span>.</li>
+  <li>Weekly upkeep is <span class="short">2 G per chunk</span>, taken from the land bank.</li>
+  <li>Tiers change these numbers. The full breakdown is in the <a href="/lands">Claims guide</a>.</li>
 </ul>`,
   },
   {
     category: "economy",
     id: "voting-q",
     question: "How does voting work, and what do crates give?",
-    answer: `<p>Run <code>/vote</code> for the links. Each of the four listing sites can be voted on <span class="short">once every 24 hours</span>, and every vote pays one <strong>Copper Crate</strong>. Hitting 25, 50 and 100 total votes pays an Iron, Gold and Diamond crate respectively.</p>
-<p>Crates never take an inventory slot. They are held for you, and you open them from <code>/crates</code> whenever you like. Prizes run from diamonds, gold and ender pearls up to armour trims, shulker shells, the netherite template, and <strong>Mending books</strong>. which matter because villager book trades are switched off, so Mending is genuinely scarce here. Every tier also carries a rare <span class="short">cash jackpot</span> worth more than the crate itself.</p>
-<p>Iron, Gold and Diamond crates are also sold in <code>/shop</code> if you would rather buy than wait. Two further tiers, <strong>Quartz</strong> and the limited-edition <strong>Nether</strong> crate, unlock on <span class="short">Friday, September 11</span> for the Nether Event.</p>`,
+    answer: `<p>Run <code>/vote</code> for the links. Each of the four listing sites can be voted on <span class="short">once every 24 hours</span>, and every vote pays a crate. Voting milestones pay better crates the more you vote.</p>
+<p>Crates never take an inventory slot. They are held for you, and you open them from <code>/crates</code> whenever you like.</p>`,
   },
   {
     category: "economy",
-    id: "ranks-q",
-    question: "What are ranks, and what do they give?",
-    answer: `<p>Four permanent upgrades, bought with <code>/ranks</code>. You are only ever charged the difference between your current tier and the one you are buying, so reaching a tier costs the same whether you climb the ladder or not, and no lower purchase is ever wasted.</p>
-<ul>
-  <li><strong>Citizen</strong>. <span class="short">$12,000</span>. 5 homes, 12-chunk land base, grey prefix.</li>
-  <li><strong>Landholder</strong>. <span class="short">$30,000</span>. 7 homes, 17-chunk base, green prefix.</li>
-  <li><strong>Magnate</strong>. <span class="short">$60,000</span>. 10 homes, 22-chunk base, gold prefix.</li>
-  <li><strong>Sovereign</strong>. <span class="short">$120,000</span>. 15 homes, 30-chunk base, purple prefix.</li>
-</ul>
-<p>The chunk figure is a <span class="short">base</span>, not a cap. A land's real limit is the owner's base plus <span class="short">7 per trusted member</span>, and only the owner's rank sets the base, so a Landholder with three trusted players can claim 38 chunks.</p>
-<p>Prices are deliberately steep. Ranks exist to pull large balances out of circulation, not as early progression.</p>`,
+    question: "Can I extract enchantments from my items?",
+    answer: `<p>Yes, that is what <a href="/#extract">ExtractableEnchantments</a> is for. Craft an Enchantment Extractor, then drag it onto an enchanted item to pull one random enchantment off as a book. See the <a href="/recipes">Recipes</a> page for the exact crafting grid.</p>`,
   },
   {
     category: "economy",
-    id: "ore-pricing-q",
-    question: "Why do ore prices keep changing?",
-    answer: `<p>The Sell counter uses <strong>dynamic pricing</strong>. Every unit the server buys nudges that item's price down a little, so the more of one ore the server has absorbed, the less the next stack pays.</p>
-<p>The effect is deliberately gentle at normal volumes. Selling a stack of 64 moves copper about <span class="short">1%</span> and iron about <span class="short">0.5%</span>, you will not notice it. It only bites at industrial scale, which is the point: it stops any single item being farmed into an unlimited money printer without punishing ordinary mining.</p>
-<p>Each ore has its own floor, so prices cannot fall forever. <strong>Emerald</strong> is the tightest, because villager crop trading makes it the one ore obtainable in unlimited quantity without mining.</p>`,
-  },
-  {
-    category: "economy",
-    id: "vote-shop-q",
-    question: "What is the vote shop?",
-    answer: `<p>Every vote pays <span class="short">1 vote point</span> as well as a Copper Crate. With four listing sites that is a maximum of <span class="short">4 points a day</span>, so everything in <code>/voteshop</code> is really priced in days of voting.</p>
-<ul>
-  <li>8 Ender Pearls, 3 points, about a day</li>
-  <li>4 Golden Apples, 4 points</li>
-  <li>Iron Crate, 6 points</li>
-  <li>Enchantment Extractor, 10 points</li>
-  <li>Gold Crate, 16 points, about four days</li>
-  <li>Netherite Template, 30 points</li>
-  <li>Diamond Crate, 35 points, about nine days</li>
-</ul>
-<p>Nothing in the vote shop pays cash and nothing it gives can be sold to the server in bulk, so voting can never mint currency. Mending is deliberately absent: it stays a crate drop so it keeps its scarcity.</p>`,
+    question: "Is scamming allowed?",
+    answer: `<p>No. Taking payment and not delivering, fake middlemen, and &ldquo;hold this for me&rdquo; are all <a href="/rules">Rulebook</a> violations and are actioned. Scamming through trust is explicitly banned.</p>
+<p>A deal that both sides agreed to is a different thing. Trades between players are settled between players, not by staff, so use a chest shop for anything you want guaranteed, or ask staff to middleman a large one.</p>`,
   },
   {
     category: "economy",
     question: "How should I price my items?",
     answer: `<p>However you want. There is no fixed price list for anything traded player-to-player. Check a few shops, see what people charge, and price against that. The <a href="/economy#prices">Economy page</a> tracks the median for common goods.</p>`,
-  },
-  {
-    category: "economy",
-    question: "Can I extract enchantments from my items?",
-    answer: `<p>Yes, that is what <a href="/#extract">ExtractableEnchantments</a> is for. Craft an Enchantment Extractor from four experience bottles, four lapis blocks, and a book, then drag it onto an enchanted item to pull one random enchantment off as a book. It always works and you keep the book, so a good enchantment on gear you are replacing becomes something to re-use or sell.</p>`,
-  },
-  {
-    category: "economy",
-    question: "Is scamming allowed?",
-    answer: `<p>No. Taking payment and not delivering, fake middlemen, and &ldquo;hold this for me&rdquo; are all <a href="/rules">Rulebook</a> violations and are actioned.</p>
-<p>A deal that both sides agreed to is a different thing. Trades between players are settled between players, not by staff, so use a chest shop for anything you want guaranteed, or ask staff to middleman a large one.</p>`
-  },
-
-
-  // ---- Recipes ----
-  {
-    category: "recipes",
-    question: "How do I make End Stone?",
-    answer: `<p>8 Stone surrounding 1 Ender Pearl.</p><div class="craft-recipe"><div class="craft-grid"><div class="craft-cell">Stone</div><div class="craft-cell">Stone</div><div class="craft-cell">Stone</div><div class="craft-cell">Stone</div><div class="craft-cell">Ender Pearl</div><div class="craft-cell">Stone</div><div class="craft-cell">Stone</div><div class="craft-cell">Stone</div><div class="craft-cell">Stone</div></div><span class="craft-arrow">&rarr;</span><div class="craft-result">End Stone<span class="craft-result-amt">&times;8</span></div></div>`,
-  },
-  {
-    category: "recipes",
-    question: "How do I make Chorus Fruit?",
-    answer: `<p>1 Ender Pearl + 1 Apple, shapeless.</p><div class="craft-recipe"><div class="craft-grid"><div class="craft-cell">Ender Pearl</div><div class="craft-cell">Apple</div><div class="craft-cell empty"></div><div class="craft-cell empty"></div><div class="craft-cell empty"></div><div class="craft-cell empty"></div><div class="craft-cell empty"></div><div class="craft-cell empty"></div><div class="craft-cell empty"></div></div><span class="craft-arrow">&rarr;</span><div class="craft-result">Chorus Fruit<span class="craft-result-amt">&times;4</span></div></div>`,
-  },
-  {
-    category: "recipes",
-    question: "How do I make a Chorus Flower?",
-    answer: `<p>4 Chorus Fruit, shapeless.</p><div class="craft-recipe"><div class="craft-grid"><div class="craft-cell">Chorus Fruit</div><div class="craft-cell">Chorus Fruit</div><div class="craft-cell empty"></div><div class="craft-cell">Chorus Fruit</div><div class="craft-cell">Chorus Fruit</div><div class="craft-cell empty"></div><div class="craft-cell empty"></div><div class="craft-cell empty"></div><div class="craft-cell empty"></div></div><span class="craft-arrow">&rarr;</span><div class="craft-result">Chorus Flower</div></div>`,
-  },
-  {
-    category: "recipes",
-    question: "How do I make an Enchanted Golden Apple?",
-    answer: `<p>8 Gold Blocks surrounding 1 Apple.</p><div class="craft-recipe"><div class="craft-grid"><div class="craft-cell">Gold Block</div><div class="craft-cell">Gold Block</div><div class="craft-cell">Gold Block</div><div class="craft-cell">Gold Block</div><div class="craft-cell">Apple</div><div class="craft-cell">Gold Block</div><div class="craft-cell">Gold Block</div><div class="craft-cell">Gold Block</div><div class="craft-cell">Gold Block</div></div><span class="craft-arrow">&rarr;</span><div class="craft-result">Enchanted Golden Apple</div></div>`,
-  },
-  {
-    category: "recipes",
-    question: "How do I make an Enchantment Extractor?",
-    answer: `<p>Bricks and Lapis Blocks surrounding a Book. Drag the finished Extractor onto an enchanted item to pull one random enchantment off as a book.</p><div class="craft-recipe"><div class="craft-grid"><div class="craft-cell">Brick</div><div class="craft-cell">Lapis Block</div><div class="craft-cell">Brick</div><div class="craft-cell">Lapis Block</div><div class="craft-cell">Book</div><div class="craft-cell">Lapis Block</div><div class="craft-cell">Brick</div><div class="craft-cell">Lapis Block</div><div class="craft-cell">Brick</div></div><span class="craft-arrow">&rarr;</span><div class="craft-result">Enchantment Extractor</div></div>`,
   },
 ];

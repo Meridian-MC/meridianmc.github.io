@@ -13,18 +13,18 @@ import { SERVER_ADDRESS, DISCORD_INVITE_CODE, DISCORD_INVITE_URL, MAP_URL, SERVE
 // reads far better than fake asymmetry around images that do not exist yet.
 // The page gets its one image moment from the world map below, which is real.
 const features = [
-  { icon: "crown", title: "Nations", href: "/lands", cta: "Lands guide",
-    line: "Claim chunks to protect what you build, then group lands into nations with capitals, taxes and diplomacy." },
-  { icon: "emerald", title: "Economy", href: "/economy", cta: "Live data",
-    line: "Chest shops set most prices. The server shop buys ore at a floor price that falls permanently as it buys." },
-  { icon: "diamond_sword", title: "Combat", href: "/rules#pvp", cta: "The rules",
-    line: "Crystal PvP and one-shot setups are banned. There is no keep-inventory, and your drops are yours alone for thirty minutes." },
-  { icon: "enchanted_book", title: "Vanilla+", href: "/faq", cta: "FAQ",
-    line: "Pull an enchantment off a tool as a book, brew with fermenting and barrel aging, bottle experience and trade it." },
-  { icon: "trial_key", title: "Rewards", href: "/vote", cta: "How voting works",
-    line: "Vote on four sites a day and open crates for gear, materials and templates. Neither pays cash." },
+  { icon: "crown", title: "Claims", href: "/lands", cta: "Claims",
+    line: "Create lands and nations with banks, upkeep and diplomacy." },
+  { icon: "emerald", title: "Economy", href: "/economy", cta: "Economy",
+    line: "Powered by Gold. Mine gold, trade with player shops, and deposit into land banks." },
+  { icon: "diamond_sword", title: "PvP", href: "/rules#interaction", cta: "Server Rules",
+    line: "A diverse community of both skilled and entry-level PvPers." },
+  { icon: "enchanted_book", title: "Vanilla+", href: "/recipes", cta: "Recipes",
+    line: "Custom recipes and brewing add-ons." },
+  { icon: "trial_key", title: "Rewards", href: "/vote", cta: "Voting",
+    line: "Vote everyday on four sites for gold and other rewards." },
   { icon: "crossbow", title: "Wars", href: "/war", cta: "Wars document",
-    line: "Wars are declared through staff and fought over capture points until one side yields." },
+    line: "Scheduled campaigns spanning up to 48 hours, with points earned by killing and capturing enemy territory." },
 ];
 ---
 
@@ -95,7 +95,7 @@ const features = [
          squaremap render of the actual world, with the live totals read off
          the same server beside it. -->
     <section class="pt-20" id="world">
-      <h2 class="font-display text-[1.42rem] tracking-[-0.015em]">One world, 10,000 blocks across</h2>
+      <h2 class="font-display text-[1.42rem] tracking-[-0.015em]">World Map</h2>
       <div class="step-rule mt-4"></div>
 
       <div class="worldshow mt-6">

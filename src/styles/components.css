@@ -1312,47 +1312,60 @@ main {
   .reg-row.is-featured { padding: 18px 16px; }
 }
 
-/* Minecraft-style crafting grid, used to display custom recipes on the FAQ. */
+/* Minecraft-style crafting grid, used to display custom recipes. Colors match
+   the actual vanilla inventory GUI (#8b8b8b panel/slots, #373737 / #ffffff
+   bevel), not the site's own dark theme, so it reads as a real crafting
+   table rather than a themed abstraction. */
 .craft-recipe { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; margin: 12px 0 6px; }
 .craft-grid {
   display: grid;
-  grid-template-columns: repeat(3, 38px);
-  grid-template-rows: repeat(3, 38px);
-  gap: 3px;
-  background: var(--border);
-  padding: 3px;
-  border-radius: 5px;
+  grid-template-columns: repeat(3, 36px);
+  grid-template-rows: repeat(3, 36px);
+  gap: 2px;
+  background: #8b8b8b;
+  padding: 8px;
+  box-shadow: inset 2px 2px 0 #fff, inset -2px -2px 0 #373737;
   flex: none;
 }
 .craft-cell {
-  background: var(--bg-1);
+  background: #8b8b8b;
+  box-shadow: inset 1px 1px 0 #373737, inset -1px -1px 0 #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 0.54rem;
+  line-height: 1.1;
+  font-weight: 600;
+  color: #1e1e1e;
+  padding: 2px;
+}
+.craft-cell.empty { color: transparent; }
+.craft-arrow { color: var(--text-3); font-size: 1.4rem; flex: none; }
+.craft-result-wrap {
+  background: #8b8b8b;
+  padding: 8px;
+  box-shadow: inset 2px 2px 0 #fff, inset -2px -2px 0 #373737;
+  flex: none;
+}
+.craft-result {
+  width: 36px;
+  height: 36px;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
   font-size: 0.56rem;
-  line-height: 1.15;
-  color: var(--text-2);
-  padding: 2px;
-  border-radius: 2px;
-}
-.craft-cell.empty { opacity: 0.35; }
-.craft-arrow { color: var(--text-3); font-size: 1.4rem; flex: none; }
-.craft-result {
-  width: 38px;
-  height: 38px;
-  flex: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  font-size: 0.58rem;
-  line-height: 1.15;
-  color: var(--text);
-  font-weight: 600;
-  background: var(--bg-1);
-  border: 1px solid var(--border);
-  border-radius: 5px;
+  line-height: 1.1;
+  font-weight: 700;
+  color: #1e1e1e;
+  background: #8b8b8b;
+  box-shadow: inset 1px 1px 0 #373737, inset -1px -1px 0 #fff;
   padding: 2px;
 }
-.craft-result-amt { display: block; font-weight: 400; font-size: 0.68rem; color: var(--text-3); margin-top: 1px; }
+.craft-result-amt { display: block; font-weight: 600; font-size: 0.66rem; color: #3a3a3a; margin-top: 1px; }
+
+.recipe-list { display: flex; flex-direction: column; gap: 6px; }
+.recipe-item { padding: 22px 0; border-bottom: 1px solid var(--border); }
+.recipe-item:last-child { border-bottom: none; }
+.recipe-item h2 { font-size: 1.1rem; margin: 0 0 4px; }

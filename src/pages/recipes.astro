@@ -1,0 +1,67 @@
+---
+import Base from "../layouts/Base.astro";
+
+const recipes = [
+  {
+    title: "End Stone",
+    note: "8 Stone surrounding 1 Ender Pearl.",
+    cells: ["Stone","Stone","Stone","Stone","Ender Pearl","Stone","Stone","Stone","Stone"],
+    result: "End Stone", amount: 8,
+  },
+  {
+    title: "Chorus Fruit",
+    note: "1 Ender Pearl + 1 Apple, shapeless.",
+    cells: ["Ender Pearl","Apple","","","","","","",""],
+    result: "Chorus Fruit", amount: 4,
+  },
+  {
+    title: "Chorus Flower",
+    note: "4 Chorus Fruit, shapeless.",
+    cells: ["Chorus Fruit","Chorus Fruit","","Chorus Fruit","Chorus Fruit","","","",""],
+    result: "Chorus Flower", amount: 1,
+  },
+  {
+    title: "Enchanted Golden Apple",
+    note: "8 Gold Blocks surrounding 1 Apple.",
+    cells: ["Gold Block","Gold Block","Gold Block","Gold Block","Apple","Gold Block","Gold Block","Gold Block","Gold Block"],
+    result: "Enchanted Golden Apple", amount: 1,
+  },
+  {
+    title: "Enchantment Extractor",
+    note: "Bricks and Lapis Blocks surrounding a Book. Drag the finished Extractor onto an enchanted item to pull one random enchantment off as a book.",
+    cells: ["Brick","Lapis Block","Brick","Lapis Block","Book","Lapis Block","Brick","Lapis Block","Brick"],
+    result: "Enchantment Extractor", amount: 1,
+  },
+];
+---
+
+<Base
+  title="Recipes · Meridian"
+  description="Custom crafting recipes running on Meridian, on top of vanilla: End Stone, Chorus Fruit, Chorus Flower, Enchanted Golden Apples, and the Enchantment Extractor."
+  path="/recipes"
+>
+<main class="doc">
+  <h1>Recipes</h1>
+  <p class="lead">Custom crafting recipes added on top of vanilla. Everything else crafts the normal way.</p>
+
+  <div class="recipe-list">
+    {recipes.map((r) => (
+      <section class="recipe-item">
+        <h2>{r.title}</h2>
+        <p class="as-sub">{r.note}</p>
+        <div class="craft-recipe">
+          <div class="craft-grid">
+            {r.cells.map((c) => (
+              c === "" ? <div class="craft-cell empty"></div> : <div class="craft-cell">{c}</div>
+            ))}
+          </div>
+          <span class="craft-arrow">&rarr;</span>
+          <div class="craft-result-wrap">
+            <div class="craft-result">{r.result}{r.amount > 1 && <span class="craft-result-amt">&times;{r.amount}</span>}</div>
+          </div>
+        </div>
+      </section>
+    ))}
+  </div>
+</main>
+</Base>

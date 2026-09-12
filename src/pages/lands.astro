@@ -18,44 +18,39 @@ const sections = [
 >
 <main class="doc">
   <h1>Claims</h1>
-  <p class="lead">A guide to claiming land on Meridian. It covers how you claim, how land banks and upkeep work, how lands unlock tiers, how they combine into nations, and what happens to a nation that loses a war of vassalage.</p>
 
   <Toc sections={sections} />
 
   <h2 id="lands"><span class="num">1</span>Lands</h2>
   <ol>
-    <li>Run <code>/lands create &lt;name&gt;</code> to found your land. The first chunk is free; every chunk after that costs a flat <strong>5 G</strong>.</li>
-    <li>You can own only <strong>one land at a time</strong>. If you don't own a land, you may be trusted in <strong>one</strong> other land. If you do own one, you cannot be trusted in any other &mdash; ownership and trust don't stack.</li>
+    <li>Run <code>/lands create &lt;name&gt;</code> to found your land. The first chunk is free. Every chunk after that costs a flat <strong>5 G</strong>.</li>
+    <li>You can only own and be trusted in one land at a time.</li>
     <li>When naming your land you can use a hex code to set its color on the world map, for example <code>&lt;#FF5555&gt;ExampleLand</code>. Minecraft only recognizes a specific set of hex colors.</li>
-    <li>Your land has its own shared bank, separate from any player's inventory. Claim costs and upkeep are paid from this bank, and any trusted member can deposit into it. <strong>There is no personal bank to fall back on</strong> &mdash; gold has to actually be sitting in the land bank.</li>
-    <li>Every land pays weekly upkeep on its claimed chunks, at <strong>2 G per chunk</strong>.</li>
-    <li>Larger lands cost more to maintain. Before you claim aggressively, make sure your land has the gold to support it.</li>
+    <li>Your land has a shared bank that is used to store gold and pay upkeep and claim costs. Upkeep is charged weekly at <strong>2 G per chunk</strong>.</li>
     <li>You can rent or sell sub-areas of your land to other players without trusting them.</li>
-    <li>Lands unlock tiers purely by how much gold is sitting in the land bank &mdash; trusted-member count no longer matters. Once a tier is earned, it's never lost, even if the balance later drops.</li>
+    <li>Unlock land tiers based on the amount of gold sitting in your land bank.</li>
   </ol>
 
   <div class="tier-wrap">
     <table class="tier-table">
       <thead>
-        <tr><th>Tier</th><th>Ruler</th><th>Land bank</th><th>Grants</th></tr>
+        <tr><th>Tier</th><th>Ruler</th><th>Balance</th><th>Grants</th></tr>
       </thead>
       <tbody>
-        <tr><td>Manor</td><td>Lord</td><td class="num-col">&ndash;</td><td>Starting tier &mdash; 7 chunks</td></tr>
+        <tr><td>Manor</td><td>Lord</td><td class="num-col">&ndash;</td><td>Starting tier (7 chunks)</td></tr>
         <tr><td>County</td><td>Count</td><td class="num-col">50 G</td><td>+5 chunks (12 total)</td></tr>
         <tr><td>Duchy</td><td>Duke</td><td class="num-col">100 G</td><td>+13 chunks (20 total)</td></tr>
         <tr><td>Grand Duchy</td><td>Grand Duke</td><td class="num-col">400 G</td><td>+23 chunks (30 total)</td></tr>
       </tbody>
     </table>
   </div>
-  <p class="tier-note">The gold has to be sitting in the land bank, not in anyone's pocket or a chest. Tiers stack: a Grand Duchy carries every grant below it. Upkeep stops applying to the server entirely once your land joins a nation, because the land then pays tax to the nation instead.</p>
 
   <h2 id="nations"><span class="num">2</span>Nations</h2>
   <ol>
-    <li>Only a land that has reached <strong>Grand Duchy</strong> can found a nation, for <strong>100 G</strong>.</li>
-    <li>When a land joins a nation it stops paying upkeep to the server and instead pays tax directly to the nation. The nation's ruler sets that rate.</li>
-    <li>In turn, the nation owes its own upkeep to the server, at <strong>1 G per chunk</strong> across the combined total of its lands.</li>
-    <li>Relations between nations are publicly tracked in-game.</li>
-    <li>Nations advance through their own tiers based purely on how many lands they have &mdash; no gold or member-count requirement.</li>
+    <li>Nations can be created by a land for a price of <strong>100 G</strong>. The Grand Duchy tier is required for a land to create a nation.</li>
+    <li>When a land joins a nation it stops paying upkeep to the server and instead pays tax directly to the nation. The tax rate is set by the nation's owner.</li>
+    <li>The nation itself owes upkeep to the server at <strong>1 G per chunk</strong> across the combined total of its lands.</li>
+    <li>Nations can advance in tiers based on how many lands they have.</li>
   </ol>
 
   <div class="tier-wrap">
@@ -70,7 +65,6 @@ const sections = [
       </tbody>
     </table>
   </div>
-  <p class="tier-note">The capital doesn't count toward the lands requirement &mdash; a Kingdom needs 3 other member lands beyond it, an Empire needs 5. A nation is a commitment to a tax base that can support its members, not a title bought once.</p>
 
   <h2 id="vassals"><span class="num">3</span>Vassals</h2>
   <ol>
