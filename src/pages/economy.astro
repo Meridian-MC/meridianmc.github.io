@@ -10,7 +10,6 @@ import Base from "../layouts/Base.astro";
 >
 <main class="doc">
   <h1>Economy</h1>
-  <p class="lead">A live read on the Meridian economy, rebuilt from server data. See the <a href="/faq#economy">FAQ</a> for how the economy works.</p>
   <div class="data-stale" data-stale hidden></div>
 
   <div class="analytics" data-analytics>
@@ -19,41 +18,9 @@ import Base from "../layouts/Base.astro";
          figure appears exactly once, with the chart it belongs to. -->
     <section id="flow">
       <h2>How money works</h2>
-      <p class="as-sub">Where currency enters the economy and where it is destroyed. Everything else only moves money between players.</p>
-      <div class="flow-grid">
-        <div class="flow-col flow-source">
-          <h3>Sources</h3>
-          <div class="flow-item"><span class="f-lab">Starting balance</span><span class="f-val">$2,500</span><span class="f-note">once, per new player</span></div>
-          <div class="flow-item"><span class="f-lab">Voting</span><span class="f-val">no cash</span><span class="f-note">pays a crate and a vote point, deliberately never money</span></div>
-          <div class="flow-item"><span class="f-lab">Sell counter</span><span class="f-val">floor price</span><span class="f-note">raw metals and minerals, marked down permanently as it buys</span></div>
-        </div>
-        <div class="flow-col flow-sink">
-          <h3>Sinks</h3>
-          <div class="flow-item"><span class="f-lab">Land claims</span><span class="f-val">$250/chunk</span><span class="f-note">flat, first chunk free</span></div>
-          <div class="flow-item"><span class="f-lab">Land upkeep</span><span class="f-val">$100/chunk</span><span class="f-note">weekly, per claimed chunk</span></div>
-          <div class="flow-item"><span class="f-lab">Nation founding</span><span class="f-val">$35,000</span><span class="f-note">once</span></div>
-          <div class="flow-item"><span class="f-lab">Nation upkeep</span><span class="f-val">$40/chunk</span><span class="f-note">weekly, across all member lands</span></div>
-          <div class="flow-item"><span class="f-lab">Buy counter</span><span class="f-val">premium price</span><span class="f-note">50 items, priced above the player market on purpose</span></div>
-          <div class="flow-item"><span class="f-lab">Crates</span><span class="f-val">$1,000 / $2,800 / $6,500</span><span class="f-note">Iron, Gold and Diamond. Cash back is a rare jackpot</span></div>
-          <div class="flow-item"><span class="f-lab">Ranks</span><span class="f-val">$12,000 to $120,000</span><span class="f-note">Citizen, Landholder, Magnate, Sovereign</span></div>
-        </div>
-      </div>
-
-      <h3 id="dynamic">Dynamic pricing</h3>
-      <p class="as-sub">Every unit the Sell counter buys lowers that item's price, and it does not recover. The floor is permanent.</p>
-      <div class="itable-wrap">
-        <table class="itable">
-          <thead>
-            <tr><th>Item</th><th class="num-col">Price floor</th><th class="num-col">Units to reach it</th></tr>
-          </thead>
-          <tbody>
-            <tr><td><span class="mc-icos"><img class="mc-ico" src="/assets/mc/emerald.png" alt="" width="18" height="18" /></span>Emerald</td><td class="num-col">65%</td><td class="num-col">1,077</td></tr>
-            <tr><td><span class="mc-icos"><img class="mc-ico" src="/assets/mc/raw_copper.png" alt="" width="18" height="18" /><img class="mc-ico" src="/assets/mc/copper_ingot.png" alt="" width="18" height="18" /><img class="mc-ico" src="/assets/mc/charcoal.png" alt="" width="18" height="18" /></span>Copper, charcoal</td><td class="num-col">75%</td><td class="num-col">1,438</td></tr>
-            <tr><td><span class="mc-icos"><img class="mc-ico" src="/assets/mc/raw_iron.png" alt="" width="18" height="18" /><img class="mc-ico" src="/assets/mc/iron_ingot.png" alt="" width="18" height="18" /><img class="mc-ico" src="/assets/mc/raw_gold.png" alt="" width="18" height="18" /><img class="mc-ico" src="/assets/mc/gold_ingot.png" alt="" width="18" height="18" /></span>Iron, gold</td><td class="num-col">85%</td><td class="num-col">2,031</td></tr>
-            <tr><td><span class="mc-icos"><img class="mc-ico" src="/assets/mc/coal.png" alt="" width="18" height="18" /><img class="mc-ico" src="/assets/mc/redstone.png" alt="" width="18" height="18" /><img class="mc-ico" src="/assets/mc/lapis_lazuli.png" alt="" width="18" height="18" /><img class="mc-ico" src="/assets/mc/quartz.png" alt="" width="18" height="18" /></span>Coal, redstone, lapis, quartz</td><td class="num-col">85%</td><td class="num-col">3,250</td></tr>
-          </tbody>
-        </table>
-      </div>
+      <p>The currency of this server is Gold (G). Gold can be obtained through mining, voting, or trading with players. There is no server shop.</p>
+      <p>Gold is used to purchase land claims, pay upkeep, establish nations, and for various other expenses.</p>
+      <p>Personal banks do not exist. Gold can only be stored in chests and land banks.</p>
     </section>
 
     <section id="money">
@@ -64,9 +31,6 @@ import Base from "../layouts/Base.astro";
         <div class="c-sub">Total currency held by players.</div>
         <div data-slot="supply-chart"></div>
       </div>
-      <h3>At the counters</h3>
-      <p class="as-sub">The Buy and Sell counters are the only places currency is created or destroyed outright, so a persistently positive net is the early warning that something is mispriced.</p>
-      <div class="stat-row" data-slot="mint"></div>
     </section>
 
     <section id="prices">
@@ -104,23 +68,8 @@ import Base from "../layouts/Base.astro";
     <section id="wealth">
       <h2>Wealth</h2>
       <div class="stat-row" data-slot="stat-wealth"></div>
-      <div data-slot="wealth-table"></div>
     </section>
 
-    <details class="method">
-      <summary>How the Meridian Economic Index is calculated</summary>
-      <div class="m-body">
-        <p>The index reads the server's economy log (every balance change), the land databases, and the shop transaction history. It needs at least <strong>8 active traders</strong> and <strong>14 days</strong> of history before it will assign a state. Each week it compares the last 7 days of trade volume against the 7 days before that:</p>
-        <dl>
-          <dt>Expansion</dt><dd>Trade volume up more than 10% week over week.</dd>
-          <dt>Steady</dt><dd>Trade volume within a &minus;5% to +10% band. A healthy, consistent market.</dd>
-          <dt>Cooling</dt><dd>Trade volume down 5% to 25%. Activity is slowing.</dd>
-          <dt>Recession</dt><dd>Trade volume down more than 25%, week over week.</dd>
-          <dt>Insufficient data</dt><dd>Not enough players or history to judge.</dd>
-        </dl>
-        <p>The <strong>Gini</strong> figure measures how concentrated wealth is: <code>0</code> means everyone holds the same, <code>1</code> means one player holds everything. The <strong>price index</strong> tracks a fixed basket of wheat, iron, diamonds, ender pearls and oak logs against the median player-shop price for each, set to 100 at launch. Everything on this page refreshes automatically through the day.</p>
-      </div>
-    </details>
   </div>
 </main>
 </Base>

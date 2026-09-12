@@ -2,7 +2,6 @@
 import Base from "../layouts/Base.astro";
 import Toc from "../components/Toc.astro";
 import Callout from "../components/Callout.astro";
-import { ECON } from "../consts";
 
 const sections = [
   { href: "#lands", label: "Lands" },
@@ -12,77 +11,74 @@ const sections = [
 ---
 
 <Base
-  title="Lands & Nations · Meridian"
-  description="A guide for the Lands plugin on Meridian: claiming, banks, upkeep, tiers, nations, and vassals."
+  title="Claims · Meridian"
+  description="A guide to claiming land on Meridian: land banks, upkeep, tiers, nations, and vassals."
   path="/lands"
   analytics
 >
 <main class="doc">
-  <h1>Lands &amp; Nations</h1>
-  <p class="lead">A guide for the Lands plugin. It covers how you claim land, how land banks and upkeep work, how lands unlock tiers, how they combine into nations, and what happens to a nation that loses a war of vassalage. For the live nation rankings, see <a href="/nations">Nations</a>.</p>
+  <h1>Claims</h1>
+  <p class="lead">A guide to claiming land on Meridian. It covers how you claim, how land banks and upkeep work, how lands unlock tiers, how they combine into nations, and what happens to a nation that loses a war of vassalage. For the live nation rankings, see <a href="/nations">Nations</a>.</p>
 
   <Toc sections={sections} />
 
   <h2 id="lands"><span class="num">1</span>Lands</h2>
   <ol>
-    <li>Run <code>/lands create &lt;name&gt;</code> to found your land free of charge. The first chunk is free.</li>
-    <li>Every chunk after that costs a flat <strong>{ECON.chunkCost}</strong>, however big your land gets. How many you may claim is capped separately: <strong>7 chunks</strong> on your own, and <strong>7 more for each player you trust</strong>.</li>
+    <li>Run <code>/lands create &lt;name&gt;</code> to found your land. The first chunk is free; every chunk after that costs a flat <strong>5 G</strong>.</li>
+    <li>You can own only <strong>one land at a time</strong>. If you don't own a land, you may be trusted in <strong>one</strong> other land. If you do own one, you cannot be trusted in any other &mdash; ownership and trust don't stack.</li>
     <li>When naming your land you can use a hex code to set its color on the world map, for example <code>&lt;#FF5555&gt;ExampleLand</code>. Minecraft only recognizes a specific set of hex colors.</li>
-    <li>Your land has its own shared bank, separate from any individual's personal balance. Claim costs and upkeep are withdrawn from this bank, and any member can deposit into it.</li>
-    <li>If the bank can't cover a cost, it falls back to the <strong>owner's</strong> personal balance.</li>
-    <li>Every land pays weekly upkeep on its claimed chunks, at <strong>{ECON.landUpkeepPerChunk} per chunk</strong>.</li>
-    <li>Larger lands cost more to maintain. Before you claim aggressively, make sure your land has the income to support it.</li>
-    <li>You can rent or sell sub-areas of your land to other players without adding them as trusted members.</li>
-    <li>Lands unlock new tiers by hitting member and wealth thresholds at the same time. Each tier grants more claimable chunks and member slots, and raises upkeep. The thresholds are below.</li>
-    <li>You can own only one land at a time. You can be a trusted member in up to <strong>five</strong> other lands beyond your own.</li>
+    <li>Your land has its own shared bank, separate from any player's inventory. Claim costs and upkeep are paid from this bank, and any trusted member can deposit into it. <strong>There is no personal bank to fall back on</strong> &mdash; gold has to actually be sitting in the land bank.</li>
+    <li>Every land pays weekly upkeep on its claimed chunks, at <strong>2 G per chunk</strong>.</li>
+    <li>Larger lands cost more to maintain. Before you claim aggressively, make sure your land has the gold to support it.</li>
+    <li>You can rent or sell sub-areas of your land to other players without trusting them.</li>
+    <li>Lands unlock tiers purely by how much gold is sitting in the land bank &mdash; trusted-member count no longer matters. Once a tier is earned, it's never lost, even if the balance later drops.</li>
   </ol>
 
   <div class="tier-wrap">
     <table class="tier-table">
       <thead>
-        <tr><th>Tier</th><th>Trusted members</th><th>Land bank</th><th>Grants</th><th>Upkeep</th></tr>
+        <tr><th>Tier</th><th>Ruler</th><th>Land bank</th><th>Grants</th></tr>
       </thead>
       <tbody>
-        <tr><td>Settlement</td><td class="num-col">&ndash;</td><td class="num-col">&ndash;</td><td>Starting tier</td><td class="num-col">&ndash;</td></tr>
-        <tr><td>Village</td><td class="num-col">3</td><td class="num-col">$15,000</td><td>+1 chunk, +1 member</td><td class="num-col">+5%</td></tr>
-        <tr><td>Town</td><td class="num-col">5</td><td class="num-col">$35,000</td><td>+2 chunks, +2 members</td><td class="num-col">+10%</td></tr>
-        <tr><td>Province</td><td class="num-col">8</td><td class="num-col">$80,000</td><td>+4 chunks, +3 members</td><td class="num-col">+25%</td></tr>
-        <tr><td>Land</td><td class="num-col">12</td><td class="num-col">$180,000</td><td>+8 chunks, +4 members</td><td class="num-col">+30%</td></tr>
+        <tr><td>Manor</td><td>Lord</td><td class="num-col">&ndash;</td><td>Starting tier &mdash; 7 chunks</td></tr>
+        <tr><td>County</td><td>Count</td><td class="num-col">50 G</td><td>+5 chunks (12 total)</td></tr>
+        <tr><td>Duchy</td><td>Duke</td><td class="num-col">100 G</td><td>+13 chunks (20 total)</td></tr>
+        <tr><td>Grand Duchy</td><td>Grand Duke</td><td class="num-col">400 G</td><td>+23 chunks (30 total)</td></tr>
       </tbody>
     </table>
   </div>
-  <p class="tier-note">Both requirements must be met at once, and the money has to be sitting in the land bank, not in anyone's pocket. Grants stack on top of your base limits. The upkeep figure raises your total weekly upkeep by that percentage, not the per-chunk rate, and it stops applying entirely once your land joins a nation, because the land then pays tax to the nation instead.</p>
+  <p class="tier-note">The gold has to be sitting in the land bank, not in anyone's pocket or a chest. Tiers stack: a Grand Duchy carries every grant below it. Upkeep stops applying to the server entirely once your land joins a nation, because the land then pays tax to the nation instead.</p>
 
   <h2 id="nations"><span class="num">2</span>Nations</h2>
   <ol>
-    <li>Multiple lands can form a nation for <strong>{ECON.nationCreateCost}</strong>.</li>
-    <li>When a land joins a nation it stops paying upkeep to the server and instead pays tax directly to the nation. The nation's leader sets that rate, up to <strong>$500 per chunk</strong>. Because the nation owes the server less per chunk than an independent land does, a rate between those two figures leaves the nation a treasury and still costs each member less than going it alone.</li>
-    <li>In turn, the nation owes its own upkeep to the server, at <strong>{ECON.nationUpkeepPerChunk} per chunk</strong> across the combined total of its lands.</li>
+    <li>Only a land that has reached <strong>Grand Duchy</strong> can found a nation, for <strong>100 G</strong>.</li>
+    <li>When a land joins a nation it stops paying upkeep to the server and instead pays tax directly to the nation. The nation's ruler sets that rate.</li>
+    <li>In turn, the nation owes its own upkeep to the server, at <strong>1 G per chunk</strong> across the combined total of its lands.</li>
     <li>Relations between nations are publicly tracked in-game.</li>
-    <li>Like lands, nations develop through their own tiers, each unlocking additional claiming capacity across every land in the nation.</li>
+    <li>Nations advance through their own tiers based purely on how many lands they have &mdash; no gold or member-count requirement.</li>
   </ol>
 
   <div class="tier-wrap">
     <table class="tier-table">
       <thead>
-        <tr><th>Tier</th><th>Members</th><th>Nation bank</th><th>Grants</th><th>Upkeep</th></tr>
+        <tr><th>Tier</th><th>Ruler</th><th>Lands (excl. capital)</th><th>Grants</th></tr>
       </thead>
       <tbody>
-        <tr><td>Federation</td><td class="num-col">&ndash;</td><td class="num-col">&ndash;</td><td>Starting tier</td><td class="num-col">&ndash;</td></tr>
-        <tr><td>Nation</td><td class="num-col">8</td><td class="num-col">$40,000</td><td>+20 chunks</td><td class="num-col">+20%</td></tr>
-        <tr><td>Empire</td><td class="num-col">15</td><td class="num-col">$120,000</td><td>+35 chunks</td><td class="num-col">+35%</td></tr>
+        <tr><td>Principality</td><td>Prince</td><td class="num-col">&ndash;</td><td>Starting tier</td></tr>
+        <tr><td>Kingdom</td><td>King</td><td class="num-col">3</td><td>+20 chunks per land, +1 land slot</td></tr>
+        <tr><td>Empire</td><td>Emperor</td><td class="num-col">5</td><td>+35 chunks per land, +3 land slots</td></tr>
       </tbody>
     </table>
   </div>
-  <p class="tier-note">Empire costs more to reach than founding the nation did, and the upkeep rises with it. A nation is a commitment to a tax base that can carry it, not a title you buy once.</p>
+  <p class="tier-note">The capital doesn't count toward the lands requirement &mdash; a Kingdom needs 3 other member lands beyond it, an Empire needs 5. A nation is a commitment to a tax base that can support its members, not a title bought once.</p>
 
   <h2 id="vassals"><span class="num">3</span>Vassals</h2>
   <ol>
-    <li>A nation that loses a war of vassalage is absorbed by the winning nation as restricted members.</li>
+    <li>A nation that loses a war under the Vassalage goal is absorbed by the winning nation as a restricted member.</li>
     <li>Vassals pay taxes to their overlord that can run higher than normal nation taxes.</li>
-    <li>The only way to become independent again is to declare and win a war against your overlord. See <a href="/war#goals">Warfare &sect;8</a>.</li>
+    <li>The only way to become independent again is to declare and win a war of independence against your overlord. See <a href="/war#consequences">Wars &rarr; Consequences</a>.</li>
   </ol>
 
-  <Callout>Warfare is the only time claimed land can be entered or captured by an enemy. Read the <a href="/war">Warfare</a> document before you get into a conflict.</Callout>
+  <Callout>Wars are the only time claimed land can be entered or captured by an enemy. Read the <a href="/war">Wars</a> document before you get into a conflict.</Callout>
 </main>
 </Base>
