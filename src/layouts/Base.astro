@@ -1,6 +1,6 @@
 ---
 import "../styles/app.css";
-import { SITE_NAME, MAP_URL, SERVER_ADDRESS } from "../consts";
+import { SITE_NAME, MAP_URL } from "../consts";
 
 export interface Props {
   title: string;
@@ -63,7 +63,7 @@ const NAV = [
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <meta property="og:image:alt" content="Meridian spawn: a fortified harbour town with tall ships at the docks">
-<meta name="theme-color" content="#0b0a09">
+<meta name="theme-color" content="#090a0b">
 </head>
 <body class={bodyClass}>
 <header class="site-header">
@@ -80,9 +80,6 @@ const NAV = [
         >{item.label}</a>
       ))}
     </div>
-    <button class="hdr-cta" type="button" data-copy={SERVER_ADDRESS} aria-label={`Copy server address ${SERVER_ADDRESS}`}>
-      <span class="hdr-ip">{SERVER_ADDRESS}</span>
-    </button>
     <button class="cmdk-trigger" data-cmdk-open type="button" aria-label="Search Meridian">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
       <span class="cmdk-kbd">&#8984;K</span>

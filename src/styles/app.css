@@ -29,29 +29,32 @@
    indirection to get wrong.
    ========================================================================= */
 @theme {
-  /* Ground. Warm near-blacks, biased toward the wordmark's sand rather than
-     the cold blue-grey they were: Meridian's own logo is cream over tan over
-     khaki, and neutrals that ignore the brand read as unchosen. Still dark
-     and high-contrast, nowhere near a cream-and-terracotta scheme. */
-  --color-void: #060504;
-  --color-bg: #0b0a09;
-  --color-surface-1: #141210;
-  --color-surface-2: #1b1815;
-  --color-surface-3: #241f1b;
+  /* Ground. Cool near-blacks, biased toward the new mark's map-blue rather
+     than the old wordmark's sand: Meridian's badge is now a silver monogram
+     over a blue-and-green world map, and neutrals that ignore the brand read
+     as unchosen. Every value below is the old warm palette with hue rotated
+     to 214° and saturation/lightness left untouched, so contrast ratios are
+     identical to before - only the hue changed. Still dark and high-contrast,
+     nowhere near a washed-out corporate blue. */
+  --color-void: #040506;
+  --color-bg: #090a0b;
+  --color-surface-1: #101214;
+  --color-surface-2: #15181b;
+  --color-surface-3: #1b1f24;
 
-  --color-line: #2b2622;
-  --color-line-2: #423a31;
+  --color-line: #22262b;
+  --color-line-2: #313842;
 
-  --color-ink: #f6f3ee;
-  --color-ink-2: #bcb3a7;
-  --color-ink-3: #7d7568;
+  --color-ink: #eef1f6;
+  --color-ink-2: #a7b0bc;
+  --color-ink-3: #68717d;
 
-  /* Sand, sampled from the wordmark itself (#f7ecda highlight, #e0d1ba mid,
-     #b3997a low). The accent is the deep end of that gradient so it carries
-     on a dark ground; the dim variant is for underlines and borders. */
-  --color-accent: #d3b083;
-  --color-accent-dim: #7d6547;
-  --color-accent-hi: #f7ecda;
+  /* Blue, the same gradient the old sand accent used, hue-rotated: #dae7f7
+     highlight, #83a6d3 mid (the accent), #475e7d low (dim, for underlines
+     and borders). Carries the same way on a dark ground the sand did. */
+  --color-accent: #83a6d3;
+  --color-accent-dim: #475e7d;
+  --color-accent-hi: #dae7f7;
 
   /* Plugin identity hues: real saturation, same hue per plugin as before.
      (--p-jobs is gone: Jobs Reborn was removed from the server.) */
