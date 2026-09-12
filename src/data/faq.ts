@@ -22,6 +22,7 @@ export const FAQ_CATEGORIES: FaqCategory[] = [
   { id: "starting", title: "Getting started", sub: "Connecting, and your first hour." },
   { id: "world", title: "The world", sub: "The map, the dimensions, and how combat is set up." },
   { id: "economy", title: "Economy", sub: "Money, the market, and land costs. Live figures are on the Economy page." },
+  { id: "recipes", title: "Recipes", sub: "Custom crafting recipes added on top of vanilla." },
 ];
 
 export const FAQ: FaqEntry[] = [
@@ -29,39 +30,43 @@ export const FAQ: FaqEntry[] = [
   {
     category: "world",
     question: "How big is the map?",
-    answer: `<p>The overworld is <span class="short">10,000 &times; 10,000 blocks</span>, centred on spawn: 5,000 blocks to the border in any direction. The border is a hard wall; you cannot build or travel past it.</p>`,
+    answer: `<p>The overworld is <span class="short">10,000 &times; 10,000 blocks</span>. You cannot travel past the world border.</p>`,
   },
   {
     category: "world",
     question: "Is the End open?",
-    answer: `<p><span class="short">No</span>, the End is closed. Elytra and dragon trophies only enter the economy through what players already had, and stay rare on purpose. A handful of otherwise-impossible essentials (ender pearls, shulker shells, end stone, end rods, purpur, chorus fruit) are sold at the <a href="/faq#economy">Buy counter</a> so a closed End doesn't block ordinary building and storage.</p>`,
+    answer: `<p><span class="short">No</span>, the End is closed. There are, however, custom recipes for End items and blocks &mdash; see the <a href="/faq#recipes">Recipes</a> section.</p>`,
   },
   {
     category: "world",
     question: "Why is the Nether so small?",
-    answer: `<p>The Nether runs at Minecraft's normal 8:1 ratio, and its border is set at <span class="short">1,200 blocks</span> across. That keeps netherite, blaze rods, and Nether loot genuinely scarce and worth trading for.</p>
-<p>To stop that small space from being strip-mined flat and claimed wall to wall, the <span class="short">Nether resets on the 1st of every month</span>. Anything you leave there is gone at the reset. Raid it, don't live in it.</p>`,
+    answer: `<p>The Nether runs at Minecraft's normal 8:1 ratio, and its border is set at <span class="short">1,200 blocks</span> across. Because of this, the Nether resets on the 1st of every month.</p>`,
   },
   {
     category: "world",
     question: "Is PvP on?",
     answer: `<p><span class="short">Yes</span>, PvP is live everywhere except inside spawn, which is a permanent safe zone. There is <span class="short">no keep-inventory</span> outside spawn, so losing a fight means dropping what you carried. Your things land in a <a href="/#protection">death chest</a> that only you can open for the first <span class="short">30 minutes</span>. After that anyone can loot it, and the chest itself stays for <span class="short">24 hours</span>, so you can come back for whatever is left.</p>
-<p>Claimed land is still protected: nobody can enter or take ground inside a claim except during a declared <a href="/war">war</a>. Combat is governed by the <a href="/rules#pvp">PvP rules</a>: standard gear only, no crystal PvP, no one-shot combos.</p>`,
+<p>Claimed land is still protected: nobody can enter or take ground inside a claim except during a declared <a href="/war">war</a>. See the <a href="/rules#interaction">Interaction rules</a> for the exact boundaries.</p>`,
   },
   {
     category: "world",
     question: "What is the difficulty?",
-    answer: `<p>Normal difficulty survival, not hardcore. There is <span class="short">no keep-inventory</span> in the world, so dying in the wild means dropping your things where you fell. The only exceptions are inside spawn and during a formal war.</p>`,
+    answer: `<p>The difficulty is <span class="short">Easy mode</span>. There is <span class="short">no keep-inventory</span> in the world, so dying in the wild means dropping your things where you fell. The only exceptions are inside spawn and during a formal war.</p>`,
+  },
+  {
+    category: "world",
+    question: "Can I trade with villagers?",
+    answer: `<p><span class="short">No</span>, villager trading is disabled.</p>`,
   },
   {
     category: "starting",
-    question: "How do I connect?",
-    answer: `<p>Java Edition, address <code>meridian-mc.net</code>. Clients from <code>1.8</code> to <code>26.2</code> work through ViaVersion and ViaBackwards. You need a genuine (premium) account.</p>`,
+    question: "How do I join?",
+    answer: `<p>Versions <code>1.8</code> through <code>26.2</code>, Java Edition. Any launcher works (Lunar or Prism is recommended). Premium Minecraft is required. The IP is <code>meridian-mc.net</code>.</p>`,
   },
   {
     category: "starting",
     question: "Is Meridian on Bedrock?",
-    answer: `<p><span class="short">No</span>, Java Edition only. There's no Bedrock/console support planned: the plugins Meridian runs (Lands, QuickShop, the anti-cheat) don't have a cross-play path that holds up.</p>`,
+    answer: `<p><span class="short">No</span>, Java Edition only. There's no Bedrock support planned currently.</p>`,
   },
   {
     category: "starting",
@@ -70,8 +75,8 @@ export const FAQ: FaqEntry[] = [
   },
   {
     category: "starting",
-    question: "Can I use shaders or resource packs?",
-    answer: `<p>Yes. Purely visual client mods (shaders, texture packs, zoom, minimaps of your <em>own</em> surroundings) are fine. The line is anything that gives a real advantage or shows you information you couldn't otherwise have, like x-ray packs or minimaps that reveal other players. See the <a href="/rules#client">Client rules</a> for the exact boundary.</p>`,
+    question: "Are mods, shaders, or resource packs allowed?",
+    answer: `<p><span class="short">Yes</span>, as long as they do not provide you with information you otherwise couldn't have. This does not apply to minimaps like Xaero's or Journeymap. See the <a href="/rules#cheats">Cheats rules</a> for the exact boundary.</p>`,
   },
   {
     category: "starting",
@@ -179,20 +184,36 @@ export const FAQ: FaqEntry[] = [
   },
   {
     category: "economy",
-    question: "Can I trade with villagers?",
-    answer: `<p>Yes, heavily. Villagers are a currency faucet and an enchantment shortcut that the player market can't compete with, so a lot is switched off:</p>
-<ul>
-  <li><strong>No enchanted books or enchanted gear</strong> from any villager. Those trades are removed entirely.</li>
-  <li><strong>No re-rolling.</strong> Breaking and replacing a job-site block will not re-roll a villager's offers.</li>
-  <li><strong>No discounts.</strong> Hero of the Village and cured-zombie price cuts do nothing here.</li>
-  <li><strong>No diamond gear and no cleric ender pearls.</strong> These are protected commodities, the same as the automated farms banned under the <a href="/rules#farms">Farms rule</a>.</li>
-</ul>
-<p>Everything else trades as it does in vanilla. Selling produce to a farmer still levels them up, which is how you reach their apple and golden carrot offers.</p>`,
-  },
-  {
-    category: "economy",
     question: "Is scamming allowed?",
     answer: `<p>No. Taking payment and not delivering, fake middlemen, and &ldquo;hold this for me&rdquo; are all <a href="/rules">Rulebook</a> violations and are actioned.</p>
 <p>A deal that both sides agreed to is a different thing. Trades between players are settled between players, not by staff, so use a chest shop for anything you want guaranteed, or ask staff to middleman a large one.</p>`
+  },
+
+
+  // ---- Recipes ----
+  {
+    category: "recipes",
+    question: "How do I make End Stone?",
+    answer: `<p>8 Stone surrounding 1 Ender Pearl.</p><div class="craft-recipe"><div class="craft-grid"><div class="craft-cell">Stone</div><div class="craft-cell">Stone</div><div class="craft-cell">Stone</div><div class="craft-cell">Stone</div><div class="craft-cell">Ender Pearl</div><div class="craft-cell">Stone</div><div class="craft-cell">Stone</div><div class="craft-cell">Stone</div><div class="craft-cell">Stone</div></div><span class="craft-arrow">&rarr;</span><div class="craft-result">End Stone<span class="craft-result-amt">&times;8</span></div></div>`,
+  },
+  {
+    category: "recipes",
+    question: "How do I make Chorus Fruit?",
+    answer: `<p>1 Ender Pearl + 1 Apple, shapeless.</p><div class="craft-recipe"><div class="craft-grid"><div class="craft-cell">Ender Pearl</div><div class="craft-cell">Apple</div><div class="craft-cell empty"></div><div class="craft-cell empty"></div><div class="craft-cell empty"></div><div class="craft-cell empty"></div><div class="craft-cell empty"></div><div class="craft-cell empty"></div><div class="craft-cell empty"></div></div><span class="craft-arrow">&rarr;</span><div class="craft-result">Chorus Fruit<span class="craft-result-amt">&times;4</span></div></div>`,
+  },
+  {
+    category: "recipes",
+    question: "How do I make a Chorus Flower?",
+    answer: `<p>4 Chorus Fruit, shapeless.</p><div class="craft-recipe"><div class="craft-grid"><div class="craft-cell">Chorus Fruit</div><div class="craft-cell">Chorus Fruit</div><div class="craft-cell empty"></div><div class="craft-cell">Chorus Fruit</div><div class="craft-cell">Chorus Fruit</div><div class="craft-cell empty"></div><div class="craft-cell empty"></div><div class="craft-cell empty"></div><div class="craft-cell empty"></div></div><span class="craft-arrow">&rarr;</span><div class="craft-result">Chorus Flower</div></div>`,
+  },
+  {
+    category: "recipes",
+    question: "How do I make an Enchanted Golden Apple?",
+    answer: `<p>8 Gold Blocks surrounding 1 Apple.</p><div class="craft-recipe"><div class="craft-grid"><div class="craft-cell">Gold Block</div><div class="craft-cell">Gold Block</div><div class="craft-cell">Gold Block</div><div class="craft-cell">Gold Block</div><div class="craft-cell">Apple</div><div class="craft-cell">Gold Block</div><div class="craft-cell">Gold Block</div><div class="craft-cell">Gold Block</div><div class="craft-cell">Gold Block</div></div><span class="craft-arrow">&rarr;</span><div class="craft-result">Enchanted Golden Apple</div></div>`,
+  },
+  {
+    category: "recipes",
+    question: "How do I make an Enchantment Extractor?",
+    answer: `<p>Bricks and Lapis Blocks surrounding a Book. Drag the finished Extractor onto an enchanted item to pull one random enchantment off as a book.</p><div class="craft-recipe"><div class="craft-grid"><div class="craft-cell">Brick</div><div class="craft-cell">Lapis Block</div><div class="craft-cell">Brick</div><div class="craft-cell">Lapis Block</div><div class="craft-cell">Book</div><div class="craft-cell">Lapis Block</div><div class="craft-cell">Brick</div><div class="craft-cell">Lapis Block</div><div class="craft-cell">Brick</div></div><span class="craft-arrow">&rarr;</span><div class="craft-result">Enchantment Extractor</div></div>`,
   },
 ];

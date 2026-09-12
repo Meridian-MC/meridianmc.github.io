@@ -4,7 +4,7 @@ import Base from "../layouts/Base.astro";
 
 <Base
   title="Economy · Meridian"
-  description="A live read on the Meridian server economy: the Meridian Economic Index, money supply, trade volume, prices, and player wealth."
+  description="A live read on the Meridian server economy: the Meridian Economic Index, money supply, trade volume, and prices."
   path="/economy"
   analytics
 >
@@ -35,16 +35,13 @@ import Base from "../layouts/Base.astro";
 
     <section id="prices">
       <h2>Prices</h2>
-      <p class="as-sub">Medians of active chest-shop prices, not fixed rates, with the 7-day change and 30-day trend.</p>
       <div class="stat-row" data-slot="stat-prices"></div>
       <div class="chart">
         <h3>Price index</h3>
-        <div class="c-sub">A fixed basket of wheat, iron, diamonds, ender pearls and oak logs. Base 100 at launch.</div>
         <div data-slot="price-chart"></div>
       </div>
       <div data-slot="item-table"></div>
       <h3>Daily range</h3>
-      <p class="as-sub">Open, high, low and close per item, from chest-shop sales.</p>
       <div class="candles" data-slot="candles"></div>
     </section>
 
@@ -56,18 +53,6 @@ import Base from "../layouts/Base.astro";
         <div class="c-sub">Value moving between players and through shops each day.</div>
         <div data-slot="volume-chart"></div>
       </div>
-      <h3>Volume leaders, last 24h</h3>
-      <div data-slot="volume-table"></div>
-      <h3>The index</h3>
-      <p class="as-sub">A weekly verdict computed from that volume. It needs eight active traders and fourteen days of history before it will judge.</p>
-      <div class="mei" data-slot="mei" data-code="INSUFFICIENT_DATA">
-        <div class="mei-top"><span class="mei-label">Loading&hellip;</span></div>
-      </div>
-    </section>
-
-    <section id="wealth">
-      <h2>Wealth</h2>
-      <div class="stat-row" data-slot="stat-wealth"></div>
     </section>
 
   </div>
