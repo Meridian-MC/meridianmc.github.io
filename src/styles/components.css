@@ -1333,14 +1333,8 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
-  text-align: center;
-  font-size: 0.54rem;
-  line-height: 1.1;
-  font-weight: 600;
-  color: #1e1e1e;
-  padding: 2px;
 }
-.craft-cell.empty { color: transparent; }
+.craft-cell img { image-rendering: pixelated; width: 24px; height: 24px; }
 .craft-arrow { color: var(--text-3); font-size: 1.4rem; flex: none; }
 .craft-result-wrap {
   background: #8b8b8b;
@@ -1349,21 +1343,27 @@ main {
   flex: none;
 }
 .craft-result {
+  position: relative;
   width: 36px;
   height: 36px;
   display: flex;
   align-items: center;
   justify-content: center;
-  text-align: center;
-  font-size: 0.56rem;
-  line-height: 1.1;
-  font-weight: 700;
-  color: #1e1e1e;
   background: #8b8b8b;
   box-shadow: inset 1px 1px 0 #373737, inset -1px -1px 0 #fff;
-  padding: 2px;
 }
-.craft-result-amt { display: block; font-weight: 600; font-size: 0.66rem; color: #3a3a3a; margin-top: 1px; }
+.craft-result img { image-rendering: pixelated; width: 26px; height: 26px; }
+/* Matches vanilla's own item-count rendering: white numeral, hard black
+   drop-shadow, bottom-right of the slot. */
+.craft-result-amt {
+  position: absolute;
+  right: 2px;
+  bottom: 1px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #fff;
+  text-shadow: 1px 1px 0 #3f3f3f;
+}
 
 .recipe-list { display: flex; flex-direction: column; gap: 6px; }
 .recipe-item { padding: 22px 0; border-bottom: 1px solid var(--border); }
