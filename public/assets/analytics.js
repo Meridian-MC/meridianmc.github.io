@@ -30,11 +30,11 @@
 
   function money(n) {
     if (n == null) return "n/a";
-    var s = n < 0 ? "-$" : "$"; n = Math.abs(n);
-    if (n >= 1e9) return s + (n / 1e9).toFixed(2) + "B";
-    if (n >= 1e6) return s + (n / 1e6).toFixed(2) + "M";
-    if (n >= 1e3) return s + (n / 1e3).toFixed(n >= 1e5 ? 0 : 1) + "k";
-    return s + n.toFixed(0);
+    var s = n < 0 ? "-" : ""; n = Math.abs(n);
+    if (n >= 1e9) return s + (n / 1e9).toFixed(2) + "B G";
+    if (n >= 1e6) return s + (n / 1e6).toFixed(2) + "M G";
+    if (n >= 1e3) return s + (n / 1e3).toFixed(n >= 1e5 ? 0 : 1) + "k G";
+    return s + n.toFixed(0) + " G";
   }
   function intf(n) { return n == null ? "n/a" : Number(n).toLocaleString(); }
   function esc(s) {

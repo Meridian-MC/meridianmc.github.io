@@ -195,7 +195,7 @@ a:hover { text-decoration-color: var(--text); }
   display: flex; align-items: center; flex-wrap: wrap;
   gap: 6px 14px;
 }
-.hero-meta-sep { width: 1px; height: 12px; background: var(--border-2); }
+.hero-meta-sep { color: var(--border-2); font-size: 0.78rem; }
 @media (max-width: 560px) { .hero-meta-sep { display: none; } }
 
 .wordmark {
