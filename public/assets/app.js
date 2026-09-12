@@ -161,6 +161,7 @@ const CMDK_INDEX = [
   { label: 'Claims: Nations', href: '/lands#nations' },
   { label: 'Claims: Vassals', href: '/lands#vassals' },
   { label: 'Wars', href: '/war' },
+  { label: 'Recipes', href: '/recipes' },
   { label: 'Economy: How money works', href: '/economy#flow' },
   { label: 'Economy: Money', href: '/economy#money' },
   { label: 'Economy: Prices', href: '/economy#prices' },
@@ -175,7 +176,7 @@ const CMDK_INDEX = [
   { label: 'Commands: Jobs', href: '/commands#jobs' },
   { label: 'Commands: Land & nation', href: '/commands#land' },
   { label: 'Commands: Warfare', href: '/commands#war' },
-  { label: 'Live Map', href: 'https://map.meridian-mc.net', external: true },
+  { label: 'Map', href: 'https://map.meridian-mc.net', external: true },
 ];
 
 function initCommandPalette() {
