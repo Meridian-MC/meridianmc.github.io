@@ -1,28 +1,17 @@
 ---
 import Base from "../layouts/Base.astro";
-import Toc from "../components/Toc.astro";
 import Callout from "../components/Callout.astro";
 import { DISCORD_INVITE_URL } from "../consts";
-
-const sections = [
-  { href: "#behavior", label: "Behavior" },
-  { href: "#cheats", label: "Cheats" },
-  { href: "#interaction", label: "Interaction" },
-  { href: "#claims", label: "Claims" },
-  { href: "#moderation", label: "Moderation" },
-];
 ---
 
 <Base
-  title="Server Rulebook · Meridian"
+  title="Server Rules · Meridian"
   description="The general rules governing the Meridian Minecraft server: behavior, cheats, interaction, claims, and moderation."
   path="/rules"
 >
 <main class="doc rulebook">
-  <h1>Server Rulebook</h1>
-  <p class="lead">A general set of rules that governs the server. They apply to everyone, at all times. If you are not sure whether something is allowed, ask staff before you do it.</p>
-
-  <Toc sections={sections} />
+  <h1>Server Rules</h1>
+  <p class="lead"></p>
 
   <div class="acc">
     <details class="acc-item" open>

@@ -1,13 +1,6 @@
 ---
 import Base from "../layouts/Base.astro";
-import Toc from "../components/Toc.astro";
 import Callout from "../components/Callout.astro";
-
-const sections = [
-  { href: "#lands", label: "Lands" },
-  { href: "#nations", label: "Nations" },
-  { href: "#vassals", label: "Vassals" },
-];
 ---
 
 <Base
@@ -18,8 +11,7 @@ const sections = [
 >
 <main class="doc">
   <h1>Claims</h1>
-
-  <Toc sections={sections} />
+  <p class="lead"></p>
 
   <h2 id="lands"><span class="num">1</span>Lands</h2>
   <ol>

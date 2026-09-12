@@ -27,23 +27,21 @@ const recipes = [
     result: "Enchanted Golden Apple", amount: 1,
   },
   {
-    title: "Enchantment Extractor",
-    note: "Bricks and Lapis Blocks surrounding a Book. Drag the finished Extractor onto an enchanted item to pull one random enchantment off as a book.",
+    title: "Disenchanting Brick",
+    note: "Bricks and Lapis Blocks surrounding a Book. Drag the finished brick onto an enchanted item to pull one random enchantment off as a book.",
     cells: ["Brick","Lapis Block","Brick","Lapis Block","Book","Lapis Block","Brick","Lapis Block","Brick"],
-    result: "Enchantment Extractor", amount: 1,
+    result: "Disenchanting Brick", amount: 1,
   },
 ];
 ---
 
 <Base
   title="Recipes · Meridian"
-  description="Custom crafting recipes running on Meridian, on top of vanilla: End Stone, Chorus Fruit, Chorus Flower, Enchanted Golden Apples, and the Enchantment Extractor."
+  description="Custom crafting recipes running on Meridian, on top of vanilla: End Stone, Chorus Fruit, Chorus Flower, Enchanted Golden Apples, and the Disenchanting Brick."
   path="/recipes"
 >
 <main class="doc">
   <h1>Recipes</h1>
-  <p class="lead">Custom crafting recipes added on top of vanilla. Everything else crafts the normal way.</p>
-
   <div class="recipe-list">
     {recipes.map((r) => (
       <section class="recipe-item">
