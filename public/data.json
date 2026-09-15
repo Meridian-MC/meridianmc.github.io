@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-15T23:00:13Z",
+  "generated": "2026-09-15T23:03:44Z",
   "meta": {
     "players_tracked": 68,
     "active_traders": 8,
@@ -26,12 +26,12 @@
       "note": "Gold launched 2026-09-12. Needs 8+ active traders and 14+ days of history; currently 8 traders / 3 days."
     },
     "supply": {
-      "total": 9377.2,
+      "total": 8556.2,
       "on_hand": 206,
       "ender_chests": 1654,
       "containers": 4540,
       "loose": 15,
-      "land_banks": 2962.2,
+      "land_banks": 2141.2,
       "coverage": {
         "files": 1052,
         "fresh": 1052,
@@ -40,11 +40,11 @@
         "percent": 100.0
       }
     },
-    "money_supply_players": 9377.2,
+    "money_supply_players": 8556.2,
     "money_supply_series": [
       [
         "2026-09-15",
-        9377.2
+        8556.2
       ]
     ],
     "flow": {
@@ -430,14 +430,14 @@
       "name": "Augustine Empire",
       "tag": null,
       "color": "#956BE8",
-      "lands": 2,
-      "mdi": 0.44,
-      "territory": 1.0,
-      "population": 0.8,
+      "lands": 1,
+      "mdi": 0.406,
+      "territory": 0.967,
+      "population": 0.6,
       "wealth": 0.047,
       "activity": 1.0,
-      "chunks": 62,
-      "members": 12,
+      "chunks": 58,
+      "members": 9,
       "treasury": 47.0
     },
     {
@@ -445,14 +445,14 @@
       "tag": null,
       "color": null,
       "lands": 1,
-      "mdi": 0.859,
+      "mdi": 0.772,
       "territory": 1.0,
       "population": 0.8,
-      "wealth": 0.68,
+      "wealth": 0.443,
       "activity": 1.0,
       "chunks": 79,
       "members": 12,
-      "treasury": 680.2
+      "treasury": 443.2
     }
   ],
   "lands": [
@@ -461,7 +461,7 @@
       "type": "land",
       "chunks": 88,
       "members": 14,
-      "bank": 458.0,
+      "bank": 106.0,
       "level": 1,
       "color": "#667CEE"
     },
@@ -470,7 +470,7 @@
       "type": "land",
       "chunks": 79,
       "members": 12,
-      "bank": 680.2,
+      "bank": 443.2,
       "level": 2,
       "color": "#DF6EA4"
     },
@@ -497,7 +497,7 @@
       "type": "land",
       "chunks": 25,
       "members": 6,
-      "bank": 150.0,
+      "bank": 50.0,
       "level": 1,
       "color": "#C28FA5"
     },
@@ -506,7 +506,7 @@
       "type": "land",
       "chunks": 10,
       "members": 7,
-      "bank": 240.0,
+      "bank": 200.0,
       "level": 1,
       "color": "#66979D"
     },
@@ -515,7 +515,7 @@
       "type": "land",
       "chunks": 10,
       "members": 8,
-      "bank": 40.0,
+      "bank": 0.0,
       "level": 0,
       "color": "#A3E085"
     },
@@ -533,7 +533,7 @@
       "type": "land",
       "chunks": 5,
       "members": 2,
-      "bank": 950.0,
+      "bank": 930.0,
       "level": 0,
       "color": "#66A4EF"
     },
@@ -569,7 +569,7 @@
       "type": "land",
       "chunks": 3,
       "members": 3,
-      "bank": 132.0,
+      "bank": 120.0,
       "level": 0,
       "color": "#F4A781"
     },
@@ -596,7 +596,7 @@
       "type": "land",
       "chunks": 2,
       "members": 2,
-      "bank": 200.0,
+      "bank": 192.0,
       "level": 0,
       "color": "#E8D289"
     },
@@ -614,7 +614,7 @@
       "type": "land",
       "chunks": 1,
       "members": 2,
-      "bank": 4.0,
+      "bank": 0.0,
       "level": 0,
       "color": "#CADC7A"
     },
@@ -632,7 +632,7 @@
       "type": "land",
       "chunks": 1,
       "members": 2,
-      "bank": 8.0,
+      "bank": 4.0,
       "level": 0,
       "color": "#BCF966"
     },
@@ -641,7 +641,7 @@
       "type": "land",
       "chunks": 1,
       "members": 2,
-      "bank": 34.0,
+      "bank": 30.0,
       "level": 0,
       "color": "#DDD0F2"
     },
