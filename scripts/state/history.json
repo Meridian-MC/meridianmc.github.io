@@ -35,13 +35,13 @@
  },
  "supply": {
   "2026-09-15": {
-   "at": "2026-09-15T23:12:43Z",
+   "at": "2026-09-15T23:27:35Z",
    "banks": 2141.2,
-   "containers": 4540,
+   "containers": 4574,
    "coverage": 100.0,
    "ender": 1654,
    "loose": 15,
-   "on_hand": 206,
+   "on_hand": 172,
    "total": 8556.2
   }
  }

@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-15T23:15:42Z",
+  "generated": "2026-09-15T23:27:35Z",
   "meta": {
     "players_tracked": 68,
     "active_traders": 8,
@@ -27,9 +27,9 @@
     },
     "supply": {
       "total": 8556.2,
-      "on_hand": 206,
+      "on_hand": 172,
       "ender_chests": 1654,
-      "containers": 4540,
+      "containers": 4574,
       "loose": 15,
       "land_banks": 2141.2,
       "coverage": {
@@ -77,7 +77,7 @@
     "trade_volume_series": [],
     "trade_volume_7d": 0,
     "chest_shop_transactions": 0,
-    "gini": 0.949,
+    "gini": 0.952,
     "price_index": {
       "value": null,
       "series": [],
@@ -385,10 +385,6 @@
         "balance": 81
       },
       {
-        "name": "Augustine65480",
-        "balance": 34
-      },
-      {
         "name": "AriannaBoh",
         "balance": 4
       },
@@ -417,15 +413,19 @@
         "balance": 0
       },
       {
+        "name": "Augustine65480",
+        "balance": 0
+      },
+      {
         "name": "Lagmanium",
         "balance": 0
       }
     ],
     "median": 0.0,
-    "mean": 27.35
+    "mean": 26.85
   },
   "server": {
-    "checked": "2026-09-15T23:15:42Z",
+    "checked": "2026-09-15T23:27:35Z",
     "started_at": "2026-09-15T12:13:13Z",
     "tps": 20.0
   },
