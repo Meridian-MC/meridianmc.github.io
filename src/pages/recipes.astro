@@ -1,64 +1,120 @@
 ---
 import Base from "../layouts/Base.astro";
 
+// Every recipe here mirrors a file in plugins/Craftorithm/recipes/ on the
+// server (plus the Disenchanting Brick, which is ExtractableEnchantments').
+// Shapes are copied from those files, not from memory: the E-gap and the
+// chorus recipes had drifted from what the server actually accepts.
 const stone = { icon: "stone", label: "Stone" };
 const enderPearl = { icon: "ender_pearl", label: "Ender Pearl" };
 const apple = { icon: "apple", label: "Apple" };
+const goldenApple = { icon: "golden_apple", label: "Golden Apple" };
 const chorusFruit = { icon: "chorus_fruit", label: "Chorus Fruit" };
+const poppedChorus = { icon: "popped_chorus_fruit", label: "Popped Chorus Fruit" };
+const turtleShell = { icon: "turtle_helmet", label: "Turtle Shell" };
 const goldBlock = { icon: "gold_block", label: "Gold Block" };
 const brick = { icon: "brick", label: "Brick" };
 const lapisBlock = { icon: "lapis_block", label: "Lapis Block" };
 const book = { icon: "book", label: "Book" };
+const rottenFlesh = { icon: "rotten_flesh", label: "Rotten Flesh" };
+const cryingObsidian = { icon: "crying_obsidian", label: "Crying Obsidian" };
+const awkwardPotion = { icon: "awkward_potion", label: "Awkward Potion" };
 const empty = null;
 
-const recipes = [
+type Cell = { icon: string; label: string } | null;
+type Recipe = {
+  title: string;
+  note: string;
+  station: "crafting" | "furnace" | "brewing";
+  cells: Cell[];
+  result: { icon: string; label: string };
+  amount: number;
+};
+
+const recipes: Recipe[] = [
   {
     title: "End Stone",
     note: "8 Stone surrounding 1 Ender Pearl.",
+    station: "crafting",
     cells: [stone, stone, stone, stone, enderPearl, stone, stone, stone, stone],
     result: { icon: "end_stone", label: "End Stone" }, amount: 8,
   },
   {
     title: "Chorus Fruit",
-    note: "1 Ender Pearl + 1 Apple, shapeless.",
+    note: "1 Ender Pearl with 1 Apple to its right, side by side.",
+    station: "crafting",
     cells: [enderPearl, apple, empty, empty, empty, empty, empty, empty, empty],
-    result: { icon: "chorus_fruit", label: "Chorus Fruit" }, amount: 4,
+    result: { icon: "chorus_fruit", label: "Chorus Fruit" }, amount: 1,
   },
   {
     title: "Chorus Flower",
-    note: "4 Chorus Fruit, shapeless.",
-    cells: [chorusFruit, chorusFruit, empty, chorusFruit, chorusFruit, empty, empty, empty, empty],
+    note: "1 Chorus Fruit, shapeless.",
+    station: "crafting",
+    cells: [chorusFruit, empty, empty, empty, empty, empty, empty, empty, empty],
     result: { icon: "chorus_flower", label: "Chorus Flower" }, amount: 1,
+  },
+  {
+    title: "Shulker Shell",
+    note: "8 Popped Chorus Fruit surrounding 1 Turtle Shell. Makes 2.",
+    station: "crafting",
+    cells: [poppedChorus, poppedChorus, poppedChorus, poppedChorus, turtleShell, poppedChorus, poppedChorus, poppedChorus, poppedChorus],
+    result: { icon: "shulker_shell", label: "Shulker Shell" }, amount: 2,
   },
   {
     title: "Enchanted Golden Apple",
     note: "8 Gold Blocks surrounding 1 Apple.",
+    station: "crafting",
     cells: [goldBlock, goldBlock, goldBlock, goldBlock, apple, goldBlock, goldBlock, goldBlock, goldBlock],
     result: { icon: "enchanted_golden_apple", label: "Enchanted Golden Apple" }, amount: 1,
   },
   {
+    title: "Enchanted Golden Apple, from a Golden Apple",
+    note: "7 Gold Blocks around 1 Golden Apple, with the bottom-middle slot left empty.",
+    station: "crafting",
+    cells: [goldBlock, goldBlock, goldBlock, goldBlock, goldenApple, goldBlock, goldBlock, empty, goldBlock],
+    result: { icon: "enchanted_golden_apple", label: "Enchanted Golden Apple" }, amount: 1,
+  },
+  {
+    title: "Dragon's Breath",
+    note: "Brew an Awkward Potion with Crying Obsidian in a brewing stand.",
+    station: "brewing",
+    cells: [cryingObsidian, awkwardPotion],
+    result: { icon: "dragon_breath", label: "Dragon's Breath" }, amount: 1,
+  },
+  {
+    title: "Leather",
+    note: "Smelt Rotten Flesh in a furnace. Same time as cooking meat, 1 XP each.",
+    station: "furnace",
+    cells: [rottenFlesh],
+    result: { icon: "leather", label: "Leather" }, amount: 1,
+  },
+  {
     title: "Disenchanting Brick",
     note: "Bricks and Lapis Blocks surrounding a Book. Drag the finished brick onto an enchanted item to pull one random enchantment off as a book.",
+    station: "crafting",
     cells: [brick, lapisBlock, brick, lapisBlock, book, lapisBlock, brick, lapisBlock, brick],
     result: { icon: "nether_brick", label: "Disenchanting Brick" }, amount: 1,
   },
 ];
+
+const STATION_LABEL = { crafting: "Crafting table", furnace: "Furnace", brewing: "Brewing stand" };
 ---
 
 <Base
   title="Recipes · Meridian"
-  description="Custom crafting recipes running on Meridian, on top of vanilla: End Stone, Chorus Fruit, Chorus Flower, Enchanted Golden Apples, and the Disenchanting Brick."
+  description="Custom recipes running on Meridian, on top of vanilla: End Stone, Chorus Fruit and Flower, Shulker Shells, Enchanted Golden Apples, Dragon's Breath, Leather from Rotten Flesh, and the Disenchanting Brick."
   path="/recipes"
 >
 <main class="doc">
   <h1>Recipes</h1>
+  <p class="lead">Everything the server adds on top of vanilla crafting. Vanilla recipes are unchanged.</p>
   <div class="recipe-list">
     {recipes.map((r) => (
       <section class="recipe-item">
         <h2>{r.title}</h2>
         <p class="as-sub">{r.note}</p>
         <div class="craft-recipe">
-          <div class="craft-grid">
+          <div class={`craft-grid craft-${r.station}`} title={STATION_LABEL[r.station]}>
             {r.cells.map((c) => (
               c === null
                 ? <div class="craft-cell empty"></div>

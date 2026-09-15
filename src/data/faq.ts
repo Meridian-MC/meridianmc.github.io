@@ -44,13 +44,23 @@ export const FAQ: FaqEntry[] = [
   {
     category: "world",
     question: "Is PvP on?",
-    answer: `<p><span class="short">Yes</span>, PvP is live everywhere except inside spawn, which is a permanent safe zone. There is <span class="short">no keep-inventory</span> outside spawn, so losing a fight means dropping what you carried. Your things land in a <a href="/#protection">death chest</a> that only you can open for the first <span class="short">30 minutes</span>. After that anyone can loot it, and the chest itself stays for <span class="short">24 hours</span>, so you can come back for whatever is left.</p>
+    answer: `<p><span class="short">Yes</span>, PvP is live everywhere except inside spawn, which is a permanent safe zone. There is <span class="short">no keep-inventory</span> outside spawn, so losing a fight means dropping what you carried. Your things land in a death chest at the spot you died. <span class="short">Anyone can open it</span>, and it lasts <span class="short">10 minutes</span> before it breaks and spills whatever is left onto the ground, so get back to it before someone else does.</p>
 <p>Claimed land is still protected: nobody can enter or take ground inside a claim except during a declared <a href="/war">war</a>. See the <a href="/rules#interaction">Interaction rules</a> for the exact boundaries.</p>`,
   },
   {
     category: "world",
     question: "What is the difficulty?",
-    answer: `<p>The difficulty is <span class="short">Easy mode</span>. There is <span class="short">no keep-inventory</span> in the world, so dying in the wild means dropping your things where you fell. The only exceptions are inside spawn and during a formal war.</p>`,
+    answer: `<p>The difficulty is <span class="short">Normal</span>. There is <span class="short">no keep-inventory</span> in the world, so dying in the wild means dropping your things where you fell. The only exceptions are inside spawn and during a formal war.</p>`,
+  },
+  {
+    category: "world",
+    question: "How do I get to my friends?",
+    answer: `<p><code>/tpa &lt;player&gt;</code> asks to teleport to them and <code>/tpahere &lt;player&gt;</code> asks them to come to you; they answer with <code>/tpaccept</code>. Requests time out after two minutes, and there is a short warm-up before you go. <code>/back</code> returns you to where you last were, including your death point.</p>`,
+  },
+  {
+    category: "world",
+    question: "Is there voice chat?",
+    answer: `<p><span class="short">Yes</span>, proximity voice chat. Install the <a href="https://modrinth.com/plugin/simple-voice-chat" target="_blank" rel="noopener">Simple Voice Chat</a> mod on your client (Fabric, Forge, NeoForge, and Quilt builds exist) and it connects automatically when you join. Press <kbd>V</kbd> in-game for the voice menu. You can also make group channels, which can be password-protected, so a land or nation can keep a private channel.</p>`,
   },
   {
     category: "world",
@@ -70,7 +80,7 @@ export const FAQ: FaqEntry[] = [
   {
     category: "starting",
     question: "What should I do first?",
-    answer: `<p>Earn a little starting cash, then found a land with <code>/lands create &lt;name&gt;</code> and read the <a href="/lands">Lands guide</a>. <a href="/faq#voting-q">Vote for the server</a> each day for crates, and skim the <a href="/commands">Commands</a> page.</p>`,
+    answer: `<p>Mine a little gold, then found a land with <code>/lands create &lt;name&gt;</code> and read the <a href="/claims">Claims guide</a>. <a href="/vote">Vote for the server</a> each day for crates, and skim the <a href="/commands">Commands</a> page. <code>/calc</code> is a calculator in chat if you need to work out farm rates or travel distances.</p>`,
   },
   {
     category: "starting",
@@ -92,7 +102,7 @@ export const FAQ: FaqEntry[] = [
   {
     category: "economy",
     question: "What is the currency?",
-    answer: `<p>Gold, written <strong>G</strong>. It is item-backed: 1 gold ingot is <span class="short">1 G</span>. There is no personal bank, so what you are carrying and what is in your land's bank <em>is</em> your balance.</p>`,
+    answer: `<p>Gold, written <strong>G</strong>. It is item-backed: 1 gold ingot is <span class="short">1 G</span> and 1 gold block is <span class="short">9 G</span>. Nuggets are not currency. There is no personal bank, so what you are carrying and what is in your land's bank <em>is</em> your balance, and gold in an ender chest can be kept but not spent.</p>`,
   },
   {
     category: "economy",
@@ -101,7 +111,7 @@ export const FAQ: FaqEntry[] = [
 <ul>
   <li><strong>Mining.</strong> Gold ore is the only real source of new gold entering the economy.</li>
   <li><strong>Voting.</strong> Vote on our four listing sites once a day each for crates.</li>
-  <li><strong>Selling to other players.</strong> Chest shops are the player market. Run <code>/shops</code> to see every land tagged as a shop.</li>
+  <li><strong>Selling to other players.</strong> Chest shops are the player market. <code>/qs find &lt;item&gt;</code> locates nearby shops selling something.</li>
 </ul>`,
   },
   {
@@ -114,22 +124,16 @@ export const FAQ: FaqEntry[] = [
     question: "How much does land cost?",
     answer: `<p>Founding a land with <code>/lands create</code> includes your <span class="short">first chunk free</span>. After that:</p>
 <ul>
-  <li>Every chunk after that costs a flat <span class="short">5 G</span>.</li>
-  <li>Weekly upkeep is <span class="short">2 G per chunk</span>, taken from the land bank.</li>
-  <li>Tiers change these numbers. The full breakdown is in the <a href="/lands">Claims guide</a>.</li>
+  <li>Every chunk after that costs a flat <span class="short">15 G</span>, paid from the land bank.</li>
+  <li>Weekly upkeep is <span class="short">4 G per chunk</span>, also taken from the land bank. If the bank runs dry, upkeep goes unpaid and the land is at risk.</li>
+  <li>You can own <span class="short">two lands</span>; each pays its own upkeep.</li>
+  <li>Tiers change these numbers. The full breakdown is in the <a href="/claims">Claims guide</a>.</li>
 </ul>`,
   },
   {
     category: "economy",
-    id: "voting-q",
-    question: "How does voting work, and what do crates give?",
-    answer: `<p>Run <code>/vote</code> for the links. Each of the four listing sites can be voted on <span class="short">once every 24 hours</span>, and every vote pays a crate. Voting milestones pay better crates the more you vote.</p>
-<p>Crates never take an inventory slot. They are held for you, and you open them from <code>/crates</code> whenever you like.</p>`,
-  },
-  {
-    category: "economy",
     question: "Can I extract enchantments from my items?",
-    answer: `<p>Yes, that is what <a href="/#extract">ExtractableEnchantments</a> is for. Craft an Enchantment Extractor, then drag it onto an enchanted item to pull one random enchantment off as a book. See the <a href="/recipes">Recipes</a> page for the exact crafting grid.</p>`,
+    answer: `<p>Yes, that is what ExtractableEnchantments is for. Craft a Disenchanting Brick, then drag it onto an enchanted item to pull one random enchantment off as a book. See the <a href="/recipes">Recipes</a> page for the exact crafting grid.</p>`,
   },
   {
     category: "economy",

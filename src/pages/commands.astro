@@ -32,8 +32,9 @@ const sections = [
     <summary><h2 id="getting-around">Getting around</h2></summary>
     <div class="cmd-group">
     <div class="cmd"><div class="k"><code>/spawn</code></div><div class="desc">Return to the server spawn.</div></div>
-    <div class="cmd"><div class="k"><code>/rtp</code></div><div class="desc">Random-teleport out into unclaimed wilderness.</div></div>
     <div class="cmd"><div class="k"><code>/back</code></div><div class="desc">Return to your last location, including your death point.</div></div>
+    <div class="cmd"><div class="k"><code>/tpa &lt;player&gt;</code></div><div class="desc">Ask to teleport to a player. <code>/tpahere &lt;player&gt;</code> asks them to come to you.</div></div>
+    <div class="cmd"><div class="k"><code>/tpaccept</code> <code>/tpdeny</code></div><div class="desc">Answer a teleport request. Requests expire after two minutes.</div></div>
     <div class="cmd"><div class="k"><code>/lands spawn</code></div><div class="desc">Teleport to your land's spawn point.</div></div>
     </div>
   </details>
@@ -46,6 +47,8 @@ const sections = [
     <div class="cmd"><div class="k"><code>/delhome &lt;name&gt;</code></div><div class="desc">Delete a home.</div></div>
     <div class="cmd"><div class="k"><code>/afk</code></div><div class="desc">Toggle your AFK status.</div></div>
     <div class="cmd"><div class="k"><code>/rules</code> <code>/motd</code></div><div class="desc">Show the rules / message of the day in chat.</div></div>
+    <div class="cmd"><div class="k"><code>/calc &lt;expression&gt;</code></div><div class="desc">A calculator in chat, with Minecraft shortcuts for stacks, farm rates, and travel distance.</div></div>
+    <div class="cmd"><div class="k"><code>/imageframe create &lt;name&gt; &lt;url&gt; &lt;width&gt; &lt;height&gt;</code></div><div class="desc">Put an image from a URL onto item frames. Needs blank maps in your inventory, one per frame.</div></div>
     </div>
   </details>
 
@@ -56,26 +59,23 @@ const sections = [
     <div class="cmd"><div class="k"><code>/mail send &lt;player&gt; &lt;text&gt;</code></div><div class="desc">Leave a message for an offline player. <code>/mail read</code> to check yours.</div></div>
     <div class="cmd"><div class="k"><code>/lands chat</code></div><div class="desc">Toggle land-only chat (also <code>/lc</code>).</div></div>
     <div class="cmd"><div class="k"><code>/ignore &lt;player&gt;</code></div><div class="desc">Stop seeing a player's messages.</div></div>
+    <div class="cmd"><div class="k"><code>/voicechat</code></div><div class="desc">Voice chat settings. Needs the Simple Voice Chat mod on your client; press <kbd>V</kbd> in-game for the menu and group channels.</div></div>
     </div>
   </details>
 
   <details class="acc-item">
     <summary><h2 id="economy">Economy &amp; shops</h2></summary>
     <div class="cmd-group">
-    <div class="cmd"><div class="k"><code>/balance [player]</code></div><div class="desc">Check a balance (also <code>/bal</code>).</div></div>
-    <div class="cmd"><div class="k"><code>/pay &lt;player&gt; &lt;amount&gt;</code></div><div class="desc">Send money to another player.</div></div>
-    <div class="cmd"><div class="k"><code>/baltop</code></div><div class="desc">The richest players on the server.</div></div>
-    <div class="cmd"><div class="k"><code>/shop</code></div><div class="desc">Open the server shop: Buy (basics, End-locked essentials, armor trims, rare potion ingredients) and Sell (raw metals and minerals).</div></div>
-    <div class="cmd"><div class="k"><code>/shop crates</code></div><div class="desc">Buy Iron, Gold and Diamond crates. They go straight to <code>/crates</code> to open whenever you like.</div></div>
-    <div class="cmd"><div class="k"><code>/ranks</code></div><div class="desc">Tiers: more homes, a bigger land base, and a coloured chat prefix. You pay only the difference from your current tier.</div></div>
+    <div class="cmd"><div class="k"><code>/balance [player]</code></div><div class="desc">The gold you are carrying (also <code>/bal</code>). Gold ingots and blocks in your inventory are your balance; there is no bank.</div></div>
+    <div class="cmd"><div class="k"><code>/pay &lt;player&gt; &lt;amount&gt;</code></div><div class="desc">Hand gold from your inventory to another player.</div></div>
+    <div class="cmd"><div class="k"><code>/baltop</code></div><div class="desc">Who is carrying the most gold.</div></div>
     <p class="cmd-note">Chest shops (QuickShop-Hikari)</p>
     <div class="cmd"><div class="k"><code>left-click a chest</code></div><div class="desc">While holding an item, left-click a chest to start a shop, then type a price.</div></div>
     <div class="cmd"><div class="k"><code>/qs price &lt;amount&gt;</code></div><div class="desc">Change the price of the shop you're looking at.</div></div>
     <div class="cmd"><div class="k"><code>/qs find &lt;item&gt;</code></div><div class="desc">Locate nearby shops selling an item.</div></div>
     <div class="cmd"><div class="k"><code>/qs staff add &lt;player&gt;</code></div><div class="desc">Let someone help manage your shop.</div></div>
     <div class="cmd"><div class="k"><code>/qs remove</code></div><div class="desc">Remove the shop you're looking at.</div></div>
-    <div class="cmd"><div class="k"><code>/xpb [amount]</code></div><div class="desc">Bottle your XP so it can be carried, stored or traded. Short for <code>/bottle get</code>.</div></div>
-    <div class="cmd"><div class="k"><code>/trade &lt;player&gt;</code></div><div class="desc">Open a secure face-to-face trade window.</div></div>
+    <div class="cmd"><div class="k"><code>/bottle [amount]</code></div><div class="desc">Bottle your XP so it can be carried, stored or traded.</div></div>
     </div>
   </details>
 
@@ -91,9 +91,9 @@ const sections = [
   <details class="acc-item">
     <summary><h2 id="land">Land &amp; nation</h2></summary>
     <div class="cmd-group">
-    <div class="cmd"><div class="k"><code>/lands menu</code></div><div class="desc">Open the main Lands GUI. Everything below is in here too. <code>/l</code> works as shorthand for <code>/lands</code> anywhere.</div></div>
-    <div class="cmd"><div class="k"><code>/lands create &lt;name&gt;</code></div><div class="desc">Found a land. The first chunk is free.</div></div>
-    <div class="cmd"><div class="k"><code>/lands claim</code> <code>/lands unclaim</code></div><div class="desc">Claim or release the chunk you're standing in.</div></div>
+    <div class="cmd"><div class="k"><code>/lands menu</code></div><div class="desc">Open the main Lands GUI. Everything below is in here too. <code>/l</code>, <code>/ls</code>, and <code>/t</code> all work as shorthand for <code>/lands</code>; <code>/n</code> for <code>/nation</code>.</div></div>
+    <div class="cmd"><div class="k"><code>/lands create &lt;name&gt;</code></div><div class="desc">Found a land. The first chunk is free, and you can own up to two lands.</div></div>
+    <div class="cmd"><div class="k"><code>/lands claim</code> <code>/lands unclaim</code></div><div class="desc">Claim or release the chunk you're standing in. Each chunk costs {ECON.chunkCost} from the land bank.</div></div>
     <div class="cmd"><div class="k"><code>/lands map</code></div><div class="desc">Show a chunk map of nearby claims.</div></div>
     <div class="cmd"><div class="k"><code>/lands view</code></div><div class="desc">Visualize your land's borders.</div></div>
     <div class="cmd"><div class="k"><code>/lands trust &lt;player&gt;</code> <code>/lands untrust &lt;player&gt;</code></div><div class="desc">Add or remove a trusted member.</div></div>
@@ -101,11 +101,7 @@ const sections = [
     <div class="cmd"><div class="k"><code>/lands bank deposit &lt;amount&gt;</code></div><div class="desc">Fund the land bank (also <code>withdraw</code>, <code>balance</code>).</div></div>
     <div class="cmd"><div class="k"><code>/lands rent</code> <code>/lands sell</code></div><div class="desc">Rent or sell a sub-area to another player.</div></div>
     <div class="cmd"><div class="k"><code>/lands setspawn</code></div><div class="desc">Set where <code>/lands spawn</code> takes members.</div></div>
-    <p class="cmd-note">Finding other lands</p>
-    <div class="cmd"><div class="k"><code>/shops</code></div><div class="desc">Every land tagged as a shop. The fastest way to find chest shops. Short for <code>/lands list shops</code>.</div></div>
-    <div class="cmd"><div class="k"><code>/mobfarms</code></div><div class="desc">Every land tagged as a mob farm. Short for <code>/lands list mobfarm</code>.</div></div>
-    <div class="cmd"><div class="k"><code>/pvp</code></div><div class="desc">Every land with PvP switched on. Short for <code>/lands list pvp</code>.</div></div>
-    <div class="cmd"><div class="k"><code>/members</code></div><div class="desc">Lands currently recruiting. Short for <code>/lands list members</code>.</div></div>
+    <div class="cmd"><div class="k"><code>/lands list</code></div><div class="desc">Browse every land on the server. Lands can be tagged as shops or mob farms, so this doubles as the shop directory.</div></div>
     <div class="cmd"><div class="k"><code>/nation create &lt;name&gt;</code></div><div class="desc">Form a nation from your land ({ECON.nationCreateCost}).</div></div>
     <div class="cmd"><div class="k"><code>/nation &lt;nation&gt; invite &lt;land&gt;</code></div><div class="desc">Invite another land into your nation.</div></div>
     </div>
@@ -121,6 +117,6 @@ const sections = [
   </details>
   </div>
 
-  <p class="editnote">Command names follow the plugins Meridian runs (Lands, QuickShop-Hikari, EssentialsX, VotingPlugin, CrazyCrates, TradeManager, EzRTP). If any alias differs on the server, tell staff and this page will be corrected.</p>
+  <p class="editnote">Command names follow the plugins Meridian runs (Lands, QuickShop-Hikari, TheNewEconomy, EssentialsX, VotingPlugin, CrazyCrates, CalcMod, ImageFrame, Simple Voice Chat). If any alias differs on the server, tell staff and this page will be corrected.</p>
 </main>
 </Base>

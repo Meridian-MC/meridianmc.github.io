@@ -1,0 +1,4 @@
+# Cloudflare Workers static assets honour this file. The Lands guide moved to
+# /claims; keep every old link (Discord, in-game /rules, search results) working.
+/lands   /claims   301
+/lands.html   /claims   301

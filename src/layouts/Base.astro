@@ -5,7 +5,7 @@ import { SITE_NAME, MAP_URL } from "../consts";
 export interface Props {
   title: string;
   description: string;
-  path: string;            // "/", "/rules", "/lands", ...
+  path: string;            // "/", "/rules", "/claims", ...
   ogTitle?: string;
   ogDescription?: string;
   bodyClass?: string;
@@ -25,7 +25,7 @@ const {
 const NAV = [
   { href: "/", label: "Home" },
   { href: "/rules", label: "Rules" },
-  { href: "/lands", label: "Claims" },
+  { href: "/claims", label: "Claims" },
   { href: "/economy", label: "Economy" },
   { href: "/war", label: "Wars" },
   { href: "/recipes", label: "Recipes" },
