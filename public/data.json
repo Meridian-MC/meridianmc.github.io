@@ -1,326 +1,541 @@
 {
-  "generated": "2026-09-12T12:43:34Z",
+  "generated": "2026-09-15T23:00:13Z",
   "meta": {
-    "players_tracked": 61,
-    "active_traders": 34,
-    "data_days": 7,
+    "players_tracked": 68,
+    "active_traders": 8,
+    "data_days": 3,
     "sufficient": false,
     "demo": false,
+    "profile": "profile_sgznr",
+    "era_start": "2026-09-12",
     "thresholds": {
       "min_traders": 8,
       "min_days": 14
     }
   },
   "economy": {
+    "currency": {
+      "name": "Gold",
+      "symbol": "G",
+      "ingot": 1,
+      "block": 9
+    },
     "classification": {
       "code": "INSUFFICIENT_DATA",
       "label": "Insufficient data",
-      "note": "Need 8+ active traders and 14+ days of history. Currently 34 traders / 7 days."
+      "note": "Gold launched 2026-09-12. Needs 8+ active traders and 14+ days of history; currently 8 traders / 3 days."
     },
-    "money_supply_players": 197240.05,
+    "supply": {
+      "total": 9377.2,
+      "on_hand": 206,
+      "ender_chests": 1654,
+      "containers": 4540,
+      "loose": 15,
+      "land_banks": 2962.2,
+      "coverage": {
+        "files": 1052,
+        "fresh": 1052,
+        "stale": 0,
+        "unscanned": 0,
+        "percent": 100.0
+      }
+    },
+    "money_supply_players": 9377.2,
     "money_supply_series": [
       [
-        "2026-09-04",
-        0.0
-      ],
-      [
-        "2026-09-05",
-        51461.9
-      ],
-      [
-        "2026-09-06",
-        150951.9
-      ],
-      [
-        "2026-09-07",
-        104489.4
-      ],
-      [
-        "2026-09-08",
-        96881.87
-      ],
-      [
-        "2026-09-09",
-        31505.16
-      ],
-      [
-        "2026-09-10",
-        13794.96
-      ],
-      [
-        "2026-09-11",
-        24828.83
-      ],
-      [
-        "2026-09-12",
-        -3109.95
+        "2026-09-15",
+        9377.2
       ]
     ],
-    "trade_volume_series": [
-      [
-        "2026-09-05",
-        69875.9
-      ],
-      [
-        "2026-09-06",
-        217424.0
-      ],
-      [
-        "2026-09-07",
-        155694.0
-      ],
-      [
-        "2026-09-08",
-        33887.13
-      ],
-      [
-        "2026-09-09",
-        160027.55
-      ],
-      [
-        "2026-09-10",
-        129951.94
-      ],
-      [
-        "2026-09-11",
-        95167.73
-      ],
-      [
-        "2026-09-12",
-        31361.22
-      ]
-    ],
-    "trade_volume_7d": 823513.57,
-    "server_shop_transactions": 300,
-    "server_shop": {
-      "transactions": 300,
-      "created": 193916.6,
-      "destroyed": 36306.0,
-      "net": 157610.6,
+    "flow": {
       "series": [
         [
-          "2026-09-05",
-          44804.0,
-          4557.0
+          "2026-09-12",
+          1755.0,
+          4943.0
         ],
         [
-          "2026-09-06",
-          134092.5,
-          19393.0
+          "2026-09-13",
+          4.0,
+          0.0
         ],
         [
-          "2026-09-07",
-          12113.3,
-          10700.0
+          "2026-09-14",
+          572.0,
+          236.0
         ],
         [
-          "2026-09-08",
-          2906.8,
-          1656.0
+          "2026-09-15",
+          1822.0,
+          2101.0
         ]
       ],
-      "top_sold": [
-        {
-          "item": "copper_ingot",
-          "qty": 32709,
-          "paid": 100767.6
-        },
-        {
-          "item": "raw_copper",
-          "qty": 24539,
-          "paid": 73617.0
-        },
-        {
-          "item": "gold_ingot",
-          "qty": 1101,
-          "paid": 11190.0
-        },
-        {
-          "item": "iron_ingot",
-          "qty": 722,
-          "paid": 4051.0
-        },
-        {
-          "item": "raw_gold",
-          "qty": 153,
-          "paid": 2072.0
-        },
-        {
-          "item": "redstone",
-          "qty": 669,
-          "paid": 979.0
-        },
-        {
-          "item": "lapis_lazuli",
-          "qty": 370,
-          "paid": 788.0
-        },
-        {
-          "item": "coal",
-          "qty": 226,
-          "paid": 452.0
-        }
-      ]
+      "spent_7d": 4153.0,
+      "received_7d": 7280.0,
+      "transactions": 71
     },
+    "trade_volume_series": [],
+    "trade_volume_7d": 0,
     "chest_shop_transactions": 0,
-    "gini": 0.449,
+    "gini": 0.949,
     "price_index": {
       "value": null,
       "series": [],
-      "note": "Turns on once chest-shop prices have history."
+      "note": "Turns on once asking prices have a day of history."
     },
-    "items": []
+    "items": [
+      {
+        "name": "Diamond",
+        "unit": "each",
+        "price": 90.0,
+        "change_7d": 0.0,
+        "shops": 3,
+        "sellers": 3,
+        "series": [
+          [
+            "2026-09-15",
+            90.0
+          ]
+        ],
+        "candles": [],
+        "volume_24h_qty": 0,
+        "volume_24h_value": 0.0
+      },
+      {
+        "name": "Bolt Armor Trim Smithing Template",
+        "unit": "each",
+        "price": 10.5,
+        "change_7d": 0.0,
+        "shops": 2,
+        "sellers": 2,
+        "series": [
+          [
+            "2026-09-15",
+            10.5
+          ]
+        ],
+        "candles": [],
+        "volume_24h_qty": 0,
+        "volume_24h_value": 0.0
+      },
+      {
+        "name": "Emerald",
+        "unit": "each",
+        "price": 252.5,
+        "change_7d": 0.0,
+        "shops": 2,
+        "sellers": 2,
+        "series": [
+          [
+            "2026-09-15",
+            252.5
+          ]
+        ],
+        "candles": [],
+        "volume_24h_qty": 0,
+        "volume_24h_value": 0.0
+      },
+      {
+        "name": "Experience Bottle",
+        "unit": "each",
+        "price": 7.25,
+        "change_7d": 0.0,
+        "shops": 2,
+        "sellers": 2,
+        "series": [
+          [
+            "2026-09-15",
+            7.25
+          ]
+        ],
+        "candles": [],
+        "volume_24h_qty": 0,
+        "volume_24h_value": 0.0
+      },
+      {
+        "name": "Flow Armor Trim Smithing Template",
+        "unit": "each",
+        "price": 10.5,
+        "change_7d": 0.0,
+        "shops": 2,
+        "sellers": 2,
+        "series": [
+          [
+            "2026-09-15",
+            10.5
+          ]
+        ],
+        "candles": [],
+        "volume_24h_qty": 0,
+        "volume_24h_value": 0.0
+      },
+      {
+        "name": "Golden Apple",
+        "unit": "each",
+        "price": 5.5,
+        "change_7d": 0.0,
+        "shops": 2,
+        "sellers": 2,
+        "series": [
+          [
+            "2026-09-15",
+            5.5
+          ]
+        ],
+        "candles": [],
+        "volume_24h_qty": 0,
+        "volume_24h_value": 0.0
+      },
+      {
+        "name": "Iron Ingot",
+        "unit": "each",
+        "price": 128.5,
+        "change_7d": 0.0,
+        "shops": 2,
+        "sellers": 2,
+        "series": [
+          [
+            "2026-09-15",
+            128.5
+          ]
+        ],
+        "candles": [],
+        "volume_24h_qty": 0,
+        "volume_24h_value": 0.0
+      },
+      {
+        "name": "Arrow",
+        "unit": "each",
+        "price": 1.0,
+        "change_7d": 0.0,
+        "shops": 1,
+        "sellers": 1,
+        "series": [
+          [
+            "2026-09-15",
+            1.0
+          ]
+        ],
+        "candles": [],
+        "volume_24h_qty": 0,
+        "volume_24h_value": 0.0
+      },
+      {
+        "name": "Book",
+        "unit": "each",
+        "price": 2000.0,
+        "change_7d": 0.0,
+        "shops": 1,
+        "sellers": 1,
+        "series": [
+          [
+            "2026-09-15",
+            2000.0
+          ]
+        ],
+        "candles": [],
+        "volume_24h_qty": 0,
+        "volume_24h_value": 0.0
+      },
+      {
+        "name": "Coal",
+        "unit": "each",
+        "price": 75.0,
+        "change_7d": 0.0,
+        "shops": 1,
+        "sellers": 1,
+        "series": [
+          [
+            "2026-09-15",
+            75.0
+          ]
+        ],
+        "candles": [],
+        "volume_24h_qty": 0,
+        "volume_24h_value": 0.0
+      },
+      {
+        "name": "Cooked Mutton",
+        "unit": "each",
+        "price": 15.0,
+        "change_7d": 0.0,
+        "shops": 1,
+        "sellers": 1,
+        "series": [
+          [
+            "2026-09-15",
+            15.0
+          ]
+        ],
+        "candles": [],
+        "volume_24h_qty": 0,
+        "volume_24h_value": 0.0
+      },
+      {
+        "name": "Copper Block",
+        "unit": "each",
+        "price": 3.0,
+        "change_7d": 0.0,
+        "shops": 1,
+        "sellers": 1,
+        "series": [
+          [
+            "2026-09-15",
+            3.0
+          ]
+        ],
+        "candles": [],
+        "volume_24h_qty": 0,
+        "volume_24h_value": 0.0
+      },
+      {
+        "name": "Copper Ingot",
+        "unit": "each",
+        "price": 35.0,
+        "change_7d": 0.0,
+        "shops": 1,
+        "sellers": 1,
+        "series": [
+          [
+            "2026-09-15",
+            35.0
+          ]
+        ],
+        "candles": [],
+        "volume_24h_qty": 0,
+        "volume_24h_value": 0.0
+      },
+      {
+        "name": "Fire Charge",
+        "unit": "each",
+        "price": 1.0,
+        "change_7d": 0.0,
+        "shops": 1,
+        "sellers": 1,
+        "series": [
+          [
+            "2026-09-15",
+            1.0
+          ]
+        ],
+        "candles": [],
+        "volume_24h_qty": 0,
+        "volume_24h_value": 0.0
+      },
+      {
+        "name": "Golden Carrot",
+        "unit": "each",
+        "price": 1.0,
+        "change_7d": 0.0,
+        "shops": 1,
+        "sellers": 1,
+        "series": [
+          [
+            "2026-09-15",
+            1.0
+          ]
+        ],
+        "candles": [],
+        "volume_24h_qty": 0,
+        "volume_24h_value": 0.0
+      },
+      {
+        "name": "Iron Leggings",
+        "unit": "each",
+        "price": 2.0,
+        "change_7d": 0.0,
+        "shops": 1,
+        "sellers": 1,
+        "series": [
+          [
+            "2026-09-15",
+            2.0
+          ]
+        ],
+        "candles": [],
+        "volume_24h_qty": 0,
+        "volume_24h_value": 0.0
+      }
+    ]
   },
   "wealth": {
     "top": [
       {
-        "name": "Luko_Landino",
-        "balance": 18003.57
+        "name": "Keanie__",
+        "balance": 864
       },
       {
-        "name": "ACRI_Vanguard",
-        "balance": 16542.81
+        "name": "Atilius_Corvinus",
+        "balance": 431
       },
       {
-        "name": "ihasadragon",
-        "balance": 13962.03
+        "name": "Giggsy__",
+        "balance": 215
       },
       {
-        "name": "JoshMilkFleas",
-        "balance": 12067.72
+        "name": "1RTR",
+        "balance": 137
       },
       {
-        "name": "st4tc",
-        "balance": 8129.66
+        "name": "JxrdanUK",
+        "balance": 89
+      },
+      {
+        "name": "SLEN3ER",
+        "balance": 81
+      },
+      {
+        "name": "Augustine65480",
+        "balance": 34
+      },
+      {
+        "name": "AriannaBoh",
+        "balance": 4
+      },
+      {
+        "name": "BabieDolphin",
+        "balance": 2
       },
       {
         "name": "BlackAdder83",
-        "balance": 5768.5
+        "balance": 2
       },
       {
-        "name": "Scp9390",
-        "balance": 5571.5
+        "name": "ske9z",
+        "balance": 1
       },
       {
-        "name": "BrodyIsConfused",
-        "balance": 5530.5
+        "name": "winterrrly",
+        "balance": 0
       },
       {
-        "name": "mooshierk",
-        "balance": 4748.52
+        "name": "spiderjake5000",
+        "balance": 0
       },
       {
-        "name": "DatAriix",
-        "balance": 4746.57
+        "name": "X_Professor_YT",
+        "balance": 0
       },
       {
-        "name": "XDjarinXD",
-        "balance": 4106.0
-      },
-      {
-        "name": "saberjianga",
-        "balance": 4054.0
-      },
-      {
-        "name": "ieru",
-        "balance": 4004.5
-      },
-      {
-        "name": "Simojolu2",
-        "balance": 3000.0
-      },
-      {
-        "name": "aazo9z",
-        "balance": 2909.5
+        "name": "Lagmanium",
+        "balance": 0
       }
     ],
-    "median": 2500.0,
-    "mean": 3233.44
+    "median": 0.0,
+    "mean": 27.35
   },
-  "server": {
-    "checked": "2026-09-12T12:43:35Z",
-    "started_at": "2026-09-12T12:12:17Z",
-    "tps": 20.0
-  },
+  "server": {},
   "nations": [
     {
       "name": "Augustine Empire",
       "tag": null,
       "color": "#956BE8",
-      "mdi": 0.15,
-      "territory": 0.683,
-      "population": 0.733,
-      "wealth": 0.001,
+      "lands": 2,
+      "mdi": 0.44,
+      "territory": 1.0,
+      "population": 0.8,
+      "wealth": 0.047,
       "activity": 1.0,
-      "chunks": 41,
-      "members": 11,
-      "treasury": 0.0
+      "chunks": 62,
+      "members": 12,
+      "treasury": 47.0
+    },
+    {
+      "name": "Thalassos",
+      "tag": null,
+      "color": null,
+      "lands": 1,
+      "mdi": 0.859,
+      "territory": 1.0,
+      "population": 0.8,
+      "wealth": 0.68,
+      "activity": 1.0,
+      "chunks": 79,
+      "members": 12,
+      "treasury": 680.2
     }
   ],
   "lands": [
     {
       "name": "Pergaminthos",
       "type": "land",
-      "chunks": 42,
-      "members": 11,
-      "bank": 0.0,
-      "level": 0
-    },
-    {
-      "name": "Augustine",
-      "type": "land",
-      "chunks": 37,
-      "members": 8,
-      "bank": 0.0,
-      "level": 0
+      "chunks": 88,
+      "members": 14,
+      "bank": 458.0,
+      "level": 1,
+      "color": "#667CEE"
     },
     {
       "name": "Myndelea",
       "type": "land",
-      "chunks": 28,
-      "members": 5,
-      "bank": 0.0,
-      "level": 0
+      "chunks": 79,
+      "members": 12,
+      "bank": 680.2,
+      "level": 2,
+      "color": "#DF6EA4"
+    },
+    {
+      "name": "Augustine",
+      "type": "land",
+      "chunks": 58,
+      "members": 9,
+      "bank": 47.0,
+      "level": 0,
+      "color": "#C0CAF3"
+    },
+    {
+      "name": "Mingasty",
+      "type": "land",
+      "chunks": 27,
+      "members": 3,
+      "bank": 19.0,
+      "level": 0,
+      "color": "#E967D5"
     },
     {
       "name": "Rare Fish Industries",
       "type": "land",
       "chunks": 25,
       "members": 6,
-      "bank": 0.0,
-      "level": 0
+      "bank": 150.0,
+      "level": 1,
+      "color": "#C28FA5"
     },
     {
-      "name": "BlackAdder83's Camp",
-      "type": "camp",
-      "chunks": 9,
-      "members": 2,
-      "bank": 0.0,
-      "level": 0
+      "name": "Reach",
+      "type": "land",
+      "chunks": 10,
+      "members": 7,
+      "bank": 240.0,
+      "level": 1,
+      "color": "#66979D"
+    },
+    {
+      "name": "Goldmarche",
+      "type": "land",
+      "chunks": 10,
+      "members": 8,
+      "bank": 40.0,
+      "level": 0,
+      "color": "#A3E085"
     },
     {
       "name": "Keanie__",
       "type": "land",
       "chunks": 7,
-      "members": 6,
+      "members": 7,
       "bank": 0.0,
-      "level": 0
-    },
-    {
-      "name": "<aqua>byperhorea",
-      "type": "land",
-      "chunks": 7,
-      "members": 3,
-      "bank": 0.0,
-      "level": 0
+      "level": 0,
+      "color": "#B6B06C"
     },
     {
       "name": "Grease Lands",
       "type": "land",
       "chunks": 5,
       "members": 2,
-      "bank": 0.0,
-      "level": 0
+      "bank": 950.0,
+      "level": 0,
+      "color": "#66A4EF"
     },
     {
       "name": "Liam's Empire",
@@ -328,31 +543,35 @@
       "chunks": 4,
       "members": 3,
       "bank": 0.0,
-      "level": 0
+      "level": 0,
+      "color": "#94B8C3"
     },
     {
       "name": "ACRI_Vanguard",
       "type": "land",
       "chunks": 4,
-      "members": 3,
+      "members": 6,
       "bank": 0.0,
-      "level": 0
+      "level": 0,
+      "color": "#BDE19D"
     },
     {
-      "name": "Reach",
+      "name": "Faros Thalassoi",
       "type": "land",
       "chunks": 4,
       "members": 2,
       "bank": 0.0,
-      "level": 0
+      "level": 0,
+      "color": "#66D7CC"
     },
     {
       "name": "klaksonik",
       "type": "land",
       "chunks": 3,
-      "members": 2,
-      "bank": 0.0,
-      "level": 0
+      "members": 3,
+      "bank": 132.0,
+      "level": 0,
+      "color": "#F4A781"
     },
     {
       "name": "coolland!!!",
@@ -360,23 +579,26 @@
       "chunks": 3,
       "members": 3,
       "bank": 0.0,
-      "level": 0
+      "level": 0,
+      "color": "#CF928D"
     },
     {
       "name": "Luko_Landino",
       "type": "land",
       "chunks": 2,
-      "members": 5,
+      "members": 6,
       "bank": 0.0,
-      "level": 0
+      "level": 0,
+      "color": "#B0E0A7"
     },
     {
       "name": "Safe Haven",
       "type": "land",
       "chunks": 2,
       "members": 2,
-      "bank": 0.0,
-      "level": 0
+      "bank": 200.0,
+      "level": 0,
+      "color": "#E8D289"
     },
     {
       "name": "Lagmanium",
@@ -384,15 +606,17 @@
       "chunks": 1,
       "members": 2,
       "bank": 0.0,
-      "level": 0
+      "level": 0,
+      "color": "#B6FAF0"
     },
     {
       "name": "Arkalis",
       "type": "land",
       "chunks": 1,
       "members": 2,
-      "bank": 0.0,
-      "level": 0
+      "bank": 4.0,
+      "level": 0,
+      "color": "#CADC7A"
     },
     {
       "name": "Skinski",
@@ -400,15 +624,26 @@
       "chunks": 1,
       "members": 3,
       "bank": 0.0,
-      "level": 0
+      "level": 0,
+      "color": "#65EFA4"
     },
     {
       "name": "AriannaBoh",
       "type": "land",
       "chunks": 1,
       "members": 2,
-      "bank": 0.0,
-      "level": 0
+      "bank": 8.0,
+      "level": 0,
+      "color": "#BCF966"
+    },
+    {
+      "name": "TwizzyRich",
+      "type": "land",
+      "chunks": 1,
+      "members": 2,
+      "bank": 34.0,
+      "level": 0,
+      "color": "#DDD0F2"
     },
     {
       "name": "Entulho",
@@ -416,15 +651,40 @@
       "chunks": 0,
       "members": 2,
       "bank": 0.0,
-      "level": 0
+      "level": 0,
+      "color": "#B18568"
     }
   ],
   "events": [
     {
       "type": "land",
-      "at": "2026-09-12T01:46:58Z",
-      "text": "BlackAdder83's Camp was founded",
-      "owner": "BlackAdder83"
+      "at": "2026-09-14T00:24:06Z",
+      "text": "Faros Thalassoi was founded",
+      "owner": "SLEN3ER"
+    },
+    {
+      "type": "land",
+      "at": "2026-09-13T05:41:08Z",
+      "text": "Mingasty was founded",
+      "owner": "Mingasty"
+    },
+    {
+      "type": "land",
+      "at": "2026-09-12T18:54:14Z",
+      "text": "Goldmarche was founded",
+      "owner": "WhenAtRome"
+    },
+    {
+      "type": "land",
+      "at": "2026-09-12T17:27:31Z",
+      "text": "TwizzyRich was founded",
+      "owner": "JxrdanUK"
+    },
+    {
+      "type": "nation",
+      "at": "2026-09-12T16:45:36Z",
+      "text": "Thalassos was formed",
+      "owner": "Atilius_Corvinus"
     },
     {
       "type": "land",
@@ -476,12 +736,6 @@
     },
     {
       "type": "land",
-      "at": "2026-09-06T23:59:41Z",
-      "text": "<aqua>byperhorea was founded",
-      "owner": "WhenAtRome"
-    },
-    {
-      "type": "land",
       "at": "2026-09-06T23:56:18Z",
       "text": "Myndelea was founded",
       "owner": "Atilius_Corvinus"
@@ -521,24 +775,6 @@
       "at": "2026-09-05T22:30:04Z",
       "text": "Rare Fish Industries was founded",
       "owner": "JoshMilkFleas"
-    },
-    {
-      "type": "land",
-      "at": "2026-09-05T21:51:10Z",
-      "text": "Lagmanium was founded",
-      "owner": "Lagmanium"
-    },
-    {
-      "type": "land",
-      "at": "2026-09-05T21:15:04Z",
-      "text": "coolland!!! was founded",
-      "owner": "aazo9z"
-    },
-    {
-      "type": "land",
-      "at": "2026-09-05T20:58:53Z",
-      "text": "Augustine was founded",
-      "owner": "Augustine65480"
     }
   ]
 }

@@ -1,21 +1,29 @@
 name: Refresh economy analytics
 
 on:
-  # This is the refresh path. It reads the game server over FTP + RCON, commits
-  # public/data.json, and publishes the same file to the server's own webserver
-  # (see MC_PUBLISH_PATH below), which is what the site serves at /api/data.json.
+  # This is the refresh path. It reads the game server over FTP (+ QuickShop's
+  # MySQL, + RCON when the secrets are set), commits public/data.json and the
+  # incremental scan state under scripts/state/, and publishes the same file to
+  # the server's own webserver (MC_PUBLISH_PATH), which is what the Worker
+  # serves at /api/data.json.
   #
   # History worth keeping: ~35 runs failed with 530 before the FTP secret was
   # corrected. That looked like Apex blocking GitHub's IP ranges, and it was
   # not - the credential was simply wrong. If 530 shows up again, treat it as a
   # stale secret first; the runners reach Apex fine.
+  #
+  # Also: the live server directory on the FTP root is auto-detected (newest
+  # world/level.dat). A hardcoded profile name silently read a dead profile
+  # for three days after the server moved, and nothing on the site changed.
   schedule:
     - cron: "*/15 * * * *"
   workflow_dispatch: {}
 
 concurrency:
   group: analytics
-  cancel-in-progress: true
+  # Queue rather than cancel: a cancelled run throws away a partly-finished
+  # world scan and its state never gets committed.
+  cancel-in-progress: false
 
 permissions:
   contents: write
@@ -23,6 +31,7 @@ permissions:
 jobs:
   refresh:
     runs-on: ubuntu-latest
+    timeout-minutes: 14
     steps:
       - uses: actions/checkout@v4
 
@@ -51,18 +60,23 @@ jobs:
           MC_RCON_HOST: ${{ secrets.MC_RCON_HOST }}
           MC_RCON_PORT: ${{ secrets.MC_RCON_PORT }}
           # Publish straight to the game server's public webserver, which is
-          # what the Worker reads at /api/data.json. Without this the live path
-          # only ever updates from the Mac.
-          MC_PUBLISH_PATH: profile_orfqa/plugins/squaremap/web/data.json
+          # what the Worker reads at /api/data.json. {profile} is filled in
+          # with the detected live profile. Without this the live path only
+          # ever updates from the Mac.
+          MC_PUBLISH_PATH: "{profile}/plugins/squaremap/web/data.json"
+          # Region files changed in the last 15 minutes are ~100 MB; this
+          # leaves room for a busy server without running into the next cron.
+          MC_SCAN_BUDGET_MB: "500"
+          MC_SCAN_BUDGET_FILES: "60"
         run: python3 scripts/refresh_analytics.py
 
       - name: Commit if changed
         if: always()
         run: |
-          if ! git diff --quiet -- public/data.json public/data-status.json; then
+          git add public/data.json public/data-status.json scripts/state/
+          if ! git diff --cached --quiet; then
             git config user.name  "meridian-analytics"
             git config user.email "actions@users.noreply.github.com"
-            git add public/data.json public/data-status.json
             git commit -m "chore: refresh economy analytics [skip ci]"
             git pull --rebase --autostash
             git push

@@ -4,7 +4,7 @@
 (function () {
   // The ticker lives in the site header on every page; the rest of this file
   // (MEI, charts, tables, nation registry) only renders where [data-analytics]
-  // exists (economy.astro, lands.astro).
+  // exists (economy.astro, claims.astro).
   var root = document.querySelector("[data-analytics]");
 
   // Try each configured source in turn, newest-first, and fall back to the
@@ -46,23 +46,6 @@
     return '<div class="stat"><div class="s-val">' + val + '</div><div class="s-lab">' +
       lab + '</div><div class="s-sub">' + (sub || "") + "</div></div>";
   }
-
-  // Official Minecraft textures live in /assets/mc. `icon` is the file name,
-  // so anything without one just renders as plain text.
-  function mcIcon(name) {
-    return '<img class="mc-ico" src="/assets/mc/' + name + '.png" alt="" width="18" height="18" loading="lazy">';
-  }
-
-  // The Sell counter only buys these, so this covers every item that can ever
-  // top the "most sold" list.
-  var ITEM_ICON = {
-    coal: "coal", charcoal: "charcoal",
-    raw_copper: "raw_copper", copper_ingot: "copper_ingot",
-    raw_iron: "raw_iron", iron_ingot: "iron_ingot",
-    raw_gold: "raw_gold", gold_ingot: "gold_ingot",
-    redstone: "redstone", lapis_lazuli: "lapis_lazuli",
-    quartz: "quartz", emerald: "emerald", diamond: "diamond",
-  };
 
   function lineChart(series, fmt) {
     if (!series || series.length < 2) return null;
@@ -324,7 +307,7 @@
 
     // ---- economy ----
     if (d.economy) {
-      var e = d.economy, m = d.meta, w = d.wealth;
+      var e = d.economy, m = d.meta, w = d.wealth || { top: [] };
       var mei = root.querySelector("[data-slot=mei]");
       if (mei) {
         var c = e.classification;
@@ -354,42 +337,45 @@
         var el = root.querySelector("[data-slot=" + slot + "]");
         if (el) el.innerHTML = html;
       }
-      fill("stat-money", tile(money(e.money_supply_players), "Player money supply", "held by all players"));
+      // Gold is an item currency, so the supply is counted from the world
+      // itself: what players carry, what sits in containers, and what has
+      // been deposited into land banks. Each part gets its own tile.
+      var sp = e.supply || { total: e.money_supply_players };
+      var chests = (sp.containers || 0) + (sp.loose || 0);
+      fill("stat-money",
+        tile(money(sp.total), "Gold in existence", "every ingot and block, counted") +
+        tile(money((sp.on_hand || 0) + (sp.ender_chests || 0)), "Carried by players",
+             "inventories, plus " + money(sp.ender_chests) + " in ender chests") +
+        tile(money(chests), "In chests", "containers, frames, carts") +
+        tile(money(sp.land_banks), "In land banks", "out of circulation until withdrawn"));
+      var cov = sp.coverage;
+      var covEl = root.querySelector("[data-slot=coverage]");
+      if (covEl && cov) {
+        covEl.textContent = cov.unscanned > 0
+          ? "World scan " + cov.percent.toFixed(0) + "% complete, " + intf(cov.unscanned) + " of " +
+            intf(cov.files) + " region files still to read. Chest totals will rise as it finishes."
+          : cov.stale > 0
+            ? intf(cov.stale) + " of " + intf(cov.files) + " region files changed since their last read and are queued."
+            : "All " + intf(cov.files) + " region files read.";
+      }
       fill("stat-prices", tile(
         e.price_index && e.price_index.value != null ? e.price_index.value.toFixed(1) : "n/a",
-        "Price index", "base 100 at launch"));
+        "Price index", "base 100 at first reading"));
+      var fl = e.flow || {};
       fill("stat-trade",
-        tile(money(e.trade_volume_7d), "Trade volume, 7 days", "player and shop") +
-        tile(intf(m.players_tracked), "Players tracked", m.active_traders + " trading"));
-      fill("stat-wealth",
-        tile(e.gini == null ? "n/a" : e.gini.toFixed(2), "Wealth Gini", "0 is equal, 1 is concentrated") +
-        tile(money(w.median), "Median balance", "the typical player"));
-      // The Buy/Sell counters are the only outright faucet and sink on the server,
-      // so a persistently positive net is the early warning that something is
-      // mispriced. It went unseen for two days before this was surfaced.
-      var mint = root.querySelector("[data-slot=mint]");
-      if (mint) {
-        var sh = e.server_shop;
-        if (!sh || !sh.transactions) {
-          mint.innerHTML = tile("n/a", "No counter activity", "nothing bought or sold yet");
-        } else {
-          var top = (sh.top_sold && sh.top_sold[0]) || null;
-          mint.innerHTML =
-            tile(money(sh.created), "Created", "paid out by the Sell counter") +
-            tile(money(sh.destroyed), "Destroyed", "taken in by the Buy counter") +
-            tile((sh.net > 0 ? "+" : "") + money(sh.net), "Net supply change",
-                 sh.net > 0 ? "counter is adding money" : "counter is removing money") +
-            tile(intf(sh.transactions), "Counter trades", "since launch") +
-            (top ? tile((ITEM_ICON[top.item] ? mcIcon(ITEM_ICON[top.item]) : "") +
-                        esc(top.item.replace(/_/g, " ")), "Most sold",
-                        intf(top.qty) + " for " + money(top.paid)) : "");
-        }
-      }
+        tile(money(e.trade_volume_7d), "Shop trade, 7 days", "player chest shops") +
+        tile(money(fl.spent_7d), "Gold spent, 7 days", "shops, claims, upkeep, payments") +
+        tile(money(fl.received_7d), "Gold received, 7 days", "sales, withdrawals, rewards") +
+        tile(intf(m.players_tracked), "Players tracked", m.active_traders + " active this week"));
 
-      fillChart("supply-chart", lineChart(e.money_supply_series, money), "Starts once players trade.");
+      fillChart("supply-chart", lineChart(e.money_supply_series, money), "One point per day, starting today.");
       fillChart("price-chart", lineChart(e.price_index && e.price_index.series, function (v) { return v.toFixed(0); }),
         (e.price_index && e.price_index.note) || "Needs shop price history.");
-      fillChart("volume-chart", barChart(e.trade_volume_series, money), "No trade recorded yet.");
+      fillChart("volume-chart", barChart(e.trade_volume_series, money), "No chest-shop purchases recorded yet.");
+      // Every gold movement through Vault, spent side: what players paid for
+      // shops, claims, upkeep and each other, per day.
+      fillChart("flow-chart", barChart((fl.series || []).map(function (r) { return [r[0], r[1]]; }), money),
+        "No gold has changed hands yet.");
 
       var it = root.querySelector("[data-slot=item-table]");
       if (it) {

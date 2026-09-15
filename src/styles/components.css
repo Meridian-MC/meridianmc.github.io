@@ -1083,9 +1083,9 @@ main {
 .chart svg { display: block; width: 100%; height: 150px; overflow: visible; }
 .chart .c-empty { color: var(--text-3); font-size: 0.84rem; padding: 40px 0; text-align: center; }
 .chart .gridline { stroke: var(--border); stroke-width: 1; }
-.chart .series-line { fill: none; stroke: var(--p-market); stroke-width: 1.75; stroke-linejoin: round; vector-effect: non-scaling-stroke; }
-.chart .series-area { fill: var(--p-market); opacity: 0.10; }
-.chart .bar { fill: var(--p-essentials); opacity: 0.85; }
+.chart .series-line { fill: none; stroke: var(--p-tne); stroke-width: 1.75; stroke-linejoin: round; vector-effect: non-scaling-stroke; }
+.chart .series-area { fill: var(--p-tne); opacity: 0.10; }
+.chart .bar { fill: var(--p-tne); opacity: 0.7; }
 .chart .tick { fill: var(--text-3); font-size: 9px; font-family: var(--mono); }
 .chart .c-range { display: flex; justify-content: space-between; font-family: var(--mono); font-size: 0.68rem; color: var(--text-3); margin-top: 4px; }
 
@@ -1192,7 +1192,7 @@ main {
   transition: color 0.15s var(--ease), border-color 0.15s var(--ease);
 }
 .cpick:hover { color: var(--text-2); }
-.cpick.on { color: var(--text); border-color: var(--p-market); background: color-mix(in srgb, var(--p-market) 12%, var(--bg-2)); }
+.cpick.on { color: var(--text); border-color: var(--p-tne); background: color-mix(in srgb, var(--p-tne) 12%, var(--bg-2)); }
 .candle-tabs { display: flex; gap: 4px; background: var(--bg-2); border: 1px solid var(--border); border-radius: 0; padding: 3px; height: fit-content; }
 .ctab { font-family: var(--mono); font-size: 0.72rem; color: var(--text-3); background: none; border: none; border-radius: 0; padding: 4px 10px; cursor: pointer; }
 .ctab.on { background: var(--bg-1); color: var(--text); }
@@ -1335,6 +1335,12 @@ main {
   justify-content: center;
 }
 .craft-cell img { image-rendering: pixelated; width: 24px; height: 24px; }
+/* Non-crafting stations reuse the same panel and slot styling with a
+   different slot arrangement: a furnace is one input slot, a brewing stand
+   is the ingredient slot above the bottle slot, the way the real GUIs are
+   laid out. */
+.craft-grid.craft-furnace { grid-template-columns: 36px; grid-template-rows: 36px; }
+.craft-grid.craft-brewing { grid-template-columns: 36px; grid-template-rows: repeat(2, 36px); gap: 6px; }
 .craft-arrow { color: var(--text-3); font-size: 1.4rem; flex: none; }
 .craft-result-wrap {
   background: #8b8b8b;

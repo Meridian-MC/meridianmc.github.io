@@ -60,7 +60,7 @@
      (--p-jobs is gone: Jobs Reborn was removed from the server.) */
   --color-p-lands: #4fae66;
   --color-p-quickshop: #e0a23c;
-  --color-p-market: #4a8ed6;
+  --color-p-tne: #d9a441;
   --color-p-extract: #8a5cf0;
   --color-p-brew: #e0629e;
   --color-p-essentials: #e0473f;
@@ -258,7 +258,7 @@
 
   --p-lands: var(--color-p-lands);
   --p-quickshop: var(--color-p-quickshop);
-  --p-market: var(--color-p-market);
+  --p-tne: var(--color-p-tne);
   --p-extract: var(--color-p-extract);
   --p-brew: var(--color-p-brew);
   --p-essentials: var(--color-p-essentials);

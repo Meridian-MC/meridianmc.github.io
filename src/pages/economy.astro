@@ -19,18 +19,19 @@ import Base from "../layouts/Base.astro";
          figure appears exactly once, with the chart it belongs to. -->
     <section id="flow">
       <h2>How money works</h2>
-      <p>The currency of this server is Gold (G). Gold can be obtained through mining, voting, or trading with players. There is no server shop.</p>
+      <p>The currency of this server is Gold (G). A gold ingot is 1 G and a gold block is 9 G, and the items themselves are the money: there is no balance anywhere else. Gold can be obtained through mining, voting, or trading with players. There is no server shop.</p>
       <p>Gold is used to purchase land claims, pay upkeep, establish nations, and for various other expenses.</p>
-      <p>Personal banks do not exist. Gold can only be stored in chests and land banks.</p>
+      <p>Personal banks do not exist. Gold can only be stored in chests and land banks. Because the money is physical, the figures below are counted from the world itself rather than from a ledger.</p>
     </section>
 
     <section id="money">
       <h2>Money</h2>
       <div class="stat-row" data-slot="stat-money"></div>
       <div class="chart">
-        <h3>Money supply</h3>
-        <div class="c-sub">Total currency held by players.</div>
+        <h3>Gold supply</h3>
+        <div class="c-sub">Every gold ingot and block in the world, counted from player inventories, ender chests, containers, and land banks. Gold in a land bank has left circulation until it is withdrawn.</div>
         <div data-slot="supply-chart"></div>
+        <div class="c-sub" data-slot="coverage"></div>
       </div>
     </section>
 
@@ -50,9 +51,14 @@ import Base from "../layouts/Base.astro";
       <h2>Trade</h2>
       <div class="stat-row" data-slot="stat-trade"></div>
       <div class="chart">
-        <h3>Trade volume</h3>
-        <div class="c-sub">Value moving between players and through shops each day.</div>
+        <h3>Shop trade</h3>
+        <div class="c-sub">Gold paid through player chest shops each day.</div>
         <div data-slot="volume-chart"></div>
+      </div>
+      <div class="chart">
+        <h3>Gold spent</h3>
+        <div class="c-sub">All gold leaving player hands each day: shop purchases, claim costs, upkeep, deposits, and payments.</div>
+        <div data-slot="flow-chart"></div>
       </div>
     </section>
 
