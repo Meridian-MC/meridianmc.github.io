@@ -6,3 +6,7 @@ dist/
 
 # Downloaded skill packages: tooling, not part of the site build.
 .claude/skills/
+
+# refresh_analytics.py writes state files via a .tmp then renames; a crash
+# mid-write must not leave a stray file for `git add scripts/state` to sweep up.
+scripts/state/*.tmp

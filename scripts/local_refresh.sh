@@ -1,11 +1,13 @@
 #!/bin/bash
 # Rebuild public/data.json from the live server and push it, from this Mac.
+# Commits the same files the GitHub Action does: public/data.json,
+# public/data-status.json and the incremental scan state under scripts/state/.
 #
-# The GitHub Action does the same job on a schedule, but Apex rejects FTP
-# logins from GitHub's runners (530 on a credential that authenticates fine
-# from here), so this is the path that actually works today. Both can run at
-# once. If Apex ever allows the runners, unload this agent and nothing else
-# has to change.
+# The GitHub Action (.github/workflows/analytics.yml) is the refresh path;
+# this is the fallback for when it can't reach Apex, run by
+# ~/Library/LaunchAgents/com.meridian.analytics-refresh.plist every 5 minutes
+# while that agent is loaded. Both can run at once: each pulls before it
+# generates and drops its own commit if the push is rejected.
 #
 # The FTP password comes from ~/.netrc. It is never passed on a command line
 # and never printed.
@@ -18,15 +20,15 @@ export PATH="/opt/homebrew/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 cd "$REPO" || exit 1
 log() { echo "[$(date -u '+%Y-%m-%dT%H:%M:%SZ')] $*"; }
 
-# Never sweep up half-finished work: bail if anything other than the two
-# generated files has uncommitted edits.
+# Never sweep up half-finished work: bail if anything other than the generated
+# files (data.json, data-status.json, scripts/state/) has uncommitted edits.
 if ! git diff --quiet -- . ':!public/data.json' ':!public/data-status.json' ':!scripts/state'; then
   log "working tree has other uncommitted changes, skipping"
   exit 0
 fi
 
 # Pull BEFORE generating. A clean tree rebases without conflict, and it means
-# the commit below is already on top of whatever is on the remote, so the two
+# the commit below is already on top of whatever is on the remote, so the
 # generated files never have to be merged against another version of themselves.
 git checkout -q -- public/data.json public/data-status.json scripts/state 2>/dev/null
 if ! git pull --rebase -q; then
@@ -66,7 +68,11 @@ fi
 
 # The data file always differs by its `generated` stamp; only commit when the
 # figures actually moved, or when the last commit is old enough that the site
-# would otherwise start reporting itself stale.
+# would otherwise start reporting itself stale. The scan state changes on
+# every run too (region mtimes, scanned-at stamps) and is deliberately not
+# consulted: it rides along with a data.json commit or the heartbeat, and is
+# reset otherwise. The cost of a reset is re-reading the region files that
+# changed since the last committed state, never a wrong figure.
 if ! python3 scripts/should_push.py; then
   git checkout -q -- public/data.json public/data-status.json scripts/state
   log "only the timestamp moved, skipping"
@@ -85,7 +91,8 @@ fi
 
 # Someone pushed between the pull and the push. The commit holds nothing but
 # regenerated data, so drop it and let the next cycle rebuild from the newer
-# base rather than trying to merge generated files.
+# base rather than trying to merge generated files. Just that one commit: a
+# hand-made commit sitting ahead of the remote must survive.
 log "push rejected (remote moved); dropping the local data commit, next run will redo it"
-git reset --hard -q "@{u}"
+git reset --hard -q HEAD^
 exit 1
