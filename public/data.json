@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-16T15:17:17Z",
+  "generated": "2026-09-16T15:41:56Z",
   "meta": {
     "players_tracked": 68,
     "active_traders": 8,
@@ -26,8 +26,8 @@
       "note": "Gold launched 2026-09-12. Needs 8+ active traders and 14+ days of history; currently 8 traders / 4 days."
     },
     "supply": {
-      "total": 9025.2,
-      "on_hand": 172,
+      "total": 9027.2,
+      "on_hand": 174,
       "ender_chests": 1970,
       "containers": 4648,
       "loose": 15,
@@ -40,7 +40,7 @@
         "percent": 100.0
       }
     },
-    "money_supply_players": 9025.2,
+    "money_supply_players": 9027.2,
     "money_supply_series": [
       [
         "2026-09-15",
@@ -48,7 +48,7 @@
       ],
       [
         "2026-09-16",
-        9025.2
+        9027.2
       ]
     ],
     "flow": {
@@ -448,7 +448,7 @@
       },
       {
         "name": "JxrdanUK",
-        "balance": 409
+        "balance": 411
       },
       {
         "name": "Giggsy__",
@@ -500,10 +500,10 @@
       }
     ],
     "median": 0.0,
-    "mean": 31.5
+    "mean": 31.53
   },
   "server": {
-    "checked": "2026-09-16T15:17:18Z",
+    "checked": "2026-09-16T15:41:56Z",
     "started_at": "2026-09-16T12:12:14Z",
     "tps": 20.0
   },
