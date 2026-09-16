@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-16T02:15:44Z",
+  "generated": "2026-09-16T02:41:47Z",
   "meta": {
     "players_tracked": 68,
     "active_traders": 8,
@@ -88,7 +88,7 @@
     "chest_shop_transactions": 0,
     "gini": 0.952,
     "price_index": {
-      "value": 100.0,
+      "value": 93.9,
       "series": [
         [
           "2026-09-15",
@@ -96,7 +96,7 @@
         ],
         [
           "2026-09-16",
-          100.0
+          93.9
         ]
       ],
       "note": "Basket of 16 shop items, base 100 on 2026-09-15."
@@ -418,20 +418,16 @@
         "volume_24h_value": 0.0
       },
       {
-        "name": "Iron Leggings",
+        "name": "Granite",
         "unit": "each",
-        "price": 2.0,
+        "price": 4.0,
         "change_7d": 0.0,
         "shops": 1,
         "sellers": 1,
         "series": [
           [
-            "2026-09-15",
-            2.0
-          ],
-          [
             "2026-09-16",
-            2.0
+            4.0
           ]
         ],
         "candles": [],
@@ -507,7 +503,7 @@
     "mean": 26.85
   },
   "server": {
-    "checked": "2026-09-16T02:15:44Z",
+    "checked": "2026-09-16T02:41:47Z",
     "started_at": "2026-09-15T12:13:13Z",
     "tps": 20.0
   },

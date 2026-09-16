@@ -47,6 +47,7 @@
    "minecraft:flow_armor_trim_smithing_template": 10.5,
    "minecraft:golden_apple": 5.5,
    "minecraft:golden_carrot": 1.0,
+   "minecraft:granite": 4.0,
    "minecraft:iron_ingot": 128.5,
    "minecraft:iron_leggings": 2.0,
    "minecraft:lapis_block": 5.0,
@@ -69,7 +70,7 @@
    "total": 8556.2
   },
   "2026-09-16": {
-   "at": "2026-09-16T02:15:44Z",
+   "at": "2026-09-16T02:41:47Z",
    "banks": 2232.2,
    "containers": 4482,
    "coverage": 100.0,
