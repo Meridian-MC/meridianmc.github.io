@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-16T17:44:03Z",
+  "generated": "2026-09-16T17:55:54Z",
   "meta": {
     "players_tracked": 68,
     "active_traders": 8,
@@ -26,10 +26,10 @@
       "note": "Gold launched 2026-09-12. Needs 8+ active traders and 14+ days of history; currently 8 traders / 4 days."
     },
     "supply": {
-      "total": 8943.2,
-      "on_hand": 202,
+      "total": 8947.2,
+      "on_hand": 157,
       "ender_chests": 1950,
-      "containers": 4644,
+      "containers": 4693,
       "loose": 15,
       "land_banks": 2132.2,
       "coverage": {
@@ -40,7 +40,7 @@
         "percent": 100.0
       }
     },
-    "money_supply_players": 8943.2,
+    "money_supply_players": 8947.2,
     "money_supply_series": [
       [
         "2026-09-15",
@@ -48,7 +48,7 @@
       ],
       [
         "2026-09-16",
-        8943.2
+        8947.2
       ]
     ],
     "flow": {
@@ -86,9 +86,9 @@
     "trade_volume_series": [],
     "trade_volume_7d": 0,
     "chest_shop_transactions": 0,
-    "gini": 0.944,
+    "gini": 0.943,
     "price_index": {
-      "value": 93.9,
+      "value": 101.0,
       "series": [
         [
           "2026-09-15",
@@ -96,33 +96,12 @@
         ],
         [
           "2026-09-16",
-          93.9
+          101.0
         ]
       ],
       "note": "Basket of 16 shop items, base 100 on 2026-09-15."
     },
     "items": [
-      {
-        "name": "Diamond",
-        "unit": "each",
-        "price": 90.0,
-        "change_7d": 0.0,
-        "shops": 3,
-        "sellers": 3,
-        "series": [
-          [
-            "2026-09-15",
-            90.0
-          ],
-          [
-            "2026-09-16",
-            90.0
-          ]
-        ],
-        "candles": [],
-        "volume_24h_qty": 0,
-        "volume_24h_value": 0.0
-      },
       {
         "name": "Bolt Armor Trim Smithing Template",
         "unit": "each",
@@ -138,6 +117,27 @@
           [
             "2026-09-16",
             10.5
+          ]
+        ],
+        "candles": [],
+        "volume_24h_qty": 0,
+        "volume_24h_value": 0.0
+      },
+      {
+        "name": "Diamond",
+        "unit": "each",
+        "price": 292.5,
+        "change_7d": 2.25,
+        "shops": 2,
+        "sellers": 2,
+        "series": [
+          [
+            "2026-09-15",
+            90.0
+          ],
+          [
+            "2026-09-16",
+            292.5
           ]
         ],
         "candles": [],
@@ -168,8 +168,8 @@
       {
         "name": "Experience Bottle",
         "unit": "each",
-        "price": 7.25,
-        "change_7d": 0.0,
+        "price": 4.75,
+        "change_7d": -0.3448,
         "shops": 2,
         "sellers": 2,
         "series": [
@@ -179,7 +179,7 @@
           ],
           [
             "2026-09-16",
-            7.25
+            4.75
           ]
         ],
         "candles": [],
@@ -440,7 +440,7 @@
     "top": [
       {
         "name": "Keanie__",
-        "balance": 864
+        "balance": 819
       },
       {
         "name": "Atilius_Corvinus",
@@ -500,10 +500,10 @@
       }
     ],
     "median": 0.0,
-    "mean": 31.65
+    "mean": 30.99
   },
   "server": {
-    "checked": "2026-09-16T17:44:03Z",
+    "checked": "2026-09-16T17:55:54Z",
     "started_at": "2026-09-16T12:12:14Z",
     "tps": 20.0
   },

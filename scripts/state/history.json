@@ -40,9 +40,9 @@
    "minecraft:cooked_mutton": 15.0,
    "minecraft:copper_block": 3.0,
    "minecraft:copper_ingot": 35.0,
-   "minecraft:diamond": 90.0,
+   "minecraft:diamond": 292.5,
    "minecraft:emerald": 252.5,
-   "minecraft:experience_bottle": 7.25,
+   "minecraft:experience_bottle": 4.75,
    "minecraft:fire_charge": 1.0,
    "minecraft:flow_armor_trim_smithing_template": 10.5,
    "minecraft:golden_apple": 5.5,
@@ -70,14 +70,14 @@
    "total": 8556.2
   },
   "2026-09-16": {
-   "at": "2026-09-16T17:44:03Z",
+   "at": "2026-09-16T17:55:54Z",
    "banks": 2132.2,
-   "containers": 4644,
+   "containers": 4693,
    "coverage": 100.0,
    "ender": 1950,
    "loose": 15,
-   "on_hand": 202,
-   "total": 8943.2
+   "on_hand": 157,
+   "total": 8947.2
   }
  }
 }
