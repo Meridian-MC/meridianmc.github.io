@@ -129,15 +129,15 @@
   "minecraft/overworld/entities/r.-1.6.mca": {
    "gold": 0,
    "holders": 0,
-   "mtime": "20260916141506",
-   "scanned_at": "2026-09-16T14:16:12Z",
+   "mtime": "20260916144036",
+   "scanned_at": "2026-09-16T14:42:45Z",
    "size": 1122304
   },
   "minecraft/overworld/entities/r.-1.7.mca": {
    "gold": 0,
    "holders": 0,
-   "mtime": "20260916141506",
-   "scanned_at": "2026-09-16T14:16:12Z",
+   "mtime": "20260916144054",
+   "scanned_at": "2026-09-16T14:42:43Z",
    "size": 802816
   },
   "minecraft/overworld/entities/r.-1.8.mca": {
@@ -661,15 +661,15 @@
   "minecraft/overworld/entities/r.-4.-7.mca": {
    "gold": 0,
    "holders": 0,
-   "mtime": "20260916141434",
-   "scanned_at": "2026-09-16T14:16:13Z",
+   "mtime": "20260916142627",
+   "scanned_at": "2026-09-16T14:43:06Z",
    "size": 376832
   },
   "minecraft/overworld/entities/r.-4.-8.mca": {
    "gold": 0,
    "holders": 0,
-   "mtime": "20260916141538",
-   "scanned_at": "2026-09-16T14:16:10Z",
+   "mtime": "20260916142627",
+   "scanned_at": "2026-09-16T14:43:07Z",
    "size": 630784
   },
   "minecraft/overworld/entities/r.-4.-9.mca": {
@@ -822,8 +822,8 @@
   "minecraft/overworld/entities/r.-5.-8.mca": {
    "gold": 1,
    "holders": 1,
-   "mtime": "20260916141554",
-   "scanned_at": "2026-09-16T14:16:09Z",
+   "mtime": "20260916142027",
+   "scanned_at": "2026-09-16T14:43:07Z",
    "size": 1024000
   },
   "minecraft/overworld/entities/r.-5.-9.mca": {
@@ -1228,9 +1228,9 @@
   "minecraft/overworld/entities/r.-8.-1.mca": {
    "gold": 0,
    "holders": 0,
-   "mtime": "20260915231010",
-   "scanned_at": "2026-09-15T23:12:41Z",
-   "size": 344064
+   "mtime": "20260916144115",
+   "scanned_at": "2026-09-16T14:42:42Z",
+   "size": 349129
   },
   "minecraft/overworld/entities/r.-8.-10.mca": {
    "gold": 0,
@@ -1242,71 +1242,71 @@
   "minecraft/overworld/entities/r.-8.-2.mca": {
    "gold": 0,
    "holders": 0,
-   "mtime": "20260913175708",
-   "scanned_at": "2026-09-15T22:44:56Z",
+   "mtime": "20260916144049",
+   "scanned_at": "2026-09-16T14:42:43Z",
    "size": 442368
   },
   "minecraft/overworld/entities/r.-8.-3.mca": {
    "gold": 0,
    "holders": 0,
-   "mtime": "20260913200451",
-   "scanned_at": "2026-09-15T22:44:56Z",
+   "mtime": "20260916144035",
+   "scanned_at": "2026-09-16T14:42:47Z",
    "size": 692224
   },
   "minecraft/overworld/entities/r.-8.-4.mca": {
    "gold": 0,
    "holders": 0,
-   "mtime": "20260916021822",
-   "scanned_at": "2026-09-16T02:41:44Z",
+   "mtime": "20260916144008",
+   "scanned_at": "2026-09-16T14:42:50Z",
    "size": 823296
   },
   "minecraft/overworld/entities/r.-8.-5.mca": {
    "gold": 0,
    "holders": 0,
-   "mtime": "20260916021821",
-   "scanned_at": "2026-09-16T02:41:46Z",
+   "mtime": "20260916143812",
+   "scanned_at": "2026-09-16T14:42:52Z",
    "size": 774144
   },
   "minecraft/overworld/entities/r.-8.-6.mca": {
    "gold": 0,
    "holders": 0,
-   "mtime": "20260916121202",
-   "scanned_at": "2026-09-16T12:17:39Z",
+   "mtime": "20260916143600",
+   "scanned_at": "2026-09-16T14:42:55Z",
    "size": 987136
   },
   "minecraft/overworld/entities/r.-8.-7.mca": {
    "gold": 0,
    "holders": 0,
-   "mtime": "20260916133646",
-   "scanned_at": "2026-09-16T13:56:53Z",
+   "mtime": "20260916143342",
+   "scanned_at": "2026-09-16T14:42:59Z",
    "size": 757760
   },
   "minecraft/overworld/entities/r.-8.-8.mca": {
    "gold": 0,
    "holders": 0,
-   "mtime": "20260916133646",
-   "scanned_at": "2026-09-16T13:56:53Z",
+   "mtime": "20260916143213",
+   "scanned_at": "2026-09-16T14:43:00Z",
    "size": 651264
   },
   "minecraft/overworld/entities/r.-8.-9.mca": {
    "gold": 0,
    "holders": 0,
-   "mtime": "20260914005801",
-   "scanned_at": "2026-09-15T22:44:59Z",
+   "mtime": "20260916143024",
+   "scanned_at": "2026-09-16T14:43:05Z",
    "size": 426559
   },
   "minecraft/overworld/entities/r.-8.0.mca": {
    "gold": 0,
    "holders": 0,
-   "mtime": "20260915231009",
-   "scanned_at": "2026-09-15T23:12:42Z",
+   "mtime": "20260916144123",
+   "scanned_at": "2026-09-16T14:42:41Z",
    "size": 364544
   },
   "minecraft/overworld/entities/r.-8.1.mca": {
    "gold": 0,
    "holders": 0,
-   "mtime": "20260915192059",
-   "scanned_at": "2026-09-15T22:45:00Z",
+   "mtime": "20260916144138",
+   "scanned_at": "2026-09-16T14:42:40Z",
    "size": 229376
   },
   "minecraft/overworld/entities/r.-8.10.mca": {
@@ -1326,15 +1326,15 @@
   "minecraft/overworld/entities/r.-8.2.mca": {
    "gold": 0,
    "holders": 0,
-   "mtime": "20260913000731",
-   "scanned_at": "2026-09-15T22:45:00Z",
-   "size": 421888
+   "mtime": "20260916144154",
+   "scanned_at": "2026-09-16T14:42:39Z",
+   "size": 455377
   },
   "minecraft/overworld/entities/r.-8.3.mca": {
    "gold": 0,
    "holders": 0,
-   "mtime": "20260911151707",
-   "scanned_at": "2026-09-15T22:45:01Z",
+   "mtime": "20260916144234",
+   "scanned_at": "2026-09-16T14:42:37Z",
    "size": 434176
   },
   "minecraft/overworld/entities/r.-8.4.mca": {
@@ -1396,58 +1396,58 @@
   "minecraft/overworld/entities/r.-9.-2.mca": {
    "gold": 0,
    "holders": 0,
-   "mtime": "20260913175734",
-   "scanned_at": "2026-09-15T22:45:04Z",
+   "mtime": "20260916144042",
+   "scanned_at": "2026-09-16T14:42:44Z",
    "size": 581632
   },
   "minecraft/overworld/entities/r.-9.-3.mca": {
    "gold": 0,
    "holders": 0,
-   "mtime": "20260913200451",
-   "scanned_at": "2026-09-15T22:45:05Z",
+   "mtime": "20260916144034",
+   "scanned_at": "2026-09-16T14:42:47Z",
    "size": 958464
   },
   "minecraft/overworld/entities/r.-9.-4.mca": {
    "gold": 0,
    "holders": 0,
-   "mtime": "20260913200451",
-   "scanned_at": "2026-09-15T22:45:05Z",
+   "mtime": "20260916144004",
+   "scanned_at": "2026-09-16T14:42:50Z",
    "size": 724992
   },
   "minecraft/overworld/entities/r.-9.-5.mca": {
    "gold": 0,
    "holders": 0,
-   "mtime": "20260913200452",
-   "scanned_at": "2026-09-15T22:45:06Z",
+   "mtime": "20260916143812",
+   "scanned_at": "2026-09-16T14:42:52Z",
    "size": 397312
   },
   "minecraft/overworld/entities/r.-9.-6.mca": {
    "gold": 0,
    "holders": 0,
-   "mtime": "20260913200451",
-   "scanned_at": "2026-09-15T22:45:06Z",
-   "size": 319488
+   "mtime": "20260916143600",
+   "scanned_at": "2026-09-16T14:42:55Z",
+   "size": 352713
   },
   "minecraft/overworld/entities/r.-9.-7.mca": {
    "gold": 0,
    "holders": 0,
-   "mtime": "20260916133646",
-   "scanned_at": "2026-09-16T13:56:54Z",
-   "size": 319488
+   "mtime": "20260916143342",
+   "scanned_at": "2026-09-16T14:42:59Z",
+   "size": 406367
   },
   "minecraft/overworld/entities/r.-9.-8.mca": {
    "gold": 0,
    "holders": 0,
-   "mtime": "20260916133646",
-   "scanned_at": "2026-09-16T13:56:54Z",
-   "size": 483328
+   "mtime": "20260916143149",
+   "scanned_at": "2026-09-16T14:43:00Z",
+   "size": 504717
   },
   "minecraft/overworld/entities/r.-9.-9.mca": {
    "gold": 0,
    "holders": 0,
-   "mtime": "20260913160922",
-   "scanned_at": "2026-09-15T22:45:07Z",
-   "size": 372736
+   "mtime": "20260916143024",
+   "scanned_at": "2026-09-16T14:43:05Z",
+   "size": 381384
   },
   "minecraft/overworld/entities/r.-9.0.mca": {
    "gold": 0,
@@ -2348,8 +2348,8 @@
   "minecraft/overworld/entities/r.3.-3.mca": {
    "gold": 0,
    "holders": 0,
-   "mtime": "20260916141326",
-   "scanned_at": "2026-09-16T14:16:16Z",
+   "mtime": "20260916143408",
+   "scanned_at": "2026-09-16T14:42:57Z",
    "size": 991232
   },
   "minecraft/overworld/entities/r.3.-4.mca": {
@@ -2502,8 +2502,8 @@
   "minecraft/overworld/entities/r.4.-3.mca": {
    "gold": 0,
    "holders": 0,
-   "mtime": "20260916141327",
-   "scanned_at": "2026-09-16T14:16:14Z",
+   "mtime": "20260916143409",
+   "scanned_at": "2026-09-16T14:42:56Z",
    "size": 720896
   },
   "minecraft/overworld/entities/r.4.-4.mca": {
@@ -3531,15 +3531,15 @@
   "minecraft/overworld/region/r.-1.6.mca": {
    "gold": 5,
    "holders": 1,
-   "mtime": "20260916141506",
-   "scanned_at": "2026-09-16T14:16:12Z",
+   "mtime": "20260916144036",
+   "scanned_at": "2026-09-16T14:42:45Z",
    "size": 10649600
   },
   "minecraft/overworld/region/r.-1.7.mca": {
    "gold": 0,
    "holders": 0,
-   "mtime": "20260916141506",
-   "scanned_at": "2026-09-16T14:16:11Z",
+   "mtime": "20260916144054",
+   "scanned_at": "2026-09-16T14:42:43Z",
    "size": 9891840
   },
   "minecraft/overworld/region/r.-1.8.mca": {
@@ -4131,17 +4131,17 @@
    "size": 7606272
   },
   "minecraft/overworld/region/r.-4.-7.mca": {
-   "gold": 29,
+   "gold": 6,
    "holders": 2,
-   "mtime": "20260916141435",
-   "scanned_at": "2026-09-16T14:16:13Z",
+   "mtime": "20260916142627",
+   "scanned_at": "2026-09-16T14:43:06Z",
    "size": 7581696
   },
   "minecraft/overworld/region/r.-4.-8.mca": {
    "gold": 0,
    "holders": 0,
-   "mtime": "20260916141538",
-   "scanned_at": "2026-09-16T14:16:10Z",
+   "mtime": "20260916142627",
+   "scanned_at": "2026-09-16T14:43:06Z",
    "size": 10162176
   },
   "minecraft/overworld/region/r.-4.-9.mca": {
@@ -4294,8 +4294,8 @@
   "minecraft/overworld/region/r.-5.-7.mca": {
    "gold": 0,
    "holders": 0,
-   "mtime": "20260916141039",
-   "scanned_at": "2026-09-16T14:16:18Z",
+   "mtime": "20260916142026",
+   "scanned_at": "2026-09-16T14:43:07Z",
    "size": 9191424
   },
   "minecraft/overworld/region/r.-5.-8.mca": {
@@ -4665,15 +4665,15 @@
   "minecraft/overworld/region/r.-7.2.mca": {
    "gold": 0,
    "holders": 0,
-   "mtime": "20260913195257",
-   "scanned_at": "2026-09-15T22:50:27Z",
+   "mtime": "20260916144154",
+   "scanned_at": "2026-09-16T14:42:39Z",
    "size": 8171520
   },
   "minecraft/overworld/region/r.-7.3.mca": {
    "gold": 0,
    "holders": 0,
-   "mtime": "20260913183100",
-   "scanned_at": "2026-09-15T22:50:28Z",
+   "mtime": "20260916144200",
+   "scanned_at": "2026-09-16T14:42:38Z",
    "size": 8986624
   },
   "minecraft/overworld/region/r.-7.4.mca": {
@@ -4721,8 +4721,8 @@
   "minecraft/overworld/region/r.-8.-1.mca": {
    "gold": 0,
    "holders": 0,
-   "mtime": "20260915230719",
-   "scanned_at": "2026-09-15T23:12:42Z",
+   "mtime": "20260916144115",
+   "scanned_at": "2026-09-16T14:42:42Z",
    "size": 9793536
   },
   "minecraft/overworld/region/r.-8.-10.mca": {
@@ -4735,71 +4735,71 @@
   "minecraft/overworld/region/r.-8.-2.mca": {
    "gold": 0,
    "holders": 0,
-   "mtime": "20260913175734",
-   "scanned_at": "2026-09-15T22:50:40Z",
+   "mtime": "20260916144052",
+   "scanned_at": "2026-09-16T14:42:43Z",
    "size": 8572928
   },
   "minecraft/overworld/region/r.-8.-3.mca": {
    "gold": 0,
    "holders": 0,
-   "mtime": "20260913200451",
-   "scanned_at": "2026-09-15T22:50:41Z",
+   "mtime": "20260916144035",
+   "scanned_at": "2026-09-16T14:42:46Z",
    "size": 10616832
   },
   "minecraft/overworld/region/r.-8.-4.mca": {
    "gold": 17,
    "holders": 1,
-   "mtime": "20260916021822",
-   "scanned_at": "2026-09-16T02:41:44Z",
+   "mtime": "20260916144008",
+   "scanned_at": "2026-09-16T14:42:49Z",
    "size": 12107776
   },
   "minecraft/overworld/region/r.-8.-5.mca": {
    "gold": 179,
    "holders": 4,
-   "mtime": "20260916021821",
-   "scanned_at": "2026-09-16T02:41:46Z",
+   "mtime": "20260916143812",
+   "scanned_at": "2026-09-16T14:42:52Z",
    "size": 10457088
   },
   "minecraft/overworld/region/r.-8.-6.mca": {
    "gold": 0,
    "holders": 0,
-   "mtime": "20260915194116",
-   "scanned_at": "2026-09-15T22:50:45Z",
+   "mtime": "20260916143600",
+   "scanned_at": "2026-09-16T14:42:53Z",
    "size": 11812864
   },
   "minecraft/overworld/region/r.-8.-7.mca": {
    "gold": 0,
    "holders": 0,
-   "mtime": "20260916133646",
-   "scanned_at": "2026-09-16T13:56:46Z",
+   "mtime": "20260916143342",
+   "scanned_at": "2026-09-16T14:42:58Z",
    "size": 11722752
   },
   "minecraft/overworld/region/r.-8.-8.mca": {
    "gold": 0,
    "holders": 0,
-   "mtime": "20260916133646",
-   "scanned_at": "2026-09-16T13:56:48Z",
+   "mtime": "20260916143119",
+   "scanned_at": "2026-09-16T14:43:01Z",
    "size": 12017664
   },
   "minecraft/overworld/region/r.-8.-9.mca": {
    "gold": 0,
    "holders": 0,
-   "mtime": "20260914005801",
-   "scanned_at": "2026-09-15T22:50:49Z",
+   "mtime": "20260916143024",
+   "scanned_at": "2026-09-16T14:43:05Z",
    "size": 11522088
   },
   "minecraft/overworld/region/r.-8.0.mca": {
    "gold": 0,
    "holders": 0,
-   "mtime": "20260915231009",
-   "scanned_at": "2026-09-15T23:12:41Z",
+   "mtime": "20260916144124",
+   "scanned_at": "2026-09-16T14:42:41Z",
    "size": 8601600
   },
   "minecraft/overworld/region/r.-8.1.mca": {
    "gold": 0,
    "holders": 0,
-   "mtime": "20260915192059",
-   "scanned_at": "2026-09-15T22:50:51Z",
+   "mtime": "20260916144138",
+   "scanned_at": "2026-09-16T14:42:40Z",
    "size": 8282112
   },
   "minecraft/overworld/region/r.-8.10.mca": {
@@ -4819,15 +4819,15 @@
   "minecraft/overworld/region/r.-8.2.mca": {
    "gold": 0,
    "holders": 0,
-   "mtime": "20260913000731",
-   "scanned_at": "2026-09-15T22:50:55Z",
+   "mtime": "20260916144154",
+   "scanned_at": "2026-09-16T14:42:39Z",
    "size": 8798208
   },
   "minecraft/overworld/region/r.-8.3.mca": {
    "gold": 0,
    "holders": 0,
-   "mtime": "20260911151707",
-   "scanned_at": "2026-09-15T22:50:56Z",
+   "mtime": "20260916144234",
+   "scanned_at": "2026-09-16T14:42:37Z",
    "size": 8888320
   },
   "minecraft/overworld/region/r.-8.4.mca": {
@@ -4889,57 +4889,57 @@
   "minecraft/overworld/region/r.-9.-2.mca": {
    "gold": 0,
    "holders": 0,
-   "mtime": "20260913175734",
-   "scanned_at": "2026-09-15T22:51:06Z",
+   "mtime": "20260916144042",
+   "scanned_at": "2026-09-16T14:42:44Z",
    "size": 9306112
   },
   "minecraft/overworld/region/r.-9.-3.mca": {
    "gold": 0,
    "holders": 0,
-   "mtime": "20260913200451",
-   "scanned_at": "2026-09-15T22:51:08Z",
+   "mtime": "20260916144035",
+   "scanned_at": "2026-09-16T14:42:47Z",
    "size": 10035200
   },
   "minecraft/overworld/region/r.-9.-4.mca": {
    "gold": 0,
    "holders": 0,
-   "mtime": "20260913200451",
-   "scanned_at": "2026-09-15T22:51:10Z",
+   "mtime": "20260916144008",
+   "scanned_at": "2026-09-16T14:42:48Z",
    "size": 10522624
   },
   "minecraft/overworld/region/r.-9.-5.mca": {
    "gold": 0,
    "holders": 0,
-   "mtime": "20260913200452",
-   "scanned_at": "2026-09-15T22:51:12Z",
+   "mtime": "20260916143812",
+   "scanned_at": "2026-09-16T14:42:51Z",
    "size": 12058624
   },
   "minecraft/overworld/region/r.-9.-6.mca": {
    "gold": 0,
    "holders": 0,
-   "mtime": "20260913200452",
-   "scanned_at": "2026-09-15T22:51:14Z",
+   "mtime": "20260916143600",
+   "scanned_at": "2026-09-16T14:42:55Z",
    "size": 11571200
   },
   "minecraft/overworld/region/r.-9.-7.mca": {
    "gold": 0,
    "holders": 0,
-   "mtime": "20260916133646",
-   "scanned_at": "2026-09-16T13:56:52Z",
+   "mtime": "20260916143342",
+   "scanned_at": "2026-09-16T14:42:59Z",
    "size": 11038720
   },
   "minecraft/overworld/region/r.-9.-8.mca": {
    "gold": 0,
    "holders": 0,
-   "mtime": "20260916133646",
-   "scanned_at": "2026-09-16T13:56:50Z",
+   "mtime": "20260916143213",
+   "scanned_at": "2026-09-16T14:43:00Z",
    "size": 9216000
   },
   "minecraft/overworld/region/r.-9.-9.mca": {
    "gold": 0,
    "holders": 0,
-   "mtime": "20260913160922",
-   "scanned_at": "2026-09-15T22:51:19Z",
+   "mtime": "20260916143024",
+   "scanned_at": "2026-09-16T14:43:03Z",
    "size": 10276864
   },
   "minecraft/overworld/region/r.-9.0.mca": {
@@ -5848,8 +5848,8 @@
   "minecraft/overworld/region/r.3.-3.mca": {
    "gold": 4,
    "holders": 1,
-   "mtime": "20260916141326",
-   "scanned_at": "2026-09-16T14:16:16Z",
+   "mtime": "20260916143408",
+   "scanned_at": "2026-09-16T14:42:57Z",
    "size": 10432512
   },
   "minecraft/overworld/region/r.3.-4.mca": {
@@ -6002,8 +6002,8 @@
   "minecraft/overworld/region/r.4.-3.mca": {
    "gold": 0,
    "holders": 0,
-   "mtime": "20260916141327",
-   "scanned_at": "2026-09-16T14:16:14Z",
+   "mtime": "20260916143409",
+   "scanned_at": "2026-09-16T14:42:56Z",
    "size": 9637888
   },
   "minecraft/overworld/region/r.4.-4.mca": {
@@ -7680,7 +7680,7 @@
   },
   "c6369dc2-15d4-467d-b594-24d5fbfed6cb": {
    "ender": 0,
-   "mtime": "20260916005620",
+   "mtime": "20260916143827",
    "name": "WhenAtRome",
    "on_hand": 0
   },
@@ -7703,10 +7703,10 @@
    "on_hand": 0
   },
   "d3679b9a-4d7f-432c-aa41-b9a485e7b0c3": {
-   "ender": 271,
-   "mtime": "20260916141454",
+   "ender": 388,
+   "mtime": "20260916143907",
    "name": "JxrdanUK",
-   "on_hand": 8
+   "on_hand": 9
   },
   "d5992078-86ee-4800-ae61-4d78d9225f97": {
    "ender": 0,
