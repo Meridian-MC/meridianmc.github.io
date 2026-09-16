@@ -20,7 +20,7 @@ log() { echo "[$(date -u '+%Y-%m-%dT%H:%M:%SZ')] $*"; }
 
 # Never sweep up half-finished work: bail if anything other than the two
 # generated files has uncommitted edits.
-if ! git diff --quiet -- . ':!public/data.json' ':!public/data-status.json'; then
+if ! git diff --quiet -- . ':!public/data.json' ':!public/data-status.json' ':!scripts/state'; then
   log "working tree has other uncommitted changes, skipping"
   exit 0
 fi
@@ -28,7 +28,7 @@ fi
 # Pull BEFORE generating. A clean tree rebases without conflict, and it means
 # the commit below is already on top of whatever is on the remote, so the two
 # generated files never have to be merged against another version of themselves.
-git checkout -q -- public/data.json public/data-status.json 2>/dev/null
+git checkout -q -- public/data.json public/data-status.json scripts/state 2>/dev/null
 if ! git pull --rebase -q; then
   git rebase --abort 2>/dev/null
   log "could not sync with the remote, skipping this cycle"
@@ -53,13 +53,13 @@ fi
 
 if ! MC_FTP_PASSWORD="$PW" \
      MC_RCON_HOST="$RC_HOST" MC_RCON_PORT="$RC_PORT" MC_RCON_PASSWORD="$RC_PW" \
-     MC_PUBLISH_PATH="profile_orfqa/plugins/squaremap/web/data.json" \
+     MC_PUBLISH_PATH="{profile}/plugins/squaremap/web/data.json" \
      python3 scripts/refresh_analytics.py; then
   log "refresh failed (reason recorded in public/data-status.json)"
 fi
 unset PW RC_PW
 
-if git diff --quiet -- public/data.json public/data-status.json; then
+if git diff --quiet -- public/data.json public/data-status.json scripts/state; then
   log "no change"
   exit 0
 fi
@@ -68,12 +68,12 @@ fi
 # figures actually moved, or when the last commit is old enough that the site
 # would otherwise start reporting itself stale.
 if ! python3 scripts/should_push.py; then
-  git checkout -q -- public/data.json public/data-status.json
+  git checkout -q -- public/data.json public/data-status.json scripts/state
   log "only the timestamp moved, skipping"
   exit 0
 fi
 
-git add public/data.json public/data-status.json
+git add public/data.json public/data-status.json scripts/state
 git -c user.name="meridian-analytics" \
     -c user.email="actions@users.noreply.github.com" \
     commit -q -m "chore: refresh economy analytics [skip ci]" || exit 1
