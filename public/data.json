@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-16T07:54:42Z",
+  "generated": "2026-09-16T08:14:25Z",
   "meta": {
     "players_tracked": 68,
     "active_traders": 8,
@@ -27,9 +27,9 @@
     },
     "supply": {
       "total": 8717.2,
-      "on_hand": 172,
+      "on_hand": 168,
       "ender_chests": 1654,
-      "containers": 4644,
+      "containers": 4648,
       "loose": 15,
       "land_banks": 2232.2,
       "coverage": {
@@ -463,10 +463,6 @@
         "balance": 81
       },
       {
-        "name": "AriannaBoh",
-        "balance": 4
-      },
-      {
         "name": "BabieDolphin",
         "balance": 2
       },
@@ -497,14 +493,18 @@
       {
         "name": "Lagmanium",
         "balance": 0
+      },
+      {
+        "name": "DanBanana",
+        "balance": 0
       }
     ],
     "median": 0.0,
-    "mean": 26.85
+    "mean": 26.79
   },
   "server": {
-    "checked": "2026-09-16T07:54:42Z",
-    "started_at": "2026-09-15T12:13:12Z",
+    "checked": "2026-09-16T08:14:26Z",
+    "started_at": "2026-09-15T12:13:13Z",
     "tps": 20.0
   },
   "nations": [
