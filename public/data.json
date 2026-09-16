@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-16T18:17:23Z",
+  "generated": "2026-09-16T18:45:33Z",
   "meta": {
     "players_tracked": 68,
     "active_traders": 8,
@@ -26,21 +26,21 @@
       "note": "Gold launched 2026-09-12. Needs 8+ active traders and 14+ days of history; currently 8 traders / 4 days."
     },
     "supply": {
-      "total": 8949.2,
-      "on_hand": 159,
+      "total": 8986.2,
+      "on_hand": 155,
       "ender_chests": 1950,
-      "containers": 4693,
+      "containers": 4688,
       "loose": 15,
-      "land_banks": 2132.2,
+      "land_banks": 2178.2,
       "coverage": {
         "files": 1052,
-        "fresh": 1052,
-        "stale": 0,
+        "fresh": 1034,
+        "stale": 18,
         "unscanned": 0,
         "percent": 100.0
       }
     },
-    "money_supply_players": 8949.2,
+    "money_supply_players": 8986.2,
     "money_supply_series": [
       [
         "2026-09-15",
@@ -48,7 +48,7 @@
       ],
       [
         "2026-09-16",
-        8949.2
+        8986.2
       ]
     ],
     "flow": {
@@ -467,10 +467,6 @@
         "balance": 32
       },
       {
-        "name": "DatAriix",
-        "balance": 4
-      },
-      {
         "name": "BabieDolphin",
         "balance": 2
       },
@@ -497,13 +493,17 @@
       {
         "name": "Augustine65480",
         "balance": 0
+      },
+      {
+        "name": "Lagmanium",
+        "balance": 0
       }
     ],
     "median": 0.0,
-    "mean": 31.01
+    "mean": 30.96
   },
   "server": {
-    "checked": "2026-09-16T18:17:23Z",
+    "checked": "2026-09-16T18:45:33Z",
     "started_at": "2026-09-16T12:12:14Z",
     "tps": 20.0
   },
@@ -597,7 +597,7 @@
       "type": "land",
       "chunks": 10,
       "members": 8,
-      "bank": 148.0,
+      "bank": 194.0,
       "level": 1,
       "color": "#66979D"
     },
