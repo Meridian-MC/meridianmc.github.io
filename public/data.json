@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-17T21:42:01Z",
+  "generated": "2026-09-17T21:53:59Z",
   "meta": {
     "players_tracked": 68,
     "active_traders": 10,
@@ -97,7 +97,7 @@
     "chest_shop_transactions": 0,
     "gini": 0.945,
     "price_index": {
-      "value": 101.0,
+      "value": 100.9,
       "series": [
         [
           "2026-09-15",
@@ -109,37 +109,12 @@
         ],
         [
           "2026-09-17",
-          101.0
+          100.9
         ]
       ],
       "note": "Basket of 16 shop items, base 100 on 2026-09-15."
     },
     "items": [
-      {
-        "name": "Bolt Armor Trim Smithing Template",
-        "unit": "each",
-        "price": 10.5,
-        "change_7d": 0.0,
-        "shops": 2,
-        "sellers": 2,
-        "series": [
-          [
-            "2026-09-15",
-            10.5
-          ],
-          [
-            "2026-09-16",
-            10.5
-          ],
-          [
-            "2026-09-17",
-            10.5
-          ]
-        ],
-        "candles": [],
-        "volume_24h_qty": 0,
-        "volume_24h_value": 0.0
-      },
       {
         "name": "Diamond",
         "unit": "each",
@@ -218,8 +193,8 @@
       {
         "name": "Flow Armor Trim Smithing Template",
         "unit": "each",
-        "price": 10.5,
-        "change_7d": 0.0,
+        "price": 18.0,
+        "change_7d": 0.7143,
         "shops": 2,
         "sellers": 2,
         "series": [
@@ -233,7 +208,7 @@
           ],
           [
             "2026-09-17",
-            10.5
+            18.0
           ]
         ],
         "candles": [],
@@ -305,6 +280,31 @@
           [
             "2026-09-16",
             1.0
+          ],
+          [
+            "2026-09-17",
+            1.0
+          ]
+        ],
+        "candles": [],
+        "volume_24h_qty": 0,
+        "volume_24h_value": 0.0
+      },
+      {
+        "name": "Bolt Armor Trim Smithing Template",
+        "unit": "each",
+        "price": 1.0,
+        "change_7d": -0.9048,
+        "shops": 1,
+        "sellers": 1,
+        "series": [
+          [
+            "2026-09-15",
+            10.5
+          ],
+          [
+            "2026-09-16",
+            10.5
           ],
           [
             "2026-09-17",
@@ -580,7 +580,7 @@
     "mean": 24.93
   },
   "server": {
-    "checked": "2026-09-17T21:42:01Z",
+    "checked": "2026-09-17T21:53:59Z",
     "started_at": "2026-09-17T15:08:14Z",
     "tps": 20.0
   },
