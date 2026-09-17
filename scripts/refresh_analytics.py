@@ -591,10 +591,21 @@ def update_ledger(f, profile, ledger, max_files=400):
     # split by a run boundary is still collapsed.
     horizon = time.time() - 86400
     recent[:] = [r for r in recent if r[0] >= horizon]
+    # Retry bursts are also the signature of the 09-12 phantom-deposit exploit
+    # (TNE said "took 350" without taking anything, Lands credited it every
+    # time), so the collapsed count is kept per burst for the operator report.
+    bursts = ledger.setdefault("bursts", [])
+    bursts[:] = [b for b in bursts if b[0] >= horizon]
     for ts, pid, ty, amt in sorted(batch):
         if ts < ERA_START_TS:
             continue
-        if any(p == pid and y == ty and a == amt and abs(ts - t0) <= 120 for t0, p, y, a in recent):
+        hit = next((r for r in recent if r[1] == pid and r[2] == ty and r[3] == amt and abs(ts - r[0]) <= 120), None)
+        if hit:
+            b = next((b for b in bursts if b[0] == hit[0] and b[1] == pid and b[2] == ty and b[3] == amt), None)
+            if b:
+                b[4] += 1
+            else:
+                bursts.append([hit[0], pid, ty, amt, 2])
             continue
         recent.append([ts, pid, ty, amt])
         day = days.setdefault(day_of(ts), {"spent": 0.0, "received": 0.0, "count": 0, "players": []})
