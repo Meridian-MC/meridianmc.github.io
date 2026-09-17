@@ -56,6 +56,31 @@
    "minecraft:redstone": 3.0,
    "minecraft:trident": 4000.0,
    "minecraft:wind_charge": 1.0
+  },
+  "2026-09-17": {
+   "minecraft:arrow": 1.0,
+   "minecraft:bolt_armor_trim_smithing_template": 10.5,
+   "minecraft:book": 2000.0,
+   "minecraft:coal": 75.0,
+   "minecraft:cooked_mutton": 15.0,
+   "minecraft:copper_block": 3.0,
+   "minecraft:copper_ingot": 35.0,
+   "minecraft:diamond": 292.5,
+   "minecraft:emerald": 252.5,
+   "minecraft:experience_bottle": 4.75,
+   "minecraft:fire_charge": 1.0,
+   "minecraft:flow_armor_trim_smithing_template": 10.5,
+   "minecraft:golden_apple": 5.5,
+   "minecraft:golden_carrot": 1.0,
+   "minecraft:granite": 4.0,
+   "minecraft:iron_ingot": 128.5,
+   "minecraft:iron_leggings": 2.0,
+   "minecraft:lapis_block": 5.0,
+   "minecraft:lapis_lazuli": 250.0,
+   "minecraft:ominous_bottle": 1.0,
+   "minecraft:redstone": 3.0,
+   "minecraft:trident": 4000.0,
+   "minecraft:wind_charge": 1.0
   }
  },
  "supply": {
@@ -71,6 +96,16 @@
   },
   "2026-09-16": {
    "at": "2026-09-16T23:54:31Z",
+   "banks": 2142.2,
+   "containers": 5118,
+   "coverage": 100.0,
+   "ender": 1519,
+   "loose": 15,
+   "on_hand": 211,
+   "total": 9005.2
+  },
+  "2026-09-17": {
+   "at": "2026-09-17T00:18:33Z",
    "banks": 2142.2,
    "containers": 5118,
    "coverage": 100.0,
