@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-17T10:54:03Z",
+  "generated": "2026-09-17T11:13:26Z",
   "meta": {
     "players_tracked": 68,
     "active_traders": 8,
@@ -27,11 +27,11 @@
     },
     "supply": {
       "total": 9005.2,
-      "on_hand": 211,
+      "on_hand": 292,
       "ender_chests": 1519,
-      "containers": 5118,
+      "containers": 5019,
       "loose": 15,
-      "land_banks": 2142.2,
+      "land_banks": 2160.2,
       "coverage": {
         "files": 1052,
         "fresh": 1052,
@@ -90,7 +90,7 @@
     "trade_volume_series": [],
     "trade_volume_7d": 0,
     "chest_shop_transactions": 0,
-    "gini": 0.95,
+    "gini": 0.944,
     "price_index": {
       "value": 101.0,
       "series": [
@@ -527,6 +527,10 @@
         "balance": 137
       },
       {
+        "name": "Luko_Landino",
+        "balance": 81
+      },
+      {
         "name": "SLEN3ER",
         "balance": 81
       },
@@ -565,17 +569,13 @@
       {
         "name": "Lagmanium",
         "balance": 0
-      },
-      {
-        "name": "DanBanana",
-        "balance": 0
       }
     ],
     "median": 0.0,
-    "mean": 25.44
+    "mean": 26.63
   },
   "server": {
-    "checked": "2026-09-17T10:54:03Z",
+    "checked": "2026-09-17T11:13:26Z",
     "started_at": "2026-09-16T12:12:14Z",
     "tps": 20.0
   },
@@ -615,7 +615,7 @@
       "type": "land",
       "chunks": 88,
       "members": 14,
-      "bank": 106.0,
+      "bank": 124.0,
       "level": 1,
       "color": "#667CEE"
     },
