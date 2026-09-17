@@ -68,6 +68,29 @@ export const FAQ: FaqEntry[] = [
     answer: `<p><span class="short">No</span>, villager trading is disabled.</p>`,
   },
   {
+    category: "world",
+    question: "How do I get Mending?",
+    answer: `<p><span class="short">Fishing.</span> With villager trading off, Mending comes from fishing, loot chests and player shops. Two things stack on every cast:</p>
+<ul>
+<li><strong>Vanilla treasure</strong> is unchanged: enchanted books (Mending included) are in the normal treasure pool, and Luck of the Sea raises it.</li>
+<li><strong>mcMMO Treasure Hunter</strong> adds a second roll on top. It scales with your Fishing level; each treasure it gives has a chance to carry a Legendary-tier enchantment, and Mending is in that tier. As of 17 Sept these Legendary chances were raised by 50%.</li>
+</ul>
+<div class="tier-wrap"><table class="tier-table">
+<thead><tr><th>Treasure Hunter rank</th><th>Fishing level</th><th>Treasure per cast</th><th>Legendary enchant on a treasure</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>1</td><td>9%</td><td>0.08%</td></tr>
+<tr><td>2</td><td>25</td><td>10%</td><td>0.08%</td></tr>
+<tr><td>3</td><td>35</td><td>9%</td><td>0.15%</td></tr>
+<tr><td>4</td><td>50</td><td>10%</td><td>0.38%</td></tr>
+<tr><td>5</td><td>65</td><td>11%</td><td>0.75%</td></tr>
+<tr><td>6</td><td>75</td><td>12%</td><td>1.5%</td></tr>
+<tr><td>7</td><td>85</td><td>15%</td><td>2.25%</td></tr>
+<tr><td>8</td><td>100</td><td>20%</td><td>3%</td></tr>
+</tbody>
+</table></div>
+<p>A fished item that has Mending on it counts too: pull the enchantment off with a Disenchanting Brick and you have a Mending book. Check <code>/fishing</code> for your rank.</p>`,
+  },
+  {
     category: "starting",
     question: "How do I join?",
     answer: `<p>Versions <code>1.8</code> through <code>26.2</code>, Java Edition. Any launcher works (Lunar or Prism is recommended). Premium Minecraft is required. The IP is <code>meridian-mc.net</code>.</p>`,
