@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-17T14:14:59Z",
+  "generated": "2026-09-17T14:33:24Z",
   "meta": {
     "players_tracked": 68,
     "active_traders": 8,
@@ -574,7 +574,11 @@
     "median": 0.0,
     "mean": 26.63
   },
-  "server": {},
+  "server": {
+    "checked": "2026-09-17T14:33:25Z",
+    "started_at": "2026-09-17T14:29:43Z",
+    "tps": 20.0
+  },
   "nations": [
     {
       "name": "Augustine Empire",
