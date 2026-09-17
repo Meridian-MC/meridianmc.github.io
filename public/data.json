@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-17T23:10:50Z",
+  "generated": "2026-09-17T23:24:32Z",
   "meta": {
     "players_tracked": 68,
     "active_traders": 10,
@@ -26,10 +26,10 @@
       "note": "Gold launched 2026-09-12. Needs 8+ active traders and 14+ days of history; currently 10 traders / 5 days."
     },
     "supply": {
-      "total": 9291.55,
-      "on_hand": 257,
+      "total": 8895.55,
+      "on_hand": 258,
       "ender_chests": 1438,
-      "containers": 5028,
+      "containers": 4631,
       "loose": 17,
       "land_banks": 2551.55,
       "coverage": {
@@ -40,7 +40,7 @@
         "percent": 100.0
       }
     },
-    "money_supply_players": 9291.55,
+    "money_supply_players": 8895.55,
     "money_supply_series": [
       [
         "2026-09-15",
@@ -52,7 +52,7 @@
       ],
       [
         "2026-09-17",
-        9291.55
+        8895.55
       ]
     ],
     "flow": {
@@ -544,6 +544,10 @@
         "balance": 2
       },
       {
+        "name": "Atilius_Corvinus",
+        "balance": 1
+      },
+      {
         "name": "ske9z",
         "balance": 1
       },
@@ -558,17 +562,13 @@
       {
         "name": "X_Professor_YT",
         "balance": 0
-      },
-      {
-        "name": "Lagmanium",
-        "balance": 0
       }
     ],
     "median": 0.0,
-    "mean": 24.93
+    "mean": 24.94
   },
   "server": {
-    "checked": "2026-09-17T23:10:50Z",
+    "checked": "2026-09-17T23:24:32Z",
     "started_at": "2026-09-17T22:01:27Z",
     "tps": 20.0
   },

@@ -86,7 +86,7 @@
    "minecraft:ominous_bottle": 1.0,
    "minecraft:redstone": 3.0,
    "minecraft:sentry_armor_trim_smithing_template": 50.0,
-   "minecraft:totem_of_undying": 100.0,
+   "minecraft:totem_of_undying": 200.0,
    "minecraft:trident": 4000.0,
    "minecraft:wind_charge": 1.0
   }
@@ -113,14 +113,14 @@
    "total": 9005.2
   },
   "2026-09-17": {
-   "at": "2026-09-17T23:10:50Z",
+   "at": "2026-09-17T23:24:32Z",
    "banks": 2551.55,
-   "containers": 5028,
+   "containers": 4631,
    "coverage": 100.0,
    "ender": 1438,
    "loose": 17,
-   "on_hand": 257,
-   "total": 9291.55
+   "on_hand": 258,
+   "total": 8895.55
   }
  }
 }
