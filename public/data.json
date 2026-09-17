@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-17T22:40:24Z",
+  "generated": "2026-09-17T22:52:28Z",
   "meta": {
     "players_tracked": 68,
     "active_traders": 10,
@@ -97,7 +97,7 @@
     "chest_shop_transactions": 0,
     "gini": 0.945,
     "price_index": {
-      "value": 98.5,
+      "value": 131.7,
       "series": [
         [
           "2026-09-15",
@@ -109,7 +109,7 @@
         ],
         [
           "2026-09-17",
-          98.5
+          131.7
         ]
       ],
       "note": "Basket of 16 shop items, base 100 on 2026-09-15."
@@ -246,7 +246,7 @@
         "price": 5.5,
         "change_7d": 0.0,
         "shops": 2,
-        "sellers": 2,
+        "sellers": 1,
         "series": [
           [
             "2026-09-15",
@@ -268,10 +268,10 @@
       {
         "name": "Golden Carrot",
         "unit": "each",
-        "price": 3.5,
-        "change_7d": 2.5,
+        "price": 1.5,
+        "change_7d": 0.5,
         "shops": 2,
-        "sellers": 2,
+        "sellers": 1,
         "series": [
           [
             "2026-09-15",
@@ -283,7 +283,7 @@
           ],
           [
             "2026-09-17",
-            3.5
+            1.5
           ]
         ],
         "candles": [],
@@ -309,6 +309,31 @@
           [
             "2026-09-17",
             128.5
+          ]
+        ],
+        "candles": [],
+        "volume_24h_qty": 0,
+        "volume_24h_value": 0.0
+      },
+      {
+        "name": "Arrow",
+        "unit": "each",
+        "price": 1000.0,
+        "change_7d": 999.0,
+        "shops": 1,
+        "sellers": 1,
+        "series": [
+          [
+            "2026-09-15",
+            1.0
+          ],
+          [
+            "2026-09-16",
+            1.0
+          ],
+          [
+            "2026-09-17",
+            1000.0
           ]
         ],
         "candles": [],
@@ -473,31 +498,6 @@
         "candles": [],
         "volume_24h_qty": 0,
         "volume_24h_value": 0.0
-      },
-      {
-        "name": "Fire Charge",
-        "unit": "each",
-        "price": 1.0,
-        "change_7d": 0.0,
-        "shops": 1,
-        "sellers": 1,
-        "series": [
-          [
-            "2026-09-15",
-            1.0
-          ],
-          [
-            "2026-09-16",
-            1.0
-          ],
-          [
-            "2026-09-17",
-            1.0
-          ]
-        ],
-        "candles": [],
-        "volume_24h_qty": 0,
-        "volume_24h_value": 0.0
       }
     ]
   },
@@ -568,7 +568,7 @@
     "mean": 24.93
   },
   "server": {
-    "checked": "2026-09-17T22:40:24Z",
+    "checked": "2026-09-17T22:52:28Z",
     "started_at": "2026-09-17T22:01:28Z",
     "tps": 20.0
   },
