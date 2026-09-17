@@ -22,8 +22,8 @@ export const DISCORD_INVITE_URL = `https://discord.gg/${DISCORD_INVITE_CODE}`;
 // item-backed (1 ingot = 1 G, 1 block = 9 G); sources are Lands/config.yml
 // and Lands/Modules/Nations/nations.yml on the server.
 export const ECON = {
-  chunkCost: "15 G",
-  landUpkeepPerChunk: "4 G",
-  nationCreateCost: "100 G",
+  chunkCost: "16 G, rising 4% with every chunk the land already holds",
+  landUpkeepPerChunk: "5 G",
+  nationCreateCost: "500 G",
   nationUpkeepPerChunk: "3 G",
 };

@@ -147,8 +147,8 @@ export const FAQ: FaqEntry[] = [
     question: "How much does land cost?",
     answer: `<p>Founding a land with <code>/lands create</code> includes your <span class="short">first chunk free</span>. After that:</p>
 <ul>
-  <li>Every chunk after that costs a flat <span class="short">15 G</span>, paid from the land bank.</li>
-  <li>Weekly upkeep is <span class="short">4 G per chunk</span>, also taken from the land bank. If the bank runs dry, upkeep goes unpaid and the land is at risk.</li>
+  <li>Every chunk after that costs <span class="short">16 G, rising 4% per chunk</span> your land already holds, paid from the land bank. Chunk 10 is about 23 G, chunk 50 about 109 G.</li>
+  <li>Weekly upkeep is <span class="short">5 G per chunk</span>, collected every Saturday, also taken from the land bank. If the bank runs dry, upkeep goes unpaid and the land is at risk.</li>
   <li>You can own <span class="short">two lands</span>; each pays its own upkeep.</li>
   <li>Tiers change these numbers. The full breakdown is in the <a href="/claims">Claims guide</a>.</li>
 </ul>`,
