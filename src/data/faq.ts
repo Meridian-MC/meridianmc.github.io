@@ -154,6 +154,11 @@ export const FAQ: FaqEntry[] = [
 </ul>`,
   },
   {
+    category: "recipes",
+    question: "How do I make invisible item frames?",
+    answer: `<p>Drop the item frames (or glow item frames) on the ground and splash them with a <span class="short">Potion of Invisibility</span>. Every frame in the splash converts, however many you drop. Empty invisible frames glow so you can still find them; they stop glowing once something is in them. Combine with <code>/imageframe create</code> for wall art with no visible borders. No blank maps are needed for image frames any more.</p>`,
+  },
+  {
     category: "economy",
     question: "Can I extract enchantments from my items?",
     answer: `<p>Yes, that is what ExtractableEnchantments is for. Craft a Disenchanting Brick, then drag it onto an enchanted item to pull one random enchantment off as a book. See the <a href="/recipes">Recipes</a> page for the exact crafting grid.</p>`,
