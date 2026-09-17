@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-17T18:58:59Z",
+  "generated": "2026-09-17T19:17:49Z",
   "meta": {
     "players_tracked": 68,
     "active_traders": 10,
@@ -26,12 +26,12 @@
       "note": "Gold launched 2026-09-12. Needs 8+ active traders and 14+ days of history; currently 10 traders / 5 days."
     },
     "supply": {
-      "total": 9119.17,
-      "on_hand": 277,
+      "total": 9501.17,
+      "on_hand": 470,
       "ender_chests": 1438,
-      "containers": 5032,
+      "containers": 5033,
       "loose": 17,
-      "land_banks": 2355.17,
+      "land_banks": 2543.17,
       "coverage": {
         "files": 1052,
         "fresh": 1052,
@@ -40,7 +40,7 @@
         "percent": 100.0
       }
     },
-    "money_supply_players": 9119.17,
+    "money_supply_players": 9501.17,
     "money_supply_series": [
       [
         "2026-09-15",
@@ -52,7 +52,7 @@
       ],
       [
         "2026-09-17",
-        9119.17
+        9501.17
       ]
     ],
     "flow": {
@@ -84,18 +84,18 @@
         ],
         [
           "2026-09-17",
-          309.0,
+          333.0,
           0.0
         ]
       ],
-      "spent_7d": 4466.0,
+      "spent_7d": 4490.0,
       "received_7d": 7280.0,
-      "transactions": 76
+      "transactions": 77
     },
     "trade_volume_series": [],
     "trade_volume_7d": 0,
     "chest_shop_transactions": 0,
-    "gini": 0.943,
+    "gini": 0.946,
     "price_index": {
       "value": 101.0,
       "series": [
@@ -517,7 +517,7 @@
     "top": [
       {
         "name": "Keanie__",
-        "balance": 738
+        "balance": 919
       },
       {
         "name": "JxrdanUK",
@@ -541,7 +541,11 @@
       },
       {
         "name": "Augustine65480",
-        "balance": 56
+        "balance": 36
+      },
+      {
+        "name": "WhenAtRome",
+        "balance": 32
       },
       {
         "name": "klaksonik",
@@ -570,18 +574,14 @@
       {
         "name": "X_Professor_YT",
         "balance": 0
-      },
-      {
-        "name": "Lagmanium",
-        "balance": 0
       }
     ],
     "median": 0.0,
-    "mean": 25.22
+    "mean": 28.06
   },
   "server": {
-    "checked": "2026-09-17T18:58:59Z",
-    "started_at": "2026-09-17T15:08:14Z",
+    "checked": "2026-09-17T19:17:50Z",
+    "started_at": "2026-09-17T15:08:15Z",
     "tps": 20.0
   },
   "nations": [
@@ -589,15 +589,15 @@
       "name": "Augustine Empire",
       "tag": null,
       "color": "#956BE8",
-      "lands": 1,
-      "mdi": 0.305,
-      "territory": 0.967,
-      "population": 0.6,
-      "wealth": 0.015,
+      "lands": 2,
+      "mdi": 0.448,
+      "territory": 1.0,
+      "population": 0.733,
+      "wealth": 0.055,
       "activity": 1.0,
-      "chunks": 58,
-      "members": 9,
-      "treasury": 15.0
+      "chunks": 60,
+      "members": 11,
+      "treasury": 55.0
     },
     {
       "name": "Thalassos",
@@ -638,7 +638,7 @@
       "type": "land",
       "chunks": 58,
       "members": 9,
-      "bank": 15.0,
+      "bank": 39.0,
       "level": 0,
       "color": "#C0CAF3"
     },
@@ -683,7 +683,7 @@
       "type": "land",
       "chunks": 9,
       "members": 7,
-      "bank": 155.05,
+      "bank": 335.05,
       "level": 1,
       "color": "#B6B06C"
     },
@@ -760,6 +760,15 @@
       "color": "#E8D289"
     },
     {
+      "name": "Mesra",
+      "type": "land",
+      "chunks": 2,
+      "members": 2,
+      "bank": 16.0,
+      "level": 0,
+      "color": "#9B7570"
+    },
+    {
       "name": "Lagmanium",
       "type": "land",
       "chunks": 1,
@@ -803,15 +812,6 @@
       "bank": 30.0,
       "level": 0,
       "color": "#DDD0F2"
-    },
-    {
-      "name": "Mesra",
-      "type": "land",
-      "chunks": 1,
-      "members": 2,
-      "bank": 32.0,
-      "level": 0,
-      "color": "#9B7570"
     },
     {
       "name": "Entulho",
