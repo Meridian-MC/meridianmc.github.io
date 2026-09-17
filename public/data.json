@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-17T15:54:34Z",
+  "generated": "2026-09-17T16:14:50Z",
   "meta": {
     "players_tracked": 68,
     "active_traders": 8,
@@ -28,8 +28,8 @@
     "supply": {
       "total": 9005.2,
       "on_hand": 466,
-      "ender_chests": 1330,
-      "containers": 5019,
+      "ender_chests": 1134,
+      "containers": 5215,
       "loose": 15,
       "land_banks": 2175.2,
       "coverage": {
@@ -81,16 +81,21 @@
           "2026-09-16",
           4.0,
           0.0
+        ],
+        [
+          "2026-09-17",
+          15.0,
+          0.0
         ]
       ],
-      "spent_7d": 4157.0,
+      "spent_7d": 4172.0,
       "received_7d": 7280.0,
-      "transactions": 72
+      "transactions": 73
     },
     "trade_volume_series": [],
     "trade_volume_7d": 0,
     "chest_shop_transactions": 0,
-    "gini": 0.945,
+    "gini": 0.944,
     "price_index": {
       "value": 101.0,
       "series": [
@@ -515,12 +520,12 @@
         "balance": 819
       },
       {
-        "name": "JxrdanUK",
-        "balance": 385
-      },
-      {
         "name": "Giggsy__",
         "balance": 215
+      },
+      {
+        "name": "JxrdanUK",
+        "balance": 189
       },
       {
         "name": "1RTR",
@@ -572,11 +577,11 @@
       }
     ],
     "median": 0.0,
-    "mean": 26.41
+    "mean": 23.53
   },
   "server": {
-    "checked": "2026-09-17T15:54:35Z",
-    "started_at": "2026-09-17T15:08:15Z",
+    "checked": "2026-09-17T16:14:50Z",
+    "started_at": "2026-09-17T15:08:14Z",
     "tps": 20.0
   },
   "nations": [
