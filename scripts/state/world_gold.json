@@ -7010,16 +7010,16 @@
   "minecraft/the_nether/entities/r.0.-1.mca": {
    "gold": 0,
    "holders": 0,
-   "mtime": "20260917144409",
-   "scanned_at": "2026-09-17T14:55:21Z",
-   "size": 775119
+   "mtime": "20260917150107",
+   "scanned_at": "2026-09-17T15:13:56Z",
+   "size": 778240
   },
   "minecraft/the_nether/entities/r.0.-2.mca": {
    "gold": 0,
    "holders": 0,
-   "mtime": "20260917144356",
-   "scanned_at": "2026-09-17T14:55:28Z",
-   "size": 266980
+   "mtime": "20260917150107",
+   "scanned_at": "2026-09-17T15:13:55Z",
+   "size": 270336
   },
   "minecraft/the_nether/entities/r.0.-3.mca": {
    "gold": 0,
@@ -7031,9 +7031,9 @@
   "minecraft/the_nether/entities/r.0.0.mca": {
    "gold": 0,
    "holders": 0,
-   "mtime": "20260917144407",
-   "scanned_at": "2026-09-17T14:55:28Z",
-   "size": 696785
+   "mtime": "20260917150107",
+   "scanned_at": "2026-09-17T15:13:55Z",
+   "size": 700416
   },
   "minecraft/the_nether/entities/r.0.1.mca": {
    "gold": 0,
