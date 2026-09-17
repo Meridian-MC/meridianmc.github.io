@@ -8,10 +8,16 @@ import Base from "../layouts/Base.astro";
 const stone = { icon: "stone", label: "Stone" };
 const enderPearl = { icon: "ender_pearl", label: "Ender Pearl" };
 const apple = { icon: "apple", label: "Apple" };
-const goldenApple = { icon: "golden_apple", label: "Golden Apple" };
 const chorusFruit = { icon: "chorus_fruit", label: "Chorus Fruit" };
 const poppedChorus = { icon: "popped_chorus_fruit", label: "Popped Chorus Fruit" };
-const turtleShell = { icon: "turtle_helmet", label: "Turtle Shell" };
+const diamond = { icon: "diamond", label: "Diamond" };
+const paper = { icon: "paper", label: "Paper" };
+const string = { icon: "string", label: "String" };
+const ironNugget = { icon: "iron_nugget", label: "Iron Nugget" };
+const leather = { icon: "leather", label: "Leather" };
+const ironIngot = { icon: "iron_ingot", label: "Iron Ingot" };
+const goldIngot = { icon: "gold_ingot", label: "Gold Ingot" };
+const wool = { icon: "white_wool", label: "Wool" };
 const goldBlock = { icon: "gold_block", label: "Gold Block" };
 const brick = { icon: "brick", label: "Brick" };
 const lapisBlock = { icon: "lapis_block", label: "Lapis Block" };
@@ -55,10 +61,45 @@ const recipes: Recipe[] = [
   },
   {
     title: "Shulker Shell",
-    note: "8 Popped Chorus Fruit surrounding 1 Turtle Shell. Makes 2.",
+    note: "8 Popped Chorus Fruit surrounding 1 Diamond. Makes 2, which is one box.",
     station: "crafting",
-    cells: [poppedChorus, poppedChorus, poppedChorus, poppedChorus, turtleShell, poppedChorus, poppedChorus, poppedChorus, poppedChorus],
+    cells: [poppedChorus, poppedChorus, poppedChorus, poppedChorus, diamond, poppedChorus, poppedChorus, poppedChorus, poppedChorus],
     result: { icon: "shulker_shell", label: "Shulker Shell" }, amount: 2,
+  },
+  {
+    title: "Name Tag",
+    note: "Paper, String and an Iron Nugget, in any arrangement.",
+    station: "crafting",
+    cells: [paper, string, ironNugget, empty, empty, empty, empty, empty, empty],
+    result: { icon: "name_tag", label: "Name Tag" }, amount: 1,
+  },
+  {
+    title: "Saddle",
+    note: "3 Leather on top, String down both sides, Iron Ingots in the bottom corners.",
+    station: "crafting",
+    cells: [leather, leather, leather, string, empty, string, ironIngot, empty, ironIngot],
+    result: { icon: "saddle", label: "Saddle" }, amount: 1,
+  },
+  {
+    title: "Iron Horse Armor",
+    note: "6 Iron Ingots around 1 Wool: corners and the middle of each side, leaving the top and bottom centre empty. Same shape with Gold Ingots or Diamonds for the other two.",
+    station: "crafting",
+    cells: [ironIngot, empty, ironIngot, ironIngot, wool, ironIngot, ironIngot, empty, ironIngot],
+    result: { icon: "iron_horse_armor", label: "Iron Horse Armor" }, amount: 1,
+  },
+  {
+    title: "Golden Horse Armor",
+    note: "6 Gold Ingots around 1 Wool. Costs 6 G.",
+    station: "crafting",
+    cells: [goldIngot, empty, goldIngot, goldIngot, wool, goldIngot, goldIngot, empty, goldIngot],
+    result: { icon: "golden_horse_armor", label: "Golden Horse Armor" }, amount: 1,
+  },
+  {
+    title: "Diamond Horse Armor",
+    note: "6 Diamonds around 1 Wool.",
+    station: "crafting",
+    cells: [diamond, empty, diamond, diamond, wool, diamond, diamond, empty, diamond],
+    result: { icon: "diamond_horse_armor", label: "Diamond Horse Armor" }, amount: 1,
   },
   {
     title: "Enchanted Golden Apple",
