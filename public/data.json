@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-17T23:39:27Z",
+  "generated": "2026-09-17T23:52:22Z",
   "meta": {
     "players_tracked": 68,
     "active_traders": 10,
@@ -26,12 +26,12 @@
       "note": "Gold launched 2026-09-12. Needs 8+ active traders and 14+ days of history; currently 10 traders / 5 days."
     },
     "supply": {
-      "total": 8895.55,
+      "total": 8980.55,
       "on_hand": 343,
       "ender_chests": 1438,
       "containers": 4546,
       "loose": 17,
-      "land_banks": 2551.55,
+      "land_banks": 2636.55,
       "coverage": {
         "files": 1052,
         "fresh": 1052,
@@ -40,7 +40,7 @@
         "percent": 100.0
       }
     },
-    "money_supply_players": 8895.55,
+    "money_supply_players": 8980.55,
     "money_supply_series": [
       [
         "2026-09-15",
@@ -52,7 +52,7 @@
       ],
       [
         "2026-09-17",
-        8895.55
+        8980.55
       ]
     ],
     "flow": {
@@ -84,20 +84,20 @@
         ],
         [
           "2026-09-17",
-          551.0,
+          636.0,
           0.0
         ]
       ],
-      "spent_7d": 4708.0,
+      "spent_7d": 4793.0,
       "received_7d": 7280.0,
-      "transactions": 79
+      "transactions": 80
     },
     "trade_volume_series": [],
     "trade_volume_7d": 0,
     "chest_shop_transactions": 0,
     "gini": 0.937,
     "price_index": {
-      "value": 131.7,
+      "value": 93.8,
       "series": [
         [
           "2026-09-15",
@@ -109,7 +109,7 @@
         ],
         [
           "2026-09-17",
-          131.7
+          93.8
         ]
       ],
       "note": "Basket of 16 shop items, base 100 on 2026-09-15."
@@ -316,31 +316,6 @@
         "volume_24h_value": 0.0
       },
       {
-        "name": "Arrow",
-        "unit": "each",
-        "price": 1000.0,
-        "change_7d": 999.0,
-        "shops": 1,
-        "sellers": 1,
-        "series": [
-          [
-            "2026-09-15",
-            1.0
-          ],
-          [
-            "2026-09-16",
-            1.0
-          ],
-          [
-            "2026-09-17",
-            1000.0
-          ]
-        ],
-        "candles": [],
-        "volume_24h_qty": 0,
-        "volume_24h_value": 0.0
-      },
-      {
         "name": "Book",
         "unit": "each",
         "price": 2000.0,
@@ -498,6 +473,23 @@
         "candles": [],
         "volume_24h_qty": 0,
         "volume_24h_value": 0.0
+      },
+      {
+        "name": "Enchanted Golden Apple",
+        "unit": "each",
+        "price": 75.0,
+        "change_7d": 0.0,
+        "shops": 1,
+        "sellers": 1,
+        "series": [
+          [
+            "2026-09-17",
+            75.0
+          ]
+        ],
+        "candles": [],
+        "volume_24h_qty": 0,
+        "volume_24h_value": 0.0
       }
     ]
   },
@@ -568,7 +560,7 @@
     "mean": 26.19
   },
   "server": {
-    "checked": "2026-09-17T23:39:27Z",
+    "checked": "2026-09-17T23:52:23Z",
     "started_at": "2026-09-17T22:01:28Z",
     "tps": 20.0
   },
@@ -653,7 +645,7 @@
       "type": "land",
       "chunks": 14,
       "members": 9,
-      "bank": 127.3,
+      "bank": 212.3,
       "level": 1,
       "color": "#66979D"
     },

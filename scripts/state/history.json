@@ -70,6 +70,7 @@
    "minecraft:dune_armor_trim_smithing_template": 50.0,
    "minecraft:emerald": 252.5,
    "minecraft:enchanted_golden_apple": 75.0,
+   "minecraft:ender_pearl": 5.0,
    "minecraft:experience_bottle": 4.75,
    "minecraft:fire_charge": 1.0,
    "minecraft:flow_armor_trim_smithing_template": 25.5,
@@ -113,14 +114,14 @@
    "total": 9005.2
   },
   "2026-09-17": {
-   "at": "2026-09-17T23:39:27Z",
-   "banks": 2551.55,
+   "at": "2026-09-17T23:52:22Z",
+   "banks": 2636.55,
    "containers": 4546,
    "coverage": 100.0,
    "ender": 1438,
    "loose": 17,
    "on_hand": 343,
-   "total": 8895.55
+   "total": 8980.55
   }
  }
 }
