@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-18T03:13:37Z",
+  "generated": "2026-09-18T03:29:59Z",
   "meta": {
     "players_tracked": 68,
     "active_traders": 10,
@@ -27,11 +27,11 @@
     },
     "supply": {
       "total": 8905.55,
-      "on_hand": 493,
+      "on_hand": 258,
       "ender_chests": 913,
       "containers": 4546,
       "loose": 17,
-      "land_banks": 2936.55,
+      "land_banks": 3171.55,
       "coverage": {
         "files": 1052,
         "fresh": 1052,
@@ -93,13 +93,13 @@
         ],
         [
           "2026-09-18",
-          535.0,
+          770.0,
           235.0
         ]
       ],
-      "spent_7d": 5328.0,
+      "spent_7d": 5563.0,
       "received_7d": 7515.0,
-      "transactions": 85
+      "transactions": 86
     },
     "trade_volume_series": [
       [
@@ -109,7 +109,7 @@
     ],
     "trade_volume_7d": 235.0,
     "chest_shop_transactions": 1,
-    "gini": 0.917,
+    "gini": 0.929,
     "price_index": {
       "value": 88.2,
       "series": [
@@ -913,6 +913,72 @@
         ]
       },
       {
+        "name": "Enchanted Book (Density V)",
+        "id": "minecraft:enchanted_book",
+        "price": 100.0,
+        "low": 100.0,
+        "high": 100.0,
+        "bid": null,
+        "shops": 1,
+        "sellers": 1,
+        "listings": [
+          {
+            "seller": "WhenAtRome",
+            "price": 100.0,
+            "type": "sell",
+            "world": "world",
+            "x": -230,
+            "y": 67,
+            "z": 3428,
+            "land": "Reach"
+          }
+        ]
+      },
+      {
+        "name": "Enchanted Book (Luck Of The Sea III)",
+        "id": "minecraft:enchanted_book",
+        "price": 30.0,
+        "low": 30.0,
+        "high": 30.0,
+        "bid": null,
+        "shops": 1,
+        "sellers": 1,
+        "listings": [
+          {
+            "seller": "WhenAtRome",
+            "price": 30.0,
+            "type": "sell",
+            "world": "world",
+            "x": -232,
+            "y": 67,
+            "z": 3428,
+            "land": "Reach"
+          }
+        ]
+      },
+      {
+        "name": "Enchanted Book (Lure III)",
+        "id": "minecraft:enchanted_book",
+        "price": 30.0,
+        "low": 30.0,
+        "high": 30.0,
+        "bid": null,
+        "shops": 1,
+        "sellers": 1,
+        "listings": [
+          {
+            "seller": "WhenAtRome",
+            "price": 30.0,
+            "type": "sell",
+            "world": "world",
+            "x": -234,
+            "y": 67,
+            "z": 3428,
+            "land": "Reach"
+          }
+        ]
+      },
+      {
         "name": "Enchanted Book (Mending)",
         "id": "minecraft:enchanted_book",
         "price": null,
@@ -927,8 +993,8 @@
             "price": 500.0,
             "type": "buy",
             "world": "world",
-            "x": -233,
-            "y": 66,
+            "x": -231,
+            "y": 67,
             "z": 3428,
             "land": "Reach"
           }
@@ -1383,10 +1449,6 @@
         "balance": 385
       },
       {
-        "name": "WhenAtRome",
-        "balance": 235
-      },
-      {
         "name": "Giggsy__",
         "balance": 215
       },
@@ -1437,13 +1499,17 @@
       {
         "name": "winterrrly",
         "balance": 0
+      },
+      {
+        "name": "spiderjake5000",
+        "balance": 0
       }
     ],
     "median": 0.0,
-    "mean": 20.68
+    "mean": 17.22
   },
   "server": {
-    "checked": "2026-09-18T03:13:37Z",
+    "checked": "2026-09-18T03:29:59Z",
     "started_at": "2026-09-18T01:36:52Z",
     "tps": 20.0
   },
@@ -1528,7 +1594,7 @@
       "type": "land",
       "chunks": 14,
       "members": 9,
-      "bank": 212.3,
+      "bank": 447.3,
       "level": 1,
       "color": "#66979D"
     },
