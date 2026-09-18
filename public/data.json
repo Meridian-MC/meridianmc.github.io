@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-18T14:46:33Z",
+  "generated": "2026-09-18T15:12:54Z",
   "meta": {
     "players_tracked": 68,
     "active_traders": 10,
@@ -27,9 +27,9 @@
     },
     "supply": {
       "total": 11122.55,
-      "on_hand": 284,
-      "ender_chests": 2082,
-      "containers": 5404,
+      "on_hand": 276,
+      "ender_chests": 2938,
+      "containers": 4556,
       "loose": 17,
       "land_banks": 3335.55,
       "coverage": {
@@ -109,7 +109,7 @@
     ],
     "trade_volume_7d": 235.0,
     "chest_shop_transactions": 1,
-    "gini": 0.959,
+    "gini": 0.966,
     "price_index": {
       "value": 51.9,
       "series": [
@@ -1496,7 +1496,7 @@
     "top": [
       {
         "name": "Keanie__",
-        "balance": 1534
+        "balance": 2382
       },
       {
         "name": "JxrdanUK",
@@ -1556,10 +1556,10 @@
       }
     ],
     "median": 0.0,
-    "mean": 34.79
+    "mean": 47.26
   },
   "server": {
-    "checked": "2026-09-18T14:46:33Z",
+    "checked": "2026-09-18T15:12:54Z",
     "started_at": "2026-09-18T12:12:14Z",
     "tps": 20.0
   },
