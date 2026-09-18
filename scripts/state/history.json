@@ -116,7 +116,7 @@
    "minecraft:lapis_block": 5.0,
    "minecraft:lapis_lazuli": 250.0,
    "minecraft:netherite_ingot": 300.0,
-   "minecraft:netherite_upgrade_smithing_template": 200.0,
+   "minecraft:netherite_upgrade_smithing_template": 5100.0,
    "minecraft:ominous_bottle": 1.0,
    "minecraft:redstone": 3.0,
    "minecraft:sentry_armor_trim_smithing_template": 50.0,
@@ -158,14 +158,14 @@
    "total": 8980.55
   },
   "2026-09-18": {
-   "at": "2026-09-18T14:13:25Z",
+   "at": "2026-09-18T14:30:27Z",
    "banks": 3335.55,
-   "containers": 4973,
+   "containers": 4821,
    "coverage": 100.0,
-   "ender": 759,
+   "ender": 2082,
    "loose": 17,
-   "on_hand": 279,
-   "total": 9363.55
+   "on_hand": 284,
+   "total": 10539.55
   }
  }
 }

@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-18T14:13:25Z",
+  "generated": "2026-09-18T14:30:27Z",
   "meta": {
     "players_tracked": 68,
     "active_traders": 10,
@@ -26,10 +26,10 @@
       "note": "Gold launched 2026-09-12. Needs 8+ active traders and 14+ days of history; currently 10 traders / 6 days."
     },
     "supply": {
-      "total": 9363.55,
-      "on_hand": 279,
-      "ender_chests": 759,
-      "containers": 4973,
+      "total": 10539.55,
+      "on_hand": 284,
+      "ender_chests": 2082,
+      "containers": 4821,
       "loose": 17,
       "land_banks": 3335.55,
       "coverage": {
@@ -40,7 +40,7 @@
         "percent": 100.0
       }
     },
-    "money_supply_players": 9363.55,
+    "money_supply_players": 10539.55,
     "money_supply_series": [
       [
         "2026-09-15",
@@ -56,7 +56,7 @@
       ],
       [
         "2026-09-18",
-        9363.55
+        10539.55
       ]
     ],
     "flow": {
@@ -109,9 +109,9 @@
     ],
     "trade_volume_7d": 235.0,
     "chest_shop_transactions": 1,
-    "gini": 0.93,
+    "gini": 0.959,
     "price_index": {
-      "value": 105.2,
+      "value": 51.9,
       "series": [
         [
           "2026-09-15",
@@ -119,15 +119,15 @@
         ],
         [
           "2026-09-16",
-          107.6
+          24.4
         ],
         [
           "2026-09-17",
-          115.2
+          25.0
         ],
         [
           "2026-09-18",
-          105.2
+          51.9
         ]
       ],
       "note": "Basket of 16 shop items, base 100 on 2026-09-15."
@@ -243,6 +243,31 @@
           [
             "2026-09-18",
             128.5
+          ]
+        ],
+        "candles": [],
+        "volume_24h_qty": 0,
+        "volume_24h_value": 0.0
+      },
+      {
+        "name": "Netherite Upgrade Smithing Template",
+        "unit": "each",
+        "price": 5100.0,
+        "change_7d": -0.49,
+        "shops": 2,
+        "sellers": 2,
+        "series": [
+          [
+            "2026-09-15",
+            10000.0
+          ],
+          [
+            "2026-09-17",
+            200.0
+          ],
+          [
+            "2026-09-18",
+            5100.0
           ]
         ],
         "candles": [],
@@ -544,35 +569,6 @@
         ],
         "volume_24h_qty": 27,
         "volume_24h_value": 135.0
-      },
-      {
-        "name": "Flow Armor Trim Smithing Template",
-        "unit": "each",
-        "price": 50.0,
-        "change_7d": 3.7619,
-        "shops": 1,
-        "sellers": 1,
-        "series": [
-          [
-            "2026-09-15",
-            10.5
-          ],
-          [
-            "2026-09-16",
-            10.5
-          ],
-          [
-            "2026-09-17",
-            25.5
-          ],
-          [
-            "2026-09-18",
-            50.0
-          ]
-        ],
-        "candles": [],
-        "volume_24h_qty": 0,
-        "volume_24h_value": 0.0
       }
     ],
     "market": [
@@ -701,6 +697,38 @@
             "y": 95,
             "z": -4149,
             "land": "Augustine"
+          }
+        ]
+      },
+      {
+        "name": "Netherite Upgrade Smithing Template",
+        "id": "minecraft:netherite_upgrade_smithing_template",
+        "price": 5100.0,
+        "low": 200.0,
+        "high": 10000.0,
+        "bid": null,
+        "shops": 2,
+        "sellers": 2,
+        "listings": [
+          {
+            "seller": "WhenAtRome",
+            "price": 200.0,
+            "type": "sell",
+            "world": "world",
+            "x": -237,
+            "y": 66,
+            "z": 3431,
+            "land": "Reach"
+          },
+          {
+            "seller": "ACRI_Vanguard",
+            "price": 10000.0,
+            "type": "sell",
+            "world": "world",
+            "x": -106,
+            "y": 63,
+            "z": -1168,
+            "land": "ACRI_Vanguard"
           }
         ]
       },
@@ -1309,28 +1337,6 @@
         ]
       },
       {
-        "name": "Netherite Upgrade Smithing Template",
-        "id": "minecraft:netherite_upgrade_smithing_template",
-        "price": 200.0,
-        "low": 200.0,
-        "high": 200.0,
-        "bid": null,
-        "shops": 1,
-        "sellers": 1,
-        "listings": [
-          {
-            "seller": "WhenAtRome",
-            "price": 200.0,
-            "type": "sell",
-            "world": "world",
-            "x": -237,
-            "y": 66,
-            "z": 3431,
-            "land": "Reach"
-          }
-        ]
-      },
-      {
         "name": "Orange Shulker Box",
         "id": "minecraft:orange_shulker_box",
         "price": 100.0,
@@ -1489,12 +1495,12 @@
   "wealth": {
     "top": [
       {
-        "name": "JxrdanUK",
-        "balance": 385
+        "name": "Keanie__",
+        "balance": 1534
       },
       {
-        "name": "Keanie__",
-        "balance": 206
+        "name": "JxrdanUK",
+        "balance": 385
       },
       {
         "name": "1RTR",
@@ -1550,10 +1556,10 @@
       }
     ],
     "median": 0.0,
-    "mean": 15.26
+    "mean": 34.79
   },
   "server": {
-    "checked": "2026-09-18T14:13:25Z",
+    "checked": "2026-09-18T14:30:27Z",
     "started_at": "2026-09-18T12:12:14Z",
     "tps": 20.0
   },
