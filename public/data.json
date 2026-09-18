@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-18T13:54:45Z",
+  "generated": "2026-09-18T14:13:25Z",
   "meta": {
     "players_tracked": 68,
     "active_traders": 10,
@@ -26,12 +26,12 @@
       "note": "Gold launched 2026-09-12. Needs 8+ active traders and 14+ days of history; currently 10 traders / 6 days."
     },
     "supply": {
-      "total": 8915.55,
-      "on_hand": 276,
-      "ender_chests": 903,
-      "containers": 4556,
+      "total": 9363.55,
+      "on_hand": 279,
+      "ender_chests": 759,
+      "containers": 4973,
       "loose": 17,
-      "land_banks": 3163.55,
+      "land_banks": 3335.55,
       "coverage": {
         "files": 1052,
         "fresh": 1052,
@@ -40,7 +40,7 @@
         "percent": 100.0
       }
     },
-    "money_supply_players": 8915.55,
+    "money_supply_players": 9363.55,
     "money_supply_series": [
       [
         "2026-09-15",
@@ -56,7 +56,7 @@
       ],
       [
         "2026-09-18",
-        8915.55
+        9363.55
       ]
     ],
     "flow": {
@@ -93,13 +93,13 @@
         ],
         [
           "2026-09-18",
-          770.0,
+          942.0,
           243.0
         ]
       ],
-      "spent_7d": 5563.0,
+      "spent_7d": 5735.0,
       "received_7d": 7523.0,
-      "transactions": 87
+      "transactions": 88
     },
     "trade_volume_series": [
       [
@@ -109,7 +109,7 @@
     ],
     "trade_volume_7d": 235.0,
     "chest_shop_transactions": 1,
-    "gini": 0.928,
+    "gini": 0.93,
     "price_index": {
       "value": 105.2,
       "series": [
@@ -1493,12 +1493,8 @@
         "balance": 385
       },
       {
-        "name": "Giggsy__",
-        "balance": 215
-      },
-      {
         "name": "Keanie__",
-        "balance": 203
+        "balance": 206
       },
       {
         "name": "1RTR",
@@ -1511,6 +1507,10 @@
       {
         "name": "SLEN3ER",
         "balance": 81
+      },
+      {
+        "name": "Giggsy__",
+        "balance": 71
       },
       {
         "name": "Augustine65480",
@@ -1550,10 +1550,10 @@
       }
     ],
     "median": 0.0,
-    "mean": 17.34
+    "mean": 15.26
   },
   "server": {
-    "checked": "2026-09-18T13:54:45Z",
+    "checked": "2026-09-18T14:13:25Z",
     "started_at": "2026-09-18T12:12:14Z",
     "tps": 20.0
   },
@@ -1593,7 +1593,7 @@
       "type": "land",
       "chunks": 88,
       "members": 14,
-      "bank": 188.0,
+      "bank": 360.0,
       "level": 1,
       "color": "#667CEE"
     },
