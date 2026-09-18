@@ -92,6 +92,7 @@
    "minecraft:wind_charge": 1.0
   },
   "2026-09-18": {
+   "minecraft:arrow": 600.0,
    "minecraft:bolt_armor_trim_smithing_template": 50.0,
    "minecraft:book": 2000.0,
    "minecraft:coal": 75.0,
@@ -156,11 +157,11 @@
    "total": 8980.55
   },
   "2026-09-18": {
-   "at": "2026-09-18T05:12:15Z",
+   "at": "2026-09-18T05:27:41Z",
    "banks": 3171.55,
-   "containers": 4546,
+   "containers": 4556,
    "coverage": 100.0,
-   "ender": 913,
+   "ender": 903,
    "loose": 17,
    "on_hand": 258,
    "total": 8905.55
