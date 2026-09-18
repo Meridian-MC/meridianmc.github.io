@@ -92,7 +92,7 @@
    "minecraft:wind_charge": 1.0
   },
   "2026-09-18": {
-   "minecraft:bolt_armor_trim_smithing_template": 25.5,
+   "minecraft:bolt_armor_trim_smithing_template": 50.0,
    "minecraft:book": 2000.0,
    "minecraft:coal": 75.0,
    "minecraft:coast_armor_trim_smithing_template": 50.0,
@@ -106,9 +106,9 @@
    "minecraft:ender_pearl": 5.0,
    "minecraft:experience_bottle": 4.75,
    "minecraft:fire_charge": 1.0,
-   "minecraft:flow_armor_trim_smithing_template": 25.5,
-   "minecraft:golden_apple": 5.5,
-   "minecraft:golden_carrot": 1.5,
+   "minecraft:flow_armor_trim_smithing_template": 50.0,
+   "minecraft:golden_apple": 10.0,
+   "minecraft:golden_carrot": 2.0,
    "minecraft:granite": 4.0,
    "minecraft:heavy_core": 1000.0,
    "minecraft:iron_ingot": 128.5,
@@ -156,7 +156,7 @@
    "total": 8980.55
   },
   "2026-09-18": {
-   "at": "2026-09-18T02:31:22Z",
+   "at": "2026-09-18T02:53:28Z",
    "banks": 2636.55,
    "containers": 4546,
    "coverage": 100.0,

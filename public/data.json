@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-18T02:31:22Z",
+  "generated": "2026-09-18T02:53:28Z",
   "meta": {
     "players_tracked": 68,
     "active_traders": 10,
@@ -101,7 +101,7 @@
     "chest_shop_transactions": 0,
     "gini": 0.943,
     "price_index": {
-      "value": 93.8,
+      "value": 88.2,
       "series": [
         [
           "2026-09-15",
@@ -113,45 +113,16 @@
         ],
         [
           "2026-09-17",
-          93.8
+          86.7
         ],
         [
           "2026-09-18",
-          93.8
+          88.2
         ]
       ],
       "note": "Basket of 16 shop items, base 100 on 2026-09-15."
     },
     "items": [
-      {
-        "name": "Bolt Armor Trim Smithing Template",
-        "unit": "each",
-        "price": 25.5,
-        "change_7d": 1.4286,
-        "shops": 2,
-        "sellers": 1,
-        "series": [
-          [
-            "2026-09-15",
-            10.5
-          ],
-          [
-            "2026-09-16",
-            10.5
-          ],
-          [
-            "2026-09-17",
-            25.5
-          ],
-          [
-            "2026-09-18",
-            25.5
-          ]
-        ],
-        "candles": [],
-        "volume_24h_qty": 0,
-        "volume_24h_value": 0.0
-      },
       {
         "name": "Diamond",
         "unit": "each",
@@ -240,93 +211,6 @@
         "volume_24h_value": 0.0
       },
       {
-        "name": "Flow Armor Trim Smithing Template",
-        "unit": "each",
-        "price": 25.5,
-        "change_7d": 1.4286,
-        "shops": 2,
-        "sellers": 2,
-        "series": [
-          [
-            "2026-09-15",
-            10.5
-          ],
-          [
-            "2026-09-16",
-            10.5
-          ],
-          [
-            "2026-09-17",
-            25.5
-          ],
-          [
-            "2026-09-18",
-            25.5
-          ]
-        ],
-        "candles": [],
-        "volume_24h_qty": 0,
-        "volume_24h_value": 0.0
-      },
-      {
-        "name": "Golden Apple",
-        "unit": "each",
-        "price": 5.5,
-        "change_7d": 0.0,
-        "shops": 2,
-        "sellers": 1,
-        "series": [
-          [
-            "2026-09-15",
-            5.5
-          ],
-          [
-            "2026-09-16",
-            5.5
-          ],
-          [
-            "2026-09-17",
-            5.5
-          ],
-          [
-            "2026-09-18",
-            5.5
-          ]
-        ],
-        "candles": [],
-        "volume_24h_qty": 0,
-        "volume_24h_value": 0.0
-      },
-      {
-        "name": "Golden Carrot",
-        "unit": "each",
-        "price": 1.5,
-        "change_7d": 0.5,
-        "shops": 2,
-        "sellers": 1,
-        "series": [
-          [
-            "2026-09-15",
-            1.0
-          ],
-          [
-            "2026-09-16",
-            1.0
-          ],
-          [
-            "2026-09-17",
-            1.5
-          ],
-          [
-            "2026-09-18",
-            1.5
-          ]
-        ],
-        "candles": [],
-        "volume_24h_qty": 0,
-        "volume_24h_value": 0.0
-      },
-      {
         "name": "Iron Ingot",
         "unit": "each",
         "price": 128.5,
@@ -349,6 +233,35 @@
           [
             "2026-09-18",
             128.5
+          ]
+        ],
+        "candles": [],
+        "volume_24h_qty": 0,
+        "volume_24h_value": 0.0
+      },
+      {
+        "name": "Bolt Armor Trim Smithing Template",
+        "unit": "each",
+        "price": 50.0,
+        "change_7d": 3.7619,
+        "shops": 1,
+        "sellers": 1,
+        "series": [
+          [
+            "2026-09-15",
+            10.5
+          ],
+          [
+            "2026-09-16",
+            10.5
+          ],
+          [
+            "2026-09-17",
+            25.5
+          ],
+          [
+            "2026-09-18",
+            50.0
           ]
         ],
         "candles": [],
@@ -562,41 +475,88 @@
         "candles": [],
         "volume_24h_qty": 0,
         "volume_24h_value": 0.0
+      },
+      {
+        "name": "Ender Pearl",
+        "unit": "each",
+        "price": 5.0,
+        "change_7d": 0.0,
+        "shops": 1,
+        "sellers": 1,
+        "series": [
+          [
+            "2026-09-17",
+            5.0
+          ],
+          [
+            "2026-09-18",
+            5.0
+          ]
+        ],
+        "candles": [],
+        "volume_24h_qty": 0,
+        "volume_24h_value": 0.0
+      },
+      {
+        "name": "Flow Armor Trim Smithing Template",
+        "unit": "each",
+        "price": 50.0,
+        "change_7d": 3.7619,
+        "shops": 1,
+        "sellers": 1,
+        "series": [
+          [
+            "2026-09-15",
+            10.5
+          ],
+          [
+            "2026-09-16",
+            10.5
+          ],
+          [
+            "2026-09-17",
+            25.5
+          ],
+          [
+            "2026-09-18",
+            50.0
+          ]
+        ],
+        "candles": [],
+        "volume_24h_qty": 0,
+        "volume_24h_value": 0.0
+      },
+      {
+        "name": "Golden Apple",
+        "unit": "each",
+        "price": 10.0,
+        "change_7d": 0.8182,
+        "shops": 1,
+        "sellers": 1,
+        "series": [
+          [
+            "2026-09-15",
+            5.5
+          ],
+          [
+            "2026-09-16",
+            5.5
+          ],
+          [
+            "2026-09-17",
+            5.5
+          ],
+          [
+            "2026-09-18",
+            10.0
+          ]
+        ],
+        "candles": [],
+        "volume_24h_qty": 0,
+        "volume_24h_value": 0.0
       }
     ],
     "market": [
-      {
-        "name": "Bolt Armor Trim Smithing Template",
-        "id": "minecraft:bolt_armor_trim_smithing_template",
-        "price": 25.5,
-        "low": 1.0,
-        "high": 50.0,
-        "bid": null,
-        "shops": 2,
-        "sellers": 1,
-        "listings": [
-          {
-            "seller": "WhenAtRome",
-            "price": 1.0,
-            "type": "sell",
-            "world": "world",
-            "x": 1994,
-            "y": 96,
-            "z": 1864,
-            "land": null
-          },
-          {
-            "seller": "WhenAtRome",
-            "price": 50.0,
-            "type": "sell",
-            "world": "world",
-            "x": -237,
-            "y": 66,
-            "z": 3435,
-            "land": "Reach"
-          }
-        ]
-      },
       {
         "name": "Diamond",
         "id": "minecraft:diamond",
@@ -694,102 +654,6 @@
         ]
       },
       {
-        "name": "Flow Armor Trim Smithing Template",
-        "id": "minecraft:flow_armor_trim_smithing_template",
-        "price": 25.5,
-        "low": 1.0,
-        "high": 50.0,
-        "bid": null,
-        "shops": 2,
-        "sellers": 2,
-        "listings": [
-          {
-            "seller": "WhenAtRome",
-            "price": 1.0,
-            "type": "sell",
-            "world": "world",
-            "x": 1994,
-            "y": 96,
-            "z": 1865,
-            "land": null
-          },
-          {
-            "seller": "DatAriix",
-            "price": 50.0,
-            "type": "sell",
-            "world": "world",
-            "x": -237,
-            "y": 66,
-            "z": 3436,
-            "land": "Reach"
-          }
-        ]
-      },
-      {
-        "name": "Golden Apple",
-        "id": "minecraft:golden_apple",
-        "price": 5.5,
-        "low": 1.0,
-        "high": 10.0,
-        "bid": null,
-        "shops": 2,
-        "sellers": 1,
-        "listings": [
-          {
-            "seller": "WhenAtRome",
-            "price": 1.0,
-            "type": "sell",
-            "world": "world",
-            "x": 1989,
-            "y": 95,
-            "z": 1862,
-            "land": null
-          },
-          {
-            "seller": "WhenAtRome",
-            "price": 10.0,
-            "type": "sell",
-            "world": "world",
-            "x": -235,
-            "y": 66,
-            "z": 3438,
-            "land": "Reach"
-          }
-        ]
-      },
-      {
-        "name": "Golden Carrot",
-        "id": "minecraft:golden_carrot",
-        "price": 1.5,
-        "low": 1.0,
-        "high": 2.0,
-        "bid": null,
-        "shops": 2,
-        "sellers": 1,
-        "listings": [
-          {
-            "seller": "WhenAtRome",
-            "price": 1.0,
-            "type": "sell",
-            "world": "world",
-            "x": 1988,
-            "y": 95,
-            "z": 1862,
-            "land": null
-          },
-          {
-            "seller": "WhenAtRome",
-            "price": 2.0,
-            "type": "sell",
-            "world": "world",
-            "x": -234,
-            "y": 66,
-            "z": 3438,
-            "land": "Reach"
-          }
-        ]
-      },
-      {
         "name": "Iron Ingot",
         "id": "minecraft:iron_ingot",
         "price": 128.5,
@@ -822,38 +686,6 @@
         ]
       },
       {
-        "name": "Splash Potion (Poison)",
-        "id": "minecraft:splash_potion",
-        "price": 1.0,
-        "low": 1.0,
-        "high": 1.0,
-        "bid": null,
-        "shops": 2,
-        "sellers": 1,
-        "listings": [
-          {
-            "seller": "WhenAtRome",
-            "price": 1.0,
-            "type": "sell",
-            "world": "world",
-            "x": 1989,
-            "y": 96,
-            "z": 1861,
-            "land": null
-          },
-          {
-            "seller": "WhenAtRome",
-            "price": 1.0,
-            "type": "sell",
-            "world": "world",
-            "x": 1992,
-            "y": 95,
-            "z": 1862,
-            "land": null
-          }
-        ]
-      },
-      {
         "name": "Yellow Shulker Box",
         "id": "minecraft:yellow_shulker_box",
         "price": 100.0,
@@ -881,6 +713,28 @@
             "x": -228,
             "y": 66,
             "z": 3429,
+            "land": "Reach"
+          }
+        ]
+      },
+      {
+        "name": "Bolt Armor Trim Smithing Template",
+        "id": "minecraft:bolt_armor_trim_smithing_template",
+        "price": 50.0,
+        "low": 50.0,
+        "high": 50.0,
+        "bid": null,
+        "shops": 1,
+        "sellers": 1,
+        "listings": [
+          {
+            "seller": "WhenAtRome",
+            "price": 50.0,
+            "type": "sell",
+            "world": "world",
+            "x": -237,
+            "y": 66,
+            "z": 3435,
             "land": "Reach"
           }
         ]
@@ -1040,72 +894,6 @@
         ]
       },
       {
-        "name": "Enchanted Book (Channeling)",
-        "id": "minecraft:enchanted_book",
-        "price": 1.0,
-        "low": 1.0,
-        "high": 1.0,
-        "bid": null,
-        "shops": 1,
-        "sellers": 1,
-        "listings": [
-          {
-            "seller": "WhenAtRome",
-            "price": 1.0,
-            "type": "sell",
-            "world": "world",
-            "x": 1985,
-            "y": 95,
-            "z": 1864,
-            "land": null
-          }
-        ]
-      },
-      {
-        "name": "Enchanted Book (Fortune III)",
-        "id": "minecraft:enchanted_book",
-        "price": 500.0,
-        "low": 500.0,
-        "high": 500.0,
-        "bid": null,
-        "shops": 1,
-        "sellers": 1,
-        "listings": [
-          {
-            "seller": "WhenAtRome",
-            "price": 500.0,
-            "type": "sell",
-            "world": "world",
-            "x": 1985,
-            "y": 95,
-            "z": 1865,
-            "land": null
-          }
-        ]
-      },
-      {
-        "name": "Enchanted Book (Loyalty III)",
-        "id": "minecraft:enchanted_book",
-        "price": 1.0,
-        "low": 1.0,
-        "high": 1.0,
-        "bid": null,
-        "shops": 1,
-        "sellers": 1,
-        "listings": [
-          {
-            "seller": "WhenAtRome",
-            "price": 1.0,
-            "type": "sell",
-            "world": "world",
-            "x": 1984,
-            "y": 96,
-            "z": 1865,
-            "land": null
-          }
-        ]
-      },
-      {
         "name": "Enchanted Book (Mending)",
         "id": "minecraft:enchanted_book",
         "price": null,
@@ -1124,28 +912,6 @@
             "y": 66,
             "z": 3428,
             "land": "Reach"
-          }
-        ]
-      },
-      {
-        "name": "Enchanted Book (Riptide II)",
-        "id": "minecraft:enchanted_book",
-        "price": 1.0,
-        "low": 1.0,
-        "high": 1.0,
-        "bid": null,
-        "shops": 1,
-        "sellers": 1,
-        "listings": [
-          {
-            "seller": "WhenAtRome",
-            "price": 1.0,
-            "type": "sell",
-            "world": "world",
-            "x": 1985,
-            "y": 95,
-            "z": 1866,
-            "land": null
           }
         ]
       },
@@ -1216,24 +982,68 @@
         ]
       },
       {
-        "name": "Fire Charge",
-        "id": "minecraft:fire_charge",
-        "price": 1.0,
-        "low": 1.0,
-        "high": 1.0,
+        "name": "Flow Armor Trim Smithing Template",
+        "id": "minecraft:flow_armor_trim_smithing_template",
+        "price": 50.0,
+        "low": 50.0,
+        "high": 50.0,
+        "bid": null,
+        "shops": 1,
+        "sellers": 1,
+        "listings": [
+          {
+            "seller": "DatAriix",
+            "price": 50.0,
+            "type": "sell",
+            "world": "world",
+            "x": -237,
+            "y": 66,
+            "z": 3436,
+            "land": "Reach"
+          }
+        ]
+      },
+      {
+        "name": "Golden Apple",
+        "id": "minecraft:golden_apple",
+        "price": 10.0,
+        "low": 10.0,
+        "high": 10.0,
         "bid": null,
         "shops": 1,
         "sellers": 1,
         "listings": [
           {
             "seller": "WhenAtRome",
-            "price": 1.0,
+            "price": 10.0,
             "type": "sell",
             "world": "world",
-            "x": 1986,
-            "y": 95,
-            "z": 1862,
-            "land": null
+            "x": -235,
+            "y": 66,
+            "z": 3438,
+            "land": "Reach"
+          }
+        ]
+      },
+      {
+        "name": "Golden Carrot",
+        "id": "minecraft:golden_carrot",
+        "price": 2.0,
+        "low": 2.0,
+        "high": 2.0,
+        "bid": null,
+        "shops": 1,
+        "sellers": 1,
+        "listings": [
+          {
+            "seller": "WhenAtRome",
+            "price": 2.0,
+            "type": "sell",
+            "world": "world",
+            "x": -234,
+            "y": 66,
+            "z": 3438,
+            "land": "Reach"
           }
         ]
       },
@@ -1348,28 +1158,6 @@
         ]
       },
       {
-        "name": "Lingering Potion (Healing)",
-        "id": "minecraft:lingering_potion",
-        "price": 1.0,
-        "low": 1.0,
-        "high": 1.0,
-        "bid": null,
-        "shops": 1,
-        "sellers": 1,
-        "listings": [
-          {
-            "seller": "WhenAtRome",
-            "price": 1.0,
-            "type": "sell",
-            "world": "world",
-            "x": 1990,
-            "y": 95,
-            "z": 1862,
-            "land": null
-          }
-        ]
-      },
-      {
         "name": "Netherite Ingot",
         "id": "minecraft:netherite_ingot",
         "price": 350.0,
@@ -1414,28 +1202,6 @@
         ]
       },
       {
-        "name": "Ominous Bottle",
-        "id": "minecraft:ominous_bottle",
-        "price": 1.0,
-        "low": 1.0,
-        "high": 1.0,
-        "bid": null,
-        "shops": 1,
-        "sellers": 1,
-        "listings": [
-          {
-            "seller": "WhenAtRome",
-            "price": 1.0,
-            "type": "sell",
-            "world": "world",
-            "x": 1987,
-            "y": 96,
-            "z": 1861,
-            "land": null
-          }
-        ]
-      },
-      {
         "name": "Orange Shulker Box",
         "id": "minecraft:orange_shulker_box",
         "price": 100.0,
@@ -1458,50 +1224,6 @@
         ]
       },
       {
-        "name": "Potion (Regeneration)",
-        "id": "minecraft:potion",
-        "price": 1.0,
-        "low": 1.0,
-        "high": 1.0,
-        "bid": null,
-        "shops": 1,
-        "sellers": 1,
-        "listings": [
-          {
-            "seller": "WhenAtRome",
-            "price": 1.0,
-            "type": "sell",
-            "world": "world",
-            "x": 1987,
-            "y": 95,
-            "z": 1862,
-            "land": null
-          }
-        ]
-      },
-      {
-        "name": "Potion (Strength)",
-        "id": "minecraft:potion",
-        "price": 1.0,
-        "low": 1.0,
-        "high": 1.0,
-        "bid": null,
-        "shops": 1,
-        "sellers": 1,
-        "listings": [
-          {
-            "seller": "WhenAtRome",
-            "price": 1.0,
-            "type": "sell",
-            "world": "world",
-            "x": 1993,
-            "y": 95,
-            "z": 1865,
-            "land": null
-          }
-        ]
-      },
-      {
         "name": "Potion (Strong Regeneration)",
         "id": "minecraft:potion",
         "price": 200.0,
@@ -1520,28 +1242,6 @@
             "y": 106,
             "z": -1184,
             "land": "Pergaminthos"
-          }
-        ]
-      },
-      {
-        "name": "Potion (Swiftness)",
-        "id": "minecraft:potion",
-        "price": 1.0,
-        "low": 1.0,
-        "high": 1.0,
-        "bid": null,
-        "shops": 1,
-        "sellers": 1,
-        "listings": [
-          {
-            "seller": "WhenAtRome",
-            "price": 1.0,
-            "type": "sell",
-            "world": "world",
-            "x": 1988,
-            "y": 96,
-            "z": 1861,
-            "land": null
           }
         ]
       },
@@ -1612,72 +1312,6 @@
         ]
       },
       {
-        "name": "Splash Potion (Slowness)",
-        "id": "minecraft:splash_potion",
-        "price": 1.0,
-        "low": 1.0,
-        "high": 1.0,
-        "bid": null,
-        "shops": 1,
-        "sellers": 1,
-        "listings": [
-          {
-            "seller": "WhenAtRome",
-            "price": 1.0,
-            "type": "sell",
-            "world": "world",
-            "x": 1991,
-            "y": 96,
-            "z": 1861,
-            "land": null
-          }
-        ]
-      },
-      {
-        "name": "Tipped Arrow (Poison)",
-        "id": "minecraft:tipped_arrow",
-        "price": 1.0,
-        "low": 1.0,
-        "high": 1.0,
-        "bid": null,
-        "shops": 1,
-        "sellers": 1,
-        "listings": [
-          {
-            "seller": "WhenAtRome",
-            "price": 1.0,
-            "type": "sell",
-            "world": "world",
-            "x": 1992,
-            "y": 96,
-            "z": 1861,
-            "land": null
-          }
-        ]
-      },
-      {
-        "name": "Tipped Arrow (Slowness)",
-        "id": "minecraft:tipped_arrow",
-        "price": 1.0,
-        "low": 1.0,
-        "high": 1.0,
-        "bid": null,
-        "shops": 1,
-        "sellers": 1,
-        "listings": [
-          {
-            "seller": "WhenAtRome",
-            "price": 1.0,
-            "type": "sell",
-            "world": "world",
-            "x": 1990,
-            "y": 96,
-            "z": 1861,
-            "land": null
-          }
-        ]
-      },
-      {
         "name": "Totem Of Undying",
         "id": "minecraft:totem_of_undying",
         "price": 200.0,
@@ -1696,50 +1330,6 @@
             "y": 66,
             "z": 3428,
             "land": "Reach"
-          }
-        ]
-      },
-      {
-        "name": "Trident",
-        "id": "minecraft:trident",
-        "price": 4000.0,
-        "low": 4000.0,
-        "high": 4000.0,
-        "bid": null,
-        "shops": 1,
-        "sellers": 1,
-        "listings": [
-          {
-            "seller": "WhenAtRome",
-            "price": 4000.0,
-            "type": "sell",
-            "world": "world",
-            "x": 1984,
-            "y": 96,
-            "z": 1864,
-            "land": null
-          }
-        ]
-      },
-      {
-        "name": "Wind Charge",
-        "id": "minecraft:wind_charge",
-        "price": 1.0,
-        "low": 1.0,
-        "high": 1.0,
-        "bid": null,
-        "shops": 1,
-        "sellers": 1,
-        "listings": [
-          {
-            "seller": "WhenAtRome",
-            "price": 1.0,
-            "type": "sell",
-            "world": "world",
-            "x": 1986,
-            "y": 96,
-            "z": 1861,
-            "land": null
           }
         ]
       }
@@ -1812,7 +1402,7 @@
     "mean": 25.09
   },
   "server": {
-    "checked": "2026-09-18T02:31:22Z",
+    "checked": "2026-09-18T02:53:28Z",
     "started_at": "2026-09-18T01:36:52Z",
     "tps": 20.0
   },
