@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-18T02:53:28Z",
+  "generated": "2026-09-18T03:13:37Z",
   "meta": {
     "players_tracked": 68,
     "active_traders": 10,
@@ -27,11 +27,11 @@
     },
     "supply": {
       "total": 8905.55,
-      "on_hand": 258,
-      "ender_chests": 1448,
+      "on_hand": 493,
+      "ender_chests": 913,
       "containers": 4546,
       "loose": 17,
-      "land_banks": 2636.55,
+      "land_banks": 2936.55,
       "coverage": {
         "files": 1052,
         "fresh": 1052,
@@ -90,16 +90,26 @@
           "2026-09-17",
           636.0,
           0.0
+        ],
+        [
+          "2026-09-18",
+          535.0,
+          235.0
         ]
       ],
-      "spent_7d": 4793.0,
-      "received_7d": 7280.0,
-      "transactions": 80
+      "spent_7d": 5328.0,
+      "received_7d": 7515.0,
+      "transactions": 85
     },
-    "trade_volume_series": [],
-    "trade_volume_7d": 0,
-    "chest_shop_transactions": 0,
-    "gini": 0.943,
+    "trade_volume_series": [
+      [
+        "2026-09-18",
+        235.0
+      ]
+    ],
+    "trade_volume_7d": 235.0,
+    "chest_shop_transactions": 1,
+    "gini": 0.917,
     "price_index": {
       "value": 88.2,
       "series": [
@@ -493,9 +503,18 @@
             5.0
           ]
         ],
-        "candles": [],
-        "volume_24h_qty": 0,
-        "volume_24h_value": 0.0
+        "candles": [
+          {
+            "t": "2026-09-18",
+            "o": 5.0,
+            "h": 5.0,
+            "l": 5.0,
+            "c": 5.0,
+            "v": 27
+          }
+        ],
+        "volume_24h_qty": 27,
+        "volume_24h_value": 135.0
       },
       {
         "name": "Flow Armor Trim Smithing Template",
@@ -916,6 +935,28 @@
         ]
       },
       {
+        "name": "Enchanted Book (Silk Touch)",
+        "id": "minecraft:enchanted_book",
+        "price": 30.0,
+        "low": 30.0,
+        "high": 30.0,
+        "bid": null,
+        "shops": 1,
+        "sellers": 1,
+        "listings": [
+          {
+            "seller": "WhenAtRome",
+            "price": 30.0,
+            "type": "sell",
+            "world": "world",
+            "x": -233,
+            "y": 67,
+            "z": 3428,
+            "land": "Reach"
+          }
+        ]
+      },
+      {
         "name": "Enchanted Book (Unbreaking III)",
         "id": "minecraft:enchanted_book",
         "price": 1500.0,
@@ -1072,16 +1113,16 @@
       {
         "name": "Heavy Core",
         "id": "minecraft:heavy_core",
-        "price": 1000.0,
-        "low": 1000.0,
-        "high": 1000.0,
+        "price": 700.0,
+        "low": 700.0,
+        "high": 700.0,
         "bid": null,
         "shops": 1,
         "sellers": 1,
         "listings": [
           {
             "seller": "WhenAtRome",
-            "price": 1000.0,
+            "price": 700.0,
             "type": "sell",
             "world": "world",
             "x": -234,
@@ -1160,16 +1201,16 @@
       {
         "name": "Netherite Ingot",
         "id": "minecraft:netherite_ingot",
-        "price": 350.0,
-        "low": 350.0,
-        "high": 350.0,
+        "price": 300.0,
+        "low": 300.0,
+        "high": 300.0,
         "bid": null,
         "shops": 1,
         "sellers": 1,
         "listings": [
           {
             "seller": "DatAriix",
-            "price": 350.0,
+            "price": 300.0,
             "type": "sell",
             "world": "world",
             "x": -237,
@@ -1338,16 +1379,20 @@
   "wealth": {
     "top": [
       {
-        "name": "Keanie__",
-        "balance": 738
-      },
-      {
         "name": "JxrdanUK",
         "balance": 385
       },
       {
+        "name": "WhenAtRome",
+        "balance": 235
+      },
+      {
         "name": "Giggsy__",
         "balance": 215
+      },
+      {
+        "name": "Keanie__",
+        "balance": 203
       },
       {
         "name": "1RTR",
@@ -1392,17 +1437,13 @@
       {
         "name": "winterrrly",
         "balance": 0
-      },
-      {
-        "name": "spiderjake5000",
-        "balance": 0
       }
     ],
     "median": 0.0,
-    "mean": 25.09
+    "mean": 20.68
   },
   "server": {
-    "checked": "2026-09-18T02:53:28Z",
+    "checked": "2026-09-18T03:13:37Z",
     "started_at": "2026-09-18T01:36:52Z",
     "tps": 20.0
   },
@@ -1505,8 +1546,8 @@
       "type": "land",
       "chunks": 9,
       "members": 8,
-      "bank": 335.05,
-      "level": 1,
+      "bank": 635.05,
+      "level": 2,
       "color": "#B6B06C"
     },
     {
