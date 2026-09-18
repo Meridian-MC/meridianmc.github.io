@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-18T17:11:47Z",
+  "generated": "2026-09-18T17:26:11Z",
   "meta": {
     "players_tracked": 68,
     "active_traders": 11,
@@ -1559,8 +1559,8 @@
     "mean": 47.26
   },
   "server": {
-    "checked": "2026-09-18T17:11:47Z",
-    "started_at": "2026-09-18T15:27:58Z",
+    "checked": "2026-09-18T17:26:11Z",
+    "started_at": "2026-09-18T15:27:57Z",
     "tps": 20.0
   },
   "nations": [
@@ -1643,7 +1643,7 @@
       "name": "Reach",
       "type": "land",
       "chunks": 14,
-      "members": 8,
+      "members": 9,
       "bank": 1039.3,
       "level": 2,
       "color": "#66979D"
@@ -1652,7 +1652,7 @@
       "name": "Goldmarche",
       "type": "land",
       "chunks": 14,
-      "members": 7,
+      "members": 8,
       "bank": 72.0,
       "level": 0,
       "color": "#A3E085"
