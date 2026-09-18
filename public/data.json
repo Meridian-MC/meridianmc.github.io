@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-18T16:53:19Z",
+  "generated": "2026-09-18T17:11:47Z",
   "meta": {
     "players_tracked": 68,
     "active_traders": 11,
@@ -26,10 +26,10 @@
       "note": "Gold launched 2026-09-12. Needs 8+ active traders and 14+ days of history; currently 11 traders / 6 days."
     },
     "supply": {
-      "total": 11895.55,
-      "on_hand": 278,
+      "total": 11903.55,
+      "on_hand": 276,
       "ender_chests": 2938,
-      "containers": 4583,
+      "containers": 4593,
       "loose": 17,
       "land_banks": 4079.55,
       "coverage": {
@@ -40,7 +40,7 @@
         "percent": 100.0
       }
     },
-    "money_supply_players": 11895.55,
+    "money_supply_players": 11903.55,
     "money_supply_series": [
       [
         "2026-09-15",
@@ -56,7 +56,7 @@
       ],
       [
         "2026-09-18",
-        11895.55
+        11903.55
       ]
     ],
     "flow": {
@@ -1539,10 +1539,6 @@
         "balance": 2
       },
       {
-        "name": "ACRI_Vanguard",
-        "balance": 2
-      },
-      {
         "name": "Atilius_Corvinus",
         "balance": 1
       },
@@ -1553,13 +1549,17 @@
       {
         "name": "spiderjake5000",
         "balance": 0
+      },
+      {
+        "name": "X_Professor_YT",
+        "balance": 0
       }
     ],
     "median": 0.0,
-    "mean": 47.29
+    "mean": 47.26
   },
   "server": {
-    "checked": "2026-09-18T16:53:19Z",
+    "checked": "2026-09-18T17:11:47Z",
     "started_at": "2026-09-18T15:27:58Z",
     "tps": 20.0
   },
@@ -1643,7 +1643,7 @@
       "name": "Reach",
       "type": "land",
       "chunks": 14,
-      "members": 9,
+      "members": 8,
       "bank": 1039.3,
       "level": 2,
       "color": "#66979D"
@@ -1652,7 +1652,7 @@
       "name": "Goldmarche",
       "type": "land",
       "chunks": 14,
-      "members": 8,
+      "members": 7,
       "bank": 72.0,
       "level": 0,
       "color": "#A3E085"
