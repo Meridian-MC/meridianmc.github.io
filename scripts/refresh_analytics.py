@@ -534,6 +534,40 @@ def lands_from_db(path):
     return lands, nations, events[:20], player_names
 
 
+def chunk_index_from_db(path):
+    """(world name, chunk x, chunk z) -> land display name, for placing a shop
+    inside the land that claims its chunk."""
+    con = sqlite3.connect(path)
+    con.row_factory = sqlite3.Row
+    worlds = {}
+    try:
+        for r in con.execute("SELECT ulid, name FROM lands_worlds"):
+            worlds[r["ulid"]] = r["name"]
+    except sqlite3.Error:
+        pass
+    names = {}
+    for r in con.execute("SELECT ulid, name FROM lands_lands"):
+        names[r["ulid"]] = _split_color(r["name"])[0]
+    index = {}
+    try:
+        for r in con.execute("SELECT land, world, chunks FROM lands_lands_claims"):
+            name = names.get(r["land"])
+            world = worlds.get(r["world"], r["world"])
+            if not name:
+                continue
+            try:
+                chunks = json.loads(r["chunks"] or "[]")
+            except (ValueError, TypeError):
+                continue
+            for c in chunks:
+                if isinstance(c, dict) and "x" in c and "z" in c:
+                    index[(world, int(c["x"]), int(c["z"]))] = name
+    except sqlite3.Error:
+        pass
+    con.close()
+    return index
+
+
 def mdi(chunks, members, treasury, activity):
     # Ceilings sized for a 20-50 player server on a Gold economy: a chunk
     # costs 4 G and a nation 100 G, so 1,000 G banked is a rich nation.
@@ -623,6 +657,44 @@ def _pretty(material):
     return " ".join(w.capitalize() for w in re.sub(r"^minecraft:", "", material).split("_"))
 
 
+ROMAN = {1: "I", 2: "II", 3: "III", 4: "IV", 5: "V"}
+# Components the directory names rather than hides: they make the stack a
+# different good (a Mending book is not "an enchanted book").
+NAMED_COMPONENTS = {"minecraft:stored_enchantments", "minecraft:enchantments", "minecraft:potion_contents"}
+# Components that don't change what is being sold from the buyer's side.
+IGNORED_COMPONENTS = COSMETIC_COMPONENTS | {"minecraft:custom_name", "minecraft:container", "minecraft:unbreakable"}
+
+
+def _describe(it):
+    """Display name for a shop's stack: the material plus whatever makes it a
+    different good from its bare namesake, e.g. "Enchanted Book (Mending)",
+    "Potion (Strong Regeneration)". Unknown components are flagged (custom)."""
+    material = it.get("id") or "minecraft:air"
+    comps = it.get("components") or {}
+    if not isinstance(comps, dict):
+        comps = {}
+    quals = []
+    ench = comps.get("minecraft:stored_enchantments") or comps.get("minecraft:enchantments")
+    if isinstance(ench, dict):
+        levels = ench.get("levels") if isinstance(ench.get("levels"), dict) else ench
+        parts = []
+        for k, v in sorted(levels.items(), key=lambda kv: str(kv[0])):
+            try:
+                lvl = int(v)
+            except (TypeError, ValueError):
+                lvl = 1
+            parts.append(_pretty(str(k)) + (f" {ROMAN.get(lvl, lvl)}" if lvl > 1 else ""))
+        if parts:
+            quals.append(", ".join(parts))
+    pot = comps.get("minecraft:potion_contents")
+    if isinstance(pot, dict) and pot.get("potion"):
+        quals.append(_pretty(str(pot["potion"])))
+    if set(comps) - IGNORED_COMPONENTS - NAMED_COMPONENTS:
+        quals.append("custom")
+    name = _pretty(material)
+    return name + (f" ({'; '.join(quals)})" if quals else "")
+
+
 def quickshop(f, profile):
     """Live asking prices (median per item across active selling shops) and the
     purchase log since the Gold era: per-day volume, per-item daily candles."""
@@ -660,13 +732,14 @@ def quickshop(f, profile):
     # Item id per shop data row, decoded from the gzip+base64 NBT blob. Only
     # plain, fungible items get an id; a stack with real components is a
     # different good from its bare namesake and is left out of pricing.
-    item_of = {}
+    item_of, stack_of = {}, {}
     cur.execute(f"SELECT id, item FROM `{prefix}data`")
     for did, blob in cur.fetchall():
         try:
             it = mcnbt.parse(gzip.decompress(base64.b64decode(blob)))
         except Exception:
             continue
+        stack_of[did] = it
         comps = it.get("components") or {}
         if isinstance(comps, dict) and set(comps) - COSMETIC_COMPONENTS:
             continue
@@ -674,14 +747,21 @@ def quickshop(f, profile):
 
     # Asking prices from shops that actually exist in the world (data rows
     # outlive their shops, so join through the shop map).
-    asks, sellers = {}, {}
-    cur.execute(f"SELECT d.id, d.price, d.type, d.owner FROM `{prefix}data` d "
+    asks, sellers, listings = {}, {}, []
+    cur.execute(f"SELECT d.id, d.price, d.type, d.owner, mp.world, mp.x, mp.y, mp.z FROM `{prefix}data` d "
                 f"JOIN `{prefix}shops` s ON s.data = d.id "
                 f"JOIN `{prefix}shop_map` mp ON mp.shop = s.id "
-                f"WHERE d.shop_state = 'active' AND d.type = 0")
-    for did, price, _, owner in cur.fetchall():
+                f"WHERE d.shop_state = 'active'")
+    for did, price, typ, owner, world, x, y, z in cur.fetchall():
+        st = stack_of.get(did)
+        if st is None or not price:
+            continue
+        # Every shop goes in the directory, named by what it actually sells.
+        listings.append({"item": st.get("id"), "name": _describe(st), "price": float(price),
+                         "type": "buy" if typ == 1 else "sell", "owner": owner,
+                         "world": world, "x": int(x), "y": int(y), "z": int(z)})
         item = item_of.get(did)
-        if not item or item in UNTRACKED or not price:
+        if typ != 0 or not item or item in UNTRACKED:
             continue
         asks.setdefault(item, []).append(float(price))
         sellers.setdefault(item, set()).add(owner)
@@ -706,7 +786,7 @@ def quickshop(f, profile):
             e["unit"].append(money / amount)
     con.close()
 
-    return {"asks": asks, "sellers": {k: len(v) for k, v in sellers.items()},
+    return {"asks": asks, "sellers": {k: len(v) for k, v in sellers.items()}, "listings": listings,
             "per_day": per_day, "per_item_day": per_item_day,
             "buyers_by_day": {k: sorted(v) for k, v in buyers_by_day.items()}}
 
@@ -813,10 +893,12 @@ def main():
 
     # --- Lands (banks, registry, events)
     try:
-        lands, nations, events, lands_names = lands_from_db(fetch_lands_db(f, profile))
+        lands_db = fetch_lands_db(f, profile)
+        lands, nations, events, lands_names = lands_from_db(lands_db)
+        chunk_index = chunk_index_from_db(lands_db)
     except (ftplib.error_perm, sqlite3.Error) as e:
         print("lands unavailable:", type(e).__name__, e)
-        lands, nations, events, lands_names = [], [], [], {}
+        lands, nations, events, lands_names, chunk_index = [], [], [], {}, {}
 
     # --- Gold in the world
     players = scan_players(f, profile, world_state)
@@ -894,6 +976,34 @@ def main():
                           "sellers": shop["sellers"].get(item, 0),
                           "series": series, "candles": candles[-30:],
                           "volume_24h_qty": vol_qty, "volume_24h_value": round(vol_val, 2)})
+    # --- Market directory: every active shop, grouped by what it sells, with
+    # who sells it and where. The tracked list above is the fungible basket
+    # with history; this is the whole board, for lookup.
+    market = []
+    if shop:
+        cap = max(supply["total"], 1000)
+        groups = {}
+        for L in shop["listings"]:
+            if L["price"] > cap or L["item"] in UNTRACKED:
+                continue
+            g = groups.setdefault(L["name"], {"name": L["name"], "id": L["item"], "asks": [], "bids": [],
+                                              "owners": set(), "listings": []})
+            (g["asks"] if L["type"] == "sell" else g["bids"]).append(L["price"])
+            g["owners"].add(L["owner"])
+            seller = (players.get(L["owner"]) or {}).get("name") or lands_names.get(L["owner"]) or "unknown"
+            g["listings"].append({"seller": seller, "price": L["price"], "type": L["type"],
+                                  "world": L["world"], "x": L["x"], "y": L["y"], "z": L["z"],
+                                  "land": chunk_index.get((L["world"], L["x"] >> 4, L["z"] >> 4))})
+        for g in groups.values():
+            a = g["asks"]
+            market.append({"name": g["name"], "id": g["id"],
+                           "price": round(statistics.median(a), 2) if a else None,
+                           "low": min(a) if a else None, "high": max(a) if a else None,
+                           "bid": max(g["bids"]) if g["bids"] else None,
+                           "shops": len(g["listings"]), "sellers": len(g["owners"]),
+                           "listings": sorted(g["listings"], key=lambda r: (r["type"] != "sell", r["price"]))})
+        market.sort(key=lambda m: (-m["shops"], m["name"]))
+
     # Price index: the tracked basket's mean price, base 100 on its first day.
     price_index = {"value": None, "series": [], "note": "Turns on once asking prices have a day of history."}
     if items:
@@ -948,6 +1058,7 @@ def main():
             "gini": gini(held_vals),
             "price_index": price_index,
             "items": items,
+            "market": market,
         },
         "wealth": {
             "top": sorted(({"name": k, "balance": v} for k, v in held.items()),

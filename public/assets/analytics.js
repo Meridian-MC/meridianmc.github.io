@@ -215,6 +215,120 @@
     draw();
   }
 
+  // ---- price board: every item with a shop, searchable, each row opening
+  // into who sells it and where ----
+  var BOARD_DEFAULT = 16;
+
+  function priceFmt(n) {
+    if (n == null) return "\u2013";
+    var v = Math.abs(n) < 1000 ? String(Math.round(n * 100) / 100) : Math.round(n).toLocaleString();
+    return v + " G";
+  }
+
+  function renderMarket(el, tracked, market) {
+    var byName = {};
+    tracked.forEach(function (x) { byName[x.name] = x; });
+    // Older feeds carry only the tracked basket; show that rather than nothing.
+    var rows = market.length ? market : tracked.map(function (x) {
+      return { name: x.name, price: x.price, low: null, shops: x.shops, sellers: x.sellers, listings: [] };
+    });
+    if (!rows.length) {
+      el.innerHTML = '<p class="c-empty">Item prices appear once players open chest shops.</p>';
+      return;
+    }
+    var state = { q: "", all: false, open: {} };
+
+    el.innerHTML =
+      '<div class="itools">' +
+        '<input class="ifind" type="search" autocomplete="off" spellcheck="false" placeholder="Find an item, a seller, or a land" aria-label="Find an item, a seller, or a land">' +
+        '<span class="icount" data-count></span>' +
+        '<button type="button" class="ishow" data-show></button>' +
+      "</div>" +
+      '<div class="itable-wrap"><table class="itable"><thead><tr>' +
+        '<th>Item</th><th style="text-align:right">Lowest</th><th style="text-align:right">Median</th>' +
+        '<th style="text-align:right">7d</th><th>30-day trend</th><th style="text-align:right">Shops</th>' +
+      "</tr></thead><tbody data-body></tbody></table></div>";
+
+    var body = el.querySelector("[data-body]");
+    var countEl = el.querySelector("[data-count]");
+    var showBtn = el.querySelector("[data-show]");
+    var input = el.querySelector(".ifind");
+
+    function haystack(r) {
+      return (r.name + " " + (r.listings || []).map(function (l) {
+        return (l.seller || "") + " " + (l.land || "");
+      }).join(" ")).toLowerCase();
+    }
+
+    function whereRow(r, i) {
+      var ls = r.listings || [];
+      if (!ls.length) return '<tr class="i-where" data-for="' + i + '"><td colspan="6"><span class="i-where-none">No shop details in this feed yet.</span></td></tr>';
+      return '<tr class="i-where" data-for="' + i + '"><td colspan="6"><ul class="i-where-list">' +
+        ls.map(function (l) {
+          var where = l.land ? esc(l.land) : "unclaimed land";
+          var coords = (l.x != null && l.z != null) ? ' <span class="i-coords">(' + intf(l.x) + ", " + intf(l.z) + ")</span>" : "";
+          var verb = l.type === "buy" ? "buys at" : "sells at";
+          return "<li><span class=\"i-seller\">" + esc(l.seller || "unknown") + "</span> " + verb +
+            ' <span class="i-lprice">' + priceFmt(l.price) + "</span> &middot; " + where + coords + "</li>";
+        }).join("") + "</ul></td></tr>";
+    }
+
+    function draw() {
+      var q = state.q.trim().toLowerCase();
+      var shown = rows.map(function (r, i) { return { r: r, i: i }; })
+        .filter(function (p) { return !q || haystack(p.r).indexOf(q) !== -1; });
+      var total = shown.length;
+      var clipped = !q && !state.all && shown.length > BOARD_DEFAULT;
+      if (clipped) shown = shown.slice(0, BOARD_DEFAULT);
+
+      body.innerHTML = shown.length ? shown.map(function (p) {
+        var r = p.r, t = byName[r.name];
+        var chg = t ? t.change_7d : null;
+        var dir = chg == null ? "none" : chg > 0.005 ? "up" : chg < -0.005 ? "down" : "flat";
+        var arrow = dir === "up" ? "\u25b2" : dir === "down" ? "\u25bc" : "\u00b7";
+        var isOpen = !!state.open[p.i];
+        var bidOnly = r.price == null && r.bid != null;
+        return '<tr class="i-row' + (isOpen ? " open" : "") + '" data-i="' + p.i + '" tabindex="0" role="button" aria-expanded="' + isOpen + '">' +
+          '<td class="i-name"><span class="i-caret" aria-hidden="true"></span>' + esc(r.name) +
+            (bidOnly ? '<span class="i-tag">wanted</span>' : "") + "</td>" +
+          '<td class="i-price">' + (bidOnly ? priceFmt(r.bid) : priceFmt(r.low != null ? r.low : r.price)) + "</td>" +
+          '<td class="i-price i-med">' + priceFmt(r.price) + "</td>" +
+          '<td class="i-chg ' + dir + '">' + (chg == null ? "\u00b7" : arrow + " " + Math.abs(chg * 100).toFixed(1) + "%") + "</td>" +
+          '<td class="i-spark ' + dir + '">' + (t && t.series && t.series.length > 1 ? sparkline(t.series) : "") + "</td>" +
+          '<td class="i-shops">' + intf(r.shops) + "</td></tr>" +
+          (isOpen ? whereRow(r, p.i) : "");
+      }).join("") : '<tr><td colspan="6" class="i-none">Nothing is being sold that matches \u201c' + esc(state.q.trim()) + "\u201d.</td></tr>";
+
+      countEl.textContent = q ? total + (total === 1 ? " match" : " matches")
+        : clipped ? shown.length + " of " + rows.length + " items" : rows.length + " items";
+      showBtn.hidden = !!q || rows.length <= BOARD_DEFAULT;
+      showBtn.textContent = state.all ? "Show fewer" : "Show all " + rows.length;
+    }
+
+    function toggle(tr) {
+      var i = tr.getAttribute("data-i");
+      if (state.open[i]) delete state.open[i]; else state.open[i] = true;
+      draw();
+      var again = body.querySelector('.i-row[data-i="' + i + '"]');
+      if (again) again.focus({ preventScroll: true });
+    }
+
+    body.addEventListener("click", function (ev) {
+      var tr = ev.target.closest(".i-row");
+      if (tr) toggle(tr);
+    });
+    body.addEventListener("keydown", function (ev) {
+      if (ev.key !== "Enter" && ev.key !== " ") return;
+      var tr = ev.target.closest(".i-row");
+      if (!tr) return;
+      ev.preventDefault();
+      toggle(tr);
+    });
+    input.addEventListener("input", function () { state.q = input.value; draw(); });
+    showBtn.addEventListener("click", function () { state.all = !state.all; draw(); });
+    draw();
+  }
+
   // ---- volume leaders ----
   function renderVolume(el, items) {
     if (!el) return;
@@ -378,25 +492,7 @@
         "No gold has changed hands yet.");
 
       var it = root.querySelector("[data-slot=item-table]");
-      if (it) {
-        var items = e.items || [];
-        if (!items.length) {
-          it.innerHTML = '<p class="c-empty">Item prices appear once chest-shop sales are being logged.</p>';
-        } else {
-          it.innerHTML = '<div class="itable-wrap"><table class="itable"><thead><tr>' +
-            '<th>Item</th><th style="text-align:right">Median price</th><th style="text-align:right">7d</th><th>30-day trend</th><th style="text-align:right">Shops</th>' +
-            "</tr></thead><tbody>" +
-            items.map(function (x) {
-              var dir = x.change_7d > 0.005 ? "up" : x.change_7d < -0.005 ? "down" : "flat";
-              var arrow = dir === "up" ? "▲" : dir === "down" ? "▼" : "·";
-              return "<tr><td class=\"i-name\">" + esc(x.name) + '<span class="i-unit">/ ' + esc(x.unit) + "</span></td>" +
-                '<td class="i-price">' + money(x.price) + "</td>" +
-                '<td class="i-chg ' + dir + '">' + arrow + " " + Math.abs(x.change_7d * 100).toFixed(1) + "%</td>" +
-                '<td class="i-spark ' + dir + '">' + sparkline(x.series) + "</td>" +
-                '<td class="i-shops">' + intf(x.shops) + "</td></tr>";
-            }).join("") + "</tbody></table></div>";
-        }
-      }
+      if (it) renderMarket(it, e.items || [], e.market || []);
 
       var wt = root.querySelector("[data-slot=wealth-table]");
       if (wt) {

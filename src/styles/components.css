@@ -1157,6 +1157,62 @@ main {
 .itable .i-spark.up path { stroke: #57b98a; }
 .itable .i-spark.down path { stroke: #d3675c; }
 .itable .i-shops { text-align: right; color: var(--text-3); font-size: 0.8rem; font-family: var(--mono); }
+.itable .i-med { color: var(--text-2); }
+.itable .i-none { color: var(--text-3); text-align: center; padding: 22px 14px; white-space: normal; }
+
+/* the board's toolbar: a find box, the count, and the show-all toggle */
+.itools { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; margin: 14px 0 -4px; }
+.ifind {
+  flex: 1 1 220px; min-width: 0;
+  background: var(--bg-1); border: 1px solid var(--border); border-radius: 0;
+  color: var(--text); font-family: var(--font); font-size: 0.9rem; padding: 8px 11px; outline: none;
+  transition: border-color 0.15s var(--ease);
+}
+.ifind::placeholder { color: var(--text-3); }
+.ifind:focus { border-color: var(--p-tne); }
+.ifind::-webkit-search-cancel-button { -webkit-appearance: none; }
+.icount { font-family: var(--mono); font-size: 0.72rem; color: var(--text-3); white-space: nowrap; }
+.ishow {
+  font-family: var(--font); font-size: 0.76rem; color: var(--text-2); background: var(--bg-2);
+  border: 1px solid var(--border); border-radius: 0; padding: 6px 11px; cursor: pointer; white-space: nowrap;
+  transition: color 0.15s var(--ease), border-color 0.15s var(--ease);
+}
+.ishow:hover { color: var(--text); border-color: var(--border-2); }
+.ishow[hidden] { display: none; }
+
+/* each row opens into the shops that sell the item */
+.itable .i-row { cursor: pointer; }
+.itable .i-row:hover td, .itable .i-row:focus-visible td { background: color-mix(in srgb, var(--text) 3%, transparent); }
+.itable .i-row:focus-visible { outline: none; }
+.itable .i-row:focus-visible .i-name { text-decoration: underline; text-underline-offset: 3px; }
+.itable .i-row .i-name { position: relative; padding-left: 30px; }
+.itable .i-caret {
+  position: absolute; left: 14px; top: calc(50% - 4px); width: 0; height: 0;
+  border-left: 5px solid var(--text-3); border-top: 4px solid transparent; border-bottom: 4px solid transparent;
+  transition: transform 0.15s var(--ease);
+}
+.itable .i-row.open .i-caret { transform: rotate(90deg); }
+.itable .i-row.open td { border-bottom-color: transparent; }
+.itable .i-tag {
+  margin-left: 8px; font-family: var(--mono); font-size: 0.64rem; font-weight: 500; letter-spacing: 0.04em; text-transform: uppercase;
+  color: var(--text-3); border: 1px solid var(--border-2); padding: 1px 5px; vertical-align: 1px;
+}
+.itable .i-where td { padding: 0 14px 12px 37px; white-space: normal; background: color-mix(in srgb, var(--text) 3%, transparent); }
+.i-where-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 5px; font-size: 0.84rem; color: var(--text-2); }
+.i-where-list .i-seller { color: var(--text); font-weight: 600; }
+.i-where-list .i-lprice { font-family: var(--mono); font-variant-numeric: tabular-nums; color: var(--text); }
+.i-where-list .i-coords { font-family: var(--mono); font-size: 0.76rem; color: var(--text-3); }
+.i-where-none { font-size: 0.82rem; color: var(--text-3); }
+/* On a phone the board keeps the columns a buyer needs (item, price, shops)
+   and lets the name wrap, so the whole row and its shops fit the screen. */
+@media (max-width: 640px) {
+  .itable th:nth-child(4), .itable th:nth-child(5), .itable .i-chg, .itable .i-spark { display: none; }
+  .itable th, .itable td { padding: 10px 10px; }
+  .itable .i-name { white-space: normal; }
+  .itable .i-row .i-name { padding-left: 24px; }
+  .itable .i-caret { left: 10px; }
+  .itable .i-where td { padding-left: 12px; }
+}
 
 /* player avatars in tables */
 .p-cell { display: flex; align-items: center; gap: 9px; }
