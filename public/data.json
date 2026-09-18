@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-18T08:32:01Z",
+  "generated": "2026-09-18T08:53:43Z",
   "meta": {
     "players_tracked": 68,
     "active_traders": 10,
@@ -1441,6 +1441,28 @@
         ]
       },
       {
+        "name": "Spruce Sapling",
+        "id": "minecraft:spruce_sapling",
+        "price": 15.0,
+        "low": 15.0,
+        "high": 15.0,
+        "bid": null,
+        "shops": 1,
+        "sellers": 1,
+        "listings": [
+          {
+            "seller": "DatAriix",
+            "price": 15.0,
+            "type": "sell",
+            "world": "world",
+            "x": -234,
+            "y": 67,
+            "z": 3438,
+            "land": "Reach"
+          }
+        ]
+      },
+      {
         "name": "Totem Of Undying",
         "id": "minecraft:totem_of_undying",
         "price": 200.0,
@@ -1531,7 +1553,7 @@
     "mean": 17.07
   },
   "server": {
-    "checked": "2026-09-18T08:32:01Z",
+    "checked": "2026-09-18T08:53:43Z",
     "started_at": "2026-09-18T01:36:52Z",
     "tps": 20.0
   },
