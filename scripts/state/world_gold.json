@@ -17,15 +17,15 @@
   "minecraft/overworld/entities/r.-1.-2.mca": {
    "gold": 0,
    "holders": 0,
-   "mtime": "20260918142526",
-   "scanned_at": "2026-09-18T14:30:16Z",
+   "mtime": "20260918144520",
+   "scanned_at": "2026-09-18T14:46:28Z",
    "size": 978944
   },
   "minecraft/overworld/entities/r.-1.-3.mca": {
    "gold": 0,
    "holders": 0,
-   "mtime": "20260918143011",
-   "scanned_at": "2026-09-18T14:30:12Z",
+   "mtime": "20260918144520",
+   "scanned_at": "2026-09-18T14:46:29Z",
    "size": 1077248
   },
   "minecraft/overworld/entities/r.-1.-4.mca": {
@@ -3419,15 +3419,15 @@
   "minecraft/overworld/region/r.-1.-2.mca": {
    "gold": 34,
    "holders": 1,
-   "mtime": "20260918142526",
-   "scanned_at": "2026-09-18T14:30:15Z",
+   "mtime": "20260918143026",
+   "scanned_at": "2026-09-18T14:46:30Z",
    "size": 8814592
   },
   "minecraft/overworld/region/r.-1.-3.mca": {
-   "gold": 798,
-   "holders": 16,
-   "mtime": "20260918142724",
-   "scanned_at": "2026-09-18T14:30:14Z",
+   "gold": 1381,
+   "holders": 10,
+   "mtime": "20260918144520",
+   "scanned_at": "2026-09-18T14:46:28Z",
    "size": 8654848
   },
   "minecraft/overworld/region/r.-1.-4.mca": {
@@ -7476,7 +7476,7 @@
   },
   "45f757ec-0150-4020-ba88-f4698107a4a5": {
    "ender": 1526,
-   "mtime": "20260918142719",
+   "mtime": "20260918144219",
    "name": "Keanie__",
    "on_hand": 8
   },
