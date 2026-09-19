@@ -27,7 +27,7 @@ const rottenFlesh = { icon: "rotten_flesh", label: "Rotten Flesh" };
 const cryingObsidian = { icon: "crying_obsidian", label: "Crying Obsidian" };
 const awkwardPotion = { icon: "awkward_potion", label: "Awkward Potion" };
 const paleOakLog = { icon: "pale_oak_log", label: "Pale Oak Log" };
-const enderEye = { icon: "ender_eye", label: "Eye of Ender" };
+const redstoneBlock = { icon: "redstone_block", label: "Redstone Block" };
 const empty = null;
 
 type Cell = { icon: string; label: string } | null;
@@ -106,9 +106,9 @@ const recipes: Recipe[] = [
   },
   {
     title: "Creaking Heart",
-    note: "8 Pale Oak Logs surrounding 1 Eye of Ender. Place it between two Pale Oak Logs, top and bottom, and a Creaking spawns at night; hitting it grows Resin Clumps on the logs. Pale oak grows from saplings out of the Pale Garden.",
+    note: "8 Pale Oak Logs surrounding 1 Redstone Block. Place it between two Pale Oak Logs, top and bottom, and a Creaking spawns at night; hitting it grows Resin Clumps on the logs. Pale oak grows from saplings out of the Pale Garden.",
     station: "crafting",
-    cells: [paleOakLog, paleOakLog, paleOakLog, paleOakLog, enderEye, paleOakLog, paleOakLog, paleOakLog, paleOakLog],
+    cells: [paleOakLog, paleOakLog, paleOakLog, paleOakLog, redstoneBlock, paleOakLog, paleOakLog, paleOakLog, paleOakLog],
     result: { icon: "creaking_heart", label: "Creaking Heart" }, amount: 1,
   },
   {
