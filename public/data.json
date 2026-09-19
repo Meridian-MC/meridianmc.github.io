@@ -1,8 +1,8 @@
 {
-  "generated": "2026-09-19T18:33:28Z",
+  "generated": "2026-09-19T18:54:21Z",
   "meta": {
     "players_tracked": 71,
-    "active_traders": 9,
+    "active_traders": 10,
     "data_days": 7,
     "sufficient": false,
     "demo": false,
@@ -23,15 +23,15 @@
     "classification": {
       "code": "INSUFFICIENT_DATA",
       "label": "Insufficient data",
-      "note": "Gold launched 2026-09-12. Needs 8+ active traders and 14+ days of history; currently 9 traders / 7 days."
+      "note": "Gold launched 2026-09-12. Needs 8+ active traders and 14+ days of history; currently 10 traders / 7 days."
     },
     "supply": {
-      "total": 12345.84,
-      "on_hand": 342,
-      "ender_chests": 2938,
-      "containers": 4702,
+      "total": 12488.84,
+      "on_hand": 301,
+      "ender_chests": 2867,
+      "containers": 4753,
       "loose": 17,
-      "land_banks": 4346.84,
+      "land_banks": 4550.84,
       "coverage": {
         "files": 1052,
         "fresh": 1052,
@@ -40,7 +40,7 @@
         "percent": 100.0
       }
     },
-    "money_supply_players": 12345.84,
+    "money_supply_players": 12488.84,
     "money_supply_series": [
       [
         "2026-09-15",
@@ -60,7 +60,7 @@
       ],
       [
         "2026-09-19",
-        12345.84
+        12488.84
       ]
     ],
     "flow": {
@@ -102,13 +102,13 @@
         ],
         [
           "2026-09-19",
-          2039.0,
-          1010.0
+          2343.0,
+          1110.0
         ]
       ],
-      "spent_7d": 8310.0,
-      "received_7d": 4040.0,
-      "transactions": 128
+      "spent_7d": 8614.0,
+      "received_7d": 4140.0,
+      "transactions": 132
     },
     "trade_volume_series": [
       [
@@ -122,7 +122,7 @@
     ],
     "trade_volume_7d": 265.0,
     "chest_shop_transactions": 1,
-    "gini": 0.967,
+    "gini": 0.969,
     "price_index": {
       "value": 51.9,
       "series": [
@@ -1555,7 +1555,7 @@
     "top": [
       {
         "name": "Keanie__",
-        "balance": 2457
+        "balance": 2382
       },
       {
         "name": "JxrdanUK",
@@ -1570,16 +1570,12 @@
         "balance": 81
       },
       {
-        "name": "Giggsy__",
-        "balance": 71
+        "name": "ObscureMemory",
+        "balance": 64
       },
       {
         "name": "Luko_Landino",
         "balance": 41
-      },
-      {
-        "name": "ObscureMemory",
-        "balance": 32
       },
       {
         "name": "Croissantasaur",
@@ -1594,8 +1590,8 @@
         "balance": 13
       },
       {
-        "name": "Atilius_Corvinus",
-        "balance": 8
+        "name": "Giggsy__",
+        "balance": 10
       },
       {
         "name": "BabieDolphin",
@@ -1612,13 +1608,17 @@
       {
         "name": "spiderjake5000",
         "balance": 0
+      },
+      {
+        "name": "X_Professor_YT",
+        "balance": 0
       }
     ],
     "median": 0,
-    "mean": 46.2
+    "mean": 44.62
   },
   "server": {
-    "checked": "2026-09-19T18:33:28Z",
+    "checked": "2026-09-19T18:54:21Z",
     "started_at": "2026-09-19T12:12:17Z",
     "tps": 20.0
   },
@@ -1642,14 +1642,14 @@
       "tag": null,
       "color": null,
       "lands": 1,
-      "mdi": 0.65,
+      "mdi": 0.674,
       "territory": 1.0,
       "population": 0.867,
-      "wealth": 0.206,
+      "wealth": 0.238,
       "activity": 1.0,
       "chunks": 79,
       "members": 13,
-      "treasury": 206.0
+      "treasury": 238.0
     }
   ],
   "lands": [
@@ -1658,7 +1658,7 @@
       "type": "land",
       "chunks": 88,
       "members": 15,
-      "bank": 220.0,
+      "bank": 492.0,
       "level": 1,
       "color": "#667CEE"
     },
@@ -1667,7 +1667,7 @@
       "type": "land",
       "chunks": 79,
       "members": 13,
-      "bank": 206.0,
+      "bank": 238.0,
       "level": 1,
       "color": "#DF6EA4"
     },
@@ -1721,7 +1721,7 @@
       "type": "land",
       "chunks": 9,
       "members": 8,
-      "bank": 290.05,
+      "bank": 190.05,
       "level": 1,
       "color": "#B6B06C"
     },
@@ -1774,7 +1774,7 @@
       "name": "coolland!!!",
       "type": "land",
       "chunks": 3,
-      "members": 3,
+      "members": 4,
       "bank": 0.0,
       "level": 0,
       "color": "#CF928D"
