@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-19T00:44:12Z",
+  "generated": "2026-09-19T00:57:25Z",
   "meta": {
     "players_tracked": 69,
     "active_traders": 9,
@@ -26,12 +26,12 @@
       "note": "Gold launched 2026-09-12. Needs 8+ active traders and 14+ days of history; currently 9 traders / 7 days."
     },
     "supply": {
-      "total": 12561.35,
+      "total": 12534.71,
       "on_hand": 263,
       "ender_chests": 2938,
       "containers": 4631,
       "loose": 17,
-      "land_banks": 4712.35,
+      "land_banks": 4685.71,
       "coverage": {
         "files": 1052,
         "fresh": 1052,
@@ -40,7 +40,7 @@
         "percent": 100.0
       }
     },
-    "money_supply_players": 12561.35,
+    "money_supply_players": 12534.71,
     "money_supply_series": [
       [
         "2026-09-15",
@@ -60,7 +60,7 @@
       ],
       [
         "2026-09-19",
-        12561.35
+        12534.71
       ]
     ],
     "flow": {
@@ -1636,7 +1636,7 @@
     "mean": 46.39
   },
   "server": {
-    "checked": "2026-09-19T00:44:13Z",
+    "checked": "2026-09-19T00:57:26Z",
     "started_at": "2026-09-18T15:27:58Z",
     "tps": 20.0
   },
@@ -1719,9 +1719,9 @@
     {
       "name": "Reach",
       "type": "land",
-      "chunks": 14,
+      "chunks": 15,
       "members": 9,
-      "bank": 1611.1,
+      "bank": 1584.46,
       "level": 2,
       "color": "#66979D"
     },
