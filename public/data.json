@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-19T22:12:47Z",
+  "generated": "2026-09-19T22:27:26Z",
   "meta": {
     "players_tracked": 72,
     "active_traders": 12,
@@ -27,9 +27,9 @@
     },
     "supply": {
       "total": 285762.05,
-      "on_hand": 40004,
+      "on_hand": 40008,
       "ender_chests": 49532,
-      "containers": 191555,
+      "containers": 191551,
       "loose": 17,
       "land_banks": 4654.05,
       "coverage": {
@@ -1642,6 +1642,10 @@
         "balance": 10
       },
       {
+        "name": "Atilius_Corvinus",
+        "balance": 4
+      },
+      {
         "name": "BabieDolphin",
         "balance": 2
       },
@@ -1652,18 +1656,14 @@
       {
         "name": "winterrrly",
         "balance": 0
-      },
-      {
-        "name": "spiderjake5000",
-        "balance": 0
       }
     ],
     "median": 0.0,
-    "mean": 1243.56
+    "mean": 1243.61
   },
   "server": {
-    "checked": "2026-09-19T22:12:48Z",
-    "started_at": "2026-09-19T12:12:18Z",
+    "checked": "2026-09-19T22:27:26Z",
+    "started_at": "2026-09-19T12:12:17Z",
     "tps": 20.0
   },
   "nations": [
