@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-19T19:25:37Z",
+  "generated": "2026-09-19T19:39:48Z",
   "meta": {
     "players_tracked": 71,
     "active_traders": 10,
@@ -26,21 +26,21 @@
       "note": "Gold launched 2026-09-12. Needs 8+ active traders and 14+ days of history; currently 10 traders / 7 days."
     },
     "supply": {
-      "total": 12496.05,
-      "on_hand": 227,
+      "total": 12498.05,
+      "on_hand": 229,
       "ender_chests": 2876,
       "containers": 4677,
       "loose": 17,
       "land_banks": 4699.05,
       "coverage": {
         "files": 1052,
-        "fresh": 999,
-        "stale": 53,
+        "fresh": 1015,
+        "stale": 37,
         "unscanned": 0,
         "percent": 100.0
       }
     },
-    "money_supply_players": 12496.05,
+    "money_supply_players": 12498.05,
     "money_supply_series": [
       [
         "2026-09-15",
@@ -60,7 +60,7 @@
       ],
       [
         "2026-09-19",
-        12496.05
+        12498.05
       ]
     ],
     "flow": {
@@ -1587,7 +1587,7 @@
       },
       {
         "name": "Giggsy__",
-        "balance": 10
+        "balance": 12
       },
       {
         "name": "BabieDolphin",
@@ -1615,12 +1615,12 @@
       }
     ],
     "median": 0,
-    "mean": 43.7
+    "mean": 43.73
   },
   "server": {
-    "checked": "2026-09-19T19:25:37Z",
-    "started_at": "2026-09-19T12:12:17Z",
-    "tps": 19.75
+    "checked": "2026-09-19T19:39:49Z",
+    "started_at": "2026-09-19T12:12:18Z",
+    "tps": 20.0
   },
   "nations": [
     {
