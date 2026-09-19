@@ -70,25 +70,23 @@ export const FAQ: FaqEntry[] = [
   {
     category: "world",
     question: "How do I get Mending?",
-    answer: `<p><span class="short">Fishing.</span> With villager trading off, Mending comes from fishing, loot chests and player shops. Two things stack on every cast:</p>
-<ul>
-<li><strong>Vanilla treasure</strong> is unchanged: enchanted books (Mending included) are in the normal treasure pool, and Luck of the Sea raises it.</li>
-<li><strong>mcMMO Treasure Hunter</strong> adds a second roll on top. It scales with your Fishing level; each treasure it gives has a chance to carry a Legendary-tier enchantment, and Mending is in that tier. As of 17 Sept these Legendary chances were raised by 50%.</li>
-</ul>
+    answer: `<p><span class="short">Fishing.</span> With villager trading off, Mending comes from fishing, loot chests and player shops. Vanilla fishing treasure is on (restored 19 Sept): about 5% of casts are treasure, 11% with Luck of the Sea III, and a treasure is equally likely to be an enchanted book, an enchanted bow, an enchanted fishing rod, a name tag, a nautilus shell or a saddle.</p>
+<p>Mending is one of the enchantments those books, bows and rods can roll. It is far more likely on a rod or bow than on a book, because they have fewer possible enchantments to compete with. Counting all three, expect roughly one Mending item per few hundred casts with Luck of the Sea III, about twice as long without it. A fished rod or bow with Mending counts: pull the enchantment off with a Disenchanting Brick and you have a Mending book.</p>
+<p><strong>mcMMO Treasure Hunter</strong> rolls on top of that as your Fishing level grows. Its treasures only carry enchantments once you have Magic Hunter (Fishing 200), and Mending sits in its Legendary and Mythic tiers, which are rare until high ranks. Treat it as a late-game bonus, not the main route.</p>
 <div class="tier-wrap"><table class="tier-table">
-<thead><tr><th>Treasure Hunter rank</th><th>Fishing level</th><th>Treasure per cast</th><th>Legendary enchant on a treasure</th></tr></thead>
+<thead><tr><th>Treasure Hunter rank</th><th>Fishing level</th><th>Legendary treasure per cast</th><th>Chance it is enchanted</th></tr></thead>
 <tbody>
-<tr><td>1</td><td>1</td><td>9%</td><td>0.08%</td></tr>
-<tr><td>2</td><td>25</td><td>10%</td><td>0.08%</td></tr>
-<tr><td>3</td><td>35</td><td>9%</td><td>0.15%</td></tr>
-<tr><td>4</td><td>50</td><td>10%</td><td>0.38%</td></tr>
-<tr><td>5</td><td>65</td><td>11%</td><td>0.75%</td></tr>
-<tr><td>6</td><td>75</td><td>12%</td><td>1.5%</td></tr>
-<tr><td>7</td><td>85</td><td>15%</td><td>2.25%</td></tr>
-<tr><td>8</td><td>100</td><td>20%</td><td>3%</td></tr>
+<tr><td>1</td><td>1</td><td>0.01%</td><td>0.08% (needs Fishing 200)</td></tr>
+<tr><td>2</td><td>250</td><td>0.05%</td><td>0.08%</td></tr>
+<tr><td>3</td><td>350</td><td>0.1%</td><td>0.15%</td></tr>
+<tr><td>4</td><td>500</td><td>1%</td><td>0.38%</td></tr>
+<tr><td>5</td><td>650</td><td>1%</td><td>0.75%</td></tr>
+<tr><td>6</td><td>750</td><td>1.5%</td><td>1.5%</td></tr>
+<tr><td>7</td><td>850</td><td>2.5%</td><td>2.25%</td></tr>
+<tr><td>8</td><td>1000</td><td>5%</td><td>3%</td></tr>
 </tbody>
 </table></div>
-<p>A fished item that has Mending on it counts too: pull the enchantment off with a Disenchanting Brick and you have a Mending book. Check <code>/fishing</code> for your rank.</p>`,
+<p>Check <code>/fishing</code> for your rank.</p>`,
   },
   {
     category: "starting",
