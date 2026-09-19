@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-19T02:43:47Z",
+  "generated": "2026-09-19T02:55:32Z",
   "meta": {
     "players_tracked": 69,
     "active_traders": 9,
@@ -26,10 +26,10 @@
       "note": "Gold launched 2026-09-12. Needs 8+ active traders and 14+ days of history; currently 9 traders / 7 days."
     },
     "supply": {
-      "total": 12580.04,
+      "total": 12643.04,
       "on_hand": 263,
       "ender_chests": 2938,
-      "containers": 4574,
+      "containers": 4637,
       "loose": 17,
       "land_banks": 4788.04,
       "coverage": {
@@ -40,7 +40,7 @@
         "percent": 100.0
       }
     },
-    "money_supply_players": 12580.04,
+    "money_supply_players": 12643.04,
     "money_supply_series": [
       [
         "2026-09-15",
@@ -60,7 +60,7 @@
       ],
       [
         "2026-09-19",
-        12580.04
+        12643.04
       ]
     ],
     "flow": {
@@ -1524,28 +1524,6 @@
         ]
       },
       {
-        "name": "Spruce Sapling",
-        "id": "minecraft:spruce_sapling",
-        "price": 15.0,
-        "low": 15.0,
-        "high": 15.0,
-        "bid": null,
-        "shops": 1,
-        "sellers": 1,
-        "listings": [
-          {
-            "seller": "DatAriix",
-            "price": 15.0,
-            "type": "sell",
-            "world": "world",
-            "x": -234,
-            "y": 67,
-            "z": 3438,
-            "land": "Reach"
-          }
-        ]
-      },
-      {
         "name": "Totem Of Undying",
         "id": "minecraft:totem_of_undying",
         "price": 200.0,
@@ -1636,7 +1614,7 @@
     "mean": 46.39
   },
   "server": {
-    "checked": "2026-09-19T02:43:47Z",
+    "checked": "2026-09-19T02:55:32Z",
     "started_at": "2026-09-18T15:27:58Z",
     "tps": 20.0
   },
