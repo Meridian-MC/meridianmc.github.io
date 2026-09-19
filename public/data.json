@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-19T23:26:06Z",
+  "generated": "2026-09-19T23:39:52Z",
   "meta": {
     "players_tracked": 72,
     "active_traders": 12,
@@ -26,12 +26,12 @@
       "note": "Gold launched 2026-09-12. Needs 8+ active traders and 14+ days of history; currently 12 traders / 7 days."
     },
     "supply": {
-      "total": 28172.05,
-      "on_hand": 15779,
+      "total": 12899.05,
+      "on_hand": 661,
       "ender_chests": 2876,
       "containers": 5088,
       "loose": 17,
-      "land_banks": 4412.05,
+      "land_banks": 4257.05,
       "coverage": {
         "files": 1052,
         "fresh": 1052,
@@ -40,7 +40,7 @@
         "percent": 100.0
       }
     },
-    "money_supply_players": 28172.05,
+    "money_supply_players": 12899.05,
     "money_supply_series": [
       [
         "2026-09-15",
@@ -60,7 +60,7 @@
       ],
       [
         "2026-09-19",
-        28172.05
+        12899.05
       ]
     ],
     "flow": {
@@ -102,13 +102,13 @@
         ],
         [
           "2026-09-19",
-          4580.0,
-          3211.0
+          4708.0,
+          3581.0
         ]
       ],
-      "spent_7d": 10851.0,
-      "received_7d": 6241.0,
-      "transactions": 141
+      "spent_7d": 10979.0,
+      "received_7d": 6611.0,
+      "transactions": 143
     },
     "trade_volume_series": [
       [
@@ -122,7 +122,7 @@
     ],
     "trade_volume_7d": 265.0,
     "chest_shop_transactions": 1,
-    "gini": 0.979,
+    "gini": 0.962,
     "price_index": {
       "value": 51.9,
       "series": [
@@ -1598,10 +1598,6 @@
   "wealth": {
     "top": [
       {
-        "name": "Mingasty",
-        "balance": 15552
-      },
-      {
         "name": "Keanie__",
         "balance": 2381
       },
@@ -1610,12 +1606,20 @@
         "balance": 385
       },
       {
+        "name": "Augustine65480",
+        "balance": 370
+      },
+      {
         "name": "1RTR",
         "balance": 137
       },
       {
         "name": "SLEN3ER",
         "balance": 81
+      },
+      {
+        "name": "WhenAtRome",
+        "balance": 64
       },
       {
         "name": "Luko_Landino",
@@ -1652,17 +1656,13 @@
       {
         "name": "spiderjake5000",
         "balance": 0
-      },
-      {
-        "name": "X_Professor_YT",
-        "balance": 0
       }
     ],
     "median": 0.0,
-    "mean": 259.1
+    "mean": 49.12
   },
   "server": {
-    "checked": "2026-09-19T23:26:06Z",
+    "checked": "2026-09-19T23:39:52Z",
     "started_at": "2026-09-19T12:12:17Z",
     "tps": 20.0
   },
@@ -1689,11 +1689,11 @@
       "mdi": 0.959,
       "territory": 1.0,
       "population": 1.0,
-      "wealth": 0.846,
+      "wealth": 0.845,
       "activity": 1.0,
       "chunks": 171,
       "members": 34,
-      "treasury": 846.0
+      "treasury": 845.0
     }
   ],
   "lands": [
@@ -1711,7 +1711,7 @@
       "type": "land",
       "chunks": 79,
       "members": 13,
-      "bank": 302.0,
+      "bank": 301.0,
       "level": 1,
       "color": "#DF6EA4"
     },
@@ -1729,7 +1729,7 @@
       "type": "land",
       "chunks": 27,
       "members": 3,
-      "bank": 154.0,
+      "bank": 0.0,
       "level": 0,
       "color": "#E967D5"
     },
