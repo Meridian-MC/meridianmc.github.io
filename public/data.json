@@ -1,7 +1,7 @@
 {
-  "generated": "2026-09-19T17:38:28Z",
+  "generated": "2026-09-19T17:52:22Z",
   "meta": {
-    "players_tracked": 69,
+    "players_tracked": 70,
     "active_traders": 9,
     "data_days": 7,
     "sufficient": false,
@@ -26,8 +26,8 @@
       "note": "Gold launched 2026-09-12. Needs 8+ active traders and 14+ days of history; currently 9 traders / 7 days."
     },
     "supply": {
-      "total": 13458.84,
-      "on_hand": 302,
+      "total": 13490.84,
+      "on_hand": 334,
       "ender_chests": 2938,
       "containers": 4684,
       "loose": 17,
@@ -40,7 +40,7 @@
         "percent": 100.0
       }
     },
-    "money_supply_players": 13458.84,
+    "money_supply_players": 13490.84,
     "money_supply_series": [
       [
         "2026-09-15",
@@ -60,7 +60,7 @@
       ],
       [
         "2026-09-19",
-        13458.84
+        13490.84
       ]
     ],
     "flow": {
@@ -118,7 +118,7 @@
     ],
     "trade_volume_7d": 235.0,
     "chest_shop_transactions": 1,
-    "gini": 0.969,
+    "gini": 0.967,
     "price_index": {
       "value": 51.9,
       "series": [
@@ -1578,6 +1578,10 @@
         "balance": 32
       },
       {
+        "name": "ObscureMemory",
+        "balance": 32
+      },
+      {
         "name": "ske9z",
         "balance": 19
       },
@@ -1604,18 +1608,14 @@
       {
         "name": "X_Professor_YT",
         "balance": 0
-      },
-      {
-        "name": "Augustine65480",
-        "balance": 0
       }
     ],
-    "median": 0,
-    "mean": 46.96
+    "median": 0.0,
+    "mean": 46.74
   },
   "server": {
-    "checked": "2026-09-19T17:38:28Z",
-    "started_at": "2026-09-19T12:12:17Z",
+    "checked": "2026-09-19T17:52:23Z",
+    "started_at": "2026-09-19T12:12:18Z",
     "tps": 20.0
   },
   "nations": [
