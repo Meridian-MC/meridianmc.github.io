@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-19T18:54:21Z",
+  "generated": "2026-09-19T19:12:23Z",
   "meta": {
     "players_tracked": 71,
     "active_traders": 10,
@@ -26,12 +26,12 @@
       "note": "Gold launched 2026-09-12. Needs 8+ active traders and 14+ days of history; currently 10 traders / 7 days."
     },
     "supply": {
-      "total": 12488.84,
-      "on_hand": 301,
-      "ender_chests": 2867,
-      "containers": 4753,
+      "total": 12493.05,
+      "on_hand": 227,
+      "ender_chests": 2876,
+      "containers": 4687,
       "loose": 17,
-      "land_banks": 4550.84,
+      "land_banks": 4686.05,
       "coverage": {
         "files": 1052,
         "fresh": 1052,
@@ -40,7 +40,7 @@
         "percent": 100.0
       }
     },
-    "money_supply_players": 12488.84,
+    "money_supply_players": 12493.05,
     "money_supply_series": [
       [
         "2026-09-15",
@@ -60,7 +60,7 @@
       ],
       [
         "2026-09-19",
-        12488.84
+        12493.05
       ]
     ],
     "flow": {
@@ -102,13 +102,13 @@
         ],
         [
           "2026-09-19",
-          2343.0,
-          1110.0
+          4308.0,
+          3011.0
         ]
       ],
-      "spent_7d": 8614.0,
-      "received_7d": 4140.0,
-      "transactions": 132
+      "spent_7d": 10579.0,
+      "received_7d": 6041.0,
+      "transactions": 135
     },
     "trade_volume_series": [
       [
@@ -122,7 +122,7 @@
     ],
     "trade_volume_7d": 265.0,
     "chest_shop_transactions": 1,
-    "gini": 0.969,
+    "gini": 0.972,
     "price_index": {
       "value": 51.9,
       "series": [
@@ -1115,13 +1115,13 @@
         "price": null,
         "low": null,
         "high": null,
-        "bid": 500.0,
+        "bid": 700.0,
         "shops": 1,
         "sellers": 1,
         "listings": [
           {
             "seller": "WhenAtRome",
-            "price": 500.0,
+            "price": 700.0,
             "type": "buy",
             "world": "world",
             "x": -231,
@@ -1310,16 +1310,16 @@
       {
         "name": "Heavy Core",
         "id": "minecraft:heavy_core",
-        "price": 700.0,
-        "low": 700.0,
-        "high": 700.0,
+        "price": 500.0,
+        "low": 500.0,
+        "high": 500.0,
         "bid": null,
         "shops": 1,
         "sellers": 1,
         "listings": [
           {
             "seller": "WhenAtRome",
-            "price": 700.0,
+            "price": 500.0,
             "type": "sell",
             "world": "world",
             "x": -234,
@@ -1555,7 +1555,7 @@
     "top": [
       {
         "name": "Keanie__",
-        "balance": 2382
+        "balance": 2381
       },
       {
         "name": "JxrdanUK",
@@ -1568,10 +1568,6 @@
       {
         "name": "SLEN3ER",
         "balance": 81
-      },
-      {
-        "name": "ObscureMemory",
-        "balance": 64
       },
       {
         "name": "Luko_Landino",
@@ -1612,14 +1608,18 @@
       {
         "name": "X_Professor_YT",
         "balance": 0
+      },
+      {
+        "name": "Augustine65480",
+        "balance": 0
       }
     ],
     "median": 0,
-    "mean": 44.62
+    "mean": 43.7
   },
   "server": {
-    "checked": "2026-09-19T18:54:21Z",
-    "started_at": "2026-09-19T12:12:17Z",
+    "checked": "2026-09-19T19:12:24Z",
+    "started_at": "2026-09-19T12:12:18Z",
     "tps": 20.0
   },
   "nations": [
@@ -1641,15 +1641,15 @@
       "name": "Thalassos",
       "tag": null,
       "color": null,
-      "lands": 1,
-      "mdi": 0.674,
+      "lands": 3,
+      "mdi": 0.959,
       "territory": 1.0,
-      "population": 0.867,
-      "wealth": 0.238,
+      "population": 1.0,
+      "wealth": 0.846,
       "activity": 1.0,
-      "chunks": 79,
-      "members": 13,
-      "treasury": 238.0
+      "chunks": 171,
+      "members": 34,
+      "treasury": 846.0
     }
   ],
   "lands": [
@@ -1667,7 +1667,7 @@
       "type": "land",
       "chunks": 79,
       "members": 13,
-      "bank": 238.0,
+      "bank": 302.0,
       "level": 1,
       "color": "#DF6EA4"
     },
@@ -1703,7 +1703,7 @@
       "type": "land",
       "chunks": 19,
       "members": 9,
-      "bank": 1901.79,
+      "bank": 1973.0,
       "level": 2,
       "color": "#66979D"
     },
