@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-19T14:41:31Z",
+  "generated": "2026-09-19T14:53:14Z",
   "meta": {
     "players_tracked": 69,
     "active_traders": 9,
@@ -26,12 +26,12 @@
       "note": "Gold launched 2026-09-12. Needs 8+ active traders and 14+ days of history; currently 9 traders / 7 days."
     },
     "supply": {
-      "total": 13442.84,
+      "total": 12872.84,
       "on_hand": 302,
       "ender_chests": 2938,
       "containers": 4664,
       "loose": 17,
-      "land_banks": 5521.84,
+      "land_banks": 4951.84,
       "coverage": {
         "files": 1052,
         "fresh": 1052,
@@ -40,7 +40,7 @@
         "percent": 100.0
       }
     },
-    "money_supply_players": 13442.84,
+    "money_supply_players": 12872.84,
     "money_supply_series": [
       [
         "2026-09-15",
@@ -60,7 +60,7 @@
       ],
       [
         "2026-09-19",
-        13442.84
+        12872.84
       ]
     ],
     "flow": {
@@ -102,13 +102,13 @@
         ],
         [
           "2026-09-19",
-          1063.0,
-          0.0
+          1143.0,
+          650.0
         ]
       ],
-      "spent_7d": 7334.0,
-      "received_7d": 3030.0,
-      "transactions": 117
+      "spent_7d": 7414.0,
+      "received_7d": 3680.0,
+      "transactions": 121
     },
     "trade_volume_series": [
       [
@@ -1614,8 +1614,8 @@
     "mean": 46.96
   },
   "server": {
-    "checked": "2026-09-19T14:41:32Z",
-    "started_at": "2026-09-19T12:12:17Z",
+    "checked": "2026-09-19T14:53:15Z",
+    "started_at": "2026-09-19T12:12:18Z",
     "tps": 20.0
   },
   "nations": [
@@ -1624,14 +1624,14 @@
       "tag": null,
       "color": "#956BE8",
       "lands": 2,
-      "mdi": 0.712,
+      "mdi": 0.603,
       "territory": 1.0,
       "population": 0.733,
-      "wealth": 0.35,
+      "wealth": 0.18,
       "activity": 1.0,
       "chunks": 60,
       "members": 11,
-      "treasury": 350.0
+      "treasury": 180.0
     },
     {
       "name": "Thalassos",
@@ -1672,7 +1672,7 @@
       "type": "land",
       "chunks": 58,
       "members": 9,
-      "bank": 150.0,
+      "bank": 180.0,
       "level": 1,
       "color": "#C0CAF3"
     },
@@ -1699,7 +1699,7 @@
       "type": "land",
       "chunks": 19,
       "members": 9,
-      "bank": 2224.79,
+      "bank": 1824.79,
       "level": 2,
       "color": "#66979D"
     },
@@ -1798,7 +1798,7 @@
       "type": "land",
       "chunks": 2,
       "members": 2,
-      "bank": 200.0,
+      "bank": 0.0,
       "level": 0,
       "color": "#9B7570"
     },
