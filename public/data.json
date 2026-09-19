@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-19T15:12:40Z",
+  "generated": "2026-09-19T15:27:35Z",
   "meta": {
     "players_tracked": 69,
     "active_traders": 9,
@@ -26,8 +26,8 @@
       "note": "Gold launched 2026-09-12. Needs 8+ active traders and 14+ days of history; currently 9 traders / 7 days."
     },
     "supply": {
-      "total": 13442.84,
-      "on_hand": 602,
+      "total": 13438.84,
+      "on_hand": 598,
       "ender_chests": 2938,
       "containers": 4664,
       "loose": 17,
@@ -40,7 +40,7 @@
         "percent": 100.0
       }
     },
-    "money_supply_players": 13442.84,
+    "money_supply_players": 13438.84,
     "money_supply_series": [
       [
         "2026-09-15",
@@ -60,7 +60,7 @@
       ],
       [
         "2026-09-19",
-        13442.84
+        13438.84
       ]
     ],
     "flow": {
@@ -1559,7 +1559,7 @@
       },
       {
         "name": "Augustine65480",
-        "balance": 300
+        "balance": 296
       },
       {
         "name": "1RTR",
@@ -1611,10 +1611,10 @@
       }
     ],
     "median": 0,
-    "mean": 51.3
+    "mean": 51.25
   },
   "server": {
-    "checked": "2026-09-19T15:12:40Z",
+    "checked": "2026-09-19T15:27:35Z",
     "started_at": "2026-09-19T12:12:17Z",
     "tps": 20.0
   },
