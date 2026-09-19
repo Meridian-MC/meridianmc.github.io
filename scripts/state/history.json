@@ -152,7 +152,8 @@
    "minecraft:netherite_upgrade_smithing_template": 5100.0,
    "minecraft:redstone": 3.0,
    "minecraft:sentry_armor_trim_smithing_template": 50.0,
-   "minecraft:spruce_sapling": 15.0,
+   "minecraft:silence_armor_trim_smithing_template": 115.0,
+   "minecraft:spruce_sapling": 10.0,
    "minecraft:totem_of_undying": 200.0
   }
  },
@@ -198,14 +199,14 @@
    "total": 12670.35
   },
   "2026-09-19": {
-   "at": "2026-09-19T20:14:44Z",
-   "banks": 4699.05,
-   "containers": 4677,
+   "at": "2026-09-19T20:30:21Z",
+   "banks": 4654.05,
+   "containers": 4859,
    "coverage": 100.0,
    "ender": 2876,
    "loose": 17,
-   "on_hand": 414,
-   "total": 12683.05
+   "on_hand": 259,
+   "total": 12665.05
   }
  }
 }

@@ -1,8 +1,8 @@
 {
-  "generated": "2026-09-19T20:14:44Z",
+  "generated": "2026-09-19T20:30:21Z",
   "meta": {
-    "players_tracked": 71,
-    "active_traders": 10,
+    "players_tracked": 72,
+    "active_traders": 12,
     "data_days": 7,
     "sufficient": false,
     "demo": false,
@@ -23,24 +23,24 @@
     "classification": {
       "code": "INSUFFICIENT_DATA",
       "label": "Insufficient data",
-      "note": "Gold launched 2026-09-12. Needs 8+ active traders and 14+ days of history; currently 10 traders / 7 days."
+      "note": "Gold launched 2026-09-12. Needs 8+ active traders and 14+ days of history; currently 12 traders / 7 days."
     },
     "supply": {
-      "total": 12683.05,
-      "on_hand": 414,
+      "total": 12665.05,
+      "on_hand": 259,
       "ender_chests": 2876,
-      "containers": 4677,
+      "containers": 4859,
       "loose": 17,
-      "land_banks": 4699.05,
+      "land_banks": 4654.05,
       "coverage": {
         "files": 1052,
-        "fresh": 1052,
-        "stale": 0,
+        "fresh": 1034,
+        "stale": 18,
         "unscanned": 0,
         "percent": 100.0
       }
     },
-    "money_supply_players": 12683.05,
+    "money_supply_players": 12665.05,
     "money_supply_series": [
       [
         "2026-09-15",
@@ -60,7 +60,7 @@
       ],
       [
         "2026-09-19",
-        12683.05
+        12665.05
       ]
     ],
     "flow": {
@@ -102,13 +102,13 @@
         ],
         [
           "2026-09-19",
-          4393.0,
-          3011.0
+          4580.0,
+          3211.0
         ]
       ],
-      "spent_7d": 10664.0,
-      "received_7d": 6041.0,
-      "transactions": 137
+      "spent_7d": 10851.0,
+      "received_7d": 6241.0,
+      "transactions": 141
     },
     "trade_volume_series": [
       [
@@ -122,7 +122,7 @@
     ],
     "trade_volume_7d": 265.0,
     "chest_shop_transactions": 1,
-    "gini": 0.966,
+    "gini": 0.97,
     "price_index": {
       "value": 51.9,
       "series": [
@@ -1528,6 +1528,50 @@
         ]
       },
       {
+        "name": "Silence Armor Trim Smithing Template",
+        "id": "minecraft:silence_armor_trim_smithing_template",
+        "price": 115.0,
+        "low": 115.0,
+        "high": 115.0,
+        "bid": null,
+        "shops": 1,
+        "sellers": 1,
+        "listings": [
+          {
+            "seller": "DatAriix",
+            "price": 115.0,
+            "type": "sell",
+            "world": "world",
+            "x": -234,
+            "y": 67,
+            "z": 3438,
+            "land": "Reach"
+          }
+        ]
+      },
+      {
+        "name": "Spruce Sapling",
+        "id": "minecraft:spruce_sapling",
+        "price": 10.0,
+        "low": 10.0,
+        "high": 10.0,
+        "bid": null,
+        "shops": 1,
+        "sellers": 1,
+        "listings": [
+          {
+            "seller": "DatAriix",
+            "price": 10.0,
+            "type": "sell",
+            "world": "world",
+            "x": -235,
+            "y": 67,
+            "z": 3438,
+            "land": "Reach"
+          }
+        ]
+      },
+      {
         "name": "Totem Of Undying",
         "id": "minecraft:totem_of_undying",
         "price": 200.0,
@@ -1562,10 +1606,6 @@
         "balance": 385
       },
       {
-        "name": "Mingasty",
-        "balance": 185
-      },
-      {
         "name": "1RTR",
         "balance": 137
       },
@@ -1582,6 +1622,10 @@
         "balance": 32
       },
       {
+        "name": "sc_brunooo",
+        "balance": 32
+      },
+      {
         "name": "ske9z",
         "balance": 19
       },
@@ -1591,7 +1635,7 @@
       },
       {
         "name": "Giggsy__",
-        "balance": 12
+        "balance": 10
       },
       {
         "name": "BabieDolphin",
@@ -1614,11 +1658,11 @@
         "balance": 0
       }
     ],
-    "median": 0,
-    "mean": 46.34
+    "median": 0.0,
+    "mean": 43.54
   },
   "server": {
-    "checked": "2026-09-19T20:14:44Z",
+    "checked": "2026-09-19T20:30:22Z",
     "started_at": "2026-09-19T12:12:17Z",
     "tps": 20.0
   },
@@ -1685,7 +1729,7 @@
       "type": "land",
       "chunks": 27,
       "members": 3,
-      "bank": 19.0,
+      "bank": 154.0,
       "level": 0,
       "color": "#E967D5"
     },
@@ -1703,7 +1747,7 @@
       "type": "land",
       "chunks": 19,
       "members": 9,
-      "bank": 1986.0,
+      "bank": 1786.0,
       "level": 2,
       "color": "#66979D"
     },
@@ -1739,7 +1783,7 @@
       "type": "land",
       "chunks": 4,
       "members": 3,
-      "bank": 0.0,
+      "bank": 20.0,
       "level": 0,
       "color": "#94B8C3"
     },
@@ -1852,6 +1896,15 @@
       "color": "#DDD0F2"
     },
     {
+      "name": "Mingasty_2",
+      "type": "land",
+      "chunks": 1,
+      "members": 2,
+      "bank": 0.0,
+      "level": 0,
+      "color": "#6C997E"
+    },
+    {
       "name": "Entulho",
       "type": "land",
       "chunks": 0,
@@ -1862,6 +1915,12 @@
     }
   ],
   "events": [
+    {
+      "type": "land",
+      "at": "2026-09-19T20:14:07Z",
+      "text": "Mingasty_2 was founded",
+      "owner": "Mingasty"
+    },
     {
       "type": "land",
       "at": "2026-09-16T23:31:20Z",
@@ -1975,12 +2034,6 @@
       "at": "2026-09-06T00:59:59Z",
       "text": "Pergaminthos was founded",
       "owner": "Giggsy__"
-    },
-    {
-      "type": "land",
-      "at": "2026-09-06T00:57:30Z",
-      "text": "Luko_Landino was founded",
-      "owner": "Luko_Landino"
     }
   ]
 }
