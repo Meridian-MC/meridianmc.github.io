@@ -1,7 +1,7 @@
 {
-  "generated": "2026-09-19T17:52:22Z",
+  "generated": "2026-09-19T18:16:01Z",
   "meta": {
-    "players_tracked": 70,
+    "players_tracked": 71,
     "active_traders": 9,
     "data_days": 7,
     "sufficient": false,
@@ -26,12 +26,12 @@
       "note": "Gold launched 2026-09-12. Needs 8+ active traders and 14+ days of history; currently 9 traders / 7 days."
     },
     "supply": {
-      "total": 13490.84,
+      "total": 12349.84,
       "on_hand": 334,
       "ender_chests": 2938,
       "containers": 4684,
       "loose": 17,
-      "land_banks": 5517.84,
+      "land_banks": 4376.84,
       "coverage": {
         "files": 1052,
         "fresh": 1052,
@@ -40,7 +40,7 @@
         "percent": 100.0
       }
     },
-    "money_supply_players": 13490.84,
+    "money_supply_players": 12349.84,
     "money_supply_series": [
       [
         "2026-09-15",
@@ -60,7 +60,7 @@
       ],
       [
         "2026-09-19",
-        13490.84
+        12349.84
       ]
     ],
     "flow": {
@@ -118,7 +118,7 @@
     ],
     "trade_volume_7d": 235.0,
     "chest_shop_transactions": 1,
-    "gini": 0.967,
+    "gini": 0.968,
     "price_index": {
       "value": 51.9,
       "series": [
@@ -1574,11 +1574,11 @@
         "balance": 41
       },
       {
-        "name": "Croissantasaur",
+        "name": "ObscureMemory",
         "balance": 32
       },
       {
-        "name": "ObscureMemory",
+        "name": "Croissantasaur",
         "balance": 32
       },
       {
@@ -1610,12 +1610,12 @@
         "balance": 0
       }
     ],
-    "median": 0.0,
-    "mean": 46.74
+    "median": 0,
+    "mean": 46.08
   },
   "server": {
-    "checked": "2026-09-19T17:52:23Z",
-    "started_at": "2026-09-19T12:12:18Z",
+    "checked": "2026-09-19T18:16:01Z",
+    "started_at": "2026-09-19T12:12:17Z",
     "tps": 20.0
   },
   "nations": [
@@ -1623,29 +1623,29 @@
       "name": "Augustine Empire",
       "tag": null,
       "color": "#956BE8",
-      "lands": 2,
-      "mdi": 0.795,
-      "territory": 1.0,
-      "population": 0.733,
-      "wealth": 0.544,
+      "lands": 1,
+      "mdi": 0.681,
+      "territory": 0.967,
+      "population": 0.6,
+      "wealth": 0.37,
       "activity": 1.0,
-      "chunks": 60,
-      "members": 11,
-      "treasury": 544.0
+      "chunks": 58,
+      "members": 9,
+      "treasury": 370.0
     },
     {
       "name": "Thalassos",
       "tag": null,
       "color": null,
       "lands": 1,
-      "mdi": 0.772,
+      "mdi": 0.65,
       "territory": 1.0,
-      "population": 0.8,
-      "wealth": 0.443,
+      "population": 0.867,
+      "wealth": 0.206,
       "activity": 1.0,
       "chunks": 79,
-      "members": 12,
-      "treasury": 443.0
+      "members": 13,
+      "treasury": 206.0
     }
   ],
   "lands": [
@@ -1653,17 +1653,17 @@
       "name": "Pergaminthos",
       "type": "land",
       "chunks": 88,
-      "members": 14,
-      "bank": 660.0,
-      "level": 2,
+      "members": 15,
+      "bank": 220.0,
+      "level": 1,
       "color": "#667CEE"
     },
     {
       "name": "Myndelea",
       "type": "land",
       "chunks": 79,
-      "members": 12,
-      "bank": 443.0,
+      "members": 13,
+      "bank": 206.0,
       "level": 1,
       "color": "#DF6EA4"
     },
@@ -1672,7 +1672,7 @@
       "type": "land",
       "chunks": 58,
       "members": 9,
-      "bank": 544.0,
+      "bank": 370.0,
       "level": 2,
       "color": "#C0CAF3"
     },
@@ -1699,7 +1699,7 @@
       "type": "land",
       "chunks": 19,
       "members": 9,
-      "bank": 2026.79,
+      "bank": 1931.79,
       "level": 2,
       "color": "#66979D"
     },
@@ -1708,7 +1708,7 @@
       "type": "land",
       "chunks": 14,
       "members": 8,
-      "bank": 86.0,
+      "bank": 16.0,
       "level": 0,
       "color": "#A3E085"
     },
@@ -1717,7 +1717,7 @@
       "type": "land",
       "chunks": 9,
       "members": 8,
-      "bank": 335.05,
+      "bank": 290.05,
       "level": 1,
       "color": "#B6B06C"
     },
@@ -1726,7 +1726,7 @@
       "type": "land",
       "chunks": 5,
       "members": 2,
-      "bank": 930.0,
+      "bank": 905.0,
       "level": 0,
       "color": "#66A4EF"
     },
@@ -1744,7 +1744,7 @@
       "type": "land",
       "chunks": 4,
       "members": 6,
-      "bank": 72.0,
+      "bank": 52.0,
       "level": 0,
       "color": "#BDE19D"
     },
@@ -1762,7 +1762,7 @@
       "type": "land",
       "chunks": 3,
       "members": 3,
-      "bank": 32.0,
+      "bank": 17.0,
       "level": 0,
       "color": "#F4A781"
     },
@@ -1789,7 +1789,7 @@
       "type": "land",
       "chunks": 2,
       "members": 2,
-      "bank": 192.0,
+      "bank": 182.0,
       "level": 0,
       "color": "#E8D289"
     },
@@ -1816,7 +1816,7 @@
       "type": "land",
       "chunks": 1,
       "members": 2,
-      "bank": 91.0,
+      "bank": 86.0,
       "level": 0,
       "color": "#CADC7A"
     },
@@ -1843,7 +1843,7 @@
       "type": "land",
       "chunks": 1,
       "members": 2,
-      "bank": 30.0,
+      "bank": 25.0,
       "level": 0,
       "color": "#DDD0F2"
     },
