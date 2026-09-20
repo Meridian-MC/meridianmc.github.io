@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-20T03:42:15Z",
+  "generated": "2026-09-20T03:55:07Z",
   "meta": {
     "players_tracked": 72,
     "active_traders": 13,
@@ -27,15 +27,15 @@
     },
     "supply": {
       "total": 15205.05,
-      "on_hand": 107,
-      "ender_chests": 3006,
-      "containers": 4392,
+      "on_hand": 113,
+      "ender_chests": 3141,
+      "containers": 4251,
       "loose": 17,
       "land_banks": 7683.05,
       "coverage": {
         "files": 1052,
-        "fresh": 1050,
-        "stale": 2,
+        "fresh": 1052,
+        "stale": 0,
         "unscanned": 0,
         "percent": 100.0
       }
@@ -111,13 +111,13 @@
         ],
         [
           "2026-09-20",
-          3679.0,
+          3811.0,
           500.0
         ]
       ],
-      "spent_7d": 15024.0,
+      "spent_7d": 15156.0,
       "received_7d": 7111.0,
-      "transactions": 157
+      "transactions": 159
     },
     "trade_volume_series": [
       [
@@ -131,7 +131,7 @@
     ],
     "trade_volume_7d": 265.0,
     "chest_shop_transactions": 1,
-    "gini": 0.973,
+    "gini": 0.969,
     "price_index": {
       "value": 55.0,
       "series": [
@@ -1587,6 +1587,10 @@
         "balance": 385
       },
       {
+        "name": "Luko_Landino",
+        "balance": 141
+      },
+      {
         "name": "Giggsy__",
         "balance": 140
       },
@@ -1633,17 +1637,13 @@
       {
         "name": "Augustine65480",
         "balance": 0
-      },
-      {
-        "name": "Lagmanium",
-        "balance": 0
       }
     ],
     "median": 0.0,
-    "mean": 43.24
+    "mean": 45.19
   },
   "server": {
-    "checked": "2026-09-20T03:42:15Z",
+    "checked": "2026-09-20T03:55:07Z",
     "started_at": "2026-09-19T23:43:23Z",
     "tps": 20.0
   },
