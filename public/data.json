@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-20T00:20:06Z",
+  "generated": "2026-09-20T00:46:35Z",
   "meta": {
     "players_tracked": 72,
     "active_traders": 12,
@@ -26,10 +26,10 @@
       "note": "Gold launched 2026-09-12. Needs 8+ active traders and 14+ days of history; currently 12 traders / 8 days."
     },
     "supply": {
-      "total": 12771.05,
+      "total": 12772.05,
       "on_hand": 291,
       "ender_chests": 2876,
-      "containers": 5088,
+      "containers": 5089,
       "loose": 17,
       "land_banks": 4499.05,
       "coverage": {
@@ -40,7 +40,7 @@
         "percent": 100.0
       }
     },
-    "money_supply_players": 12771.05,
+    "money_supply_players": 12772.05,
     "money_supply_series": [
       [
         "2026-09-15",
@@ -64,7 +64,7 @@
       ],
       [
         "2026-09-20",
-        12771.05
+        12772.05
       ]
     ],
     "flow": {
@@ -1734,8 +1734,8 @@
     "mean": 43.99
   },
   "server": {
-    "checked": "2026-09-20T00:20:06Z",
-    "started_at": "2026-09-19T23:43:23Z",
+    "checked": "2026-09-20T00:46:36Z",
+    "started_at": "2026-09-19T23:43:24Z",
     "tps": 20.0
   },
   "nations": [
@@ -1743,15 +1743,15 @@
       "name": "Augustine Empire",
       "tag": null,
       "color": "#956BE8",
-      "lands": 3,
+      "lands": 4,
       "mdi": 1.0,
       "territory": 1.0,
       "population": 1.0,
       "wealth": 1.0,
       "activity": 1.0,
-      "chunks": 79,
-      "members": 20,
-      "treasury": 2156.0
+      "chunks": 93,
+      "members": 29,
+      "treasury": 2172.0
     },
     {
       "name": "Thalassos",
@@ -1827,7 +1827,7 @@
       "name": "Goldmarche",
       "type": "land",
       "chunks": 14,
-      "members": 8,
+      "members": 9,
       "bank": 16.0,
       "level": 0,
       "color": "#A3E085"
