@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-20T19:38:29Z",
+  "generated": "2026-09-20T19:52:46Z",
   "meta": {
     "players_tracked": 72,
     "active_traders": 13,
@@ -26,21 +26,21 @@
       "note": "Gold launched 2026-09-12. Needs 8+ active traders and 14+ days of history; currently 13 traders / 8 days."
     },
     "supply": {
-      "total": 16979.05,
-      "on_hand": 532,
-      "ender_chests": 4903,
-      "containers": 5918,
+      "total": 17218.05,
+      "on_hand": 111,
+      "ender_chests": 5288,
+      "containers": 6001,
       "loose": 17,
-      "land_banks": 5609.05,
+      "land_banks": 5801.05,
       "coverage": {
         "files": 1052,
-        "fresh": 1015,
-        "stale": 37,
+        "fresh": 1013,
+        "stale": 39,
         "unscanned": 0,
         "percent": 100.0
       }
     },
-    "money_supply_players": 16979.05,
+    "money_supply_players": 17218.05,
     "money_supply_series": [
       [
         "2026-09-15",
@@ -64,7 +64,7 @@
       ],
       [
         "2026-09-20",
-        16979.05
+        17218.05
       ]
     ],
     "flow": {
@@ -131,7 +131,7 @@
     ],
     "trade_volume_7d": 265.0,
     "chest_shop_transactions": 1,
-    "gini": 0.974,
+    "gini": 0.976,
     "price_index": {
       "value": 94.8,
       "series": [
@@ -1009,10 +1009,6 @@
         "balance": 137
       },
       {
-        "name": "Augustine65480",
-        "balance": 36
-      },
-      {
         "name": "Croissantasaur",
         "balance": 32
       },
@@ -1045,16 +1041,20 @@
         "balance": 0
       },
       {
+        "name": "Augustine65480",
+        "balance": 0
+      },
+      {
         "name": "Lagmanium",
         "balance": 0
       }
     ],
     "median": 0.0,
-    "mean": 75.49
+    "mean": 74.99
   },
   "server": {
-    "checked": "2026-09-20T19:38:29Z",
-    "started_at": "2026-09-20T12:12:25Z",
+    "checked": "2026-09-20T19:52:46Z",
+    "started_at": "2026-09-20T12:12:26Z",
     "tps": 20.0
   },
   "nations": [
@@ -1070,7 +1070,7 @@
       "activity": 1.0,
       "chunks": 93,
       "members": 31,
-      "treasury": 1563.0
+      "treasury": 1755.0
     },
     {
       "name": "Thalassos",
@@ -1138,8 +1138,8 @@
       "type": "land",
       "chunks": 19,
       "members": 10,
-      "bank": 0.0,
-      "level": 0,
+      "bank": 192.0,
+      "level": 1,
       "color": "#66979D"
     },
     {
