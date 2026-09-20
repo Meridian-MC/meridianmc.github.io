@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-20T22:13:43Z",
+  "generated": "2026-09-20T22:27:42Z",
   "meta": {
     "players_tracked": 72,
     "active_traders": 13,
@@ -26,12 +26,12 @@
       "note": "Gold launched 2026-09-12. Needs 8+ active traders and 14+ days of history; currently 13 traders / 8 days."
     },
     "supply": {
-      "total": 17227.05,
+      "total": 17295.05,
       "on_hand": 111,
       "ender_chests": 5288,
-      "containers": 6010,
+      "containers": 5989,
       "loose": 17,
-      "land_banks": 5801.05,
+      "land_banks": 5890.05,
       "coverage": {
         "files": 1052,
         "fresh": 1052,
@@ -40,7 +40,7 @@
         "percent": 100.0
       }
     },
-    "money_supply_players": 17227.05,
+    "money_supply_players": 17295.05,
     "money_supply_series": [
       [
         "2026-09-15",
@@ -64,7 +64,7 @@
       ],
       [
         "2026-09-20",
-        17227.05
+        17295.05
       ]
     ],
     "flow": {
@@ -111,13 +111,13 @@
         ],
         [
           "2026-09-20",
-          5356.0,
+          5445.0,
           3927.0
         ]
       ],
-      "spent_7d": 16701.0,
+      "spent_7d": 16790.0,
       "received_7d": 10538.0,
-      "transactions": 173
+      "transactions": 174
     },
     "trade_volume_series": [
       [
@@ -1053,7 +1053,7 @@
     "mean": 74.99
   },
   "server": {
-    "checked": "2026-09-20T22:13:44Z",
+    "checked": "2026-09-20T22:27:43Z",
     "started_at": "2026-09-20T12:12:26Z",
     "tps": 20.0
   },
@@ -1070,7 +1070,7 @@
       "activity": 1.0,
       "chunks": 93,
       "members": 31,
-      "treasury": 1755.0
+      "treasury": 1844.0
     },
     {
       "name": "Thalassos",
@@ -1237,7 +1237,7 @@
       "type": "land",
       "chunks": 2,
       "members": 3,
-      "bank": 200.0,
+      "bank": 289.0,
       "level": 0,
       "color": "#9B7570"
     },
