@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-20T18:15:24Z",
+  "generated": "2026-09-20T18:32:34Z",
   "meta": {
     "players_tracked": 72,
     "active_traders": 13,
@@ -28,14 +28,14 @@
     "supply": {
       "total": 16979.05,
       "on_hand": 147,
-      "ender_chests": 3141,
+      "ender_chests": 5288,
       "containers": 5918,
       "loose": 17,
-      "land_banks": 7756.05,
+      "land_banks": 5609.05,
       "coverage": {
         "files": 1052,
-        "fresh": 1046,
-        "stale": 6,
+        "fresh": 1052,
+        "stale": 0,
         "unscanned": 0,
         "percent": 100.0
       }
@@ -112,12 +112,12 @@
         [
           "2026-09-20",
           5164.0,
-          1780.0
+          3927.0
         ]
       ],
       "spent_7d": 16509.0,
-      "received_7d": 8391.0,
-      "transactions": 169
+      "received_7d": 10538.0,
+      "transactions": 170
     },
     "trade_volume_series": [
       [
@@ -131,9 +131,9 @@
     ],
     "trade_volume_7d": 265.0,
     "chest_shop_transactions": 1,
-    "gini": 0.967,
+    "gini": 0.974,
     "price_index": {
-      "value": 55.0,
+      "value": 59.6,
       "series": [
         [
           "2026-09-15",
@@ -141,23 +141,23 @@
         ],
         [
           "2026-09-16",
-          23.6
+          23.4
         ],
         [
           "2026-09-17",
-          24.7
+          26.7
         ],
         [
           "2026-09-18",
-          52.0
+          56.3
         ],
         [
           "2026-09-19",
-          52.0
+          56.3
         ],
         [
           "2026-09-20",
-          55.0
+          59.6
         ]
       ],
       "note": "Basket of 16 shop items, base 100 on 2026-09-15."
@@ -617,44 +617,6 @@
         "volume_24h_value": 0.0
       },
       {
-        "name": "Ender Pearl",
-        "unit": "each",
-        "price": 5.0,
-        "change_7d": 0.0,
-        "shops": 1,
-        "sellers": 1,
-        "series": [
-          [
-            "2026-09-17",
-            5.0
-          ],
-          [
-            "2026-09-18",
-            5.0
-          ],
-          [
-            "2026-09-19",
-            5.0
-          ],
-          [
-            "2026-09-20",
-            5.0
-          ]
-        ],
-        "candles": [
-          {
-            "t": "2026-09-18",
-            "o": 5.0,
-            "h": 5.0,
-            "l": 5.0,
-            "c": 5.0,
-            "v": 27
-          }
-        ],
-        "volume_24h_qty": 0,
-        "volume_24h_value": 0.0
-      },
-      {
         "name": "Flow Armor Trim Smithing Template",
         "unit": "each",
         "price": 50.0,
@@ -722,6 +684,43 @@
           [
             "2026-09-20",
             10.0
+          ]
+        ],
+        "candles": [],
+        "volume_24h_qty": 0,
+        "volume_24h_value": 0.0
+      },
+      {
+        "name": "Golden Carrot",
+        "unit": "each",
+        "price": 2.0,
+        "change_7d": 1.0,
+        "shops": 1,
+        "sellers": 1,
+        "series": [
+          [
+            "2026-09-15",
+            1.0
+          ],
+          [
+            "2026-09-16",
+            1.0
+          ],
+          [
+            "2026-09-17",
+            1.5
+          ],
+          [
+            "2026-09-18",
+            2.0
+          ],
+          [
+            "2026-09-19",
+            2.0
+          ],
+          [
+            "2026-09-20",
+            2.0
           ]
         ],
         "candles": [],
@@ -1179,28 +1178,6 @@
         ]
       },
       {
-        "name": "Ender Pearl",
-        "id": "minecraft:ender_pearl",
-        "price": 5.0,
-        "low": 5.0,
-        "high": 5.0,
-        "bid": null,
-        "shops": 1,
-        "sellers": 1,
-        "listings": [
-          {
-            "seller": "WhenAtRome",
-            "price": 5.0,
-            "type": "sell",
-            "world": "world",
-            "x": -236,
-            "y": 66,
-            "z": 3428,
-            "land": "Reach"
-          }
-        ]
-      },
-      {
         "name": "Flow Armor Trim Smithing Template",
         "id": "minecraft:flow_armor_trim_smithing_template",
         "price": 50.0,
@@ -1529,28 +1506,6 @@
             "land": "Reach"
           }
         ]
-      },
-      {
-        "name": "Totem Of Undying",
-        "id": "minecraft:totem_of_undying",
-        "price": 200.0,
-        "low": 200.0,
-        "high": 200.0,
-        "bid": null,
-        "shops": 1,
-        "sellers": 1,
-        "listings": [
-          {
-            "seller": "WhenAtRome",
-            "price": 200.0,
-            "type": "sell",
-            "world": "world",
-            "x": -235,
-            "y": 66,
-            "z": 3428,
-            "land": "Reach"
-          }
-        ]
       }
     ]
   },
@@ -1558,7 +1513,7 @@
     "top": [
       {
         "name": "Keanie__",
-        "balance": 2381
+        "balance": 4528
       },
       {
         "name": "JxrdanUK",
@@ -1618,10 +1573,10 @@
       }
     ],
     "median": 0.0,
-    "mean": 45.67
+    "mean": 75.49
   },
   "server": {
-    "checked": "2026-09-20T18:15:24Z",
+    "checked": "2026-09-20T18:32:35Z",
     "started_at": "2026-09-20T12:12:26Z",
     "tps": 20.0
   },
@@ -1638,7 +1593,7 @@
       "activity": 1.0,
       "chunks": 93,
       "members": 32,
-      "treasury": 3710.0
+      "treasury": 1563.0
     },
     {
       "name": "Thalassos",
@@ -1706,8 +1661,8 @@
       "type": "land",
       "chunks": 19,
       "members": 10,
-      "bank": 2147.0,
-      "level": 2,
+      "bank": 0.0,
+      "level": 0,
       "color": "#66979D"
     },
     {
@@ -1723,7 +1678,7 @@
       "name": "Keanie__",
       "type": "land",
       "chunks": 9,
-      "members": 8,
+      "members": 9,
       "bank": 190.05,
       "level": 1,
       "color": "#B6B06C"
