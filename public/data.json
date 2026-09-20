@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-20T11:54:01Z",
+  "generated": "2026-09-20T12:17:45Z",
   "meta": {
     "players_tracked": 72,
     "active_traders": 13,
@@ -34,8 +34,8 @@
       "land_banks": 7683.05,
       "coverage": {
         "files": 1052,
-        "fresh": 1040,
-        "stale": 12,
+        "fresh": 1030,
+        "stale": 22,
         "unscanned": 0,
         "percent": 100.0
       }
@@ -111,13 +111,13 @@
         ],
         [
           "2026-09-20",
-          3811.0,
-          500.0
+          4011.0,
+          700.0
         ]
       ],
-      "spent_7d": 15156.0,
-      "received_7d": 7111.0,
-      "transactions": 159
+      "spent_7d": 15356.0,
+      "received_7d": 7311.0,
+      "transactions": 161
     },
     "trade_volume_series": [
       [
@@ -1643,8 +1643,8 @@
     "mean": 45.17
   },
   "server": {
-    "checked": "2026-09-20T11:54:01Z",
-    "started_at": "2026-09-19T23:43:23Z",
+    "checked": "2026-09-20T12:17:46Z",
+    "started_at": "2026-09-20T12:12:26Z",
     "tps": 20.0
   },
   "nations": [
@@ -1701,7 +1701,7 @@
       "type": "land",
       "chunks": 58,
       "members": 9,
-      "bank": 371.0,
+      "bank": 171.0,
       "level": 1,
       "color": "#C0CAF3"
     },
@@ -1827,7 +1827,7 @@
       "type": "land",
       "chunks": 2,
       "members": 3,
-      "bank": 0.0,
+      "bank": 200.0,
       "level": 0,
       "color": "#9B7570"
     },
