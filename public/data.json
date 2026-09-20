@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-20T14:28:30Z",
+  "generated": "2026-09-20T14:42:47Z",
   "meta": {
     "players_tracked": 72,
     "active_traders": 13,
@@ -26,12 +26,12 @@
       "note": "Gold launched 2026-09-12. Needs 8+ active traders and 14+ days of history; currently 13 traders / 8 days."
     },
     "supply": {
-      "total": 16795.05,
-      "on_hand": 111,
+      "total": 16812.05,
+      "on_hand": 116,
       "ender_chests": 3141,
-      "containers": 5843,
+      "containers": 5801,
       "loose": 17,
-      "land_banks": 7683.05,
+      "land_banks": 7737.05,
       "coverage": {
         "files": 1052,
         "fresh": 1052,
@@ -40,7 +40,7 @@
         "percent": 100.0
       }
     },
-    "money_supply_players": 16795.05,
+    "money_supply_players": 16812.05,
     "money_supply_series": [
       [
         "2026-09-15",
@@ -64,7 +64,7 @@
       ],
       [
         "2026-09-20",
-        16795.05
+        16812.05
       ]
     ],
     "flow": {
@@ -111,13 +111,13 @@
         ],
         [
           "2026-09-20",
-          4331.0,
-          1020.0
+          4706.0,
+          1395.0
         ]
       ],
-      "spent_7d": 15676.0,
-      "received_7d": 7631.0,
-      "transactions": 163
+      "spent_7d": 16051.0,
+      "received_7d": 8006.0,
+      "transactions": 165
     },
     "trade_volume_series": [
       [
@@ -131,7 +131,7 @@
     ],
     "trade_volume_7d": 265.0,
     "chest_shop_transactions": 1,
-    "gini": 0.969,
+    "gini": 0.968,
     "price_index": {
       "value": 55.0,
       "series": [
@@ -1611,6 +1611,10 @@
         "balance": 13
       },
       {
+        "name": "DatAriix",
+        "balance": 5
+      },
+      {
         "name": "BabieDolphin",
         "balance": 2
       },
@@ -1633,17 +1637,13 @@
       {
         "name": "Augustine65480",
         "balance": 0
-      },
-      {
-        "name": "Lagmanium",
-        "balance": 0
       }
     ],
     "median": 0.0,
-    "mean": 45.17
+    "mean": 45.24
   },
   "server": {
-    "checked": "2026-09-20T14:28:31Z",
+    "checked": "2026-09-20T14:42:48Z",
     "started_at": "2026-09-20T12:12:26Z",
     "tps": 20.0
   },
@@ -1660,7 +1660,7 @@
       "activity": 1.0,
       "chunks": 93,
       "members": 32,
-      "treasury": 3637.0
+      "treasury": 3691.0
     },
     {
       "name": "Thalassos",
@@ -1701,7 +1701,7 @@
       "type": "land",
       "chunks": 58,
       "members": 9,
-      "bank": 866.0,
+      "bank": 920.0,
       "level": 2,
       "color": "#C0CAF3"
     },
