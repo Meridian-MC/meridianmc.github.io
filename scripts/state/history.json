@@ -180,10 +180,10 @@
    "minecraft:lapis_block": 5.0,
    "minecraft:lapis_lazuli": 250.0,
    "minecraft:netherite_ingot": 300.0,
-   "minecraft:netherite_upgrade_smithing_template": 5100.0,
+   "minecraft:netherite_upgrade_smithing_template": 10000.0,
    "minecraft:redstone": 3.0,
    "minecraft:sentry_armor_trim_smithing_template": 50.0,
-   "minecraft:silence_armor_trim_smithing_template": 115.0,
+   "minecraft:silence_armor_trim_smithing_template": 125.0,
    "minecraft:spruce_sapling": 10.0,
    "minecraft:totem_of_undying": 200.0
   }
@@ -240,7 +240,7 @@
    "total": 12771.05
   },
   "2026-09-20": {
-   "at": "2026-09-20T18:32:34Z",
+   "at": "2026-09-20T18:52:47Z",
    "banks": 5609.05,
    "containers": 5918,
    "coverage": 100.0,

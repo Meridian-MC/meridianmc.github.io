@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-20T18:32:34Z",
+  "generated": "2026-09-20T18:52:47Z",
   "meta": {
     "players_tracked": 72,
     "active_traders": 13,
@@ -133,7 +133,7 @@
     "chest_shop_transactions": 1,
     "gini": 0.974,
     "price_index": {
-      "value": 59.6,
+      "value": 94.8,
       "series": [
         [
           "2026-09-15",
@@ -141,26 +141,26 @@
         ],
         [
           "2026-09-16",
-          23.4
+          23.8
         ],
         [
           "2026-09-17",
-          26.7
+          30.4
         ],
         [
           "2026-09-18",
-          56.3
+          62.5
         ],
         [
           "2026-09-19",
-          56.3
+          58.4
         ],
         [
           "2026-09-20",
-          59.6
+          94.8
         ]
       ],
-      "note": "Basket of 16 shop items, base 100 on 2026-09-15."
+      "note": "Basket of 13 shop items, base 100 on 2026-09-15."
     },
     "items": [
       {
@@ -201,39 +201,6 @@
         "volume_24h_value": 0.0
       },
       {
-        "name": "Netherite Upgrade Smithing Template",
-        "unit": "each",
-        "price": 5100.0,
-        "change_7d": -0.49,
-        "shops": 2,
-        "sellers": 2,
-        "series": [
-          [
-            "2026-09-15",
-            10000.0
-          ],
-          [
-            "2026-09-17",
-            200.0
-          ],
-          [
-            "2026-09-18",
-            5100.0
-          ],
-          [
-            "2026-09-19",
-            5100.0
-          ],
-          [
-            "2026-09-20",
-            5100.0
-          ]
-        ],
-        "candles": [],
-        "volume_24h_qty": 0,
-        "volume_24h_value": 0.0
-      },
-      {
         "name": "Arrow",
         "unit": "each",
         "price": 600.0,
@@ -264,43 +231,6 @@
           [
             "2026-09-20",
             600.0
-          ]
-        ],
-        "candles": [],
-        "volume_24h_qty": 0,
-        "volume_24h_value": 0.0
-      },
-      {
-        "name": "Bolt Armor Trim Smithing Template",
-        "unit": "each",
-        "price": 50.0,
-        "change_7d": 3.7619,
-        "shops": 1,
-        "sellers": 1,
-        "series": [
-          [
-            "2026-09-15",
-            10.5
-          ],
-          [
-            "2026-09-16",
-            10.5
-          ],
-          [
-            "2026-09-17",
-            25.5
-          ],
-          [
-            "2026-09-18",
-            50.0
-          ],
-          [
-            "2026-09-19",
-            50.0
-          ],
-          [
-            "2026-09-20",
-            50.0
           ]
         ],
         "candles": [],
@@ -375,35 +305,6 @@
           [
             "2026-09-20",
             75.0
-          ]
-        ],
-        "candles": [],
-        "volume_24h_qty": 0,
-        "volume_24h_value": 0.0
-      },
-      {
-        "name": "Coast Armor Trim Smithing Template",
-        "unit": "each",
-        "price": 50.0,
-        "change_7d": 0.0,
-        "shops": 1,
-        "sellers": 1,
-        "series": [
-          [
-            "2026-09-17",
-            50.0
-          ],
-          [
-            "2026-09-18",
-            50.0
-          ],
-          [
-            "2026-09-19",
-            50.0
-          ],
-          [
-            "2026-09-20",
-            50.0
           ]
         ],
         "candles": [],
@@ -522,35 +423,6 @@
         "volume_24h_value": 0.0
       },
       {
-        "name": "Dune Armor Trim Smithing Template",
-        "unit": "each",
-        "price": 50.0,
-        "change_7d": 0.0,
-        "shops": 1,
-        "sellers": 1,
-        "series": [
-          [
-            "2026-09-17",
-            50.0
-          ],
-          [
-            "2026-09-18",
-            50.0
-          ],
-          [
-            "2026-09-19",
-            50.0
-          ],
-          [
-            "2026-09-20",
-            50.0
-          ]
-        ],
-        "candles": [],
-        "volume_24h_qty": 0,
-        "volume_24h_value": 0.0
-      },
-      {
         "name": "Emerald",
         "unit": "each",
         "price": 500.0,
@@ -588,28 +460,32 @@
         "volume_24h_value": 0.0
       },
       {
-        "name": "Enchanted Golden Apple",
+        "name": "Granite",
         "unit": "each",
-        "price": 75.0,
+        "price": 4.0,
         "change_7d": 0.0,
         "shops": 1,
         "sellers": 1,
         "series": [
           [
+            "2026-09-16",
+            4.0
+          ],
+          [
             "2026-09-17",
-            75.0
+            4.0
           ],
           [
             "2026-09-18",
-            75.0
+            4.0
           ],
           [
             "2026-09-19",
-            75.0
+            4.0
           ],
           [
             "2026-09-20",
-            75.0
+            4.0
           ]
         ],
         "candles": [],
@@ -617,36 +493,36 @@
         "volume_24h_value": 0.0
       },
       {
-        "name": "Flow Armor Trim Smithing Template",
+        "name": "Iron Ingot",
         "unit": "each",
-        "price": 50.0,
-        "change_7d": 3.7619,
+        "price": 250.0,
+        "change_7d": 0.9455,
         "shops": 1,
         "sellers": 1,
         "series": [
           [
             "2026-09-15",
-            10.5
+            128.5
           ],
           [
             "2026-09-16",
-            10.5
+            128.5
           ],
           [
             "2026-09-17",
-            25.5
+            128.5
           ],
           [
             "2026-09-18",
-            50.0
+            128.5
           ],
           [
             "2026-09-19",
-            50.0
+            128.5
           ],
           [
             "2026-09-20",
-            50.0
+            250.0
           ]
         ],
         "candles": [],
@@ -654,36 +530,36 @@
         "volume_24h_value": 0.0
       },
       {
-        "name": "Golden Apple",
+        "name": "Lapis Lazuli",
         "unit": "each",
-        "price": 10.0,
-        "change_7d": 0.8182,
+        "price": 250.0,
+        "change_7d": 0.0,
         "shops": 1,
         "sellers": 1,
         "series": [
           [
             "2026-09-15",
-            5.5
+            250.0
           ],
           [
             "2026-09-16",
-            5.5
+            250.0
           ],
           [
             "2026-09-17",
-            5.5
+            250.0
           ],
           [
             "2026-09-18",
-            10.0
+            250.0
           ],
           [
             "2026-09-19",
-            10.0
+            250.0
           ],
           [
             "2026-09-20",
-            10.0
+            250.0
           ]
         ],
         "candles": [],
@@ -691,36 +567,53 @@
         "volume_24h_value": 0.0
       },
       {
-        "name": "Golden Carrot",
+        "name": "Netherite Upgrade Smithing Template",
         "unit": "each",
-        "price": 2.0,
-        "change_7d": 1.0,
+        "price": 10000.0,
+        "change_7d": 0.0,
         "shops": 1,
         "sellers": 1,
         "series": [
           [
             "2026-09-15",
-            1.0
-          ],
-          [
-            "2026-09-16",
-            1.0
+            10000.0
           ],
           [
             "2026-09-17",
-            1.5
+            200.0
           ],
           [
             "2026-09-18",
-            2.0
+            5100.0
           ],
           [
             "2026-09-19",
-            2.0
+            5100.0
           ],
           [
             "2026-09-20",
-            2.0
+            10000.0
+          ]
+        ],
+        "candles": [],
+        "volume_24h_qty": 0,
+        "volume_24h_value": 0.0
+      },
+      {
+        "name": "Silence Armor Trim Smithing Template",
+        "unit": "each",
+        "price": 125.0,
+        "change_7d": 0.087,
+        "shops": 1,
+        "sellers": 1,
+        "series": [
+          [
+            "2026-09-19",
+            115.0
+          ],
+          [
+            "2026-09-20",
+            125.0
           ]
         ],
         "candles": [],
@@ -762,70 +655,6 @@
         ]
       },
       {
-        "name": "Netherite Upgrade Smithing Template",
-        "id": "minecraft:netherite_upgrade_smithing_template",
-        "price": 5100.0,
-        "low": 200.0,
-        "high": 10000.0,
-        "bid": null,
-        "shops": 2,
-        "sellers": 2,
-        "listings": [
-          {
-            "seller": "WhenAtRome",
-            "price": 200.0,
-            "type": "sell",
-            "world": "world",
-            "x": -237,
-            "y": 66,
-            "z": 3431,
-            "land": "Reach"
-          },
-          {
-            "seller": "ACRI_Vanguard",
-            "price": 10000.0,
-            "type": "sell",
-            "world": "world",
-            "x": -106,
-            "y": 63,
-            "z": -1168,
-            "land": "ACRI_Vanguard"
-          }
-        ]
-      },
-      {
-        "name": "Yellow Shulker Box",
-        "id": "minecraft:yellow_shulker_box",
-        "price": 100.0,
-        "low": 100.0,
-        "high": 100.0,
-        "bid": null,
-        "shops": 2,
-        "sellers": 1,
-        "listings": [
-          {
-            "seller": "WhenAtRome",
-            "price": 100.0,
-            "type": "sell",
-            "world": "world",
-            "x": -232,
-            "y": 66,
-            "z": 3428,
-            "land": "Reach"
-          },
-          {
-            "seller": "WhenAtRome",
-            "price": 100.0,
-            "type": "sell",
-            "world": "world",
-            "x": -228,
-            "y": 66,
-            "z": 3429,
-            "land": "Reach"
-          }
-        ]
-      },
-      {
         "name": "Arrow",
         "id": "minecraft:arrow",
         "price": 600.0,
@@ -844,28 +673,6 @@
             "y": 106,
             "z": -1200,
             "land": "Pergaminthos"
-          }
-        ]
-      },
-      {
-        "name": "Bolt Armor Trim Smithing Template",
-        "id": "minecraft:bolt_armor_trim_smithing_template",
-        "price": 50.0,
-        "low": 50.0,
-        "high": 50.0,
-        "bid": null,
-        "shops": 1,
-        "sellers": 1,
-        "listings": [
-          {
-            "seller": "WhenAtRome",
-            "price": 50.0,
-            "type": "sell",
-            "world": "world",
-            "x": -237,
-            "y": 66,
-            "z": 3435,
-            "land": "Reach"
           }
         ]
       },
@@ -910,28 +717,6 @@
             "y": 95,
             "z": -4151,
             "land": "Augustine"
-          }
-        ]
-      },
-      {
-        "name": "Coast Armor Trim Smithing Template",
-        "id": "minecraft:coast_armor_trim_smithing_template",
-        "price": 50.0,
-        "low": 50.0,
-        "high": 50.0,
-        "bid": null,
-        "shops": 1,
-        "sellers": 1,
-        "listings": [
-          {
-            "seller": "WhenAtRome",
-            "price": 50.0,
-            "type": "sell",
-            "world": "world",
-            "x": -237,
-            "y": 66,
-            "z": 3433,
-            "land": "Reach"
           }
         ]
       },
@@ -1002,28 +787,6 @@
         ]
       },
       {
-        "name": "Dune Armor Trim Smithing Template",
-        "id": "minecraft:dune_armor_trim_smithing_template",
-        "price": 50.0,
-        "low": 50.0,
-        "high": 50.0,
-        "bid": null,
-        "shops": 1,
-        "sellers": 1,
-        "listings": [
-          {
-            "seller": "WhenAtRome",
-            "price": 50.0,
-            "type": "sell",
-            "world": "world",
-            "x": -237,
-            "y": 66,
-            "z": 3434,
-            "land": "Reach"
-          }
-        ]
-      },
-      {
         "name": "Emerald",
         "id": "minecraft:emerald",
         "price": 500.0,
@@ -1046,89 +809,23 @@
         ]
       },
       {
-        "name": "Enchanted Book (Density V)",
-        "id": "minecraft:enchanted_book",
-        "price": 100.0,
-        "low": 100.0,
-        "high": 100.0,
-        "bid": null,
-        "shops": 1,
-        "sellers": 1,
-        "listings": [
-          {
-            "seller": "WhenAtRome",
-            "price": 100.0,
-            "type": "sell",
-            "world": "world",
-            "x": -230,
-            "y": 67,
-            "z": 3428,
-            "land": "Reach"
-          }
-        ]
-      },
-      {
-        "name": "Enchanted Book (Luck Of The Sea III)",
-        "id": "minecraft:enchanted_book",
-        "price": 30.0,
-        "low": 30.0,
-        "high": 30.0,
-        "bid": null,
-        "shops": 1,
-        "sellers": 1,
-        "listings": [
-          {
-            "seller": "WhenAtRome",
-            "price": 30.0,
-            "type": "sell",
-            "world": "world",
-            "x": -232,
-            "y": 67,
-            "z": 3428,
-            "land": "Reach"
-          }
-        ]
-      },
-      {
-        "name": "Enchanted Book (Lure III)",
-        "id": "minecraft:enchanted_book",
-        "price": 30.0,
-        "low": 30.0,
-        "high": 30.0,
-        "bid": null,
-        "shops": 1,
-        "sellers": 1,
-        "listings": [
-          {
-            "seller": "WhenAtRome",
-            "price": 30.0,
-            "type": "sell",
-            "world": "world",
-            "x": -234,
-            "y": 67,
-            "z": 3428,
-            "land": "Reach"
-          }
-        ]
-      },
-      {
         "name": "Enchanted Book (Silk Touch)",
         "id": "minecraft:enchanted_book",
-        "price": 30.0,
-        "low": 30.0,
-        "high": 30.0,
+        "price": 75.0,
+        "low": 75.0,
+        "high": 75.0,
         "bid": null,
         "shops": 1,
         "sellers": 1,
         "listings": [
           {
-            "seller": "WhenAtRome",
-            "price": 30.0,
+            "seller": "DatAriix",
+            "price": 75.0,
             "type": "sell",
             "world": "world",
-            "x": -233,
-            "y": 67,
-            "z": 3428,
+            "x": -228,
+            "y": 66,
+            "z": 3429,
             "land": "Reach"
           }
         ]
@@ -1156,94 +853,6 @@
         ]
       },
       {
-        "name": "Enchanted Golden Apple",
-        "id": "minecraft:enchanted_golden_apple",
-        "price": 75.0,
-        "low": 75.0,
-        "high": 75.0,
-        "bid": null,
-        "shops": 1,
-        "sellers": 1,
-        "listings": [
-          {
-            "seller": "WhenAtRome",
-            "price": 75.0,
-            "type": "sell",
-            "world": "world",
-            "x": -236,
-            "y": 66,
-            "z": 3438,
-            "land": "Reach"
-          }
-        ]
-      },
-      {
-        "name": "Flow Armor Trim Smithing Template",
-        "id": "minecraft:flow_armor_trim_smithing_template",
-        "price": 50.0,
-        "low": 50.0,
-        "high": 50.0,
-        "bid": null,
-        "shops": 1,
-        "sellers": 1,
-        "listings": [
-          {
-            "seller": "DatAriix",
-            "price": 50.0,
-            "type": "sell",
-            "world": "world",
-            "x": -237,
-            "y": 66,
-            "z": 3436,
-            "land": "Reach"
-          }
-        ]
-      },
-      {
-        "name": "Golden Apple",
-        "id": "minecraft:golden_apple",
-        "price": 10.0,
-        "low": 10.0,
-        "high": 10.0,
-        "bid": null,
-        "shops": 1,
-        "sellers": 1,
-        "listings": [
-          {
-            "seller": "WhenAtRome",
-            "price": 10.0,
-            "type": "sell",
-            "world": "world",
-            "x": -235,
-            "y": 66,
-            "z": 3438,
-            "land": "Reach"
-          }
-        ]
-      },
-      {
-        "name": "Golden Carrot",
-        "id": "minecraft:golden_carrot",
-        "price": 2.0,
-        "low": 2.0,
-        "high": 2.0,
-        "bid": null,
-        "shops": 1,
-        "sellers": 1,
-        "listings": [
-          {
-            "seller": "WhenAtRome",
-            "price": 2.0,
-            "type": "sell",
-            "world": "world",
-            "x": -234,
-            "y": 66,
-            "z": 3438,
-            "land": "Reach"
-          }
-        ]
-      },
-      {
         "name": "Granite",
         "id": "minecraft:granite",
         "price": 4.0,
@@ -1262,28 +871,6 @@
             "y": 107,
             "z": -1184,
             "land": "Pergaminthos"
-          }
-        ]
-      },
-      {
-        "name": "Heavy Core",
-        "id": "minecraft:heavy_core",
-        "price": 500.0,
-        "low": 500.0,
-        "high": 500.0,
-        "bid": null,
-        "shops": 1,
-        "sellers": 1,
-        "listings": [
-          {
-            "seller": "WhenAtRome",
-            "price": 500.0,
-            "type": "sell",
-            "world": "world",
-            "x": -234,
-            "y": 66,
-            "z": 3428,
-            "land": "Reach"
           }
         ]
       },
@@ -1332,68 +919,24 @@
         ]
       },
       {
-        "name": "Light Blue Shulker Box",
-        "id": "minecraft:light_blue_shulker_box",
-        "price": 100.0,
-        "low": 100.0,
-        "high": 100.0,
+        "name": "Netherite Upgrade Smithing Template",
+        "id": "minecraft:netherite_upgrade_smithing_template",
+        "price": 10000.0,
+        "low": 10000.0,
+        "high": 10000.0,
         "bid": null,
         "shops": 1,
         "sellers": 1,
         "listings": [
           {
-            "seller": "WhenAtRome",
-            "price": 100.0,
+            "seller": "ACRI_Vanguard",
+            "price": 10000.0,
             "type": "sell",
             "world": "world",
-            "x": -228,
-            "y": 66,
-            "z": 3430,
-            "land": "Reach"
-          }
-        ]
-      },
-      {
-        "name": "Netherite Ingot",
-        "id": "minecraft:netherite_ingot",
-        "price": 300.0,
-        "low": 300.0,
-        "high": 300.0,
-        "bid": null,
-        "shops": 1,
-        "sellers": 1,
-        "listings": [
-          {
-            "seller": "DatAriix",
-            "price": 300.0,
-            "type": "sell",
-            "world": "world",
-            "x": -237,
-            "y": 66,
-            "z": 3430,
-            "land": "Reach"
-          }
-        ]
-      },
-      {
-        "name": "Orange Shulker Box",
-        "id": "minecraft:orange_shulker_box",
-        "price": 100.0,
-        "low": 100.0,
-        "high": 100.0,
-        "bid": null,
-        "shops": 1,
-        "sellers": 1,
-        "listings": [
-          {
-            "seller": "WhenAtRome",
-            "price": 100.0,
-            "type": "sell",
-            "world": "world",
-            "x": -230,
-            "y": 66,
-            "z": 3428,
-            "land": "Reach"
+            "x": -106,
+            "y": 63,
+            "z": -1168,
+            "land": "ACRI_Vanguard"
           }
         ]
       },
@@ -1420,89 +963,23 @@
         ]
       },
       {
-        "name": "Red Shulker Box",
-        "id": "minecraft:red_shulker_box",
-        "price": 100.0,
-        "low": 100.0,
-        "high": 100.0,
-        "bid": null,
-        "shops": 1,
-        "sellers": 1,
-        "listings": [
-          {
-            "seller": "WhenAtRome",
-            "price": 100.0,
-            "type": "sell",
-            "world": "world",
-            "x": -231,
-            "y": 66,
-            "z": 3428,
-            "land": "Reach"
-          }
-        ]
-      },
-      {
-        "name": "Sentry Armor Trim Smithing Template",
-        "id": "minecraft:sentry_armor_trim_smithing_template",
-        "price": 50.0,
-        "low": 50.0,
-        "high": 50.0,
-        "bid": null,
-        "shops": 1,
-        "sellers": 1,
-        "listings": [
-          {
-            "seller": "WhenAtRome",
-            "price": 50.0,
-            "type": "sell",
-            "world": "world",
-            "x": -237,
-            "y": 66,
-            "z": 3432,
-            "land": "Reach"
-          }
-        ]
-      },
-      {
         "name": "Silence Armor Trim Smithing Template",
         "id": "minecraft:silence_armor_trim_smithing_template",
-        "price": 115.0,
-        "low": 115.0,
-        "high": 115.0,
+        "price": 125.0,
+        "low": 125.0,
+        "high": 125.0,
         "bid": null,
         "shops": 1,
         "sellers": 1,
         "listings": [
           {
             "seller": "DatAriix",
-            "price": 115.0,
+            "price": 125.0,
             "type": "sell",
             "world": "world",
-            "x": -234,
-            "y": 67,
-            "z": 3438,
-            "land": "Reach"
-          }
-        ]
-      },
-      {
-        "name": "Spruce Sapling",
-        "id": "minecraft:spruce_sapling",
-        "price": 10.0,
-        "low": 10.0,
-        "high": 10.0,
-        "bid": null,
-        "shops": 1,
-        "sellers": 1,
-        "listings": [
-          {
-            "seller": "DatAriix",
-            "price": 10.0,
-            "type": "sell",
-            "world": "world",
-            "x": -235,
-            "y": 67,
-            "z": 3438,
+            "x": -228,
+            "y": 66,
+            "z": 3430,
             "land": "Reach"
           }
         ]
@@ -1576,7 +1053,7 @@
     "mean": 75.49
   },
   "server": {
-    "checked": "2026-09-20T18:32:35Z",
+    "checked": "2026-09-20T18:52:47Z",
     "started_at": "2026-09-20T12:12:26Z",
     "tps": 20.0
   },
@@ -1592,7 +1069,7 @@
       "wealth": 1.0,
       "activity": 1.0,
       "chunks": 93,
-      "members": 32,
+      "members": 31,
       "treasury": 1563.0
     },
     {
@@ -1669,7 +1146,7 @@
       "name": "Goldmarche",
       "type": "land",
       "chunks": 14,
-      "members": 10,
+      "members": 9,
       "bank": 53.0,
       "level": 0,
       "color": "#A3E085"
