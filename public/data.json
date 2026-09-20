@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-20T14:12:52Z",
+  "generated": "2026-09-20T14:28:30Z",
   "meta": {
     "players_tracked": 72,
     "active_traders": 13,
@@ -1643,7 +1643,7 @@
     "mean": 45.17
   },
   "server": {
-    "checked": "2026-09-20T14:12:52Z",
+    "checked": "2026-09-20T14:28:31Z",
     "started_at": "2026-09-20T12:12:26Z",
     "tps": 20.0
   },
@@ -1701,8 +1701,8 @@
       "type": "land",
       "chunks": 58,
       "members": 9,
-      "bank": 491.0,
-      "level": 1,
+      "bank": 866.0,
+      "level": 2,
       "color": "#C0CAF3"
     },
     {
@@ -1728,7 +1728,7 @@
       "type": "land",
       "chunks": 19,
       "members": 10,
-      "bank": 2893.0,
+      "bank": 2518.0,
       "level": 2,
       "color": "#66979D"
     },
