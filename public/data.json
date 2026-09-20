@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-20T14:42:47Z",
+  "generated": "2026-09-20T14:54:41Z",
   "meta": {
     "players_tracked": 72,
     "active_traders": 13,
@@ -27,11 +27,11 @@
     },
     "supply": {
       "total": 16812.05,
-      "on_hand": 116,
+      "on_hand": 111,
       "ender_chests": 3141,
       "containers": 5801,
       "loose": 17,
-      "land_banks": 7737.05,
+      "land_banks": 7742.05,
       "coverage": {
         "files": 1052,
         "fresh": 1052,
@@ -111,13 +111,13 @@
         ],
         [
           "2026-09-20",
-          4706.0,
-          1395.0
+          5150.0,
+          1780.0
         ]
       ],
-      "spent_7d": 16051.0,
-      "received_7d": 8006.0,
-      "transactions": 165
+      "spent_7d": 16495.0,
+      "received_7d": 8391.0,
+      "transactions": 168
     },
     "trade_volume_series": [
       [
@@ -131,7 +131,7 @@
     ],
     "trade_volume_7d": 265.0,
     "chest_shop_transactions": 1,
-    "gini": 0.968,
+    "gini": 0.969,
     "price_index": {
       "value": 55.0,
       "series": [
@@ -1113,28 +1113,6 @@
         ]
       },
       {
-        "name": "Enchanted Book (Mending)",
-        "id": "minecraft:enchanted_book",
-        "price": null,
-        "low": null,
-        "high": null,
-        "bid": 1000.0,
-        "shops": 1,
-        "sellers": 1,
-        "listings": [
-          {
-            "seller": "WhenAtRome",
-            "price": 1000.0,
-            "type": "buy",
-            "world": "world",
-            "x": -231,
-            "y": 67,
-            "z": 3428,
-            "land": "Reach"
-          }
-        ]
-      },
-      {
         "name": "Enchanted Book (Silk Touch)",
         "id": "minecraft:enchanted_book",
         "price": 30.0,
@@ -1611,10 +1589,6 @@
         "balance": 13
       },
       {
-        "name": "DatAriix",
-        "balance": 5
-      },
-      {
         "name": "BabieDolphin",
         "balance": 2
       },
@@ -1637,13 +1611,17 @@
       {
         "name": "Augustine65480",
         "balance": 0
+      },
+      {
+        "name": "Lagmanium",
+        "balance": 0
       }
     ],
     "median": 0.0,
-    "mean": 45.24
+    "mean": 45.17
   },
   "server": {
-    "checked": "2026-09-20T14:42:48Z",
+    "checked": "2026-09-20T14:54:41Z",
     "started_at": "2026-09-20T12:12:26Z",
     "tps": 20.0
   },
@@ -1660,7 +1638,7 @@
       "activity": 1.0,
       "chunks": 93,
       "members": 32,
-      "treasury": 3691.0
+      "treasury": 3696.0
     },
     {
       "name": "Thalassos",
@@ -1701,7 +1679,7 @@
       "type": "land",
       "chunks": 58,
       "members": 9,
-      "bank": 920.0,
+      "bank": 1310.0,
       "level": 2,
       "color": "#C0CAF3"
     },
@@ -1728,7 +1706,7 @@
       "type": "land",
       "chunks": 19,
       "members": 10,
-      "bank": 2518.0,
+      "bank": 2133.0,
       "level": 2,
       "color": "#66979D"
     },
