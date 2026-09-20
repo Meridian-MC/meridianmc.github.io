@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-20T03:16:22Z",
+  "generated": "2026-09-20T03:42:15Z",
   "meta": {
     "players_tracked": 72,
     "active_traders": 13,
@@ -26,21 +26,21 @@
       "note": "Gold launched 2026-09-12. Needs 8+ active traders and 14+ days of history; currently 13 traders / 8 days."
     },
     "supply": {
-      "total": 15201.05,
+      "total": 15205.05,
       "on_hand": 107,
       "ender_chests": 3006,
       "containers": 4392,
       "loose": 17,
-      "land_banks": 7679.05,
+      "land_banks": 7683.05,
       "coverage": {
         "files": 1052,
-        "fresh": 1052,
-        "stale": 0,
+        "fresh": 1050,
+        "stale": 2,
         "unscanned": 0,
         "percent": 100.0
       }
     },
-    "money_supply_players": 15201.05,
+    "money_supply_players": 15205.05,
     "money_supply_series": [
       [
         "2026-09-15",
@@ -64,7 +64,7 @@
       ],
       [
         "2026-09-20",
-        15201.05
+        15205.05
       ]
     ],
     "flow": {
@@ -1643,7 +1643,7 @@
     "mean": 43.24
   },
   "server": {
-    "checked": "2026-09-20T03:16:22Z",
+    "checked": "2026-09-20T03:42:15Z",
     "started_at": "2026-09-19T23:43:23Z",
     "tps": 20.0
   },
@@ -1706,13 +1706,13 @@
       "color": "#C0CAF3"
     },
     {
-      "name": "Mingasty",
+      "name": "Diddy Ahh Land",
       "type": "land",
       "chunks": 27,
       "members": 3,
-      "bank": 0.0,
+      "bank": 4.0,
       "level": 0,
-      "color": "#E967D5"
+      "color": null
     },
     {
       "name": "Rare Fish Industries",
@@ -1917,7 +1917,7 @@
     {
       "type": "land",
       "at": "2026-09-13T05:41:08Z",
-      "text": "Mingasty was founded",
+      "text": "Diddy Ahh Land was founded",
       "owner": "Mingasty"
     },
     {
