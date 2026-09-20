@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-20T19:25:02Z",
+  "generated": "2026-09-20T19:38:29Z",
   "meta": {
     "players_tracked": 72,
     "active_traders": 13,
@@ -27,15 +27,15 @@
     },
     "supply": {
       "total": 16979.05,
-      "on_hand": 147,
-      "ender_chests": 5288,
+      "on_hand": 532,
+      "ender_chests": 4903,
       "containers": 5918,
       "loose": 17,
       "land_banks": 5609.05,
       "coverage": {
         "files": 1052,
-        "fresh": 1003,
-        "stale": 49,
+        "fresh": 1015,
+        "stale": 37,
         "unscanned": 0,
         "percent": 100.0
       }
@@ -1053,8 +1053,8 @@
     "mean": 75.49
   },
   "server": {
-    "checked": "2026-09-20T19:25:03Z",
-    "started_at": "2026-09-20T12:12:26Z",
+    "checked": "2026-09-20T19:38:29Z",
+    "started_at": "2026-09-20T12:12:25Z",
     "tps": 20.0
   },
   "nations": [
