@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-20T16:14:04Z",
+  "generated": "2026-09-20T16:29:38Z",
   "meta": {
     "players_tracked": 72,
     "active_traders": 13,
@@ -26,12 +26,12 @@
       "note": "Gold launched 2026-09-12. Needs 8+ active traders and 14+ days of history; currently 13 traders / 8 days."
     },
     "supply": {
-      "total": 16872.05,
-      "on_hand": 161,
+      "total": 16975.05,
+      "on_hand": 147,
       "ender_chests": 3141,
-      "containers": 5811,
+      "containers": 5914,
       "loose": 17,
-      "land_banks": 7742.05,
+      "land_banks": 7756.05,
       "coverage": {
         "files": 1052,
         "fresh": 1052,
@@ -40,7 +40,7 @@
         "percent": 100.0
       }
     },
-    "money_supply_players": 16872.05,
+    "money_supply_players": 16975.05,
     "money_supply_series": [
       [
         "2026-09-15",
@@ -64,7 +64,7 @@
       ],
       [
         "2026-09-20",
-        16872.05
+        16975.05
       ]
     ],
     "flow": {
@@ -122,7 +122,7 @@
     "trade_volume_series": [],
     "trade_volume_7d": 0,
     "chest_shop_transactions": 0,
-    "gini": 0.966,
+    "gini": 0.967,
     "price_index": {
       "value": null,
       "series": [],
@@ -166,10 +166,6 @@
         "balance": 19
       },
       {
-        "name": "WhenAtRome",
-        "balance": 14
-      },
-      {
         "name": "klaksonik",
         "balance": 13
       },
@@ -192,13 +188,17 @@
       {
         "name": "X_Professor_YT",
         "balance": 0
+      },
+      {
+        "name": "Lagmanium",
+        "balance": 0
       }
     ],
     "median": 0.0,
-    "mean": 45.86
+    "mean": 45.67
   },
   "server": {
-    "checked": "2026-09-20T16:14:04Z",
+    "checked": "2026-09-20T16:29:39Z",
     "started_at": "2026-09-20T12:12:26Z",
     "tps": 20.0
   },
@@ -215,7 +215,7 @@
       "activity": 1.0,
       "chunks": 93,
       "members": 32,
-      "treasury": 3696.0
+      "treasury": 3710.0
     },
     {
       "name": "Thalassos",
@@ -283,7 +283,7 @@
       "type": "land",
       "chunks": 19,
       "members": 10,
-      "bank": 2133.0,
+      "bank": 2147.0,
       "level": 2,
       "color": "#66979D"
     },
