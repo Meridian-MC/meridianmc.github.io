@@ -1,8 +1,8 @@
 {
-  "generated": "2026-09-20T02:14:06Z",
+  "generated": "2026-09-20T02:31:19Z",
   "meta": {
     "players_tracked": 72,
-    "active_traders": 12,
+    "active_traders": 13,
     "data_days": 8,
     "sufficient": false,
     "demo": false,
@@ -23,15 +23,15 @@
     "classification": {
       "code": "INSUFFICIENT_DATA",
       "label": "Insufficient data",
-      "note": "Gold launched 2026-09-12. Needs 8+ active traders and 14+ days of history; currently 12 traders / 8 days."
+      "note": "Gold launched 2026-09-12. Needs 8+ active traders and 14+ days of history; currently 13 traders / 8 days."
     },
     "supply": {
-      "total": 13235.05,
-      "on_hand": 282,
+      "total": 14928.05,
+      "on_hand": 109,
       "ender_chests": 2876,
-      "containers": 5355,
+      "containers": 4247,
       "loose": 17,
-      "land_banks": 4705.05,
+      "land_banks": 7679.05,
       "coverage": {
         "files": 1052,
         "fresh": 1052,
@@ -40,7 +40,7 @@
         "percent": 100.0
       }
     },
-    "money_supply_players": 13235.05,
+    "money_supply_players": 14928.05,
     "money_supply_series": [
       [
         "2026-09-15",
@@ -64,7 +64,7 @@
       ],
       [
         "2026-09-20",
-        13235.05
+        14928.05
       ]
     ],
     "flow": {
@@ -111,13 +111,13 @@
         ],
         [
           "2026-09-20",
-          10.0,
-          0.0
+          1994.0,
+          500.0
         ]
       ],
-      "spent_7d": 11355.0,
-      "received_7d": 6611.0,
-      "transactions": 145
+      "spent_7d": 13339.0,
+      "received_7d": 7111.0,
+      "transactions": 153
     },
     "trade_volume_series": [
       [
@@ -131,7 +131,7 @@
     ],
     "trade_volume_7d": 265.0,
     "chest_shop_transactions": 1,
-    "gini": 0.972,
+    "gini": 0.977,
     "price_index": {
       "value": 55.0,
       "series": [
@@ -1118,13 +1118,13 @@
         "price": null,
         "low": null,
         "high": null,
-        "bid": 700.0,
+        "bid": 1000.0,
         "shops": 1,
         "sellers": 1,
         "listings": [
           {
             "seller": "WhenAtRome",
-            "price": 700.0,
+            "price": 1000.0,
             "type": "buy",
             "world": "world",
             "x": -231,
@@ -1587,10 +1587,6 @@
         "balance": 385
       },
       {
-        "name": "WhenAtRome",
-        "balance": 177
-      },
-      {
         "name": "1RTR",
         "balance": 137
       },
@@ -1608,7 +1604,7 @@
       },
       {
         "name": "Giggsy__",
-        "balance": 10
+        "balance": 12
       },
       {
         "name": "BabieDolphin",
@@ -1616,6 +1612,10 @@
       },
       {
         "name": "BlackAdder83",
+        "balance": 2
+      },
+      {
+        "name": "Vhazaar",
         "balance": 2
       },
       {
@@ -1640,11 +1640,11 @@
       }
     ],
     "median": 0.0,
-    "mean": 43.86
+    "mean": 41.46
   },
   "server": {
-    "checked": "2026-09-20T02:14:06Z",
-    "started_at": "2026-09-19T23:43:24Z",
+    "checked": "2026-09-20T02:31:19Z",
+    "started_at": "2026-09-19T23:43:23Z",
     "tps": 20.0
   },
   "nations": [
@@ -1659,8 +1659,8 @@
       "wealth": 1.0,
       "activity": 1.0,
       "chunks": 93,
-      "members": 31,
-      "treasury": 2348.0
+      "members": 32,
+      "treasury": 3637.0
     },
     {
       "name": "Thalassos",
@@ -1701,7 +1701,7 @@
       "type": "land",
       "chunks": 58,
       "members": 9,
-      "bank": 370.0,
+      "bank": 371.0,
       "level": 1,
       "color": "#C0CAF3"
     },
@@ -1728,7 +1728,7 @@
       "type": "land",
       "chunks": 19,
       "members": 10,
-      "bank": 1962.0,
+      "bank": 3213.0,
       "level": 2,
       "color": "#66979D"
     },
@@ -1736,8 +1736,8 @@
       "name": "Goldmarche",
       "type": "land",
       "chunks": 14,
-      "members": 9,
-      "bank": 16.0,
+      "members": 10,
+      "bank": 53.0,
       "level": 0,
       "color": "#A3E085"
     },
@@ -1764,7 +1764,7 @@
       "type": "land",
       "chunks": 4,
       "members": 3,
-      "bank": 20.0,
+      "bank": 1705.0,
       "level": 0,
       "color": "#94B8C3"
     },
