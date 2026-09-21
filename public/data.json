@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-21T23:28:57Z",
+  "generated": "2026-09-21T23:43:46Z",
   "meta": {
     "players_tracked": 72,
     "active_traders": 13,
@@ -26,11 +26,11 @@
       "note": "Gold launched 2026-09-12. Needs 8+ active traders and 14+ days of history; currently 13 traders / 9 days."
     },
     "supply": {
-      "total": 17262.23,
-      "on_hand": 111,
+      "total": 17413.23,
+      "on_hand": 244,
       "ender_chests": 3127,
       "containers": 5926,
-      "loose": 17,
+      "loose": 35,
       "land_banks": 8081.23,
       "coverage": {
         "files": 1052,
@@ -40,7 +40,7 @@
         "percent": 100.0
       }
     },
-    "money_supply_players": 17262.23,
+    "money_supply_players": 17413.23,
     "money_supply_series": [
       [
         "2026-09-15",
@@ -68,7 +68,7 @@
       ],
       [
         "2026-09-21",
-        17262.23
+        17413.23
       ]
     ],
     "flow": {
@@ -140,7 +140,7 @@
     ],
     "trade_volume_7d": 265.0,
     "chest_shop_transactions": 1,
-    "gini": 0.969,
+    "gini": 0.963,
     "price_index": {
       "value": 101.9,
       "series": [
@@ -1005,6 +1005,10 @@
         "balance": 137
       },
       {
+        "name": "WhenAtRome",
+        "balance": 128
+      },
+      {
         "name": "Croissantasaur",
         "balance": 32
       },
@@ -1015,6 +1019,10 @@
       {
         "name": "Aorus6320",
         "balance": 13
+      },
+      {
+        "name": "Vhazaar",
+        "balance": 5
       },
       {
         "name": "BabieDolphin",
@@ -1035,22 +1043,14 @@
       {
         "name": "X_Professor_YT",
         "balance": 0
-      },
-      {
-        "name": "Augustine65480",
-        "balance": 0
-      },
-      {
-        "name": "Lagmanium",
-        "balance": 0
       }
     ],
     "median": 0.0,
-    "mean": 44.97
+    "mean": 46.82
   },
   "server": {
-    "checked": "2026-09-21T23:28:58Z",
-    "started_at": "2026-09-21T14:32:48Z",
+    "checked": "2026-09-21T23:43:46Z",
+    "started_at": "2026-09-21T14:32:47Z",
     "tps": 20.0
   },
   "nations": [
