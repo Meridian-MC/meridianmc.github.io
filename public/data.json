@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-21T14:32:36Z",
+  "generated": "2026-09-21T14:54:46Z",
   "meta": {
     "players_tracked": 72,
     "active_traders": 13,
@@ -26,10 +26,10 @@
       "note": "Gold launched 2026-09-12. Needs 8+ active traders and 14+ days of history; currently 13 traders / 9 days."
     },
     "supply": {
-      "total": 17346.05,
+      "total": 17474.05,
       "on_hand": 111,
       "ender_chests": 5288,
-      "containers": 6040,
+      "containers": 6168,
       "loose": 17,
       "land_banks": 5890.05,
       "coverage": {
@@ -40,7 +40,7 @@
         "percent": 100.0
       }
     },
-    "money_supply_players": 17346.05,
+    "money_supply_players": 17474.05,
     "money_supply_series": [
       [
         "2026-09-15",
@@ -68,7 +68,7 @@
       ],
       [
         "2026-09-21",
-        17346.05
+        17474.05
       ]
     ],
     "flow": {
@@ -1043,7 +1043,11 @@
     "median": 0.0,
     "mean": 74.99
   },
-  "server": {},
+  "server": {
+    "checked": "2026-09-21T14:54:46Z",
+    "started_at": "2026-09-21T14:32:47Z",
+    "tps": 20.0
+  },
   "nations": [
     {
       "name": "Augustine Empire",
