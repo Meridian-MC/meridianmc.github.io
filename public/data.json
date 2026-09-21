@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-21T15:57:00Z",
+  "generated": "2026-09-21T16:16:21Z",
   "meta": {
     "players_tracked": 72,
     "active_traders": 13,
@@ -1044,8 +1044,8 @@
     "mean": 74.99
   },
   "server": {
-    "checked": "2026-09-21T15:57:01Z",
-    "started_at": "2026-09-21T14:32:48Z",
+    "checked": "2026-09-21T16:16:21Z",
+    "started_at": "2026-09-21T14:32:47Z",
     "tps": 20.0
   },
   "nations": [
@@ -1060,7 +1060,7 @@
       "wealth": 1.0,
       "activity": 1.0,
       "chunks": 93,
-      "members": 31,
+      "members": 23,
       "treasury": 1844.0
     },
     {
@@ -1128,9 +1128,9 @@
       "name": "Reach",
       "type": "land",
       "chunks": 19,
-      "members": 10,
+      "members": 2,
       "bank": 192.0,
-      "level": 1,
+      "level": 0,
       "color": "#66979D"
     },
     {
