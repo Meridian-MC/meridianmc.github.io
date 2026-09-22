@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-22T17:43:24Z",
+  "generated": "2026-09-22T17:55:12Z",
   "meta": {
     "players_tracked": 72,
     "active_traders": 13,
@@ -26,10 +26,10 @@
       "note": "Gold launched 2026-09-12. Needs 8+ active traders and 14+ days of history; currently 13 traders / 10 days."
     },
     "supply": {
-      "total": 17796.78,
+      "total": 17760.78,
       "on_hand": 111,
       "ender_chests": 3127,
-      "containers": 6236,
+      "containers": 6200,
       "loose": 17,
       "land_banks": 8305.78,
       "coverage": {
@@ -40,7 +40,7 @@
         "percent": 100.0
       }
     },
-    "money_supply_players": 17796.78,
+    "money_supply_players": 17760.78,
     "money_supply_series": [
       [
         "2026-09-15",
@@ -72,7 +72,7 @@
       ],
       [
         "2026-09-22",
-        17796.78
+        17760.78
       ]
     ],
     "flow": {
@@ -192,8 +192,8 @@
       {
         "name": "Experience Bottle",
         "unit": "each",
-        "price": 4.75,
-        "change_7d": -0.3448,
+        "price": 4.25,
+        "change_7d": -0.4138,
         "shops": 2,
         "sellers": 2,
         "series": [
@@ -227,7 +227,7 @@
           ],
           [
             "2026-09-22",
-            4.75
+            4.25
           ]
         ],
         "candles": [],
@@ -726,8 +726,8 @@
       {
         "name": "Experience Bottle",
         "id": "minecraft:experience_bottle",
-        "price": 4.75,
-        "low": 2.0,
+        "price": 4.25,
+        "low": 1.0,
         "high": 7.5,
         "bid": null,
         "shops": 2,
@@ -735,7 +735,7 @@
         "listings": [
           {
             "seller": "Keanie__",
-            "price": 2.0,
+            "price": 1.0,
             "type": "sell",
             "world": "world",
             "x": -99,
@@ -1110,7 +1110,7 @@
     "mean": 44.97
   },
   "server": {
-    "checked": "2026-09-22T17:43:24Z",
+    "checked": "2026-09-22T17:55:13Z",
     "started_at": "2026-09-22T12:12:23Z",
     "tps": 20.0
   },
