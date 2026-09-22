@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-22T17:55:12Z",
+  "generated": "2026-09-22T18:17:05Z",
   "meta": {
     "players_tracked": 72,
     "active_traders": 13,
@@ -26,12 +26,12 @@
       "note": "Gold launched 2026-09-12. Needs 8+ active traders and 14+ days of history; currently 13 traders / 10 days."
     },
     "supply": {
-      "total": 17760.78,
+      "total": 17655.49,
       "on_hand": 111,
       "ender_chests": 3127,
       "containers": 6200,
       "loose": 17,
-      "land_banks": 8305.78,
+      "land_banks": 8200.49,
       "coverage": {
         "files": 1052,
         "fresh": 1052,
@@ -40,7 +40,7 @@
         "percent": 100.0
       }
     },
-    "money_supply_players": 17760.78,
+    "money_supply_players": 17655.49,
     "money_supply_series": [
       [
         "2026-09-15",
@@ -72,7 +72,7 @@
       ],
       [
         "2026-09-22",
-        17760.78
+        17655.49
       ]
     ],
     "flow": {
@@ -1110,7 +1110,7 @@
     "mean": 44.97
   },
   "server": {
-    "checked": "2026-09-22T17:55:13Z",
+    "checked": "2026-09-22T18:17:06Z",
     "started_at": "2026-09-22T12:12:23Z",
     "tps": 20.0
   },
@@ -1218,6 +1218,15 @@
       "color": "#B6B06C"
     },
     {
+      "name": "New Reach",
+      "type": "land",
+      "chunks": 8,
+      "members": 3,
+      "bank": 434.76,
+      "level": 0,
+      "color": "#8AB271"
+    },
+    {
       "name": "Grease Lands",
       "type": "land",
       "chunks": 5,
@@ -1252,15 +1261,6 @@
       "bank": 20.0,
       "level": 0,
       "color": "#66D7CC"
-    },
-    {
-      "name": "New Reach",
-      "type": "land",
-      "chunks": 4,
-      "members": 3,
-      "bank": 540.05,
-      "level": 0,
-      "color": "#8AB271"
     },
     {
       "name": "klaksonik",
