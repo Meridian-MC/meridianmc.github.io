@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-22T17:29:15Z",
+  "generated": "2026-09-22T17:43:24Z",
   "meta": {
     "players_tracked": 72,
     "active_traders": 13,
@@ -1110,7 +1110,7 @@
     "mean": 44.97
   },
   "server": {
-    "checked": "2026-09-22T17:29:16Z",
+    "checked": "2026-09-22T17:43:24Z",
     "started_at": "2026-09-22T12:12:23Z",
     "tps": 20.0
   },
@@ -1257,7 +1257,7 @@
       "name": "New Reach",
       "type": "land",
       "chunks": 4,
-      "members": 2,
+      "members": 3,
       "bank": 540.05,
       "level": 0,
       "color": "#8AB271"
