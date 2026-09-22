@@ -129,8 +129,8 @@
   "minecraft/overworld/entities/r.-1.6.mca": {
    "gold": 0,
    "holders": 0,
-   "mtime": "20260922042623",
-   "scanned_at": "2026-09-22T04:30:11Z",
+   "mtime": "20260922044123",
+   "scanned_at": "2026-09-22T04:45:46Z",
    "size": 4378624
   },
   "minecraft/overworld/entities/r.-1.7.mca": {
@@ -3531,8 +3531,8 @@
   "minecraft/overworld/region/r.-1.6.mca": {
    "gold": 0,
    "holders": 0,
-   "mtime": "20260922042622",
-   "scanned_at": "2026-09-22T04:30:12Z",
+   "mtime": "20260922044122",
+   "scanned_at": "2026-09-22T04:45:47Z",
    "size": 10649600
   },
   "minecraft/overworld/region/r.-1.7.mca": {
