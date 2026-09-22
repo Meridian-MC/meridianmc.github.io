@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-22T23:40:27Z",
+  "generated": "2026-09-22T23:52:17Z",
   "meta": {
     "players_tracked": 72,
     "active_traders": 13,
@@ -26,10 +26,10 @@
       "note": "Gold launched 2026-09-12. Needs 8+ active traders and 14+ days of history; currently 13 traders / 10 days."
     },
     "supply": {
-      "total": 17781.73,
+      "total": 17783.73,
       "on_hand": 105,
       "ender_chests": 3127,
-      "containers": 6183,
+      "containers": 6185,
       "loose": 17,
       "land_banks": 8349.73,
       "coverage": {
@@ -40,7 +40,7 @@
         "percent": 100.0
       }
     },
-    "money_supply_players": 17781.73,
+    "money_supply_players": 17783.73,
     "money_supply_series": [
       [
         "2026-09-15",
@@ -72,7 +72,7 @@
       ],
       [
         "2026-09-22",
-        17781.73
+        17783.73
       ]
     ],
     "flow": {
@@ -1110,8 +1110,8 @@
     "mean": 44.89
   },
   "server": {
-    "checked": "2026-09-22T23:40:27Z",
-    "started_at": "2026-09-22T12:12:22Z",
+    "checked": "2026-09-22T23:52:18Z",
+    "started_at": "2026-09-22T12:12:23Z",
     "tps": 20.0
   },
   "nations": [
