@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-22T18:17:05Z",
+  "generated": "2026-09-22T18:44:01Z",
   "meta": {
     "players_tracked": 72,
     "active_traders": 13,
@@ -26,12 +26,12 @@
       "note": "Gold launched 2026-09-12. Needs 8+ active traders and 14+ days of history; currently 13 traders / 10 days."
     },
     "supply": {
-      "total": 17655.49,
+      "total": 17654.73,
       "on_hand": 111,
       "ender_chests": 3127,
       "containers": 6200,
       "loose": 17,
-      "land_banks": 8200.49,
+      "land_banks": 8199.73,
       "coverage": {
         "files": 1052,
         "fresh": 1052,
@@ -40,7 +40,7 @@
         "percent": 100.0
       }
     },
-    "money_supply_players": 17655.49,
+    "money_supply_players": 17654.73,
     "money_supply_series": [
       [
         "2026-09-15",
@@ -72,7 +72,7 @@
       ],
       [
         "2026-09-22",
-        17655.49
+        17654.73
       ]
     ],
     "flow": {
@@ -129,13 +129,13 @@
         ],
         [
           "2026-09-22",
-          727.0,
-          622.0
+          1001.0,
+          896.0
         ]
       ],
-      "spent_7d": 17903.0,
-      "received_7d": 8823.0,
-      "transactions": 182
+      "spent_7d": 18177.0,
+      "received_7d": 9097.0,
+      "transactions": 187
     },
     "trade_volume_series": [
       [
@@ -1110,7 +1110,7 @@
     "mean": 44.97
   },
   "server": {
-    "checked": "2026-09-22T18:17:06Z",
+    "checked": "2026-09-22T18:44:01Z",
     "started_at": "2026-09-22T12:12:23Z",
     "tps": 20.0
   },
@@ -1127,7 +1127,7 @@
       "activity": 1.0,
       "chunks": 102,
       "members": 25,
-      "treasury": 3719.68
+      "treasury": 4039.68
     },
     {
       "name": "Thalassos",
@@ -1204,7 +1204,7 @@
       "type": "land",
       "chunks": 16,
       "members": 2,
-      "bank": 105.0,
+      "bank": 425.0,
       "level": 0,
       "color": "#66979D"
     },
@@ -1222,7 +1222,7 @@
       "type": "land",
       "chunks": 8,
       "members": 3,
-      "bank": 434.76,
+      "bank": 114.0,
       "level": 0,
       "color": "#8AB271"
     },
