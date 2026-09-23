@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-23T17:13:50Z",
+  "generated": "2026-09-23T17:30:06Z",
   "meta": {
     "players_tracked": 72,
     "active_traders": 12,
@@ -27,9 +27,9 @@
     },
     "supply": {
       "total": 18581.28,
-      "on_hand": 140,
+      "on_hand": 142,
       "ender_chests": 3129,
-      "containers": 6915,
+      "containers": 6913,
       "loose": 17,
       "land_banks": 8380.28,
       "coverage": {
@@ -1147,6 +1147,10 @@
         "balance": 2
       },
       {
+        "name": "ACRI_Vanguard",
+        "balance": 2
+      },
+      {
         "name": "winterrrly",
         "balance": 0
       },
@@ -1161,17 +1165,13 @@
       {
         "name": "Augustine65480",
         "balance": 0
-      },
-      {
-        "name": "Lagmanium",
-        "balance": 0
       }
     ],
     "median": 0.0,
-    "mean": 45.4
+    "mean": 45.43
   },
   "server": {
-    "checked": "2026-09-23T17:13:50Z",
+    "checked": "2026-09-23T17:30:06Z",
     "started_at": "2026-09-23T12:12:32Z",
     "tps": 20.0
   },
