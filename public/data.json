@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-23T15:15:31Z",
+  "generated": "2026-09-23T15:33:13Z",
   "meta": {
     "players_tracked": 72,
     "active_traders": 12,
@@ -26,12 +26,12 @@
       "note": "Gold launched 2026-09-12. Needs 8+ active traders and 14+ days of history; currently 12 traders / 11 days."
     },
     "supply": {
-      "total": 18627.73,
+      "total": 18581.28,
       "on_hand": 140,
       "ender_chests": 3129,
       "containers": 6915,
       "loose": 17,
-      "land_banks": 8426.73,
+      "land_banks": 8380.28,
       "coverage": {
         "files": 1052,
         "fresh": 1052,
@@ -40,7 +40,7 @@
         "percent": 100.0
       }
     },
-    "money_supply_players": 18627.73,
+    "money_supply_players": 18581.28,
     "money_supply_series": [
       [
         "2026-09-15",
@@ -76,7 +76,7 @@
       ],
       [
         "2026-09-23",
-        18627.73
+        18581.28
       ]
     ],
     "flow": {
@@ -1171,7 +1171,7 @@
     "mean": 45.4
   },
   "server": {
-    "checked": "2026-09-23T15:15:31Z",
+    "checked": "2026-09-23T15:33:13Z",
     "started_at": "2026-09-23T12:12:32Z",
     "tps": 20.0
   },
@@ -1272,9 +1272,9 @@
     {
       "name": "Keanie__",
       "type": "land",
-      "chunks": 9,
+      "chunks": 11,
       "members": 8,
-      "bank": 190.05,
+      "bank": 143.6,
       "level": 1,
       "color": "#B6B06C"
     },
