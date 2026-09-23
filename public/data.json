@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-23T20:32:40Z",
+  "generated": "2026-09-23T21:14:33Z",
   "meta": {
     "players_tracked": 72,
     "active_traders": 12,
@@ -26,12 +26,12 @@
       "note": "Gold launched 2026-09-12. Needs 8+ active traders and 14+ days of history; currently 12 traders / 11 days."
     },
     "supply": {
-      "total": 18381.33,
+      "total": 18378.33,
       "on_hand": 142,
       "ender_chests": 4129,
       "containers": 6733,
       "loose": 17,
-      "land_banks": 7360.33,
+      "land_banks": 7357.33,
       "coverage": {
         "files": 1052,
         "fresh": 1052,
@@ -40,7 +40,7 @@
         "percent": 100.0
       }
     },
-    "money_supply_players": 18381.33,
+    "money_supply_players": 18378.33,
     "money_supply_series": [
       [
         "2026-09-15",
@@ -76,7 +76,7 @@
       ],
       [
         "2026-09-23",
-        18381.33
+        18378.33
       ]
     ],
     "flow": {
@@ -138,13 +138,13 @@
         ],
         [
           "2026-09-23",
-          1260.0,
-          2021.0
+          1261.0,
+          2022.0
         ]
       ],
-      "spent_7d": 19583.0,
-      "received_7d": 11118.0,
-      "transactions": 201
+      "spent_7d": 19584.0,
+      "received_7d": 11119.0,
+      "transactions": 203
     },
     "trade_volume_series": [
       [
@@ -1171,7 +1171,7 @@
     "mean": 59.32
   },
   "server": {
-    "checked": "2026-09-23T20:32:41Z",
+    "checked": "2026-09-23T21:14:34Z",
     "started_at": "2026-09-23T12:12:33Z",
     "tps": 20.0
   },
@@ -1180,15 +1180,15 @@
       "name": "Augustine Empire",
       "tag": null,
       "color": "#956BE8",
-      "lands": 4,
+      "lands": 5,
       "mdi": 1.0,
       "territory": 1.0,
       "population": 1.0,
       "wealth": 1.0,
       "activity": 1.0,
-      "chunks": 102,
-      "members": 26,
-      "treasury": 2810.68
+      "chunks": 106,
+      "members": 29,
+      "treasury": 3357.73
     },
     {
       "name": "Thalassos",
@@ -1319,7 +1319,7 @@
       "type": "land",
       "chunks": 4,
       "members": 3,
-      "bank": 550.05,
+      "bank": 547.05,
       "level": 0,
       "color": "#DD8764"
     },
