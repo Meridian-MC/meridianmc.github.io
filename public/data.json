@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-23T19:53:14Z",
+  "generated": "2026-09-23T20:15:33Z",
   "meta": {
     "players_tracked": 72,
     "active_traders": 12,
@@ -26,12 +26,12 @@
       "note": "Gold launched 2026-09-12. Needs 8+ active traders and 14+ days of history; currently 12 traders / 11 days."
     },
     "supply": {
-      "total": 18581.28,
+      "total": 18381.33,
       "on_hand": 142,
-      "ender_chests": 3129,
-      "containers": 6913,
+      "ender_chests": 4129,
+      "containers": 6733,
       "loose": 17,
-      "land_banks": 8380.28,
+      "land_banks": 7360.33,
       "coverage": {
         "files": 1052,
         "fresh": 1052,
@@ -40,7 +40,7 @@
         "percent": 100.0
       }
     },
-    "money_supply_players": 18581.28,
+    "money_supply_players": 18381.33,
     "money_supply_series": [
       [
         "2026-09-15",
@@ -76,7 +76,7 @@
       ],
       [
         "2026-09-23",
-        18581.28
+        18381.33
       ]
     ],
     "flow": {
@@ -138,13 +138,13 @@
         ],
         [
           "2026-09-23",
-          191.0,
-          132.0
+          1260.0,
+          2021.0
         ]
       ],
-      "spent_7d": 18514.0,
-      "received_7d": 9229.0,
-      "transactions": 191
+      "spent_7d": 19583.0,
+      "received_7d": 11118.0,
+      "transactions": 201
     },
     "trade_volume_series": [
       [
@@ -158,7 +158,7 @@
     ],
     "trade_volume_7d": 265.0,
     "chest_shop_transactions": 1,
-    "gini": 0.968,
+    "gini": 0.972,
     "price_index": {
       "value": 101.9,
       "series": [
@@ -1108,7 +1108,7 @@
     "top": [
       {
         "name": "Keanie__",
-        "balance": 2367
+        "balance": 3367
       },
       {
         "name": "JxrdanUK",
@@ -1168,10 +1168,10 @@
       }
     ],
     "median": 0.0,
-    "mean": 45.43
+    "mean": 59.32
   },
   "server": {
-    "checked": "2026-09-23T19:53:14Z",
+    "checked": "2026-09-23T20:15:33Z",
     "started_at": "2026-09-23T12:12:32Z",
     "tps": 20.0
   },
@@ -1188,7 +1188,7 @@
       "activity": 1.0,
       "chunks": 102,
       "members": 26,
-      "treasury": 4380.68
+      "treasury": 2810.68
     },
     {
       "name": "Thalassos",
@@ -1247,7 +1247,7 @@
       "type": "land",
       "chunks": 26,
       "members": 10,
-      "bank": 2015.68,
+      "bank": 515.68,
       "level": 2,
       "color": "#A3E085"
     },
@@ -1265,7 +1265,7 @@
       "type": "land",
       "chunks": 16,
       "members": 3,
-      "bank": 766.0,
+      "bank": 946.0,
       "level": 0,
       "color": "#66979D"
     },
@@ -1315,6 +1315,15 @@
       "color": "#66D7CC"
     },
     {
+      "name": "The Casino",
+      "type": "land",
+      "chunks": 4,
+      "members": 3,
+      "bank": 550.05,
+      "level": 0,
+      "color": "#DD8764"
+    },
+    {
       "name": "klaksonik",
       "type": "land",
       "chunks": 3,
@@ -1355,7 +1364,7 @@
       "type": "land",
       "chunks": 2,
       "members": 3,
-      "bank": 289.0,
+      "bank": 39.0,
       "level": 0,
       "color": "#9B7570"
     },
@@ -1415,6 +1424,12 @@
     }
   ],
   "events": [
+    {
+      "type": "land",
+      "at": "2026-09-23T20:05:16Z",
+      "text": "The Casino was founded",
+      "owner": "Augustine65480"
+    },
     {
       "type": "land",
       "at": "2026-09-19T20:14:07Z",
@@ -1528,12 +1543,6 @@
       "at": "2026-09-06T00:59:59Z",
       "text": "Pergaminthos was founded",
       "owner": "Giggsy__"
-    },
-    {
-      "type": "land",
-      "at": "2026-09-06T00:57:30Z",
-      "text": "Luko_Landino was founded",
-      "owner": "Luko_Landino"
     }
   ]
 }
