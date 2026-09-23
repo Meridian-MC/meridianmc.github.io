@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-23T21:56:13Z",
+  "generated": "2026-09-23T22:14:19Z",
   "meta": {
     "players_tracked": 72,
     "active_traders": 12,
@@ -27,9 +27,9 @@
     },
     "supply": {
       "total": 18387.33,
-      "on_hand": 151,
+      "on_hand": 142,
       "ender_chests": 4129,
-      "containers": 6733,
+      "containers": 6742,
       "loose": 17,
       "land_banks": 7357.33,
       "coverage": {
@@ -1139,10 +1139,6 @@
         "balance": 13
       },
       {
-        "name": "Augustine65480",
-        "balance": 9
-      },
-      {
         "name": "BabieDolphin",
         "balance": 2
       },
@@ -1165,13 +1161,17 @@
       {
         "name": "X_Professor_YT",
         "balance": 0
+      },
+      {
+        "name": "Augustine65480",
+        "balance": 0
       }
     ],
     "median": 0.0,
-    "mean": 59.44
+    "mean": 59.32
   },
   "server": {
-    "checked": "2026-09-23T21:56:13Z",
+    "checked": "2026-09-23T22:14:19Z",
     "started_at": "2026-09-23T12:12:32Z",
     "tps": 20.0
   },
