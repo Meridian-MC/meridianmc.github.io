@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-23T14:56:16Z",
+  "generated": "2026-09-23T15:15:31Z",
   "meta": {
     "players_tracked": 72,
     "active_traders": 12,
@@ -26,12 +26,12 @@
       "note": "Gold launched 2026-09-12. Needs 8+ active traders and 14+ days of history; currently 12 traders / 11 days."
     },
     "supply": {
-      "total": 18609.73,
+      "total": 18627.73,
       "on_hand": 140,
       "ender_chests": 3129,
       "containers": 6915,
       "loose": 17,
-      "land_banks": 8408.73,
+      "land_banks": 8426.73,
       "coverage": {
         "files": 1052,
         "fresh": 1052,
@@ -40,7 +40,7 @@
         "percent": 100.0
       }
     },
-    "money_supply_players": 18609.73,
+    "money_supply_players": 18627.73,
     "money_supply_series": [
       [
         "2026-09-15",
@@ -76,7 +76,7 @@
       ],
       [
         "2026-09-23",
-        18609.73
+        18627.73
       ]
     ],
     "flow": {
@@ -138,13 +138,13 @@
         ],
         [
           "2026-09-23",
-          59.0,
-          0.0
+          191.0,
+          132.0
         ]
       ],
-      "spent_7d": 18382.0,
-      "received_7d": 9097.0,
-      "transactions": 189
+      "spent_7d": 18514.0,
+      "received_7d": 9229.0,
+      "transactions": 191
     },
     "trade_volume_series": [
       [
@@ -1171,8 +1171,8 @@
     "mean": 45.4
   },
   "server": {
-    "checked": "2026-09-23T14:56:17Z",
-    "started_at": "2026-09-23T12:12:33Z",
+    "checked": "2026-09-23T15:15:31Z",
+    "started_at": "2026-09-23T12:12:32Z",
     "tps": 20.0
   },
   "nations": [
@@ -1188,7 +1188,7 @@
       "activity": 1.0,
       "chunks": 102,
       "members": 26,
-      "treasury": 4248.68
+      "treasury": 4380.68
     },
     {
       "name": "Thalassos",
@@ -1265,7 +1265,7 @@
       "type": "land",
       "chunks": 16,
       "members": 3,
-      "bank": 634.0,
+      "bank": 766.0,
       "level": 0,
       "color": "#66979D"
     },
@@ -1277,15 +1277,6 @@
       "bank": 190.05,
       "level": 1,
       "color": "#B6B06C"
-    },
-    {
-      "name": "New Reach",
-      "type": "land",
-      "chunks": 8,
-      "members": 3,
-      "bank": 114.0,
-      "level": 0,
-      "color": "#8AB271"
     },
     {
       "name": "Grease Lands",
@@ -1426,12 +1417,6 @@
   "events": [
     {
       "type": "land",
-      "at": "2026-09-22T17:19:29Z",
-      "text": "New Reach was founded",
-      "owner": "DatAriix"
-    },
-    {
-      "type": "land",
       "at": "2026-09-19T20:14:07Z",
       "text": "Mingasty_2 was founded",
       "owner": "Mingasty"
@@ -1543,6 +1528,12 @@
       "at": "2026-09-06T00:59:59Z",
       "text": "Pergaminthos was founded",
       "owner": "Giggsy__"
+    },
+    {
+      "type": "land",
+      "at": "2026-09-06T00:57:30Z",
+      "text": "Luko_Landino was founded",
+      "owner": "Luko_Landino"
     }
   ]
 }
