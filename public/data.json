@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-24T16:56:21Z",
+  "generated": "2026-09-24T17:12:44Z",
   "meta": {
     "players_tracked": 72,
     "active_traders": 12,
@@ -26,12 +26,12 @@
       "note": "Gold launched 2026-09-12. Needs 8+ active traders and 14+ days of history; currently 12 traders / 12 days."
     },
     "supply": {
-      "total": 18374.33,
-      "on_hand": 138,
+      "total": 18387.33,
+      "on_hand": 142,
       "ender_chests": 1914,
       "containers": 6733,
       "loose": 17,
-      "land_banks": 9572.33,
+      "land_banks": 9581.33,
       "coverage": {
         "files": 1052,
         "fresh": 1052,
@@ -40,7 +40,7 @@
         "percent": 100.0
       }
     },
-    "money_supply_players": 18374.33,
+    "money_supply_players": 18387.33,
     "money_supply_series": [
       [
         "2026-09-15",
@@ -80,7 +80,7 @@
       ],
       [
         "2026-09-24",
-        18374.33
+        18387.33
       ]
     ],
     "flow": {
@@ -147,13 +147,13 @@
         ],
         [
           "2026-09-24",
-          2215.0,
+          2224.0,
           0.0
         ]
       ],
-      "spent_7d": 21163.0,
+      "spent_7d": 21172.0,
       "received_7d": 11119.0,
-      "transactions": 206
+      "transactions": 207
     },
     "trade_volume_series": [
       [
@@ -1196,8 +1196,8 @@
         "balance": 19
       },
       {
-        "name": "DatAriix",
-        "balance": 9
+        "name": "Aorus6320",
+        "balance": 13
       },
       {
         "name": "BabieDolphin",
@@ -1229,10 +1229,10 @@
       }
     ],
     "median": 0.0,
-    "mean": 28.5
+    "mean": 28.56
   },
   "server": {
-    "checked": "2026-09-24T16:56:21Z",
+    "checked": "2026-09-24T17:12:45Z",
     "started_at": "2026-09-24T12:12:23Z",
     "tps": 20.0
   },
@@ -1249,7 +1249,7 @@
       "activity": 1.0,
       "chunks": 106,
       "members": 29,
-      "treasury": 3357.73
+      "treasury": 3366.73
     },
     {
       "name": "Thalassos",
@@ -1326,7 +1326,7 @@
       "type": "land",
       "chunks": 16,
       "members": 3,
-      "bank": 946.0,
+      "bank": 955.0,
       "level": 0,
       "color": "#66979D"
     },
