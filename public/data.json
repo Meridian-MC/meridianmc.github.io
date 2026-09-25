@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-25T18:34:51Z",
+  "generated": "2026-09-25T18:55:50Z",
   "meta": {
     "players_tracked": 73,
     "active_traders": 10,
@@ -26,12 +26,12 @@
       "note": "Gold launched 2026-09-12. Needs 8+ active traders and 14+ days of history; currently 10 traders / 13 days."
     },
     "supply": {
-      "total": 21709.33,
+      "total": 22285.33,
       "on_hand": 242,
-      "ender_chests": 2490,
-      "containers": 9039,
+      "ender_chests": 5370,
+      "containers": 6159,
       "loose": 17,
-      "land_banks": 9921.33,
+      "land_banks": 10497.33,
       "coverage": {
         "files": 1052,
         "fresh": 1052,
@@ -40,7 +40,7 @@
         "percent": 100.0
       }
     },
-    "money_supply_players": 21709.33,
+    "money_supply_players": 22285.33,
     "money_supply_series": [
       [
         "2026-09-15",
@@ -84,7 +84,7 @@
       ],
       [
         "2026-09-25",
-        21709.33
+        22285.33
       ]
     ],
     "flow": {
@@ -176,7 +176,7 @@
     ],
     "trade_volume_7d": 30.0,
     "chest_shop_transactions": 1,
-    "gini": 0.959,
+    "gini": 0.973,
     "price_index": {
       "value": 94.7,
       "series": [
@@ -1232,28 +1232,6 @@
         ]
       },
       {
-        "name": "Netherite Pickaxe (Efficiency V, Fortune III, Mending, Unbreaking III)",
-        "id": "minecraft:netherite_pickaxe",
-        "price": 5000.0,
-        "low": 5000.0,
-        "high": 5000.0,
-        "bid": null,
-        "shops": 1,
-        "sellers": 1,
-        "listings": [
-          {
-            "seller": "Keanie__",
-            "price": 5000.0,
-            "type": "sell",
-            "world": "world",
-            "x": -87,
-            "y": 65,
-            "z": -1221,
-            "land": "Keanie__"
-          }
-        ]
-      },
-      {
         "name": "Netherite Upgrade Smithing Template",
         "id": "minecraft:netherite_upgrade_smithing_template",
         "price": 10000.0,
@@ -1325,7 +1303,7 @@
     "top": [
       {
         "name": "Keanie__",
-        "balance": 1728
+        "balance": 4608
       },
       {
         "name": "JxrdanUK",
@@ -1385,10 +1363,10 @@
       }
     ],
     "median": 0,
-    "mean": 37.42
+    "mean": 76.88
   },
   "server": {
-    "checked": "2026-09-25T18:34:51Z",
+    "checked": "2026-09-25T18:55:50Z",
     "started_at": "2026-09-25T12:12:22Z",
     "tps": 20.0
   },
@@ -1491,7 +1469,7 @@
       "type": "land",
       "chunks": 11,
       "members": 8,
-      "bank": 2358.6,
+      "bank": 2934.6,
       "level": 2,
       "color": "#B6B06C"
     },
