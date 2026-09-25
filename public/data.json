@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-25T21:45:38Z",
+  "generated": "2026-09-25T22:12:45Z",
   "meta": {
     "players_tracked": 73,
     "active_traders": 10,
@@ -26,10 +26,10 @@
       "note": "Gold launched 2026-09-12. Needs 8+ active traders and 14+ days of history; currently 10 traders / 13 days."
     },
     "supply": {
-      "total": 21730.96,
+      "total": 21736.96,
       "on_hand": 386,
       "ender_chests": 762,
-      "containers": 6159,
+      "containers": 6165,
       "loose": 17,
       "land_banks": 14406.96,
       "coverage": {
@@ -40,7 +40,7 @@
         "percent": 100.0
       }
     },
-    "money_supply_players": 21730.96,
+    "money_supply_players": 21736.96,
     "money_supply_series": [
       [
         "2026-09-15",
@@ -84,7 +84,7 @@
       ],
       [
         "2026-09-25",
-        21730.96
+        21736.96
       ]
     ],
     "flow": {
@@ -178,7 +178,7 @@
     "chest_shop_transactions": 1,
     "gini": 0.929,
     "price_index": {
-      "value": 94.7,
+      "value": 88.2,
       "series": [
         [
           "2026-09-15",
@@ -190,19 +190,19 @@
         ],
         [
           "2026-09-17",
-          30.4
+          29.3
         ],
         [
           "2026-09-18",
-          62.5
+          59.0
         ],
         [
           "2026-09-19",
-          58.4
+          55.5
         ],
         [
           "2026-09-20",
-          94.8
+          89.3
         ],
         [
           "2026-09-21",
@@ -222,10 +222,10 @@
         ],
         [
           "2026-09-25",
-          94.7
+          88.2
         ]
       ],
-      "note": "Basket of 13 shop items, base 100 on 2026-09-15."
+      "note": "Basket of 14 shop items, base 100 on 2026-09-15."
     },
     "items": [
       {
@@ -932,6 +932,39 @@
         "candles": [],
         "volume_24h_qty": 0,
         "volume_24h_value": 0.0
+      },
+      {
+        "name": "Totem Of Undying",
+        "unit": "each",
+        "price": 50.0,
+        "change_7d": -0.75,
+        "shops": 1,
+        "sellers": 1,
+        "series": [
+          [
+            "2026-09-17",
+            200.0
+          ],
+          [
+            "2026-09-18",
+            200.0
+          ],
+          [
+            "2026-09-19",
+            200.0
+          ],
+          [
+            "2026-09-20",
+            200.0
+          ],
+          [
+            "2026-09-25",
+            50.0
+          ]
+        ],
+        "candles": [],
+        "volume_24h_qty": 0,
+        "volume_24h_value": 0.0
       }
     ],
     "market": [
@@ -1296,6 +1329,28 @@
             "land": "Reach"
           }
         ]
+      },
+      {
+        "name": "Totem Of Undying",
+        "id": "minecraft:totem_of_undying",
+        "price": 50.0,
+        "low": 50.0,
+        "high": 50.0,
+        "bid": null,
+        "shops": 1,
+        "sellers": 1,
+        "listings": [
+          {
+            "seller": "WhenAtRome",
+            "price": 50.0,
+            "type": "sell",
+            "world": "world",
+            "x": -230,
+            "y": 66,
+            "z": 3428,
+            "land": "Reach"
+          }
+        ]
       }
     ]
   },
@@ -1366,7 +1421,7 @@
     "mean": 15.73
   },
   "server": {
-    "checked": "2026-09-25T21:45:38Z",
+    "checked": "2026-09-25T22:12:45Z",
     "started_at": "2026-09-25T12:12:22Z",
     "tps": 20.0
   },

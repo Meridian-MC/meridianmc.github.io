@@ -257,7 +257,8 @@
    "minecraft:iron_ingot": 250.0,
    "minecraft:lapis_lazuli": 250.0,
    "minecraft:netherite_upgrade_smithing_template": 10000.0,
-   "minecraft:silence_armor_trim_smithing_template": 99.0
+   "minecraft:silence_armor_trim_smithing_template": 99.0,
+   "minecraft:totem_of_undying": 50.0
   }
  },
  "supply": {
@@ -362,14 +363,14 @@
    "total": 18620.33
   },
   "2026-09-25": {
-   "at": "2026-09-25T21:45:38Z",
+   "at": "2026-09-25T22:12:45Z",
    "banks": 14406.96,
-   "containers": 6159,
+   "containers": 6165,
    "coverage": 100.0,
    "ender": 762,
    "loose": 17,
    "on_hand": 386,
-   "total": 21730.96
+   "total": 21736.96
   }
  }
 }
