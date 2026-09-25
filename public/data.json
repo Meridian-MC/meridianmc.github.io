@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-25T22:56:53Z",
+  "generated": "2026-09-25T23:14:36Z",
   "meta": {
     "players_tracked": 73,
     "active_traders": 10,
@@ -26,12 +26,12 @@
       "note": "Gold launched 2026-09-12. Needs 8+ active traders and 14+ days of history; currently 10 traders / 13 days."
     },
     "supply": {
-      "total": 21736.96,
-      "on_hand": 386,
+      "total": 21486.96,
+      "on_hand": 436,
       "ender_chests": 762,
       "containers": 6165,
       "loose": 17,
-      "land_banks": 14406.96,
+      "land_banks": 14106.96,
       "coverage": {
         "files": 1052,
         "fresh": 1052,
@@ -40,7 +40,7 @@
         "percent": 100.0
       }
     },
-    "money_supply_players": 21736.96,
+    "money_supply_players": 21486.96,
     "money_supply_series": [
       [
         "2026-09-15",
@@ -84,7 +84,7 @@
       ],
       [
         "2026-09-25",
-        21736.96
+        21486.96
       ]
     ],
     "flow": {
@@ -172,11 +172,15 @@
       [
         "2026-09-19",
         30.0
+      ],
+      [
+        "2026-09-25",
+        150.0
       ]
     ],
-    "trade_volume_7d": 30.0,
-    "chest_shop_transactions": 1,
-    "gini": 0.929,
+    "trade_volume_7d": 180.0,
+    "chest_shop_transactions": 2,
+    "gini": 0.923,
     "price_index": {
       "value": 88.2,
       "series": [
@@ -962,9 +966,18 @@
             50.0
           ]
         ],
-        "candles": [],
-        "volume_24h_qty": 0,
-        "volume_24h_value": 0.0
+        "candles": [
+          {
+            "t": "2026-09-25",
+            "o": 50.0,
+            "h": 50.0,
+            "l": 50.0,
+            "c": 50.0,
+            "v": 3
+          }
+        ],
+        "volume_24h_qty": 3,
+        "volume_24h_value": 150.0
       }
     ],
     "market": [
@@ -1381,6 +1394,10 @@
         "balance": 100
       },
       {
+        "name": "Augustine65480",
+        "balance": 50
+      },
+      {
         "name": "Croissantasaur",
         "balance": 32
       },
@@ -1411,16 +1428,16 @@
       {
         "name": "spiderjake5000",
         "balance": 0
-      },
-      {
-        "name": "X_Professor_YT",
-        "balance": 0
       }
     ],
     "median": 0,
-    "mean": 15.73
+    "mean": 16.41
   },
-  "server": {},
+  "server": {
+    "checked": "2026-09-25T23:14:36Z",
+    "started_at": "2026-09-25T22:56:17Z",
+    "tps": 20.0
+  },
   "nations": [
     {
       "name": "Augustine Empire",
@@ -1434,7 +1451,7 @@
       "activity": 1.0,
       "chunks": 90,
       "members": 27,
-      "treasury": 2311.73
+      "treasury": 2011.73
     },
     {
       "name": "Thalassos",
@@ -1475,7 +1492,7 @@
       "type": "land",
       "chunks": 58,
       "members": 10,
-      "bank": 1310.0,
+      "bank": 1060.0,
       "level": 2,
       "color": "#C0CAF3"
     },
@@ -1565,7 +1582,7 @@
       "type": "land",
       "chunks": 4,
       "members": 3,
-      "bank": 547.05,
+      "bank": 497.05,
       "level": 0,
       "color": "#DD8764"
     },
