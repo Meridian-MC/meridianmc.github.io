@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-25T16:56:15Z",
+  "generated": "2026-09-25T17:13:15Z",
   "meta": {
     "players_tracked": 73,
     "active_traders": 10,
@@ -27,11 +27,11 @@
     },
     "supply": {
       "total": 21590.33,
-      "on_hand": 142,
+      "on_hand": 242,
       "ender_chests": 2490,
       "containers": 9039,
       "loose": 17,
-      "land_banks": 9902.33,
+      "land_banks": 9802.33,
       "coverage": {
         "files": 1052,
         "fresh": 1052,
@@ -157,12 +157,12 @@
         [
           "2026-09-25",
           321.0,
-          0.0
+          100.0
         ]
       ],
       "spent_7d": 18260.0,
-      "received_7d": 10426.0,
-      "transactions": 211
+      "received_7d": 10526.0,
+      "transactions": 212
     },
     "trade_volume_series": [
       [
@@ -176,7 +176,7 @@
     ],
     "trade_volume_7d": 30.0,
     "chest_shop_transactions": 1,
-    "gini": 0.964,
+    "gini": 0.959,
     "price_index": {
       "value": 94.7,
       "series": [
@@ -1344,6 +1344,10 @@
         "balance": 137
       },
       {
+        "name": "kalm1570",
+        "balance": 100
+      },
+      {
         "name": "Croissantasaur",
         "balance": 32
       },
@@ -1376,19 +1380,15 @@
         "balance": 0
       },
       {
-        "name": "kalm1570",
-        "balance": 0
-      },
-      {
         "name": "X_Professor_YT",
         "balance": 0
       }
     ],
     "median": 0,
-    "mean": 36.05
+    "mean": 37.42
   },
   "server": {
-    "checked": "2026-09-25T16:56:15Z",
+    "checked": "2026-09-25T17:13:15Z",
     "started_at": "2026-09-25T12:12:22Z",
     "tps": 20.0
   },
@@ -1405,7 +1405,7 @@
       "activity": 1.0,
       "chunks": 106,
       "members": 30,
-      "treasury": 3687.73
+      "treasury": 3587.73
     },
     {
       "name": "Thalassos",
@@ -1464,8 +1464,8 @@
       "type": "land",
       "chunks": 26,
       "members": 11,
-      "bank": 515.68,
-      "level": 2,
+      "bank": 415.68,
+      "level": 1,
       "color": "#A3E085"
     },
     {
