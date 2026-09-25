@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-25T19:12:11Z",
+  "generated": "2026-09-25T19:27:33Z",
   "meta": {
     "players_tracked": 73,
     "active_traders": 10,
@@ -26,12 +26,12 @@
       "note": "Gold launched 2026-09-12. Needs 8+ active traders and 14+ days of history; currently 10 traders / 13 days."
     },
     "supply": {
-      "total": 21709.33,
-      "on_hand": 242,
+      "total": 21730.96,
+      "on_hand": 386,
       "ender_chests": 762,
       "containers": 6159,
       "loose": 17,
-      "land_banks": 14529.33,
+      "land_banks": 14406.96,
       "coverage": {
         "files": 1052,
         "fresh": 1052,
@@ -40,7 +40,7 @@
         "percent": 100.0
       }
     },
-    "money_supply_players": 21709.33,
+    "money_supply_players": 21730.96,
     "money_supply_series": [
       [
         "2026-09-15",
@@ -84,7 +84,7 @@
       ],
       [
         "2026-09-25",
-        21709.33
+        21730.96
       ]
     ],
     "flow": {
@@ -176,7 +176,7 @@
     ],
     "trade_volume_7d": 30.0,
     "chest_shop_transactions": 1,
-    "gini": 0.94,
+    "gini": 0.929,
     "price_index": {
       "value": 94.7,
       "series": [
@@ -1310,6 +1310,10 @@
         "balance": 172
       },
       {
+        "name": "Keanie__",
+        "balance": 144
+      },
+      {
         "name": "Giggsy__",
         "balance": 140
       },
@@ -1356,18 +1360,14 @@
       {
         "name": "X_Professor_YT",
         "balance": 0
-      },
-      {
-        "name": "Augustine65480",
-        "balance": 0
       }
     ],
     "median": 0,
-    "mean": 13.75
+    "mean": 15.73
   },
   "server": {
-    "checked": "2026-09-25T19:12:12Z",
-    "started_at": "2026-09-25T12:12:23Z",
+    "checked": "2026-09-25T19:27:34Z",
+    "started_at": "2026-09-25T12:12:22Z",
     "tps": 20.0
   },
   "nations": [
@@ -1381,9 +1381,9 @@
       "population": 1.0,
       "wealth": 1.0,
       "activity": 1.0,
-      "chunks": 106,
+      "chunks": 110,
       "members": 30,
-      "treasury": 3706.73
+      "treasury": 3584.36
     },
     {
       "name": "Thalassos",
@@ -1458,9 +1458,9 @@
     {
       "name": "Reach",
       "type": "land",
-      "chunks": 16,
+      "chunks": 20,
       "members": 3,
-      "bank": 1395.0,
+      "bank": 1272.63,
       "level": 0,
       "color": "#66979D"
     },
