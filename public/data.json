@@ -1,7 +1,7 @@
 {
-  "generated": "2026-09-25T15:41:36Z",
+  "generated": "2026-09-25T15:55:02Z",
   "meta": {
-    "players_tracked": 72,
+    "players_tracked": 73,
     "active_traders": 10,
     "data_days": 13,
     "sufficient": false,
@@ -26,8 +26,8 @@
       "note": "Gold launched 2026-09-12. Needs 8+ active traders and 14+ days of history; currently 10 traders / 13 days."
     },
     "supply": {
-      "total": 21502.33,
-      "on_hand": 142,
+      "total": 21534.33,
+      "on_hand": 174,
       "ender_chests": 2490,
       "containers": 9272,
       "loose": 17,
@@ -40,7 +40,7 @@
         "percent": 100.0
       }
     },
-    "money_supply_players": 21502.33,
+    "money_supply_players": 21534.33,
     "money_supply_series": [
       [
         "2026-09-15",
@@ -84,7 +84,7 @@
       ],
       [
         "2026-09-25",
-        21502.33
+        21534.33
       ]
     ],
     "flow": {
@@ -171,9 +171,9 @@
     ],
     "trade_volume_7d": 30.0,
     "chest_shop_transactions": 1,
-    "gini": 0.964,
+    "gini": 0.962,
     "price_index": {
-      "value": 101.9,
+      "value": 94.7,
       "series": [
         [
           "2026-09-15",
@@ -193,15 +193,15 @@
         ],
         [
           "2026-09-19",
-          62.5
+          58.4
         ],
         [
           "2026-09-20",
-          101.9
+          94.8
         ],
         [
           "2026-09-21",
-          101.9
+          94.8
         ],
         [
           "2026-09-22",
@@ -217,10 +217,10 @@
         ],
         [
           "2026-09-25",
-          101.9
+          94.7
         ]
       ],
-      "note": "Basket of 12 shop items, base 100 on 2026-09-15."
+      "note": "Basket of 13 shop items, base 100 on 2026-09-15."
     },
     "items": [
       {
@@ -898,6 +898,35 @@
         "candles": [],
         "volume_24h_qty": 0,
         "volume_24h_value": 0.0
+      },
+      {
+        "name": "Silence Armor Trim Smithing Template",
+        "unit": "each",
+        "price": 99.0,
+        "change_7d": -0.1391,
+        "shops": 1,
+        "sellers": 1,
+        "series": [
+          [
+            "2026-09-19",
+            115.0
+          ],
+          [
+            "2026-09-20",
+            125.0
+          ],
+          [
+            "2026-09-21",
+            125.0
+          ],
+          [
+            "2026-09-25",
+            99.0
+          ]
+        ],
+        "candles": [],
+        "volume_24h_qty": 0,
+        "volume_24h_value": 0.0
       }
     ],
     "market": [
@@ -1088,6 +1117,28 @@
         ]
       },
       {
+        "name": "Enchanted Book (Silk Touch)",
+        "id": "minecraft:enchanted_book",
+        "price": 50.0,
+        "low": 50.0,
+        "high": 50.0,
+        "bid": null,
+        "shops": 1,
+        "sellers": 1,
+        "listings": [
+          {
+            "seller": "DatAriix",
+            "price": 50.0,
+            "type": "sell",
+            "world": "world",
+            "x": -228,
+            "y": 66,
+            "z": 3429,
+            "land": "Reach"
+          }
+        ]
+      },
+      {
         "name": "Enchanted Book (Unbreaking III)",
         "id": "minecraft:enchanted_book",
         "price": 1500.0,
@@ -1240,6 +1291,28 @@
             "land": "Pergaminthos"
           }
         ]
+      },
+      {
+        "name": "Silence Armor Trim Smithing Template",
+        "id": "minecraft:silence_armor_trim_smithing_template",
+        "price": 99.0,
+        "low": 99.0,
+        "high": 99.0,
+        "bid": null,
+        "shops": 1,
+        "sellers": 1,
+        "listings": [
+          {
+            "seller": "DatAriix",
+            "price": 99.0,
+            "type": "sell",
+            "world": "world",
+            "x": -228,
+            "y": 66,
+            "z": 3430,
+            "land": "Reach"
+          }
+        ]
       }
     ]
   },
@@ -1267,6 +1340,10 @@
       },
       {
         "name": "Croissantasaur",
+        "balance": 32
+      },
+      {
+        "name": "kalm1570",
         "balance": 32
       },
       {
@@ -1300,18 +1377,14 @@
       {
         "name": "X_Professor_YT",
         "balance": 0
-      },
-      {
-        "name": "Augustine65480",
-        "balance": 0
       }
     ],
-    "median": 0.0,
-    "mean": 36.56
+    "median": 0,
+    "mean": 36.49
   },
   "server": {
-    "checked": "2026-09-25T15:41:36Z",
-    "started_at": "2026-09-25T12:12:22Z",
+    "checked": "2026-09-25T15:55:03Z",
+    "started_at": "2026-09-25T12:12:23Z",
     "tps": 20.0
   },
   "nations": [
