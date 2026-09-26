@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-26T01:56:19Z",
+  "generated": "2026-09-26T02:14:25Z",
   "meta": {
     "players_tracked": 73,
     "active_traders": 8,
@@ -26,12 +26,12 @@
       "note": "Gold launched 2026-09-12. Needs 8+ active traders and 14+ days of history; currently 8 traders / 14 days."
     },
     "supply": {
-      "total": 21522.56,
-      "on_hand": 386,
+      "total": 21385.26,
+      "on_hand": 242,
       "ender_chests": 762,
       "containers": 6165,
       "loose": 17,
-      "land_banks": 14192.56,
+      "land_banks": 14199.26,
       "coverage": {
         "files": 1052,
         "fresh": 1052,
@@ -40,7 +40,7 @@
         "percent": 100.0
       }
     },
-    "money_supply_players": 21522.56,
+    "money_supply_players": 21385.26,
     "money_supply_series": [
       [
         "2026-09-15",
@@ -88,7 +88,7 @@
       ],
       [
         "2026-09-26",
-        21522.56
+        21385.26
       ]
     ],
     "flow": {
@@ -189,7 +189,7 @@
     ],
     "trade_volume_7d": 150.0,
     "chest_shop_transactions": 2,
-    "gini": 0.929,
+    "gini": 0.94,
     "price_index": {
       "value": 88.2,
       "series": [
@@ -1457,10 +1457,6 @@
         "balance": 172
       },
       {
-        "name": "Keanie__",
-        "balance": 144
-      },
-      {
         "name": "Giggsy__",
         "balance": 140
       },
@@ -1507,13 +1503,17 @@
       {
         "name": "X_Professor_YT",
         "balance": 0
+      },
+      {
+        "name": "Augustine65480",
+        "balance": 0
       }
     ],
     "median": 0,
-    "mean": 15.73
+    "mean": 13.75
   },
   "server": {
-    "checked": "2026-09-26T01:56:19Z",
+    "checked": "2026-09-26T02:14:25Z",
     "started_at": "2026-09-25T22:56:17Z",
     "tps": 20.0
   },
@@ -1614,9 +1614,9 @@
     {
       "name": "Keanie__",
       "type": "land",
-      "chunks": 10,
+      "chunks": 8,
       "members": 8,
-      "bank": 6970.15,
+      "bank": 6976.85,
       "level": 2,
       "color": "#B6B06C"
     },
