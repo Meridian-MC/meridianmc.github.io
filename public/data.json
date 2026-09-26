@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-26T18:35:53Z",
+  "generated": "2026-09-26T18:55:47Z",
   "meta": {
     "players_tracked": 73,
     "active_traders": 10,
@@ -26,21 +26,21 @@
       "note": "Gold launched 2026-09-12. Needs 8+ active traders and 14+ days of history; currently 10 traders / 14 days."
     },
     "supply": {
-      "total": 20113.67,
-      "on_hand": 167,
-      "ender_chests": 922,
-      "containers": 6037,
+      "total": 20124.67,
+      "on_hand": 136,
+      "ender_chests": 929,
+      "containers": 6043,
       "loose": 17,
-      "land_banks": 12970.67,
+      "land_banks": 12999.67,
       "coverage": {
-        "files": 1375,
-        "fresh": 1056,
-        "stale": 215,
-        "unscanned": 104,
-        "percent": 92.4
+        "files": 1427,
+        "fresh": 1071,
+        "stale": 260,
+        "unscanned": 96,
+        "percent": 93.3
       }
     },
-    "money_supply_players": 20113.67,
+    "money_supply_players": 20124.67,
     "money_supply_series": [
       [
         "2026-09-15",
@@ -88,7 +88,7 @@
       ],
       [
         "2026-09-26",
-        20113.67
+        20124.67
       ]
     ],
     "flow": {
@@ -165,13 +165,13 @@
         ],
         [
           "2026-09-26",
-          4423.0,
+          4452.0,
           4114.0
         ]
       ],
-      "spent_7d": 22632.0,
+      "spent_7d": 22661.0,
       "received_7d": 11509.0,
-      "transactions": 243
+      "transactions": 244
     },
     "trade_volume_series": [
       [
@@ -189,7 +189,7 @@
     ],
     "trade_volume_7d": 150.0,
     "chest_shop_transactions": 2,
-    "gini": 0.925,
+    "gini": 0.934,
     "price_index": {
       "value": 94.7,
       "series": [
@@ -1376,7 +1376,7 @@
       },
       {
         "name": "Keanie__",
-        "balance": 144
+        "balance": 167
       },
       {
         "name": "Giggsy__",
@@ -1399,16 +1399,8 @@
         "balance": 32
       },
       {
-        "name": "Augustine65480",
-        "balance": 29
-      },
-      {
         "name": "ske9z",
         "balance": 19
-      },
-      {
-        "name": "Vhazaar",
-        "balance": 18
       },
       {
         "name": "Aorus6320",
@@ -1429,14 +1421,22 @@
       {
         "name": "spiderjake5000",
         "balance": 0
+      },
+      {
+        "name": "kalm1570",
+        "balance": 0
+      },
+      {
+        "name": "X_Professor_YT",
+        "balance": 0
       }
     ],
     "median": 0,
-    "mean": 14.92
+    "mean": 14.59
   },
   "server": {
-    "checked": "2026-09-26T18:35:54Z",
-    "started_at": "2026-09-26T16:50:48Z",
+    "checked": "2026-09-26T18:55:47Z",
+    "started_at": "2026-09-26T16:50:47Z",
     "tps": 20.0
   },
   "nations": [
@@ -1452,7 +1452,7 @@
       "activity": 1.0,
       "chunks": 116,
       "members": 33,
-      "treasury": 3095.14
+      "treasury": 3124.14
     },
     {
       "name": "Thalassos",
@@ -1493,7 +1493,7 @@
       "type": "land",
       "chunks": 58,
       "members": 10,
-      "bank": 1345.0,
+      "bank": 1374.0,
       "level": 2,
       "color": "#C0CAF3"
     },
