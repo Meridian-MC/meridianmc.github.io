@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-26T01:27:24Z",
+  "generated": "2026-09-26T01:43:17Z",
   "meta": {
     "players_tracked": 73,
     "active_traders": 8,
@@ -26,12 +26,12 @@
       "note": "Gold launched 2026-09-12. Needs 8+ active traders and 14+ days of history; currently 8 traders / 14 days."
     },
     "supply": {
-      "total": 21570.96,
+      "total": 21519.01,
       "on_hand": 386,
       "ender_chests": 762,
       "containers": 6165,
       "loose": 17,
-      "land_banks": 14240.96,
+      "land_banks": 14189.01,
       "coverage": {
         "files": 1052,
         "fresh": 1052,
@@ -40,7 +40,7 @@
         "percent": 100.0
       }
     },
-    "money_supply_players": 21570.96,
+    "money_supply_players": 21519.01,
     "money_supply_series": [
       [
         "2026-09-15",
@@ -88,7 +88,7 @@
       ],
       [
         "2026-09-26",
-        21570.96
+        21519.01
       ]
     ],
     "flow": {
@@ -1513,7 +1513,7 @@
     "mean": 15.73
   },
   "server": {
-    "checked": "2026-09-26T01:27:24Z",
+    "checked": "2026-09-26T01:43:18Z",
     "started_at": "2026-09-25T22:56:17Z",
     "tps": 20.0
   },
@@ -1528,9 +1528,9 @@
       "population": 1.0,
       "wealth": 1.0,
       "activity": 1.0,
-      "chunks": 92,
+      "chunks": 95,
       "members": 29,
-      "treasury": 1995.73
+      "treasury": 1943.78
     },
     {
       "name": "Thalassos",
@@ -1571,7 +1571,7 @@
       "type": "land",
       "chunks": 58,
       "members": 10,
-      "bank": 1060.0,
+      "bank": 960.0,
       "level": 2,
       "color": "#C0CAF3"
     },
@@ -1628,6 +1628,15 @@
       "bank": 905.0,
       "level": 0,
       "color": "#66A4EF"
+    },
+    {
+      "name": "Turul",
+      "type": "land",
+      "chunks": 5,
+      "members": 2,
+      "bank": 132.05,
+      "level": 0,
+      "color": "#CCD56D"
     },
     {
       "name": "Liam's Empire",
@@ -1709,15 +1718,6 @@
       "bank": 39.0,
       "level": 0,
       "color": "#9B7570"
-    },
-    {
-      "name": "Turul",
-      "type": "land",
-      "chunks": 2,
-      "members": 2,
-      "bank": 84.0,
-      "level": 0,
-      "color": "#CCD56D"
     },
     {
       "name": "Lagmanium",
