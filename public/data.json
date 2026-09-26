@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-26T14:13:43Z",
+  "generated": "2026-09-26T14:29:59Z",
   "meta": {
     "players_tracked": 73,
     "active_traders": 9,
@@ -191,7 +191,7 @@
     "chest_shop_transactions": 2,
     "gini": 0.938,
     "price_index": {
-      "value": 88.2,
+      "value": 94.7,
       "series": [
         [
           "2026-09-15",
@@ -203,19 +203,19 @@
         ],
         [
           "2026-09-17",
-          29.3
+          30.4
         ],
         [
           "2026-09-18",
-          59.0
+          62.5
         ],
         [
           "2026-09-19",
-          55.5
+          58.4
         ],
         [
           "2026-09-20",
-          89.3
+          94.8
         ],
         [
           "2026-09-21",
@@ -235,14 +235,14 @@
         ],
         [
           "2026-09-25",
-          88.2
+          94.7
         ],
         [
           "2026-09-26",
-          88.2
+          94.7
         ]
       ],
-      "note": "Basket of 14 shop items, base 100 on 2026-09-15."
+      "note": "Basket of 13 shop items, base 100 on 2026-09-15."
     },
     "items": [
       {
@@ -303,52 +303,6 @@
           ]
         ],
         "candles": [],
-        "volume_24h_qty": 0,
-        "volume_24h_value": 0.0
-      },
-      {
-        "name": "Totem Of Undying",
-        "unit": "each",
-        "price": 50.0,
-        "change_7d": -0.75,
-        "shops": 2,
-        "sellers": 1,
-        "series": [
-          [
-            "2026-09-17",
-            200.0
-          ],
-          [
-            "2026-09-18",
-            200.0
-          ],
-          [
-            "2026-09-19",
-            200.0
-          ],
-          [
-            "2026-09-20",
-            200.0
-          ],
-          [
-            "2026-09-25",
-            50.0
-          ],
-          [
-            "2026-09-26",
-            50.0
-          ]
-        ],
-        "candles": [
-          {
-            "t": "2026-09-25",
-            "o": 50.0,
-            "h": 50.0,
-            "l": 50.0,
-            "c": 50.0,
-            "v": 3
-          }
-        ],
         "volume_24h_qty": 0,
         "volume_24h_value": 0.0
       },
@@ -1083,38 +1037,6 @@
         ]
       },
       {
-        "name": "Totem Of Undying",
-        "id": "minecraft:totem_of_undying",
-        "price": 50.0,
-        "low": 50.0,
-        "high": 50.0,
-        "bid": null,
-        "shops": 2,
-        "sellers": 1,
-        "listings": [
-          {
-            "seller": "WhenAtRome",
-            "price": 50.0,
-            "type": "sell",
-            "world": "world",
-            "x": -230,
-            "y": 66,
-            "z": 3428,
-            "land": "Reach"
-          },
-          {
-            "seller": "WhenAtRome",
-            "price": 50.0,
-            "type": "sell",
-            "world": "world",
-            "x": -230,
-            "y": 67,
-            "z": 3428,
-            "land": "Reach"
-          }
-        ]
-      },
-      {
         "name": "Arrow",
         "id": "minecraft:arrow",
         "price": 600.0,
@@ -1513,7 +1435,7 @@
     "mean": 14.36
   },
   "server": {
-    "checked": "2026-09-26T14:13:44Z",
+    "checked": "2026-09-26T14:30:00Z",
     "started_at": "2026-09-26T12:12:21Z",
     "tps": 20.0
   },
