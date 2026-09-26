@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-26T14:56:10Z",
+  "generated": "2026-09-26T15:14:30Z",
   "meta": {
     "players_tracked": 73,
     "active_traders": 9,
@@ -1435,7 +1435,7 @@
     "mean": 14.36
   },
   "server": {
-    "checked": "2026-09-26T14:56:10Z",
+    "checked": "2026-09-26T15:14:30Z",
     "started_at": "2026-09-26T12:12:20Z",
     "tps": 20.0
   },
@@ -1444,15 +1444,15 @@
       "name": "Augustine Empire",
       "tag": null,
       "color": "#956BE8",
-      "lands": 5,
+      "lands": 6,
       "mdi": 1.0,
       "territory": 1.0,
       "population": 1.0,
       "wealth": 1.0,
       "activity": 1.0,
-      "chunks": 95,
-      "members": 29,
-      "treasury": 1943.78
+      "chunks": 115,
+      "members": 32,
+      "treasury": 3366.41
     },
     {
       "name": "Thalassos",
