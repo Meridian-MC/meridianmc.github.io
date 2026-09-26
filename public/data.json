@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-26T21:54:52Z",
+  "generated": "2026-09-26T22:13:37Z",
   "meta": {
     "players_tracked": 73,
     "active_traders": 10,
@@ -26,21 +26,21 @@
       "note": "Gold launched 2026-09-12. Needs 8+ active traders and 14+ days of history; currently 10 traders / 14 days."
     },
     "supply": {
-      "total": 19432.46,
+      "total": 19206.07,
       "on_hand": 139,
       "ender_chests": 1023,
       "containers": 6066,
       "loose": 17,
-      "land_banks": 12187.46,
+      "land_banks": 11961.07,
       "coverage": {
         "files": 1612,
-        "fresh": 1459,
-        "stale": 153,
+        "fresh": 1498,
+        "stale": 114,
         "unscanned": 0,
         "percent": 100.0
       }
     },
-    "money_supply_players": 19432.46,
+    "money_supply_players": 19206.07,
     "money_supply_series": [
       [
         "2026-09-15",
@@ -88,7 +88,7 @@
       ],
       [
         "2026-09-26",
-        19432.46
+        19206.07
       ]
     ],
     "flow": {
@@ -1435,7 +1435,7 @@
     "mean": 15.92
   },
   "server": {
-    "checked": "2026-09-26T21:54:52Z",
+    "checked": "2026-09-26T22:13:37Z",
     "started_at": "2026-09-26T16:50:47Z",
     "tps": 20.0
   },
@@ -1450,9 +1450,9 @@
       "population": 1.0,
       "wealth": 1.0,
       "activity": 1.0,
-      "chunks": 123,
+      "chunks": 124,
       "members": 33,
-      "treasury": 2311.93
+      "treasury": 2085.54
     },
     {
       "name": "Thalassos",
@@ -1493,8 +1493,8 @@
       "type": "land",
       "chunks": 64,
       "members": 10,
-      "bank": 583.5,
-      "level": 2,
+      "bank": 394.17,
+      "level": 1,
       "color": "#C0CAF3"
     },
     {
@@ -1527,9 +1527,9 @@
     {
       "name": "Reach",
       "type": "land",
-      "chunks": 21,
+      "chunks": 22,
       "members": 4,
-      "bank": 1109.29,
+      "bank": 1072.23,
       "level": 0,
       "color": "#66979D"
     },
