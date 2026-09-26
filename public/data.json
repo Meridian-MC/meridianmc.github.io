@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-26T20:55:49Z",
+  "generated": "2026-09-26T21:14:02Z",
   "meta": {
     "players_tracked": 73,
     "active_traders": 10,
@@ -26,21 +26,21 @@
       "note": "Gold launched 2026-09-12. Needs 8+ active traders and 14+ days of history; currently 10 traders / 14 days."
     },
     "supply": {
-      "total": 19423.46,
-      "on_hand": 136,
+      "total": 19426.46,
+      "on_hand": 139,
       "ender_chests": 1023,
       "containers": 6060,
       "loose": 17,
       "land_banks": 12187.46,
       "coverage": {
         "files": 1612,
-        "fresh": 1313,
-        "stale": 299,
+        "fresh": 1340,
+        "stale": 272,
         "unscanned": 0,
         "percent": 100.0
       }
     },
-    "money_supply_players": 19423.46,
+    "money_supply_players": 19426.46,
     "money_supply_series": [
       [
         "2026-09-15",
@@ -88,7 +88,7 @@
       ],
       [
         "2026-09-26",
-        19423.46
+        19426.46
       ]
     ],
     "flow": {
@@ -189,7 +189,7 @@
     ],
     "trade_volume_7d": 150.0,
     "chest_shop_transactions": 2,
-    "gini": 0.936,
+    "gini": 0.935,
     "price_index": {
       "value": 94.7,
       "series": [
@@ -1407,6 +1407,10 @@
         "balance": 13
       },
       {
+        "name": "Heyitsmewyatt1",
+        "balance": 3
+      },
+      {
         "name": "BabieDolphin",
         "balance": 2
       },
@@ -1425,18 +1429,14 @@
       {
         "name": "kalm1570",
         "balance": 0
-      },
-      {
-        "name": "X_Professor_YT",
-        "balance": 0
       }
     ],
     "median": 0,
-    "mean": 15.88
+    "mean": 15.92
   },
   "server": {
-    "checked": "2026-09-26T20:55:49Z",
-    "started_at": "2026-09-26T16:50:47Z",
+    "checked": "2026-09-26T21:14:02Z",
+    "started_at": "2026-09-26T16:50:48Z",
     "tps": 20.0
   },
   "nations": [
