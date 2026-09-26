@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-26T23:29:14Z",
+  "generated": "2026-09-26T23:42:42Z",
   "meta": {
     "players_tracked": 74,
     "active_traders": 10,
@@ -1395,11 +1395,11 @@
         "balance": 33
       },
       {
-        "name": "Croissantasaur",
+        "name": "WuterGamer",
         "balance": 32
       },
       {
-        "name": "WuterGamer",
+        "name": "Croissantasaur",
         "balance": 32
       },
       {
@@ -1435,8 +1435,8 @@
     "mean": 16.14
   },
   "server": {
-    "checked": "2026-09-26T23:29:14Z",
-    "started_at": "2026-09-26T16:50:47Z",
+    "checked": "2026-09-26T23:42:43Z",
+    "started_at": "2026-09-26T16:50:48Z",
     "tps": 20.0
   },
   "nations": [
