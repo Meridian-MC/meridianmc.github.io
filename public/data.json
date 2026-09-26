@@ -1,8 +1,8 @@
 {
-  "generated": "2026-09-26T13:15:51Z",
+  "generated": "2026-09-26T13:40:34Z",
   "meta": {
     "players_tracked": 73,
-    "active_traders": 8,
+    "active_traders": 9,
     "data_days": 14,
     "sufficient": true,
     "demo": false,
@@ -23,15 +23,15 @@
     "classification": {
       "code": "INSUFFICIENT_DATA",
       "label": "Insufficient data",
-      "note": "Gold launched 2026-09-12. Needs 8+ active traders and 14+ days of history; currently 8 traders / 14 days."
+      "note": "Gold launched 2026-09-12. Needs 8+ active traders and 14+ days of history; currently 9 traders / 14 days."
     },
     "supply": {
-      "total": 21133.94,
+      "total": 20982.94,
       "on_hand": 142,
       "ender_chests": 906,
-      "containers": 6165,
+      "containers": 5972,
       "loose": 17,
-      "land_banks": 13903.94,
+      "land_banks": 13945.94,
       "coverage": {
         "files": 1052,
         "fresh": 1052,
@@ -40,7 +40,7 @@
         "percent": 100.0
       }
     },
-    "money_supply_players": 21133.94,
+    "money_supply_players": 20982.94,
     "money_supply_series": [
       [
         "2026-09-15",
@@ -88,7 +88,7 @@
       ],
       [
         "2026-09-26",
-        21133.94
+        20982.94
       ]
     ],
     "flow": {
@@ -165,13 +165,13 @@
         ],
         [
           "2026-09-26",
-          500.0,
-          350.0
+          1692.0,
+          1350.0
         ]
       ],
-      "spent_7d": 18709.0,
-      "received_7d": 7745.0,
-      "transactions": 228
+      "spent_7d": 19901.0,
+      "received_7d": 8745.0,
+      "transactions": 232
     },
     "trade_volume_series": [
       [
@@ -1513,7 +1513,7 @@
     "mean": 14.36
   },
   "server": {
-    "checked": "2026-09-26T13:15:51Z",
+    "checked": "2026-09-26T13:40:34Z",
     "started_at": "2026-09-26T12:12:20Z",
     "tps": 20.0
   },
@@ -1536,15 +1536,15 @@
       "name": "Thalassos",
       "tag": null,
       "color": null,
-      "lands": 3,
-      "mdi": 0.959,
+      "lands": 4,
+      "mdi": 1.0,
       "territory": 1.0,
       "population": 1.0,
-      "wealth": 0.845,
+      "wealth": 1.0,
       "activity": 1.0,
-      "chunks": 171,
-      "members": 34,
-      "treasury": 845.0
+      "chunks": 172,
+      "members": 36,
+      "treasury": 1887.0
     }
   ],
   "lands": [
@@ -1562,8 +1562,8 @@
       "type": "land",
       "chunks": 79,
       "members": 13,
-      "bank": 301.0,
-      "level": 1,
+      "bank": 1343.0,
+      "level": 3,
       "color": "#DF6EA4"
     },
     {
@@ -1616,7 +1616,7 @@
       "type": "land",
       "chunks": 19,
       "members": 8,
-      "bank": 6681.53,
+      "bank": 5681.53,
       "level": 2,
       "color": "#B6B06C"
     },
@@ -1772,9 +1772,24 @@
       "bank": 0.0,
       "level": 0,
       "color": "#6C997E"
+    },
+    {
+      "name": "Telos",
+      "type": "land",
+      "chunks": 1,
+      "members": 2,
+      "bank": 0.0,
+      "level": 0,
+      "color": "#B7D36B"
     }
   ],
   "events": [
+    {
+      "type": "land",
+      "at": "2026-09-26T13:22:30Z",
+      "text": "Telos was founded",
+      "owner": "Atilius_Corvinus"
+    },
     {
       "type": "land",
       "at": "2026-09-26T01:12:29Z",
@@ -1888,12 +1903,6 @@
       "at": "2026-09-06T08:37:31Z",
       "text": "ACRI_Vanguard was founded",
       "owner": "ACRI_Vanguard"
-    },
-    {
-      "type": "land",
-      "at": "2026-09-06T04:17:28Z",
-      "text": "Liam's Empire was founded",
-      "owner": "ihasadragon"
     }
   ]
 }
