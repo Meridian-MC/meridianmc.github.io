@@ -1,8 +1,8 @@
 {
-  "generated": "2026-09-26T15:30:45Z",
+  "generated": "2026-09-26T15:46:04Z",
   "meta": {
     "players_tracked": 73,
-    "active_traders": 9,
+    "active_traders": 10,
     "data_days": 14,
     "sufficient": true,
     "demo": false,
@@ -23,15 +23,15 @@
     "classification": {
       "code": "INSUFFICIENT_DATA",
       "label": "Insufficient data",
-      "note": "Gold launched 2026-09-12. Needs 8+ active traders and 14+ days of history; currently 9 traders / 14 days."
+      "note": "Gold launched 2026-09-12. Needs 8+ active traders and 14+ days of history; currently 10 traders / 14 days."
     },
     "supply": {
       "total": 20981.94,
-      "on_hand": 142,
+      "on_hand": 140,
       "ender_chests": 906,
-      "containers": 5972,
+      "containers": 5956,
       "loose": 17,
-      "land_banks": 13944.94,
+      "land_banks": 13962.94,
       "coverage": {
         "files": 1052,
         "fresh": 1052,
@@ -165,13 +165,13 @@
         ],
         [
           "2026-09-26",
-          1724.0,
+          1742.0,
           1382.0
         ]
       ],
-      "spent_7d": 19933.0,
+      "spent_7d": 19951.0,
       "received_7d": 8777.0,
-      "transactions": 234
+      "transactions": 235
     },
     "trade_volume_series": [
       [
@@ -1411,10 +1411,6 @@
         "balance": 2
       },
       {
-        "name": "ACRI_Vanguard",
-        "balance": 2
-      },
-      {
         "name": "winterrrly",
         "balance": 0
       },
@@ -1429,14 +1425,18 @@
       {
         "name": "X_Professor_YT",
         "balance": 0
+      },
+      {
+        "name": "Augustine65480",
+        "balance": 0
       }
     ],
     "median": 0,
-    "mean": 14.36
+    "mean": 14.33
   },
   "server": {
-    "checked": "2026-09-26T15:30:45Z",
-    "started_at": "2026-09-26T12:12:20Z",
+    "checked": "2026-09-26T15:46:05Z",
+    "started_at": "2026-09-26T12:12:21Z",
     "tps": 20.0
   },
   "nations": [
@@ -1466,7 +1466,7 @@
       "activity": 1.0,
       "chunks": 172,
       "members": 36,
-      "treasury": 1886.0
+      "treasury": 1904.0
     }
   ],
   "lands": [
@@ -1574,7 +1574,7 @@
       "type": "land",
       "chunks": 4,
       "members": 6,
-      "bank": 52.0,
+      "bank": 70.0,
       "level": 0,
       "color": "#BDE19D"
     },
