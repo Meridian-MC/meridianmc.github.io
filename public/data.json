@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-26T01:11:33Z",
+  "generated": "2026-09-26T01:27:24Z",
   "meta": {
     "players_tracked": 73,
     "active_traders": 8,
@@ -26,12 +26,12 @@
       "note": "Gold launched 2026-09-12. Needs 8+ active traders and 14+ days of history; currently 8 traders / 14 days."
     },
     "supply": {
-      "total": 21736.96,
+      "total": 21570.96,
       "on_hand": 386,
       "ender_chests": 762,
       "containers": 6165,
       "loose": 17,
-      "land_banks": 14406.96,
+      "land_banks": 14240.96,
       "coverage": {
         "files": 1052,
         "fresh": 1052,
@@ -40,7 +40,7 @@
         "percent": 100.0
       }
     },
-    "money_supply_players": 21736.96,
+    "money_supply_players": 21570.96,
     "money_supply_series": [
       [
         "2026-09-15",
@@ -88,7 +88,7 @@
       ],
       [
         "2026-09-26",
-        21736.96
+        21570.96
       ]
     ],
     "flow": {
@@ -165,13 +165,13 @@
         ],
         [
           "2026-09-26",
-          150.0,
-          0.0
+          400.0,
+          250.0
         ]
       ],
-      "spent_7d": 18359.0,
-      "received_7d": 7395.0,
-      "transactions": 222
+      "spent_7d": 18609.0,
+      "received_7d": 7645.0,
+      "transactions": 225
     },
     "trade_volume_series": [
       [
@@ -1513,7 +1513,7 @@
     "mean": 15.73
   },
   "server": {
-    "checked": "2026-09-26T01:11:33Z",
+    "checked": "2026-09-26T01:27:24Z",
     "started_at": "2026-09-25T22:56:17Z",
     "tps": 20.0
   },
@@ -1522,15 +1522,15 @@
       "name": "Augustine Empire",
       "tag": null,
       "color": "#956BE8",
-      "lands": 4,
+      "lands": 5,
       "mdi": 1.0,
       "territory": 1.0,
       "population": 1.0,
       "wealth": 1.0,
       "activity": 1.0,
-      "chunks": 90,
-      "members": 27,
-      "treasury": 2161.73
+      "chunks": 92,
+      "members": 29,
+      "treasury": 1995.73
     },
     {
       "name": "Thalassos",
@@ -1661,7 +1661,7 @@
       "type": "land",
       "chunks": 4,
       "members": 3,
-      "bank": 647.05,
+      "bank": 397.05,
       "level": 0,
       "color": "#DD8764"
     },
@@ -1709,6 +1709,15 @@
       "bank": 39.0,
       "level": 0,
       "color": "#9B7570"
+    },
+    {
+      "name": "Turul",
+      "type": "land",
+      "chunks": 2,
+      "members": 2,
+      "bank": 84.0,
+      "level": 0,
+      "color": "#CCD56D"
     },
     {
       "name": "Lagmanium",
@@ -1766,6 +1775,12 @@
     }
   ],
   "events": [
+    {
+      "type": "land",
+      "at": "2026-09-26T01:12:29Z",
+      "text": "Turul was founded",
+      "owner": "Augustine65480"
+    },
     {
       "type": "land",
       "at": "2026-09-23T20:05:16Z",
@@ -1879,12 +1894,6 @@
       "at": "2026-09-06T04:17:28Z",
       "text": "Liam's Empire was founded",
       "owner": "ihasadragon"
-    },
-    {
-      "type": "land",
-      "at": "2026-09-06T00:59:59Z",
-      "text": "Pergaminthos was founded",
-      "owner": "Giggsy__"
     }
   ]
 }
