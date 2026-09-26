@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-26T16:18:04Z",
+  "generated": "2026-09-26T16:42:18Z",
   "meta": {
     "players_tracked": 73,
     "active_traders": 10,
@@ -26,21 +26,21 @@
       "note": "Gold launched 2026-09-12. Needs 8+ active traders and 14+ days of history; currently 10 traders / 14 days."
     },
     "supply": {
-      "total": 20869.31,
+      "total": 21056.67,
       "on_hand": 140,
       "ender_chests": 906,
-      "containers": 5956,
+      "containers": 5971,
       "loose": 17,
-      "land_banks": 13850.31,
+      "land_banks": 14022.67,
       "coverage": {
         "files": 1052,
-        "fresh": 1052,
-        "stale": 0,
+        "fresh": 1023,
+        "stale": 29,
         "unscanned": 0,
         "percent": 100.0
       }
     },
-    "money_supply_players": 20869.31,
+    "money_supply_players": 21056.67,
     "money_supply_series": [
       [
         "2026-09-15",
@@ -88,7 +88,7 @@
       ],
       [
         "2026-09-26",
-        20869.31
+        21056.67
       ]
     ],
     "flow": {
@@ -165,13 +165,13 @@
         ],
         [
           "2026-09-26",
-          3052.0,
-          2804.0
+          4241.0,
+          4114.0
         ]
       ],
-      "spent_7d": 21261.0,
-      "received_7d": 10199.0,
-      "transactions": 237
+      "spent_7d": 22450.0,
+      "received_7d": 11509.0,
+      "transactions": 239
     },
     "trade_volume_series": [
       [
@@ -1435,8 +1435,8 @@
     "mean": 14.33
   },
   "server": {
-    "checked": "2026-09-26T16:18:04Z",
-    "started_at": "2026-09-26T12:12:20Z",
+    "checked": "2026-09-26T16:42:19Z",
+    "started_at": "2026-09-26T12:12:21Z",
     "tps": 20.0
   },
   "nations": [
@@ -1450,9 +1450,9 @@
       "population": 1.0,
       "wealth": 1.0,
       "activity": 1.0,
-      "chunks": 115,
+      "chunks": 116,
       "members": 33,
-      "treasury": 3253.78
+      "treasury": 3426.14
     },
     {
       "name": "Thalassos",
@@ -1493,7 +1493,7 @@
       "type": "land",
       "chunks": 58,
       "members": 10,
-      "bank": 960.0,
+      "bank": 1105.0,
       "level": 2,
       "color": "#C0CAF3"
     },
@@ -1529,7 +1529,7 @@
       "type": "land",
       "chunks": 20,
       "members": 4,
-      "bank": 1310.0,
+      "bank": 1334.0,
       "level": 0,
       "color": "#66979D"
     },
@@ -1615,6 +1615,15 @@
       "color": "#CF928D"
     },
     {
+      "name": "Mesra",
+      "type": "land",
+      "chunks": 3,
+      "members": 3,
+      "bank": 42.36,
+      "level": 0,
+      "color": "#9B7570"
+    },
+    {
       "name": "Luko_Landino",
       "type": "land",
       "chunks": 2,
@@ -1631,15 +1640,6 @@
       "bank": 182.0,
       "level": 0,
       "color": "#E8D289"
-    },
-    {
-      "name": "Mesra",
-      "type": "land",
-      "chunks": 2,
-      "members": 3,
-      "bank": 39.0,
-      "level": 0,
-      "color": "#9B7570"
     },
     {
       "name": "Lagmanium",
