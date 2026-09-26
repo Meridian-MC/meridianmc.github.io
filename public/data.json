@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-26T19:39:49Z",
+  "generated": "2026-09-26T19:52:23Z",
   "meta": {
     "players_tracked": 73,
     "active_traders": 10,
@@ -26,21 +26,21 @@
       "note": "Gold launched 2026-09-12. Needs 8+ active traders and 14+ days of history; currently 10 traders / 14 days."
     },
     "supply": {
-      "total": 19412.17,
-      "on_hand": 188,
+      "total": 19414.46,
+      "on_hand": 221,
       "ender_chests": 929,
-      "containers": 6057,
+      "containers": 6060,
       "loose": 17,
-      "land_banks": 12221.17,
+      "land_banks": 12187.46,
       "coverage": {
-        "files": 1552,
-        "fresh": 1130,
-        "stale": 381,
-        "unscanned": 41,
-        "percent": 97.4
+        "files": 1602,
+        "fresh": 1166,
+        "stale": 405,
+        "unscanned": 31,
+        "percent": 98.1
       }
     },
-    "money_supply_players": 19412.17,
+    "money_supply_players": 19414.46,
     "money_supply_series": [
       [
         "2026-09-15",
@@ -88,7 +88,7 @@
       ],
       [
         "2026-09-26",
-        19412.17
+        19414.46
       ]
     ],
     "flow": {
@@ -189,7 +189,7 @@
     ],
     "trade_volume_7d": 150.0,
     "chest_shop_transactions": 2,
-    "gini": 0.935,
+    "gini": 0.936,
     "price_index": {
       "value": 94.7,
       "series": [
@@ -1376,7 +1376,7 @@
       },
       {
         "name": "Keanie__",
-        "balance": 219
+        "balance": 252
       },
       {
         "name": "Giggsy__",
@@ -1432,10 +1432,10 @@
       }
     ],
     "median": 0,
-    "mean": 15.3
+    "mean": 15.75
   },
   "server": {
-    "checked": "2026-09-26T19:39:49Z",
+    "checked": "2026-09-26T19:52:23Z",
     "started_at": "2026-09-26T16:50:47Z",
     "tps": 20.0
   },
@@ -1450,9 +1450,9 @@
       "population": 1.0,
       "wealth": 1.0,
       "activity": 1.0,
-      "chunks": 122,
+      "chunks": 123,
       "members": 33,
-      "treasury": 2345.64
+      "treasury": 2311.93
     },
     {
       "name": "Thalassos",
@@ -1527,9 +1527,9 @@
     {
       "name": "Reach",
       "type": "land",
-      "chunks": 20,
+      "chunks": 21,
       "members": 4,
-      "bank": 1143.0,
+      "bank": 1109.29,
       "level": 0,
       "color": "#66979D"
     },
