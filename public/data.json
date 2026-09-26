@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-26T17:12:24Z",
+  "generated": "2026-09-26T17:29:25Z",
   "meta": {
     "players_tracked": 73,
     "active_traders": 10,
@@ -26,21 +26,21 @@
       "note": "Gold launched 2026-09-12. Needs 8+ active traders and 14+ days of history; currently 10 traders / 14 days."
     },
     "supply": {
-      "total": 21046.67,
-      "on_hand": 103,
+      "total": 21091.67,
+      "on_hand": 111,
       "ender_chests": 906,
-      "containers": 5998,
+      "containers": 6035,
       "loose": 17,
       "land_banks": 14022.67,
       "coverage": {
-        "files": 1144,
-        "fresh": 1050,
-        "stale": 66,
-        "unscanned": 28,
-        "percent": 97.6
+        "files": 1148,
+        "fresh": 1088,
+        "stale": 60,
+        "unscanned": 0,
+        "percent": 100.0
       }
     },
-    "money_supply_players": 21046.67,
+    "money_supply_players": 21091.67,
     "money_supply_series": [
       [
         "2026-09-15",
@@ -88,7 +88,7 @@
       ],
       [
         "2026-09-26",
-        21046.67
+        21091.67
       ]
     ],
     "flow": {
@@ -189,7 +189,7 @@
     ],
     "trade_volume_7d": 150.0,
     "chest_shop_transactions": 2,
-    "gini": 0.938,
+    "gini": 0.937,
     "price_index": {
       "value": 94.7,
       "series": [
@@ -1403,6 +1403,10 @@
         "balance": 13
       },
       {
+        "name": "DatAriix",
+        "balance": 8
+      },
+      {
         "name": "BabieDolphin",
         "balance": 2
       },
@@ -1425,17 +1429,13 @@
       {
         "name": "X_Professor_YT",
         "balance": 0
-      },
-      {
-        "name": "Augustine65480",
-        "balance": 0
       }
     ],
     "median": 0,
-    "mean": 13.82
+    "mean": 13.93
   },
   "server": {
-    "checked": "2026-09-26T17:12:25Z",
+    "checked": "2026-09-26T17:29:26Z",
     "started_at": "2026-09-26T16:50:48Z",
     "tps": 20.0
   },
