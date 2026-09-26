@@ -151,6 +151,14 @@
    ],
    "received": 550.0,
    "spent": 5348.0
+  },
+  "2026-09-26": {
+   "count": 1,
+   "players": [
+    "10a0aa1b-8279-4a0b-a6de-55f932c3e996"
+   ],
+   "received": 0.0,
+   "spent": 150.0
   }
  },
  "recent": [
@@ -235,6 +243,12 @@
   [
    1790378057.807,
    "c6369dc2-15d4-467d-b594-24d5fbfed6cb",
+   "take",
+   150.0
+  ],
+  [
+   1790382575.806,
+   "10a0aa1b-8279-4a0b-a6de-55f932c3e996",
    "take",
    150.0
   ]
@@ -595,6 +609,7 @@
   "d8c4b093-5df4-4bbb-afa6-fb45d1fe8e1f": 1,
   "d93b4b22-5979-430e-8eda-ab1d11eab21a": 1,
   "da28cdff-926a-4f34-afcc-eef247312d51": 1,
+  "da630396-f9d1-4a35-9233-9c0bdabe4fdf": 1,
   "dafa5b83-c3f0-415a-b920-0df7e2adbd08": 1,
   "dc394d32-a2eb-4e5e-bbb3-20fbbcdb0e48": 1,
   "dc407670-09a5-4f4a-9b5c-5015a206777d": 1,
