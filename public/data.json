@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-26T17:55:46Z",
+  "generated": "2026-09-26T18:15:19Z",
   "meta": {
     "players_tracked": 73,
     "active_traders": 10,
@@ -26,21 +26,21 @@
       "note": "Gold launched 2026-09-12. Needs 8+ active traders and 14+ days of history; currently 10 traders / 14 days."
     },
     "supply": {
-      "total": 21091.67,
+      "total": 20038.67,
       "on_hand": 103,
-      "ender_chests": 906,
+      "ender_chests": 922,
       "containers": 6035,
       "loose": 17,
-      "land_banks": 14030.67,
+      "land_banks": 12961.67,
       "coverage": {
-        "files": 1151,
-        "fresh": 1107,
-        "stale": 44,
-        "unscanned": 0,
-        "percent": 100.0
+        "files": 1234,
+        "fresh": 1087,
+        "stale": 124,
+        "unscanned": 23,
+        "percent": 98.1
       }
     },
-    "money_supply_players": 21091.67,
+    "money_supply_players": 20038.67,
     "money_supply_series": [
       [
         "2026-09-15",
@@ -88,7 +88,7 @@
       ],
       [
         "2026-09-26",
-        21091.67
+        20038.67
       ]
     ],
     "flow": {
@@ -189,7 +189,7 @@
     ],
     "trade_volume_7d": 150.0,
     "chest_shop_transactions": 2,
-    "gini": 0.938,
+    "gini": 0.935,
     "price_index": {
       "value": 94.7,
       "series": [
@@ -1399,6 +1399,10 @@
         "balance": 19
       },
       {
+        "name": "Augustine65480",
+        "balance": 16
+      },
+      {
         "name": "Aorus6320",
         "balance": 13
       },
@@ -1425,17 +1429,13 @@
       {
         "name": "X_Professor_YT",
         "balance": 0
-      },
-      {
-        "name": "Augustine65480",
-        "balance": 0
       }
     ],
     "median": 0,
-    "mean": 13.82
+    "mean": 14.04
   },
   "server": {
-    "checked": "2026-09-26T17:55:46Z",
+    "checked": "2026-09-26T18:15:19Z",
     "started_at": "2026-09-26T16:50:47Z",
     "tps": 20.0
   },
@@ -1452,7 +1452,7 @@
       "activity": 1.0,
       "chunks": 116,
       "members": 33,
-      "treasury": 3434.14
+      "treasury": 3086.14
     },
     {
       "name": "Thalassos",
@@ -1466,7 +1466,7 @@
       "activity": 1.0,
       "chunks": 172,
       "members": 36,
-      "treasury": 1904.0
+      "treasury": 1388.0
     }
   ],
   "lands": [
@@ -1475,7 +1475,7 @@
       "type": "land",
       "chunks": 88,
       "members": 15,
-      "bank": 492.0,
+      "bank": 140.0,
       "level": 1,
       "color": "#667CEE"
     },
@@ -1484,7 +1484,7 @@
       "type": "land",
       "chunks": 79,
       "members": 13,
-      "bank": 1311.0,
+      "bank": 1167.0,
       "level": 3,
       "color": "#DF6EA4"
     },
@@ -1493,7 +1493,7 @@
       "type": "land",
       "chunks": 58,
       "members": 10,
-      "bank": 1113.0,
+      "bank": 1345.0,
       "level": 2,
       "color": "#C0CAF3"
     },
@@ -1501,7 +1501,7 @@
       "name": "Diddy Ahh Land",
       "type": "land",
       "chunks": 27,
-      "members": 3,
+      "members": 2,
       "bank": 4.0,
       "level": 0,
       "color": null
@@ -1511,7 +1511,7 @@
       "type": "land",
       "chunks": 26,
       "members": 11,
-      "bank": 415.68,
+      "bank": 155.68,
       "level": 1,
       "color": "#A3E085"
     },
@@ -1529,7 +1529,7 @@
       "type": "land",
       "chunks": 20,
       "members": 4,
-      "bank": 1334.0,
+      "bank": 1134.0,
       "level": 0,
       "color": "#66979D"
     },
@@ -1538,7 +1538,7 @@
       "type": "land",
       "chunks": 19,
       "members": 8,
-      "bank": 5681.53,
+      "bank": 5586.53,
       "level": 2,
       "color": "#B6B06C"
     },
@@ -1547,7 +1547,7 @@
       "type": "land",
       "chunks": 5,
       "members": 2,
-      "bank": 905.0,
+      "bank": 880.0,
       "level": 0,
       "color": "#66A4EF"
     },
@@ -1556,7 +1556,7 @@
       "type": "land",
       "chunks": 5,
       "members": 2,
-      "bank": 132.05,
+      "bank": 82.05,
       "level": 0,
       "color": "#CCD56D"
     },
@@ -1565,7 +1565,7 @@
       "type": "land",
       "chunks": 4,
       "members": 3,
-      "bank": 1705.0,
+      "bank": 1685.0,
       "level": 0,
       "color": "#94B8C3"
     },
@@ -1574,7 +1574,7 @@
       "type": "land",
       "chunks": 4,
       "members": 6,
-      "bank": 70.0,
+      "bank": 54.0,
       "level": 0,
       "color": "#BDE19D"
     },
@@ -1583,7 +1583,7 @@
       "type": "land",
       "chunks": 4,
       "members": 2,
-      "bank": 20.0,
+      "bank": 0.0,
       "level": 0,
       "color": "#66D7CC"
     },
@@ -1592,7 +1592,7 @@
       "type": "land",
       "chunks": 4,
       "members": 3,
-      "bank": 397.05,
+      "bank": 357.05,
       "level": 0,
       "color": "#DD8764"
     },
@@ -1601,7 +1601,7 @@
       "type": "land",
       "chunks": 3,
       "members": 3,
-      "bank": 17.0,
+      "bank": 2.0,
       "level": 0,
       "color": "#F4A781"
     },
@@ -1619,7 +1619,7 @@
       "type": "land",
       "chunks": 3,
       "members": 3,
-      "bank": 42.36,
+      "bank": 12.36,
       "level": 0,
       "color": "#9B7570"
     },
@@ -1628,7 +1628,7 @@
       "type": "land",
       "chunks": 2,
       "members": 6,
-      "bank": 13.0,
+      "bank": 3.0,
       "level": 0,
       "color": "#B0E0A7"
     },
@@ -1637,7 +1637,7 @@
       "type": "land",
       "chunks": 2,
       "members": 2,
-      "bank": 182.0,
+      "bank": 172.0,
       "level": 0,
       "color": "#E8D289"
     },
@@ -1655,7 +1655,7 @@
       "type": "land",
       "chunks": 1,
       "members": 2,
-      "bank": 86.0,
+      "bank": 81.0,
       "level": 0,
       "color": "#CADC7A"
     },
@@ -1682,7 +1682,7 @@
       "type": "land",
       "chunks": 1,
       "members": 2,
-      "bank": 25.0,
+      "bank": 20.0,
       "level": 0,
       "color": "#DDD0F2"
     },
@@ -1700,7 +1700,7 @@
       "type": "land",
       "chunks": 1,
       "members": 2,
-      "bank": 31.0,
+      "bank": 27.0,
       "level": 0,
       "color": "#B7D36B"
     }
