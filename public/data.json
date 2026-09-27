@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-27T13:13:39Z",
+  "generated": "2026-09-27T13:28:53Z",
   "meta": {
     "players_tracked": 74,
     "active_traders": 6,
@@ -26,21 +26,21 @@
       "note": "Gold launched 2026-09-12. Needs 8+ active traders and 14+ days of history; currently 6 traders / 15 days."
     },
     "supply": {
-      "total": 19347.59,
-      "on_hand": 477,
+      "total": 19032.59,
+      "on_hand": 171,
       "ender_chests": 1023,
       "containers": 6204,
-      "loose": 26,
+      "loose": 17,
       "land_banks": 11617.59,
       "coverage": {
         "files": 1773,
-        "fresh": 1511,
-        "stale": 262,
+        "fresh": 1551,
+        "stale": 222,
         "unscanned": 0,
         "percent": 100.0
       }
     },
-    "money_supply_players": 19347.59,
+    "money_supply_players": 19032.59,
     "money_supply_series": [
       [
         "2026-09-15",
@@ -92,7 +92,7 @@
       ],
       [
         "2026-09-27",
-        19347.59
+        19032.59
       ]
     ],
     "flow": {
@@ -198,7 +198,7 @@
     ],
     "trade_volume_7d": 150.0,
     "chest_shop_transactions": 2,
-    "gini": 0.923,
+    "gini": 0.932,
     "price_index": {
       "value": 94.7,
       "series": [
@@ -1440,10 +1440,6 @@
         "balance": 385
       },
       {
-        "name": "ACRI_Vanguard",
-        "balance": 306
-      },
-      {
         "name": "Keanie__",
         "balance": 261
       },
@@ -1494,13 +1490,17 @@
       {
         "name": "winterrrly",
         "balance": 0
+      },
+      {
+        "name": "spiderjake5000",
+        "balance": 0
       }
     ],
     "median": 0.0,
-    "mean": 20.27
+    "mean": 16.14
   },
   "server": {
-    "checked": "2026-09-27T13:13:39Z",
+    "checked": "2026-09-27T13:28:53Z",
     "started_at": "2026-09-27T12:12:27Z",
     "tps": 20.0
   },
