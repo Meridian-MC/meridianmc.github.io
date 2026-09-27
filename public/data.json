@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-27T20:29:38Z",
+  "generated": "2026-09-27T20:45:18Z",
   "meta": {
     "players_tracked": 75,
     "active_traders": 6,
@@ -1500,7 +1500,7 @@
     "mean": 17.12
   },
   "server": {
-    "checked": "2026-09-27T20:29:38Z",
+    "checked": "2026-09-27T20:45:18Z",
     "started_at": "2026-09-27T18:58:54Z",
     "tps": 20.0
   },
@@ -1516,7 +1516,7 @@
       "wealth": 1.0,
       "activity": 1.0,
       "chunks": 138,
-      "members": 35,
+      "members": 36,
       "treasury": 1645.62
     },
     {
@@ -1557,7 +1557,7 @@
       "name": "Augustine",
       "type": "land",
       "chunks": 64,
-      "members": 10,
+      "members": 11,
       "bank": 224.0,
       "level": 1,
       "color": "#C0CAF3"
