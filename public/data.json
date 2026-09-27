@@ -1,10 +1,10 @@
 {
-  "generated": "2026-09-26T23:55:19Z",
+  "generated": "2026-09-27T00:20:14Z",
   "meta": {
     "players_tracked": 74,
-    "active_traders": 10,
-    "data_days": 14,
-    "sufficient": true,
+    "active_traders": 6,
+    "data_days": 15,
+    "sufficient": false,
     "demo": false,
     "profile": "profile_sgznr",
     "era_start": "2026-09-12",
@@ -23,24 +23,24 @@
     "classification": {
       "code": "INSUFFICIENT_DATA",
       "label": "Insufficient data",
-      "note": "Gold launched 2026-09-12. Needs 8+ active traders and 14+ days of history; currently 10 traders / 14 days."
+      "note": "Gold launched 2026-09-12. Needs 8+ active traders and 14+ days of history; currently 6 traders / 15 days."
     },
     "supply": {
-      "total": 18766.19,
-      "on_hand": 197,
+      "total": 18839.19,
+      "on_hand": 260,
       "ender_chests": 1023,
-      "containers": 6066,
+      "containers": 6072,
       "loose": 17,
-      "land_banks": 11463.19,
+      "land_banks": 11467.19,
       "coverage": {
-        "files": 1630,
-        "fresh": 1528,
-        "stale": 102,
-        "unscanned": 0,
-        "percent": 100.0
+        "files": 1754,
+        "fresh": 1383,
+        "stale": 307,
+        "unscanned": 64,
+        "percent": 96.4
       }
     },
-    "money_supply_players": 18766.19,
+    "money_supply_players": 18839.19,
     "money_supply_series": [
       [
         "2026-09-15",
@@ -89,6 +89,10 @@
       [
         "2026-09-26",
         18766.19
+      ],
+      [
+        "2026-09-27",
+        18839.19
       ]
     ],
     "flow": {
@@ -167,11 +171,16 @@
           "2026-09-26",
           4666.0,
           4114.0
+        ],
+        [
+          "2026-09-27",
+          4.0,
+          0.0
         ]
       ],
-      "spent_7d": 22875.0,
-      "received_7d": 11509.0,
-      "transactions": 247
+      "spent_7d": 17434.0,
+      "received_7d": 7582.0,
+      "transactions": 248
     },
     "trade_volume_series": [
       [
@@ -189,7 +198,7 @@
     ],
     "trade_volume_7d": 150.0,
     "chest_shop_transactions": 2,
-    "gini": 0.927,
+    "gini": 0.923,
     "price_index": {
       "value": 94.7,
       "series": [
@@ -239,6 +248,10 @@
         ],
         [
           "2026-09-26",
+          94.7
+        ],
+        [
+          "2026-09-27",
           94.7
         ]
       ],
@@ -299,6 +312,10 @@
           ],
           [
             "2026-09-26",
+            4.25
+          ],
+          [
+            "2026-09-27",
             4.25
           ]
         ],
@@ -361,6 +378,10 @@
           [
             "2026-09-26",
             600.0
+          ],
+          [
+            "2026-09-27",
+            600.0
           ]
         ],
         "candles": [],
@@ -421,6 +442,10 @@
           ],
           [
             "2026-09-26",
+            2000.0
+          ],
+          [
+            "2026-09-27",
             2000.0
           ]
         ],
@@ -483,6 +508,10 @@
           [
             "2026-09-26",
             75.0
+          ],
+          [
+            "2026-09-27",
+            75.0
           ]
         ],
         "candles": [],
@@ -543,6 +572,10 @@
           ],
           [
             "2026-09-26",
+            15.0
+          ],
+          [
+            "2026-09-27",
             15.0
           ]
         ],
@@ -605,6 +638,10 @@
           [
             "2026-09-26",
             35.0
+          ],
+          [
+            "2026-09-27",
+            35.0
           ]
         ],
         "candles": [],
@@ -615,7 +652,7 @@
         "name": "Diamond",
         "unit": "each",
         "price": 550.0,
-        "change_7d": 0.8803,
+        "change_7d": 0.0,
         "shops": 1,
         "sellers": 1,
         "series": [
@@ -666,6 +703,10 @@
           [
             "2026-09-26",
             550.0
+          ],
+          [
+            "2026-09-27",
+            550.0
           ]
         ],
         "candles": [],
@@ -676,7 +717,7 @@
         "name": "Emerald",
         "unit": "each",
         "price": 500.0,
-        "change_7d": 0.9802,
+        "change_7d": 0.0,
         "shops": 1,
         "sellers": 1,
         "series": [
@@ -726,6 +767,10 @@
           ],
           [
             "2026-09-26",
+            500.0
+          ],
+          [
+            "2026-09-27",
             500.0
           ]
         ],
@@ -784,6 +829,10 @@
           [
             "2026-09-26",
             4.0
+          ],
+          [
+            "2026-09-27",
+            4.0
           ]
         ],
         "candles": [],
@@ -794,7 +843,7 @@
         "name": "Iron Ingot",
         "unit": "each",
         "price": 250.0,
-        "change_7d": 0.9455,
+        "change_7d": 0.0,
         "shops": 1,
         "sellers": 1,
         "series": [
@@ -844,6 +893,10 @@
           ],
           [
             "2026-09-26",
+            250.0
+          ],
+          [
+            "2026-09-27",
             250.0
           ]
         ],
@@ -906,6 +959,10 @@
           [
             "2026-09-26",
             250.0
+          ],
+          [
+            "2026-09-27",
+            250.0
           ]
         ],
         "candles": [],
@@ -916,7 +973,7 @@
         "name": "Netherite Upgrade Smithing Template",
         "unit": "each",
         "price": 10000.0,
-        "change_7d": 0.9608,
+        "change_7d": 0.0,
         "shops": 1,
         "sellers": 1,
         "series": [
@@ -963,6 +1020,10 @@
           [
             "2026-09-26",
             10000.0
+          ],
+          [
+            "2026-09-27",
+            10000.0
           ]
         ],
         "candles": [],
@@ -973,7 +1034,7 @@
         "name": "Silence Armor Trim Smithing Template",
         "unit": "each",
         "price": 99.0,
-        "change_7d": -0.1391,
+        "change_7d": -0.208,
         "shops": 1,
         "sellers": 1,
         "series": [
@@ -995,6 +1056,10 @@
           ],
           [
             "2026-09-26",
+            99.0
+          ],
+          [
+            "2026-09-27",
             99.0
           ]
         ],
@@ -1391,6 +1456,10 @@
         "balance": 135
       },
       {
+        "name": "Vhazaar",
+        "balance": 89
+      },
+      {
         "name": "Atilius_Corvinus",
         "balance": 33
       },
@@ -1401,10 +1470,6 @@
       {
         "name": "Croissantasaur",
         "balance": 32
-      },
-      {
-        "name": "Vhazaar",
-        "balance": 26
       },
       {
         "name": "ske9z",
@@ -1432,10 +1497,10 @@
       }
     ],
     "median": 0.0,
-    "mean": 16.49
+    "mean": 17.34
   },
   "server": {
-    "checked": "2026-09-26T23:55:19Z",
+    "checked": "2026-09-27T00:20:14Z",
     "started_at": "2026-09-26T16:50:47Z",
     "tps": 20.0
   },
@@ -1452,7 +1517,7 @@
       "activity": 1.0,
       "chunks": 132,
       "members": 35,
-      "treasury": 1587.66
+      "treasury": 1591.66
     },
     {
       "name": "Thalassos",
@@ -1502,7 +1567,7 @@
       "type": "land",
       "chunks": 30,
       "members": 5,
-      "bank": 735.28,
+      "bank": 739.28,
       "level": 1,
       "color": "#66979D"
     },
