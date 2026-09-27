@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-27T02:42:30Z",
+  "generated": "2026-09-27T02:56:16Z",
   "meta": {
     "players_tracked": 74,
     "active_traders": 6,
@@ -34,8 +34,8 @@
       "land_banks": 11497.59,
       "coverage": {
         "files": 1757,
-        "fresh": 1724,
-        "stale": 33,
+        "fresh": 1757,
+        "stale": 0,
         "unscanned": 0,
         "percent": 100.0
       }
@@ -1500,7 +1500,7 @@
     "mean": 16.14
   },
   "server": {
-    "checked": "2026-09-27T02:42:31Z",
+    "checked": "2026-09-27T02:56:16Z",
     "started_at": "2026-09-26T16:50:48Z",
     "tps": 20.0
   },
