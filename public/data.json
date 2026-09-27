@@ -1,7 +1,7 @@
 {
-  "generated": "2026-09-27T19:27:29Z",
+  "generated": "2026-09-27T19:41:48Z",
   "meta": {
-    "players_tracked": 74,
+    "players_tracked": 75,
     "active_traders": 6,
     "data_days": 15,
     "sufficient": false,
@@ -26,21 +26,21 @@
       "note": "Gold launched 2026-09-12. Needs 8+ active traders and 14+ days of history; currently 6 traders / 15 days."
     },
     "supply": {
-      "total": 18225.15,
-      "on_hand": 211,
+      "total": 18257.15,
+      "on_hand": 243,
       "ender_chests": 1041,
       "containers": 6164,
       "loose": 17,
       "land_banks": 10792.15,
       "coverage": {
         "files": 1806,
-        "fresh": 1791,
-        "stale": 15,
+        "fresh": 1806,
+        "stale": 0,
         "unscanned": 0,
         "percent": 100.0
       }
     },
-    "money_supply_players": 18225.15,
+    "money_supply_players": 18257.15,
     "money_supply_series": [
       [
         "2026-09-15",
@@ -92,7 +92,7 @@
       ],
       [
         "2026-09-27",
-        18225.15
+        18257.15
       ]
     ],
     "flow": {
@@ -198,7 +198,7 @@
     ],
     "trade_volume_7d": 150.0,
     "chest_shop_transactions": 2,
-    "gini": 0.933,
+    "gini": 0.929,
     "price_index": {
       "value": 94.7,
       "series": [
@@ -1468,6 +1468,10 @@
         "balance": 32
       },
       {
+        "name": "HannahBanano",
+        "balance": 32
+      },
+      {
         "name": "ske9z",
         "balance": 19
       },
@@ -1490,17 +1494,13 @@
       {
         "name": "winterrrly",
         "balance": 0
-      },
-      {
-        "name": "spiderjake5000",
-        "balance": 0
       }
     ],
-    "median": 0.0,
-    "mean": 16.92
+    "median": 0,
+    "mean": 17.12
   },
   "server": {
-    "checked": "2026-09-27T19:27:29Z",
+    "checked": "2026-09-27T19:41:48Z",
     "started_at": "2026-09-27T18:58:54Z",
     "tps": 20.0
   },
