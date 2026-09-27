@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-27T13:55:41Z",
+  "generated": "2026-09-27T14:12:45Z",
   "meta": {
     "players_tracked": 74,
     "active_traders": 6,
@@ -26,21 +26,21 @@
       "note": "Gold launched 2026-09-12. Needs 8+ active traders and 14+ days of history; currently 6 traders / 15 days."
     },
     "supply": {
-      "total": 18188.79,
-      "on_hand": 171,
+      "total": 18203.79,
+      "on_hand": 186,
       "ender_chests": 1023,
       "containers": 6204,
       "loose": 17,
       "land_banks": 10773.79,
       "coverage": {
-        "files": 1773,
-        "fresh": 1623,
-        "stale": 150,
+        "files": 1805,
+        "fresh": 1632,
+        "stale": 173,
         "unscanned": 0,
         "percent": 100.0
       }
     },
-    "money_supply_players": 18188.79,
+    "money_supply_players": 18203.79,
     "money_supply_series": [
       [
         "2026-09-15",
@@ -92,7 +92,7 @@
       ],
       [
         "2026-09-27",
-        18188.79
+        18203.79
       ]
     ],
     "flow": {
@@ -1437,7 +1437,7 @@
     "top": [
       {
         "name": "JxrdanUK",
-        "balance": 385
+        "balance": 400
       },
       {
         "name": "Keanie__",
@@ -1497,10 +1497,10 @@
       }
     ],
     "median": 0.0,
-    "mean": 16.14
+    "mean": 16.34
   },
   "server": {
-    "checked": "2026-09-27T13:55:41Z",
+    "checked": "2026-09-27T14:12:46Z",
     "started_at": "2026-09-27T12:12:27Z",
     "tps": 20.0
   },
