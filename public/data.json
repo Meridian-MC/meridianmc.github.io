@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-27T19:41:48Z",
+  "generated": "2026-09-27T19:52:50Z",
   "meta": {
     "players_tracked": 75,
     "active_traders": 6,
@@ -1460,15 +1460,15 @@
         "balance": 33
       },
       {
+        "name": "HannahBanano",
+        "balance": 32
+      },
+      {
         "name": "WuterGamer",
         "balance": 32
       },
       {
         "name": "Croissantasaur",
-        "balance": 32
-      },
-      {
-        "name": "HannahBanano",
         "balance": 32
       },
       {
@@ -1500,7 +1500,7 @@
     "mean": 17.12
   },
   "server": {
-    "checked": "2026-09-27T19:41:48Z",
+    "checked": "2026-09-27T19:52:50Z",
     "started_at": "2026-09-27T18:58:54Z",
     "tps": 20.0
   },
