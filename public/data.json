@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-28T21:42:07Z",
+  "generated": "2026-09-28T21:55:55Z",
   "meta": {
     "players_tracked": 75,
     "active_traders": 6,
@@ -209,7 +209,7 @@
     "chest_shop_transactions": 2,
     "gini": 0.932,
     "price_index": {
-      "value": 82.7,
+      "value": 77.4,
       "series": [
         [
           "2026-09-15",
@@ -221,23 +221,23 @@
         ],
         [
           "2026-09-17",
-          29.3
+          27.3
         ],
         [
           "2026-09-18",
-          59.0
+          54.8
         ],
         [
           "2026-09-19",
-          55.5
+          54.8
         ],
         [
           "2026-09-20",
-          89.3
+          88.6
         ],
         [
           "2026-09-21",
-          94.8
+          101.9
         ],
         [
           "2026-09-22",
@@ -253,24 +253,83 @@
         ],
         [
           "2026-09-25",
-          88.2
+          94.4
         ],
         [
           "2026-09-26",
-          88.2
+          94.4
         ],
         [
           "2026-09-27",
-          94.7
+          101.9
         ],
         [
           "2026-09-28",
-          82.7
+          77.4
         ]
       ],
-      "note": "Basket of 15 shop items, base 100 on 2026-09-15."
+      "note": "Basket of 16 shop items, base 100 on 2026-09-15."
     },
     "items": [
+      {
+        "name": "End Crystal",
+        "unit": "each",
+        "price": 75.0,
+        "change_7d": 0.0,
+        "shops": 2,
+        "sellers": 1,
+        "series": [
+          [
+            "2026-09-28",
+            75.0
+          ]
+        ],
+        "candles": [],
+        "volume_24h_qty": 0,
+        "volume_24h_value": 0.0
+      },
+      {
+        "name": "Ender Pearl",
+        "unit": "each",
+        "price": 4.0,
+        "change_7d": 0.0,
+        "shops": 2,
+        "sellers": 1,
+        "series": [
+          [
+            "2026-09-17",
+            5.0
+          ],
+          [
+            "2026-09-18",
+            5.0
+          ],
+          [
+            "2026-09-19",
+            5.0
+          ],
+          [
+            "2026-09-20",
+            5.0
+          ],
+          [
+            "2026-09-28",
+            4.0
+          ]
+        ],
+        "candles": [
+          {
+            "t": "2026-09-18",
+            "o": 5.0,
+            "h": 5.0,
+            "l": 5.0,
+            "c": 5.0,
+            "v": 27
+          }
+        ],
+        "volume_24h_qty": 0,
+        "volume_24h_value": 0.0
+      },
       {
         "name": "Experience Bottle",
         "unit": "each",
@@ -337,6 +396,56 @@
           ]
         ],
         "candles": [],
+        "volume_24h_qty": 0,
+        "volume_24h_value": 0.0
+      },
+      {
+        "name": "Totem Of Undying",
+        "unit": "each",
+        "price": 65.0,
+        "change_7d": 0.3,
+        "shops": 2,
+        "sellers": 1,
+        "series": [
+          [
+            "2026-09-17",
+            200.0
+          ],
+          [
+            "2026-09-18",
+            200.0
+          ],
+          [
+            "2026-09-19",
+            200.0
+          ],
+          [
+            "2026-09-20",
+            200.0
+          ],
+          [
+            "2026-09-25",
+            50.0
+          ],
+          [
+            "2026-09-26",
+            50.0
+          ],
+          [
+            "2026-09-28",
+            65.0
+          ]
+        ],
+        "candles": [
+          {
+            "t": "2026-09-25",
+            "o": 50.0,
+            "h": 50.0,
+            "l": 50.0,
+            "c": 50.0,
+            "v": 3
+          }
+        ],
         "volume_24h_qty": 0,
         "volume_24h_value": 0.0
       },
@@ -1107,100 +1216,73 @@
         "candles": [],
         "volume_24h_qty": 0,
         "volume_24h_value": 0.0
-      },
-      {
-        "name": "Silence Armor Trim Smithing Template",
-        "unit": "each",
-        "price": 99.0,
-        "change_7d": -0.208,
-        "shops": 1,
-        "sellers": 1,
-        "series": [
-          [
-            "2026-09-19",
-            115.0
-          ],
-          [
-            "2026-09-20",
-            125.0
-          ],
-          [
-            "2026-09-21",
-            125.0
-          ],
-          [
-            "2026-09-25",
-            99.0
-          ],
-          [
-            "2026-09-26",
-            99.0
-          ],
-          [
-            "2026-09-27",
-            99.0
-          ],
-          [
-            "2026-09-28",
-            99.0
-          ]
-        ],
-        "candles": [],
-        "volume_24h_qty": 0,
-        "volume_24h_value": 0.0
-      },
-      {
-        "name": "Totem Of Undying",
-        "unit": "each",
-        "price": 75.0,
-        "change_7d": 0.5,
-        "shops": 1,
-        "sellers": 1,
-        "series": [
-          [
-            "2026-09-17",
-            200.0
-          ],
-          [
-            "2026-09-18",
-            200.0
-          ],
-          [
-            "2026-09-19",
-            200.0
-          ],
-          [
-            "2026-09-20",
-            200.0
-          ],
-          [
-            "2026-09-25",
-            50.0
-          ],
-          [
-            "2026-09-26",
-            50.0
-          ],
-          [
-            "2026-09-28",
-            75.0
-          ]
-        ],
-        "candles": [
-          {
-            "t": "2026-09-25",
-            "o": 50.0,
-            "h": 50.0,
-            "l": 50.0,
-            "c": 50.0,
-            "v": 3
-          }
-        ],
-        "volume_24h_qty": 0,
-        "volume_24h_value": 0.0
       }
     ],
     "market": [
+      {
+        "name": "End Crystal",
+        "id": "minecraft:end_crystal",
+        "price": 75.0,
+        "low": 75.0,
+        "high": 75.0,
+        "bid": null,
+        "shops": 2,
+        "sellers": 1,
+        "listings": [
+          {
+            "seller": "WhenAtRome",
+            "price": 75.0,
+            "type": "sell",
+            "world": "world",
+            "x": -232,
+            "y": 66,
+            "z": 3428,
+            "land": "Reach"
+          },
+          {
+            "seller": "WhenAtRome",
+            "price": 75.0,
+            "type": "sell",
+            "world": "world",
+            "x": -232,
+            "y": 67,
+            "z": 3428,
+            "land": "Reach"
+          }
+        ]
+      },
+      {
+        "name": "Ender Pearl",
+        "id": "minecraft:ender_pearl",
+        "price": 4.0,
+        "low": 4.0,
+        "high": 4.0,
+        "bid": null,
+        "shops": 2,
+        "sellers": 1,
+        "listings": [
+          {
+            "seller": "WhenAtRome",
+            "price": 4.0,
+            "type": "sell",
+            "world": "world",
+            "x": -231,
+            "y": 66,
+            "z": 3428,
+            "land": "Reach"
+          },
+          {
+            "seller": "WhenAtRome",
+            "price": 4.0,
+            "type": "sell",
+            "world": "world",
+            "x": -231,
+            "y": 67,
+            "z": 3428,
+            "land": "Reach"
+          }
+        ]
+      },
       {
         "name": "Experience Bottle",
         "id": "minecraft:experience_bottle",
@@ -1230,6 +1312,38 @@
             "y": 63,
             "z": -1172,
             "land": "ACRI_Vanguard"
+          }
+        ]
+      },
+      {
+        "name": "Totem Of Undying",
+        "id": "minecraft:totem_of_undying",
+        "price": 65.0,
+        "low": 65.0,
+        "high": 65.0,
+        "bid": null,
+        "shops": 2,
+        "sellers": 1,
+        "listings": [
+          {
+            "seller": "WhenAtRome",
+            "price": 65.0,
+            "type": "sell",
+            "world": "world",
+            "x": -230,
+            "y": 66,
+            "z": 3428,
+            "land": "Reach"
+          },
+          {
+            "seller": "WhenAtRome",
+            "price": 65.0,
+            "type": "sell",
+            "world": "world",
+            "x": -230,
+            "y": 67,
+            "z": 3428,
+            "land": "Reach"
           }
         ]
       },
@@ -1584,28 +1698,6 @@
             "land": "Reach"
           }
         ]
-      },
-      {
-        "name": "Totem Of Undying",
-        "id": "minecraft:totem_of_undying",
-        "price": 75.0,
-        "low": 75.0,
-        "high": 75.0,
-        "bid": null,
-        "shops": 1,
-        "sellers": 1,
-        "listings": [
-          {
-            "seller": "WhenAtRome",
-            "price": 75.0,
-            "type": "sell",
-            "world": "world",
-            "x": -230,
-            "y": 66,
-            "z": 3428,
-            "land": "Reach"
-          }
-        ]
       }
     ]
   },
@@ -1676,7 +1768,7 @@
     "mean": 16.91
   },
   "server": {
-    "checked": "2026-09-28T21:42:07Z",
+    "checked": "2026-09-28T21:55:55Z",
     "started_at": "2026-09-28T12:12:31Z",
     "tps": 20.0
   },

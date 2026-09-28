@@ -299,6 +299,8 @@
    "minecraft:copper_ingot": 35.0,
    "minecraft:diamond": 550.0,
    "minecraft:emerald": 500.0,
+   "minecraft:end_crystal": 75.0,
+   "minecraft:ender_pearl": 4.0,
    "minecraft:experience_bottle": 4.25,
    "minecraft:granite": 4.0,
    "minecraft:iron_ingot": 250.0,
@@ -306,7 +308,7 @@
    "minecraft:netherite_upgrade_smithing_template": 10000.0,
    "minecraft:phantom_membrane": 35.0,
    "minecraft:silence_armor_trim_smithing_template": 99.0,
-   "minecraft:totem_of_undying": 75.0
+   "minecraft:totem_of_undying": 65.0
   }
  },
  "supply": {
@@ -441,7 +443,7 @@
    "total": 18594.15
   },
   "2026-09-28": {
-   "at": "2026-09-28T21:42:07Z",
+   "at": "2026-09-28T21:55:55Z",
    "banks": 10939.15,
    "containers": 6247,
    "coverage": 100.0,
