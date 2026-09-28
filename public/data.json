@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-28T19:13:41Z",
+  "generated": "2026-09-28T19:31:41Z",
   "meta": {
     "players_tracked": 75,
     "active_traders": 6,
@@ -34,8 +34,8 @@
       "land_banks": 10631.15,
       "coverage": {
         "files": 1806,
-        "fresh": 1753,
-        "stale": 53,
+        "fresh": 1779,
+        "stale": 27,
         "unscanned": 0,
         "percent": 100.0
       }
@@ -183,13 +183,13 @@
         ],
         [
           "2026-09-28",
-          520.0,
+          538.0,
           1031.0
         ]
       ],
-      "spent_7d": 15961.0,
+      "spent_7d": 15979.0,
       "received_7d": 9653.0,
-      "transactions": 267
+      "transactions": 268
     },
     "trade_volume_series": [
       [
@@ -1565,7 +1565,7 @@
     "mean": 16.91
   },
   "server": {
-    "checked": "2026-09-28T19:13:41Z",
+    "checked": "2026-09-28T19:31:42Z",
     "started_at": "2026-09-28T12:12:31Z",
     "tps": 20.0
   },
