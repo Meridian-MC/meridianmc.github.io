@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-28T12:50:39Z",
+  "generated": "2026-09-28T13:15:40Z",
   "meta": {
     "players_tracked": 75,
     "active_traders": 6,
@@ -28,8 +28,8 @@
     "supply": {
       "total": 18413.15,
       "on_hand": 168,
-      "ender_chests": 977,
-      "containers": 6637,
+      "ender_chests": 1084,
+      "containers": 6530,
       "loose": 17,
       "land_banks": 10614.15,
       "coverage": {
@@ -207,7 +207,7 @@
     ],
     "trade_volume_7d": 150.0,
     "chest_shop_transactions": 2,
-    "gini": 0.932,
+    "gini": 0.934,
     "price_index": {
       "value": 94.7,
       "series": [
@@ -1506,7 +1506,7 @@
       },
       {
         "name": "Keanie__",
-        "balance": 197
+        "balance": 304
       },
       {
         "name": "Giggsy__",
@@ -1562,10 +1562,10 @@
       }
     ],
     "median": 0,
-    "mean": 15.27
+    "mean": 16.69
   },
   "server": {
-    "checked": "2026-09-28T12:50:40Z",
+    "checked": "2026-09-28T13:15:41Z",
     "started_at": "2026-09-28T12:12:31Z",
     "tps": 20.0
   },
