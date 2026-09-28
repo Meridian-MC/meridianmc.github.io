@@ -305,7 +305,8 @@
    "minecraft:lapis_lazuli": 250.0,
    "minecraft:netherite_upgrade_smithing_template": 10000.0,
    "minecraft:phantom_membrane": 35.0,
-   "minecraft:silence_armor_trim_smithing_template": 99.0
+   "minecraft:silence_armor_trim_smithing_template": 99.0,
+   "minecraft:totem_of_undying": 75.0
   }
  },
  "supply": {
@@ -440,7 +441,7 @@
    "total": 18594.15
   },
   "2026-09-28": {
-   "at": "2026-09-28T21:17:27Z",
+   "at": "2026-09-28T21:42:07Z",
    "banks": 10939.15,
    "containers": 6247,
    "coverage": 100.0,
