@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-29T16:15:39Z",
+  "generated": "2026-09-29T16:37:58Z",
   "meta": {
     "players_tracked": 75,
     "active_traders": 6,
@@ -27,11 +27,11 @@
     },
     "supply": {
       "total": 18544.15,
-      "on_hand": 185,
+      "on_hand": 385,
       "ender_chests": 1083,
       "containers": 6241,
       "loose": 17,
-      "land_banks": 11018.15,
+      "land_banks": 10818.15,
       "coverage": {
         "files": 1806,
         "fresh": 1806,
@@ -192,13 +192,13 @@
         ],
         [
           "2026-09-29",
-          80.0,
-          0.0
+          280.0,
+          400.0
         ]
       ],
-      "spent_7d": 15217.0,
-      "received_7d": 8757.0,
-      "transactions": 271
+      "spent_7d": 15417.0,
+      "received_7d": 9157.0,
+      "transactions": 274
     },
     "trade_volume_series": [
       [
@@ -212,11 +212,15 @@
       [
         "2026-09-25",
         150.0
+      ],
+      [
+        "2026-09-29",
+        200.0
       ]
     ],
-    "trade_volume_7d": 150.0,
-    "chest_shop_transactions": 2,
-    "gini": 0.932,
+    "trade_volume_7d": 350.0,
+    "chest_shop_transactions": 3,
+    "gini": 0.922,
     "price_index": {
       "value": 77.3,
       "series": [
@@ -473,10 +477,18 @@
             "l": 50.0,
             "c": 50.0,
             "v": 3
+          },
+          {
+            "t": "2026-09-29",
+            "o": 40.0,
+            "h": 40.0,
+            "l": 40.0,
+            "c": 40.0,
+            "v": 5
           }
         ],
-        "volume_24h_qty": 0,
-        "volume_24h_value": 0.0
+        "volume_24h_qty": 5,
+        "volume_24h_value": 200.0
       },
       {
         "name": "Arrow",
@@ -1789,6 +1801,10 @@
         "balance": 303
       },
       {
+        "name": "WhenAtRome",
+        "balance": 200
+      },
+      {
         "name": "Giggsy__",
         "balance": 140
       },
@@ -1835,17 +1851,13 @@
       {
         "name": "winterrrly",
         "balance": 0
-      },
-      {
-        "name": "spiderjake5000",
-        "balance": 0
       }
     ],
     "median": 0,
-    "mean": 16.91
+    "mean": 19.57
   },
   "server": {
-    "checked": "2026-09-29T16:15:40Z",
+    "checked": "2026-09-29T16:37:58Z",
     "started_at": "2026-09-29T12:12:45Z",
     "tps": 20.0
   },
@@ -1948,7 +1960,7 @@
       "type": "land",
       "chunks": 19,
       "members": 8,
-      "bank": 4857.53,
+      "bank": 4657.53,
       "level": 2,
       "color": "#B6B06C"
     },
