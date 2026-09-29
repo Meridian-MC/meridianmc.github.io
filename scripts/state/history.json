@@ -317,6 +317,7 @@
    "minecraft:cooked_mutton": 15.0,
    "minecraft:copper_ingot": 35.0,
    "minecraft:diamond": 550.0,
+   "minecraft:dirt": 1.0,
    "minecraft:emerald": 500.0,
    "minecraft:end_crystal": 75.0,
    "minecraft:ender_pearl": 2.0,
@@ -472,7 +473,7 @@
    "total": 18471.15
   },
   "2026-09-29": {
-   "at": "2026-09-29T20:16:24Z",
+   "at": "2026-09-29T20:44:32Z",
    "banks": 10797.15,
    "containers": 6241,
    "coverage": 100.0,
