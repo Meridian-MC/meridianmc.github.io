@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-29T13:46:11Z",
+  "generated": "2026-09-29T14:16:07Z",
   "meta": {
     "players_tracked": 75,
     "active_traders": 6,
@@ -26,12 +26,12 @@
       "note": "Gold launched 2026-09-12. Needs 8+ active traders and 14+ days of history; currently 6 traders / 17 days."
     },
     "supply": {
-      "total": 18551.15,
-      "on_hand": 185,
+      "total": 18550.15,
+      "on_hand": 191,
       "ender_chests": 1083,
-      "containers": 6247,
+      "containers": 6241,
       "loose": 17,
-      "land_banks": 11019.15,
+      "land_banks": 11018.15,
       "coverage": {
         "files": 1806,
         "fresh": 1806,
@@ -40,7 +40,7 @@
         "percent": 100.0
       }
     },
-    "money_supply_players": 18551.15,
+    "money_supply_players": 18550.15,
     "money_supply_series": [
       [
         "2026-09-15",
@@ -100,7 +100,7 @@
       ],
       [
         "2026-09-29",
-        18551.15
+        18550.15
       ]
     ],
     "flow": {
@@ -216,7 +216,7 @@
     ],
     "trade_volume_7d": 150.0,
     "chest_shop_transactions": 2,
-    "gini": 0.932,
+    "gini": 0.931,
     "price_index": {
       "value": 77.4,
       "series": [
@@ -1821,6 +1821,10 @@
         "balance": 13
       },
       {
+        "name": "WhenAtRome",
+        "balance": 6
+      },
+      {
         "name": "Heyitsmewyatt1",
         "balance": 3
       },
@@ -1835,17 +1839,13 @@
       {
         "name": "winterrrly",
         "balance": 0
-      },
-      {
-        "name": "spiderjake5000",
-        "balance": 0
       }
     ],
     "median": 0,
-    "mean": 16.91
+    "mean": 16.99
   },
   "server": {
-    "checked": "2026-09-29T13:46:11Z",
+    "checked": "2026-09-29T14:16:07Z",
     "started_at": "2026-09-29T12:12:45Z",
     "tps": 20.0
   },
@@ -1862,7 +1862,7 @@
       "activity": 1.0,
       "chunks": 138,
       "members": 36,
-      "treasury": 1872.62
+      "treasury": 1871.62
     },
     {
       "name": "Thalassos",
@@ -1912,7 +1912,7 @@
       "type": "land",
       "chunks": 30,
       "members": 5,
-      "bank": 774.28,
+      "bank": 773.28,
       "level": 1,
       "color": "#66979D"
     },
