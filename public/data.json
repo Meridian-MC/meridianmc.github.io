@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-29T16:58:53Z",
+  "generated": "2026-09-29T17:19:31Z",
   "meta": {
     "players_tracked": 75,
     "active_traders": 6,
@@ -26,21 +26,21 @@
       "note": "Gold launched 2026-09-12. Needs 8+ active traders and 14+ days of history; currently 6 traders / 17 days."
     },
     "supply": {
-      "total": 18405.15,
+      "total": 18587.15,
       "on_hand": 385,
       "ender_chests": 1083,
       "containers": 6241,
       "loose": 17,
-      "land_banks": 10679.15,
+      "land_banks": 10861.15,
       "coverage": {
         "files": 1806,
-        "fresh": 1788,
-        "stale": 18,
+        "fresh": 1804,
+        "stale": 2,
         "unscanned": 0,
         "percent": 100.0
       }
     },
-    "money_supply_players": 18405.15,
+    "money_supply_players": 18587.15,
     "money_supply_series": [
       [
         "2026-09-15",
@@ -100,7 +100,7 @@
       ],
       [
         "2026-09-29",
-        18405.15
+        18587.15
       ]
     ],
     "flow": {
@@ -192,13 +192,13 @@
         ],
         [
           "2026-09-29",
-          280.0,
-          600.0
+          435.0,
+          712.0
         ]
       ],
-      "spent_7d": 15417.0,
-      "received_7d": 9357.0,
-      "transactions": 275
+      "spent_7d": 15572.0,
+      "received_7d": 9469.0,
+      "transactions": 282
     },
     "trade_volume_series": [
       [
@@ -1857,7 +1857,7 @@
     "mean": 19.57
   },
   "server": {
-    "checked": "2026-09-29T16:58:53Z",
+    "checked": "2026-09-29T17:19:31Z",
     "started_at": "2026-09-29T12:12:45Z",
     "tps": 20.0
   },
@@ -1874,7 +1874,7 @@
       "activity": 1.0,
       "chunks": 138,
       "members": 36,
-      "treasury": 1871.62
+      "treasury": 2071.62
     },
     {
       "name": "Thalassos",
@@ -1924,7 +1924,7 @@
       "type": "land",
       "chunks": 30,
       "members": 5,
-      "bank": 773.28,
+      "bank": 973.28,
       "level": 1,
       "color": "#66979D"
     },
@@ -1960,7 +1960,7 @@
       "type": "land",
       "chunks": 19,
       "members": 8,
-      "bank": 4518.53,
+      "bank": 4500.53,
       "level": 2,
       "color": "#B6B06C"
     },
