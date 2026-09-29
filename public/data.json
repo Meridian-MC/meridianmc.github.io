@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-29T15:46:21Z",
+  "generated": "2026-09-29T16:15:39Z",
   "meta": {
     "players_tracked": 75,
     "active_traders": 6,
@@ -26,8 +26,8 @@
       "note": "Gold launched 2026-09-12. Needs 8+ active traders and 14+ days of history; currently 6 traders / 17 days."
     },
     "supply": {
-      "total": 18550.15,
-      "on_hand": 191,
+      "total": 18544.15,
+      "on_hand": 185,
       "ender_chests": 1083,
       "containers": 6241,
       "loose": 17,
@@ -40,7 +40,7 @@
         "percent": 100.0
       }
     },
-    "money_supply_players": 18550.15,
+    "money_supply_players": 18544.15,
     "money_supply_series": [
       [
         "2026-09-15",
@@ -100,7 +100,7 @@
       ],
       [
         "2026-09-29",
-        18550.15
+        18544.15
       ]
     ],
     "flow": {
@@ -216,9 +216,9 @@
     ],
     "trade_volume_7d": 150.0,
     "chest_shop_transactions": 2,
-    "gini": 0.931,
+    "gini": 0.932,
     "price_index": {
-      "value": 77.4,
+      "value": 77.3,
       "series": [
         [
           "2026-09-15",
@@ -278,7 +278,7 @@
         ],
         [
           "2026-09-29",
-          77.4
+          77.3
         ]
       ],
       "note": "Basket of 16 shop items, base 100 on 2026-09-15."
@@ -427,8 +427,8 @@
       {
         "name": "Totem Of Undying",
         "unit": "each",
-        "price": 65.0,
-        "change_7d": 0.3,
+        "price": 52.5,
+        "change_7d": 0.05,
         "shops": 2,
         "sellers": 1,
         "series": [
@@ -462,7 +462,7 @@
           ],
           [
             "2026-09-29",
-            65.0
+            52.5
           ]
         ],
         "candles": [
@@ -1395,8 +1395,8 @@
       {
         "name": "Totem Of Undying",
         "id": "minecraft:totem_of_undying",
-        "price": 65.0,
-        "low": 65.0,
+        "price": 52.5,
+        "low": 40.0,
         "high": 65.0,
         "bid": null,
         "shops": 2,
@@ -1404,7 +1404,7 @@
         "listings": [
           {
             "seller": "WhenAtRome",
-            "price": 65.0,
+            "price": 40.0,
             "type": "sell",
             "world": "world",
             "x": -230,
@@ -1821,10 +1821,6 @@
         "balance": 13
       },
       {
-        "name": "WhenAtRome",
-        "balance": 6
-      },
-      {
         "name": "Heyitsmewyatt1",
         "balance": 3
       },
@@ -1839,14 +1835,18 @@
       {
         "name": "winterrrly",
         "balance": 0
+      },
+      {
+        "name": "spiderjake5000",
+        "balance": 0
       }
     ],
     "median": 0,
-    "mean": 16.99
+    "mean": 16.91
   },
   "server": {
-    "checked": "2026-09-29T15:46:22Z",
-    "started_at": "2026-09-29T12:12:46Z",
+    "checked": "2026-09-29T16:15:40Z",
+    "started_at": "2026-09-29T12:12:45Z",
     "tps": 20.0
   },
   "nations": [
