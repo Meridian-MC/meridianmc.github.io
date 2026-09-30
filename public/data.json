@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-30T17:58:48Z",
+  "generated": "2026-09-30T18:24:04Z",
   "meta": {
     "players_tracked": 77,
     "active_traders": 7,
@@ -26,12 +26,12 @@
       "note": "Gold launched 2026-09-12. Needs 8+ active traders and 14+ days of history; currently 7 traders / 18 days."
     },
     "supply": {
-      "total": 18386.15,
+      "total": 18384.15,
       "on_hand": 253,
       "ender_chests": 1083,
       "containers": 6186,
       "loose": 17,
-      "land_banks": 10847.15,
+      "land_banks": 10845.15,
       "coverage": {
         "files": 1806,
         "fresh": 1806,
@@ -40,7 +40,7 @@
         "percent": 100.0
       }
     },
-    "money_supply_players": 18386.15,
+    "money_supply_players": 18384.15,
     "money_supply_series": [
       [
         "2026-09-15",
@@ -104,7 +104,7 @@
       ],
       [
         "2026-09-30",
-        18386.15
+        18384.15
       ]
     ],
     "flow": {
@@ -1964,8 +1964,8 @@
     "mean": 17.35
   },
   "server": {
-    "checked": "2026-09-30T17:58:49Z",
-    "started_at": "2026-09-30T12:13:02Z",
+    "checked": "2026-09-30T18:24:04Z",
+    "started_at": "2026-09-30T12:13:01Z",
     "tps": 20.0
   },
   "nations": [
@@ -1981,7 +1981,7 @@
       "activity": 1.0,
       "chunks": 138,
       "members": 36,
-      "treasury": 2071.62
+      "treasury": 2069.62
     },
     {
       "name": "Thalassos",
@@ -2022,7 +2022,7 @@
       "type": "land",
       "chunks": 64,
       "members": 11,
-      "bank": 373.0,
+      "bank": 371.0,
       "level": 1,
       "color": "#C0CAF3"
     },
@@ -2169,15 +2169,6 @@
       "bank": 172.0,
       "level": 0,
       "color": "#E8D289"
-    },
-    {
-      "name": "Lagmanium",
-      "type": "land",
-      "chunks": 1,
-      "members": 2,
-      "bank": 0.0,
-      "level": 0,
-      "color": "#B6FAF0"
     },
     {
       "name": "Arkalis",
