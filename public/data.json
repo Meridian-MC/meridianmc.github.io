@@ -1,10 +1,10 @@
 {
-  "generated": "2026-09-30T23:18:03Z",
+  "generated": "2026-09-30T23:42:23Z",
   "meta": {
     "players_tracked": 77,
-    "active_traders": 7,
+    "active_traders": 8,
     "data_days": 18,
-    "sufficient": false,
+    "sufficient": true,
     "demo": false,
     "profile": "profile_sgznr",
     "era_start": "2026-09-12",
@@ -23,15 +23,15 @@
     "classification": {
       "code": "INSUFFICIENT_DATA",
       "label": "Insufficient data",
-      "note": "Gold launched 2026-09-12. Needs 8+ active traders and 14+ days of history; currently 7 traders / 18 days."
+      "note": "Gold launched 2026-09-12. Needs 8+ active traders and 14+ days of history; currently 8 traders / 18 days."
     },
     "supply": {
-      "total": 18608.15,
+      "total": 18604.15,
       "on_hand": 253,
-      "ender_chests": 1083,
-      "containers": 6355,
+      "ender_chests": 1080,
+      "containers": 6329,
       "loose": 17,
-      "land_banks": 10900.15,
+      "land_banks": 10925.15,
       "coverage": {
         "files": 1806,
         "fresh": 1806,
@@ -40,7 +40,7 @@
         "percent": 100.0
       }
     },
-    "money_supply_players": 18608.15,
+    "money_supply_players": 18604.15,
     "money_supply_series": [
       [
         "2026-09-15",
@@ -104,7 +104,7 @@
       ],
       [
         "2026-09-30",
-        18608.15
+        18604.15
       ]
     ],
     "flow": {
@@ -201,13 +201,13 @@
         ],
         [
           "2026-09-30",
-          117.0,
-          52.0
+          143.0,
+          53.0
         ]
       ],
-      "spent_7d": 14660.0,
-      "received_7d": 7595.0,
-      "transactions": 294
+      "spent_7d": 14686.0,
+      "received_7d": 7596.0,
+      "transactions": 296
     },
     "trade_volume_series": [
       [
@@ -229,7 +229,7 @@
     ],
     "trade_volume_7d": 414.0,
     "chest_shop_transactions": 4,
-    "gini": 0.924,
+    "gini": 0.925,
     "price_index": {
       "value": 1.1,
       "series": [
@@ -1948,23 +1948,23 @@
         "balance": 13
       },
       {
-        "name": "Heyitsmewyatt1",
-        "balance": 3
-      },
-      {
         "name": "BabieDolphin",
         "balance": 2
       },
       {
         "name": "BlackAdder83",
         "balance": 2
+      },
+      {
+        "name": "winterrrly",
+        "balance": 0
       }
     ],
     "median": 0,
-    "mean": 17.35
+    "mean": 17.31
   },
   "server": {
-    "checked": "2026-09-30T23:18:04Z",
+    "checked": "2026-09-30T23:42:23Z",
     "started_at": "2026-09-30T12:13:02Z",
     "tps": 20.0
   },
@@ -1981,7 +1981,7 @@
       "activity": 1.0,
       "chunks": 138,
       "members": 36,
-      "treasury": 2124.62
+      "treasury": 2149.62
     },
     {
       "name": "Thalassos",
@@ -2022,7 +2022,7 @@
       "type": "land",
       "chunks": 64,
       "members": 11,
-      "bank": 362.0,
+      "bank": 387.0,
       "level": 1,
       "color": "#C0CAF3"
     },
