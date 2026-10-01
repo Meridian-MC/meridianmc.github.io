@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-01T06:01:29Z",
+  "generated": "2026-10-01T06:38:39Z",
   "meta": {
     "players_tracked": 77,
     "active_traders": 8,
@@ -2041,7 +2041,7 @@
     "mean": 17.31
   },
   "server": {
-    "checked": "2026-10-01T06:01:29Z",
+    "checked": "2026-10-01T06:38:39Z",
     "started_at": "2026-09-30T12:13:01Z",
     "tps": 20.0
   },
@@ -2257,15 +2257,6 @@
       "color": "#CADC7A"
     },
     {
-      "name": "Skinski",
-      "type": "land",
-      "chunks": 1,
-      "members": 2,
-      "bank": 0.0,
-      "level": 0,
-      "color": "#65EFA4"
-    },
-    {
       "name": "AriannaBoh",
       "type": "land",
       "chunks": 1,
@@ -2377,12 +2368,6 @@
     },
     {
       "type": "land",
-      "at": "2026-09-09T02:27:27Z",
-      "text": "Skinski was founded",
-      "owner": "winterrrly"
-    },
-    {
-      "type": "land",
       "at": "2026-09-09T01:55:54Z",
       "text": "Arkalis was founded",
       "owner": "st4tc"
@@ -2422,6 +2407,12 @@
       "at": "2026-09-06T08:37:31Z",
       "text": "ACRI_Vanguard was founded",
       "owner": "ACRI_Vanguard"
+    },
+    {
+      "type": "land",
+      "at": "2026-09-06T04:17:28Z",
+      "text": "Liam's Empire was founded",
+      "owner": "ihasadragon"
     }
   ]
 }
