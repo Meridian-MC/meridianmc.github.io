@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-01T15:36:50Z",
+  "generated": "2026-10-01T15:58:53Z",
   "meta": {
     "players_tracked": 77,
     "active_traders": 8,
@@ -27,15 +27,15 @@
     },
     "supply": {
       "total": 18431.15,
-      "on_hand": 260,
-      "ender_chests": 1107,
+      "on_hand": 253,
+      "ender_chests": 1114,
       "containers": 6365,
       "loose": 17,
       "land_banks": 10682.15,
       "coverage": {
         "files": 1806,
-        "fresh": 1787,
-        "stale": 19,
+        "fresh": 1761,
+        "stale": 45,
         "unscanned": 0,
         "percent": 100.0
       }
@@ -314,6 +314,35 @@
       "note": "Basket of 16 shop items, base 100 on 2026-09-15."
     },
     "items": [
+      {
+        "name": "Dirt",
+        "unit": "each",
+        "price": 50.5,
+        "change_7d": 49.5,
+        "shops": 2,
+        "sellers": 1,
+        "series": [
+          [
+            "2026-09-15",
+            1000000.0
+          ],
+          [
+            "2026-09-29",
+            1.0
+          ],
+          [
+            "2026-09-30",
+            1.0
+          ],
+          [
+            "2026-10-01",
+            50.5
+          ]
+        ],
+        "candles": [],
+        "volume_24h_qty": 0,
+        "volume_24h_value": 0.0
+      },
       {
         "name": "End Crystal",
         "unit": "each",
@@ -1043,35 +1072,6 @@
         "volume_24h_value": 0.0
       },
       {
-        "name": "Dirt",
-        "unit": "each",
-        "price": 1.0,
-        "change_7d": 0.0,
-        "shops": 1,
-        "sellers": 1,
-        "series": [
-          [
-            "2026-09-15",
-            1000000.0
-          ],
-          [
-            "2026-09-29",
-            1.0
-          ],
-          [
-            "2026-09-30",
-            1.0
-          ],
-          [
-            "2026-10-01",
-            1.0
-          ]
-        ],
-        "candles": [],
-        "volume_24h_qty": 0,
-        "volume_24h_value": 0.0
-      },
-      {
         "name": "Emerald",
         "unit": "each",
         "price": 500.0,
@@ -1471,6 +1471,38 @@
     ],
     "market": [
       {
+        "name": "Dirt",
+        "id": "minecraft:dirt",
+        "price": 50.5,
+        "low": 1.0,
+        "high": 100.0,
+        "bid": null,
+        "shops": 2,
+        "sellers": 1,
+        "listings": [
+          {
+            "seller": "ACRI_Vanguard",
+            "price": 1.0,
+            "type": "sell",
+            "world": "world",
+            "x": 60,
+            "y": 60,
+            "z": -2726,
+            "land": null
+          },
+          {
+            "seller": "ACRI_Vanguard",
+            "price": 100.0,
+            "type": "sell",
+            "world": "world",
+            "x": -161,
+            "y": 65,
+            "z": 3295,
+            "land": null
+          }
+        ]
+      },
+      {
         "name": "End Crystal",
         "id": "minecraft:end_crystal",
         "price": 75.0,
@@ -1727,28 +1759,6 @@
             "y": 95,
             "z": -4148,
             "land": "Augustine"
-          }
-        ]
-      },
-      {
-        "name": "Dirt",
-        "id": "minecraft:dirt",
-        "price": 1.0,
-        "low": 1.0,
-        "high": 1.0,
-        "bid": null,
-        "shops": 1,
-        "sellers": 1,
-        "listings": [
-          {
-            "seller": "ACRI_Vanguard",
-            "price": 1.0,
-            "type": "sell",
-            "world": "world",
-            "x": 60,
-            "y": 60,
-            "z": -2726,
-            "land": null
           }
         ]
       },
@@ -2041,7 +2051,7 @@
     "mean": 17.75
   },
   "server": {
-    "checked": "2026-10-01T15:36:50Z",
+    "checked": "2026-10-01T15:58:53Z",
     "started_at": "2026-10-01T12:12:44Z",
     "tps": 20.0
   },
