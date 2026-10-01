@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-01T18:00:46Z",
+  "generated": "2026-10-01T18:36:11Z",
   "meta": {
     "players_tracked": 77,
     "active_traders": 8,
@@ -26,21 +26,21 @@
       "note": "Gold launched 2026-09-12. Needs 8+ active traders and 14+ days of history; currently 8 traders / 19 days."
     },
     "supply": {
-      "total": 18525.15,
-      "on_hand": 253,
-      "ender_chests": 1114,
-      "containers": 6459,
+      "total": 19632.15,
+      "on_hand": 257,
+      "ender_chests": 811,
+      "containers": 7402,
       "loose": 17,
-      "land_banks": 10682.15,
+      "land_banks": 11145.15,
       "coverage": {
-        "files": 1806,
-        "fresh": 1806,
-        "stale": 0,
+        "files": 1770,
+        "fresh": 1742,
+        "stale": 28,
         "unscanned": 0,
         "percent": 100.0
       }
     },
-    "money_supply_players": 18525.15,
+    "money_supply_players": 19632.15,
     "money_supply_series": [
       [
         "2026-09-15",
@@ -108,7 +108,7 @@
       ],
       [
         "2026-10-01",
-        18525.15
+        19632.15
       ]
     ],
     "flow": {
@@ -210,13 +210,13 @@
         ],
         [
           "2026-10-01",
-          277.0,
-          260.0
+          828.0,
+          420.0
         ]
       ],
-      "spent_7d": 12739.0,
-      "received_7d": 7856.0,
-      "transactions": 300
+      "spent_7d": 13290.0,
+      "received_7d": 8016.0,
+      "transactions": 307
     },
     "trade_volume_series": [
       [
@@ -234,11 +234,15 @@
       [
         "2026-09-29",
         264.0
+      ],
+      [
+        "2026-10-01",
+        160.0
       ]
     ],
-    "trade_volume_7d": 414.0,
-    "chest_shop_transactions": 4,
-    "gini": 0.919,
+    "trade_volume_7d": 574.0,
+    "chest_shop_transactions": 5,
+    "gini": 0.922,
     "price_index": {
       "value": 1.1,
       "series": [
@@ -580,10 +584,18 @@
             "l": 40.0,
             "c": 40.0,
             "v": 5
+          },
+          {
+            "t": "2026-10-01",
+            "o": 40.0,
+            "h": 40.0,
+            "l": 40.0,
+            "c": 40.0,
+            "v": 4
           }
         ],
-        "volume_24h_qty": 0,
-        "volume_24h_value": 0.0
+        "volume_24h_qty": 4,
+        "volume_24h_value": 160.0
       },
       {
         "name": "Arrow",
@@ -1991,10 +2003,6 @@
         "balance": 400
       },
       {
-        "name": "Keanie__",
-        "balance": 303
-      },
-      {
         "name": "Giggsy__",
         "balance": 140
       },
@@ -2039,6 +2047,10 @@
         "balance": 13
       },
       {
+        "name": "Keanie__",
+        "balance": 4
+      },
+      {
         "name": "BabieDolphin",
         "balance": 2
       },
@@ -2048,11 +2060,11 @@
       }
     ],
     "median": 0,
-    "mean": 17.75
+    "mean": 13.87
   },
   "server": {
-    "checked": "2026-10-01T18:00:46Z",
-    "started_at": "2026-10-01T12:12:44Z",
+    "checked": "2026-10-01T18:36:12Z",
+    "started_at": "2026-10-01T18:18:53Z",
     "tps": 20.0
   },
   "nations": [
@@ -2068,7 +2080,7 @@
       "activity": 1.0,
       "chunks": 138,
       "members": 36,
-      "treasury": 1906.62
+      "treasury": 2066.62
     },
     {
       "name": "Thalassos",
@@ -2082,7 +2094,7 @@
       "activity": 1.0,
       "chunks": 172,
       "members": 36,
-      "treasury": 1388.0
+      "treasury": 1691.0
     }
   ],
   "lands": [
@@ -2091,7 +2103,7 @@
       "type": "land",
       "chunks": 88,
       "members": 15,
-      "bank": 140.0,
+      "bank": 443.0,
       "level": 1,
       "color": "#667CEE"
     },
@@ -2118,7 +2130,7 @@
       "type": "land",
       "chunks": 30,
       "members": 5,
-      "bank": 794.28,
+      "bank": 954.28,
       "level": 1,
       "color": "#66979D"
     },
