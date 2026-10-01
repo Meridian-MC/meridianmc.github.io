@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-01T00:22:13Z",
+  "generated": "2026-10-01T00:52:34Z",
   "meta": {
     "players_tracked": 77,
     "active_traders": 8,
@@ -27,9 +27,9 @@
     },
     "supply": {
       "total": 18604.15,
-      "on_hand": 253,
+      "on_hand": 284,
       "ender_chests": 1080,
-      "containers": 6329,
+      "containers": 6298,
       "loose": 17,
       "land_banks": 10925.15,
       "coverage": {
@@ -233,7 +233,7 @@
     ],
     "trade_volume_7d": 414.0,
     "chest_shop_transactions": 4,
-    "gini": 0.925,
+    "gini": 0.919,
     "price_index": {
       "value": 1.1,
       "series": [
@@ -2016,6 +2016,10 @@
         "balance": 32
       },
       {
+        "name": "Heyitsmewyatt1",
+        "balance": 31
+      },
+      {
         "name": "Aorus6320",
         "balance": 13
       },
@@ -2026,17 +2030,13 @@
       {
         "name": "BlackAdder83",
         "balance": 2
-      },
-      {
-        "name": "winterrrly",
-        "balance": 0
       }
     ],
     "median": 0,
-    "mean": 17.31
+    "mean": 17.71
   },
   "server": {
-    "checked": "2026-10-01T00:22:14Z",
+    "checked": "2026-10-01T00:52:34Z",
     "started_at": "2026-09-30T12:13:02Z",
     "tps": 20.0
   },
