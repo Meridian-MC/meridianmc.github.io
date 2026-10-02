@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-02T00:03:55Z",
+  "generated": "2026-10-02T05:40:48Z",
   "meta": {
     "players_tracked": 77,
     "active_traders": 8,
@@ -26,21 +26,21 @@
       "note": "Gold launched 2026-09-12. Needs 8+ active traders and 14+ days of history; currently 8 traders / 20 days."
     },
     "supply": {
-      "total": 20366.15,
-      "on_hand": 1648,
+      "total": 18971.15,
+      "on_hand": 253,
       "ender_chests": 819,
       "containers": 6435,
       "loose": 17,
       "land_banks": 11447.15,
       "coverage": {
         "files": 1774,
-        "fresh": 1751,
-        "stale": 23,
+        "fresh": 1735,
+        "stale": 39,
         "unscanned": 0,
         "percent": 100.0
       }
     },
-    "money_supply_players": 20366.15,
+    "money_supply_players": 18971.15,
     "money_supply_series": [
       [
         "2026-09-15",
@@ -112,7 +112,7 @@
       ],
       [
         "2026-10-02",
-        20366.15
+        18971.15
       ]
     ],
     "flow": {
@@ -246,7 +246,7 @@
     ],
     "trade_volume_7d": 424.0,
     "chest_shop_transactions": 5,
-    "gini": 0.948,
+    "gini": 0.923,
     "price_index": {
       "value": 1.1,
       "series": [
@@ -2071,10 +2071,6 @@
   "wealth": {
     "top": [
       {
-        "name": "Keanie__",
-        "balance": 1395
-      },
-      {
         "name": "JxrdanUK",
         "balance": 400
       },
@@ -2129,14 +2125,18 @@
       {
         "name": "BlackAdder83",
         "balance": 2
+      },
+      {
+        "name": "winterrrly",
+        "balance": 0
       }
     ],
     "median": 0,
-    "mean": 32.04
+    "mean": 13.92
   },
   "server": {
-    "checked": "2026-10-02T00:03:55Z",
-    "started_at": "2026-10-01T18:18:53Z",
+    "checked": "2026-10-02T05:40:48Z",
+    "started_at": "2026-10-01T18:18:52Z",
     "tps": 20.0
   },
   "nations": [
