@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-02T11:23:21Z",
+  "generated": "2026-10-02T16:48:19Z",
   "meta": {
     "players_tracked": 77,
     "active_traders": 8,
@@ -26,21 +26,21 @@
       "note": "Gold launched 2026-09-12. Needs 8+ active traders and 14+ days of history; currently 8 traders / 20 days."
     },
     "supply": {
-      "total": 18971.15,
-      "on_hand": 253,
-      "ender_chests": 819,
-      "containers": 6435,
+      "total": 20307.15,
+      "on_hand": 220,
+      "ender_chests": 2206,
+      "containers": 6447,
       "loose": 17,
-      "land_banks": 11447.15,
+      "land_banks": 11417.15,
       "coverage": {
         "files": 1774,
-        "fresh": 1774,
-        "stale": 0,
+        "fresh": 1643,
+        "stale": 131,
         "unscanned": 0,
         "percent": 100.0
       }
     },
-    "money_supply_players": 18971.15,
+    "money_supply_players": 20307.15,
     "money_supply_series": [
       [
         "2026-09-15",
@@ -112,7 +112,7 @@
       ],
       [
         "2026-10-02",
-        18971.15
+        20307.15
       ]
     ],
     "flow": {
@@ -216,11 +216,16 @@
           "2026-10-01",
           1258.0,
           548.0
+        ],
+        [
+          "2026-10-02",
+          70.0,
+          100.0
         ]
       ],
-      "spent_7d": 8372.0,
-      "received_7d": 7594.0,
-      "transactions": 318
+      "spent_7d": 8442.0,
+      "received_7d": 7694.0,
+      "transactions": 321
     },
     "trade_volume_series": [
       [
@@ -246,7 +251,7 @@
     ],
     "trade_volume_7d": 424.0,
     "chest_shop_transactions": 5,
-    "gini": 0.923,
+    "gini": 0.951,
     "price_index": {
       "value": 1.1,
       "series": [
@@ -2071,6 +2076,10 @@
   "wealth": {
     "top": [
       {
+        "name": "Keanie__",
+        "balance": 1387
+      },
+      {
         "name": "JxrdanUK",
         "balance": 400
       },
@@ -2093,10 +2102,6 @@
       {
         "name": "ske9z",
         "balance": 36
-      },
-      {
-        "name": "Atilius_Corvinus",
-        "balance": 33
       },
       {
         "name": "WuterGamer",
@@ -2132,11 +2137,11 @@
       }
     ],
     "median": 0,
-    "mean": 13.92
+    "mean": 31.51
   },
   "server": {
-    "checked": "2026-10-02T11:23:21Z",
-    "started_at": "2026-10-01T18:18:53Z",
+    "checked": "2026-10-02T16:48:19Z",
+    "started_at": "2026-10-02T12:12:31Z",
     "tps": 20.0
   },
   "nations": [
@@ -2152,7 +2157,7 @@
       "activity": 1.0,
       "chunks": 138,
       "members": 36,
-      "treasury": 2368.62
+      "treasury": 2338.62
     },
     {
       "name": "Thalassos",
@@ -2202,7 +2207,7 @@
       "type": "land",
       "chunks": 30,
       "members": 5,
-      "bank": 1211.28,
+      "bank": 1181.28,
       "level": 1,
       "color": "#66979D"
     },
