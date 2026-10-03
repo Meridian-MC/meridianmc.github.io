@@ -1,7 +1,7 @@
 {
-  "generated": "2026-10-03T15:14:03Z",
+  "generated": "2026-10-03T18:44:03Z",
   "meta": {
-    "players_tracked": 78,
+    "players_tracked": 80,
     "active_traders": 6,
     "data_days": 21,
     "sufficient": false,
@@ -26,21 +26,21 @@
       "note": "Gold launched 2026-09-12. Needs 8+ active traders and 14+ days of history; currently 6 traders / 21 days."
     },
     "supply": {
-      "total": 19645.97,
-      "on_hand": 795,
+      "total": 18627.04,
+      "on_hand": 294,
       "ender_chests": 2466,
       "containers": 2793,
       "loose": 54,
-      "land_banks": 13537.97,
+      "land_banks": 13020.04,
       "coverage": {
-        "files": 1774,
-        "fresh": 1540,
-        "stale": 234,
+        "files": 1780,
+        "fresh": 1461,
+        "stale": 319,
         "unscanned": 0,
         "percent": 100.0
       }
     },
-    "money_supply_players": 19645.97,
+    "money_supply_players": 18627.04,
     "money_supply_series": [
       [
         "2026-09-15",
@@ -116,7 +116,7 @@
       ],
       [
         "2026-10-03",
-        19645.97
+        18627.04
       ]
     ],
     "flow": {
@@ -228,13 +228,13 @@
         ],
         [
           "2026-10-03",
-          5.0,
-          11.0
+          8684.0,
+          7872.0
         ]
       ],
-      "spent_7d": 16976.0,
-      "received_7d": 17902.0,
-      "transactions": 373
+      "spent_7d": 25655.0,
+      "received_7d": 25763.0,
+      "transactions": 388
     },
     "trade_volume_series": [
       [
@@ -1834,7 +1834,7 @@
             "x": -260,
             "y": 106,
             "z": -1200,
-            "land": null
+            "land": "Bluebear"
           }
         ]
       },
@@ -2177,10 +2177,6 @@
         "balance": 1747
       },
       {
-        "name": "WhenAtRome",
-        "balance": 580
-      },
-      {
         "name": "JxrdanUK",
         "balance": 400
       },
@@ -2221,24 +2217,28 @@
         "balance": 32
       },
       {
+        "name": "Snacob8",
+        "balance": 32
+      },
+      {
+        "name": "_Melix_",
+        "balance": 32
+      },
+      {
         "name": "Aorus6320",
         "balance": 13
       },
       {
-        "name": "BabieDolphin",
-        "balance": 2
-      },
-      {
-        "name": "BlackAdder83",
-        "balance": 2
+        "name": "Augustine65480",
+        "balance": 9
       }
     ],
     "median": 0.0,
-    "mean": 41.81
+    "mean": 34.5
   },
   "server": {
-    "checked": "2026-10-03T15:14:04Z",
-    "started_at": "2026-10-03T12:12:39Z",
+    "checked": "2026-10-03T18:44:04Z",
+    "started_at": "2026-10-03T15:39:17Z",
     "tps": 20.0
   },
   "nations": [
@@ -2246,15 +2246,15 @@
       "name": "Augustine Empire",
       "tag": null,
       "color": "#956BE8",
-      "lands": 6,
+      "lands": 5,
       "mdi": 1.0,
       "territory": 1.0,
       "population": 1.0,
       "wealth": 1.0,
       "activity": 1.0,
-      "chunks": 139,
-      "members": 35,
-      "treasury": 7239.44
+      "chunks": 116,
+      "members": 24,
+      "treasury": 7129.65
     },
     {
       "name": "Thalassos",
@@ -2277,16 +2277,16 @@
       "type": "land",
       "chunks": 79,
       "members": 13,
-      "bank": 0.0,
+      "bank": 20.0,
       "level": 0,
       "color": "#DF6EA4"
     },
     {
       "name": "Augustine",
       "type": "land",
-      "chunks": 64,
-      "members": 10,
-      "bank": 1171.0,
+      "chunks": 67,
+      "members": 11,
+      "bank": 985.99,
       "level": 2,
       "color": "#C0CAF3"
     },
@@ -2295,26 +2295,17 @@
       "type": "land",
       "chunks": 31,
       "members": 5,
-      "bank": 5343.1,
+      "bank": 5779.0,
       "level": 1,
       "color": "#66979D"
-    },
-    {
-      "name": "Diddy Ahh Land",
-      "type": "land",
-      "chunks": 27,
-      "members": 2,
-      "bank": 4.0,
-      "level": 0,
-      "color": null
     },
     {
       "name": "Goldmarche",
       "type": "land",
       "chunks": 26,
       "members": 12,
-      "bank": 180.68,
-      "level": 1,
+      "bank": 0.0,
+      "level": 0,
       "color": "#A3E085"
     },
     {
@@ -2322,7 +2313,7 @@
       "type": "land",
       "chunks": 19,
       "members": 8,
-      "bank": 4200.53,
+      "bank": 2455.53,
       "level": 2,
       "color": "#B6B06C"
     },
@@ -2331,16 +2322,25 @@
       "type": "land",
       "chunks": 9,
       "members": 3,
-      "bank": 105.56,
+      "bank": 15.56,
       "level": 0,
       "color": "#9B7570"
+    },
+    {
+      "name": "Bluebear",
+      "type": "land",
+      "chunks": 7,
+      "members": 2,
+      "bank": 1392.86,
+      "level": 0,
+      "color": "#B565CB"
     },
     {
       "name": "Turul",
       "type": "land",
       "chunks": 5,
       "members": 2,
-      "bank": 82.05,
+      "bank": 32.05,
       "level": 0,
       "color": "#CCD56D"
     },
@@ -2349,7 +2349,7 @@
       "type": "land",
       "chunks": 4,
       "members": 3,
-      "bank": 1685.0,
+      "bank": 1665.0,
       "level": 0,
       "color": "#94B8C3"
     },
@@ -2358,52 +2358,25 @@
       "type": "land",
       "chunks": 4,
       "members": 6,
-      "bank": 54.0,
+      "bank": 38.0,
       "level": 0,
       "color": "#BDE19D"
-    },
-    {
-      "name": "Faros Thalassoi",
-      "type": "land",
-      "chunks": 4,
-      "members": 2,
-      "bank": 0.0,
-      "level": 0,
-      "color": "#66D7CC"
     },
     {
       "name": "The Casino",
       "type": "land",
       "chunks": 4,
       "members": 3,
-      "bank": 357.05,
+      "bank": 317.05,
       "level": 0,
       "color": "#DD8764"
-    },
-    {
-      "name": "klaksonik",
-      "type": "land",
-      "chunks": 3,
-      "members": 3,
-      "bank": 2.0,
-      "level": 0,
-      "color": "#F4A781"
-    },
-    {
-      "name": "coolland!!!",
-      "type": "land",
-      "chunks": 3,
-      "members": 4,
-      "bank": 0.0,
-      "level": 0,
-      "color": "#CF928D"
     },
     {
       "name": "Luko_Landino",
       "type": "land",
       "chunks": 2,
       "members": 6,
-      "bank": 53.0,
+      "bank": 43.0,
       "level": 0,
       "color": "#B0E0A7"
     },
@@ -2412,7 +2385,7 @@
       "type": "land",
       "chunks": 2,
       "members": 2,
-      "bank": 172.0,
+      "bank": 162.0,
       "level": 0,
       "color": "#E8D289"
     },
@@ -2421,7 +2394,7 @@
       "type": "land",
       "chunks": 1,
       "members": 2,
-      "bank": 81.0,
+      "bank": 76.0,
       "level": 0,
       "color": "#CADC7A"
     },
@@ -2430,30 +2403,63 @@
       "type": "land",
       "chunks": 1,
       "members": 2,
-      "bank": 20.0,
+      "bank": 15.0,
       "level": 0,
       "color": "#DDD0F2"
-    },
-    {
-      "name": "Mingasty_2",
-      "type": "land",
-      "chunks": 1,
-      "members": 3,
-      "bank": 0.0,
-      "level": 0,
-      "color": "#6C997E"
     },
     {
       "name": "Telos",
       "type": "land",
       "chunks": 1,
       "members": 2,
-      "bank": 27.0,
+      "bank": 23.0,
       "level": 0,
       "color": "#B7D36B"
+    },
+    {
+      "name": "klaksonik",
+      "type": "land",
+      "chunks": 0,
+      "members": 3,
+      "bank": 0.0,
+      "level": 0,
+      "color": "#F4A781"
+    },
+    {
+      "name": "Diddy Ahh Land",
+      "type": "land",
+      "chunks": 0,
+      "members": 2,
+      "bank": 0.0,
+      "level": 0,
+      "color": null
+    },
+    {
+      "name": "Faros Thalassoi",
+      "type": "land",
+      "chunks": 0,
+      "members": 2,
+      "bank": 0.0,
+      "level": 0,
+      "color": "#66D7CC"
+    },
+    {
+      "name": "Mingasty_2",
+      "type": "land",
+      "chunks": 0,
+      "members": 3,
+      "bank": 0.0,
+      "level": 0,
+      "color": "#6C997E"
     }
   ],
   "events": [
+    {
+      "type": "land",
+      "at": "2026-10-03T16:01:45Z",
+      "text": "Bluebear was founded",
+      "owner": "Keanie__"
+    },
     {
       "type": "land",
       "at": "2026-09-26T13:22:30Z",
@@ -2567,12 +2573,6 @@
       "at": "2026-09-06T00:57:30Z",
       "text": "Luko_Landino was founded",
       "owner": "Luko_Landino"
-    },
-    {
-      "type": "land",
-      "at": "2026-09-05T21:15:04Z",
-      "text": "coolland!!! was founded",
-      "owner": "aazo9z"
     }
   ]
 }
