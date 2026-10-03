@@ -1,7 +1,7 @@
 {
-  "generated": "2026-10-03T18:44:03Z",
+  "generated": "2026-10-03T21:49:50Z",
   "meta": {
-    "players_tracked": 80,
+    "players_tracked": 81,
     "active_traders": 6,
     "data_days": 21,
     "sufficient": false,
@@ -26,21 +26,21 @@
       "note": "Gold launched 2026-09-12. Needs 8+ active traders and 14+ days of history; currently 6 traders / 21 days."
     },
     "supply": {
-      "total": 18627.04,
-      "on_hand": 294,
+      "total": 18878.04,
+      "on_hand": 285,
       "ender_chests": 2466,
-      "containers": 2793,
+      "containers": 2780,
       "loose": 54,
-      "land_banks": 13020.04,
+      "land_banks": 13293.04,
       "coverage": {
         "files": 1780,
-        "fresh": 1461,
-        "stale": 319,
+        "fresh": 1475,
+        "stale": 305,
         "unscanned": 0,
         "percent": 100.0
       }
     },
-    "money_supply_players": 18627.04,
+    "money_supply_players": 18878.04,
     "money_supply_series": [
       [
         "2026-09-15",
@@ -116,7 +116,7 @@
       ],
       [
         "2026-10-03",
-        18627.04
+        18878.04
       ]
     ],
     "flow": {
@@ -228,13 +228,13 @@
         ],
         [
           "2026-10-03",
-          8684.0,
-          7872.0
+          9237.0,
+          8152.0
         ]
       ],
-      "spent_7d": 25655.0,
-      "received_7d": 25763.0,
-      "transactions": 388
+      "spent_7d": 26208.0,
+      "received_7d": 26043.0,
+      "transactions": 393
     },
     "trade_volume_series": [
       [
@@ -264,7 +264,7 @@
     ],
     "trade_volume_7d": 976.0,
     "chest_shop_transactions": 7,
-    "gini": 0.952,
+    "gini": 0.954,
     "price_index": {
       "value": 1.1,
       "series": [
@@ -2197,6 +2197,10 @@
         "balance": 36
       },
       {
+        "name": "Snacob8",
+        "balance": 32
+      },
+      {
         "name": "WuterGamer",
         "balance": 32
       },
@@ -2213,15 +2217,11 @@
         "balance": 32
       },
       {
-        "name": "Croissantasaur",
-        "balance": 32
-      },
-      {
-        "name": "Snacob8",
-        "balance": 32
-      },
-      {
         "name": "_Melix_",
+        "balance": 32
+      },
+      {
+        "name": "Croissantasaur",
         "balance": 32
       },
       {
@@ -2229,15 +2229,15 @@
         "balance": 13
       },
       {
-        "name": "Augustine65480",
-        "balance": 9
+        "name": "WhenAtRome",
+        "balance": 6
       }
     ],
-    "median": 0.0,
-    "mean": 34.5
+    "median": 0,
+    "mean": 33.96
   },
   "server": {
-    "checked": "2026-10-03T18:44:04Z",
+    "checked": "2026-10-03T21:49:50Z",
     "started_at": "2026-10-03T15:39:17Z",
     "tps": 20.0
   },
@@ -2254,7 +2254,7 @@
       "activity": 1.0,
       "chunks": 116,
       "members": 24,
-      "treasury": 7129.65
+      "treasury": 7272.65
     },
     {
       "name": "Thalassos",
@@ -2295,7 +2295,7 @@
       "type": "land",
       "chunks": 31,
       "members": 5,
-      "bank": 5779.0,
+      "bank": 5922.0,
       "level": 1,
       "color": "#66979D"
     },
@@ -2304,8 +2304,8 @@
       "type": "land",
       "chunks": 26,
       "members": 12,
-      "bank": 0.0,
-      "level": 0,
+      "bank": 130.0,
+      "level": 1,
       "color": "#A3E085"
     },
     {
