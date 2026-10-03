@@ -1,10 +1,10 @@
 {
-  "generated": "2026-10-02T21:13:51Z",
+  "generated": "2026-10-03T00:34:32Z",
   "meta": {
     "players_tracked": 77,
-    "active_traders": 8,
-    "data_days": 20,
-    "sufficient": true,
+    "active_traders": 6,
+    "data_days": 21,
+    "sufficient": false,
     "demo": false,
     "profile": "profile_sgznr",
     "era_start": "2026-09-12",
@@ -23,24 +23,24 @@
     "classification": {
       "code": "INSUFFICIENT_DATA",
       "label": "Insufficient data",
-      "note": "Gold launched 2026-09-12. Needs 8+ active traders and 14+ days of history; currently 8 traders / 20 days."
+      "note": "Gold launched 2026-09-12. Needs 8+ active traders and 14+ days of history; currently 6 traders / 21 days."
     },
     "supply": {
-      "total": 20232.87,
+      "total": 20157.97,
       "on_hand": 183,
       "ender_chests": 2466,
-      "containers": 3068,
+      "containers": 3019,
       "loose": 17,
-      "land_banks": 14498.87,
+      "land_banks": 14472.97,
       "coverage": {
         "files": 1774,
-        "fresh": 1597,
-        "stale": 177,
+        "fresh": 1500,
+        "stale": 274,
         "unscanned": 0,
         "percent": 100.0
       }
     },
-    "money_supply_players": 20232.87,
+    "money_supply_players": 20157.97,
     "money_supply_series": [
       [
         "2026-09-15",
@@ -113,6 +113,10 @@
       [
         "2026-10-02",
         20232.87
+      ],
+      [
+        "2026-10-03",
+        20157.97
       ]
     ],
     "flow": {
@@ -219,13 +223,18 @@
         ],
         [
           "2026-10-02",
-          13199.0,
-          14409.0
+          13265.0,
+          14411.0
+        ],
+        [
+          "2026-10-03",
+          0.0,
+          1.0
         ]
       ],
-      "spent_7d": 21571.0,
-      "received_7d": 22003.0,
-      "transactions": 364
+      "spent_7d": 16971.0,
+      "received_7d": 17892.0,
+      "transactions": 369
     },
     "trade_volume_series": [
       [
@@ -330,6 +339,10 @@
         [
           "2026-10-02",
           1.1
+        ],
+        [
+          "2026-10-03",
+          1.1
         ]
       ],
       "note": "Basket of 16 shop items, base 100 on 2026-09-15."
@@ -361,6 +374,10 @@
           ],
           [
             "2026-10-02",
+            50.5
+          ],
+          [
+            "2026-10-03",
             50.5
           ]
         ],
@@ -394,6 +411,10 @@
           ],
           [
             "2026-10-02",
+            75.0
+          ],
+          [
+            "2026-10-03",
             75.0
           ]
         ],
@@ -444,6 +465,10 @@
           [
             "2026-10-02",
             2.0
+          ],
+          [
+            "2026-10-03",
+            2.0
           ]
         ],
         "candles": [
@@ -472,8 +497,8 @@
             "v": 96
           }
         ],
-        "volume_24h_qty": 96,
-        "volume_24h_value": 192.0
+        "volume_24h_qty": 0,
+        "volume_24h_value": 0.0
       },
       {
         "name": "Experience Bottle",
@@ -554,6 +579,10 @@
           [
             "2026-10-02",
             4.25
+          ],
+          [
+            "2026-10-03",
+            4.25
           ]
         ],
         "candles": [],
@@ -611,6 +640,10 @@
           [
             "2026-10-02",
             40.0
+          ],
+          [
+            "2026-10-03",
+            40.0
           ]
         ],
         "candles": [
@@ -647,8 +680,8 @@
             "v": 9
           }
         ],
-        "volume_24h_qty": 9,
-        "volume_24h_value": 360.0
+        "volume_24h_qty": 0,
+        "volume_24h_value": 0.0
       },
       {
         "name": "Arrow",
@@ -728,6 +761,10 @@
           ],
           [
             "2026-10-02",
+            600.0
+          ],
+          [
+            "2026-10-03",
             600.0
           ]
         ],
@@ -814,6 +851,10 @@
           [
             "2026-10-02",
             2000.0
+          ],
+          [
+            "2026-10-03",
+            2000.0
           ]
         ],
         "candles": [],
@@ -898,6 +939,10 @@
           ],
           [
             "2026-10-02",
+            75.0
+          ],
+          [
+            "2026-10-03",
             75.0
           ]
         ],
@@ -984,6 +1029,10 @@
           [
             "2026-10-02",
             15.0
+          ],
+          [
+            "2026-10-03",
+            15.0
           ]
         ],
         "candles": [],
@@ -1068,6 +1117,10 @@
           ],
           [
             "2026-10-02",
+            35.0
+          ],
+          [
+            "2026-10-03",
             35.0
           ]
         ],
@@ -1154,6 +1207,10 @@
           [
             "2026-10-02",
             550.0
+          ],
+          [
+            "2026-10-03",
+            550.0
           ]
         ],
         "candles": [],
@@ -1239,6 +1296,10 @@
           [
             "2026-10-02",
             500.0
+          ],
+          [
+            "2026-10-03",
+            500.0
           ]
         ],
         "candles": [],
@@ -1319,6 +1380,10 @@
           ],
           [
             "2026-10-02",
+            4.0
+          ],
+          [
+            "2026-10-03",
             4.0
           ]
         ],
@@ -1405,6 +1470,10 @@
           [
             "2026-10-02",
             250.0
+          ],
+          [
+            "2026-10-03",
+            250.0
           ]
         ],
         "candles": [],
@@ -1490,6 +1559,10 @@
           [
             "2026-10-02",
             250.0
+          ],
+          [
+            "2026-10-03",
+            250.0
           ]
         ],
         "candles": [],
@@ -1570,6 +1643,10 @@
           ],
           [
             "2026-10-02",
+            10000.0
+          ],
+          [
+            "2026-10-03",
             10000.0
           ]
         ],
@@ -2160,7 +2237,7 @@
     "mean": 34.4
   },
   "server": {
-    "checked": "2026-10-02T21:13:52Z",
+    "checked": "2026-10-03T00:34:33Z",
     "started_at": "2026-10-02T12:12:31Z",
     "tps": 20.0
   },
@@ -2175,9 +2252,9 @@
       "population": 1.0,
       "wealth": 1.0,
       "activity": 1.0,
-      "chunks": 138,
-      "members": 36,
-      "treasury": 7266.34
+      "chunks": 139,
+      "members": 35,
+      "treasury": 7240.44
     },
     {
       "name": "Thalassos",
@@ -2208,17 +2285,17 @@
       "name": "Augustine",
       "type": "land",
       "chunks": 64,
-      "members": 11,
-      "bank": 1148.0,
+      "members": 10,
+      "bank": 1172.0,
       "level": 2,
       "color": "#C0CAF3"
     },
     {
       "name": "Reach",
       "type": "land",
-      "chunks": 30,
+      "chunks": 31,
       "members": 5,
-      "bank": 5393.0,
+      "bank": 5343.1,
       "level": 1,
       "color": "#66979D"
     },
