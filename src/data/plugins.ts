@@ -49,7 +49,7 @@ export const PLUGINS: PluginEntry[] = [
   {
     id: "tne",
     name: "TheNewEconomy",
-    version: "0.1.5.0",
+    version: "0.1.5.2",
     category: "Land, economy & progression",
     featured: true,
     colorVar: "--p-tne",
@@ -62,7 +62,7 @@ export const PLUGINS: PluginEntry[] = [
   {
     id: "quickshop",
     name: "QuickShop-Hikari",
-    version: "6.3.0.2",
+    version: "6.3.0.3",
     category: "Land, economy & progression",
     featured: true,
     colorVar: "--p-quickshop",
@@ -118,12 +118,19 @@ export const PLUGINS: PluginEntry[] = [
     category: "Land, economy & progression",
     blurb: "Leaderboards for gold, playtime, and mcMMO levels, in-game and on signs.",
   },
+  {
+    id: "landbar",
+    name: "MeridianLandBar",
+    version: "1.0.2",
+    category: "Land, economy & progression",
+    blurb: "Meridian's own: shows the land's name and tier in its colour, or Wilderness (PVP), on your action bar as you cross a border.",
+  },
 
   // ---- Gameplay ----
   {
     id: "brewing",
     name: "The Brewing Project",
-    version: "3.3.3",
+    version: "3.4.0-beta",
     category: "Gameplay",
     featured: true,
     colorVar: "--p-brew",
@@ -139,7 +146,7 @@ export const PLUGINS: PluginEntry[] = [
   {
     id: "mcmmo",
     name: "mcMMO",
-    version: "2.2",
+    version: "2.3.001",
     category: "Gameplay",
     blurb: "RPG skills that level as you play: mining, fishing, combat, and more, each with perks. Fishing can pull up enchanted gear.",
     links: [{ label: "Wiki", href: "https://wiki.mcmmo.org/" }],
@@ -147,7 +154,7 @@ export const PLUGINS: PluginEntry[] = [
   {
     id: "craftorithm",
     name: "Craftorithm",
-    version: "1.14.0.0",
+    version: "1.15.0.0",
     category: "Gameplay",
     blurb: "Runs the server's custom crafting, smelting, and brewing recipes. The full list is on the Recipes page.",
     links: [{ label: "Recipes", href: "/recipes" }],
@@ -155,20 +162,20 @@ export const PLUGINS: PluginEntry[] = [
   {
     id: "deathchest",
     name: "DeathChest",
-    version: "n/a",
+    version: "1.5.9",
     category: "Gameplay",
     featured: true,
     colorVar: "--p-deathchest",
     icon: "/assets/pi/deathchest.svg",
     blurb: "A death doesn't have to mean losing everything to the dark.",
     description:
-      "Your inventory drops into a chest at your death point instead of scattering across the ground. Anyone can open it, and it only lasts ten minutes before it breaks and spills what is left; this doesn't make death safe, it just makes death recoverable if you get back first.",
-    links: [{ label: "SpigotMC", href: "https://www.spigotmc.org/resources/death-chest.101066/" }],
+      "Your inventory goes into a chest at your death point instead of scattering across the ground. The chest cannot be broken or blown up, so death is recoverable if you get back to it before someone else does.",
+    links: [{ label: "GitHub", href: "https://github.com/defNotPau/SimpleDeathChest" }],
   },
   {
     id: "voicechat",
     name: "Simple Voice Chat",
-    version: "2.6.23",
+    version: "2.6.24",
     category: "Gameplay",
     blurb: "Proximity voice chat, plus password-protected group channels for your land or nation. Needs the Simple Voice Chat mod on your client.",
     links: [{ label: "Modrinth", href: "https://modrinth.com/plugin/simple-voice-chat" }],
@@ -183,9 +190,9 @@ export const PLUGINS: PluginEntry[] = [
   {
     id: "imageframe",
     name: "ImageFrame",
-    version: "2026.1.4.0",
+    version: "2026.1.5.0",
     category: "Gameplay",
-    blurb: "Put any image from a URL onto item frames as a map. /imageframe create, with blank maps in hand.",
+    blurb: "Put any image from a URL onto item frames as a map. /imageframe create, no blank maps needed.",
   },
   {
     id: "toolstats",
@@ -197,9 +204,9 @@ export const PLUGINS: PluginEntry[] = [
   {
     id: "fancyholograms",
     name: "FancyHolograms",
-    version: "2.11.0",
+    version: "2.12.0",
     category: "Gameplay",
-    blurb: "The floating text signs around spawn: labels and notices.",
+    blurb: "Floating text displays: labels and notices.",
   },
   {
     id: "bottledexp",
@@ -208,12 +215,40 @@ export const PLUGINS: PluginEntry[] = [
     category: "Gameplay",
     blurb: "Lets you bottle your XP into stackable experience bottles instead of losing it on death. /bottle",
   },
+  {
+    id: "ezrtp",
+    name: "EzRTP",
+    version: "3.4.3",
+    category: "Gameplay",
+    blurb: "/rtp drops you at a random spot in the wild. Three a day, five minutes apart.",
+  },
+  {
+    id: "anvilunlocker",
+    name: "AnvilUnlocker",
+    version: "1.1.3",
+    category: "Gameplay",
+    blurb: "Removes the anvil's \"Too Expensive!\" cap, so heavily enchanted gear can still be repaired and combined.",
+  },
+  {
+    id: "clumps",
+    name: "Clumps",
+    version: "6.0",
+    category: "Gameplay",
+    blurb: "Merges nearby XP orbs into one, so XP farms and mob grinders don't lag.",
+  },
+  {
+    id: "combatelytra",
+    name: "MeridianCombatElytra",
+    version: "1.0.0",
+    category: "Gameplay",
+    blurb: "Meridian's own: you cannot use an elytra while combat tagged, and a glide in progress ends when you are tagged.",
+  },
 
   // ---- Protection & moderation ----
   {
     id: "protection",
     name: "CoreProtect & GrimAC",
-    version: "25.0 / 2.3.74",
+    version: "24.1 / 2.3.74",
     category: "Protection & moderation",
     featured: true,
     colorVar: "--p-core",
@@ -229,21 +264,21 @@ export const PLUGINS: PluginEntry[] = [
   {
     id: "inventoryrollback",
     name: "InventoryRollbackPlus",
-    version: "1.8.4",
+    version: "1.8.5",
     category: "Protection & moderation",
     blurb: "Snapshots inventories on death, join, and quit, so staff can restore items lost to a bug.",
   },
   {
     id: "invsee",
     name: "InvSee++",
-    version: "n/a",
+    version: "0.31.19",
     category: "Protection & moderation",
     blurb: "Lets staff inspect a player's inventory and ender chest while investigating reports.",
   },
   {
-    id: "fawe",
-    name: "FastAsyncWorldEdit",
-    version: "2.15.4",
+    id: "worldedit",
+    name: "WorldEdit",
+    version: "7.4.6-beta-02",
     category: "Protection & moderation",
     blurb: "The world-editing tool staff use to build and terraform spawn and other official structures.",
   },
@@ -257,7 +292,7 @@ export const PLUGINS: PluginEntry[] = [
   {
     id: "plugman",
     name: "PlugManX",
-    version: "3.1.0",
+    version: "3.2.0",
     category: "Protection & moderation",
     blurb: "Lets staff reload or disable a single plugin without restarting the server.",
   },
@@ -326,14 +361,14 @@ export const PLUGINS: PluginEntry[] = [
   {
     id: "tab",
     name: "TAB",
-    version: "6.1.3",
+    version: "6.2.0",
     category: "Chat, info & infrastructure",
     blurb: "Controls the in-game tab list and scoreboard: server info, ping, and your stats at a glance.",
   },
   {
     id: "minimotd",
     name: "MiniMOTD",
-    version: "2.2.4",
+    version: "2.2.5",
     category: "Chat, info & infrastructure",
     blurb: "The server list message and icon you see before connecting.",
   },
@@ -354,7 +389,7 @@ export const PLUGINS: PluginEntry[] = [
   {
     id: "protocollib",
     name: "ProtocolLib & packetevents",
-    version: "n/a / 2.13.0",
+    version: "5.4.0 / 2.14.0",
     category: "Chat, info & infrastructure",
     blurb: "Shared packet-handling libraries several plugins above depend on.",
   },
@@ -368,14 +403,14 @@ export const PLUGINS: PluginEntry[] = [
   {
     id: "viaversion",
     name: "ViaVersion",
-    version: "5.11.0",
+    version: "5.12.1",
     category: "Chat, info & infrastructure",
     blurb: "Lets Java clients from 1.8 through the current version connect to Meridian's 26.2 server.",
   },
   {
     id: "viabackwards",
     name: "ViaBackwards",
-    version: "5.11.0",
+    version: "5.12.1",
     category: "Chat, info & infrastructure",
     blurb: "The companion to ViaVersion. Translates newer protocol features back down for older clients.",
   },

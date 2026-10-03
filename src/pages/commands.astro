@@ -33,15 +33,17 @@ const sections = [
     <div class="cmd-group">
     <div class="cmd"><div class="k"><code>/back</code></div><div class="desc">Return to your last location, including your death point.</div></div>
     <div class="cmd"><div class="k"><code>/tpa &lt;player&gt;</code></div><div class="desc">Ask to teleport to a player. <code>/tpahere &lt;player&gt;</code> asks them to come to you.</div></div>
-    <div class="cmd"><div class="k"><code>/tpaccept</code> <code>/tpdeny</code></div><div class="desc">Answer a teleport request. Requests expire after two minutes.</div></div>
+    <div class="cmd"><div class="k"><code>/tpaccept</code> <code>/tpdeny</code></div><div class="desc">Answer a teleport request. Requests expire after two minutes, and every teleport has a 3-second warm-up.</div></div>
+    <div class="cmd"><div class="k"><code>/rtp</code></div><div class="desc">Teleport to a random spot in the wild. Three a day, five minutes apart.</div></div>
     <div class="cmd"><div class="k"><code>/lands spawn</code></div><div class="desc">Teleport to your land's spawn point.</div></div>
+    <p class="cmd-note">While you are combat tagged (30 seconds after hitting or being hit by a player) you cannot teleport or use an elytra, and logging out kills you.</p>
     </div>
   </details>
 
   <details class="acc-item">
     <summary><h2 id="personal">Homes &amp; personal</h2></summary>
     <div class="cmd-group">
-    <div class="cmd"><div class="k"><code>/sethome [name]</code></div><div class="desc">Set a home where you're standing. Your home limit depends on your rank.</div></div>
+    <div class="cmd"><div class="k"><code>/sethome [name]</code></div><div class="desc">Set a home where you're standing. You get three homes (five with VIP).</div></div>
     <div class="cmd"><div class="k"><code>/home [name]</code></div><div class="desc">Teleport to a home. <code>/homes</code> lists them.</div></div>
     <div class="cmd"><div class="k"><code>/delhome &lt;name&gt;</code></div><div class="desc">Delete a home.</div></div>
     <div class="cmd"><div class="k"><code>/afk</code></div><div class="desc">Toggle your AFK status.</div></div>
@@ -81,7 +83,7 @@ const sections = [
   <details class="acc-item">
     <summary><h2 id="voting">Voting &amp; crates</h2></summary>
     <div class="cmd-group">
-    <div class="cmd"><div class="k"><code>/vote</code></div><div class="desc">Links for our four listing sites. Each can be voted once every 24 hours, and every vote pays a Copper Crate.</div></div>
+    <div class="cmd"><div class="k"><code>/vote</code></div><div class="desc">Links for our four listing sites. Each can be voted once every 24 hours, and every vote pays a Vanilla Crate.</div></div>
     <div class="cmd"><div class="k"><code>/crates</code></div><div class="desc">Open the crates you hold. Crates never take an inventory slot. They're held for you until you open them.</div></div>
     <div class="cmd"><div class="k"><code>/keys</code></div><div class="desc">How many of each crate you're currently holding.</div></div>
     </div>

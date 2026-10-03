@@ -19,7 +19,7 @@ import { ECON } from "../consts";
     <li>Run <code>/lands create &lt;name&gt;</code> to found your land. The first chunk is free. Every chunk after that costs <strong>{ECON.chunkCost}</strong>, paid from the land bank: your 10th chunk is about 23 G, your 30th about 50 G, your 50th about 109 G. Holding land is cheap; growing a large one is not. <code>/l</code>, <code>/ls</code>, and <code>/t</code> are all shorthand for <code>/lands</code>.</li>
     <li>You can own up to <strong>two lands</strong> and be trusted in up to five. Each land you own pays its own upkeep.</li>
     <li>When naming your land you can use a hex code to set its color on the world map, for example <code>&lt;#FF5555&gt;ExampleLand</code>. Minecraft only recognizes a specific set of hex colors.</li>
-    <li>Your land has a shared bank that is used to store gold and pay upkeep and claim costs. Upkeep is charged weekly at <strong>{ECON.landUpkeepPerChunk} per chunk</strong>. Claims and upkeep only ever come out of the bank, never your inventory, so keep it funded: a land that cannot pay its upkeep is at risk.</li>
+    <li>Your land has a shared bank that is used to store gold and pay upkeep and claim costs. Upkeep is charged weekly at <strong>{ECON.landUpkeepPerChunk} per chunk</strong>. Claims and upkeep only ever come out of the bank, never your inventory, so keep it funded: a land that cannot pay its full upkeep loses its most recently claimed chunks until the rest is paid for, every week it falls short.</li>
     <li>You can rent or sell sub-areas of your land to other players without trusting them.</li>
     <li>Unlock land tiers with trusted members and gold in the land bank.</li>
   </ol>

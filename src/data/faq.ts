@@ -34,7 +34,7 @@ export const FAQ: FaqEntry[] = [
   {
     category: "world",
     question: "Is the End open?",
-    answer: `<p><span class="short">No</span>, the End is closed. There are, however, custom recipes for End items and blocks &mdash; see the <a href="/recipes">Recipes</a> page.</p>`,
+    answer: `<p><span class="short">Yes</span>, the End opened on 26 September. The outer islands and End cities are open, and elytras can be found and used. Two things differ from vanilla: you <span class="short">cannot use an elytra while combat tagged</span>, and End city chests no longer roll Mending on their gear (a Mending book turns up in about 1 chest in 1,000). The custom End recipes on the <a href="/recipes">Recipes</a> page still work.</p>`,
   },
   {
     category: "world",
@@ -44,13 +44,14 @@ export const FAQ: FaqEntry[] = [
   {
     category: "world",
     question: "Is PvP on?",
-    answer: `<p><span class="short">Yes</span>, PvP is live everywhere except inside spawn, which is a permanent safe zone. There is <span class="short">no keep-inventory</span> outside spawn, so losing a fight means dropping what you carried. Your things land in a death chest at the spot you died. <span class="short">Anyone can open it</span>, and it lasts <span class="short">10 minutes</span> before it breaks and spills whatever is left onto the ground, so get back to it before someone else does.</p>
+    answer: `<p><span class="short">Yes</span>, PvP is live in the wilderness of every dimension, and there is <span class="short">no keep-inventory</span>, so losing a fight means losing what you carried. Your things go into a death chest at the spot you died; get back to it before someone else does.</p>
+<p>Hitting a player, or being hit by one, <span class="short">combat tags</span> you for 30 seconds: you cannot teleport or use an elytra until it wears off, and logging out while tagged kills you.</p>
 <p>Claimed land is still protected: nobody can enter or take ground inside a claim except during a declared <a href="/war">war</a>. See the <a href="/rules#interaction">Interaction rules</a> for the exact boundaries.</p>`,
   },
   {
     category: "world",
     question: "What is the difficulty?",
-    answer: `<p>The difficulty is <span class="short">Normal</span>. There is <span class="short">no keep-inventory</span> in the world, so dying in the wild means dropping your things where you fell. The only exceptions are inside spawn and during a formal war.</p>`,
+    answer: `<p>The difficulty is <span class="short">Normal</span>. There is <span class="short">no keep-inventory</span> anywhere, wars included, so dying means your things are left where you fell.</p>`,
   },
   {
     category: "world",
@@ -70,7 +71,7 @@ export const FAQ: FaqEntry[] = [
   {
     category: "world",
     question: "How do I get Mending?",
-    answer: `<p><span class="short">Fishing.</span> With villager trading off, Mending comes from fishing, loot chests and player shops. Vanilla fishing treasure is on (restored 19 Sept): about 5% of casts are treasure, 11% with Luck of the Sea III, and a treasure is equally likely to be an enchanted book, an enchanted bow, an enchanted fishing rod, a name tag, a nautilus shell or a saddle.</p>
+    answer: `<p><span class="short">Fishing.</span> With villager trading off, Mending comes from fishing, loot chests and player shops. End cities are not a shortcut: their gear never rolls Mending, and a Mending book turns up in only about 1 chest in 1,000. Vanilla fishing treasure is on (restored 19 Sept): about 5% of casts are treasure, 11% with Luck of the Sea III, and a treasure is equally likely to be an enchanted book, an enchanted bow, an enchanted fishing rod, a name tag, a nautilus shell or a saddle.</p>
 <p>Mending is one of the enchantments those books, bows and rods can roll. It is far more likely on a rod or bow than on a book, because they have fewer possible enchantments to compete with. Counting all three, expect roughly one Mending item per few hundred casts with Luck of the Sea III, about twice as long without it. A fished rod or bow with Mending counts: pull the enchantment off with a Disenchanting Brick and you have a Mending book.</p>
 <p><strong>mcMMO Treasure Hunter</strong> rolls on top of that as your Fishing level grows. Its treasures only carry enchantments once you have Magic Hunter (Fishing 200), and Mending sits in its Legendary and Mythic tiers, which are rare until high ranks. Treat it as a late-game bonus, not the main route.</p>
 <div class="tier-wrap"><table class="tier-table">
@@ -146,13 +147,13 @@ export const FAQ: FaqEntry[] = [
     answer: `<p>Founding a land with <code>/lands create</code> includes your <span class="short">first chunk free</span>. After that:</p>
 <ul>
   <li>Every chunk after that costs <span class="short">16 G, rising 4% per chunk</span> your land already holds, paid from the land bank. Chunk 10 is about 23 G, chunk 50 about 109 G.</li>
-  <li>Weekly upkeep is <span class="short">5 G per chunk</span>, collected every Saturday, also taken from the land bank. If the bank runs dry, upkeep goes unpaid and the land is at risk.</li>
+  <li>Weekly upkeep is <span class="short">5 G per chunk</span>, collected every Saturday, also taken from the land bank. If the bank cannot cover it, the land <span class="short">loses its most recently claimed chunks</span> until what is left is paid for, and this repeats every week. Lands younger than two days are exempt.</li>
   <li>You can own <span class="short">two lands</span>; each pays its own upkeep.</li>
   <li>Tiers change these numbers. The full breakdown is in the <a href="/claims">Claims guide</a>.</li>
 </ul>`,
   },
   {
-    category: "recipes",
+    category: "starting",
     question: "How do I make invisible item frames?",
     answer: `<p>Drop the item frames (or glow item frames) on the ground and splash them with a <span class="short">Potion of Invisibility</span>. Every frame in the splash converts, however many you drop. Empty invisible frames glow so you can still find them; they stop glowing once something is in them. Combine with <code>/imageframe create</code> for wall art with no visible borders. No blank maps are needed for image frames any more.</p>`,
   },

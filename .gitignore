@@ -10,3 +10,6 @@ dist/
 # refresh_analytics.py writes state files via a .tmp then renames; a crash
 # mid-write must not leave a stray file for `git add scripts/state` to sweep up.
 scripts/state/*.tmp
+
+# Full local copy of the game server (9 GB, includes ops/configs/credentials). Never commit.
+profile_sgznr/
