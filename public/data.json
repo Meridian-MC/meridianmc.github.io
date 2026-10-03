@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-03T05:47:14Z",
+  "generated": "2026-10-03T11:18:22Z",
   "meta": {
     "players_tracked": 78,
     "active_traders": 6,
@@ -34,8 +34,8 @@
       "land_banks": 14466.97,
       "coverage": {
         "files": 1774,
-        "fresh": 1527,
-        "stale": 247,
+        "fresh": 1581,
+        "stale": 193,
         "unscanned": 0,
         "percent": 100.0
       }
@@ -2209,11 +2209,11 @@
         "balance": 32
       },
       {
-        "name": "Croissantasaur",
+        "name": "Hayzelnut",
         "balance": 32
       },
       {
-        "name": "Hayzelnut",
+        "name": "Croissantasaur",
         "balance": 32
       },
       {
@@ -2237,8 +2237,8 @@
     "mean": 34.37
   },
   "server": {
-    "checked": "2026-10-03T05:47:14Z",
-    "started_at": "2026-10-02T12:12:30Z",
+    "checked": "2026-10-03T11:18:22Z",
+    "started_at": "2026-10-02T12:12:31Z",
     "tps": 20.0
   },
   "nations": [
