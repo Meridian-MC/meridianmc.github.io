@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-04T00:24:44Z",
+  "generated": "2026-10-04T06:14:24Z",
   "meta": {
     "players_tracked": 82,
     "active_traders": 6,
@@ -26,21 +26,21 @@
       "note": "Gold launched 2026-09-12. Needs 8+ active traders and 14+ days of history; currently 6 traders / 22 days."
     },
     "supply": {
-      "total": 18910.04,
+      "total": 18873.04,
       "on_hand": 317,
       "ender_chests": 2466,
       "containers": 2780,
-      "loose": 54,
+      "loose": 17,
       "land_banks": 13293.04,
       "coverage": {
         "files": 1780,
-        "fresh": 1488,
-        "stale": 292,
+        "fresh": 1520,
+        "stale": 260,
         "unscanned": 0,
         "percent": 100.0
       }
     },
-    "money_supply_players": 18910.04,
+    "money_supply_players": 18873.04,
     "money_supply_series": [
       [
         "2026-09-15",
@@ -120,7 +120,7 @@
       ],
       [
         "2026-10-04",
-        18910.04
+        18873.04
       ]
     ],
     "flow": {
@@ -2273,6 +2273,10 @@
         "balance": 32
       },
       {
+        "name": "Nocqmento",
+        "balance": 32
+      },
+      {
         "name": "WuterGamer",
         "balance": 32
       },
@@ -2297,10 +2301,6 @@
         "balance": 32
       },
       {
-        "name": "Nocqmento",
-        "balance": 32
-      },
-      {
         "name": "Aorus6320",
         "balance": 13
       }
@@ -2309,8 +2309,8 @@
     "mean": 33.94
   },
   "server": {
-    "checked": "2026-10-04T00:24:44Z",
-    "started_at": "2026-10-03T15:39:17Z",
+    "checked": "2026-10-04T06:14:25Z",
+    "started_at": "2026-10-03T15:39:18Z",
     "tps": 20.0
   },
   "nations": [
