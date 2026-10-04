@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-04T16:58:25Z",
+  "generated": "2026-10-04T20:01:46Z",
   "meta": {
     "players_tracked": 82,
     "active_traders": 6,
@@ -34,8 +34,8 @@
       "land_banks": 13293.04,
       "coverage": {
         "files": 1780,
-        "fresh": 1558,
-        "stale": 222,
+        "fresh": 1553,
+        "stale": 227,
         "unscanned": 0,
         "percent": 100.0
       }
@@ -2309,7 +2309,7 @@
     "mean": 33.94
   },
   "server": {
-    "checked": "2026-10-04T16:58:25Z",
+    "checked": "2026-10-04T20:01:46Z",
     "started_at": "2026-10-04T12:12:17Z",
     "tps": 20.0
   },
@@ -2358,7 +2358,7 @@
       "type": "land",
       "chunks": 67,
       "members": 11,
-      "bank": 985.99,
+      "bank": 845.99,
       "level": 2,
       "color": "#C0CAF3"
     },
@@ -2394,7 +2394,7 @@
       "type": "land",
       "chunks": 9,
       "members": 3,
-      "bank": 15.56,
+      "bank": 105.56,
       "level": 0,
       "color": "#9B7570"
     },
@@ -2412,7 +2412,7 @@
       "type": "land",
       "chunks": 5,
       "members": 2,
-      "bank": 32.05,
+      "bank": 82.05,
       "level": 0,
       "color": "#CCD56D"
     },
