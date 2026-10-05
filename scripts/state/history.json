@@ -429,6 +429,26 @@
    "minecraft:phantom_membrane": 35.0,
    "minecraft:silence_armor_trim_smithing_template": 99.0,
    "minecraft:totem_of_undying": 40.0
+  },
+  "2026-10-05": {
+   "minecraft:arrow": 600.0,
+   "minecraft:book": 2000.0,
+   "minecraft:coal": 75.0,
+   "minecraft:cooked_mutton": 15.0,
+   "minecraft:copper_ingot": 35.0,
+   "minecraft:diamond": 550.0,
+   "minecraft:dirt": 50.5,
+   "minecraft:emerald": 500.0,
+   "minecraft:end_crystal": 75.0,
+   "minecraft:ender_pearl": 2.0,
+   "minecraft:experience_bottle": 4.25,
+   "minecraft:granite": 4.0,
+   "minecraft:iron_ingot": 250.0,
+   "minecraft:lapis_lazuli": 250.0,
+   "minecraft:netherite_upgrade_smithing_template": 10000.0,
+   "minecraft:phantom_membrane": 35.0,
+   "minecraft:silence_armor_trim_smithing_template": 99.0,
+   "minecraft:totem_of_undying": 40.0
   }
  },
  "supply": {
@@ -631,6 +651,16 @@
    "loose": 17,
    "on_hand": 371,
    "total": 18612.04
+  },
+  "2026-10-05": {
+   "at": "2026-10-05T02:03:52Z",
+   "banks": 13293.04,
+   "containers": 2465,
+   "coverage": 100.0,
+   "ender": 2466,
+   "loose": 17,
+   "on_hand": 373,
+   "total": 18614.04
   }
  }
 }
