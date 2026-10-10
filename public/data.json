@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-10T11:05:26Z",
+  "generated": "2026-10-10T16:15:31Z",
   "meta": {
     "players_tracked": 87,
     "active_traders": 4,
@@ -2254,6 +2254,10 @@
         "balance": 36
       },
       {
+        "name": "ER3KO",
+        "balance": 32
+      },
+      {
         "name": "Snacob8",
         "balance": 32
       },
@@ -2280,18 +2284,14 @@
       {
         "name": "Hayzelnut",
         "balance": 32
-      },
-      {
-        "name": "_Melix_",
-        "balance": 32
       }
     ],
     "median": 0,
     "mean": 36.68
   },
   "server": {
-    "checked": "2026-10-10T11:05:26Z",
-    "started_at": "2026-10-09T12:12:55Z",
+    "checked": "2026-10-10T16:15:31Z",
+    "started_at": "2026-10-10T12:12:47Z",
     "tps": 20.0
   },
   "nations": [
