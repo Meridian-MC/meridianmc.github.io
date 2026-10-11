@@ -1,8 +1,8 @@
 {
-  "generated": "2026-10-11T15:36:00Z",
+  "generated": "2026-10-11T19:44:25Z",
   "meta": {
     "players_tracked": 87,
-    "active_traders": 4,
+    "active_traders": 5,
     "data_days": 29,
     "sufficient": false,
     "demo": false,
@@ -23,24 +23,24 @@
     "classification": {
       "code": "INSUFFICIENT_DATA",
       "label": "Insufficient data",
-      "note": "Gold launched 2026-09-12. Needs 8+ active traders and 14+ days of history; currently 4 traders / 29 days."
+      "note": "Gold launched 2026-09-12. Needs 8+ active traders and 14+ days of history; currently 5 traders / 29 days."
     },
     "supply": {
-      "total": 18485.04,
+      "total": 18756.09,
       "on_hand": 925,
-      "ender_chests": 2338,
-      "containers": 2459,
+      "ender_chests": 2303,
+      "containers": 2507,
       "loose": 17,
-      "land_banks": 12746.04,
+      "land_banks": 13004.09,
       "coverage": {
         "files": 1947,
-        "fresh": 1708,
-        "stale": 132,
-        "unscanned": 107,
-        "percent": 94.5
+        "fresh": 1722,
+        "stale": 178,
+        "unscanned": 47,
+        "percent": 97.6
       }
     },
-    "money_supply_players": 18485.04,
+    "money_supply_players": 18756.09,
     "money_supply_series": [
       [
         "2026-09-15",
@@ -148,7 +148,7 @@
       ],
       [
         "2026-10-11",
-        18485.04
+        18756.09
       ]
     ],
     "flow": {
@@ -277,11 +277,16 @@
           "2026-10-10",
           9.0,
           0.0
+        ],
+        [
+          "2026-10-11",
+          941.0,
+          331.0
         ]
       ],
-      "spent_7d": 335.0,
-      "received_7d": 224.0,
-      "transactions": 401
+      "spent_7d": 1276.0,
+      "received_7d": 555.0,
+      "transactions": 417
     },
     "trade_volume_series": [
       [
@@ -2303,16 +2308,16 @@
         "balance": 400
       },
       {
-        "name": "Heyitsmewyatt1",
-        "balance": 146
-      },
-      {
         "name": "Giggsy__",
         "balance": 140
       },
       {
         "name": "Luko_Landino",
         "balance": 139
+      },
+      {
+        "name": "Heyitsmewyatt1",
+        "balance": 111
       },
       {
         "name": "ske9z",
@@ -2352,10 +2357,10 @@
       }
     ],
     "median": 0,
-    "mean": 37.51
+    "mean": 37.1
   },
   "server": {
-    "checked": "2026-10-11T15:36:01Z",
+    "checked": "2026-10-11T19:44:25Z",
     "started_at": "2026-10-11T12:12:14Z",
     "tps": 20.0
   },
@@ -2364,15 +2369,15 @@
       "name": "Augustine Empire",
       "tag": null,
       "color": "#956BE8",
-      "lands": 5,
+      "lands": 6,
       "mdi": 1.0,
       "territory": 1.0,
       "population": 1.0,
       "wealth": 1.0,
       "activity": 1.0,
-      "chunks": 116,
-      "members": 24,
-      "treasury": 7035.65
+      "chunks": 120,
+      "members": 26,
+      "treasury": 7258.7
     },
     {
       "name": "Thalassos",
@@ -2404,7 +2409,7 @@
       "type": "land",
       "chunks": 67,
       "members": 11,
-      "bank": 996.99,
+      "bank": 1134.99,
       "level": 2,
       "color": "#C0CAF3"
     },
@@ -2422,7 +2427,7 @@
       "type": "land",
       "chunks": 26,
       "members": 12,
-      "bank": 0.0,
+      "bank": 35.0,
       "level": 0,
       "color": "#A3E085"
     },
@@ -2440,7 +2445,7 @@
       "type": "land",
       "chunks": 9,
       "members": 3,
-      "bank": 15.56,
+      "bank": 60.56,
       "level": 0,
       "color": "#9B7570"
     },
@@ -2458,7 +2463,7 @@
       "type": "land",
       "chunks": 5,
       "members": 2,
-      "bank": 32.05,
+      "bank": 30.05,
       "level": 0,
       "color": "#CCD56D"
     },
@@ -2485,9 +2490,18 @@
       "type": "land",
       "chunks": 4,
       "members": 3,
-      "bank": 277.05,
+      "bank": 232.05,
       "level": 0,
       "color": "#DD8764"
+    },
+    {
+      "name": "Rare Mineral Industries",
+      "type": "land",
+      "chunks": 4,
+      "members": 2,
+      "bank": 87.05,
+      "level": 0,
+      "color": "#E6F9E3"
     },
     {
       "name": "Luko_Landino",
@@ -2572,6 +2586,12 @@
     }
   ],
   "events": [
+    {
+      "type": "land",
+      "at": "2026-10-11T18:47:06Z",
+      "text": "Rare Mineral Industries was founded",
+      "owner": "Augustine65480"
+    },
     {
       "type": "land",
       "at": "2026-10-03T16:01:45Z",
@@ -2685,12 +2705,6 @@
       "at": "2026-09-06T04:17:28Z",
       "text": "Liam's Empire was founded",
       "owner": "ihasadragon"
-    },
-    {
-      "type": "land",
-      "at": "2026-09-06T00:57:30Z",
-      "text": "Luko_Landino was founded",
-      "owner": "Luko_Landino"
     }
   ]
 }
