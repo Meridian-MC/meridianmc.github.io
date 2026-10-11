@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-11T19:44:25Z",
+  "generated": "2026-10-11T23:13:30Z",
   "meta": {
     "players_tracked": 87,
     "active_traders": 5,
@@ -26,21 +26,21 @@
       "note": "Gold launched 2026-09-12. Needs 8+ active traders and 14+ days of history; currently 5 traders / 29 days."
     },
     "supply": {
-      "total": 18756.09,
+      "total": 19716.09,
       "on_hand": 925,
       "ender_chests": 2303,
-      "containers": 2507,
+      "containers": 2502,
       "loose": 17,
-      "land_banks": 13004.09,
+      "land_banks": 13969.09,
       "coverage": {
         "files": 1947,
-        "fresh": 1722,
-        "stale": 178,
-        "unscanned": 47,
-        "percent": 97.6
+        "fresh": 1782,
+        "stale": 165,
+        "unscanned": 0,
+        "percent": 100.0
       }
     },
-    "money_supply_players": 18756.09,
+    "money_supply_players": 19716.09,
     "money_supply_series": [
       [
         "2026-09-15",
@@ -148,7 +148,7 @@
       ],
       [
         "2026-10-11",
-        18756.09
+        19716.09
       ]
     ],
     "flow": {
@@ -280,13 +280,13 @@
         ],
         [
           "2026-10-11",
-          941.0,
+          1924.0,
           331.0
         ]
       ],
-      "spent_7d": 1276.0,
+      "spent_7d": 2259.0,
       "received_7d": 555.0,
-      "transactions": 417
+      "transactions": 424
     },
     "trade_volume_series": [
       [
@@ -2360,7 +2360,7 @@
     "mean": 37.1
   },
   "server": {
-    "checked": "2026-10-11T19:44:25Z",
+    "checked": "2026-10-11T23:13:30Z",
     "started_at": "2026-10-11T12:12:14Z",
     "tps": 20.0
   },
@@ -2375,9 +2375,9 @@
       "population": 1.0,
       "wealth": 1.0,
       "activity": 1.0,
-      "chunks": 120,
+      "chunks": 121,
       "members": 26,
-      "treasury": 7258.7
+      "treasury": 8223.7
     },
     {
       "name": "Thalassos",
@@ -2409,7 +2409,7 @@
       "type": "land",
       "chunks": 67,
       "members": 11,
-      "bank": 1134.99,
+      "bank": 2045.99,
       "level": 2,
       "color": "#C0CAF3"
     },
@@ -2468,6 +2468,15 @@
       "color": "#CCD56D"
     },
     {
+      "name": "Rare Mineral Industries",
+      "type": "land",
+      "chunks": 5,
+      "members": 2,
+      "bank": 141.05,
+      "level": 0,
+      "color": "#E6F9E3"
+    },
+    {
       "name": "Liam's Empire",
       "type": "land",
       "chunks": 4,
@@ -2493,15 +2502,6 @@
       "bank": 232.05,
       "level": 0,
       "color": "#DD8764"
-    },
-    {
-      "name": "Rare Mineral Industries",
-      "type": "land",
-      "chunks": 4,
-      "members": 2,
-      "bank": 87.05,
-      "level": 0,
-      "color": "#E6F9E3"
     },
     {
       "name": "Luko_Landino",
