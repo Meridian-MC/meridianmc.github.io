@@ -1,9 +1,9 @@
 {
-  "generated": "2026-10-11T23:13:30Z",
+  "generated": "2026-10-12T02:29:53Z",
   "meta": {
-    "players_tracked": 87,
-    "active_traders": 5,
-    "data_days": 29,
+    "players_tracked": 88,
+    "active_traders": 2,
+    "data_days": 30,
     "sufficient": false,
     "demo": false,
     "profile": "profile_sgznr",
@@ -23,24 +23,24 @@
     "classification": {
       "code": "INSUFFICIENT_DATA",
       "label": "Insufficient data",
-      "note": "Gold launched 2026-09-12. Needs 8+ active traders and 14+ days of history; currently 5 traders / 29 days."
+      "note": "Gold launched 2026-09-12. Needs 8+ active traders and 14+ days of history; currently 2 traders / 30 days."
     },
     "supply": {
-      "total": 19716.09,
-      "on_hand": 925,
-      "ender_chests": 2303,
-      "containers": 2502,
+      "total": 19717.09,
+      "on_hand": 853,
+      "ender_chests": 2375,
+      "containers": 2503,
       "loose": 17,
       "land_banks": 13969.09,
       "coverage": {
         "files": 1947,
-        "fresh": 1782,
-        "stale": 165,
+        "fresh": 1768,
+        "stale": 179,
         "unscanned": 0,
         "percent": 100.0
       }
     },
-    "money_supply_players": 19716.09,
+    "money_supply_players": 19717.09,
     "money_supply_series": [
       [
         "2026-09-15",
@@ -149,6 +149,10 @@
       [
         "2026-10-11",
         19716.09
+      ],
+      [
+        "2026-10-12",
+        19717.09
       ]
     ],
     "flow": {
@@ -284,8 +288,8 @@
           331.0
         ]
       ],
-      "spent_7d": 2259.0,
-      "received_7d": 555.0,
+      "spent_7d": 1933.0,
+      "received_7d": 331.0,
       "transactions": 424
     },
     "trade_volume_series": [
@@ -318,9 +322,9 @@
         160.0
       ]
     ],
-    "trade_volume_7d": 160.0,
+    "trade_volume_7d": 0,
     "chest_shop_transactions": 8,
-    "gini": 0.936,
+    "gini": 0.937,
     "price_index": {
       "value": 1.3,
       "series": [
@@ -430,6 +434,10 @@
         ],
         [
           "2026-10-11",
+          1.3
+        ],
+        [
+          "2026-10-12",
           1.3
         ]
       ],
@@ -550,6 +558,10 @@
           ],
           [
             "2026-10-11",
+            4.25
+          ],
+          [
+            "2026-10-12",
             4.25
           ]
         ],
@@ -672,6 +684,10 @@
           [
             "2026-10-11",
             600.0
+          ],
+          [
+            "2026-10-12",
+            600.0
           ]
         ],
         "candles": [],
@@ -792,6 +808,10 @@
           ],
           [
             "2026-10-11",
+            2000.0
+          ],
+          [
+            "2026-10-12",
             2000.0
           ]
         ],
@@ -914,6 +934,10 @@
           [
             "2026-10-11",
             75.0
+          ],
+          [
+            "2026-10-12",
+            75.0
           ]
         ],
         "candles": [],
@@ -1034,6 +1058,10 @@
           ],
           [
             "2026-10-11",
+            15.0
+          ],
+          [
+            "2026-10-12",
             15.0
           ]
         ],
@@ -1156,6 +1184,10 @@
           [
             "2026-10-11",
             35.0
+          ],
+          [
+            "2026-10-12",
+            35.0
           ]
         ],
         "candles": [],
@@ -1277,6 +1309,10 @@
           [
             "2026-10-11",
             550.0
+          ],
+          [
+            "2026-10-12",
+            550.0
           ]
         ],
         "candles": [],
@@ -1345,6 +1381,10 @@
           ],
           [
             "2026-10-11",
+            1.0
+          ],
+          [
+            "2026-10-12",
             1.0
           ]
         ],
@@ -1467,6 +1507,10 @@
           [
             "2026-10-11",
             500.0
+          ],
+          [
+            "2026-10-12",
+            500.0
           ]
         ],
         "candles": [],
@@ -1583,6 +1627,10 @@
           ],
           [
             "2026-10-11",
+            4.0
+          ],
+          [
+            "2026-10-12",
             4.0
           ]
         ],
@@ -1705,6 +1753,10 @@
           [
             "2026-10-11",
             250.0
+          ],
+          [
+            "2026-10-12",
+            250.0
           ]
         ],
         "candles": [],
@@ -1826,6 +1878,10 @@
           [
             "2026-10-11",
             250.0
+          ],
+          [
+            "2026-10-12",
+            250.0
           ]
         ],
         "candles": [],
@@ -1942,6 +1998,10 @@
           ],
           [
             "2026-10-11",
+            10000.0
+          ],
+          [
+            "2026-10-12",
             10000.0
           ]
         ],
@@ -2356,11 +2416,11 @@
         "balance": 32
       }
     ],
-    "median": 0,
-    "mean": 37.1
+    "median": 0.0,
+    "mean": 36.68
   },
   "server": {
-    "checked": "2026-10-11T23:13:30Z",
+    "checked": "2026-10-12T02:29:53Z",
     "started_at": "2026-10-11T12:12:14Z",
     "tps": 20.0
   },
@@ -2376,7 +2436,7 @@
       "wealth": 1.0,
       "activity": 1.0,
       "chunks": 121,
-      "members": 26,
+      "members": 27,
       "treasury": 8223.7
     },
     {
@@ -2462,7 +2522,7 @@
       "name": "Turul",
       "type": "land",
       "chunks": 5,
-      "members": 2,
+      "members": 3,
       "bank": 30.05,
       "level": 0,
       "color": "#CCD56D"
