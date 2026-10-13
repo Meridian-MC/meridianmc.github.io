@@ -554,6 +554,21 @@
    "minecraft:iron_ingot": 250.0,
    "minecraft:lapis_lazuli": 250.0,
    "minecraft:netherite_upgrade_smithing_template": 10000.0
+  },
+  "2026-10-13": {
+   "minecraft:arrow": 600.0,
+   "minecraft:book": 2000.0,
+   "minecraft:coal": 75.0,
+   "minecraft:cooked_mutton": 15.0,
+   "minecraft:copper_ingot": 35.0,
+   "minecraft:diamond": 550.0,
+   "minecraft:dirt": 1.0,
+   "minecraft:emerald": 500.0,
+   "minecraft:experience_bottle": 4.25,
+   "minecraft:granite": 4.0,
+   "minecraft:iron_ingot": 250.0,
+   "minecraft:lapis_lazuli": 250.0,
+   "minecraft:netherite_upgrade_smithing_template": 10000.0
   }
  },
  "supply": {
@@ -836,6 +851,16 @@
    "loose": 17,
    "on_hand": 853,
    "total": 19708.09
+  },
+  "2026-10-13": {
+   "at": "2026-10-13T01:33:51Z",
+   "banks": 14011.09,
+   "containers": 2494,
+   "coverage": 100.0,
+   "ender": 2375,
+   "loose": 17,
+   "on_hand": 853,
+   "total": 19750.09
   }
  }
 }
