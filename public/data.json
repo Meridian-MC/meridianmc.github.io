@@ -1,8 +1,8 @@
 {
-  "generated": "2026-10-13T01:33:51Z",
+  "generated": "2026-10-13T08:30:20Z",
   "meta": {
     "players_tracked": 88,
-    "active_traders": 2,
+    "active_traders": 3,
     "data_days": 31,
     "sufficient": false,
     "demo": false,
@@ -23,24 +23,24 @@
     "classification": {
       "code": "INSUFFICIENT_DATA",
       "label": "Insufficient data",
-      "note": "Gold launched 2026-09-12. Needs 8+ active traders and 14+ days of history; currently 2 traders / 31 days."
+      "note": "Gold launched 2026-09-12. Needs 8+ active traders and 14+ days of history; currently 3 traders / 31 days."
     },
     "supply": {
-      "total": 19750.09,
+      "total": 19584.09,
       "on_hand": 853,
       "ender_chests": 2375,
-      "containers": 2494,
+      "containers": 2480,
       "loose": 17,
-      "land_banks": 14011.09,
+      "land_banks": 13859.09,
       "coverage": {
         "files": 1947,
-        "fresh": 1717,
-        "stale": 230,
+        "fresh": 1751,
+        "stale": 196,
         "unscanned": 0,
         "percent": 100.0
       }
     },
-    "money_supply_players": 19750.09,
+    "money_supply_players": 19584.09,
     "money_supply_series": [
       [
         "2026-09-15",
@@ -156,7 +156,7 @@
       ],
       [
         "2026-10-13",
-        19750.09
+        19584.09
       ]
     ],
     "flow": {
@@ -294,12 +294,12 @@
         [
           "2026-10-13",
           42.0,
-          0.0
+          152.0
         ]
       ],
       "spent_7d": 1975.0,
-      "received_7d": 331.0,
-      "transactions": 425
+      "received_7d": 483.0,
+      "transactions": 426
     },
     "trade_volume_series": [
       [
@@ -2485,7 +2485,7 @@
     "mean": 36.68
   },
   "server": {
-    "checked": "2026-10-13T01:33:51Z",
+    "checked": "2026-10-13T08:30:20Z",
     "started_at": "2026-10-12T12:12:14Z",
     "tps": 20.0
   },
@@ -2638,15 +2638,6 @@
       "color": "#B0E0A7"
     },
     {
-      "name": "Safe Haven",
-      "type": "land",
-      "chunks": 2,
-      "members": 2,
-      "bank": 152.0,
-      "level": 0,
-      "color": "#E8D289"
-    },
-    {
       "name": "Arkalis",
       "type": "land",
       "chunks": 1,
@@ -2796,12 +2787,6 @@
       "owner": "st4tc"
     },
     {
-      "type": "land",
-      "at": "2026-09-07T19:07:27Z",
-      "text": "Safe Haven was founded",
-      "owner": "owen192423"
-    },
-    {
       "type": "nation",
       "at": "2026-09-07T00:08:05Z",
       "text": "Augustine Empire was formed",
@@ -2830,6 +2815,12 @@
       "at": "2026-09-06T04:17:28Z",
       "text": "Liam's Empire was founded",
       "owner": "ihasadragon"
+    },
+    {
+      "type": "land",
+      "at": "2026-09-06T00:57:30Z",
+      "text": "Luko_Landino was founded",
+      "owner": "Luko_Landino"
     }
   ]
 }
