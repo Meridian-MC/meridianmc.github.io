@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-14T19:37:30Z",
+  "generated": "2026-10-14T22:40:16Z",
   "meta": {
     "players_tracked": 89,
     "active_traders": 3,
@@ -2522,6 +2522,10 @@
         "balance": 32
       },
       {
+        "name": "Vectravxr",
+        "balance": 32
+      },
+      {
         "name": "Nocqmento",
         "balance": 32
       },
@@ -2540,17 +2544,13 @@
       {
         "name": "ByeWith2",
         "balance": 32
-      },
-      {
-        "name": "Hayzelnut",
-        "balance": 32
       }
     ],
     "median": 0,
     "mean": 36.63
   },
   "server": {
-    "checked": "2026-10-14T19:37:31Z",
+    "checked": "2026-10-14T22:40:16Z",
     "started_at": "2026-10-14T12:12:16Z",
     "tps": 20.0
   },
