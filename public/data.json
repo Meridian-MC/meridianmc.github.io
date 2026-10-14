@@ -1,7 +1,7 @@
 {
-  "generated": "2026-10-14T15:26:49Z",
+  "generated": "2026-10-14T19:37:30Z",
   "meta": {
-    "players_tracked": 88,
+    "players_tracked": 89,
     "active_traders": 3,
     "data_days": 32,
     "sufficient": false,
@@ -26,21 +26,21 @@
       "note": "Gold launched 2026-09-12. Needs 8+ active traders and 14+ days of history; currently 3 traders / 32 days."
     },
     "supply": {
-      "total": 19600.09,
-      "on_hand": 853,
+      "total": 18045.4,
+      "on_hand": 885,
       "ender_chests": 2375,
-      "containers": 2496,
+      "containers": 2491,
       "loose": 17,
-      "land_banks": 13859.09,
+      "land_banks": 12277.4,
       "coverage": {
         "files": 1947,
-        "fresh": 1926,
-        "stale": 21,
+        "fresh": 1947,
+        "stale": 0,
         "unscanned": 0,
         "percent": 100.0
       }
     },
-    "money_supply_players": 19600.09,
+    "money_supply_players": 18045.4,
     "money_supply_series": [
       [
         "2026-09-15",
@@ -160,7 +160,7 @@
       ],
       [
         "2026-10-14",
-        19600.09
+        18045.4
       ]
     ],
     "flow": {
@@ -299,11 +299,16 @@
           "2026-10-13",
           42.0,
           152.0
+        ],
+        [
+          "2026-10-14",
+          5.0,
+          0.0
         ]
       ],
-      "spent_7d": 1975.0,
+      "spent_7d": 1980.0,
       "received_7d": 483.0,
-      "transactions": 426
+      "transactions": 427
     },
     "trade_volume_series": [
       [
@@ -337,7 +342,7 @@
     ],
     "trade_volume_7d": 0,
     "chest_shop_transactions": 8,
-    "gini": 0.937,
+    "gini": 0.934,
     "price_index": {
       "value": 1.3,
       "series": [
@@ -2541,12 +2546,12 @@
         "balance": 32
       }
     ],
-    "median": 0.0,
-    "mean": 36.68
+    "median": 0,
+    "mean": 36.63
   },
   "server": {
-    "checked": "2026-10-14T15:26:49Z",
-    "started_at": "2026-10-14T12:12:15Z",
+    "checked": "2026-10-14T19:37:31Z",
+    "started_at": "2026-10-14T12:12:16Z",
     "tps": 20.0
   },
   "nations": [
@@ -2560,9 +2565,9 @@
       "population": 1.0,
       "wealth": 1.0,
       "activity": 1.0,
-      "chunks": 121,
+      "chunks": 127,
       "members": 27,
-      "treasury": 8265.7
+      "treasury": 6684.01
     },
     {
       "name": "Thalassos",
@@ -2592,9 +2597,9 @@
     {
       "name": "Augustine",
       "type": "land",
-      "chunks": 67,
+      "chunks": 73,
       "members": 11,
-      "bank": 2087.99,
+      "bank": 506.3,
       "level": 2,
       "color": "#C0CAF3"
     },
