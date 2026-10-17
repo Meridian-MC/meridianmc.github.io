@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-17T17:58:47Z",
+  "generated": "2026-10-17T20:28:25Z",
   "meta": {
     "players_tracked": 90,
     "active_traders": 3,
@@ -26,12 +26,12 @@
       "note": "Gold launched 2026-09-12. Needs 8+ active traders and 14+ days of history; currently 3 traders / 35 days."
     },
     "supply": {
-      "total": 18100.4,
+      "total": 17494.4,
       "on_hand": 917,
       "ender_chests": 2375,
       "containers": 2491,
       "loose": 17,
-      "land_banks": 12300.4,
+      "land_banks": 11694.4,
       "coverage": {
         "files": 1950,
         "fresh": 1950,
@@ -40,7 +40,7 @@
         "percent": 100.0
       }
     },
-    "money_supply_players": 18100.4,
+    "money_supply_players": 17494.4,
     "money_supply_series": [
       [
         "2026-09-15",
@@ -172,7 +172,7 @@
       ],
       [
         "2026-10-17",
-        18100.4
+        17494.4
       ]
     ],
     "flow": {
@@ -2595,7 +2595,7 @@
     "mean": 36.58
   },
   "server": {
-    "checked": "2026-10-17T17:58:47Z",
+    "checked": "2026-10-17T20:28:26Z",
     "started_at": "2026-10-17T12:12:42Z",
     "tps": 20.0
   },
@@ -2612,21 +2612,21 @@
       "activity": 1.0,
       "chunks": 127,
       "members": 27,
-      "treasury": 6707.01
+      "treasury": 6326.01
     },
     {
       "name": "Thalassos",
       "tag": null,
       "color": null,
       "lands": 3,
-      "mdi": 0.533,
+      "mdi": 0.497,
       "territory": 1.0,
       "population": 1.0,
-      "wealth": 0.081,
+      "wealth": 0.061,
       "activity": 1.0,
       "chunks": 84,
       "members": 21,
-      "treasury": 81.0
+      "treasury": 61.0
     }
   ],
   "lands": [
@@ -2644,7 +2644,7 @@
       "type": "land",
       "chunks": 73,
       "members": 11,
-      "bank": 529.3,
+      "bank": 418.3,
       "level": 2,
       "color": "#C0CAF3"
     },
@@ -2653,25 +2653,16 @@
       "type": "land",
       "chunks": 31,
       "members": 5,
-      "bank": 5714.0,
+      "bank": 5559.0,
       "level": 1,
       "color": "#66979D"
-    },
-    {
-      "name": "Goldmarche",
-      "type": "land",
-      "chunks": 26,
-      "members": 12,
-      "bank": 35.0,
-      "level": 0,
-      "color": "#A3E085"
     },
     {
       "name": "Keanie__",
       "type": "land",
       "chunks": 19,
       "members": 8,
-      "bank": 2360.53,
+      "bank": 2265.53,
       "level": 2,
       "color": "#B6B06C"
     },
@@ -2680,16 +2671,25 @@
       "type": "land",
       "chunks": 9,
       "members": 3,
-      "bank": 60.56,
+      "bank": 15.56,
       "level": 0,
       "color": "#9B7570"
+    },
+    {
+      "name": "Goldmarche",
+      "type": "land",
+      "chunks": 7,
+      "members": 12,
+      "bank": 0.0,
+      "level": 0,
+      "color": "#A3E085"
     },
     {
       "name": "Bluebear",
       "type": "land",
       "chunks": 7,
       "members": 2,
-      "bank": 1357.86,
+      "bank": 1322.86,
       "level": 0,
       "color": "#B565CB"
     },
@@ -2698,7 +2698,7 @@
       "type": "land",
       "chunks": 5,
       "members": 3,
-      "bank": 30.05,
+      "bank": 5.05,
       "level": 0,
       "color": "#CCD56D"
     },
@@ -2707,7 +2707,7 @@
       "type": "land",
       "chunks": 5,
       "members": 2,
-      "bank": 141.05,
+      "bank": 116.05,
       "level": 0,
       "color": "#E6F9E3"
     },
@@ -2716,7 +2716,7 @@
       "type": "land",
       "chunks": 4,
       "members": 3,
-      "bank": 1645.0,
+      "bank": 1625.0,
       "level": 0,
       "color": "#94B8C3"
     },
@@ -2725,7 +2725,7 @@
       "type": "land",
       "chunks": 4,
       "members": 6,
-      "bank": 22.0,
+      "bank": 6.0,
       "level": 0,
       "color": "#BDE19D"
     },
@@ -2734,7 +2734,7 @@
       "type": "land",
       "chunks": 4,
       "members": 3,
-      "bank": 232.05,
+      "bank": 212.05,
       "level": 0,
       "color": "#DD8764"
     },
@@ -2743,7 +2743,7 @@
       "type": "land",
       "chunks": 2,
       "members": 6,
-      "bank": 33.0,
+      "bank": 23.0,
       "level": 0,
       "color": "#B0E0A7"
     },
@@ -2752,7 +2752,7 @@
       "type": "land",
       "chunks": 1,
       "members": 2,
-      "bank": 71.0,
+      "bank": 66.0,
       "level": 0,
       "color": "#CADC7A"
     },
@@ -2761,7 +2761,7 @@
       "type": "land",
       "chunks": 1,
       "members": 2,
-      "bank": 10.0,
+      "bank": 5.0,
       "level": 0,
       "color": "#DDD0F2"
     },
@@ -2770,7 +2770,7 @@
       "type": "land",
       "chunks": 1,
       "members": 2,
-      "bank": 19.0,
+      "bank": 15.0,
       "level": 0,
       "color": "#B7D36B"
     },
